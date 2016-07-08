@@ -9,14 +9,16 @@
 #import "EHHomeViewController.h"
 #import <SDCycleScrollView.h>
 #import "buttonCell.h"
-
-@interface EHHomeViewController ()
+#import "XTPopView.h"
+@interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate>
 {
     /** 图片数组*/
     NSMutableArray *sourceArr;
 }
 
 
+- (IBAction)siteBtnClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *siteBtn;
 
 
 @end
@@ -78,6 +80,14 @@
     //第一行 4个按钮
     if (indexPath.section == 0) {
         buttonCell *cell = [buttonCell buttonCellWithTableView:tableView];
+        cell.delegate = self;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        [cell setClickEvent];
+        
+        
+        
+        
+        
         return cell;
     //第二行 点评经纪人
     }else if(indexPath.section == 1){
@@ -115,5 +125,50 @@
     self.tableView.tableHeaderView = cycleScrollView;
 }
 
+
+- (IBAction)siteBtnClick:(id)sender {
+    [self setupPopView];
+    
+}
+#pragma mark - 设置左上角地点
+- (void)setupPopView{
+    CGPoint point = CGPointMake(_siteBtn.center.x,_siteBtn.center.y + 45);
+    XTPopView *view1 = [[XTPopView alloc] initWithOrigin:point Width:80 Height:40 * 3 Type:XTTypeOfUpCenter Color:[UIColor whiteColor] superView:self.view];
+    view1.dataArray = @[@"上海",@"广州", @"深圳"];
+    view1.images = @[@"bookShelfPopMenuedit",@"bookShelfPopMenulist", @"bookShelfPopMenuImport"];
+    view1.fontSize = 13;
+    view1.row_height = 40;
+    view1.titleTextColor = [UIColor blackColor];
+    view1.delegate = self;
+    [view1 popView];
+}
+#pragma mark - 实现代理方法，左上角弹窗点击事件
+- (void)selectIndexPathRow:(NSInteger)index{
+    switch (index) {
+        case 0:
+        {
+           self.siteBtn.titleLabel.text = @"上海";
+        }
+            break;
+        case 1:
+        {
+            self.siteBtn.titleLabel.text = @"广州";
+        }
+            break;
+        case 2:
+        {
+           self.siteBtn.titleLabel.text = @"深圳";
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+#pragma mark - 实现自定义cell里按钮点击的代理方法
+- (void)buttonClick:(UITableViewCell *)cell{
+    NSIndexPath *index = [self.tableView indexPathForCell:cell];
+    NSLog(@"nini");
+}
 
 @end

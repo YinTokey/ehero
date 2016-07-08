@@ -44,6 +44,9 @@
                                 <state key="normal" title="北京" image="ehero_icon">
                                     <color key="titleColor" red="0.08235294118" green="0.086274509799999996" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="siteBtnClick:" destination="iSZ-bj-OnQ" eventType="touchUpInside" id="PNB-AE-q58"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="BKj-xO-ryD">
@@ -51,14 +54,39 @@
                                 <rect key="frame" x="264" y="2" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="search_112.60997067449px_1197039_easyicon.net"/>
+                                <connections>
+                                    <segue destination="Frh-BS-zpg" kind="show" id="k2P-HR-zH3"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="siteBtn" destination="IhE-S7-Q94" id="cwt-2j-7ot"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP1-S5-T8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-68" y="-335"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="b6y-a8-fld">
+            <objects>
+                <tableViewController id="Frh-BS-zpg" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pb7-7n-iFy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Frh-BS-zpg" id="CuI-R8-fQs"/>
+                            <outlet property="delegate" destination="Frh-BS-zpg" id="BSi-VP-Qge"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f87-kz-ijK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="343" y="-346"/>
         </scene>
     </scenes>
     <resources>

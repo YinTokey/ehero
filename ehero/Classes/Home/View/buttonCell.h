@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+
+@protocol buttonCellDelegate <NSObject>
+//1.声明代理方法
+- (void)buttonClick:(UITableViewCell *)cell;
+
+@end
+
 @interface buttonCell : UITableViewCell
 
 + (instancetype)buttonCellWithTableView:(UITableView *)tableView;
+//2.声明代理属性
+@property (nonatomic,weak)id<buttonCellDelegate> delegate;
 
+
+- (void)setClickEvent;
 @end
