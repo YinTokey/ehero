@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //设置启动页面时间
+
+    [UIView setAnimationDuration:2];
     return YES;
 }
 

@@ -9,8 +9,11 @@
 #import "EHHomeViewController.h"
 #import <SDCycleScrollView.h>
 #import "buttonCell.h"
+#import "EHEverydayhouseCell.h"
 #import "XTPopView.h"
 #import "EHGuideViewController.h"
+
+
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate>
 {
     /** 图片数组*/
@@ -37,7 +40,8 @@
     
     //跳转到下一界面的返回按钮样式
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
-    backItem.title = @"";
+    backItem.title = @"返回";
+    backItem.tintColor = [UIColor blackColor];
     self.navigationItem.backBarButtonItem = backItem;
 }
 
@@ -72,9 +76,11 @@
 #pragma mark - cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 65;
-    }else{
+        return 75;
+    }else if(indexPath.section == 1){
         return 30;
+    }else{
+        return 125;
     }
 }
 
@@ -97,15 +103,14 @@
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseId];
         }
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.textLabel.text = @"点评经纪人";
+        cell.textLabel.text = @"评价你的经纪人";
         return cell;
     //第三行 每日一房
     }else{
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
-        if (cell==nil) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseId];
-        }
-        cell.textLabel.text = @"每日一房";
+        
+        
+        EHEverydayhouseCell *cell = [EHEverydayhouseCell everydayhouseCellWithTableView:tableView];
+        
         return cell;
     }
 

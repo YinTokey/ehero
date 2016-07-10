@@ -13,10 +13,12 @@
 		04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04348FAF1D2F4DFB00205130 /* buttonCell.m */; };
 		0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */; };
 		0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */; };
+		04C3A8D31D31E643003203C0 /* 图解HTTP.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8D21D31E643003203C0 /* 图解HTTP.pdf */; };
+		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
+		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
+		04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */; };
+		04C3A8E41D321FE2003203C0 /* EHSearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8E21D321FE2003203C0 /* EHSearchResultCell.xib */; };
 		04C998861D31277500124E69 /* EHGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C998851D31277500124E69 /* EHGuideViewController.m */; };
-		04C998881D31338400124E69 /* Socket.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 04C998871D31338400124E69 /* Socket.pdf */; };
-		04C998C81D3158EF00124E69 /* EverydayHourse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C998C71D3158EF00124E69 /* EverydayHourse.xib */; };
-		04C998CA1D315B7E00124E69 /* resultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C998C91D315B7E00124E69 /* resultCell.xib */; };
 		04F06CCA1D2DFE920081A34D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06CC91D2DFE920081A34D /* main.m */; };
 		04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD11D2DFE920081A34D /* Main.storyboard */; };
 		04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD41D2DFE920081A34D /* Assets.xcassets */; };
@@ -57,11 +59,17 @@
 		0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSearchBar.m; sourceTree = "<group>"; };
 		0471D9D81D2FBBF300BCC2EE /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		04C3A8D21D31E643003203C0 /* 图解HTTP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "图解HTTP.pdf"; sourceTree = "<group>"; };
+		04C3A8D61D31FDD9003203C0 /* PDFImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFImage.framework; path = ../../../../../Downloads/PDFImage.framework; sourceTree = "<group>"; };
+		04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayhouseCell.h; sourceTree = "<group>"; };
+		04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHEverydayhouseCell.m; sourceTree = "<group>"; };
+		04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHEverydayhouseCell.xib; sourceTree = "<group>"; };
+		04C3A8E01D321FE2003203C0 /* EHSearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSearchResultCell.h; sourceTree = "<group>"; };
+		04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSearchResultCell.m; sourceTree = "<group>"; };
+		04C3A8E21D321FE2003203C0 /* EHSearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHSearchResultCell.xib; sourceTree = "<group>"; };
 		04C998841D31277500124E69 /* EHGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHGuideViewController.h; sourceTree = "<group>"; };
 		04C998851D31277500124E69 /* EHGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHGuideViewController.m; sourceTree = "<group>"; };
-		04C998871D31338400124E69 /* Socket.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Socket.pdf; sourceTree = "<group>"; };
-		04C998C71D3158EF00124E69 /* EverydayHourse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EverydayHourse.xib; sourceTree = "<group>"; };
-		04C998C91D315B7E00124E69 /* resultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = resultCell.xib; sourceTree = "<group>"; };
 		04F06CC51D2DFE920081A34D /* ehero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ehero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06CC91D2DFE920081A34D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F06CD21D2DFE920081A34D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -196,7 +204,7 @@
 			children = (
 				04F06D231D2E0E040081A34D /* Classes */,
 				04F06CD11D2DFE920081A34D /* Main.storyboard */,
-				04C998871D31338400124E69 /* Socket.pdf */,
+				04C3A8D21D31E643003203C0 /* 图解HTTP.pdf */,
 				04F06CD41D2DFE920081A34D /* Assets.xcassets */,
 				04F06CD61D2DFE920081A34D /* LaunchScreen.storyboard */,
 				04F06CD91D2DFE920081A34D /* Info.plist */,
@@ -284,7 +292,9 @@
 				04348FAC1D2F4A7300205130 /* buttonCell.xib */,
 				04348FAE1D2F4DFB00205130 /* buttonCell.h */,
 				04348FAF1D2F4DFB00205130 /* buttonCell.m */,
-				04C998C71D3158EF00124E69 /* EverydayHourse.xib */,
+				04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */,
+				04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */,
+				04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -320,7 +330,9 @@
 			children = (
 				0471D9D81D2FBBF300BCC2EE /* UIBarButtonItem+Extension.h */,
 				0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */,
-				04C998C91D315B7E00124E69 /* resultCell.xib */,
+				04C3A8E01D321FE2003203C0 /* EHSearchResultCell.h */,
+				04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */,
+				04C3A8E21D321FE2003203C0 /* EHSearchResultCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +349,8 @@
 		FEC0CEEDEBE9288536D3046F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04C3A8D61D31FDD9003203C0 /* PDFImage.framework */,
+				04C3A8D01D31E518003203C0 /* WebKit.framework */,
 				D0787467407A17293EC3E282 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -449,13 +463,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */,
 				04F06CD81D2DFE920081A34D /* LaunchScreen.storyboard in Resources */,
 				04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */,
+				04C3A8D31D31E643003203C0 /* 图解HTTP.pdf in Resources */,
 				04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */,
-				04C998CA1D315B7E00124E69 /* resultCell.xib in Resources */,
 				04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */,
-				04C998C81D3158EF00124E69 /* EverydayHourse.xib in Resources */,
-				04C998881D31338400124E69 /* Socket.pdf in Resources */,
+				04C3A8E41D321FE2003203C0 /* EHSearchResultCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +542,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */,
 				04200C371D2F7A7A005DC042 /* XTPopView.m in Sources */,
+				04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */,
 				04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */,
 				0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */,
 				04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */,
@@ -683,7 +699,7 @@
 					"$(PROJECT_DIR)/ehero/Classes/Lib/FastPdfKit.embeddedframework",
 				);
 				INFOPLIST_FILE = ehero/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -717,7 +733,7 @@
 					"$(PROJECT_DIR)/ehero/Classes/Lib/FastPdfKit.embeddedframework",
 				);
 				INFOPLIST_FILE = ehero/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",

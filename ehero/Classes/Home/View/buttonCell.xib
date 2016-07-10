@@ -1,92 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="reuseButtonCell" id="iN0-l3-epB" customClass="buttonCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gf-hc-ZUJ">
-                    <rect key="frame" x="16" y="0.0" width="60" height="60"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="60" id="QbC-Bc-oXV"/>
-                        <constraint firstAttribute="width" constant="60" id="jOc-En-pmz"/>
-                    </constraints>
-                    <state key="normal" title="Button" image="1"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gf-hc-ZUJ">
+                    <rect key="frame" x="21" y="5" width="50" height="50"/>
+                    <state key="normal" title="Button" image="Tips"/>
                     <connections>
                         <action selector="firstBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="XAf-aa-F5V"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-pP-7gR">
-                    <rect key="frame" x="92" y="0.0" width="60" height="60"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="60" id="d4s-Nd-cRo"/>
-                        <constraint firstAttribute="width" constant="60" id="dHm-ml-mYG"/>
-                    </constraints>
-                    <state key="normal" title="Button" image="1"/>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-pP-7gR">
+                    <rect key="frame" x="97" y="5" width="50" height="50"/>
+                    <state key="normal" title="Button" image="phone"/>
                     <connections>
                         <action selector="secondBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="7aB-Y8-wcB"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2e-Cs-qhX">
-                    <rect key="frame" x="168" y="0.0" width="60" height="60"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="60" id="QhX-ix-Kpe"/>
-                        <constraint firstAttribute="height" constant="60" id="mzh-2q-d3S"/>
-                    </constraints>
-                    <state key="normal" title="Button" image="1"/>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2e-Cs-qhX">
+                    <rect key="frame" x="173" y="5" width="50" height="50"/>
+                    <state key="normal" title="Button" image="house"/>
                     <connections>
                         <action selector="thirdBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="YL9-eY-r9E"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-hW-Rc8">
-                    <rect key="frame" x="244" y="0.0" width="60" height="60"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="60" id="Ve9-kw-Qiq"/>
-                        <constraint firstAttribute="width" constant="60" id="ohv-yp-D1N"/>
-                    </constraints>
-                    <state key="normal" title="Button" image="1"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="生活锦囊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syE-Df-jga">
+                    <rect key="frame" x="25" y="54" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="防扰电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UH-x5-vGy">
+                    <rect key="frame" x="101" y="54" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="每日一房" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtG-G7-hg6">
+                    <rect key="frame" x="177" y="54" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="微信群组" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcS-mW-k2O">
+                    <rect key="frame" x="253" y="54" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-hW-Rc8">
+                    <rect key="frame" x="249" y="5" width="50" height="50"/>
+                    <state key="normal" title="Button" image="Wechat_group"/>
                     <connections>
                         <action selector="fourthBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="uMq-du-vIV"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="1o3-pP-7gR" firstAttribute="width" secondItem="0gf-hc-ZUJ" secondAttribute="width" id="Ckk-9t-m37"/>
-                <constraint firstItem="n2e-Cs-qhX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Kdb-ke-1ZH"/>
-                <constraint firstItem="OYm-hW-Rc8" firstAttribute="leading" secondItem="n2e-Cs-qhX" secondAttribute="trailing" constant="16" id="Mq3-am-LAa"/>
-                <constraint firstItem="1o3-pP-7gR" firstAttribute="leading" secondItem="0gf-hc-ZUJ" secondAttribute="trailing" constant="16" id="Q3y-27-i3y"/>
-                <constraint firstItem="0gf-hc-ZUJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="R1d-ma-BXr"/>
-                <constraint firstItem="0gf-hc-ZUJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="UC4-KA-yjl"/>
-                <constraint firstItem="n2e-Cs-qhX" firstAttribute="leading" secondItem="1o3-pP-7gR" secondAttribute="trailing" constant="16" id="Y7B-Do-dtk"/>
-                <constraint firstAttribute="bottom" secondItem="OYm-hW-Rc8" secondAttribute="bottom" id="ak0-2q-MXL"/>
-                <constraint firstItem="OYm-hW-Rc8" firstAttribute="leading" secondItem="n2e-Cs-qhX" secondAttribute="trailing" constant="16" id="dcw-wI-67e"/>
-                <constraint firstAttribute="trailing" secondItem="OYm-hW-Rc8" secondAttribute="trailing" constant="16" id="dix-5x-1pa"/>
-                <constraint firstItem="1o3-pP-7gR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ets-cJ-o7y"/>
-                <constraint firstItem="1o3-pP-7gR" firstAttribute="height" secondItem="0gf-hc-ZUJ" secondAttribute="height" id="g5K-RG-n1j"/>
-                <constraint firstItem="OYm-hW-Rc8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gxW-uC-RwO"/>
-                <constraint firstItem="n2e-Cs-qhX" firstAttribute="leading" secondItem="1o3-pP-7gR" secondAttribute="trailing" constant="16" id="lvj-0W-lsf"/>
-                <constraint firstItem="OYm-hW-Rc8" firstAttribute="height" secondItem="0gf-hc-ZUJ" secondAttribute="height" id="mbz-vR-Mf7"/>
-                <constraint firstItem="OYm-hW-Rc8" firstAttribute="width" secondItem="0gf-hc-ZUJ" secondAttribute="width" id="pnU-2I-LQ6"/>
-                <constraint firstItem="n2e-Cs-qhX" firstAttribute="height" secondItem="0gf-hc-ZUJ" secondAttribute="height" id="shl-2M-VBw"/>
-                <constraint firstAttribute="bottom" secondItem="1o3-pP-7gR" secondAttribute="bottom" id="tQJ-1G-xdW"/>
-                <constraint firstAttribute="bottom" secondItem="n2e-Cs-qhX" secondAttribute="bottom" id="uis-ib-arp"/>
-                <constraint firstItem="n2e-Cs-qhX" firstAttribute="width" secondItem="0gf-hc-ZUJ" secondAttribute="width" id="wLk-nw-1ma"/>
-                <constraint firstItem="1o3-pP-7gR" firstAttribute="leading" secondItem="0gf-hc-ZUJ" secondAttribute="trailing" constant="16" id="wRt-7Y-zR0"/>
-                <constraint firstAttribute="bottom" secondItem="0gf-hc-ZUJ" secondAttribute="bottom" id="xOC-dW-bbz"/>
-            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="361" y="45"/>
+            <point key="canvasLocation" x="361" y="52.5"/>
         </view>
     </objects>
     <resources>
-        <image name="1" width="156" height="156"/>
+        <image name="Tips" width="512" height="512"/>
+        <image name="Wechat_group" width="512" height="512"/>
+        <image name="house" width="250" height="221"/>
+        <image name="phone" width="173" height="173"/>
     </resources>
 </document>

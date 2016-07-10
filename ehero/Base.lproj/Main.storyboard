@@ -15,12 +15,41 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="z6H-ng-6vG" kind="relationship" relationship="rootViewController" id="BFh-q6-eKf"/>
+                        <segue destination="dN7-Mq-OW4" kind="relationship" relationship="rootViewController" id="Rd5-vI-7x9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BbG-Ws-OuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1059" y="-971"/>
+        </scene>
+        <!--锦囊-->
+        <scene sceneID="BFW-ph-7Uu">
+            <objects>
+                <viewController storyboardIdentifier="EHGuideViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dN7-Mq-OW4" customClass="EHGuideViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9jX-y8-MJB"/>
+                        <viewControllerLayoutGuide type="bottom" id="zFe-G3-gPn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MuE-1C-JjG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="EHGuideViewController" translatesAutoresizingMaskIntoConstraints="NO" id="2MI-bN-Jeh">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="锦囊" id="23W-0P-CcH"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="wb" destination="2MI-bN-Jeh" id="LM2-o0-DIF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JV6-NB-y0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1059" y="-332"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dbc-FY-cYN">
@@ -39,26 +68,6 @@
             </objects>
             <point key="canvasLocation" x="-104" y="-1011"/>
         </scene>
-        <!--锦囊-->
-        <scene sceneID="9r0-md-Tve">
-            <objects>
-                <viewController storyboardIdentifier="EHGuideViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z6H-ng-6vG" customClass="EHGuideViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oQm-Ou-qoS"/>
-                        <viewControllerLayoutGuide type="bottom" id="ygu-dY-eGS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hv5-8V-MlQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="锦囊" id="n1O-tm-wZr"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UOR-NP-SWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1059" y="-302"/>
-        </scene>
         <!--易房好介-->
         <scene sceneID="Irj-Rz-xCW">
             <objects>
@@ -74,11 +83,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="易房好介" id="J6u-Q0-Cap">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="9Q8-nV-Guj">
+                        <barButtonItem key="leftBarButtonItem" image="location" style="plain" id="9Q8-nV-Guj">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IhE-S7-Q94">
                                 <rect key="frame" x="16" y="7" width="61" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="北京" image="ehero_icon">
+                                <state key="normal" title="北京" image="location">
                                     <color key="titleColor" red="0.08235294118" green="0.086274509799999996" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -145,7 +154,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ehero_icon" width="25" height="29"/>
+        <image name="location" width="16" height="21"/>
         <image name="search_112.60997067449px_1197039_easyicon.net" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
