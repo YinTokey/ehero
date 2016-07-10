@@ -11,6 +11,12 @@
 		04200C3A1D2F84E6005DC042 /* EHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200C391D2F84E6005DC042 /* EHSearchViewController.m */; };
 		04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04348FAC1D2F4A7300205130 /* buttonCell.xib */; };
 		04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04348FAF1D2F4DFB00205130 /* buttonCell.m */; };
+		0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */; };
+		0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */; };
+		04C998861D31277500124E69 /* EHGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C998851D31277500124E69 /* EHGuideViewController.m */; };
+		04C998881D31338400124E69 /* Socket.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 04C998871D31338400124E69 /* Socket.pdf */; };
+		04C998C81D3158EF00124E69 /* EverydayHourse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C998C71D3158EF00124E69 /* EverydayHourse.xib */; };
+		04C998CA1D315B7E00124E69 /* resultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C998C91D315B7E00124E69 /* resultCell.xib */; };
 		04F06CCA1D2DFE920081A34D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06CC91D2DFE920081A34D /* main.m */; };
 		04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD11D2DFE920081A34D /* Main.storyboard */; };
 		04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD41D2DFE920081A34D /* Assets.xcassets */; };
@@ -47,6 +53,15 @@
 		04348FAC1D2F4A7300205130 /* buttonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = buttonCell.xib; sourceTree = "<group>"; };
 		04348FAE1D2F4DFB00205130 /* buttonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonCell.h; sourceTree = "<group>"; };
 		04348FAF1D2F4DFB00205130 /* buttonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buttonCell.m; sourceTree = "<group>"; };
+		0471D9D51D2FB73000BCC2EE /* YTSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTSearchBar.h; sourceTree = "<group>"; };
+		0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSearchBar.m; sourceTree = "<group>"; };
+		0471D9D81D2FBBF300BCC2EE /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		04C998841D31277500124E69 /* EHGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHGuideViewController.h; sourceTree = "<group>"; };
+		04C998851D31277500124E69 /* EHGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHGuideViewController.m; sourceTree = "<group>"; };
+		04C998871D31338400124E69 /* Socket.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Socket.pdf; sourceTree = "<group>"; };
+		04C998C71D3158EF00124E69 /* EverydayHourse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EverydayHourse.xib; sourceTree = "<group>"; };
+		04C998C91D315B7E00124E69 /* resultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = resultCell.xib; sourceTree = "<group>"; };
 		04F06CC51D2DFE920081A34D /* ehero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ehero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06CC91D2DFE920081A34D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F06CD21D2DFE920081A34D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +112,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				0471D9D41D2FB73000BCC2EE /* YTSearchBar */,
 				04200C341D2F7A7A005DC042 /* XTPopView */,
 			);
 			path = Lib;
@@ -109,6 +125,48 @@
 				04200C361D2F7A7A005DC042 /* XTPopView.m */,
 			);
 			path = XTPopView;
+			sourceTree = "<group>";
+		};
+		0471D9D41D2FB73000BCC2EE /* YTSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				0471D9D51D2FB73000BCC2EE /* YTSearchBar.h */,
+				0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */,
+			);
+			path = YTSearchBar;
+			sourceTree = "<group>";
+		};
+		04C998801D31271400124E69 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				04C998811D31271400124E69 /* Controller */,
+				04C998821D31271400124E69 /* Model */,
+				04C998831D31271400124E69 /* View */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		04C998811D31271400124E69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C998841D31277500124E69 /* EHGuideViewController.h */,
+				04C998851D31277500124E69 /* EHGuideViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C998821D31271400124E69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C998831D31271400124E69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		04F06CBC1D2DFE910081A34D = {
@@ -138,6 +196,7 @@
 			children = (
 				04F06D231D2E0E040081A34D /* Classes */,
 				04F06CD11D2DFE920081A34D /* Main.storyboard */,
+				04C998871D31338400124E69 /* Socket.pdf */,
 				04F06CD41D2DFE920081A34D /* Assets.xcassets */,
 				04F06CD61D2DFE920081A34D /* LaunchScreen.storyboard */,
 				04F06CD91D2DFE920081A34D /* Info.plist */,
@@ -175,6 +234,7 @@
 		04F06D231D2E0E040081A34D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04C998801D31271400124E69 /* Guide */,
 				04200C331D2F7A6A005DC042 /* Lib */,
 				04F06D461D2E4CDE0081A34D /* Search */,
 				04F06D421D2E4CD70081A34D /* Home */,
@@ -224,6 +284,7 @@
 				04348FAC1D2F4A7300205130 /* buttonCell.xib */,
 				04348FAE1D2F4DFB00205130 /* buttonCell.h */,
 				04348FAF1D2F4DFB00205130 /* buttonCell.m */,
+				04C998C71D3158EF00124E69 /* EverydayHourse.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,6 +318,9 @@
 		04F06D491D2E4CDE0081A34D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0471D9D81D2FBBF300BCC2EE /* UIBarButtonItem+Extension.h */,
+				0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */,
+				04C998C91D315B7E00124E69 /* resultCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -388,7 +452,10 @@
 				04F06CD81D2DFE920081A34D /* LaunchScreen.storyboard in Resources */,
 				04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */,
 				04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */,
+				04C998CA1D315B7E00124E69 /* resultCell.xib in Resources */,
 				04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */,
+				04C998C81D3158EF00124E69 /* EverydayHourse.xib in Resources */,
+				04C998881D31338400124E69 /* Socket.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,10 +530,13 @@
 			files = (
 				04200C371D2F7A7A005DC042 /* XTPopView.m in Sources */,
 				04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */,
+				0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */,
 				04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */,
+				0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */,
 				04200C3A1D2F84E6005DC042 /* EHSearchViewController.m in Sources */,
 				04F06CCA1D2DFE920081A34D /* main.m in Sources */,
 				04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */,
+				04C998861D31277500124E69 /* EHGuideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,9 +678,29 @@
 			baseConfigurationReference = BFE5132F7394584EE072C978 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ehero/Classes/Lib/FastPdfKit.embeddedframework",
+				);
 				INFOPLIST_FILE = ehero/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"OHPDFImage\"",
+					"-l\"SDCycleScrollView\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ehero.ehero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -622,9 +712,29 @@
 			baseConfigurationReference = 0BF1B60C2B382860B7250FE9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ehero/Classes/Lib/FastPdfKit.embeddedframework",
+				);
 				INFOPLIST_FILE = ehero/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"OHPDFImage\"",
+					"-l\"SDCycleScrollView\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ehero.ehero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

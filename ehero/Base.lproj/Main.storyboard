@@ -6,6 +6,23 @@
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
+        <scene sceneID="ehG-5G-9vQ">
+            <objects>
+                <navigationController id="2B2-uV-Ctu" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8KO-Ge-Id9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="z6H-ng-6vG" kind="relationship" relationship="rootViewController" id="BFh-q6-eKf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BbG-Ws-OuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1059" y="-971"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="dbc-FY-cYN">
             <objects>
                 <navigationController id="nXI-Mq-9gS" sceneMemberID="viewController">
@@ -20,7 +37,27 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9c-WN-uEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-476" y="-335"/>
+            <point key="canvasLocation" x="-104" y="-1011"/>
+        </scene>
+        <!--锦囊-->
+        <scene sceneID="9r0-md-Tve">
+            <objects>
+                <viewController storyboardIdentifier="EHGuideViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z6H-ng-6vG" customClass="EHGuideViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oQm-Ou-qoS"/>
+                        <viewControllerLayoutGuide type="bottom" id="ygu-dY-eGS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hv5-8V-MlQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="锦囊" id="n1O-tm-wZr"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOR-NP-SWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1059" y="-302"/>
         </scene>
         <!--易房好介-->
         <scene sceneID="Irj-Rz-xCW">
@@ -55,7 +92,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="search_112.60997067449px_1197039_easyicon.net"/>
                                 <connections>
-                                    <segue destination="Frh-BS-zpg" kind="show" id="k2P-HR-zH3"/>
+                                    <segue destination="Frh-BS-zpg" kind="show" id="dVq-Eo-EPX"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -67,12 +104,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP1-S5-T8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68" y="-335"/>
+            <point key="canvasLocation" x="-128" y="-307"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="b6y-a8-fld">
             <objects>
-                <tableViewController id="Frh-BS-zpg" sceneMemberID="viewController">
+                <tableViewController id="Frh-BS-zpg" customClass="EHSearchViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pb7-7n-iFy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,15 +119,36 @@
                             <outlet property="delegate" destination="Frh-BS-zpg" id="BSi-VP-Qge"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="jlK-uK-epl"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f87-kz-ijK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343" y="-346"/>
+            <point key="canvasLocation" x="268" y="-307"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="krp-a6-fCF">
+            <objects>
+                <navigationController id="csq-Vv-oWX" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iyq-yn-QMi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Frh-BS-zpg" kind="relationship" relationship="rootViewController" id="w5F-EZ-b78"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wy1-OO-vK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="-976"/>
         </scene>
     </scenes>
     <resources>
         <image name="ehero_icon" width="25" height="29"/>
         <image name="search_112.60997067449px_1197039_easyicon.net" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dVq-Eo-EPX"/>
+    </inferredMetricsTieBreakers>
 </document>

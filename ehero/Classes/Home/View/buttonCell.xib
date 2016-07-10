@@ -19,7 +19,7 @@
                     </constraints>
                     <state key="normal" title="Button" image="1"/>
                     <connections>
-                        <action selector="click:" destination="iN0-l3-epB" eventType="touchUpInside" id="FqC-eQ-FMa"/>
+                        <action selector="firstBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="XAf-aa-F5V"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-pP-7gR">
@@ -29,6 +29,9 @@
                         <constraint firstAttribute="width" constant="60" id="dHm-ml-mYG"/>
                     </constraints>
                     <state key="normal" title="Button" image="1"/>
+                    <connections>
+                        <action selector="secondBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="7aB-Y8-wcB"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2e-Cs-qhX">
                     <rect key="frame" x="168" y="0.0" width="60" height="60"/>
@@ -37,6 +40,9 @@
                         <constraint firstAttribute="height" constant="60" id="mzh-2q-d3S"/>
                     </constraints>
                     <state key="normal" title="Button" image="1"/>
+                    <connections>
+                        <action selector="thirdBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="YL9-eY-r9E"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-hW-Rc8">
                     <rect key="frame" x="244" y="0.0" width="60" height="60"/>
@@ -45,6 +51,9 @@
                         <constraint firstAttribute="width" constant="60" id="ohv-yp-D1N"/>
                     </constraints>
                     <state key="normal" title="Button" image="1"/>
+                    <connections>
+                        <action selector="fourthBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="uMq-du-vIV"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -74,11 +83,6 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="firstBtn" destination="0gf-hc-ZUJ" id="0U4-iU-MrJ"/>
-                <outlet property="secondBtn" destination="1o3-pP-7gR" id="nAt-S4-dpr"/>
-                <outlet property="thirdBtn" destination="n2e-Cs-qhX" id="yMa-hw-tDD"/>
-            </connections>
             <point key="canvasLocation" x="361" y="45"/>
         </view>
     </objects>

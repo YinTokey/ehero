@@ -10,6 +10,7 @@
 #import <SDCycleScrollView.h>
 #import "buttonCell.h"
 #import "XTPopView.h"
+#import "EHGuideViewController.h"
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate>
 {
     /** 图片数组*/
@@ -34,7 +35,10 @@
     
     [self setupHeaderView];
     
-   
+    //跳转到下一界面的返回按钮样式
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
+    backItem.title = @"";
+    self.navigationItem.backBarButtonItem = backItem;
 }
 
 
@@ -84,10 +88,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setClickEvent];
         
-        
-        
-        
-        
+ 
         return cell;
     //第二行 点评经纪人
     }else if(indexPath.section == 1){
@@ -166,9 +167,27 @@
     }
 }
 #pragma mark - 实现自定义cell里按钮点击的代理方法
-- (void)buttonClick:(UITableViewCell *)cell{
-    NSIndexPath *index = [self.tableView indexPathForCell:cell];
-    NSLog(@"nini");
+- (void)firstBtnClick:(UITableViewCell *)cell{
+    
+    EHGuideViewController *guideViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"EHGuideViewController"];
+    
+    [self.navigationController pushViewController:guideViewController animated:YES];
+ 
+    
+    NSLog(@"first");
 }
+
+- (void)secondBtnClick:(UITableViewCell *)cell{
+    NSLog(@"second");
+}
+
+- (void)thirdBtnClick:(UITableViewCell *)cell{
+    NSLog(@"thrid");
+}
+
+- (void)fourthBtnClick:(UITableViewCell *)cell{
+    NSLog(@"fourth");
+}
+
 
 @end

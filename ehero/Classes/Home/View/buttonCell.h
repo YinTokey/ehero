@@ -11,7 +11,12 @@
 
 @protocol buttonCellDelegate <NSObject>
 //1.声明代理方法
-- (void)buttonClick:(UITableViewCell *)cell;
+- (void)firstBtnClick:(UITableViewCell *)cell;
+- (void)secondBtnClick:(UITableViewCell *)cell;
+- (void)thirdBtnClick:(UITableViewCell *)cell;
+- (void)fourthBtnClick:(UITableViewCell *)cell;
+
+
 
 @end
 
