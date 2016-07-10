@@ -12,8 +12,8 @@
 #import "EHEverydayhouseCell.h"
 #import "XTPopView.h"
 #import "EHGuideViewController.h"
-
-
+#import "EHEverydayHouseViewController.h"
+#import "EHAntidisturbViewController.h"
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate>
 {
     /** 图片数组*/
@@ -177,17 +177,20 @@
     EHGuideViewController *guideViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"EHGuideViewController"];
     
     [self.navigationController pushViewController:guideViewController animated:YES];
- 
-    
-    NSLog(@"first");
+
 }
 
 - (void)secondBtnClick:(UITableViewCell *)cell{
-    NSLog(@"second");
+    
+    EHAntidisturbViewController *antidisturbViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"AntidisturbViewController"];
+    [self.navigationController pushViewController:antidisturbViewController animated:YES];
+    
 }
 
 - (void)thirdBtnClick:(UITableViewCell *)cell{
-    NSLog(@"thrid");
+    EHEverydayHouseViewController *everydayHouseViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"EverydayHouseViewController"];
+    
+    [self.navigationController pushViewController:everydayHouseViewController animated:YES];
 }
 
 - (void)fourthBtnClick:(UITableViewCell *)cell{

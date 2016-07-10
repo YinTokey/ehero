@@ -19,9 +19,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BbG-Ws-OuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1059" y="-971"/>
+            <point key="canvasLocation" x="-1083" y="317"/>
         </scene>
-        <!--锦囊-->
+        <!--生活锦囊-->
         <scene sceneID="BFW-ph-7Uu">
             <objects>
                 <viewController storyboardIdentifier="EHGuideViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dN7-Mq-OW4" customClass="EHGuideViewController" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="锦囊" id="23W-0P-CcH"/>
+                    <navigationItem key="navigationItem" title="生活锦囊" id="23W-0P-CcH"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="wb" destination="2MI-bN-Jeh" id="LM2-o0-DIF"/>
@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JV6-NB-y0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1059" y="-332"/>
+            <point key="canvasLocation" x="-1075" y="1043"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dbc-FY-cYN">
@@ -134,6 +134,133 @@
             </objects>
             <point key="canvasLocation" x="268" y="-307"/>
         </scene>
+        <!--免骚扰电话-->
+        <scene sceneID="uDo-LG-8zj">
+            <objects>
+                <viewController storyboardIdentifier="AntidisturbViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iJb-bq-icq" customClass="EHAntidisturbViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1eD-ok-zBs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dzy-ex-FMg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JRQ-hz-BkA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="REX-P1-z8e">
+                                <rect key="frame" x="11" y="72" width="298" height="227"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="我的号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ilV-2P-U7e">
+                                        <rect key="frame" x="43" y="99" width="212" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="对方号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehS-sS-ea7">
+                                        <rect key="frame" x="43" y="139" width="212" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tye-iT-qV1">
+                                        <rect key="frame" x="43" y="184" width="212" height="30"/>
+                                        <state key="normal" title="呼叫" backgroundImage="greenbackground">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="callBtnClick:" destination="iJb-bq-icq" eventType="touchUpInside" id="Kk3-J5-c69"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="蓝色标准组合02" translatesAutoresizingMaskIntoConstraints="NO" id="HyQ-6i-aN5">
+                                        <rect key="frame" x="27" y="0.0" width="245" height="96"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.6962161657" green="0.95411867309999998" blue="0.96901041669999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="免骚扰电话" id="HSt-Kp-HTN"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3vg-TN-QD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675" y="962"/>
+        </scene>
+        <!--每日一房-->
+        <scene sceneID="whe-o3-bPp">
+            <objects>
+                <tableViewController storyboardIdentifier="EverydayHouseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kZa-Qi-3aT" customClass="EHEverydayHouseViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dqf-8C-QDH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Q0a-xh-QrD">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q0a-xh-QrD" id="sW9-Bo-cz2">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kZa-Qi-3aT" id="bxM-ol-cO1"/>
+                            <outlet property="delegate" destination="kZa-Qi-3aT" id="qqV-vb-Sb4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="每日一房" id="ago-fS-Pz1"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CF7-oY-VFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-259" y="1052"/>
+        </scene>
+        <!--微信群组-->
+        <scene sceneID="atV-aY-9BO">
+            <objects>
+                <tableViewController id="Ifm-dD-dqj" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DWz-wg-Ygl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5F1-dI-Yad">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5F1-dI-Yad" id="kwx-ez-CS9">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ifm-dD-dqj" id="YBh-Nt-hcF"/>
+                            <outlet property="delegate" destination="Ifm-dD-dqj" id="Yn0-3F-Fqc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="微信群组" id="8bG-Za-kQZ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GcH-v2-BiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179" y="1019"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TjS-RV-JO0">
+            <objects>
+                <navigationController id="ZFw-4M-etD" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kZi-A7-z3o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iJb-bq-icq" kind="relationship" relationship="rootViewController" id="Aoo-sc-79H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epq-lM-N9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675" y="327"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="krp-a6-fCF">
             <objects>
@@ -166,7 +293,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7s-Bd-aPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="-1011"/>
+            <point key="canvasLocation" x="722" y="-1011"/>
         </scene>
         <!--经纪人资料-->
         <scene sceneID="OOw-yx-TLi">
@@ -180,6 +307,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="agent" translatesAutoresizingMaskIntoConstraints="NO" id="8iN-b8-TnF">
+                                <rect key="frame" x="7" y="83" width="123" height="162"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yDO-b0-ciT">
                                 <rect key="frame" x="131" y="72" width="187" height="183"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -280,12 +410,6 @@
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="小区：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvd-0a-NO1">
-                                <rect key="frame" x="138" y="387" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="O1Y-qJ-PHU">
                                 <rect key="frame" x="15" y="440" width="293" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -294,14 +418,17 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92G-5g-aBt">
-                                <rect key="frame" x="138" y="293" width="153" height="35"/>
-                                <state key="normal" title="17718566671" image="Phone_call" backgroundImage="empty_button">
+                                <rect key="frame" x="138" y="311" width="153" height="26"/>
+                                <state key="normal" title="17718566671" image="Phone_call" backgroundImage="greenbackground">
                                     <color key="titleColor" red="0.08235294118" green="0.086274509799999996" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="agent" translatesAutoresizingMaskIntoConstraints="NO" id="8iN-b8-TnF">
-                                <rect key="frame" x="7" y="83" width="123" height="162"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="小区：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvd-0a-NO1">
+                                <rect key="frame" x="138" y="387" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -313,16 +440,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZs-h1-aYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="-359"/>
+            <point key="canvasLocation" x="738" y="-315"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="M40-x2-GLU">
+            <objects>
+                <navigationController id="9HB-vC-fxy" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bgG-bF-zaL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kZa-Qi-3aT" kind="relationship" relationship="rootViewController" id="cF5-X2-Jqf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dW3-OE-dXx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-221" y="367"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Sd-0N-J94">
+            <objects>
+                <navigationController id="nfI-DZ-0ci" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PJR-5N-wge">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ifm-dD-dqj" kind="relationship" relationship="rootViewController" id="kXh-p2-lEs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cu-BD-gDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="375"/>
         </scene>
     </scenes>
     <resources>
         <image name="Phone_call" width="15" height="22"/>
         <image name="agent" width="150" height="200"/>
         <image name="btnBackground" width="75" height="31"/>
-        <image name="empty_button" width="72" height="72"/>
+        <image name="greenbackground" width="214" height="34"/>
         <image name="location" width="16" height="21"/>
         <image name="search_112.60997067449px_1197039_easyicon.net" width="25" height="25"/>
+        <image name="蓝色标准组合02" width="1682" height="656"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dVq-Eo-EPX"/>

@@ -12,6 +12,8 @@
 		04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04348FAC1D2F4A7300205130 /* buttonCell.xib */; };
 		04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04348FAF1D2F4DFB00205130 /* buttonCell.m */; };
 		04657FBF1D323DF500914495 /* JJRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FBE1D323DF500914495 /* JJRadarChart.m */; };
+		04657FD21D32473200914495 /* EHEverydayHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD11D32473200914495 /* EHEverydayHouseViewController.m */; };
+		04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD41D324B4800914495 /* EHAntidisturbViewController.m */; };
 		0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */; };
 		0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */; };
 		04C3A8D31D31E643003203C0 /* 图解HTTP.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8D21D31E643003203C0 /* 图解HTTP.pdf */; };
@@ -59,6 +61,10 @@
 		04348FAF1D2F4DFB00205130 /* buttonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buttonCell.m; sourceTree = "<group>"; };
 		04657FBD1D323DF500914495 /* JJRadarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRadarChart.h; sourceTree = "<group>"; };
 		04657FBE1D323DF500914495 /* JJRadarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRadarChart.m; sourceTree = "<group>"; };
+		04657FD01D32473200914495 /* EHEverydayHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayHouseViewController.h; sourceTree = "<group>"; };
+		04657FD11D32473200914495 /* EHEverydayHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHEverydayHouseViewController.m; sourceTree = "<group>"; };
+		04657FD31D324B4800914495 /* EHAntidisturbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAntidisturbViewController.h; sourceTree = "<group>"; };
+		04657FD41D324B4800914495 /* EHAntidisturbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAntidisturbViewController.m; sourceTree = "<group>"; };
 		0471D9D51D2FB73000BCC2EE /* YTSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTSearchBar.h; sourceTree = "<group>"; };
 		0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSearchBar.m; sourceTree = "<group>"; };
 		0471D9D81D2FBBF300BCC2EE /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -149,6 +155,134 @@
 				04657FBE1D323DF500914495 /* JJRadarChart.m */,
 			);
 			path = JJRadarChart;
+			sourceTree = "<group>";
+		};
+		04657FC01D32464800914495 /* WechatGroup */ = {
+			isa = PBXGroup;
+			children = (
+				04657FC11D32464800914495 /* Controller */,
+				04657FC21D32464800914495 /* Model */,
+				04657FC31D32464800914495 /* View */,
+			);
+			path = WechatGroup;
+			sourceTree = "<group>";
+		};
+		04657FC11D32464800914495 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04657FC21D32464800914495 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04657FC31D32464800914495 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04657FC41D32466500914495 /* EverydayHouse */ = {
+			isa = PBXGroup;
+			children = (
+				04657FC51D32466500914495 /* Controller */,
+				04657FC61D32466500914495 /* Model */,
+				04657FC71D32466500914495 /* View */,
+			);
+			path = EverydayHouse;
+			sourceTree = "<group>";
+		};
+		04657FC51D32466500914495 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04657FD01D32473200914495 /* EHEverydayHouseViewController.h */,
+				04657FD11D32473200914495 /* EHEverydayHouseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04657FC61D32466500914495 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04657FC71D32466500914495 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04657FC81D32467000914495 /* Anti-disturb */ = {
+			isa = PBXGroup;
+			children = (
+				04657FC91D32467000914495 /* Controller */,
+				04657FCA1D32467000914495 /* Model */,
+				04657FCB1D32467000914495 /* View */,
+			);
+			path = "Anti-disturb";
+			sourceTree = "<group>";
+		};
+		04657FC91D32467000914495 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04657FD31D324B4800914495 /* EHAntidisturbViewController.h */,
+				04657FD41D324B4800914495 /* EHAntidisturbViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04657FCA1D32467000914495 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04657FCB1D32467000914495 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04657FCC1D32469C00914495 /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				04657FCD1D32469C00914495 /* Controller */,
+				04657FCE1D32469C00914495 /* Model */,
+				04657FCF1D32469C00914495 /* View */,
+			);
+			path = Tips;
+			sourceTree = "<group>";
+		};
+		04657FCD1D32469C00914495 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04657FCE1D32469C00914495 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04657FCF1D32469C00914495 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0471D9D41D2FB73000BCC2EE /* YTSearchBar */ = {
@@ -291,6 +425,10 @@
 		04F06D231D2E0E040081A34D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04657FCC1D32469C00914495 /* Tips */,
+				04657FC81D32467000914495 /* Anti-disturb */,
+				04657FC41D32466500914495 /* EverydayHouse */,
+				04657FC01D32464800914495 /* WechatGroup */,
 				04C3A8E51D322A66003203C0 /* AgentInfo */,
 				04C998801D31271400124E69 /* Guide */,
 				04200C331D2F7A6A005DC042 /* Lib */,
@@ -601,6 +739,8 @@
 				04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */,
 				0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */,
 				04200C3A1D2F84E6005DC042 /* EHSearchViewController.m in Sources */,
+				04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */,
+				04657FD21D32473200914495 /* EHEverydayHouseViewController.m in Sources */,
 				04F06CCA1D2DFE920081A34D /* main.m in Sources */,
 				04C3A8EB1D322A82003203C0 /* EHAgentInfoViewController.m in Sources */,
 				04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */,
