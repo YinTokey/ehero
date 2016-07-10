@@ -11,7 +11,7 @@
 #import "buttonCell.h"
 #import "EHEverydayhouseCell.h"
 #import "XTPopView.h"
-#import "EHGuideViewController.h"
+#import "EHTipsViewController.h"
 #import "EHEverydayHouseViewController.h"
 #import "EHAntidisturbViewController.h"
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate>
@@ -174,9 +174,9 @@
 #pragma mark - 实现自定义cell里按钮点击的代理方法
 - (void)firstBtnClick:(UITableViewCell *)cell{
     
-    EHGuideViewController *guideViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"EHGuideViewController"];
+    EHTipsViewController  *tipsViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"TipsViewController"];
     
-    [self.navigationController pushViewController:guideViewController animated:YES];
+    [self.navigationController pushViewController:tipsViewController animated:YES];
 
 }
 
