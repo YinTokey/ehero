@@ -10,4 +10,6 @@
 
 @interface EHSearchResultCell : UITableViewCell
 
++ (instancetype)searchResultCellWithTableView:(UITableView *)tableView;
+
 @end

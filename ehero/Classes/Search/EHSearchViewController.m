@@ -9,7 +9,11 @@
 #import "EHSearchViewController.h"
 #import "YTSearchBar.h"
 #import "UIBarButtonItem+Extension.h"
+#import "EHSearchResultCell.h"
+
 @interface EHSearchViewController ()
+
+
 @property (nonatomic, strong) YTSearchBar *searchBar;
 @end
 
@@ -29,17 +33,20 @@
 }
 
 
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
+    
+    
+    return cell;
+}
+#pragma mark - cell高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 124;
 }
 
 - (void)selections{
