@@ -11,6 +11,7 @@
 		04200C3A1D2F84E6005DC042 /* EHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200C391D2F84E6005DC042 /* EHSearchViewController.m */; };
 		04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04348FAC1D2F4A7300205130 /* buttonCell.xib */; };
 		04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04348FAF1D2F4DFB00205130 /* buttonCell.m */; };
+		04657FBF1D323DF500914495 /* JJRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FBE1D323DF500914495 /* JJRadarChart.m */; };
 		0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */; };
 		0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */; };
 		04C3A8D31D31E643003203C0 /* 图解HTTP.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8D21D31E643003203C0 /* 图解HTTP.pdf */; };
@@ -18,6 +19,7 @@
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
 		04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */; };
 		04C3A8E41D321FE2003203C0 /* EHSearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8E21D321FE2003203C0 /* EHSearchResultCell.xib */; };
+		04C3A8EB1D322A82003203C0 /* EHAgentInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8EA1D322A82003203C0 /* EHAgentInfoViewController.m */; };
 		04C998861D31277500124E69 /* EHGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C998851D31277500124E69 /* EHGuideViewController.m */; };
 		04F06CCA1D2DFE920081A34D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06CC91D2DFE920081A34D /* main.m */; };
 		04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD11D2DFE920081A34D /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		04348FAC1D2F4A7300205130 /* buttonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = buttonCell.xib; sourceTree = "<group>"; };
 		04348FAE1D2F4DFB00205130 /* buttonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonCell.h; sourceTree = "<group>"; };
 		04348FAF1D2F4DFB00205130 /* buttonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buttonCell.m; sourceTree = "<group>"; };
+		04657FBD1D323DF500914495 /* JJRadarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRadarChart.h; sourceTree = "<group>"; };
+		04657FBE1D323DF500914495 /* JJRadarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRadarChart.m; sourceTree = "<group>"; };
 		0471D9D51D2FB73000BCC2EE /* YTSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTSearchBar.h; sourceTree = "<group>"; };
 		0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSearchBar.m; sourceTree = "<group>"; };
 		0471D9D81D2FBBF300BCC2EE /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 		04C3A8E01D321FE2003203C0 /* EHSearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSearchResultCell.h; sourceTree = "<group>"; };
 		04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSearchResultCell.m; sourceTree = "<group>"; };
 		04C3A8E21D321FE2003203C0 /* EHSearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHSearchResultCell.xib; sourceTree = "<group>"; };
+		04C3A8E91D322A82003203C0 /* EHAgentInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfoViewController.h; sourceTree = "<group>"; };
+		04C3A8EA1D322A82003203C0 /* EHAgentInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfoViewController.m; sourceTree = "<group>"; };
 		04C998841D31277500124E69 /* EHGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHGuideViewController.h; sourceTree = "<group>"; };
 		04C998851D31277500124E69 /* EHGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHGuideViewController.m; sourceTree = "<group>"; };
 		04F06CC51D2DFE920081A34D /* ehero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ehero.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +126,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				04657FBC1D323DF500914495 /* JJRadarChart */,
 				0471D9D41D2FB73000BCC2EE /* YTSearchBar */,
 				04200C341D2F7A7A005DC042 /* XTPopView */,
 			);
@@ -135,6 +142,15 @@
 			path = XTPopView;
 			sourceTree = "<group>";
 		};
+		04657FBC1D323DF500914495 /* JJRadarChart */ = {
+			isa = PBXGroup;
+			children = (
+				04657FBD1D323DF500914495 /* JJRadarChart.h */,
+				04657FBE1D323DF500914495 /* JJRadarChart.m */,
+			);
+			path = JJRadarChart;
+			sourceTree = "<group>";
+		};
 		0471D9D41D2FB73000BCC2EE /* YTSearchBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +158,39 @@
 				0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */,
 			);
 			path = YTSearchBar;
+			sourceTree = "<group>";
+		};
+		04C3A8E51D322A66003203C0 /* AgentInfo */ = {
+			isa = PBXGroup;
+			children = (
+				04C3A8E61D322A66003203C0 /* Controller */,
+				04C3A8E71D322A66003203C0 /* Model */,
+				04C3A8E81D322A66003203C0 /* View */,
+			);
+			path = AgentInfo;
+			sourceTree = "<group>";
+		};
+		04C3A8E61D322A66003203C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C3A8E91D322A82003203C0 /* EHAgentInfoViewController.h */,
+				04C3A8EA1D322A82003203C0 /* EHAgentInfoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C3A8E71D322A66003203C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C3A8E81D322A66003203C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		04C998801D31271400124E69 /* Guide */ = {
@@ -242,6 +291,7 @@
 		04F06D231D2E0E040081A34D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04C3A8E51D322A66003203C0 /* AgentInfo */,
 				04C998801D31271400124E69 /* Guide */,
 				04200C331D2F7A6A005DC042 /* Lib */,
 				04F06D461D2E4CDE0081A34D /* Search */,
@@ -542,6 +592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04657FBF1D323DF500914495 /* JJRadarChart.m in Sources */,
 				04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */,
 				04200C371D2F7A7A005DC042 /* XTPopView.m in Sources */,
 				04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */,
@@ -551,6 +602,7 @@
 				0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */,
 				04200C3A1D2F84E6005DC042 /* EHSearchViewController.m in Sources */,
 				04F06CCA1D2DFE920081A34D /* main.m in Sources */,
+				04C3A8EB1D322A82003203C0 /* EHAgentInfoViewController.m in Sources */,
 				04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */,
 				04C998861D31277500124E69 /* EHGuideViewController.m in Sources */,
 			);

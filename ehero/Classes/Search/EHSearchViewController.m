@@ -10,7 +10,7 @@
 #import "YTSearchBar.h"
 #import "UIBarButtonItem+Extension.h"
 #import "EHSearchResultCell.h"
-
+#import "EHAgentInfoViewController.h"
 @interface EHSearchViewController ()
 
 
@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
 
-   self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithTitle:@"租房"
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithTitle:@"租房"
                                                                               target:self
                                                                               action:@selector(selections)];
     self.searchBar = [YTSearchBar searchBarWithPlaceholder:@"区域,经纪人"];
@@ -48,6 +48,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 124;
 }
+
+#pragma mark - 选择cell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    EHAgentInfoViewController *agentInfoVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"AgentInfoViewController"];
+    [self.navigationController pushViewController:agentInfoVC animated:YES];
+}
+
 
 - (void)selections{
     NSLog(@"sele");
