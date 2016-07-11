@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EHTipsViewController : UICollectionViewController
+@interface EHTipsViewController : UIViewController
+
+
 
 @end

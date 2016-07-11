@@ -14,7 +14,6 @@
 		04657FBF1D323DF500914495 /* JJRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FBE1D323DF500914495 /* JJRadarChart.m */; };
 		04657FD21D32473200914495 /* EHEverydayHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD11D32473200914495 /* EHEverydayHouseViewController.m */; };
 		04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD41D324B4800914495 /* EHAntidisturbViewController.m */; };
-		04657FD91D32765900914495 /* HZSigmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD81D32765900914495 /* HZSigmentView.m */; };
 		04657FDC1D32768B00914495 /* EHTipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FDB1D32768B00914495 /* EHTipsViewController.m */; };
 		0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */; };
 		0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */; };
@@ -24,6 +23,21 @@
 		04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */; };
 		04C3A8E41D321FE2003203C0 /* EHSearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8E21D321FE2003203C0 /* EHSearchResultCell.xib */; };
 		04C3A8EB1D322A82003203C0 /* EHAgentInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8EA1D322A82003203C0 /* EHAgentInfoViewController.m */; };
+		04C5002C1D335F75009146E5 /* TYPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500241D335F75009146E5 /* TYPagerController.m */; };
+		04C5002D1D335F75009146E5 /* TYTabButtonPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500261D335F75009146E5 /* TYTabButtonPagerController.m */; };
+		04C5002E1D335F75009146E5 /* TYTabPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500281D335F75009146E5 /* TYTabPagerController.m */; };
+		04C5002F1D335F75009146E5 /* TYTabTitleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5002B1D335F75009146E5 /* TYTabTitleViewCell.m */; };
+		04C5004F1D336313009146E5 /* EHNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5004E1D336313009146E5 /* EHNewsViewController.m */; };
+		04C500601D336B44009146E5 /* UIView+ZJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500521D336B44009146E5 /* UIView+ZJFrame.m */; };
+		04C500611D336B44009146E5 /* UIViewController+ZJScrollPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500541D336B44009146E5 /* UIViewController+ZJScrollPageController.m */; };
+		04C500621D336B44009146E5 /* ZJContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500561D336B44009146E5 /* ZJContentView.m */; };
+		04C500631D336B44009146E5 /* ZJCustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500581D336B44009146E5 /* ZJCustomLabel.m */; };
+		04C500641D336B44009146E5 /* ZJScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5005A1D336B44009146E5 /* ZJScrollPageView.m */; };
+		04C500651D336B44009146E5 /* ZJScrollSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5005D1D336B44009146E5 /* ZJScrollSegmentView.m */; };
+		04C500661D336B44009146E5 /* ZJSegmentStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5005F1D336B44009146E5 /* ZJSegmentStyle.m */; };
+		04C5006A1D336D8B009146E5 /* EHWechatGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500681D336D8B009146E5 /* EHWechatGroupCell.m */; };
+		04C5006B1D336D8B009146E5 /* EHWechatGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C500691D336D8B009146E5 /* EHWechatGroupCell.xib */; };
+		04C5006E1D336FC0009146E5 /* EHWechatGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5006D1D336FC0009146E5 /* EHWechatGroupViewController.m */; };
 		04F06CCA1D2DFE920081A34D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06CC91D2DFE920081A34D /* main.m */; };
 		04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD11D2DFE920081A34D /* Main.storyboard */; };
 		04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD41D2DFE920081A34D /* Assets.xcassets */; };
@@ -66,8 +80,6 @@
 		04657FD11D32473200914495 /* EHEverydayHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHEverydayHouseViewController.m; sourceTree = "<group>"; };
 		04657FD31D324B4800914495 /* EHAntidisturbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAntidisturbViewController.h; sourceTree = "<group>"; };
 		04657FD41D324B4800914495 /* EHAntidisturbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAntidisturbViewController.m; sourceTree = "<group>"; };
-		04657FD71D32765900914495 /* HZSigmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZSigmentView.h; sourceTree = "<group>"; };
-		04657FD81D32765900914495 /* HZSigmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZSigmentView.m; sourceTree = "<group>"; };
 		04657FDA1D32768B00914495 /* EHTipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTipsViewController.h; sourceTree = "<group>"; };
 		04657FDB1D32768B00914495 /* EHTipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTipsViewController.m; sourceTree = "<group>"; };
 		0471D9D51D2FB73000BCC2EE /* YTSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTSearchBar.h; sourceTree = "<group>"; };
@@ -85,6 +97,38 @@
 		04C3A8E21D321FE2003203C0 /* EHSearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHSearchResultCell.xib; sourceTree = "<group>"; };
 		04C3A8E91D322A82003203C0 /* EHAgentInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfoViewController.h; sourceTree = "<group>"; };
 		04C3A8EA1D322A82003203C0 /* EHAgentInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfoViewController.m; sourceTree = "<group>"; };
+		04C500231D335F75009146E5 /* TYPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPagerController.h; sourceTree = "<group>"; };
+		04C500241D335F75009146E5 /* TYPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPagerController.m; sourceTree = "<group>"; };
+		04C500251D335F75009146E5 /* TYTabButtonPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabButtonPagerController.h; sourceTree = "<group>"; };
+		04C500261D335F75009146E5 /* TYTabButtonPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabButtonPagerController.m; sourceTree = "<group>"; };
+		04C500271D335F75009146E5 /* TYTabPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabPagerController.h; sourceTree = "<group>"; };
+		04C500281D335F75009146E5 /* TYTabPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabPagerController.m; sourceTree = "<group>"; };
+		04C500291D335F75009146E5 /* TYTabTitleCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabTitleCellProtocol.h; sourceTree = "<group>"; };
+		04C5002A1D335F75009146E5 /* TYTabTitleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabTitleViewCell.h; sourceTree = "<group>"; };
+		04C5002B1D335F75009146E5 /* TYTabTitleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabTitleViewCell.m; sourceTree = "<group>"; };
+		04C5004D1D336313009146E5 /* EHNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHNewsViewController.h; sourceTree = "<group>"; };
+		04C5004E1D336313009146E5 /* EHNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHNewsViewController.m; sourceTree = "<group>"; };
+		04C500511D336B44009146E5 /* UIView+ZJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZJFrame.h"; sourceTree = "<group>"; };
+		04C500521D336B44009146E5 /* UIView+ZJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZJFrame.m"; sourceTree = "<group>"; };
+		04C500531D336B44009146E5 /* UIViewController+ZJScrollPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZJScrollPageController.h"; sourceTree = "<group>"; };
+		04C500541D336B44009146E5 /* UIViewController+ZJScrollPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZJScrollPageController.m"; sourceTree = "<group>"; };
+		04C500551D336B44009146E5 /* ZJContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJContentView.h; sourceTree = "<group>"; };
+		04C500561D336B44009146E5 /* ZJContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJContentView.m; sourceTree = "<group>"; };
+		04C500571D336B44009146E5 /* ZJCustomLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCustomLabel.h; sourceTree = "<group>"; };
+		04C500581D336B44009146E5 /* ZJCustomLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCustomLabel.m; sourceTree = "<group>"; };
+		04C500591D336B44009146E5 /* ZJScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollPageView.h; sourceTree = "<group>"; };
+		04C5005A1D336B44009146E5 /* ZJScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJScrollPageView.m; sourceTree = "<group>"; };
+		04C5005B1D336B44009146E5 /* ZJScrollPageViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollPageViewDelegate.h; sourceTree = "<group>"; };
+		04C5005C1D336B44009146E5 /* ZJScrollSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollSegmentView.h; sourceTree = "<group>"; };
+		04C5005D1D336B44009146E5 /* ZJScrollSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJScrollSegmentView.m; sourceTree = "<group>"; };
+		04C5005E1D336B44009146E5 /* ZJSegmentStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSegmentStyle.h; sourceTree = "<group>"; };
+		04C5005F1D336B44009146E5 /* ZJSegmentStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSegmentStyle.m; sourceTree = "<group>"; };
+		04C500671D336D8B009146E5 /* EHWechatGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHWechatGroupCell.h; sourceTree = "<group>"; };
+		04C500681D336D8B009146E5 /* EHWechatGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHWechatGroupCell.m; sourceTree = "<group>"; };
+		04C500691D336D8B009146E5 /* EHWechatGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHWechatGroupCell.xib; sourceTree = "<group>"; };
+		04C5006C1D336FC0009146E5 /* EHWechatGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHWechatGroupViewController.h; sourceTree = "<group>"; };
+		04C5006D1D336FC0009146E5 /* EHWechatGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHWechatGroupViewController.m; sourceTree = "<group>"; };
+		04C5FFDE1D333292009146E5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		04F06CC51D2DFE920081A34D /* ehero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ehero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06CC91D2DFE920081A34D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F06CD21D2DFE920081A34D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,7 +179,8 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				04657FD61D32765900914495 /* HZSigmentView */,
+				04C500501D336B44009146E5 /* ZJScrollPageView */,
+				04C500221D335F75009146E5 /* TYPagerController */,
 				04657FBC1D323DF500914495 /* JJRadarChart */,
 				0471D9D41D2FB73000BCC2EE /* YTSearchBar */,
 				04200C341D2F7A7A005DC042 /* XTPopView */,
@@ -174,6 +219,8 @@
 		04657FC11D32464800914495 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04C5006C1D336FC0009146E5 /* EHWechatGroupViewController.h */,
+				04C5006D1D336FC0009146E5 /* EHWechatGroupViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +235,9 @@
 		04657FC31D32464800914495 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04C500671D336D8B009146E5 /* EHWechatGroupCell.h */,
+				04C500681D336D8B009146E5 /* EHWechatGroupCell.m */,
+				04C500691D336D8B009146E5 /* EHWechatGroupCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +311,7 @@
 		04657FCC1D32469C00914495 /* Tips */ = {
 			isa = PBXGroup;
 			children = (
+				04C500301D336125009146E5 /* sub */,
 				04657FCD1D32469C00914495 /* Controller */,
 				04657FCE1D32469C00914495 /* Model */,
 				04657FCF1D32469C00914495 /* View */,
@@ -289,16 +340,6 @@
 			children = (
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		04657FD61D32765900914495 /* HZSigmentView */ = {
-			isa = PBXGroup;
-			children = (
-				04657FD71D32765900914495 /* HZSigmentView.h */,
-				04657FD81D32765900914495 /* HZSigmentView.m */,
-			);
-			name = HZSigmentView;
-			path = HLSigmentView;
 			sourceTree = "<group>";
 		};
 		0471D9D41D2FB73000BCC2EE /* YTSearchBar */ = {
@@ -341,6 +382,277 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04C500221D335F75009146E5 /* TYPagerController */ = {
+			isa = PBXGroup;
+			children = (
+				04C500231D335F75009146E5 /* TYPagerController.h */,
+				04C500241D335F75009146E5 /* TYPagerController.m */,
+				04C500251D335F75009146E5 /* TYTabButtonPagerController.h */,
+				04C500261D335F75009146E5 /* TYTabButtonPagerController.m */,
+				04C500271D335F75009146E5 /* TYTabPagerController.h */,
+				04C500281D335F75009146E5 /* TYTabPagerController.m */,
+				04C500291D335F75009146E5 /* TYTabTitleCellProtocol.h */,
+				04C5002A1D335F75009146E5 /* TYTabTitleViewCell.h */,
+				04C5002B1D335F75009146E5 /* TYTabTitleViewCell.m */,
+			);
+			path = TYPagerController;
+			sourceTree = "<group>";
+		};
+		04C500301D336125009146E5 /* sub */ = {
+			isa = PBXGroup;
+			children = (
+				04C500311D336125009146E5 /* Africa */,
+				04C500351D336125009146E5 /* Asia */,
+				04C500391D336125009146E5 /* Europe */,
+				04C5003D1D336125009146E5 /* News */,
+				04C500411D336125009146E5 /* NorthAmerica */,
+				04C500451D336125009146E5 /* Oceania */,
+				04C500491D336125009146E5 /* SouthAmerica */,
+			);
+			path = sub;
+			sourceTree = "<group>";
+		};
+		04C500311D336125009146E5 /* Africa */ = {
+			isa = PBXGroup;
+			children = (
+				04C500321D336125009146E5 /* Controller */,
+				04C500331D336125009146E5 /* Model */,
+				04C500341D336125009146E5 /* View */,
+			);
+			path = Africa;
+			sourceTree = "<group>";
+		};
+		04C500321D336125009146E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C500331D336125009146E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C500341D336125009146E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C500351D336125009146E5 /* Asia */ = {
+			isa = PBXGroup;
+			children = (
+				04C500361D336125009146E5 /* Controller */,
+				04C500371D336125009146E5 /* Model */,
+				04C500381D336125009146E5 /* View */,
+			);
+			path = Asia;
+			sourceTree = "<group>";
+		};
+		04C500361D336125009146E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C500371D336125009146E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C500381D336125009146E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C500391D336125009146E5 /* Europe */ = {
+			isa = PBXGroup;
+			children = (
+				04C5003A1D336125009146E5 /* Controller */,
+				04C5003B1D336125009146E5 /* Model */,
+				04C5003C1D336125009146E5 /* View */,
+			);
+			path = Europe;
+			sourceTree = "<group>";
+		};
+		04C5003A1D336125009146E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C5003B1D336125009146E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C5003C1D336125009146E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C5003D1D336125009146E5 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				04C5003E1D336125009146E5 /* Controller */,
+				04C5003F1D336125009146E5 /* Model */,
+				04C500401D336125009146E5 /* View */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		04C5003E1D336125009146E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C5004D1D336313009146E5 /* EHNewsViewController.h */,
+				04C5004E1D336313009146E5 /* EHNewsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C5003F1D336125009146E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C500401D336125009146E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C500411D336125009146E5 /* NorthAmerica */ = {
+			isa = PBXGroup;
+			children = (
+				04C500421D336125009146E5 /* Controller */,
+				04C500431D336125009146E5 /* Model */,
+				04C500441D336125009146E5 /* View */,
+			);
+			path = NorthAmerica;
+			sourceTree = "<group>";
+		};
+		04C500421D336125009146E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C500431D336125009146E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C500441D336125009146E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C500451D336125009146E5 /* Oceania */ = {
+			isa = PBXGroup;
+			children = (
+				04C500461D336125009146E5 /* Controller */,
+				04C500471D336125009146E5 /* Model */,
+				04C500481D336125009146E5 /* View */,
+			);
+			path = Oceania;
+			sourceTree = "<group>";
+		};
+		04C500461D336125009146E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C500471D336125009146E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C500481D336125009146E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C500491D336125009146E5 /* SouthAmerica */ = {
+			isa = PBXGroup;
+			children = (
+				04C5004A1D336125009146E5 /* Controller */,
+				04C5004B1D336125009146E5 /* Model */,
+				04C5004C1D336125009146E5 /* View */,
+			);
+			path = SouthAmerica;
+			sourceTree = "<group>";
+		};
+		04C5004A1D336125009146E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C5004B1D336125009146E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C5004C1D336125009146E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C500501D336B44009146E5 /* ZJScrollPageView */ = {
+			isa = PBXGroup;
+			children = (
+				04C500511D336B44009146E5 /* UIView+ZJFrame.h */,
+				04C500521D336B44009146E5 /* UIView+ZJFrame.m */,
+				04C500531D336B44009146E5 /* UIViewController+ZJScrollPageController.h */,
+				04C500541D336B44009146E5 /* UIViewController+ZJScrollPageController.m */,
+				04C500551D336B44009146E5 /* ZJContentView.h */,
+				04C500561D336B44009146E5 /* ZJContentView.m */,
+				04C500571D336B44009146E5 /* ZJCustomLabel.h */,
+				04C500581D336B44009146E5 /* ZJCustomLabel.m */,
+				04C500591D336B44009146E5 /* ZJScrollPageView.h */,
+				04C5005A1D336B44009146E5 /* ZJScrollPageView.m */,
+				04C5005B1D336B44009146E5 /* ZJScrollPageViewDelegate.h */,
+				04C5005C1D336B44009146E5 /* ZJScrollSegmentView.h */,
+				04C5005D1D336B44009146E5 /* ZJScrollSegmentView.m */,
+				04C5005E1D336B44009146E5 /* ZJSegmentStyle.h */,
+				04C5005F1D336B44009146E5 /* ZJSegmentStyle.m */,
+			);
+			path = ZJScrollPageView;
 			sourceTree = "<group>";
 		};
 		04F06CBC1D2DFE910081A34D = {
@@ -426,6 +738,7 @@
 			children = (
 				04F06D2E1D2E0E040081A34D /* AppDelegate.h */,
 				04F06D2F1D2E0E040081A34D /* AppDelegate.m */,
+				04C5FFDE1D333292009146E5 /* PrefixHeader.pch */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -637,6 +950,7 @@
 				04F06CD81D2DFE920081A34D /* LaunchScreen.storyboard in Resources */,
 				04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */,
 				04C3A8D31D31E643003203C0 /* 图解HTTP.pdf in Resources */,
+				04C5006B1D336D8B009146E5 /* EHWechatGroupCell.xib in Resources */,
 				04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */,
 				04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */,
 				04C3A8E41D321FE2003203C0 /* EHSearchResultCell.xib in Resources */,
@@ -712,22 +1026,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C5002E1D335F75009146E5 /* TYTabPagerController.m in Sources */,
 				04657FBF1D323DF500914495 /* JJRadarChart.m in Sources */,
 				04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */,
 				04200C371D2F7A7A005DC042 /* XTPopView.m in Sources */,
 				04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */,
+				04C500651D336B44009146E5 /* ZJScrollSegmentView.m in Sources */,
 				04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */,
 				0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */,
 				04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */,
 				0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */,
 				04200C3A1D2F84E6005DC042 /* EHSearchViewController.m in Sources */,
-				04657FD91D32765900914495 /* HZSigmentView.m in Sources */,
+				04C500661D336B44009146E5 /* ZJSegmentStyle.m in Sources */,
 				04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */,
 				04657FD21D32473200914495 /* EHEverydayHouseViewController.m in Sources */,
 				04F06CCA1D2DFE920081A34D /* main.m in Sources */,
+				04C500641D336B44009146E5 /* ZJScrollPageView.m in Sources */,
+				04C5006A1D336D8B009146E5 /* EHWechatGroupCell.m in Sources */,
 				04657FDC1D32768B00914495 /* EHTipsViewController.m in Sources */,
+				04C5004F1D336313009146E5 /* EHNewsViewController.m in Sources */,
+				04C5006E1D336FC0009146E5 /* EHWechatGroupViewController.m in Sources */,
+				04C5002D1D335F75009146E5 /* TYTabButtonPagerController.m in Sources */,
 				04C3A8EB1D322A82003203C0 /* EHAgentInfoViewController.m in Sources */,
+				04C500631D336B44009146E5 /* ZJCustomLabel.m in Sources */,
+				04C5002F1D335F75009146E5 /* TYTabTitleViewCell.m in Sources */,
+				04C500621D336B44009146E5 /* ZJContentView.m in Sources */,
+				04C500611D336B44009146E5 /* UIViewController+ZJScrollPageController.m in Sources */,
+				04C5002C1D335F75009146E5 /* TYPagerController.m in Sources */,
 				04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */,
+				04C500601D336B44009146E5 /* UIView+ZJFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,6 +1200,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ehero/Classes/Lib/FastPdfKit.embeddedframework",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ehero/Classes/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = ehero/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -907,6 +1236,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ehero/Classes/Lib/FastPdfKit.embeddedframework",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ehero/Classes/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = ehero/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

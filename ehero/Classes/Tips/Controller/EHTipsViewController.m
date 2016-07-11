@@ -7,115 +7,81 @@
 //
 
 #import "EHTipsViewController.h"
-#import "HZSigmentView.h"
-@interface EHTipsViewController ()<HZSigmentViewDelegate>
+#import "EHNewsViewController.h"
+#import "ZJScrollPageView.h"
 
 
-@property (nonatomic, strong) HZSigmentView * sigment;
+#define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT   [[UIScreen mainScreen] bounds].size.height
+
+@interface EHTipsViewController ()<ZJScrollPageViewDelegate>
+@property(strong, nonatomic)NSArray<NSString *> *titles;
+@property(strong, nonatomic)NSArray<UIViewController *> *childVcs;
+
 
 @end
 
 @implementation EHTipsViewController
 
-static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    //必要的设置, 如果没有设置可能导致内容显示不正常
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
-    [self createSigmentView];
+    ZJSegmentStyle *style = [[ZJSegmentStyle alloc] init];
+    //显示滚动条
+    style.showLine = YES;
+    // 颜色渐变
+    style.gradualChangeTitleColor = YES;
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.titles = @[@"新闻头条",
+                    @"国际要闻",
+                    @"体育",
+                    @"中国足球",
+                    @"汽车",
+                    @"囧途旅游",
+                    @"幽默搞笑",
+                    @"视频",
+                    @"无厘头",
+                    @"美女图片",
+                    @"今日房价",
+                    @"头像",
+                    ];
+    // 初始化
+    ZJScrollPageView *scrollPageView = [[ZJScrollPageView alloc] initWithFrame:CGRectMake(0, 64.0, self.view.bounds.size.width, self.view.bounds.size.height - 64.0) segmentStyle:style titles:self.titles parentViewController:self delegate:self];
     
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.view addSubview:scrollPageView];
     
-    // Do any additional setup after loading the view.
+    
 }
 
-- (void)createSigmentView
-{
-    self.sigment = [[HZSigmentView alloc] initWithOrgin:CGPointMake(0, 0) andHeight:40];
+- (NSInteger)numberOfChildViewControllers{
+    return self.titles.count;
+}
+
+- (UIViewController<ZJScrollPageViewChildVcDelegate> *)childViewController:(UIViewController<ZJScrollPageViewChildVcDelegate> *)reuseViewController forIndex:(NSInteger)index {
+    UIViewController<ZJScrollPageViewChildVcDelegate> *childVc = reuseViewController;
     
-    self.sigment.delegate = self;
-    self.sigment.backgroundColor = [UIColor whiteColor];
-    self.sigment.titleNomalColor = [UIColor blackColor];
-    self.sigment.titleSelectColor = [UIColor orangeColor];
-    self.sigment.titleFont = [UIFont systemFontOfSize:14];
-    self.sigment.titleArry = @[@"热门",@"最新",@"品类",@"属性"];
-    [self.collectionView addSubview:self.sigment];
-}
-
-#pragma mark <UICollectionViewDataSource>
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
-    
-    return cell;
-}
-
-#pragma mark--HZSigmentViewDelegate
--(void)segment:(HZSigmentView *)sengment didSelectColumnIndex:(NSInteger)index
-{
-    NSString *notifStr;
-    if (index == 1) {
-        notifStr = @"1";
-    } else if (index == 2) {
-        notifStr = @"2";
-    } else if (index == 3) {
-        notifStr = @"3";
-    } else {
-        notifStr = @"4";
+    if (!childVc) {
+        childVc = [[UIViewController alloc] init];
     }
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"HLGoodsDetailControllerSigmentClick" object:notifStr];
+    
+    if (index%2==0) {
+        childVc.view.backgroundColor = [UIColor blueColor];
+    } else {
+        childVc.view.backgroundColor = [UIColor greenColor];
+        
+    }
+    
+    NSLog(@"%ld-----%@",(long)index, childVc);
+    
+    return childVc;
+
+
 }
 
-
-
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

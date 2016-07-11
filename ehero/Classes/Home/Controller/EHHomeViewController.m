@@ -14,6 +14,7 @@
 #import "EHTipsViewController.h"
 #import "EHEverydayHouseViewController.h"
 #import "EHAntidisturbViewController.h"
+#import "EHWechatGroupViewController.h"
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate>
 {
     /** 图片数组*/
@@ -194,7 +195,12 @@
 }
 
 - (void)fourthBtnClick:(UITableViewCell *)cell{
-    NSLog(@"fourth");
+
+    
+    EHWechatGroupViewController *wechatGroupViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"WechatGroupViewController"];
+    [self.navigationController pushViewController:wechatGroupViewController animated:YES];
+    
+    
 }
 
 
