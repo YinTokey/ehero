@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nXI-Mq-9gS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -20,6 +21,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BbG-Ws-OuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1083" y="317"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LNf-Uh-1qJ">
+            <objects>
+                <navigationController id="gTZ-az-UHj" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tUF-bk-Dh0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="r2q-7g-cgX" kind="relationship" relationship="rootViewController" id="E9v-hl-rYg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SQy-fd-sSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-825" y="-1005"/>
+        </scene>
+        <!--个人信息-->
+        <scene sceneID="XTg-94-Wuf">
+            <objects>
+                <tableViewController id="r2q-7g-cgX" customClass="EHProfileViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4sd-dm-gby">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XZv-rY-ruU">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XZv-rY-ruU" id="vMb-Cp-tcO">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="r2q-7g-cgX" id="ehX-h5-kGO"/>
+                            <outlet property="delegate" destination="r2q-7g-cgX" id="mBT-bd-q2a"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="个人信息" id="NHM-Ox-DIp"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZS-TY-0Y2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-825" y="-351"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dbc-FY-cYN">
@@ -65,16 +113,28 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="BKj-xO-ryD">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eyb-Db-NAx">
-                                <rect key="frame" x="264" y="2" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="search_112.60997067449px_1197039_easyicon.net"/>
-                                <connections>
-                                    <segue destination="Frh-BS-zpg" kind="show" id="dVq-Eo-EPX"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="m3I-1r-jMG">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lsq-TD-ciu">
+                                    <rect key="frame" x="284" y="11" width="20" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="Profile"/>
+                                    <connections>
+                                        <segue destination="r2q-7g-cgX" kind="show" id="OMF-pc-2RX"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="BKj-xO-ryD">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eyb-Db-NAx">
+                                    <rect key="frame" x="236" y="2" width="40" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="search_112.60997067449px_1197039_easyicon.net"/>
+                                    <connections>
+                                        <segue destination="Frh-BS-zpg" kind="show" id="dVq-Eo-EPX"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -83,7 +143,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP1-S5-T8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-112" y="-347"/>
+            <point key="canvasLocation" x="-144" y="-369"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="b6y-a8-fld">
@@ -437,7 +497,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcA-N3-S6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="274"/>
+            <point key="canvasLocation" x="593" y="327"/>
         </scene>
         <!--点评经纪人-->
         <scene sceneID="LB2-0W-wsM">
@@ -489,7 +549,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAD-fr-GGo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="912"/>
+            <point key="canvasLocation" x="639" y="996"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M40-x2-GLU">
@@ -528,14 +588,16 @@
     </scenes>
     <resources>
         <image name="Phone_call" width="15" height="22"/>
+        <image name="Profile" width="20" height="20"/>
         <image name="agent" width="150" height="200"/>
         <image name="btnBackground" width="75" height="31"/>
         <image name="greenbackground" width="214" height="34"/>
         <image name="location" width="16" height="21"/>
-        <image name="search_112.60997067449px_1197039_easyicon.net" width="25" height="25"/>
+        <image name="search_112.60997067449px_1197039_easyicon.net" width="21" height="21"/>
         <image name="蓝色标准组合02" width="1682" height="656"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dVq-Eo-EPX"/>
+        <segue reference="OMF-pc-2RX"/>
     </inferredMetricsTieBreakers>
 </document>

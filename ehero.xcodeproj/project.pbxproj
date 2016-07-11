@@ -44,6 +44,7 @@
 		04C500801D338CBC009146E5 /* CWStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5007D1D338CBC009146E5 /* CWStarRateView.m */; };
 		04C500811D338CBC009146E5 /* heart1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C5007E1D338CBC009146E5 /* heart1.png */; };
 		04C500821D338CBC009146E5 /* heart2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C5007F1D338CBC009146E5 /* heart2.png */; };
+		04C500891D339E99009146E5 /* EHProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500881D339E99009146E5 /* EHProfileViewController.m */; };
 		04F06CCA1D2DFE920081A34D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06CC91D2DFE920081A34D /* main.m */; };
 		04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD11D2DFE920081A34D /* Main.storyboard */; };
 		04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD41D2DFE920081A34D /* Assets.xcassets */; };
@@ -143,6 +144,8 @@
 		04C5007D1D338CBC009146E5 /* CWStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWStarRateView.m; sourceTree = "<group>"; };
 		04C5007E1D338CBC009146E5 /* heart1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart1.png; sourceTree = "<group>"; };
 		04C5007F1D338CBC009146E5 /* heart2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart2.png; sourceTree = "<group>"; };
+		04C500871D339E99009146E5 /* EHProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHProfileViewController.h; sourceTree = "<group>"; };
+		04C500881D339E99009146E5 /* EHProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHProfileViewController.m; sourceTree = "<group>"; };
 		04C5FFDE1D333292009146E5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		04F06CC51D2DFE920081A34D /* ehero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ehero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06CC91D2DFE920081A34D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -715,6 +718,39 @@
 			path = CWStarRateView;
 			sourceTree = "<group>";
 		};
+		04C500831D339E7B009146E5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				04C500841D339E7B009146E5 /* Controller */,
+				04C500851D339E7B009146E5 /* Model */,
+				04C500861D339E7B009146E5 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		04C500841D339E7B009146E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C500871D339E99009146E5 /* EHProfileViewController.h */,
+				04C500881D339E99009146E5 /* EHProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C500851D339E7B009146E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C500861D339E7B009146E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04F06CBC1D2DFE910081A34D = {
 			isa = PBXGroup;
 			children = (
@@ -780,6 +816,7 @@
 		04F06D231D2E0E040081A34D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04C500831D339E7B009146E5 /* Profile */,
 				04C500741D3386A7009146E5 /* CommentAgent */,
 				04657FCC1D32469C00914495 /* Tips */,
 				04657FC81D32467000914495 /* Anti-disturb */,
@@ -1100,6 +1137,7 @@
 				04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */,
 				04C500651D336B44009146E5 /* ZJScrollSegmentView.m in Sources */,
 				04C500801D338CBC009146E5 /* CWStarRateView.m in Sources */,
+				04C500891D339E99009146E5 /* EHProfileViewController.m in Sources */,
 				04C500721D337C5F009146E5 /* EHCommentAgentCell.m in Sources */,
 				04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */,
 				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
