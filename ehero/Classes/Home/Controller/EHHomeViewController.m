@@ -15,6 +15,8 @@
 #import "EHEverydayHouseViewController.h"
 #import "EHAntidisturbViewController.h"
 #import "EHWechatGroupViewController.h"
+#import "EHCommentAgentCell.h"
+#import "EHCommentAgentViewController.h"
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate>
 {
     /** 图片数组*/
@@ -99,13 +101,21 @@
         return cell;
     //第二行 点评经纪人
     }else if(indexPath.section == 1){
+        
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
         if (cell==nil) {
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseId];
         }
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.text = @"评价你的经纪人";
+        
+        
+        
+        
+       // EHCommentAgentCell *cell = [EHCommentAgentCell commentAgentCellWithTableView:tableView];
         return cell;
+        
+        
     //第三行 每日一房
     }else{
         
@@ -116,6 +126,14 @@
     }
 
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1) {
+        EHCommentAgentViewController *commentAgentViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"CommentAgentViewController"];
+        [self.navigationController pushViewController:commentAgentViewController animated:YES];
+    }
+}
+
 
 #pragma mark - section标题
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
@@ -131,6 +149,7 @@
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width - 10, 150) imageNamesGroup:sourceArr];
     self.tableView.tableHeaderView = cycleScrollView;
 }
+
 
 
 - (IBAction)siteBtnClick:(id)sender {

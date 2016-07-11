@@ -38,6 +38,12 @@
 		04C5006A1D336D8B009146E5 /* EHWechatGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500681D336D8B009146E5 /* EHWechatGroupCell.m */; };
 		04C5006B1D336D8B009146E5 /* EHWechatGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C500691D336D8B009146E5 /* EHWechatGroupCell.xib */; };
 		04C5006E1D336FC0009146E5 /* EHWechatGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5006D1D336FC0009146E5 /* EHWechatGroupViewController.m */; };
+		04C500721D337C5F009146E5 /* EHCommentAgentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500701D337C5F009146E5 /* EHCommentAgentCell.m */; };
+		04C500731D337C5F009146E5 /* EHCommentAgentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C500711D337C5F009146E5 /* EHCommentAgentCell.xib */; };
+		04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500791D3386E5009146E5 /* EHCommentAgentViewController.m */; };
+		04C500801D338CBC009146E5 /* CWStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5007D1D338CBC009146E5 /* CWStarRateView.m */; };
+		04C500811D338CBC009146E5 /* heart1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C5007E1D338CBC009146E5 /* heart1.png */; };
+		04C500821D338CBC009146E5 /* heart2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C5007F1D338CBC009146E5 /* heart2.png */; };
 		04F06CCA1D2DFE920081A34D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06CC91D2DFE920081A34D /* main.m */; };
 		04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD11D2DFE920081A34D /* Main.storyboard */; };
 		04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD41D2DFE920081A34D /* Assets.xcassets */; };
@@ -128,6 +134,15 @@
 		04C500691D336D8B009146E5 /* EHWechatGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHWechatGroupCell.xib; sourceTree = "<group>"; };
 		04C5006C1D336FC0009146E5 /* EHWechatGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHWechatGroupViewController.h; sourceTree = "<group>"; };
 		04C5006D1D336FC0009146E5 /* EHWechatGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHWechatGroupViewController.m; sourceTree = "<group>"; };
+		04C5006F1D337C5F009146E5 /* EHCommentAgentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCommentAgentCell.h; sourceTree = "<group>"; };
+		04C500701D337C5F009146E5 /* EHCommentAgentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCommentAgentCell.m; sourceTree = "<group>"; };
+		04C500711D337C5F009146E5 /* EHCommentAgentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCommentAgentCell.xib; sourceTree = "<group>"; };
+		04C500781D3386E5009146E5 /* EHCommentAgentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCommentAgentViewController.h; sourceTree = "<group>"; };
+		04C500791D3386E5009146E5 /* EHCommentAgentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCommentAgentViewController.m; sourceTree = "<group>"; };
+		04C5007C1D338CBC009146E5 /* CWStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWStarRateView.h; sourceTree = "<group>"; };
+		04C5007D1D338CBC009146E5 /* CWStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWStarRateView.m; sourceTree = "<group>"; };
+		04C5007E1D338CBC009146E5 /* heart1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart1.png; sourceTree = "<group>"; };
+		04C5007F1D338CBC009146E5 /* heart2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart2.png; sourceTree = "<group>"; };
 		04C5FFDE1D333292009146E5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		04F06CC51D2DFE920081A34D /* ehero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ehero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06CC91D2DFE920081A34D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -179,6 +194,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				04C5007B1D338CBC009146E5 /* CWStarRateView */,
 				04C500501D336B44009146E5 /* ZJScrollPageView */,
 				04C500221D335F75009146E5 /* TYPagerController */,
 				04657FBC1D323DF500914495 /* JJRadarChart */,
@@ -655,6 +671,50 @@
 			path = ZJScrollPageView;
 			sourceTree = "<group>";
 		};
+		04C500741D3386A7009146E5 /* CommentAgent */ = {
+			isa = PBXGroup;
+			children = (
+				04C500751D3386A7009146E5 /* Controller */,
+				04C500761D3386A7009146E5 /* Model */,
+				04C500771D3386A7009146E5 /* View */,
+			);
+			path = CommentAgent;
+			sourceTree = "<group>";
+		};
+		04C500751D3386A7009146E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C500781D3386E5009146E5 /* EHCommentAgentViewController.h */,
+				04C500791D3386E5009146E5 /* EHCommentAgentViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C500761D3386A7009146E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C500771D3386A7009146E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C5007B1D338CBC009146E5 /* CWStarRateView */ = {
+			isa = PBXGroup;
+			children = (
+				04C5007C1D338CBC009146E5 /* CWStarRateView.h */,
+				04C5007D1D338CBC009146E5 /* CWStarRateView.m */,
+				04C5007E1D338CBC009146E5 /* heart1.png */,
+				04C5007F1D338CBC009146E5 /* heart2.png */,
+			);
+			path = CWStarRateView;
+			sourceTree = "<group>";
+		};
 		04F06CBC1D2DFE910081A34D = {
 			isa = PBXGroup;
 			children = (
@@ -720,6 +780,7 @@
 		04F06D231D2E0E040081A34D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04C500741D3386A7009146E5 /* CommentAgent */,
 				04657FCC1D32469C00914495 /* Tips */,
 				04657FC81D32467000914495 /* Anti-disturb */,
 				04657FC41D32466500914495 /* EverydayHouse */,
@@ -778,6 +839,9 @@
 				04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */,
 				04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */,
 				04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */,
+				04C5006F1D337C5F009146E5 /* EHCommentAgentCell.h */,
+				04C500701D337C5F009146E5 /* EHCommentAgentCell.m */,
+				04C500711D337C5F009146E5 /* EHCommentAgentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -946,13 +1010,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C500731D337C5F009146E5 /* EHCommentAgentCell.xib in Resources */,
 				04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */,
 				04F06CD81D2DFE920081A34D /* LaunchScreen.storyboard in Resources */,
 				04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */,
 				04C3A8D31D31E643003203C0 /* 图解HTTP.pdf in Resources */,
 				04C5006B1D336D8B009146E5 /* EHWechatGroupCell.xib in Resources */,
 				04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */,
+				04C500821D338CBC009146E5 /* heart2.png in Resources */,
 				04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */,
+				04C500811D338CBC009146E5 /* heart1.png in Resources */,
 				04C3A8E41D321FE2003203C0 /* EHSearchResultCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1032,7 +1099,10 @@
 				04200C371D2F7A7A005DC042 /* XTPopView.m in Sources */,
 				04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */,
 				04C500651D336B44009146E5 /* ZJScrollSegmentView.m in Sources */,
+				04C500801D338CBC009146E5 /* CWStarRateView.m in Sources */,
+				04C500721D337C5F009146E5 /* EHCommentAgentCell.m in Sources */,
 				04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */,
+				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
 				0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */,
 				04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */,
 				0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */,

@@ -83,7 +83,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP1-S5-T8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-128" y="-307"/>
+            <point key="canvasLocation" x="-112" y="-347"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="b6y-a8-fld">
@@ -103,7 +103,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f87-kz-ijK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="268" y="-307"/>
+            <point key="canvasLocation" x="288" y="-335"/>
         </scene>
         <!--生活锦囊-->
         <scene sceneID="G2E-rd-uA4">
@@ -198,7 +198,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CF7-oY-VFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-259" y="1052"/>
+            <point key="canvasLocation" x="-259" y="956"/>
         </scene>
         <!--微信群组-->
         <scene sceneID="atV-aY-9BO">
@@ -228,7 +228,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcH-v2-BiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="179" y="1019"/>
+            <point key="canvasLocation" x="135" y="971"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TjS-RV-JO0">
@@ -420,7 +420,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZs-h1-aYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="-315"/>
+            <point key="canvasLocation" x="722" y="-363"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i6m-Uj-BsL">
+            <objects>
+                <navigationController id="SN2-aR-FY5" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aap-3A-dbm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rlP-ow-We4" kind="relationship" relationship="rootViewController" id="7cI-oi-x7s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GcA-N3-S6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="274"/>
+        </scene>
+        <!--点评经纪人-->
+        <scene sceneID="LB2-0W-wsM">
+            <objects>
+                <viewController storyboardIdentifier="CommentAgentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rlP-ow-We4" customClass="EHCommentAgentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1JA-n0-VEE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oro-t4-3df"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aLF-pd-HrY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入经纪人的姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Dc-CA-onm">
+                                <rect key="frame" x="16" y="72" width="289" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xq5-Dh-TFr">
+                                <rect key="frame" x="16" y="215" width="289" height="161"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rf-me-Mke">
+                                <rect key="frame" x="125" y="417" width="71" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="提交">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="commitBtnClick:" destination="rlP-ow-We4" eventType="touchUpInside" id="l1K-2c-XVo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3Dc-CA-onm" secondAttribute="trailing" constant="15" id="6CI-W3-7uc"/>
+                            <constraint firstItem="3Dc-CA-onm" firstAttribute="leading" secondItem="aLF-pd-HrY" secondAttribute="leading" constant="16" id="K37-Jh-bAl"/>
+                            <constraint firstItem="3Dc-CA-onm" firstAttribute="top" secondItem="1JA-n0-VEE" secondAttribute="bottom" constant="8" id="kL2-Wu-IYw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="点评经纪人" id="FRq-ze-U3N"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="agentName" destination="3Dc-CA-onm" id="Yz4-qU-h1X"/>
+                        <outlet property="commentView" destination="xq5-Dh-TFr" id="kLp-av-XXS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAD-fr-GGo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="912"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M40-x2-GLU">
@@ -437,7 +506,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dW3-OE-dXx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-221" y="367"/>
+            <point key="canvasLocation" x="-265" y="319"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Sd-0N-J94">
@@ -454,7 +523,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9cu-BD-gDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="187" y="375"/>
+            <point key="canvasLocation" x="143" y="327"/>
         </scene>
     </scenes>
     <resources>
