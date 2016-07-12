@@ -17,6 +17,8 @@
 		04657FDC1D32768B00914495 /* EHTipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FDB1D32768B00914495 /* EHTipsViewController.m */; };
 		04716BEB1D34A4E200E512EE /* DCNavTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04716BEA1D34A4E200E512EE /* DCNavTabBarController.m */; };
 		04716BEE1D34A8E000E512EE /* EHTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04716BED1D34A8E000E512EE /* EHTwoViewController.m */; };
+		04716BF21D34C70900E512EE /* EHNewsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04716BF01D34C70900E512EE /* EHNewsViewCell.m */; };
+		04716BF31D34C70900E512EE /* EHNewsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04716BF11D34C70900E512EE /* EHNewsViewCell.xib */; };
 		0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */; };
 		0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */; };
 		04C3A8D31D31E643003203C0 /* 图解HTTP.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8D21D31E643003203C0 /* 图解HTTP.pdf */; };
@@ -84,6 +86,9 @@
 		04716BEA1D34A4E200E512EE /* DCNavTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNavTabBarController.m; sourceTree = "<group>"; };
 		04716BEC1D34A8E000E512EE /* EHTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTwoViewController.h; sourceTree = "<group>"; };
 		04716BED1D34A8E000E512EE /* EHTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTwoViewController.m; sourceTree = "<group>"; };
+		04716BEF1D34C70900E512EE /* EHNewsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHNewsViewCell.h; sourceTree = "<group>"; };
+		04716BF01D34C70900E512EE /* EHNewsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHNewsViewCell.m; sourceTree = "<group>"; };
+		04716BF11D34C70900E512EE /* EHNewsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHNewsViewCell.xib; sourceTree = "<group>"; };
 		0471D9D51D2FB73000BCC2EE /* YTSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTSearchBar.h; sourceTree = "<group>"; };
 		0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSearchBar.m; sourceTree = "<group>"; };
 		0471D9D81D2FBBF300BCC2EE /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -520,6 +525,9 @@
 		04C500401D336125009146E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04716BEF1D34C70900E512EE /* EHNewsViewCell.h */,
+				04716BF01D34C70900E512EE /* EHNewsViewCell.m */,
+				04716BF11D34C70900E512EE /* EHNewsViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -994,6 +1002,7 @@
 				04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */,
 				04F06CD81D2DFE920081A34D /* LaunchScreen.storyboard in Resources */,
 				04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */,
+				04716BF31D34C70900E512EE /* EHNewsViewCell.xib in Resources */,
 				04C3A8D31D31E643003203C0 /* 图解HTTP.pdf in Resources */,
 				04C5006B1D336D8B009146E5 /* EHWechatGroupCell.xib in Resources */,
 				04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */,
@@ -1084,6 +1093,7 @@
 				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
 				0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */,
 				04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */,
+				04716BF21D34C70900E512EE /* EHNewsViewCell.m in Sources */,
 				0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */,
 				04200C3A1D2F84E6005DC042 /* EHSearchViewController.m in Sources */,
 				04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */,

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EHNewsViewController : UICollectionViewController
+@interface EHNewsViewController : UIViewController
 
 @end

@@ -27,7 +27,7 @@
 {
     if(_sliderColor == nil)
     {
-        _sliderColor = [UIColor purpleColor];
+        _sliderColor = RGB(79, 193, 134);
     }
     return  _sliderColor;
 }
@@ -35,7 +35,7 @@
 {
     if(_btnTextNomalColor == nil)
     {
-        _btnTextNomalColor = [UIColor blackColor];
+        _btnTextNomalColor = [UIColor lightGrayColor];
     }
     return _btnTextNomalColor;
 }
@@ -43,7 +43,7 @@
 {
     if(_btnTextSeletedColor == nil)
     {
-        _btnTextSeletedColor = [UIColor redColor];
+        _btnTextSeletedColor = RGB(79, 193, 134);
     }
     return _btnTextSeletedColor;
 }
@@ -115,13 +115,13 @@
         [btn setTitleColor:self.btnTextSeletedColor forState:UIControlStateSelected];
         [btn setTitle:vc.title forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
-        
+        btn.titleLabel.font = [UIFont fontWithName:@"CourierNewPS-ItalicMT" size:15.0];
         [self.topBar addSubview:btn];
         if(i == 0)
         {
             btn.selected = YES;
             //默认one文字放大
-            btn.transform = CGAffineTransformMakeScale(1.2, 1.2);
+           // btn.transform = CGAffineTransformMakeScale(1.2, 1.2);
             self.oldBtn = btn;
 
         }
@@ -154,7 +154,9 @@
     sender.selected = YES;
     self.contentView.contentOffset = CGPointMake((sender.tag - 10000)*DCScreenW, 0);
     [UIView animateWithDuration:0.3 animations:^{
-        sender.transform = CGAffineTransformMakeScale(1.2, 1.2);
+        //字体放大
+       // sender.transform = CGAffineTransformMakeScale(1.2, 1.2);
+        
     }];
     self.oldBtn.transform = CGAffineTransformIdentity;
     self.oldBtn = sender;

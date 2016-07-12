@@ -21,44 +21,35 @@
 
 @implementation EHTipsViewController
 
-static NSString * const MYKEY = @"UICollectionViewCell";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    EHNewsViewController *one = [[EHNewsViewController alloc]init];
-//    one.title = @"one";
-//    EHNewsViewController *two = [[EHNewsViewController alloc]init];
-//    two.title = @"two";
-//    EHNewsViewController *three = [[EHNewsViewController alloc]init];
-//    three.title = @"three";
-//    EHNewsViewController *four = [[EHNewsViewController alloc]init];
-//    four.title = @"four";
-//    EHNewsViewController *five = [[EHNewsViewController alloc]init];
-//    five.title = @"five";
-
-    EHTwoViewController *one = [[EHTwoViewController alloc]init];
-    one.title = @"one";
-    EHTwoViewController *two = [[EHTwoViewController alloc]init];
-    two.title = @"two";
-    EHTwoViewController *three = [[EHTwoViewController alloc]init];
-    three.title = @"three";
-    EHTwoViewController *four = [[EHTwoViewController alloc]init];
-    four.title = @"four";
-    EHTwoViewController *five = [[EHTwoViewController alloc]init];
-    five.title = @"five";
-    
-    NSArray *subViewControllers = @[one,two,three,four,five];
-    DCNavTabBarController *tabBarVC = [[DCNavTabBarController alloc]initWithSubViewControllers:subViewControllers];
-    tabBarVC.view.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 64);
-//    
-   [self.view addSubview:tabBarVC.view];
-    [self addChildViewController:tabBarVC];
-    
-    self.title = @"总控制器";
-
+    [self setupChildController];
     
 }
 
+- (void)setupChildController{
+    EHTwoViewController *one = [[EHTwoViewController alloc]init];
+    one.title = @"最新";
+    EHTwoViewController *two = [[EHTwoViewController alloc]init];
+    two.title = @"亚洲";
+    EHTwoViewController *three = [[EHTwoViewController alloc]init];
+    three.title = @"欧洲";
+    EHTwoViewController *four = [[EHTwoViewController alloc]init];
+    four.title = @"北美洲";
+    EHTwoViewController *five = [[EHTwoViewController alloc]init];
+    five.title = @"南美洲";
+    EHNewsViewController *six = [[EHNewsViewController alloc]init];
+    six.title = @"大洋洲";
+    EHNewsViewController *seven = [[EHNewsViewController alloc]init];
+    seven.title = @"非洲";
+    
+    NSArray *subViewControllers = @[one,two,three,four,five,six,seven];
+    DCNavTabBarController *tabBarVC = [[DCNavTabBarController alloc]initWithSubViewControllers:subViewControllers];
+    tabBarVC.view.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 64);
+    
+    [self.view addSubview:tabBarVC.view];
+    [self addChildViewController:tabBarVC];
+}
 
 @end

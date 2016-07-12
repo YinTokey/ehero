@@ -225,6 +225,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="免骚扰电话" id="HSt-Kp-HTN"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="phoneNumber" destination="ehS-sS-ea7" id="Xtv-Nc-5Zq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vg-TN-QD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

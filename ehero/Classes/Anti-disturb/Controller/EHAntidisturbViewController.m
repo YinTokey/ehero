@@ -10,6 +10,7 @@
 
 @interface EHAntidisturbViewController ()
 - (IBAction)callBtnClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumber;
 
 @end
 
@@ -17,10 +18,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //添加手势相应，输textfield时，点击其他区域，键盘消失
+    UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
+    tapGr.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapGr];
+    
+    
 }
 
+#pragma mark  -- UITapGestureRecognizer
+-(void)viewTapped:(UITapGestureRecognizer*)tapGr
+{
+    [self.phoneNumber resignFirstResponder];
 
+}
 
 - (IBAction)callBtnClick:(id)sender {
     

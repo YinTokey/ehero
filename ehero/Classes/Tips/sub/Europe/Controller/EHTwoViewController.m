@@ -18,6 +18,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor grayColor];
+    NSLog(@"oneVC");
     // Do any additional setup after loading the view.
 }
 
