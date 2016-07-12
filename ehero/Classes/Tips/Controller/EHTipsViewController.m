@@ -8,79 +8,56 @@
 
 #import "EHTipsViewController.h"
 #import "EHNewsViewController.h"
-#import "ZJScrollPageView.h"
+#import "DCNavTabBarController.h"
+
+#import "EHTwoViewController.h"
 
 
-#define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
-#define SCREEN_HEIGHT   [[UIScreen mainScreen] bounds].size.height
+@interface EHTipsViewController ()
 
-@interface EHTipsViewController ()<ZJScrollPageViewDelegate>
-@property(strong, nonatomic)NSArray<NSString *> *titles;
-@property(strong, nonatomic)NSArray<UIViewController *> *childVcs;
 
 
 @end
 
 @implementation EHTipsViewController
 
+static NSString * const MYKEY = @"UICollectionViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
-    //必要的设置, 如果没有设置可能导致内容显示不正常
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    ZJSegmentStyle *style = [[ZJSegmentStyle alloc] init];
-    //显示滚动条
-    style.showLine = YES;
-    // 颜色渐变
-    style.gradualChangeTitleColor = YES;
-    
-    self.titles = @[@"新闻头条",
-                    @"国际要闻",
-                    @"体育",
-                    @"中国足球",
-                    @"汽车",
-                    @"囧途旅游",
-                    @"幽默搞笑",
-                    @"视频",
-                    @"无厘头",
-                    @"美女图片",
-                    @"今日房价",
-                    @"头像",
-                    ];
-    // 初始化
-    ZJScrollPageView *scrollPageView = [[ZJScrollPageView alloc] initWithFrame:CGRectMake(0, 64.0, self.view.bounds.size.width, self.view.bounds.size.height - 64.0) segmentStyle:style titles:self.titles parentViewController:self delegate:self];
-    
-    [self.view addSubview:scrollPageView];
-    
-    
-}
+//    EHNewsViewController *one = [[EHNewsViewController alloc]init];
+//    one.title = @"one";
+//    EHNewsViewController *two = [[EHNewsViewController alloc]init];
+//    two.title = @"two";
+//    EHNewsViewController *three = [[EHNewsViewController alloc]init];
+//    three.title = @"three";
+//    EHNewsViewController *four = [[EHNewsViewController alloc]init];
+//    four.title = @"four";
+//    EHNewsViewController *five = [[EHNewsViewController alloc]init];
+//    five.title = @"five";
 
-- (NSInteger)numberOfChildViewControllers{
-    return self.titles.count;
-}
+    EHTwoViewController *one = [[EHTwoViewController alloc]init];
+    one.title = @"one";
+    EHTwoViewController *two = [[EHTwoViewController alloc]init];
+    two.title = @"two";
+    EHTwoViewController *three = [[EHTwoViewController alloc]init];
+    three.title = @"three";
+    EHTwoViewController *four = [[EHTwoViewController alloc]init];
+    four.title = @"four";
+    EHTwoViewController *five = [[EHTwoViewController alloc]init];
+    five.title = @"five";
+    
+    NSArray *subViewControllers = @[one,two,three,four,five];
+    DCNavTabBarController *tabBarVC = [[DCNavTabBarController alloc]initWithSubViewControllers:subViewControllers];
+    tabBarVC.view.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 64);
+//    
+   [self.view addSubview:tabBarVC.view];
+    [self addChildViewController:tabBarVC];
+    
+    self.title = @"总控制器";
 
-- (UIViewController<ZJScrollPageViewChildVcDelegate> *)childViewController:(UIViewController<ZJScrollPageViewChildVcDelegate> *)reuseViewController forIndex:(NSInteger)index {
-    UIViewController<ZJScrollPageViewChildVcDelegate> *childVc = reuseViewController;
     
-    if (!childVc) {
-        childVc = [[UIViewController alloc] init];
-    }
-    
-    if (index%2==0) {
-        childVc.view.backgroundColor = [UIColor blueColor];
-    } else {
-        childVc.view.backgroundColor = [UIColor greenColor];
-        
-    }
-    
-    NSLog(@"%ld-----%@",(long)index, childVc);
-    
-    return childVc;
-
-
 }
 
 
