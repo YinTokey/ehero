@@ -14,7 +14,7 @@
 #import "XTPopView.h"
 #import "AFNetworking.h"
 #import <MJExtension.h>
-
+#import "EHAgentInfo.h"
 @interface EHSearchViewController ()<selectIndexPathDelegate,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *selectionBtn;
@@ -22,6 +22,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *mysearchBar;
 @property (nonatomic,copy) NSString *searchTypeString;
+@property (nonatomic,strong) NSMutableArray *searchResultArr;
+
 @end
 
 @implementation EHSearchViewController
@@ -65,7 +67,7 @@
 #pragma mark - 编辑完成，点击搜索时调用代理方法
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     
-
+    [self.searchResultArr removeAllObjects];
     [self searchClick];
     [self.mysearchBar resignFirstResponder ];
     return YES;
@@ -144,7 +146,9 @@
         [session GET:searchAreaUrlStr parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            NSLog(@"%@",responseObject);
+            self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObject];
+            
+            
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"失败");
         }];

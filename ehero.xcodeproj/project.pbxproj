@@ -922,8 +922,8 @@
 		04F06D471D2E4CDE0081A34D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				04200C391D2F84E6005DC042 /* EHSearchViewController.m */,
 				04200C381D2F84E6005DC042 /* EHSearchViewController.h */,
+				04200C391D2F84E6005DC042 /* EHSearchViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
