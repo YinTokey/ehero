@@ -43,6 +43,14 @@
     
     [self setupHeaderView];
 
+    //读取用户偏好
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *siteString = [defaults objectForKey:@"siteString"];
+    if (siteString.length > 1) {
+        [self.siteBtn setTitle:siteString forState:UIControlStateNormal];
+    }
+    
+    
     //跳转到下一界面的返回按钮样式
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
     backItem.title = @"返回";
@@ -168,17 +176,23 @@
 }
 #pragma mark - 实现代理方法，左上角弹窗点击事件
 - (void)selectIndexPathRow:(NSInteger)index{
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    
     switch (index) {
         case 0:
         {
            self.siteString = @"北京";
-            [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
+            [defaults setObject:_siteString forKey:@"siteString"];
+           [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
 
         }
             break;
         case 1:
         {
             self.siteString = @"上海";
+            [defaults setObject:_siteString forKey:@"siteString"];
             [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
         
         }
@@ -186,6 +200,7 @@
         case 2:
         {
            self.siteString = @"广州";
+            [defaults setObject:_siteString forKey:@"siteString"];
             [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
 
         }
@@ -193,6 +208,7 @@
         case 3:
         {
             self.siteString = @"深圳";
+            [defaults setObject:_siteString forKey:@"siteString"];
             [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
    
         }
