@@ -70,25 +70,28 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bq7-WJ-uVV">
+                        <rect key="frame" x="217" y="8" width="80" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="打电话" image="call">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="call:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MP6-39-dUR"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="好评率：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtb-8e-8l5">
-                        <rect key="frame" x="187" y="6" width="52" height="21"/>
+                        <rect key="frame" x="226" y="71" width="52" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="％5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGf-xl-6Zi">
-                        <rect key="frame" x="234" y="7" width="33" height="19"/>
+                        <rect key="frame" x="273" y="72" width="33" height="19"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bq7-WJ-uVV">
-                        <rect key="frame" x="253" y="37" width="59" height="50"/>
-                        <state key="normal" image="call"/>
-                        <connections>
-                            <action selector="call:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MP6-39-dUR"/>
-                        </connections>
-                    </button>
                 </subviews>
             </tableViewCellContentView>
             <point key="canvasLocation" x="269" y="249"/>
@@ -96,6 +99,6 @@
     </objects>
     <resources>
         <image name="agent" width="150" height="200"/>
-        <image name="call" width="512" height="512"/>
+        <image name="call" width="33" height="33"/>
     </resources>
 </document>

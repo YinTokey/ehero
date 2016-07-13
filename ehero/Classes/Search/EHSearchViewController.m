@@ -14,7 +14,6 @@
 #import "XTPopView.h"
 #import "AFNetworking.h"
 
-
 @interface EHSearchViewController ()<selectIndexPathDelegate,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *selectionBtn;
