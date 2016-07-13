@@ -13,6 +13,7 @@
 #import "EHAgentInfoViewController.h"
 #import "XTPopView.h"
 #import "AFNetworking.h"
+#import <MJExtension.h>
 
 @interface EHSearchViewController ()<selectIndexPathDelegate,UITextFieldDelegate>
 
@@ -153,7 +154,7 @@
     //搜索经纪人
         NSDictionary *param =@{@"arg":keyword};
         AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-        [session GET:searchAgentUrlStr parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {            
+        [session GET:searchAgentUrlStr parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSLog(@"%@",responseObject);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
