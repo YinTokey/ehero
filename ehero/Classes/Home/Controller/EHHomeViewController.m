@@ -42,10 +42,6 @@
     sourceArr = [NSMutableArray arrayWithObjects:@"img_00",@"img_01",@"img_02",@"img_03",@"img_04", nil];
     
     [self setupHeaderView];
-    
-    //设置地点按钮标题
-
-  //  [self.siteBtn setTitle: @"北京" forState: UIControlStateNormal];
 
     //跳转到下一界面的返回按钮样式
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
@@ -155,9 +151,7 @@
 
 
 - (IBAction)siteBtnClick:(id)sender {
-//    [self.siteBtn setTitle:_siteString forState:UIControlStateHighlighted];
-//    [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
-    NSLog(@"地点是%@",_siteString);
+
     [self setupPopView];
     
 }
@@ -178,25 +172,29 @@
         case 0:
         {
            self.siteString = @"北京";
-           self.siteBtn.titleLabel.text = _siteString;
+            [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
+
         }
             break;
         case 1:
         {
             self.siteString = @"上海";
-            self.siteBtn.titleLabel.text = _siteString;
+            [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
+        
         }
             break;
         case 2:
         {
            self.siteString = @"广州";
-           self.siteBtn.titleLabel.text = _siteString;
+            [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
+
         }
             break;
         case 3:
         {
             self.siteString = @"深圳";
-            self.siteBtn.titleLabel.text = _siteString;
+            [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
+   
         }
         default:
             break;
