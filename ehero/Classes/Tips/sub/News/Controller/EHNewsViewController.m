@@ -11,7 +11,7 @@
 
 #define CELL_WIDTH01 (SCREEN_WIDTH - 80) / 3
 #define CELL_WIDTH02 70
-
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 @interface EHNewsViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic,strong) UICollectionView *collectionView;
@@ -36,8 +36,10 @@ static NSString * const reuseIdentifier = @"Cell";
     
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-
+    
+    flowLayout.minimumLineSpacing = 3.0;
+    flowLayout.minimumInteritemSpacing = 10.0;
+    
     self.collectionView = [[UICollectionView alloc] initWithFrame:[[UIScreen mainScreen] bounds] collectionViewLayout:flowLayout];
     
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
@@ -74,25 +76,6 @@ static NSString * const reuseIdentifier = @"Cell";
     
     return UIEdgeInsetsMake(5, 5, 2, 5);
 }
-#pragma mark - cell之间最小横向距离
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-{
-    return 10.0;
-}
-
-
-#pragma mark - 两行之间最小距离
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
-
-    return 3.0;
-}
-
-
-
-
-
-
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
   //  UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
@@ -107,6 +90,13 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    return CGSizeMake(300, 20);
+}
+
+
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

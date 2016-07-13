@@ -330,6 +330,7 @@
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.delegate = self;
         _tableView.bounces = NO;
+       [_tableView setSeparatorColor:[UIColor clearColor]];
     }
     return _tableView;
 }

@@ -21,12 +21,14 @@
 {
     /** 图片数组*/
     NSMutableArray *sourceArr;
+
 }
 
 
 - (IBAction)siteBtnClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *siteBtn;
-
+/** 地点*/
+@property (nonatomic,copy) NSString *siteString;
 
 @end
 
@@ -36,11 +38,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //设置轮播图片
     sourceArr = [NSMutableArray arrayWithObjects:@"img_00",@"img_01",@"img_02",@"img_03",@"img_04", nil];
     
     [self setupHeaderView];
     
+    //设置地点按钮标题
+
+  //  [self.siteBtn setTitle: @"北京" forState: UIControlStateNormal];
+
     //跳转到下一界面的返回按钮样式
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
     backItem.title = @"返回";
@@ -108,14 +114,10 @@
         }
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.text = @"评价你的经纪人";
-        
-        
-        
-        
+
        // EHCommentAgentCell *cell = [EHCommentAgentCell commentAgentCellWithTableView:tableView];
         return cell;
-        
-        
+     
     //第三行 每日一房
     }else{
         
@@ -153,15 +155,17 @@
 
 
 - (IBAction)siteBtnClick:(id)sender {
+//    [self.siteBtn setTitle:_siteString forState:UIControlStateHighlighted];
+//    [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
+    NSLog(@"地点是%@",_siteString);
     [self setupPopView];
     
 }
-#pragma mark - 设置左上角地点
+#pragma mark - 设置左上角地点弹窗
 - (void)setupPopView{
     CGPoint point = CGPointMake(_siteBtn.center.x,_siteBtn.center.y + 45);
-    XTPopView *view1 = [[XTPopView alloc] initWithOrigin:point Width:80 Height:40 * 3 Type:XTTypeOfUpCenter Color:[UIColor whiteColor] superView:self.view];
-    view1.dataArray = @[@"上海",@"广州", @"深圳"];
-    view1.images = @[@"bookShelfPopMenuedit",@"bookShelfPopMenulist", @"bookShelfPopMenuImport"];
+    XTPopView *view1 = [[XTPopView alloc] initWithOrigin:point Width:80 Height:40 * 4 Type:XTTypeOfUpCenter Color:[UIColor whiteColor] superView:self.view];
+    view1.dataArray = @[@"北京",@"上海",@"广州", @"深圳"];
     view1.fontSize = 13;
     view1.row_height = 40;
     view1.titleTextColor = [UIColor blackColor];
@@ -173,20 +177,27 @@
     switch (index) {
         case 0:
         {
-           self.siteBtn.titleLabel.text = @"上海";
+           self.siteString = @"北京";
+           self.siteBtn.titleLabel.text = _siteString;
         }
             break;
         case 1:
         {
-            self.siteBtn.titleLabel.text = @"广州";
+            self.siteString = @"上海";
+            self.siteBtn.titleLabel.text = _siteString;
         }
             break;
         case 2:
         {
-           self.siteBtn.titleLabel.text = @"深圳";
+           self.siteString = @"广州";
+           self.siteBtn.titleLabel.text = _siteString;
         }
             break;
-            
+        case 3:
+        {
+            self.siteString = @"深圳";
+            self.siteBtn.titleLabel.text = _siteString;
+        }
         default:
             break;
     }
