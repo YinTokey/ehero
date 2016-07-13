@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "EHAgentInfo.h"
 @interface EHSearchResultCell : UITableViewCell
 
 + (instancetype)searchResultCellWithTableView:(UITableView *)tableView;
 
+- (void)setResultCell:(EHAgentInfo *)agentInfo;
 @end

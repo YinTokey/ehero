@@ -28,6 +28,7 @@
 		0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */; };
 		0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */; };
 		0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B86C1D3631A500C2D788 /* EHAgentInfo.m */; };
+		0478B8701D36445C00C2D788 /* YTNetCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B86F1D36445C00C2D788 /* YTNetCommand.m */; };
 		04C3A8D31D31E643003203C0 /* 图解HTTP.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8D21D31E643003203C0 /* 图解HTTP.pdf */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
@@ -115,6 +116,8 @@
 		0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		0478B86B1D3631A500C2D788 /* EHAgentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfo.h; sourceTree = "<group>"; };
 		0478B86C1D3631A500C2D788 /* EHAgentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfo.m; sourceTree = "<group>"; };
+		0478B86E1D36445C00C2D788 /* YTNetCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTNetCommand.h; sourceTree = "<group>"; };
+		0478B86F1D36445C00C2D788 /* YTNetCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTNetCommand.m; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04C3A8D21D31E643003203C0 /* 图解HTTP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "图解HTTP.pdf"; sourceTree = "<group>"; };
 		04C3A8D61D31FDD9003203C0 /* PDFImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFImage.framework; path = ../../../../../Downloads/PDFImage.framework; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				0478B86E1D36445C00C2D788 /* YTNetCommand.h */,
+				0478B86F1D36445C00C2D788 /* YTNetCommand.m */,
 				04716BF81D35060B00E512EE /* AFNetworking */,
 				04716BE81D34A4E200E512EE /* DCNavTabBarController */,
 				04C5007B1D338CBC009146E5 /* CWStarRateView */,
@@ -1169,6 +1174,7 @@
 				04C500891D339E99009146E5 /* EHProfileViewController.m in Sources */,
 				04C500721D337C5F009146E5 /* EHCommentAgentCell.m in Sources */,
 				04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */,
+				0478B8701D36445C00C2D788 /* YTNetCommand.m in Sources */,
 				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
 				0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */,
 				04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */,

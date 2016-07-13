@@ -45,12 +45,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 5;
+    return _searchResultArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
-
+    EHAgentInfo *agentInfo = self.searchResultArr[indexPath.row];
+    [cell setResultCell:agentInfo];
     return cell;
 }
 #pragma mark - cell高度
@@ -145,12 +146,19 @@
         AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
         [session GET:searchAreaUrlStr parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            
+            //json转模型
             self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObject];
             
+            if (_searchResultArr.count == 0) {
+                NSLog(@"搜索没有结果");
+            }else{
+                NSLog(@"找到结果，在载入数据");
+            }
+            [self.tableView reloadData];
+          
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            NSLog(@"失败");
+            NSLog(@"失败 %@",error);
         }];
 
 
