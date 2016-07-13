@@ -15,8 +15,8 @@
 
 @implementation YTSearchBar
 
-+ (YTSearchBar *)searchBarWithPlaceholder:(NSString *)placeholder {
-    YTSearchBar *searchBar = [[YTSearchBar alloc] init];
++ (YTSearchBar *)searchBarWithPlaceholder:(NSString *)placeholder Frame:(CGRect )frame {
+    YTSearchBar *searchBar = [[YTSearchBar alloc] initWithFrame:frame];
     searchBar.delegate = searchBar;
     searchBar.placeholder = placeholder;
     searchBar.tintColor = [UIColor blackColor];

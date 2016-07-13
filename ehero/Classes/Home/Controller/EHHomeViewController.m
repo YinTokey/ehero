@@ -49,8 +49,7 @@
     if (siteString.length > 1) {
         [self.siteBtn setTitle:siteString forState:UIControlStateNormal];
     }
-    
-    
+
     //跳转到下一界面的返回按钮样式
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
     backItem.title = @"返回";
@@ -124,7 +123,6 @@
      
     //第三行 每日一房
     }else{
-        
         
         EHEverydayhouseCell *cell = [EHEverydayhouseCell everydayhouseCellWithTableView:tableView];
         

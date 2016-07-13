@@ -14,5 +14,5 @@
 @property (nonatomic, copy) void (^searchBarTextDidChangedBlock)();     // 编辑回调
 @property (nonatomic, copy) void (^searchBarDidSearchBlock)();          // 编辑回调
 
-+ (YTSearchBar *)searchBarWithPlaceholder:(NSString *)placeholder;
++ (YTSearchBar *)searchBarWithPlaceholder:(NSString *)placeholder Frame:(CGRect )frame;
 @end

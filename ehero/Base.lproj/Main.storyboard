@@ -158,8 +158,32 @@
                             <outlet property="delegate" destination="Frh-BS-zpg" id="BSi-VP-Qge"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="jlK-uK-epl"/>
+                    <navigationItem key="navigationItem" id="jlK-uK-epl">
+                        <nil key="title"/>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="区域，经纪人" textAlignment="natural" minimumFontSize="17" id="HCP-Ga-PUX">
+                            <rect key="frame" x="69" y="7" width="182" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Bxs-ZQ-Hvj">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="prx-Gc-eXY">
+                                <rect key="frame" x="259" y="7" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="租房">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="select:" destination="Frh-BS-zpg" eventType="touchUpInside" id="KT2-gX-8Bz"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mysearchBar" destination="HCP-Ga-PUX" id="vJB-xY-Jhe"/>
+                        <outlet property="selectionBtn" destination="prx-Gc-eXY" id="aI6-Vu-vaD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f87-kz-ijK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
