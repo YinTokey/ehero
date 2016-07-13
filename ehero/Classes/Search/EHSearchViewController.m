@@ -30,7 +30,8 @@
     
     [self setupSearchBar];
 
-
+    self.searchTypeString = @"出租";
+    
     //添加手势相应，输textfield时，点击其他区域，键盘消失
     UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
     tapGr.cancelsTouchesInView = NO;
@@ -63,8 +64,8 @@
 #pragma mark - 编辑完成，点击搜索时调用代理方法
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     
-    NSLog(@"开始搜索");
-    
+
+    [self searchClick];
     [self.mysearchBar resignFirstResponder ];
     return YES;
 }
@@ -133,8 +134,34 @@
 }
 
 - (void)searchClick{
+    NSString *keyword = self.mysearchBar.text;
+    //搜索地区
+    if ([_searchTypeString isEqualToString:@"出租"]||[_searchTypeString isEqualToString:@"买卖"]) {
+        
+        NSDictionary *param =@{@"address":keyword};
+        AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+        [session GET:searchAreaUrlStr parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            NSLog(@"%@",responseObject);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"失败");
+        }];
 
-    
+
+    }else{
+    //搜索经纪人
+        NSDictionary *param =@{@"arg":keyword};
+        AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+        [session GET:searchAgentUrlStr parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSLog(@"%@",responseObject);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"失败");
+        }];
+
+
+    }
 }
 
 @end
