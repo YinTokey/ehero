@@ -15,6 +15,7 @@
 #import "AFNetworking.h"
 #import <MJExtension.h>
 #import "EHAgentInfo.h"
+#import "LBProgressHUD.h"
 @interface EHSearchViewController ()<selectIndexPathDelegate,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *selectionBtn;
@@ -67,10 +68,11 @@
 
 #pragma mark - 编辑完成，点击搜索时调用代理方法
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    
+    [LBProgressHUD showHUDto:self.view animated:NO];
     [self.searchResultArr removeAllObjects];
     [self searchClick];
     [self.mysearchBar resignFirstResponder ];
+    
     return YES;
 }
 
@@ -155,7 +157,7 @@
                 NSLog(@"找到结果，在载入数据");
             }
             [self.tableView reloadData];
-          
+            [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"失败 %@",error);

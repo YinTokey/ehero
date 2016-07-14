@@ -27,6 +27,7 @@
 		04716C0B1D35060B00E512EE /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04716C051D35060B00E512EE /* AFURLSessionManager.m */; };
 		0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */; };
 		0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */; };
+		0472DA531D37B48900CDE148 /* LBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0472DA521D37B48900CDE148 /* LBProgressHUD.m */; };
 		0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B86C1D3631A500C2D788 /* EHAgentInfo.m */; };
 		0478B8701D36445C00C2D788 /* YTNetCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B86F1D36445C00C2D788 /* YTNetCommand.m */; };
 		049192411D377C6A0071BBB1 /* 五道口.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 049192401D377C6A0071BBB1 /* 五道口.pdf */; };
@@ -115,6 +116,8 @@
 		0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSearchBar.m; sourceTree = "<group>"; };
 		0471D9D81D2FBBF300BCC2EE /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		0471D9D91D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		0472DA511D37B48900CDE148 /* LBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBProgressHUD.h; sourceTree = "<group>"; };
+		0472DA521D37B48900CDE148 /* LBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBProgressHUD.m; sourceTree = "<group>"; };
 		0478B86B1D3631A500C2D788 /* EHAgentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfo.h; sourceTree = "<group>"; };
 		0478B86C1D3631A500C2D788 /* EHAgentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfo.m; sourceTree = "<group>"; };
 		0478B86E1D36445C00C2D788 /* YTNetCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTNetCommand.h; sourceTree = "<group>"; };
@@ -200,6 +203,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				0472DA501D37B48900CDE148 /* LBProgressHUD */,
 				0478B86E1D36445C00C2D788 /* YTNetCommand.h */,
 				0478B86F1D36445C00C2D788 /* YTNetCommand.m */,
 				04716BF81D35060B00E512EE /* AFNetworking */,
@@ -433,6 +437,15 @@
 				0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */,
 			);
 			path = YTSearchBar;
+			sourceTree = "<group>";
+		};
+		0472DA501D37B48900CDE148 /* LBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0472DA511D37B48900CDE148 /* LBProgressHUD.h */,
+				0472DA521D37B48900CDE148 /* LBProgressHUD.m */,
+			);
+			path = LBProgressHUD;
 			sourceTree = "<group>";
 		};
 		04C3A8E51D322A66003203C0 /* AgentInfo */ = {
@@ -1198,6 +1211,7 @@
 				04C5006E1D336FC0009146E5 /* EHWechatGroupViewController.m in Sources */,
 				04716BEB1D34A4E200E512EE /* DCNavTabBarController.m in Sources */,
 				04C3A8EB1D322A82003203C0 /* EHAgentInfoViewController.m in Sources */,
+				0472DA531D37B48900CDE148 /* LBProgressHUD.m in Sources */,
 				04716BEE1D34A8E000E512EE /* EHTwoViewController.m in Sources */,
 				04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */,
 				04716C061D35060B00E512EE /* AFHTTPSessionManager.m in Sources */,

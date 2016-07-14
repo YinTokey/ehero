@@ -87,7 +87,8 @@ static inline CGFloat ZoomScaleThatFits(CGSize target, CGSize source)
 		if (theContentView != nil)
         {
 
-            theContainerView = [[UIView alloc] initWithFrame:theContentView.bounds ];
+            theContainerView = [[UIView alloc] initWithFrame:theContentView.frame ];
+
 			theContainerView.autoresizesSubviews = NO;
 			theContainerView.userInteractionEnabled = NO;
 			theContainerView.contentMode = UIViewContentModeRedraw;
