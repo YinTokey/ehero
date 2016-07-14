@@ -96,7 +96,18 @@ static NSString * const reuseIdentifier = @"Cell";
     return CGSizeMake(300, 20);
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSLog(@"click them");
+    
+    PDFKBasicPDFViewer *viewer = [[PDFKBasicPDFViewer alloc]init];
+    
+    PDFKDocument *document = [PDFKDocument documentWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"五道口" ofType:@"pdf"] password:nil];
 
+    [viewer loadDocument:document];
+    
+    [self.navigationController pushViewController:viewer animated:YES];
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

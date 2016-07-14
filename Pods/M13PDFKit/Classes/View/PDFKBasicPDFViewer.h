@@ -77,5 +77,6 @@
  */
 @property (nonatomic, assign) BOOL standalone;
 
+@property (nonatomic, retain) UIToolbar *navigationToolbar;
 
 @end

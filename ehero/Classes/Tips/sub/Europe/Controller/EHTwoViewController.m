@@ -19,9 +19,7 @@
     
     self.view.backgroundColor = [UIColor grayColor];
     NSLog(@"oneVC");
-    self.view.backgroundColor = [UIColor whiteColor];
-    PDFKDocument *document = [PDFKDocument documentWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"五道口" ofType:@"pdf"] password:nil];
-    [self loadDocument:document];
+
     
     // Do any additional setup after loading the view.
 }

@@ -26,7 +26,7 @@
 /**
  The toolbar displaied at the top of the screen.
  */
-@property (nonatomic, retain) UIToolbar *navigationToolbar;
+//@property (nonatomic, retain) UIToolbar *navigationToolbar;
 /**
  The slider at the bottom of the screen to show the thumbnails.
  */
@@ -148,7 +148,9 @@
     [self.view addConstraints:pageConstraints];
     
     //Create the navigation bar.
-    _navigationToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44.0)];
+ //   _navigationToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44.0)];
+    
+    _navigationToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     _navigationToolbar.delegate = self;
     //Set this to no, cant have autoresizing masks and layout constraints at the same time.
     _navigationToolbar.translatesAutoresizingMaskIntoConstraints = NO;
@@ -157,10 +159,10 @@
     //Create the constraints.
     NSMutableArray *navigationToolbarConstraints = [[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[toolbar]|" options:NSLayoutFormatAlignAllBaseline metrics:nil views:@{@"superview": self.view, @"toolbar": _navigationToolbar}] mutableCopy];
     [navigationToolbarConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayout]-0-[toolbar(44)]" options:NSLayoutFormatAlignAllLeft metrics:nil views:@{@"toolbar": _navigationToolbar, @"topLayout": self.topLayoutGuide}]];
-    [self.view addConstraints:navigationToolbarConstraints];
+ //   [self.view addConstraints:navigationToolbarConstraints];
     //Finish setup
-    [_navigationToolbar sizeToFit];
-    [self resetNavigationToolbar];
+ //   [_navigationToolbar sizeToFit];
+ //   [self resetNavigationToolbar];
     
     //Create the scrubber
     _pageScrubber = [[PDFKPageScrubber alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - self.bottomLayoutGuide.length, self.view.frame.size.width, 44.0) document:_document];
