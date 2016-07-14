@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface EHTwoViewController : UIViewController
+#import <PDFKBasicPDFViewer.h>
+#import <PDFKDocument.h>
+@interface EHTwoViewController : PDFKBasicPDFViewer
 
 @end
