@@ -81,7 +81,7 @@
 {
     self = [super init];
     if (self) {
-        
+       
     }
     return self;
 }
@@ -113,7 +113,7 @@
     }
     
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    
+
     //Defaults
     _enableBookmarks = YES;
     _enableSharing = YES;
@@ -176,7 +176,7 @@
     NSMutableArray *pageScrubberConstraints = [[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[scrubber]|" options:NSLayoutFormatAlignAllBaseline metrics:nil views:@{@"superview": self.view, @"scrubber": _pageScrubber}] mutableCopy];
     [pageScrubberConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[scrubber(44)]-0-[bottomLayout]" options:NSLayoutFormatAlignAllLeft metrics:nil views:@{@"scrubber": _pageScrubber, @"bottomLayout": self.bottomLayoutGuide}]];
     [self.view addConstraints:pageScrubberConstraints];
-    //Finish
+    //Finish  
     [_pageScrubber sizeToFit];
     
     //Add the tap gesture recognizers
@@ -212,6 +212,7 @@
     if (_document) {
         [self loadDocument:_document];
     }
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated

@@ -43,7 +43,8 @@ static NSString * const reuseIdentifier = @"Cell";
     self.collectionView = [[UICollectionView alloc] initWithFrame:[[UIScreen mainScreen] bounds] collectionViewLayout:flowLayout];
     
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    self.collectionView.backgroundColor = [UIColor lightGrayColor];
+   // self.collectionView.backgroundColor = [UIColor lightGrayColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     self.collectionView.frame = self.view.frame;
@@ -101,7 +102,8 @@ static NSString * const reuseIdentifier = @"Cell";
     NSLog(@"click them");
     
     PDFKBasicPDFViewer *viewer = [[PDFKBasicPDFViewer alloc]init];
-    
+    viewer.title = @"五道口";
+  
     PDFKDocument *document = [PDFKDocument documentWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"五道口" ofType:@"pdf"] password:nil];
 
     [viewer loadDocument:document];
