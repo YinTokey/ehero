@@ -58,9 +58,7 @@
     else if (indexPath.row == 6) {
         cell.textLabel.text = @"关于我们";
     }
-    
-    
-    
+
     return cell;
 }
 

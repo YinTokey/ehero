@@ -16,6 +16,8 @@
 #import <MJExtension.h>
 #import "EHAgentInfo.h"
 #import "LBProgressHUD.h"
+
+#import "YTHttpTool.h"
 @interface EHSearchViewController ()<selectIndexPathDelegate,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *selectionBtn;
@@ -145,6 +147,7 @@
     if ([_searchTypeString isEqualToString:@"出租"]||[_searchTypeString isEqualToString:@"买卖"]) {
         
         NSDictionary *param =@{@"address":keyword};
+
         AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
         [session GET:searchAreaUrlStr parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
