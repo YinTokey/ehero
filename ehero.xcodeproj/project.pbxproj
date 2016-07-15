@@ -31,6 +31,7 @@
 		0472DA571D37BA5400CDE148 /* YTHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0472DA561D37BA5400CDE148 /* YTHttpTool.m */; };
 		0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B86C1D3631A500C2D788 /* EHAgentInfo.m */; };
 		0478B8701D36445C00C2D788 /* YTNetCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B86F1D36445C00C2D788 /* YTNetCommand.m */; };
+		048F12A11D38C4120039808D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0787467407A17293EC3E282 /* libPods.a */; };
 		049192411D377C6A0071BBB1 /* 五道口.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 049192401D377C6A0071BBB1 /* 五道口.pdf */; };
 		04C3A8D31D31E643003203C0 /* 图解HTTP.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8D21D31E643003203C0 /* 图解HTTP.pdf */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
@@ -57,7 +58,6 @@
 		04F06CEE1D2DFE920081A34D /* eheroUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06CED1D2DFE920081A34D /* eheroUITests.m */; };
 		04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06D2F1D2E0E040081A34D /* AppDelegate.m */; };
 		04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06D4B1D2E4DD50081A34D /* EHHomeViewController.m */; };
-		B8AE0EE99EBE3CB14F5783BD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0787467407A17293EC3E282 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +125,7 @@
 		0478B86C1D3631A500C2D788 /* EHAgentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfo.m; sourceTree = "<group>"; };
 		0478B86E1D36445C00C2D788 /* YTNetCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTNetCommand.h; sourceTree = "<group>"; };
 		0478B86F1D36445C00C2D788 /* YTNetCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTNetCommand.m; sourceTree = "<group>"; };
+		048F12A21D38C4250039808D /* libM13PDFKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libM13PDFKit.a; path = "../../../../../Library/Developer/Xcode/DerivedData/ehero-apyunbsyuuzpszabggkemknwzsmb/Build/Products/Debug-iphoneos/libM13PDFKit.a"; sourceTree = "<group>"; };
 		049192401D377C6A0071BBB1 /* 五道口.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "五道口.pdf"; path = "Classes/Others/五道口.pdf"; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04C3A8D21D31E643003203C0 /* 图解HTTP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "图解HTTP.pdf"; sourceTree = "<group>"; };
@@ -182,7 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8AE0EE99EBE3CB14F5783BD /* libPods.a in Frameworks */,
+				048F12A11D38C4120039808D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -995,6 +996,7 @@
 		FEC0CEEDEBE9288536D3046F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				048F12A21D38C4250039808D /* libM13PDFKit.a */,
 				04C3A8D61D31FDD9003203C0 /* PDFImage.framework */,
 				04C3A8D01D31E518003203C0 /* WebKit.framework */,
 				D0787467407A17293EC3E282 /* libPods.a */,
@@ -1073,6 +1075,7 @@
 				TargetAttributes = {
 					04F06CC41D2DFE910081A34D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6YFDY973XZ;
 					};
 					04F06CDD1D2DFE920081A34D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1370,21 +1373,22 @@
 			baseConfigurationReference = BFE5132F7394584EE072C978 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ehero/Classes/Lib/FastPdfKit.embeddedframework",
+					"$(PROJECT_DIR)/ehero/Classes/Lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ehero/Classes/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = ehero/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-l\"MJExtension\"",
 					"-l\"MJRefresh\"",
-					"-l\"OHPDFImage\"",
 					"-l\"SDCycleScrollView\"",
 					"-l\"SDWebImage\"",
 					"-framework",
@@ -1406,21 +1410,22 @@
 			baseConfigurationReference = 0BF1B60C2B382860B7250FE9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ehero/Classes/Lib/FastPdfKit.embeddedframework",
+					"$(PROJECT_DIR)/ehero/Classes/Lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ehero/Classes/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = ehero/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-l\"MJExtension\"",
 					"-l\"MJRefresh\"",
-					"-l\"OHPDFImage\"",
 					"-l\"SDCycleScrollView\"",
 					"-l\"SDWebImage\"",
 					"-framework",

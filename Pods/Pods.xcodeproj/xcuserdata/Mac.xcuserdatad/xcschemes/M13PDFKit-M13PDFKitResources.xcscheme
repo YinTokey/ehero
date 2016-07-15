@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '83AC75AB4013FC09E4CA4720'
+               BlueprintIdentifier = '92EEC7AF772CE907513AC8FD'
                BlueprintName = 'M13PDFKit-M13PDFKitResources'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'M13PDFKitResources.bundle'>
