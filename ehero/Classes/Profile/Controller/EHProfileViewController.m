@@ -7,7 +7,7 @@
 //
 
 #import "EHProfileViewController.h"
-
+#import <OpenShareHeader.h>
 @interface EHProfileViewController ()
 
 @end
@@ -63,7 +63,27 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"test");
+    OSMessage *msg=[[OSMessage alloc]init];
+    msg.title=@"Hello msg.title";
+    
+    if (indexPath.row == 0) {
+        [OpenShare shareToWeixinTimeline:msg Success:^(OSMessage *message) {
+            NSLog(@"微信分享到朋友圈成功：\n%@",message);
+        } Fail:^(OSMessage *message, NSError *error) {
+            NSLog(@"微信分享到朋友圈失败：\n%@\n%@",error,message);
+        }];
+    }else{
+        [OpenShare shareToWeibo:msg Success:^(OSMessage *message) {
+            NSLog(@"分享到微博成功");
+        } Fail:^(OSMessage *message, NSError *error) {
+            NSLog(@"分享到微博失败");
+        }];
+    
+    
+    }
+    
+    
+
 }
 
 @end

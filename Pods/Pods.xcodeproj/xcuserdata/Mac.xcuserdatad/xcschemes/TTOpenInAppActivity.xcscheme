@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6FDAC22FDA025346BE2C90C3'
+               BlueprintIdentifier = '499294B6E1200DF415DCADA8'
                BlueprintName = 'TTOpenInAppActivity'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libTTOpenInAppActivity.a'>

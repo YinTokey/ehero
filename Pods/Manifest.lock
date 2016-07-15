@@ -3,6 +3,7 @@ PODS:
     - TTOpenInAppActivity
   - MJExtension (3.0.11)
   - MJRefresh (3.1.10)
+  - OpenShare (0.0.1)
   - SDCycleScrollView (1.65):
     - SDWebImage (~> 3.7)
   - SDWebImage (3.8.1):
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - M13PDFKit (= 1.0.2)
   - MJExtension
   - MJRefresh
+  - OpenShare (~> 0.0)
   - SDCycleScrollView (~> 1.64)
   - SDWebImage
 
@@ -21,6 +23,7 @@ SPEC CHECKSUMS:
   M13PDFKit: bc121a55ccb8ddfcf3982f1a5a8592b9f492cd73
   MJExtension: f9ae6ddc0f1c482c3c9af750280ccebd14381958
   MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
+  OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   TTOpenInAppActivity: c2218fe419d03ddd4ffb1f07d52d66e0d213d0d4
