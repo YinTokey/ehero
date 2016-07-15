@@ -8,6 +8,7 @@
 
 #import "EHProfileViewController.h"
 #import <OpenShareHeader.h>
+#import "ShareView.h"
 @interface EHProfileViewController ()
 
 @end
@@ -64,25 +65,28 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     OSMessage *msg=[[OSMessage alloc]init];
-    msg.title=@"Hello msg.title";
+    msg.title=@"来自易房好介";
     
-    if (indexPath.row == 0) {
-        [OpenShare shareToWeixinTimeline:msg Success:^(OSMessage *message) {
+    NSMutableArray *titleArray = [NSMutableArray arrayWithObjects:@"朋友圈",@"微博", nil];
+    NSMutableArray *picArray = [NSMutableArray arrayWithObjects:@"pengyouquan",@"weibo", nil];
+    ShareView *share = [[ShareView alloc]initWithTitleArray:titleArray picArray:picArray];
+    [share showShareView];
+    [share currentIndexWasSelected:^(NSInteger index) {
+        //它的index是从100开始数起，逐个加1
+        if (index == 100) {
+            [OpenShare shareToWeixinTimeline:msg Success:^(OSMessage *message){
             NSLog(@"微信分享到朋友圈成功：\n%@",message);
-        } Fail:^(OSMessage *message, NSError *error) {
+            } Fail:^(OSMessage *message, NSError *error){
             NSLog(@"微信分享到朋友圈失败：\n%@\n%@",error,message);
-        }];
-    }else{
-        [OpenShare shareToWeibo:msg Success:^(OSMessage *message) {
-            NSLog(@"分享到微博成功");
-        } Fail:^(OSMessage *message, NSError *error) {
-            NSLog(@"分享到微博失败");
-        }];
-    
-    
-    }
-    
-    
+            }];
+        }else{
+            [OpenShare shareToWeibo:msg Success:^(OSMessage *message) {
+           NSLog(@"分享到微博成功");
+            } Fail:^(OSMessage *message, NSError *error) {
+           NSLog(@"分享到微博失败");
+          }];
+        }
+    }];
 
 }
 

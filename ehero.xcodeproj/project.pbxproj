@@ -49,6 +49,8 @@
 		04C500811D338CBC009146E5 /* heart1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C5007E1D338CBC009146E5 /* heart1.png */; };
 		04C500821D338CBC009146E5 /* heart2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C5007F1D338CBC009146E5 /* heart2.png */; };
 		04C500891D339E99009146E5 /* EHProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500881D339E99009146E5 /* EHProfileViewController.m */; };
+		04E7AF9E1D38EC860049E668 /* InnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7AF9B1D38EC860049E668 /* InnerView.m */; };
+		04E7AF9F1D38EC860049E668 /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7AF9D1D38EC860049E668 /* ShareView.m */; };
 		04F06CCA1D2DFE920081A34D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06CC91D2DFE920081A34D /* main.m */; };
 		04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD11D2DFE920081A34D /* Main.storyboard */; };
 		04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD41D2DFE920081A34D /* Assets.xcassets */; };
@@ -155,6 +157,10 @@
 		04C500871D339E99009146E5 /* EHProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHProfileViewController.h; sourceTree = "<group>"; };
 		04C500881D339E99009146E5 /* EHProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHProfileViewController.m; sourceTree = "<group>"; };
 		04C5FFDE1D333292009146E5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		04E7AF9A1D38EC860049E668 /* InnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InnerView.h; sourceTree = "<group>"; };
+		04E7AF9B1D38EC860049E668 /* InnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InnerView.m; sourceTree = "<group>"; };
+		04E7AF9C1D38EC860049E668 /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareView.h; sourceTree = "<group>"; };
+		04E7AF9D1D38EC860049E668 /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareView.m; sourceTree = "<group>"; };
 		04F06CC51D2DFE920081A34D /* ehero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ehero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06CC91D2DFE920081A34D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F06CD21D2DFE920081A34D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -205,6 +211,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				04E7AF991D38EC860049E668 /* PPSpringShareView */,
 				0472DA541D37BA1B00CDE148 /* YTHttpTool */,
 				0472DA501D37B48900CDE148 /* LBProgressHUD */,
 				0478B86E1D36445C00C2D788 /* YTNetCommand.h */,
@@ -808,6 +815,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		04E7AF991D38EC860049E668 /* PPSpringShareView */ = {
+			isa = PBXGroup;
+			children = (
+				04E7AF9A1D38EC860049E668 /* InnerView.h */,
+				04E7AF9B1D38EC860049E668 /* InnerView.m */,
+				04E7AF9C1D38EC860049E668 /* ShareView.h */,
+				04E7AF9D1D38EC860049E668 /* ShareView.m */,
+			);
+			path = PPSpringShareView;
+			sourceTree = "<group>";
+		};
 		04F06CBC1D2DFE910081A34D = {
 			isa = PBXGroup;
 			children = (
@@ -1210,6 +1228,7 @@
 				04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */,
 				04716C0B1D35060B00E512EE /* AFURLSessionManager.m in Sources */,
 				04716BF21D34C70900E512EE /* EHNewsViewCell.m in Sources */,
+				04E7AF9E1D38EC860049E668 /* InnerView.m in Sources */,
 				0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */,
 				0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */,
 				04200C3A1D2F84E6005DC042 /* EHSearchViewController.m in Sources */,
@@ -1219,6 +1238,7 @@
 				04C5006A1D336D8B009146E5 /* EHWechatGroupCell.m in Sources */,
 				04716C091D35060B00E512EE /* AFURLRequestSerialization.m in Sources */,
 				04657FDC1D32768B00914495 /* EHTipsViewController.m in Sources */,
+				04E7AF9F1D38EC860049E668 /* ShareView.m in Sources */,
 				04716C071D35060B00E512EE /* AFNetworkReachabilityManager.m in Sources */,
 				04C5004F1D336313009146E5 /* EHNewsViewController.m in Sources */,
 				04C5006E1D336FC0009146E5 /* EHWechatGroupViewController.m in Sources */,
