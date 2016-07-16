@@ -49,7 +49,8 @@
     
     NSArray *subViewControllers = @[one,two,three,four,five,six,seven];
     DCNavTabBarController *tabBarVC = [[DCNavTabBarController alloc]initWithSubViewControllers:subViewControllers];
-    tabBarVC.view.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 64);
+   // tabBarVC.view.frame = CGRectMake(0, 55, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 55 );
+    tabBarVC.view.frame = CGRectMake(0, 55, self.view.frame.size.width, self.view.frame.size.height - 55);
     
     [self.view addSubview:tabBarVC.view];
     [self addChildViewController:tabBarVC];
