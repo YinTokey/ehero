@@ -11,7 +11,7 @@
 #import "DCNavTabBarController.h"
 
 #import "EHTwoViewController.h"
-
+#import "EHAsiaViewController.h"
 
 @interface EHTipsViewController ()
 
@@ -31,7 +31,10 @@
 - (void)setupChildController{
     EHTwoViewController *one = [[EHTwoViewController alloc]init];
     one.title = @"最新";
-    EHTwoViewController *two = [[EHTwoViewController alloc]init];
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Tips" bundle:[NSBundle mainBundle]];
+    
+    EHAsiaViewController *two = [sb instantiateViewControllerWithIdentifier:@"AsiaViewController"];
     two.title = @"亚洲";
     EHTwoViewController *three = [[EHTwoViewController alloc]init];
     three.title = @"欧洲";
