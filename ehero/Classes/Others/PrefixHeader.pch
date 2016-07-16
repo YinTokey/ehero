@@ -14,6 +14,11 @@
 
 #define searchAreaUrlStr @"http://ehero.cc/agents/search.json"
 #define searchAgentUrlStr @"http://ehero.cc/agents/asearch.json"
+#define QQAppId @"1103194207"
+#define WeiboAppKey @"402180334"
+#define WeixinAppId @"wxd930ea5d5a258f4f"
+
+
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 /**

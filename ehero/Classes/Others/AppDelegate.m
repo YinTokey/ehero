@@ -21,10 +21,10 @@
     [UIView setAnimationDuration:2];
     
     //全局注册appId，别忘了#import "OpenShareHeader.h"
-    [OpenShare connectQQWithAppId:@"1103194207"];
-    [OpenShare connectWeiboWithAppKey:@"402180334"];
-    [OpenShare connectWeixinWithAppId:@"wxd930ea5d5a258f4f"];
-    [OpenShare connectRenrenWithAppId:@"228525" AndAppKey:@"1dd8cba4215d4d4ab96a49d3058c1d7f"];
+    [OpenShare connectQQWithAppId:QQAppId];
+    [OpenShare connectWeiboWithAppKey:WeiboAppKey];
+    [OpenShare connectWeixinWithAppId:WeixinAppId];
+  //  [OpenShare connectRenrenWithAppId:@"228525" AndAppKey:@"1dd8cba4215d4d4ab96a49d3058c1d7f"];
     
     
     return YES;
