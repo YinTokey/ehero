@@ -16,7 +16,6 @@
 #import <MJExtension.h>
 #import "EHAgentInfo.h"
 #import "LBProgressHUD.h"
-
 #import "YTHttpTool.h"
 @interface EHSearchViewController ()<selectIndexPathDelegate,UITextFieldDelegate>
 
@@ -148,11 +147,29 @@
         
         NSDictionary *param =@{@"address":keyword};
 
-        AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-        [session GET:searchAreaUrlStr parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [YTHttpTool get:searchAreaUrlStr params:param success:^(id responseObj) {
             //json转模型
-            self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObject];
+           self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
+         
+            if (_searchResultArr.count == 0) {
+            NSLog(@"搜索没有结果");
+            }else{
+            NSLog(@"找到结果，在载入数据");
+            }
+            [self.tableView reloadData];
+            [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+        } failure:^(NSError *error) {
+            NSLog(@"失败 %@",error);
+        }];
+        
+
+
+    }else{
+    //搜索经纪人
+        NSDictionary *param =@{@"arg":keyword};
+        [YTHttpTool get:searchAgentUrlStr params:param success:^(id responseObj) {
+            //json转模型
+            self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
             
             if (_searchResultArr.count == 0) {
                 NSLog(@"搜索没有结果");
@@ -161,32 +178,9 @@
             }
             [self.tableView reloadData];
             [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
-            
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            NSLog(@"失败 %@",error);
+        } failure:^(NSError *error) {
+             NSLog(@"失败");
         }];
-
-
-    }else{
-    //搜索经纪人
-        NSDictionary *param =@{@"arg":keyword};
-        AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-        [session GET:searchAgentUrlStr parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            //json转模型
-            self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObject];
-            
-            if (_searchResultArr.count == 0) {
-                NSLog(@"搜索没有结果");
-            }else{
-                NSLog(@"找到结果，在载入数据");
-            }
-            [self.tableView reloadData];
-            
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            NSLog(@"失败");
-        }];
-
 
     }
 }

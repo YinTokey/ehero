@@ -11,6 +11,7 @@
 		04200C3A1D2F84E6005DC042 /* EHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200C391D2F84E6005DC042 /* EHSearchViewController.m */; };
 		04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04348FAC1D2F4A7300205130 /* buttonCell.xib */; };
 		04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04348FAF1D2F4DFB00205130 /* buttonCell.m */; };
+		04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04360C891D3CDC2A007C8C17 /* YTHTTPSessionManager.m */; };
 		04657FBF1D323DF500914495 /* JJRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FBE1D323DF500914495 /* JJRadarChart.m */; };
 		04657FD21D32473200914495 /* EHEverydayHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD11D32473200914495 /* EHEverydayHouseViewController.m */; };
 		04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD41D324B4800914495 /* EHAntidisturbViewController.m */; };
@@ -89,6 +90,8 @@
 		04348FAC1D2F4A7300205130 /* buttonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = buttonCell.xib; sourceTree = "<group>"; };
 		04348FAE1D2F4DFB00205130 /* buttonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonCell.h; sourceTree = "<group>"; };
 		04348FAF1D2F4DFB00205130 /* buttonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buttonCell.m; sourceTree = "<group>"; };
+		04360C881D3CDC2A007C8C17 /* YTHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHTTPSessionManager.h; sourceTree = "<group>"; };
+		04360C891D3CDC2A007C8C17 /* YTHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTHTTPSessionManager.m; sourceTree = "<group>"; };
 		04657FBD1D323DF500914495 /* JJRadarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRadarChart.h; sourceTree = "<group>"; };
 		04657FBE1D323DF500914495 /* JJRadarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRadarChart.m; sourceTree = "<group>"; };
 		04657FD01D32473200914495 /* EHEverydayHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayHouseViewController.h; sourceTree = "<group>"; };
@@ -241,6 +244,13 @@
 				04200C361D2F7A7A005DC042 /* XTPopView.m */,
 			);
 			path = XTPopView;
+			sourceTree = "<group>";
+		};
+		04360C871D3CDAEF007C8C17 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		04657FBC1D323DF500914495 /* JJRadarChart */ = {
@@ -471,6 +481,8 @@
 			children = (
 				0472DA551D37BA5400CDE148 /* YTHttpTool.h */,
 				0472DA561D37BA5400CDE148 /* YTHttpTool.m */,
+				04360C881D3CDC2A007C8C17 /* YTHTTPSessionManager.h */,
+				04360C891D3CDC2A007C8C17 /* YTHTTPSessionManager.m */,
 			);
 			path = YTHttpTool;
 			sourceTree = "<group>";
@@ -904,6 +916,7 @@
 		04F06D231D2E0E040081A34D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04360C871D3CDAEF007C8C17 /* Tools */,
 				04716BF41D34EC0900E512EE /* HouseDetail */,
 				04C500831D339E7B009146E5 /* Profile */,
 				04C500741D3386A7009146E5 /* CommentAgent */,
@@ -1238,6 +1251,7 @@
 				04C500721D337C5F009146E5 /* EHCommentAgentCell.m in Sources */,
 				04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */,
 				0478B8701D36445C00C2D788 /* YTNetCommand.m in Sources */,
+				04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */,
 				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
 				0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */,
 				04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */,
