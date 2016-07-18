@@ -37,7 +37,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQy-fd-sSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-825" y="-1005"/>
+            <point key="canvasLocation" x="-737" y="-941"/>
         </scene>
         <!--个人信息-->
         <scene sceneID="XTg-94-Wuf">
@@ -67,7 +67,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZS-TY-0Y2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-825" y="-351"/>
+            <point key="canvasLocation" x="-745" y="-303"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dbc-FY-cYN">
@@ -84,7 +84,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9c-WN-uEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-104" y="-1011"/>
+            <point key="canvasLocation" x="-265" y="-1911"/>
         </scene>
         <!--易房好介-->
         <scene sceneID="Irj-Rz-xCW">
@@ -143,7 +143,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP1-S5-T8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-144" y="-369"/>
+            <point key="canvasLocation" x="-265" y="-1257"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="b6y-a8-fld">
@@ -170,7 +170,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="prx-Gc-eXY">
                                 <rect key="frame" x="259" y="7" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="租房">
+                                <state key="normal" title="出租">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -187,7 +187,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f87-kz-ijK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="288" y="-335"/>
+            <point key="canvasLocation" x="184" y="-295"/>
         </scene>
         <!--生活锦囊-->
         <scene sceneID="G2E-rd-uA4">
@@ -349,7 +349,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wy1-OO-vK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="294" y="-976"/>
+            <point key="canvasLocation" x="166" y="-968"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="37s-O8-rGc">
@@ -366,7 +366,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7s-Bd-aPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="722" y="-1011"/>
+            <point key="canvasLocation" x="970" y="308"/>
         </scene>
         <!--经纪人资料-->
         <scene sceneID="OOw-yx-TLi">
@@ -507,7 +507,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZs-h1-aYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="722" y="-363"/>
+            <point key="canvasLocation" x="970" y="956"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i6m-Uj-BsL">
@@ -524,7 +524,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcA-N3-S6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593" y="327"/>
+            <point key="canvasLocation" x="551" y="335"/>
         </scene>
         <!--点评经纪人-->
         <scene sceneID="LB2-0W-wsM">
@@ -576,7 +576,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAD-fr-GGo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="639" y="996"/>
+            <point key="canvasLocation" x="591" y="996"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M40-x2-GLU">
@@ -624,7 +624,7 @@
         <image name="蓝色标准组合02" width="1682" height="656"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dVq-Eo-EPX"/>
-        <segue reference="OMF-pc-2RX"/>
+        <segue reference="w5F-EZ-b78"/>
+        <segue reference="E9v-hl-rYg"/>
     </inferredMetricsTieBreakers>
 </document>
