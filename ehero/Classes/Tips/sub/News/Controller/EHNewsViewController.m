@@ -99,16 +99,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSLog(@"click them");
     
-    PDFKBasicPDFViewer *viewer = [[PDFKBasicPDFViewer alloc]init];
-    viewer.title = @"五道口";
-  
-    PDFKDocument *document = [PDFKDocument documentWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"五道口" ofType:@"pdf"] password:nil];
-
-    [viewer loadDocument:document];
-    
-    [self.navigationController pushViewController:viewer animated:YES];
 }
 
 /*

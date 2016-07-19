@@ -4,16 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>M13PDFKit-M13PDFKitResources.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>M13PDFKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -44,40 +34,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>TTOpenInAppActivity.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06E87BE359531EF01C18BA074358ECFF</key>
+		<key>0F3B92B9E614904B8E68EE24D053A231</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>27BBB1F1B5B2EAC2613E0C24EEAD5F42</key>
+		<key>4FA00B365B3CC16B7BD276D1FCED431D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3109C37A62F5F4627B8CCC2A366B4164</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>437F95E187F6E93D376CA6D96FAB9E26</key>
+		<key>666C21C633FFE13CB9857E5FAB56A90A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>70BC44266C6FFE30D2C57129458E070B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8F27F29EC0A3F7BD123115A80932A241</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -88,11 +63,6 @@
 			<true/>
 		</dict>
 		<key>D79C5D02C5B82672F3342670170FC25C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F89C8292E524B7624EC9EAC70529D505</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import <PDFKBasicPDFViewer.h>
-#import <PDFKDocument.h>
 
 @interface EHNewsViewController : UIViewController
 

@@ -59,19 +59,9 @@ install_resource()
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
-  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity.png"
-  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity7.png"
-  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity7@2x.png"
-  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity@2x.png"
-  install_resource "${BUILT_PRODUCTS_DIR}/M13PDFKitResources.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
-  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity.png"
-  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity7.png"
-  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity7@2x.png"
-  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity@2x.png"
-  install_resource "${BUILT_PRODUCTS_DIR}/M13PDFKitResources.bundle"
 fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

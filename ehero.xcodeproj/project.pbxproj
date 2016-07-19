@@ -36,7 +36,6 @@
 		047EF38A1D39FFEF00E587BA /* Tips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047EF3891D39FFEF00E587BA /* Tips.storyboard */; };
 		047EF38D1D3A0EAA00E587BA /* EHAsiaViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EF38C1D3A0EAA00E587BA /* EHAsiaViewCell.m */; };
 		048F12A11D38C4120039808D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0787467407A17293EC3E282 /* libPods.a */; };
-		049192411D377C6A0071BBB1 /* 五道口.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 049192401D377C6A0071BBB1 /* 五道口.pdf */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
 		04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */; };
@@ -138,7 +137,6 @@
 		047EF38B1D3A0EAA00E587BA /* EHAsiaViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAsiaViewCell.h; sourceTree = "<group>"; };
 		047EF38C1D3A0EAA00E587BA /* EHAsiaViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAsiaViewCell.m; sourceTree = "<group>"; };
 		048F12A21D38C4250039808D /* libM13PDFKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libM13PDFKit.a; path = "../../../../../Library/Developer/Xcode/DerivedData/ehero-apyunbsyuuzpszabggkemknwzsmb/Build/Products/Debug-iphoneos/libM13PDFKit.a"; sourceTree = "<group>"; };
-		049192401D377C6A0071BBB1 /* 五道口.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "五道口.pdf"; path = "Classes/Others/五道口.pdf"; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04C3A8D61D31FDD9003203C0 /* PDFImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFImage.framework; path = ../../../../../Downloads/PDFImage.framework; sourceTree = "<group>"; };
 		04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayhouseCell.h; sourceTree = "<group>"; };
@@ -878,7 +876,6 @@
 				04F06D231D2E0E040081A34D /* Classes */,
 				04F06CD11D2DFE920081A34D /* Main.storyboard */,
 				047EF3891D39FFEF00E587BA /* Tips.storyboard */,
-				049192401D377C6A0071BBB1 /* 五道口.pdf */,
 				04F06CD41D2DFE920081A34D /* Assets.xcassets */,
 				04F06CD61D2DFE920081A34D /* LaunchScreen.storyboard */,
 				04F06CD91D2DFE920081A34D /* Info.plist */,
@@ -1164,7 +1161,6 @@
 				04C500821D338CBC009146E5 /* heart2.png in Resources */,
 				04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */,
 				04C500811D338CBC009146E5 /* heart1.png in Resources */,
-				049192411D377C6A0071BBB1 /* 五道口.pdf in Resources */,
 				04C3A8E41D321FE2003203C0 /* EHSearchResultCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
