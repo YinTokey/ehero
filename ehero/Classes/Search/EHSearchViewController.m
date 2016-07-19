@@ -146,42 +146,38 @@
     if ([_searchTypeString isEqualToString:@"出租"]||[_searchTypeString isEqualToString:@"买卖"]) {
         
         NSDictionary *param =@{@"address":keyword};
-
-        [YTHttpTool get:searchAreaUrlStr params:param success:^(id responseObj) {
-            //json转模型
-           self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
-         
-            if (_searchResultArr.count == 0) {
-            NSLog(@"搜索没有结果");
-            }else{
-            NSLog(@"找到结果，在载入数据");
-            }
-            [self.tableView reloadData];
-            [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
-        } failure:^(NSError *error) {
-            NSLog(@"失败 %@",error);
-        }];
+        [self searchWithURLString:searchAreaUrlStr Param:param];
         
-
 
     }else{
     //搜索经纪人
         NSDictionary *param =@{@"arg":keyword};
-        [YTHttpTool get:searchAgentUrlStr params:param success:^(id responseObj) {
-            //json转模型
-            self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
-            
-            if (_searchResultArr.count == 0) {
-                NSLog(@"搜索没有结果");
-            }else{
-                NSLog(@"找到结果，在载入数据");
-            }
-            [self.tableView reloadData];
-            [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
-        } failure:^(NSError *error) {
-             NSLog(@"失败");
-        }];
+        [self searchWithURLString:searchAgentUrlStr Param:param];
 
+    }
+}
+
+- (void)searchWithURLString:(NSString *)urlString Param:(NSDictionary *)param{
+
+    [YTHttpTool get:urlString params:param success:^(id responseObj) {
+        //json转模型
+        self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
+        
+        [self searchStatusTest];
+        
+        [self.tableView reloadData];
+        [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+    } failure:^(NSError *error) {
+        NSLog(@"失败");
+    }];
+}
+
+- (void)searchStatusTest{
+    
+    if (_searchResultArr.count == 0) {
+        NSLog(@"搜索没有结果");
+    }else{
+        NSLog(@"找到结果，在载入数据");
     }
 }
 
