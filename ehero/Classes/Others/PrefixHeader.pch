@@ -21,6 +21,9 @@
 #define WeiboAppKey @"402180334"
 #define WeixinAppId @"wxd930ea5d5a258f4f"
 
+#define EheroHOST     @"http://ehero.cc"
+#define searchAreaAction @"/agents/search.json?"
+#define searchAgentsAction @"/agents/asearch.json?"
 
 
 #define WeakSelf __weak typeof(self) weakSelf = self;

@@ -34,6 +34,7 @@
 		047EF3871D39FE3D00E587BA /* EHAsiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EF3851D39FE3D00E587BA /* EHAsiaViewController.m */; };
 		047EF38A1D39FFEF00E587BA /* Tips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047EF3891D39FFEF00E587BA /* Tips.storyboard */; };
 		047EF38D1D3A0EAA00E587BA /* EHAsiaViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EF38C1D3A0EAA00E587BA /* EHAsiaViewCell.m */; };
+		048632081D3E238B00800B26 /* EHNetBusinessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 048632071D3E238B00800B26 /* EHNetBusinessManager.m */; };
 		048F12A11D38C4120039808D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0787467407A17293EC3E282 /* libPods.a */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
@@ -135,6 +136,8 @@
 		047EF3891D39FFEF00E587BA /* Tips.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Tips.storyboard; path = Classes/Tips/sub/Asia/Controller/Tips.storyboard; sourceTree = "<group>"; };
 		047EF38B1D3A0EAA00E587BA /* EHAsiaViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAsiaViewCell.h; sourceTree = "<group>"; };
 		047EF38C1D3A0EAA00E587BA /* EHAsiaViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAsiaViewCell.m; sourceTree = "<group>"; };
+		048632061D3E238B00800B26 /* EHNetBusinessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHNetBusinessManager.h; sourceTree = "<group>"; };
+		048632071D3E238B00800B26 /* EHNetBusinessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHNetBusinessManager.m; sourceTree = "<group>"; };
 		048F12A21D38C4250039808D /* libM13PDFKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libM13PDFKit.a; path = "../../../../../Library/Developer/Xcode/DerivedData/ehero-apyunbsyuuzpszabggkemknwzsmb/Build/Products/Debug-iphoneos/libM13PDFKit.a"; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04C3A8D61D31FDD9003203C0 /* PDFImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFImage.framework; path = ../../../../../Downloads/PDFImage.framework; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 		04360C871D3CDAEF007C8C17 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				048632061D3E238B00800B26 /* EHNetBusinessManager.h */,
+				048632071D3E238B00800B26 /* EHNetBusinessManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1291,6 +1296,7 @@
 				04C5004F1D336313009146E5 /* EHNewsViewController.m in Sources */,
 				04C5006E1D336FC0009146E5 /* EHWechatGroupViewController.m in Sources */,
 				04716BEB1D34A4E200E512EE /* DCNavTabBarController.m in Sources */,
+				048632081D3E238B00800B26 /* EHNetBusinessManager.m in Sources */,
 				04C3A8EB1D322A82003203C0 /* EHAgentInfoViewController.m in Sources */,
 				0472DA531D37B48900CDE148 /* LBProgressHUD.m in Sources */,
 				04716BEE1D34A8E000E512EE /* EHTwoViewController.m in Sources */,

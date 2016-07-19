@@ -16,7 +16,9 @@
 #import <MJExtension.h>
 #import "EHAgentInfo.h"
 #import "YTHttpTool.h"
-@interface EHSearchViewController ()<selectIndexPathDelegate,UITextFieldDelegate>
+
+#import "EHNetBusinessManager.h"
+@interface EHSearchViewController ()<selectIndexPathDelegate,UITextFieldDelegate,EHNetBusinessManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *selectionBtn;
 - (IBAction)select:(id)sender;
@@ -67,7 +69,7 @@
 
 #pragma mark - 编辑完成，点击搜索时调用代理方法
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [LBProgressHUD showHUDto:self.view animated:NO];
+    
     [self.searchResultArr removeAllObjects];
     [self searchClick];
     [self.mysearchBar resignFirstResponder ];
@@ -148,13 +150,16 @@
 
 
 - (void)searchClick{
+    [LBProgressHUD showHUDto:self.view animated:NO];
+    
     NSString *keyword = self.mysearchBar.text;
     //搜索地区
     if ([_searchTypeString isEqualToString:@"出租"]||[_searchTypeString isEqualToString:@"买卖"]) {
         
         NSDictionary *param =@{@"address":keyword};
-        [self searchWithURLString:searchAreaUrlStr Param:param];
+        //[self searchWithURLString:searchAreaUrlStr Param:param];
         
+        [EHNetBusinessManager requestBusinessAction:searchAreaAction byRequestType:YTHttpRequestTypeGet andParameters:param andCallbackDelegate:self andDataType:nil andIdentifier:@"ehero"];
 
     }else{
     //搜索经纪人
@@ -189,5 +194,23 @@
 
     }
 }
+
+/**< 返回业务数据信息成功  */
+- (void)EHNetBusinessDataFetchedSuccess:(id)data forAction:(NSString *)action andIdentifier:(NSString *)identifier
+{
+    
+    NSLog(@"成功");
+    //NSLog(@"data===%@",data);
+    //NSLog(@"identifier===%@",identifier);
+}
+
+/**< 返回业务数据信息失败  */
+- (void)EHNetBusinessDataFetchedError:(NSError *)error forAction:(NSString *)action andIdentifier:(NSString *)identifier
+{
+    NSLog(@"error===%@",error);
+    NSLog(@"identifier===%@",identifier);
+    
+}
+
 
 @end

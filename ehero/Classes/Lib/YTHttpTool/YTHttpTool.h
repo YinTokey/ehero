@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
-
+typedef NS_ENUM(NSInteger, YTHttpRequestType)
+{
+    YTHttpRequestTypeGet,
+    YTHttpRequestTypePost,
+};
 
 @interface YTHttpTool : NSObject
 
