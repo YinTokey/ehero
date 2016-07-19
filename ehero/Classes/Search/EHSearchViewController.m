@@ -36,10 +36,9 @@
 
     self.searchTypeString = @"出租";
     
-    //添加手势相应，输textfield时，点击其他区域，键盘消失
-    UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
-    tapGr.cancelsTouchesInView = NO;
-    [self.view addGestureRecognizer:tapGr];
+    [self addGesture];
+    
+    [YTHttpTool netCheck];
 
 }
 
@@ -138,6 +137,15 @@
     [self setupPopView];
     
 }
+
+- (void)addGesture{
+    //添加手势相应，输textfield时，点击其他区域，键盘消失
+    UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
+    tapGr.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapGr];
+
+}
+
 
 - (void)searchClick{
     NSString *keyword = self.mysearchBar.text;

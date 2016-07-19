@@ -33,5 +33,9 @@
  *  @param failure 请求失败后的回调
  */
 + (void)post:(NSString *)url params:(NSDictionary *)params success:(void (^)(id responseObj))success failure:(void (^)(NSError *error))failure;
+/**
+ *  联网状态监测
+ */
++ (void)netCheck;
 
 @end
