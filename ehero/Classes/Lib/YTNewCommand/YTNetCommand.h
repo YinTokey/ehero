@@ -14,7 +14,9 @@
 
 
 
-+(UIImage *)downloadImageWithImgStr:(NSString *)imgUrlStr placeholderImageStr:(NSString *)placeholderImageStr imageView:(UIImageView *)imageView;
++(UIImage *)downloadImageWithImgStr:(NSString *)imgUrlStr
+                placeholderImageStr:(NSString *)placeholderImageStr
+                          imageView:(UIImageView *)imageView;
 
 
 @end

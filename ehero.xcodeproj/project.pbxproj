@@ -31,7 +31,6 @@
 		0472DA531D37B48900CDE148 /* LBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0472DA521D37B48900CDE148 /* LBProgressHUD.m */; };
 		0472DA571D37BA5400CDE148 /* YTHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0472DA561D37BA5400CDE148 /* YTHttpTool.m */; };
 		0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B86C1D3631A500C2D788 /* EHAgentInfo.m */; };
-		0478B8701D36445C00C2D788 /* YTNetCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B86F1D36445C00C2D788 /* YTNetCommand.m */; };
 		047EF3871D39FE3D00E587BA /* EHAsiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EF3851D39FE3D00E587BA /* EHAsiaViewController.m */; };
 		047EF38A1D39FFEF00E587BA /* Tips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047EF3891D39FFEF00E587BA /* Tips.storyboard */; };
 		047EF38D1D3A0EAA00E587BA /* EHAsiaViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EF38C1D3A0EAA00E587BA /* EHAsiaViewCell.m */; };
@@ -62,6 +61,8 @@
 		04F06CEE1D2DFE920081A34D /* eheroUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06CED1D2DFE920081A34D /* eheroUITests.m */; };
 		04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06D2F1D2E0E040081A34D /* AppDelegate.m */; };
 		04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06D4B1D2E4DD50081A34D /* EHHomeViewController.m */; };
+		04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD3ACE1D3DD942005B13B4 /* YTNetCommand.m */; };
+		04FD3AD31D3DDA23005B13B4 /* MBProgressHUD+YT.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD3AD21D3DDA23005B13B4 /* MBProgressHUD+YT.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,8 +130,6 @@
 		0472DA561D37BA5400CDE148 /* YTHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTHttpTool.m; sourceTree = "<group>"; };
 		0478B86B1D3631A500C2D788 /* EHAgentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfo.h; sourceTree = "<group>"; };
 		0478B86C1D3631A500C2D788 /* EHAgentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfo.m; sourceTree = "<group>"; };
-		0478B86E1D36445C00C2D788 /* YTNetCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTNetCommand.h; sourceTree = "<group>"; };
-		0478B86F1D36445C00C2D788 /* YTNetCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTNetCommand.m; sourceTree = "<group>"; };
 		047EF3841D39FE3D00E587BA /* EHAsiaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAsiaViewController.h; sourceTree = "<group>"; };
 		047EF3851D39FE3D00E587BA /* EHAsiaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAsiaViewController.m; sourceTree = "<group>"; };
 		047EF3891D39FFEF00E587BA /* Tips.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Tips.storyboard; path = Classes/Tips/sub/Asia/Controller/Tips.storyboard; sourceTree = "<group>"; };
@@ -186,6 +185,10 @@
 		04F06D2F1D2E0E040081A34D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04F06D4A1D2E4DD50081A34D /* EHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHomeViewController.h; sourceTree = "<group>"; };
 		04F06D4B1D2E4DD50081A34D /* EHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHomeViewController.m; sourceTree = "<group>"; };
+		04FD3ACD1D3DD942005B13B4 /* YTNetCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTNetCommand.h; sourceTree = "<group>"; };
+		04FD3ACE1D3DD942005B13B4 /* YTNetCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTNetCommand.m; sourceTree = "<group>"; };
+		04FD3AD11D3DDA23005B13B4 /* MBProgressHUD+YT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+YT.h"; sourceTree = "<group>"; };
+		04FD3AD21D3DDA23005B13B4 /* MBProgressHUD+YT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+YT.m"; sourceTree = "<group>"; };
 		0BF1B60C2B382860B7250FE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BFE5132F7394584EE072C978 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D0787467407A17293EC3E282 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,11 +223,11 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				04FD3AD01D3DDA23005B13B4 /* MBProgressHUD+YT */,
+				04FD3ACC1D3DD942005B13B4 /* YTNewCommand */,
 				04E7AF991D38EC860049E668 /* PPSpringShareView */,
 				0472DA541D37BA1B00CDE148 /* YTHttpTool */,
 				0472DA501D37B48900CDE148 /* LBProgressHUD */,
-				0478B86E1D36445C00C2D788 /* YTNetCommand.h */,
-				0478B86F1D36445C00C2D788 /* YTNetCommand.m */,
 				04716BF81D35060B00E512EE /* AFNetworking */,
 				04716BE81D34A4E200E512EE /* DCNavTabBarController */,
 				04C5007B1D338CBC009146E5 /* CWStarRateView */,
@@ -913,6 +916,7 @@
 		04F06D231D2E0E040081A34D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04200C331D2F7A6A005DC042 /* Lib */,
 				04360C871D3CDAEF007C8C17 /* Tools */,
 				04716BF41D34EC0900E512EE /* HouseDetail */,
 				04C500831D339E7B009146E5 /* Profile */,
@@ -922,7 +926,6 @@
 				04657FC41D32466500914495 /* EverydayHouse */,
 				04657FC01D32464800914495 /* WechatGroup */,
 				04C3A8E51D322A66003203C0 /* AgentInfo */,
-				04200C331D2F7A6A005DC042 /* Lib */,
 				04F06D461D2E4CDE0081A34D /* Search */,
 				04F06D421D2E4CD70081A34D /* Home */,
 				04F06D2D1D2E0E040081A34D /* Others */,
@@ -1020,6 +1023,24 @@
 				04C3A8E21D321FE2003203C0 /* EHSearchResultCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04FD3ACC1D3DD942005B13B4 /* YTNewCommand */ = {
+			isa = PBXGroup;
+			children = (
+				04FD3ACD1D3DD942005B13B4 /* YTNetCommand.h */,
+				04FD3ACE1D3DD942005B13B4 /* YTNetCommand.m */,
+			);
+			path = YTNewCommand;
+			sourceTree = "<group>";
+		};
+		04FD3AD01D3DDA23005B13B4 /* MBProgressHUD+YT */ = {
+			isa = PBXGroup;
+			children = (
+				04FD3AD11D3DDA23005B13B4 /* MBProgressHUD+YT.h */,
+				04FD3AD21D3DDA23005B13B4 /* MBProgressHUD+YT.m */,
+			);
+			path = "MBProgressHUD+YT";
 			sourceTree = "<group>";
 		};
 		1D386CA178D8095F920B4A3E /* Pods */ = {
@@ -1246,7 +1267,7 @@
 				04C500891D339E99009146E5 /* EHProfileViewController.m in Sources */,
 				04C500721D337C5F009146E5 /* EHCommentAgentCell.m in Sources */,
 				04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */,
-				0478B8701D36445C00C2D788 /* YTNetCommand.m in Sources */,
+				04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */,
 				04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */,
 				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
 				0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */,
@@ -1256,6 +1277,7 @@
 				04E7AF9E1D38EC860049E668 /* InnerView.m in Sources */,
 				0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */,
 				0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */,
+				04FD3AD31D3DDA23005B13B4 /* MBProgressHUD+YT.m in Sources */,
 				04200C3A1D2F84E6005DC042 /* EHSearchViewController.m in Sources */,
 				04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */,
 				04657FD21D32473200914495 /* EHEverydayHouseViewController.m in Sources */,

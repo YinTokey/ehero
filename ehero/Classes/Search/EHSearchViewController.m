@@ -15,7 +15,6 @@
 #import "AFNetworking.h"
 #import <MJExtension.h>
 #import "EHAgentInfo.h"
-#import "LBProgressHUD.h"
 #import "YTHttpTool.h"
 @interface EHSearchViewController ()<selectIndexPathDelegate,UITextFieldDelegate>
 
@@ -41,7 +40,7 @@
     UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
     tapGr.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tapGr];
-    
+
 }
 
 
@@ -175,9 +174,11 @@
 - (void)searchStatusTest{
     
     if (_searchResultArr.count == 0) {
-        NSLog(@"搜索没有结果");
+        [MBProgressHUD showNormalMessage:@"没有找到经纪人" showDetailText:nil toView:self.view];
+
     }else{
-        NSLog(@"找到结果，在载入数据");
+        [MBProgressHUD showNormalMessage:@"找到经纪人，正在载入数据" showDetailText:nil toView:self.view];
+
     }
 }
 
