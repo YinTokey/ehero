@@ -37,10 +37,6 @@ static EHNetBusinessManager *_manager;
     
 }
 
-
-
-
-
 #pragma  - mark Call YTHttpTool
 - (void)requestBusinessAction:(NSString *)action
                 byRequestType:(YTHttpRequestType)requestType
@@ -65,12 +61,7 @@ static EHNetBusinessManager *_manager;
             break;
     }
 
-
-
-
 }
-
-
 
 #pragma mark - 整合网络请求和字典转模型
 - (void)get:(NSString *)urlStr params:(NSDictionary *)params dataType:(Class)dataClass forAction:action

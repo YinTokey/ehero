@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "绿色标准组合01.png",
+      "filename" : "launchscreen.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "launchscreen@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "launchscreen@3x.png",
       "scale" : "3x"
     }
   ],

@@ -18,7 +18,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //设置启动页面时间
-    [UIView setAnimationDuration:2];
+    //[UIView setAnimationDuration:2];
+    [NSThread sleepForTimeInterval:1.0];
+    
     
     //全局注册appId，别忘了#import "OpenShareHeader.h"
     [OpenShare connectQQWithAppId:QQAppId];

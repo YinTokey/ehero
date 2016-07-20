@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="绿色标准组合01" translatesAutoresizingMaskIntoConstraints="NO" id="rhr-9X-fr9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="rhr-9X-fr9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                         </subviews>
@@ -36,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="绿色标准组合01" width="634" height="810"/>
+        <image name="launchscreen" width="732" height="1316"/>
     </resources>
 </document>
