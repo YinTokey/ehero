@@ -51,10 +51,23 @@
     }
 
     //跳转到下一界面的返回按钮样式
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
-    backItem.title = @"返回";
-    backItem.tintColor = [UIColor blackColor];
+//   UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
+//   backItem.title = @"";
+//   [backItem setBackgroundImage:[UIImage imageNamed:@"profile_back"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    self.navigationItem.backBarButtonItem = backItem;
+//
+//    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+//    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"profile_back"]];
+//    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"profile_back"]];
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
+    backItem.tintColor = [UIColor redColor];
     self.navigationItem.backBarButtonItem = backItem;
+    
+    
+    
 }
 
 

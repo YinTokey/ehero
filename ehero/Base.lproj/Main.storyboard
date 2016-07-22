@@ -32,42 +32,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="r2q-7g-cgX" kind="relationship" relationship="rootViewController" id="E9v-hl-rYg"/>
+                        <segue destination="1ff-Qr-lH1" kind="relationship" relationship="rootViewController" id="MYA-Jt-V3r"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQy-fd-sSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-737" y="-941"/>
-        </scene>
-        <!--个人信息-->
-        <scene sceneID="XTg-94-Wuf">
-            <objects>
-                <tableViewController id="r2q-7g-cgX" customClass="EHProfileViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4sd-dm-gby">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XZv-rY-ruU">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XZv-rY-ruU" id="vMb-Cp-tcO">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="r2q-7g-cgX" id="ehX-h5-kGO"/>
-                            <outlet property="delegate" destination="r2q-7g-cgX" id="mBT-bd-q2a"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="个人信息" id="NHM-Ox-DIp"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dZS-TY-0Y2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-745" y="-303"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dbc-FY-cYN">
@@ -121,7 +91,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Profile"/>
                                     <connections>
-                                        <segue destination="r2q-7g-cgX" kind="show" id="OMF-pc-2RX"/>
+                                        <segue destination="1ff-Qr-lH1" kind="show" id="5xh-fk-bmq"/>
                                     </connections>
                                 </button>
                             </barButtonItem>
@@ -317,6 +287,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcH-v2-BiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="971"/>
+        </scene>
+        <!--个人中心-->
+        <scene sceneID="ocV-g9-y4w">
+            <objects>
+                <viewController id="1ff-Qr-lH1" customClass="EHProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F2K-wk-Lh8"/>
+                        <viewControllerLayoutGuide type="bottom" id="gar-On-V8m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lri-3c-rDr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrV-50-qjI">
+                                <rect key="frame" x="8" y="72" width="150" height="58"/>
+                                <state key="normal" image="profile_btn1"/>
+                                <connections>
+                                    <action selector="skimedAgentsClick:" destination="1ff-Qr-lH1" eventType="touchUpInside" id="bsz-5X-wek"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivr-5s-0O1">
+                                <rect key="frame" x="162" y="72" width="150" height="58"/>
+                                <state key="normal" image="profile_btn2"/>
+                                <connections>
+                                    <action selector="skimedHouseClick:" destination="1ff-Qr-lH1" eventType="touchUpInside" id="f0Q-B0-ykD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiD-Ph-j4q">
+                                <rect key="frame" x="8" y="150" width="304" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="收藏的锦囊" backgroundImage="profile_btn3">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="tipsClick:" destination="1ff-Qr-lH1" eventType="touchUpInside" id="WPp-Op-9YT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHZ-w3-DMM">
+                                <rect key="frame" x="8" y="242" width="304" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="收藏的房源" backgroundImage="profile_btn5">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="houseClick:" destination="1ff-Qr-lH1" eventType="touchUpInside" id="1WC-jw-CrC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Kf-cu-q5V">
+                                <rect key="frame" x="8" y="312" width="304" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="联系我们" backgroundImage="profile_btn6">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="contactClick:" destination="1ff-Qr-lH1" eventType="touchUpInside" id="mFe-fa-F2J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOi-6h-cY7">
+                                <rect key="frame" x="8" y="357" width="304" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="关于我们" backgroundImage="profile_btn7">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="aboutClick:" destination="1ff-Qr-lH1" eventType="touchUpInside" id="sfd-IH-dNb"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile_img" translatesAutoresizingMaskIntoConstraints="NO" id="QvD-aU-QVd">
+                                <rect key="frame" x="145" y="532" width="30" height="36"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JD4-1o-3LJ">
+                                <rect key="frame" x="8" y="196" width="304" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="收藏的经纪人" backgroundImage="profile_btn4">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="agentsClick:" destination="1ff-Qr-lH1" eventType="touchUpInside" id="T0P-rB-cdk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人中心" id="Yrx-rh-eeK"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="about" destination="hOi-6h-cY7" id="Wb5-7z-feo"/>
+                        <outlet property="agents" destination="JD4-1o-3LJ" id="gse-bv-wVq"/>
+                        <outlet property="contact" destination="5Kf-cu-q5V" id="bXi-3U-Szy"/>
+                        <outlet property="house" destination="jHZ-w3-DMM" id="FsF-xP-RpR"/>
+                        <outlet property="tips" destination="jiD-Ph-j4q" id="1sh-uP-OOq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eqb-B9-Owu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-737" y="-295"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TjS-RV-JO0">
@@ -621,11 +687,19 @@
         <image name="btnBackground" width="75" height="31"/>
         <image name="greenbackground" width="214" height="34"/>
         <image name="location" width="16" height="21"/>
+        <image name="profile_btn1" width="350" height="128"/>
+        <image name="profile_btn2" width="350" height="128"/>
+        <image name="profile_btn3" width="711" height="89"/>
+        <image name="profile_btn4" width="711" height="89"/>
+        <image name="profile_btn5" width="710" height="88"/>
+        <image name="profile_btn6" width="711" height="89"/>
+        <image name="profile_btn7" width="710" height="88"/>
+        <image name="profile_img" width="41" height="47"/>
         <image name="search_112.60997067449px_1197039_easyicon.net" width="21" height="21"/>
         <image name="蓝色标准组合02" width="1682" height="656"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="5xh-fk-bmq"/>
         <segue reference="dVq-Eo-EPX"/>
-        <segue reference="OMF-pc-2RX"/>
     </inferredMetricsTieBreakers>
 </document>
