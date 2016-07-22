@@ -325,7 +325,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHZ-w3-DMM">
-                                <rect key="frame" x="8" y="242" width="304" height="45"/>
+                                <rect key="frame" x="8" y="240" width="304" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="收藏的房源" backgroundImage="profile_btn5">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -358,7 +358,7 @@
                                 <rect key="frame" x="145" y="532" width="30" height="36"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JD4-1o-3LJ">
-                                <rect key="frame" x="8" y="196" width="304" height="45"/>
+                                <rect key="frame" x="8" y="195" width="304" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="收藏的经纪人" backgroundImage="profile_btn4">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
