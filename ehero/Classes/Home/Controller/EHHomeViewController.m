@@ -42,7 +42,7 @@
     sourceArr = [NSMutableArray arrayWithObjects:@"img_00",@"img_01",@"img_02",@"img_03",@"img_04", nil];
     
     [self setupHeaderView];
-
+    
     //读取用户偏好
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *siteString = [defaults objectForKey:@"siteString"];
@@ -76,23 +76,23 @@
 }
 
 #pragma mark - section高度设置
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 2) {
-        return 5;
-    }else{
-        return 0.1;
-    }
-
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+//    if (section == 2) {
+//        return 5;
+//    }else{
+//        return 0.1;
+//    }
+//
+//}
 
 #pragma mark - cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 75;
+        return 79;
     }else if(indexPath.section == 1){
         return 30;
     }else{
-        return 125;
+        return 94;
     }
 }
 
@@ -140,16 +140,16 @@
 
 
 #pragma mark - section标题
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    if (section == 2) {
-        return @"每日一房";
-    }else{
-        return @"";
-    }
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+//    if (section == 2) {
+//        return @"每日一房";
+//    }else{
+//        return @"";
+//    }
+//}
 
 - (void)setupHeaderView{
-
+   
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width - 10, 150) imageNamesGroup:sourceArr];
     self.tableView.tableHeaderView = cycleScrollView;
 }

@@ -90,10 +90,11 @@
         <scene sceneID="Irj-Rz-xCW">
             <objects>
                 <tableViewController id="iSZ-bj-OnQ" customClass="EHHomeViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="BG0-tu-CEZ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BG0-tu-CEZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="iSZ-bj-OnQ" id="YR0-xK-yM7"/>
@@ -624,7 +625,7 @@
         <image name="蓝色标准组合02" width="1682" height="656"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="w5F-EZ-b78"/>
-        <segue reference="E9v-hl-rYg"/>
+        <segue reference="dVq-Eo-EPX"/>
+        <segue reference="OMF-pc-2RX"/>
     </inferredMetricsTieBreakers>
 </document>

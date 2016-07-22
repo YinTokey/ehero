@@ -7,72 +7,72 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="reuseButtonCell" id="iN0-l3-epB" customClass="buttonCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gf-hc-ZUJ">
-                    <rect key="frame" x="21" y="5" width="50" height="50"/>
-                    <state key="normal" title="Button" image="Tips"/>
+                    <rect key="frame" x="0.0" y="0.0" width="79" height="79"/>
+                    <state key="normal" title="Button" image="home_tip"/>
                     <connections>
                         <action selector="firstBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="XAf-aa-F5V"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-pP-7gR">
-                    <rect key="frame" x="97" y="5" width="50" height="50"/>
-                    <state key="normal" title="Button" image="phone"/>
+                    <rect key="frame" x="81" y="0.0" width="79" height="79"/>
+                    <state key="normal" title="Button" image="home_call"/>
                     <connections>
                         <action selector="secondBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="7aB-Y8-wcB"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2e-Cs-qhX">
-                    <rect key="frame" x="173" y="5" width="50" height="50"/>
-                    <state key="normal" title="Button" image="house"/>
+                    <rect key="frame" x="243" y="0.0" width="79" height="79"/>
+                    <state key="normal" title="Button" image="home_every"/>
                     <connections>
                         <action selector="thirdBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="YL9-eY-r9E"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="生活锦囊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syE-Df-jga">
-                    <rect key="frame" x="25" y="54" width="42" height="21"/>
+                    <rect key="frame" x="18" y="50" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="防扰电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UH-x5-vGy">
-                    <rect key="frame" x="101" y="54" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="每日一房" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtG-G7-hg6">
-                    <rect key="frame" x="177" y="54" width="42" height="21"/>
+                    <rect key="frame" x="261" y="50" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="微信群组" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcS-mW-k2O">
-                    <rect key="frame" x="253" y="54" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-hW-Rc8">
-                    <rect key="frame" x="249" y="5" width="50" height="50"/>
-                    <state key="normal" title="Button" image="Wechat_group"/>
+                    <rect key="frame" x="162" y="0.0" width="79" height="79"/>
+                    <state key="normal" title="Button" image="home_group"/>
                     <connections>
                         <action selector="fourthBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="uMq-du-vIV"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="免扰电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upg-k7-fMa">
+                    <rect key="frame" x="99" y="50" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="微信群组" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwb-Dc-Cem">
+                    <rect key="frame" x="180" y="50" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="361" y="52.5"/>
+            <point key="canvasLocation" x="360" y="49.5"/>
         </view>
     </objects>
     <resources>
-        <image name="Tips" width="512" height="512"/>
-        <image name="Wechat_group" width="512" height="512"/>
-        <image name="house" width="250" height="221"/>
-        <image name="phone" width="173" height="173"/>
+        <image name="home_call" width="187" height="178"/>
+        <image name="home_every" width="187" height="178"/>
+        <image name="home_group" width="186" height="178"/>
+        <image name="home_tip" width="187" height="178"/>
     </resources>
 </document>
