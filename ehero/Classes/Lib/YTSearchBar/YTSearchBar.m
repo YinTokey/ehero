@@ -25,7 +25,8 @@
     for (UIView *subView in searchBarSub.subviews) {
         
         if ([subView isKindOfClass:NSClassFromString(@"UISearchBarTextField")]) {
-          //  [subView setBackgroundColor:RGB(196, 30, 28)];
+           // [subView setBackgroundColor:RGB(196, 30, 28)];
+            //[subView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"home_top_bar"]]];
             
         }
         

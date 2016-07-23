@@ -17,6 +17,9 @@
 #import "EHWechatGroupViewController.h"
 #import "EHCommentAgentCell.h"
 #import "EHCommentAgentViewController.h"
+
+#import "YTSearchBar.h"
+
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate>
 {
     /** 图片数组*/
@@ -42,7 +45,7 @@
     sourceArr = [NSMutableArray arrayWithObjects:@"img_00",@"img_01",@"img_02",@"img_03",@"img_04", nil];
     
     [self setupHeaderView];
-    
+
     //读取用户偏好
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *siteString = [defaults objectForKey:@"siteString"];
@@ -56,7 +59,24 @@
     //设置返回图片
    // [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"profile_back"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
+    [self setNavBar];
+    
+}
 
+
+- (void)setNavBar{
+    YTSearchBar *searchBar = [YTSearchBar searchBarWithPlaceholder:@"输入小区或商圈名称" Frame:CGRectMake(50,5,100,40)];
+    self.navigationItem.titleView = searchBar;
+}
+
+#pragma mark - 点击事件处理
+
+- (void)location {
+    NSLog(@"");
+}
+
+- (void)profile {
+    NSLog(@"profile");
 }
 
 

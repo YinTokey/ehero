@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nXI-Mq-9gS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -56,7 +55,7 @@
             </objects>
             <point key="canvasLocation" x="-265" y="-1911"/>
         </scene>
-        <!--易房好介-->
+        <!--Home View Controller-->
         <scene sceneID="Irj-Rz-xCW">
             <objects>
                 <tableViewController id="iSZ-bj-OnQ" customClass="EHHomeViewController" sceneMemberID="viewController">
@@ -71,46 +70,8 @@
                             <outlet property="delegate" destination="iSZ-bj-OnQ" id="W5c-xb-tRi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="易房好介" id="J6u-Q0-Cap">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="d3p-YR-Af8">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YOk-YK-Kp7">
-                                <rect key="frame" x="16" y="11" width="52" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="北京" image="location">
-                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="siteBtnClick:" destination="iSZ-bj-OnQ" eventType="touchUpInside" id="HDC-La-70K"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem style="plain" id="m3I-1r-jMG">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lsq-TD-ciu">
-                                    <rect key="frame" x="284" y="11" width="20" height="22"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="Profile"/>
-                                    <connections>
-                                        <segue destination="1ff-Qr-lH1" kind="show" id="5xh-fk-bmq"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
-                            <barButtonItem style="plain" id="BKj-xO-ryD">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eyb-Db-NAx">
-                                    <rect key="frame" x="236" y="2" width="40" height="40"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="search_112.60997067449px_1197039_easyicon.net"/>
-                                    <connections>
-                                        <segue destination="Frh-BS-zpg" kind="show" id="dVq-Eo-EPX"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="J6u-Q0-Cap"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="siteBtn" destination="YOk-YK-Kp7" id="6gs-7D-CeQ"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP1-S5-T8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -682,11 +643,9 @@
     </scenes>
     <resources>
         <image name="Phone_call" width="15" height="22"/>
-        <image name="Profile" width="20" height="20"/>
         <image name="agent" width="150" height="200"/>
         <image name="btnBackground" width="75" height="31"/>
         <image name="greenbackground" width="214" height="34"/>
-        <image name="location" width="16" height="21"/>
         <image name="profile_btn1" width="350" height="128"/>
         <image name="profile_btn2" width="350" height="128"/>
         <image name="profile_btn3" width="711" height="89"/>
@@ -695,11 +654,6 @@
         <image name="profile_btn6" width="711" height="89"/>
         <image name="profile_btn7" width="710" height="88"/>
         <image name="profile_img" width="41" height="47"/>
-        <image name="search_112.60997067449px_1197039_easyicon.net" width="21" height="21"/>
         <image name="蓝色标准组合02" width="1682" height="656"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="5xh-fk-bmq"/>
-        <segue reference="dVq-Eo-EPX"/>
-    </inferredMetricsTieBreakers>
 </document>
