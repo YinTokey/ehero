@@ -10,7 +10,7 @@
 #import "YTSearchBar.h"
 #import "UIBarButtonItem+Extension.h"
 #import "EHSearchResultCell.h"
-#import "EHAgentInfoViewController.h"
+#import "EHAgentInfoController.h"
 #import "AFNetworking.h"
 #import <MJExtension.h>
 #import "EHAgentInfo.h"
@@ -38,23 +38,11 @@
     
     [YTHttpTool netCheck];
 
-    NSString *sa = @"永泰园  永泰西里 永泰庄6号院";
-    NSStringEncoding strEncode = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-    NSData *data = [sa dataUsingEncoding:NSUTF8StringEncoding];
-     //异步解码
-    NSString *str = [[NSString alloc]initWithData:data encoding:strEncode];
-    //[sa  NSUTF8StringEncoding];
-    for (int i = 0; i < sa.length; ++i) {
-      
-        
-        
-        
-    }
+
+    //跳转到下一界面的返回按钮样式
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
     
-    
-    NSArray *arr = [sa componentsSeparatedByString:@" "];
- //   NSLog(@"%d",arr.count);
-    
+    self.navigationItem.backBarButtonItem = backItem;
     
 }
 
@@ -77,7 +65,15 @@
 
 #pragma mark - 选择cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    EHAgentInfoViewController *agentInfoVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"AgentInfoViewController"];
+    EHAgentInfoController *agentInfoVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"AgentInfoController"];
+    EHAgentInfo *agentInfo = self.searchResultArr[indexPath.row];
+    agentInfoVC.name = agentInfo.name;
+    agentInfoVC.tx = agentInfo.tx;
+    agentInfoVC.rates = agentInfo.rates;
+    agentInfoVC.region = agentInfo.region;
+    agentInfoVC.company = agentInfo.company;
+    agentInfoVC.community = agentInfo.community;
+    
     [self.navigationController pushViewController:agentInfoVC animated:YES];
 }
 
