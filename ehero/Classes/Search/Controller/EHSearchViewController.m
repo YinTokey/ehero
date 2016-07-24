@@ -11,20 +11,15 @@
 #import "UIBarButtonItem+Extension.h"
 #import "EHSearchResultCell.h"
 #import "EHAgentInfoViewController.h"
-#import "XTPopView.h"
 #import "AFNetworking.h"
 #import <MJExtension.h>
 #import "EHAgentInfo.h"
 #import "YTHttpTool.h"
-
 #import "EHNetBusinessManager.h"
-@interface EHSearchViewController ()<selectIndexPathDelegate,UITextFieldDelegate,EHNetBusinessManagerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *selectionBtn;
-- (IBAction)select:(id)sender;
+@interface EHSearchViewController ()<UITextFieldDelegate,EHNetBusinessManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *mysearchBar;
-@property (nonatomic,copy) NSString *searchTypeString;
 @property (nonatomic,strong) NSMutableArray *searchResultArr;
 
 @end
@@ -35,8 +30,6 @@
     [super viewDidLoad];
     
     [self setupSearchBar];
-
-    self.searchTypeString = @"出租";
     
     [self addGesture];
     
@@ -84,61 +77,17 @@
     
 }
 
-#pragma mark - 实现代理方法，右上角弹窗点击事件
-- (void)selectIndexPathRow:(NSInteger)index{
-  
-    switch (index) {
-        case 0:
-        {
-            self.searchTypeString = @"出租";
-            [self.selectionBtn setTitle:_searchTypeString forState:UIControlStateNormal];
-            
-        }
-            break;
-        case 1:
-        {
-            self.searchTypeString = @"买卖";
-            [self.selectionBtn setTitle:_searchTypeString forState:UIControlStateNormal];
-            
-        }
-            break;
-        case 2:
-        {
-            self.searchTypeString = @"经纪人";
-            [self.selectionBtn setTitle:_searchTypeString forState:UIControlStateNormal];
-            
-        }
-            break;
-        
-        default:
-            break;
-    }
-}
-
 
 - (void)setupSearchBar{
-    UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"searchbar_textfield_search_icon"]];
-    self.mysearchBar.leftView = imgView;
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"search_bar"]];
+    self.mysearchBar.background = [UIImage imageNamed:@"search_bar"];
     self.mysearchBar.leftViewMode = UITextFieldViewModeAlways;
     self.mysearchBar.delegate = self;
+    self.mysearchBar.placeholder = @"shini shge shaib";
+    
     
 }
 
-- (void)setupPopView{
-    CGPoint point = CGPointMake(_selectionBtn.center.x,_selectionBtn.center.y + 45);
-    XTPopView *view1 = [[XTPopView alloc] initWithOrigin:point Width:70 Height:40 * 3 Type:XTTypeOfUpCenter Color:[UIColor whiteColor] superView:self.view];
-    view1.dataArray = @[@"出租",@"买卖",@"经纪人"];
-    view1.fontSize = 13;
-    view1.row_height = 40;
-    view1.titleTextColor = [UIColor blackColor];
-    view1.delegate = self;
-    [view1 popView];
-}
-
-- (IBAction)select:(id)sender {
-    [self setupPopView];
-    
-}
 
 - (void)addGesture{
     //添加手势相应，输textfield时，点击其他区域，键盘消失
@@ -154,17 +103,9 @@
     
     NSString *keyword = self.mysearchBar.text;
     //搜索地区
-    if ([_searchTypeString isEqualToString:@"出租"]||[_searchTypeString isEqualToString:@"买卖"]) {
-        
-        NSDictionary *param =@{@"address":keyword};
-        [self searchWithURLString:searchAreaUrlStr Param:param];
+    NSDictionary *param =@{@"address":keyword};
+    [self searchWithURLString:searchAreaUrlStr Param:param];
 
-    }else{
-    //搜索经纪人
-        NSDictionary *param =@{@"arg":keyword};
-        [self searchWithURLString:searchAgentUrlStr Param:param];
-
-    }
 }
 
 - (void)searchWithURLString:(NSString *)urlString Param:(NSDictionary *)param{

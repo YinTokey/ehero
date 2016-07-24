@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		04200C371D2F7A7A005DC042 /* XTPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200C361D2F7A7A005DC042 /* XTPopView.m */; };
-		04200C3A1D2F84E6005DC042 /* EHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200C391D2F84E6005DC042 /* EHSearchViewController.m */; };
 		04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04348FAC1D2F4A7300205130 /* buttonCell.xib */; };
 		04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04348FAF1D2F4DFB00205130 /* buttonCell.m */; };
 		04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04360C891D3CDC2A007C8C17 /* YTHTTPSessionManager.m */; };
-		04657FBF1D323DF500914495 /* JJRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FBE1D323DF500914495 /* JJRadarChart.m */; };
 		04657FD21D32473200914495 /* EHEverydayHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD11D32473200914495 /* EHEverydayHouseViewController.m */; };
 		04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD41D324B4800914495 /* EHAntidisturbViewController.m */; };
 		04657FDC1D32768B00914495 /* EHTipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FDB1D32768B00914495 /* EHTipsViewController.m */; };
@@ -31,11 +29,13 @@
 		0472DA531D37B48900CDE148 /* LBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0472DA521D37B48900CDE148 /* LBProgressHUD.m */; };
 		0472DA571D37BA5400CDE148 /* YTHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0472DA561D37BA5400CDE148 /* YTHttpTool.m */; };
 		0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B86C1D3631A500C2D788 /* EHAgentInfo.m */; };
+		047EB7011D44894700D2F277 /* EHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EB7001D44894700D2F277 /* EHSearchViewController.m */; };
 		047EF3871D39FE3D00E587BA /* EHAsiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EF3851D39FE3D00E587BA /* EHAsiaViewController.m */; };
 		047EF38A1D39FFEF00E587BA /* Tips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047EF3891D39FFEF00E587BA /* Tips.storyboard */; };
 		047EF38D1D3A0EAA00E587BA /* EHAsiaViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EF38C1D3A0EAA00E587BA /* EHAsiaViewCell.m */; };
 		048632081D3E238B00800B26 /* EHNetBusinessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 048632071D3E238B00800B26 /* EHNetBusinessManager.m */; };
 		048F12A11D38C4120039808D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0787467407A17293EC3E282 /* libPods.a */; };
+		04BB3E911D4476C5002CBF27 /* EHSiteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB3E901D4476C5002CBF27 /* EHSiteButton.m */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
 		04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */; };
@@ -45,8 +45,6 @@
 		04C5006A1D336D8B009146E5 /* EHWechatGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500681D336D8B009146E5 /* EHWechatGroupCell.m */; };
 		04C5006B1D336D8B009146E5 /* EHWechatGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C500691D336D8B009146E5 /* EHWechatGroupCell.xib */; };
 		04C5006E1D336FC0009146E5 /* EHWechatGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5006D1D336FC0009146E5 /* EHWechatGroupViewController.m */; };
-		04C500721D337C5F009146E5 /* EHCommentAgentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500701D337C5F009146E5 /* EHCommentAgentCell.m */; };
-		04C500731D337C5F009146E5 /* EHCommentAgentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C500711D337C5F009146E5 /* EHCommentAgentCell.xib */; };
 		04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500791D3386E5009146E5 /* EHCommentAgentViewController.m */; };
 		04C500801D338CBC009146E5 /* CWStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5007D1D338CBC009146E5 /* CWStarRateView.m */; };
 		04C500811D338CBC009146E5 /* heart1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C5007E1D338CBC009146E5 /* heart1.png */; };
@@ -86,15 +84,11 @@
 /* Begin PBXFileReference section */
 		04200C351D2F7A7A005DC042 /* XTPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTPopView.h; sourceTree = "<group>"; };
 		04200C361D2F7A7A005DC042 /* XTPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTPopView.m; sourceTree = "<group>"; };
-		04200C381D2F84E6005DC042 /* EHSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHSearchViewController.h; path = ../EHSearchViewController.h; sourceTree = "<group>"; };
-		04200C391D2F84E6005DC042 /* EHSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHSearchViewController.m; path = ../EHSearchViewController.m; sourceTree = "<group>"; };
 		04348FAC1D2F4A7300205130 /* buttonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = buttonCell.xib; sourceTree = "<group>"; };
 		04348FAE1D2F4DFB00205130 /* buttonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonCell.h; sourceTree = "<group>"; };
 		04348FAF1D2F4DFB00205130 /* buttonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buttonCell.m; sourceTree = "<group>"; };
 		04360C881D3CDC2A007C8C17 /* YTHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHTTPSessionManager.h; sourceTree = "<group>"; };
 		04360C891D3CDC2A007C8C17 /* YTHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTHTTPSessionManager.m; sourceTree = "<group>"; };
-		04657FBD1D323DF500914495 /* JJRadarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRadarChart.h; sourceTree = "<group>"; };
-		04657FBE1D323DF500914495 /* JJRadarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRadarChart.m; sourceTree = "<group>"; };
 		04657FD01D32473200914495 /* EHEverydayHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayHouseViewController.h; sourceTree = "<group>"; };
 		04657FD11D32473200914495 /* EHEverydayHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHEverydayHouseViewController.m; sourceTree = "<group>"; };
 		04657FD31D324B4800914495 /* EHAntidisturbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAntidisturbViewController.h; sourceTree = "<group>"; };
@@ -131,6 +125,8 @@
 		0472DA561D37BA5400CDE148 /* YTHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTHttpTool.m; sourceTree = "<group>"; };
 		0478B86B1D3631A500C2D788 /* EHAgentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfo.h; sourceTree = "<group>"; };
 		0478B86C1D3631A500C2D788 /* EHAgentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfo.m; sourceTree = "<group>"; };
+		047EB6FF1D44894700D2F277 /* EHSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSearchViewController.h; sourceTree = "<group>"; };
+		047EB7001D44894700D2F277 /* EHSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSearchViewController.m; sourceTree = "<group>"; };
 		047EF3841D39FE3D00E587BA /* EHAsiaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAsiaViewController.h; sourceTree = "<group>"; };
 		047EF3851D39FE3D00E587BA /* EHAsiaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAsiaViewController.m; sourceTree = "<group>"; };
 		047EF3891D39FFEF00E587BA /* Tips.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Tips.storyboard; path = Classes/Tips/sub/Asia/Controller/Tips.storyboard; sourceTree = "<group>"; };
@@ -139,6 +135,8 @@
 		048632061D3E238B00800B26 /* EHNetBusinessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHNetBusinessManager.h; sourceTree = "<group>"; };
 		048632071D3E238B00800B26 /* EHNetBusinessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHNetBusinessManager.m; sourceTree = "<group>"; };
 		048F12A21D38C4250039808D /* libM13PDFKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libM13PDFKit.a; path = "../../../../../Library/Developer/Xcode/DerivedData/ehero-apyunbsyuuzpszabggkemknwzsmb/Build/Products/Debug-iphoneos/libM13PDFKit.a"; sourceTree = "<group>"; };
+		04BB3E8F1D4476C5002CBF27 /* EHSiteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSiteButton.h; sourceTree = "<group>"; };
+		04BB3E901D4476C5002CBF27 /* EHSiteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSiteButton.m; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04C3A8D61D31FDD9003203C0 /* PDFImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFImage.framework; path = ../../../../../Downloads/PDFImage.framework; sourceTree = "<group>"; };
 		04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayhouseCell.h; sourceTree = "<group>"; };
@@ -156,9 +154,6 @@
 		04C500691D336D8B009146E5 /* EHWechatGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHWechatGroupCell.xib; sourceTree = "<group>"; };
 		04C5006C1D336FC0009146E5 /* EHWechatGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHWechatGroupViewController.h; sourceTree = "<group>"; };
 		04C5006D1D336FC0009146E5 /* EHWechatGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHWechatGroupViewController.m; sourceTree = "<group>"; };
-		04C5006F1D337C5F009146E5 /* EHCommentAgentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCommentAgentCell.h; sourceTree = "<group>"; };
-		04C500701D337C5F009146E5 /* EHCommentAgentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCommentAgentCell.m; sourceTree = "<group>"; };
-		04C500711D337C5F009146E5 /* EHCommentAgentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCommentAgentCell.xib; sourceTree = "<group>"; };
 		04C500781D3386E5009146E5 /* EHCommentAgentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCommentAgentViewController.h; sourceTree = "<group>"; };
 		04C500791D3386E5009146E5 /* EHCommentAgentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCommentAgentViewController.m; sourceTree = "<group>"; };
 		04C5007C1D338CBC009146E5 /* CWStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWStarRateView.h; sourceTree = "<group>"; };
@@ -234,7 +229,6 @@
 				04716BF81D35060B00E512EE /* AFNetworking */,
 				04716BE81D34A4E200E512EE /* DCNavTabBarController */,
 				04C5007B1D338CBC009146E5 /* CWStarRateView */,
-				04657FBC1D323DF500914495 /* JJRadarChart */,
 				0471D9D41D2FB73000BCC2EE /* YTSearchBar */,
 				04200C341D2F7A7A005DC042 /* XTPopView */,
 			);
@@ -257,15 +251,6 @@
 				048632071D3E238B00800B26 /* EHNetBusinessManager.m */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		04657FBC1D323DF500914495 /* JJRadarChart */ = {
-			isa = PBXGroup;
-			children = (
-				04657FBD1D323DF500914495 /* JJRadarChart.h */,
-				04657FBE1D323DF500914495 /* JJRadarChart.m */,
-			);
-			path = JJRadarChart;
 			sourceTree = "<group>";
 		};
 		04657FC01D32464800914495 /* WechatGroup */ = {
@@ -491,6 +476,15 @@
 				04360C891D3CDC2A007C8C17 /* YTHTTPSessionManager.m */,
 			);
 			path = YTHttpTool;
+			sourceTree = "<group>";
+		};
+		047EB6FE1D44894700D2F277 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				047EB6FF1D44894700D2F277 /* EHSearchViewController.h */,
+				047EB7001D44894700D2F277 /* EHSearchViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		04C3A8E51D322A66003203C0 /* AgentInfo */ = {
@@ -983,9 +977,8 @@
 				04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */,
 				04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */,
 				04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */,
-				04C5006F1D337C5F009146E5 /* EHCommentAgentCell.h */,
-				04C500701D337C5F009146E5 /* EHCommentAgentCell.m */,
-				04C500711D337C5F009146E5 /* EHCommentAgentCell.xib */,
+				04BB3E8F1D4476C5002CBF27 /* EHSiteButton.h */,
+				04BB3E901D4476C5002CBF27 /* EHSiteButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -993,20 +986,11 @@
 		04F06D461D2E4CDE0081A34D /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				04F06D471D2E4CDE0081A34D /* Controller */,
+				047EB6FE1D44894700D2F277 /* Controller */,
 				04F06D481D2E4CDE0081A34D /* Model */,
 				04F06D491D2E4CDE0081A34D /* View */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		04F06D471D2E4CDE0081A34D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				04200C381D2F84E6005DC042 /* EHSearchViewController.h */,
-				04200C391D2F84E6005DC042 /* EHSearchViewController.m */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		04F06D481D2E4CDE0081A34D /* Model */ = {
@@ -1176,7 +1160,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04C500731D337C5F009146E5 /* EHCommentAgentCell.xib in Resources */,
 				04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */,
 				04F06CD81D2DFE920081A34D /* LaunchScreen.storyboard in Resources */,
 				04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */,
@@ -1261,7 +1244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04716C081D35060B00E512EE /* AFSecurityPolicy.m in Sources */,
-				04657FBF1D323DF500914495 /* JJRadarChart.m in Sources */,
 				04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */,
 				04200C371D2F7A7A005DC042 /* XTPopView.m in Sources */,
 				0472DA571D37BA5400CDE148 /* YTHttpTool.m in Sources */,
@@ -1269,7 +1251,6 @@
 				04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */,
 				047EF3871D39FE3D00E587BA /* EHAsiaViewController.m in Sources */,
 				04C500801D338CBC009146E5 /* CWStarRateView.m in Sources */,
-				04C500721D337C5F009146E5 /* EHCommentAgentCell.m in Sources */,
 				04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */,
 				04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */,
 				04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */,
@@ -1282,12 +1263,13 @@
 				0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */,
 				0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */,
 				04FD3AD31D3DDA23005B13B4 /* MBProgressHUD+YT.m in Sources */,
-				04200C3A1D2F84E6005DC042 /* EHSearchViewController.m in Sources */,
 				04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */,
 				04657FD21D32473200914495 /* EHEverydayHouseViewController.m in Sources */,
 				04F06CCA1D2DFE920081A34D /* main.m in Sources */,
+				047EB7011D44894700D2F277 /* EHSearchViewController.m in Sources */,
 				04C5006A1D336D8B009146E5 /* EHWechatGroupCell.m in Sources */,
 				04716C091D35060B00E512EE /* AFURLRequestSerialization.m in Sources */,
+				04BB3E911D4476C5002CBF27 /* EHSiteButton.m in Sources */,
 				04657FDC1D32768B00914495 /* EHTipsViewController.m in Sources */,
 				04E7AF9F1D38EC860049E668 /* ShareView.m in Sources */,
 				047EF38D1D3A0EAA00E587BA /* EHAsiaViewCell.m in Sources */,

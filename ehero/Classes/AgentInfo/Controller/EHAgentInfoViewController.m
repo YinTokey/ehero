@@ -7,15 +7,10 @@
 //
 
 #import "EHAgentInfoViewController.h"
-#import <QuartzCore/QuartzCore.h>
-#import "JJRadarChart.h"
-@interface EHAgentInfoViewController ()<JJRadarChartDataSource, JJRadarChartDelegate>
-{
-   JJRadarChart *chart;
-}
 
-@property (weak, nonatomic) IBOutlet UITextView *comment;
-@property (weak, nonatomic) IBOutlet UIView *radarChartView;
+
+@interface EHAgentInfoViewController ()
+
 @end
 
 @implementation EHAgentInfoViewController

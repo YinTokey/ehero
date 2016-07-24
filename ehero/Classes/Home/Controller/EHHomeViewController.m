@@ -15,7 +15,6 @@
 #import "EHEverydayHouseViewController.h"
 #import "EHAntidisturbViewController.h"
 #import "EHWechatGroupViewController.h"
-#import "EHCommentAgentCell.h"
 #import "EHCommentAgentViewController.h"
 
 #import "YTSearchBar.h"
@@ -24,11 +23,10 @@
 {
     /** 图片数组*/
     NSMutableArray *sourceArr;
-
 }
-
-
-- (IBAction)siteBtnClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *siteBarButtonItem;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *icon;
+- (IBAction)siteBtnClick:(UIButton *)btn;
 @property (weak, nonatomic) IBOutlet UIButton *siteBtn;
 /** 地点*/
 @property (nonatomic,copy) NSString *siteString;
@@ -60,23 +58,20 @@
    // [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"profile_back"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
     [self setNavBar];
-    
+   
 }
 
 
 - (void)setNavBar{
-    YTSearchBar *searchBar = [YTSearchBar searchBarWithPlaceholder:@"输入小区或商圈名称" Frame:CGRectMake(50,5,100,40)];
-    self.navigationItem.titleView = searchBar;
-}
+    
+    UIBarButtonItem *negativeSpacer1 = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil action:nil];
+    negativeSpacer1.width = -10;
 
-#pragma mark - 点击事件处理
-
-- (void)location {
-    NSLog(@"");
-}
-
-- (void)profile {
-    NSLog(@"profile");
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer1, _icon, _siteBarButtonItem, nil];
+    
+    
 }
 
 
@@ -178,11 +173,12 @@
 
 
 
-- (IBAction)siteBtnClick:(id)sender {
+- (IBAction)siteBtnClick:(UIButton *)btn {
 
     [self setupPopView];
-    
+
 }
+
 #pragma mark - 设置左上角地点弹窗
 - (void)setupPopView{
     CGPoint point = CGPointMake(_siteBtn.center.x,_siteBtn.center.y + 45);
@@ -198,15 +194,13 @@
 - (void)selectIndexPathRow:(NSInteger)index{
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    
+
     switch (index) {
         case 0:
         {
            self.siteString = @"北京";
-            [defaults setObject:_siteString forKey:@"siteString"];
+           [defaults setObject:_siteString forKey:@"siteString"];
            [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
-
         }
             break;
         case 1:
@@ -214,7 +208,6 @@
             self.siteString = @"上海";
             [defaults setObject:_siteString forKey:@"siteString"];
             [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
-        
         }
             break;
         case 2:
@@ -222,7 +215,6 @@
            self.siteString = @"广州";
             [defaults setObject:_siteString forKey:@"siteString"];
             [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
-
         }
             break;
         case 3:
@@ -230,7 +222,6 @@
             self.siteString = @"深圳";
             [defaults setObject:_siteString forKey:@"siteString"];
             [self.siteBtn setTitle:_siteString forState:UIControlStateNormal];
-   
         }
         default:
             break;
@@ -260,11 +251,9 @@
 
 - (void)fourthBtnClick:(UITableViewCell *)cell{
 
-    
     EHWechatGroupViewController *wechatGroupViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"WechatGroupViewController"];
     [self.navigationController pushViewController:wechatGroupViewController animated:YES];
-    
-    
+
 }
 
 

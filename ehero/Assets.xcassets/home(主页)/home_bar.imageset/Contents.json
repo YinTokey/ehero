@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "search_112.60997067449px_1197039_easyicon.net.png",
+      "filename" : "home_bar.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "home_bar@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "home_bar@3x.png",
       "scale" : "3x"
     }
   ],
