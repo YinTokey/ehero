@@ -12,20 +12,42 @@
 @interface EHSearchResultCell()
 @property (weak, nonatomic) IBOutlet UIImageView *txView;
 @property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *position;
+@property (weak, nonatomic) IBOutlet UILabel *rates;
 @property (weak, nonatomic) IBOutlet UILabel *company;
-@property (weak, nonatomic) IBOutlet UILabel *city;
 @property (weak, nonatomic) IBOutlet UILabel *region;
-@property (weak, nonatomic) IBOutlet UILabel *community;
-@property (weak, nonatomic) IBOutlet UILabel *rate;
+@property (weak, nonatomic) IBOutlet UILabel *community1;
+@property (weak, nonatomic) IBOutlet UILabel *community2;
+@property (weak, nonatomic) IBOutlet UILabel *community3;
 
+- (IBAction)callClick:(id)sender;
 
 @end
 
 @implementation EHSearchResultCell
-- (IBAction)call:(id)sender {
-    NSLog(@"给经纪人打电话");
+
+
+- (void)drawRect:(CGRect)rect
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    //上分割线，
+    CGContextSetStrokeColorWithColor(context,RGB(241, 243, 245).CGColor);
+    CGRect topRect = CGRectMake(-3, 0, rect.size.width , 8);
+    CGContextStrokeRect(context,topRect);
+    CGContextSetFillColorWithColor(context, RGB(241, 243, 245).CGColor);
+    CGContextFillRect(context,topRect);
+    
+    //下分割线
+    CGContextSetStrokeColorWithColor(context,RGB(241, 243, 245).CGColor);
+    CGRect bottomRect = CGRectMake(0, rect.size.height, rect.size.width, 8);
+    CGContextStrokeRect(context, bottomRect);
+    CGContextSetFillColorWithColor(context, RGB(241, 243, 245).CGColor);
+    CGContextFillRect(context,topRect);
     
 }
+
+
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -43,6 +65,8 @@
     EHSearchResultCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHSearchResultCell" owner:nil options:nil] lastObject];
+        cell.position.backgroundColor = RGB(234, 243, 248);
+        cell.region.backgroundColor = RGB(68, 180, 244);
         
     }
     
@@ -55,12 +79,47 @@
                                           placeholderImageStr:@"Profile"
                                                     imageView:_txView];
     self.name.text = agentInfo.name;
+    if (agentInfo.position.length < 1) {
+        self.position.hidden = YES;
+    }else{
+        self.position.text = agentInfo.position;
+    }
+    
+    if (agentInfo.rates.length < 1) {
+        self.rates.text = @"";
+    }else{
+        self.rates.text = [NSString stringWithFormat:@"%@％",agentInfo.rates];
+    }
     self.company.text = agentInfo.company;
-    self.city.text = agentInfo.city;
     self.region.text = agentInfo.region;
-    self.community.text = agentInfo.community;
-    self.rate.text = agentInfo.rates;
-    
-    
+//    //判断主营小区个数
+    NSArray *communitiesArr = [agentInfo.community componentsSeparatedByString:@" "];
+    if (communitiesArr.count < 1) {
+        self.community1.hidden = YES;
+        self.community2.hidden = YES;
+        self.community3.hidden = YES;
+    }else if(communitiesArr.count == 1){
+        NSString *communityStr1 = [communitiesArr firstObject];
+        self.community1.text = communityStr1;
+        self.community2.hidden = YES;
+        self.community3.hidden = YES;
+    }else if(communitiesArr.count == 2){
+        NSString *communityStr1 = [communitiesArr objectAtIndex:0];
+        NSString *communityStr2 = [communitiesArr objectAtIndex:1];
+        self.community1.text = communityStr1;
+        self.community2.text = communityStr2;
+        self.community3.hidden = YES;
+    }else{
+        NSString *communityStr1 = [communitiesArr objectAtIndex:0];
+        NSString *communityStr2 = [communitiesArr objectAtIndex:1];
+        NSString *communityStr3 = [communitiesArr objectAtIndex:2];
+        self.community1.text = communityStr1;
+        self.community2.text = communityStr2;
+        self.community3.text = communityStr3;
+    }
+
+}
+- (IBAction)callClick:(id)sender {
+    NSLog(@"呼叫经纪人");
 }
 @end

@@ -29,12 +29,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = RGB(241, 243, 245);
+    
+    
     [self setupSearchBar];
     
     [self addGesture];
     
     [YTHttpTool netCheck];
 
+    NSString *sa = @"永泰园  永泰西里 永泰庄6号院";
+    NSStringEncoding strEncode = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    NSData *data = [sa dataUsingEncoding:NSUTF8StringEncoding];
+     //异步解码
+    NSString *str = [[NSString alloc]initWithData:data encoding:strEncode];
+    //[sa  NSUTF8StringEncoding];
+    for (int i = 0; i < sa.length; ++i) {
+      
+        
+        
+        
+    }
+    
+    
+    NSArray *arr = [sa componentsSeparatedByString:@" "];
+ //   NSLog(@"%d",arr.count);
+    
+    
 }
 
 
@@ -51,7 +72,7 @@
 }
 #pragma mark - cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 124;
+    return 125;
 }
 
 #pragma mark - 选择cell
@@ -74,18 +95,14 @@
 -(void)viewTapped:(UITapGestureRecognizer*)tapGr
 {
     [self.mysearchBar resignFirstResponder];
-    
+    [_mysearchBar becomeFirstResponder];
 }
 
 
 - (void)setupSearchBar{
-    UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"search_bar"]];
-    self.mysearchBar.background = [UIImage imageNamed:@"search_bar"];
-    self.mysearchBar.leftViewMode = UITextFieldViewModeAlways;
+
     self.mysearchBar.delegate = self;
-    self.mysearchBar.placeholder = @"shini shge shaib";
-    
-    
+
 }
 
 
@@ -130,7 +147,6 @@
 
     }else{
         [MBProgressHUD showNormalMessage:@"找到经纪人，正在载入数据" showDetailText:nil toView:self.view];
-
     }
 }
 
