@@ -54,8 +54,7 @@
     }
 
     //跳转到下一界面的返回按钮样式
-   UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
-   self.navigationItem.backBarButtonItem = backItem;
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
     //设置返回图片
    // [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"profile_back"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     

@@ -16,7 +16,6 @@
 #import "EHAgentInfo.h"
 #import "YTHttpTool.h"
 #import "EHNetBusinessManager.h"
-
 @interface EHSearchViewController ()<UITextFieldDelegate,EHNetBusinessManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *mysearchBar;
@@ -30,18 +29,14 @@
     [super viewDidLoad];
     
     self.tableView.backgroundColor = RGB(241, 243, 245);
-    
-    
+
     [self setupSearchBar];
     
     [self addGesture];
     
     [YTHttpTool netCheck];
 
-
-    //跳转到下一界面的返回按钮样式
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationItem.backBarButtonItem = backItem;
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
     
 }
 
