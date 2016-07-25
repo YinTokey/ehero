@@ -503,23 +503,6 @@
             </objects>
             <point key="canvasLocation" x="591" y="996"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="eJW-p4-Hm7">
-            <objects>
-                <navigationController id="AEd-i7-NId" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IpC-Pr-Eai">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="QkZ-Dd-1cZ" kind="relationship" relationship="rootViewController" id="bSh-2V-YXN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="81J-iE-b5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1541" y="-300"/>
-        </scene>
         <!--关于我们-->
         <scene sceneID="5w9-tW-nyO">
             <objects>
@@ -532,18 +515,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aboutus" translatesAutoresizingMaskIntoConstraints="NO" id="s7M-FX-mVS">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_us" translatesAutoresizingMaskIntoConstraints="NO" id="nJQ-uM-G65">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nJQ-uM-G65" firstAttribute="top" secondItem="CPf-SV-fOe" secondAttribute="top" id="08E-8O-akQ"/>
+                            <constraint firstItem="nJQ-uM-G65" firstAttribute="leading" secondItem="CPf-SV-fOe" secondAttribute="leading" id="KBv-9P-RC2"/>
+                            <constraint firstItem="dJv-xR-DNq" firstAttribute="top" secondItem="nJQ-uM-G65" secondAttribute="bottom" id="LOv-WT-uIL"/>
+                            <constraint firstAttribute="trailing" secondItem="nJQ-uM-G65" secondAttribute="trailing" id="V8Y-7G-jzf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="关于我们" id="90g-8u-quZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ng5-EX-PJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1109" y="-308"/>
+            <point key="canvasLocation" x="-2057" y="-812"/>
         </scene>
         <!--Agent Info Controller-->
         <scene sceneID="VR9-Bz-Cle">
@@ -630,7 +619,7 @@
     <resources>
         <image name="Group" width="37" height="52"/>
         <image name="Star 1" width="38" height="36"/>
-        <image name="aboutus" width="304" height="490"/>
+        <image name="about_us" width="750" height="1334"/>
         <image name="greenbackground" width="214" height="34"/>
         <image name="home_bar" width="477" height="51"/>
         <image name="home_top_left" width="43" height="50"/>
@@ -650,6 +639,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="B2T-z4-49P"/>
         <segue reference="xZJ-qi-NBk"/>
-        <segue reference="CI4-ik-Ogm"/>
     </inferredMetricsTieBreakers>
 </document>
