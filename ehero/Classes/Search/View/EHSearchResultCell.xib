@@ -84,19 +84,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="幸福一村西里" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jq-a6-fHJ">
-                        <rect key="frame" x="71" y="93" width="72" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="幸福一村西里" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIl-Z1-uoK">
-                        <rect key="frame" x="147" y="93" width="72" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="幸福一村西里" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8x-uK-ohI">
-                        <rect key="frame" x="227" y="93" width="72" height="17"/>
+                        <rect key="frame" x="71" y="93" width="249" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -104,9 +92,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="community1" destination="4jq-a6-fHJ" id="Oqr-Al-bPl"/>
-                <outlet property="community2" destination="AIl-Z1-uoK" id="gna-lH-dj0"/>
-                <outlet property="community3" destination="D8x-uK-ohI" id="DvG-3H-1zh"/>
+                <outlet property="communities" destination="4jq-a6-fHJ" id="4XN-3A-qUv"/>
                 <outlet property="company" destination="PQv-mP-aMR" id="lkD-fV-Myo"/>
                 <outlet property="name" destination="FWg-gq-wKJ" id="dj2-GW-sHA"/>
                 <outlet property="position" destination="lvd-BR-siG" id="V4r-Xx-ilB"/>

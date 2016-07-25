@@ -154,7 +154,7 @@
                     <navigationItem key="navigationItem" id="jlK-uK-epl">
                         <nil key="title"/>
                         <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="search_bar" id="HCP-Ga-PUX">
-                            <rect key="frame" x="12" y="8" width="296" height="29"/>
+                            <rect key="frame" x="12" y="7" width="296" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>

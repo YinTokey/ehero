@@ -16,10 +16,15 @@
 #import "EHAgentInfo.h"
 #import "YTHttpTool.h"
 #import "EHNetBusinessManager.h"
-@interface EHSearchViewController ()<UITextFieldDelegate,EHNetBusinessManagerDelegate>
 
+#define searchbar_width _mysearchBar.frame.size.width
+#define searchbar_height _mysearchBar.frame.size.height
+
+@interface EHSearchViewController ()<UITextFieldDelegate,EHNetBusinessManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *mysearchBar;
 @property (nonatomic,strong) NSMutableArray *searchResultArr;
+
+@property (nonatomic,strong) UIButton *cancelBtn;
 
 @end
 
@@ -31,13 +36,10 @@
     self.tableView.backgroundColor = RGB(241, 243, 245);
 
     [self setupSearchBar];
-    
     [self addGesture];
-    
     [YTHttpTool netCheck];
 
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
-    
 }
 
 
@@ -71,18 +73,25 @@
     [self.navigationController pushViewController:agentInfoVC animated:YES];
 }
 
+#pragma mark - textfield delegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+
+    NSLog(@"begin edit");
+}
+
+
 #pragma mark - 编辑完成，点击搜索时调用代理方法
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
     
     [self.searchResultArr removeAllObjects];
     [self searchClick];
     [self.mysearchBar resignFirstResponder ];
-    
     return YES;
 }
 
+
 #pragma mark  -- UITapGestureRecognizer
--(void)viewTapped:(UITapGestureRecognizer*)tapGr
+- (void)viewTapped:(UITapGestureRecognizer*)tapGr
 {
     [self.mysearchBar resignFirstResponder];
 }

@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *community3;
 
 - (IBAction)callClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *communities;
 
 @end
 
@@ -92,31 +93,32 @@
     }
     self.company.text = agentInfo.company;
     self.region.text = agentInfo.region;
-//    //判断主营小区个数
-    NSArray *communitiesArr = [agentInfo.community componentsSeparatedByString:@" "];
-    if (communitiesArr.count < 1) {
-        self.community1.hidden = YES;
-        self.community2.hidden = YES;
-        self.community3.hidden = YES;
-    }else if(communitiesArr.count == 1){
-        NSString *communityStr1 = [communitiesArr firstObject];
-        self.community1.text = communityStr1;
-        self.community2.hidden = YES;
-        self.community3.hidden = YES;
-    }else if(communitiesArr.count == 2){
-        NSString *communityStr1 = [communitiesArr objectAtIndex:0];
-        NSString *communityStr2 = [communitiesArr objectAtIndex:1];
-        self.community1.text = communityStr1;
-        self.community2.text = communityStr2;
-        self.community3.hidden = YES;
-    }else{
-        NSString *communityStr1 = [communitiesArr objectAtIndex:0];
-        NSString *communityStr2 = [communitiesArr objectAtIndex:1];
-        NSString *communityStr3 = [communitiesArr objectAtIndex:2];
-        self.community1.text = communityStr1;
-        self.community2.text = communityStr2;
-        self.community3.text = communityStr3;
-    }
+    self.communities.text = agentInfo.community;
+//    //判断主营小区个数 ,分割空格符，存在bug，这段先放着
+//    NSArray *communitiesArr = [agentInfo.community componentsSeparatedByString:@" "];
+//    if (communitiesArr.count < 1) {
+//        self.community1.hidden = YES;
+//        self.community2.hidden = YES;
+//        self.community3.hidden = YES;
+//    }else if(communitiesArr.count == 1){
+//        NSString *communityStr1 = [communitiesArr firstObject];
+//        self.community1.text = communityStr1;
+//        self.community2.hidden = YES;
+//        self.community3.hidden = YES;
+//    }else if(communitiesArr.count == 2){
+//        NSString *communityStr1 = [communitiesArr objectAtIndex:0];
+//        NSString *communityStr2 = [communitiesArr objectAtIndex:1];
+//        self.community1.text = communityStr1;
+//        self.community2.text = communityStr2;
+//        self.community3.hidden = YES;
+//    }else{
+//        NSString *communityStr1 = [communitiesArr objectAtIndex:0];
+//        NSString *communityStr2 = [communitiesArr objectAtIndex:1];
+//        NSString *communityStr3 = [communitiesArr objectAtIndex:2];
+//        self.community1.text = communityStr1;
+//        self.community2.text = communityStr2;
+//        self.community3.text = communityStr3;
+//    }
 
 }
 - (IBAction)callClick:(id)sender {
