@@ -27,7 +27,7 @@
 {
     if(_sliderColor == nil)
     {
-        _sliderColor = RGB(79, 193, 134);
+        _sliderColor = RGB(67, 179, 241);
     }
     return  _sliderColor;
 }
@@ -35,7 +35,7 @@
 {
     if(_btnTextNomalColor == nil)
     {
-        _btnTextNomalColor = [UIColor lightGrayColor];
+        _btnTextNomalColor = [UIColor blackColor];
     }
     return _btnTextNomalColor;
 }
@@ -43,7 +43,7 @@
 {
     if(_btnTextSeletedColor == nil)
     {
-        _btnTextSeletedColor = RGB(79, 193, 134);
+        _btnTextSeletedColor = RGB(67, 179, 241);
     }
     return _btnTextSeletedColor;
 }
@@ -91,7 +91,7 @@
     if(self.VCArr.count == 0) return;
     NSUInteger count = self.VCArr.count;
     
-    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, DCScreenW, 44)];
+    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, DCScreenW, 44 )];
     scrollView.backgroundColor = self.topBarColor;
     self.topBar = scrollView;
     self.topBar.bounces = NO;

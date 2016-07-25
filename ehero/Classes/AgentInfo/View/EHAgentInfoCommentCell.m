@@ -13,6 +13,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -29,12 +32,15 @@
         cell.commentView.layer.cornerRadius = 5;
         cell.layer.masksToBounds = YES;
         cell.backgroundColor = RGB(241, 243, 245);
+        //cell.commentView.con
         
     }
     
     return cell;
     
 }
+
+
 
 
 @end

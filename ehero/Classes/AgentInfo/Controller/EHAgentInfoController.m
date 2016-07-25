@@ -34,10 +34,18 @@
 //}
 #pragma mark - cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         return 125;
-    }else
-    return 110;
+    }else if (indexPath.section == 1){
+        return 115;
+    }else{
+        return 300;
+//        EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
+//        cell.translatesAutoresizingMaskIntoConstraints = NO;
+//        CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//        return 1  + size.height;
+    }
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -52,6 +60,7 @@
     return 2;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
@@ -63,6 +72,16 @@
         return cell;
     }else{
         EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
+        
+        CGSize constraintSize;
+        
+        constraintSize. width = 300 ;
+        
+        constraintSize. height = MAXFLOAT ;
+        
+        CGSize sizeFrame =[@"此小区周边配套成熟，出门过马路就是钻石网球场和奥林匹克森林公园，学校：北大为明幼儿园、北师大附中附小； 医院：眼科医院、解放军306医院、北医三院、安贞医院等； 华润万家生活广场、新奥购物广场、家乐福、物美等。幼儿园、北师大附中附小； 医院：眼科医院、解放军306医院、北医三院、安贞医院等； 华润万家生活广场、新奥购物广场、家乐福、物美等。" sizeWithFont:cell.commentView.font constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+        cell.commentView.frame = CGRectMake( 0 , 0 ,sizeFrame.width,sizeFrame.height);
+        
         
         return cell;
     

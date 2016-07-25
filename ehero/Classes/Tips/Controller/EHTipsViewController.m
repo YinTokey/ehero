@@ -30,27 +30,35 @@
 
 - (void)setupChildController{
     EHTwoViewController *one = [[EHTwoViewController alloc]init];
-    one.title = @"最新";
+    one.title = @"海淀";
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Tips" bundle:[NSBundle mainBundle]];
     
     EHAsiaViewController *two = [sb instantiateViewControllerWithIdentifier:@"AsiaViewController"];
-    two.title = @"亚洲";
+    two.title = @"朝阳";
     EHTwoViewController *three = [[EHTwoViewController alloc]init];
-    three.title = @"欧洲";
+    three.title = @"东城";
     EHTwoViewController *four = [[EHTwoViewController alloc]init];
-    four.title = @"北美洲";
+    four.title = @"西城";
     EHTwoViewController *five = [[EHTwoViewController alloc]init];
-    five.title = @"南美洲";
+    five.title = @"顺义";
     EHNewsViewController *six = [[EHNewsViewController alloc]init];
-    six.title = @"大洋洲";
+    six.title = @"大兴";
     EHNewsViewController *seven = [[EHNewsViewController alloc]init];
-    seven.title = @"非洲";
+    seven.title = @"昌平";
+    EHNewsViewController *eight = [[EHNewsViewController alloc]init];
+    eight.title = @"通州";
+    EHNewsViewController *night = [[EHNewsViewController alloc]init];
+    night.title = @"丰台";
+    EHNewsViewController *ten = [[EHNewsViewController alloc]init];
+    ten.title = @"石景山";
+    EHNewsViewController *eleven = [[EHNewsViewController alloc]init];
+    eleven.title = @"房山";
     
-    NSArray *subViewControllers = @[one,two,three,four,five,six,seven];
+    
+    NSArray *subViewControllers = @[one,two,three,four,five,six,seven,eight,night,ten,eleven];
     DCNavTabBarController *tabBarVC = [[DCNavTabBarController alloc]initWithSubViewControllers:subViewControllers];
-   // tabBarVC.view.frame = CGRectMake(0, 55, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 55 );
-    tabBarVC.view.frame = CGRectMake(0, 55, self.view.frame.size.width, self.view.frame.size.height - 55);
+    tabBarVC.view.frame = CGRectMake(0, 55, self.view.frame.size.width, self.view.frame.size.height - 75);
     
     [self.view addSubview:tabBarVC.view];
     [self addChildViewController:tabBarVC];
