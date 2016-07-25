@@ -561,14 +561,21 @@
                         <rightBarButtonItems>
                             <barButtonItem style="plain" id="sI6-wB-KqR">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Sek-11-bgQ">
-                                    <rect key="frame" x="274" y="4" width="30" height="36"/>
+                                    <rect key="frame" x="284" y="7" width="20" height="29"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Group"/>
                                 </button>
                             </barButtonItem>
                             <barButtonItem style="plain" id="6R6-2y-PUR">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d1e-F2-SsP">
-                                    <rect key="frame" x="236" y="7" width="30" height="30"/>
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d1e-F2-SsP">
+                                    <rect key="frame" x="261" y="7" width="15" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="near_share_line"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="R3A-U9-Xdh">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="itZ-ef-dB0">
+                                    <rect key="frame" x="231" y="11" width="22" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Star 1"/>
                                 </button>
@@ -625,6 +632,7 @@
         <image name="home_top_left" width="43" height="50"/>
         <image name="home_top_right" width="35" height="67"/>
         <image name="home_two" width="10" height="5"/>
+        <image name="near_share_line" width="2" height="12"/>
         <image name="profile_btn1" width="350" height="128"/>
         <image name="profile_btn2" width="350" height="128"/>
         <image name="profile_btn3" width="711" height="89"/>
