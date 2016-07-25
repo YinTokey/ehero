@@ -85,14 +85,13 @@
 -(void)viewTapped:(UITapGestureRecognizer*)tapGr
 {
     [self.mysearchBar resignFirstResponder];
-    [_mysearchBar becomeFirstResponder];
 }
 
 
 - (void)setupSearchBar{
 
     self.mysearchBar.delegate = self;
-
+    [self.mysearchBar becomeFirstResponder];
 }
 
 
@@ -136,7 +135,7 @@
         [MBProgressHUD showNormalMessage:@"没有找到经纪人" showDetailText:nil toView:self.view];
 
     }else{
-        [MBProgressHUD showNormalMessage:@"找到经纪人，正在载入数据" showDetailText:nil toView:self.view];
+        [MBProgressHUD showNormalMessage:@"找到经纪人" showDetailText:nil toView:self.view];
     }
 }
 
