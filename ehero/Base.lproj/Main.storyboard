@@ -96,17 +96,27 @@
                                 </button>
                             </barButtonItem>
                         </leftBarButtonItems>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UzR-xB-zm1">
-                            <rect key="frame" x="94" y="9" width="190" height="27"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="Xku-LK-M7X">
+                            <rect key="frame" x="94" y="7" width="192" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="home_bar"/>
+                            <state key="normal" backgroundImage="home_searchbar">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="输入小区或商圈名称">
+                                        <attributes>
+                                            <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="13" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </state>
                             <connections>
-                                <segue destination="Frh-BS-zpg" kind="show" id="B2T-z4-49P"/>
+                                <segue destination="Frh-BS-zpg" kind="show" id="NaX-kz-88j"/>
                             </connections>
                         </button>
                         <barButtonItem key="rightBarButtonItem" width="3" style="plain" id="Lo6-dx-J6A">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lhh-UY-FAQ">
-                                <rect key="frame" x="290" y="8" width="14" height="27"/>
+                                <rect key="frame" x="292" y="8" width="12" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="home_top_right"/>
                                 <connections>
@@ -118,13 +128,15 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="icon" destination="2IK-74-1OK" id="PWG-Kh-T1F"/>
+                        <outlet property="profileBtn" destination="Lhh-UY-FAQ" id="TPa-4f-biV"/>
+                        <outlet property="searchBtn" destination="Xku-LK-M7X" id="Fof-Rg-PIh"/>
                         <outlet property="siteBarButtonItem" destination="Jxl-ic-awF" id="NbO-ZG-II3"/>
                         <outlet property="siteBtn" destination="Y9z-Uv-fXY" id="ERk-bh-xS3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP1-S5-T8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-254" y="-1232"/>
+            <point key="canvasLocation" x="-214" y="-650"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="b6y-a8-fld">
@@ -628,7 +640,7 @@
         <image name="Star 1" width="38" height="36"/>
         <image name="about_us" width="750" height="1334"/>
         <image name="greenbackground" width="214" height="34"/>
-        <image name="home_bar" width="477" height="51"/>
+        <image name="home_searchbar" width="462" height="51"/>
         <image name="home_top_left" width="43" height="50"/>
         <image name="home_top_right" width="35" height="67"/>
         <image name="home_two" width="10" height="5"/>
@@ -645,7 +657,7 @@
         <image name="蓝色标准组合02" width="1682" height="656"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B2T-z4-49P"/>
+        <segue reference="NaX-kz-88j"/>
         <segue reference="xZJ-qi-NBk"/>
     </inferredMetricsTieBreakers>
 </document>

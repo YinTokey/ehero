@@ -19,11 +19,13 @@
 
 #import "YTSearchBar.h"
 
-@interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate>
+@interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate,UITextFieldDelegate>
 {
     /** 图片数组*/
     NSMutableArray *sourceArr;
 }
+@property (weak, nonatomic) IBOutlet UIButton *profileBtn;
+@property (weak, nonatomic) IBOutlet UIButton *searchBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *siteBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *icon;
 - (IBAction)siteBtnClick:(UIButton *)btn;
@@ -53,7 +55,6 @@
 
     //跳转到下一界面的返回按钮样式
    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
-    
    self.navigationItem.backBarButtonItem = backItem;
     //设置返回图片
    // [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"profile_back"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
@@ -64,15 +65,16 @@
 
 
 - (void)setNavBar{
-    
+    //设置导航栏按钮偏移
     UIBarButtonItem *negativeSpacer1 = [[UIBarButtonItem alloc]
                                        initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                        target:nil action:nil];
     negativeSpacer1.width = -10;
-
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer1, _icon, _siteBarButtonItem, nil];
-    
-    
+
+    //设置按钮的字体偏左(搜索框实际是个按钮)
+    self.searchBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    self.searchBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
 }
 
 
@@ -123,8 +125,6 @@
         cell.delegate = self;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setClickEvent];
-        
- 
         return cell;
     //第二行 点评经纪人
     }else if(indexPath.section == 1){
@@ -179,6 +179,13 @@
     [self setupPopView];
 
 }
+
+#pragma mark - textfield delegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    NSLog(@"g");
+
+}
+
 
 #pragma mark - 设置左上角地点弹窗
 - (void)setupPopView{
