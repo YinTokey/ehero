@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EHAgentInfoController.h"
+
 
 @interface EHAgentInfo : NSObject
 /**
@@ -121,5 +123,8 @@
  *  visits
  */
 @property(nonatomic,copy)NSString *visits;
+
++ (instancetype)setWithAgentInfoController:(EHAgentInfoController *)AgentInfoController;
+
 
 @end
