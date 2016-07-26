@@ -81,7 +81,7 @@
 {
     if(self.VCArr.count == 0) return;
 
-    UIView *slider = [[UIView alloc]initWithFrame:CGRectMake(0,41-64,self.btnW, 3)];
+    UIView *slider = [[UIView alloc]initWithFrame:CGRectMake(0,41-64,self.btnW, 2)];
     slider.backgroundColor = self.sliderColor;
     [self.topBar addSubview:slider];
     self.slider = slider;
@@ -115,7 +115,7 @@
         [btn setTitleColor:self.btnTextSeletedColor forState:UIControlStateSelected];
         [btn setTitle:vc.title forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
-        btn.titleLabel.font = [UIFont fontWithName:@"CourierNewPS-ItalicMT" size:15.0];
+        btn.titleLabel.font = [UIFont fontWithName:@"CourierNewPS-ItalicMT" size:13.0];
         [self.topBar addSubview:btn];
         if(i == 0)
         {
@@ -178,7 +178,7 @@
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     //滑动导航条
-    self.slider.frame = CGRectMake(scrollView.contentOffset.x / DCScreenW *self.btnW , 41-64, self.btnW, 3);
+    self.slider.frame = CGRectMake(scrollView.contentOffset.x / DCScreenW *self.btnW , 41-64, self.btnW, 2);
 }
 //判断是否切换导航条按钮的状态
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
