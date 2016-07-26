@@ -49,6 +49,7 @@
 		04C500801D338CBC009146E5 /* CWStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5007D1D338CBC009146E5 /* CWStarRateView.m */; };
 		04C500811D338CBC009146E5 /* heart1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C5007E1D338CBC009146E5 /* heart1.png */; };
 		04C500821D338CBC009146E5 /* heart2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C5007F1D338CBC009146E5 /* heart2.png */; };
+		04CBAE801D470035002BF215 /* EHTipsNavBottomLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CBAE7F1D470035002BF215 /* EHTipsNavBottomLine.m */; };
 		04DA25E31D41E33000235C51 /* EHProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DA25E21D41E33000235C51 /* EHProfileViewController.m */; };
 		04E7AF9E1D38EC860049E668 /* InnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7AF9B1D38EC860049E668 /* InnerView.m */; };
 		04E7AF9F1D38EC860049E668 /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7AF9D1D38EC860049E668 /* ShareView.m */; };
@@ -166,6 +167,8 @@
 		04C5007E1D338CBC009146E5 /* heart1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart1.png; sourceTree = "<group>"; };
 		04C5007F1D338CBC009146E5 /* heart2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart2.png; sourceTree = "<group>"; };
 		04C5FFDE1D333292009146E5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		04CBAE7E1D470035002BF215 /* EHTipsNavBottomLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHTipsNavBottomLine.h; path = ehero/Classes/AgentInfo/View/EHTipsNavBottomLine.h; sourceTree = SOURCE_ROOT; };
+		04CBAE7F1D470035002BF215 /* EHTipsNavBottomLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHTipsNavBottomLine.m; path = ehero/Classes/AgentInfo/View/EHTipsNavBottomLine.m; sourceTree = SOURCE_ROOT; };
 		04DA25E11D41E33000235C51 /* EHProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHProfileViewController.h; sourceTree = "<group>"; };
 		04DA25E21D41E33000235C51 /* EHProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHProfileViewController.m; sourceTree = "<group>"; };
 		04E7AF9A1D38EC860049E668 /* InnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InnerView.h; sourceTree = "<group>"; };
@@ -398,6 +401,8 @@
 		04657FCF1D32469C00914495 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04CBAE7E1D470035002BF215 /* EHTipsNavBottomLine.h */,
+				04CBAE7F1D470035002BF215 /* EHTipsNavBottomLine.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1303,6 +1308,7 @@
 				04C5006E1D336FC0009146E5 /* EHWechatGroupViewController.m in Sources */,
 				04716BEB1D34A4E200E512EE /* DCNavTabBarController.m in Sources */,
 				048632081D3E238B00800B26 /* EHNetBusinessManager.m in Sources */,
+				04CBAE801D470035002BF215 /* EHTipsNavBottomLine.m in Sources */,
 				04E9CFF51D4608110087BD70 /* EHAgentInfoCommunityCell.m in Sources */,
 				04DA25E31D41E33000235C51 /* EHProfileViewController.m in Sources */,
 				0472DA531D37B48900CDE148 /* LBProgressHUD.m in Sources */,

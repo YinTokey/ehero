@@ -25,10 +25,7 @@
     [super viewDidLoad];
 
     [self setupChildController];
-    
-    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height, self.view.frame.size.width, 1)];
-    [lineView setBackgroundColor:RGB(67, 179, 241)];
-    [self.navigationController.navigationBar addSubview:lineView];
+    [self setNavBottomLine];
 }
 
 - (void)setupChildController{
@@ -65,6 +62,12 @@
     
     [self.view addSubview:tabBarVC.view];
     [self addChildViewController:tabBarVC];
+}
+
+- (void)setNavBottomLine{
+    EHTipsNavBottomLine *lineView = [EHTipsNavBottomLine initNavBottomLineWithController:self];
+    [self.navigationController.navigationBar addSubview:lineView];
+
 }
 
 @end
