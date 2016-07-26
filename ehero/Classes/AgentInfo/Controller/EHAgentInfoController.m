@@ -26,6 +26,7 @@
     
     self.title = self.name;
     self.view.backgroundColor = RGB(241, 243, 245);
+    
 }
 
 
@@ -85,6 +86,10 @@
 
 - (IBAction)shareBtnClick:(id)sender {
     OSMessage *msg=[[OSMessage alloc]init];
+    
+    //拼接分享页链接
+    
+    
     msg.title = @"test";
     //分享界面弹窗
     NSMutableArray *titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"微博",@"QQ好友", nil];

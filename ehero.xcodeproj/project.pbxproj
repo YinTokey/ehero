@@ -245,7 +245,6 @@
 				04716BF81D35060B00E512EE /* AFNetworking */,
 				04716BE81D34A4E200E512EE /* DCNavTabBarController */,
 				04C5007B1D338CBC009146E5 /* CWStarRateView */,
-				0471D9D41D2FB73000BCC2EE /* YTSearchBar */,
 				04200C341D2F7A7A005DC042 /* XTPopView */,
 			);
 			path = Lib;
@@ -473,7 +472,8 @@
 				0471D9D51D2FB73000BCC2EE /* YTSearchBar.h */,
 				0471D9D61D2FB73000BCC2EE /* YTSearchBar.m */,
 			);
-			path = YTSearchBar;
+			name = YTSearchBar;
+			path = ../../Lib/YTSearchBar;
 			sourceTree = "<group>";
 		};
 		0472DA501D37B48900CDE148 /* LBProgressHUD */ = {
@@ -864,8 +864,9 @@
 		04E9CFF11D4608110087BD70 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04E9CFF21D4608110087BD70 /* EHAgentInfoCommunityCell.h */,
+				0471D9D41D2FB73000BCC2EE /* YTSearchBar */,
 				04E9CFF31D4608110087BD70 /* EHAgentInfoCommunityCell.m */,
+				04E9CFF21D4608110087BD70 /* EHAgentInfoCommunityCell.h */,
 				04E9CFF41D4608110087BD70 /* EHAgentInfoCommunityCell.xib */,
 				04E9CFF71D46082B0087BD70 /* EHAgentInfoCommentCell.h */,
 				04E9CFF81D46082B0087BD70 /* EHAgentInfoCommentCell.m */,

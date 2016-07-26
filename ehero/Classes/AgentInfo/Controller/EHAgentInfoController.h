@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface EHAgentInfoController : UITableViewController
-
+/**
+ *  id
+ */
+@property(nonatomic,copy)NSString *idStr;
 /**
  *  小区
  */

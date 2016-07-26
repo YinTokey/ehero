@@ -12,6 +12,7 @@
 
 + (instancetype)setWithAgentInfoController:(EHAgentInfoController *)AgentInfoController{
     EHAgentInfo *agentInfo = [[EHAgentInfo alloc]init];
+    agentInfo.idStr = AgentInfoController.idStr;
     agentInfo.name = AgentInfoController.name;
     agentInfo.tx = AgentInfoController.tx;
     agentInfo.position = AgentInfoController.position;
@@ -24,5 +25,9 @@
 
 }
 
+- (void)getIdStringFromDictionary{
+    NSDictionary *idDic = self._id;
+    self.idStr = [idDic objectForKey:@"$oid"];
+}
 
 @end

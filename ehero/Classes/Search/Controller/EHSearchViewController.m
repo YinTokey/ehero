@@ -63,6 +63,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     EHAgentInfoController *agentInfoVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"AgentInfoController"];
     EHAgentInfo *agentInfo = self.searchResultArr[indexPath.row];
+    [agentInfo getIdStringFromDictionary];
+    //这下面几段需要重构一下
+    agentInfoVC.idStr = agentInfo.idStr;
     agentInfoVC.name = agentInfo.name;
     agentInfoVC.tx = agentInfo.tx;
     agentInfoVC.rates = agentInfo.rates;
@@ -136,6 +139,7 @@
     } failure:^(NSError *error) {
         NSLog(@"失败");
     }];
+    
 }
 
 - (void)searchStatusTest{

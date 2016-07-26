@@ -12,9 +12,13 @@
 
 @interface EHAgentInfo : NSObject
 /**
- *  id
+ *  id (一个字典对象)
  */
-@property(nonatomic,copy)NSString *_id;
+@property(nonatomic,strong)id _id;
+/**
+ *  处理后的字符串形式的id
+ */
+@property(nonatomic,copy)NSString *idStr;
 /**
  *  _slugs
  */
@@ -126,5 +130,7 @@
 
 + (instancetype)setWithAgentInfoController:(EHAgentInfoController *)AgentInfoController;
 
+//把 _id转化为 idStr
+- (void)getIdStringFromDictionary;
 
 @end
