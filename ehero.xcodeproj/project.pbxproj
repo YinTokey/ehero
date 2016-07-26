@@ -35,7 +35,6 @@
 		047EF38A1D39FFEF00E587BA /* Tips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047EF3891D39FFEF00E587BA /* Tips.storyboard */; };
 		047EF38D1D3A0EAA00E587BA /* EHAsiaViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EF38C1D3A0EAA00E587BA /* EHAsiaViewCell.m */; };
 		048632081D3E238B00800B26 /* EHNetBusinessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 048632071D3E238B00800B26 /* EHNetBusinessManager.m */; };
-		048F12A11D38C4120039808D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0787467407A17293EC3E282 /* libPods.a */; };
 		04BB3E911D4476C5002CBF27 /* EHSiteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB3E901D4476C5002CBF27 /* EHSiteButton.m */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
@@ -68,6 +67,7 @@
 		04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06D4B1D2E4DD50081A34D /* EHHomeViewController.m */; };
 		04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD3ACE1D3DD942005B13B4 /* YTNetCommand.m */; };
 		04FD3AD31D3DDA23005B13B4 /* MBProgressHUD+YT.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD3AD21D3DDA23005B13B4 /* MBProgressHUD+YT.m */; };
+		7BF95F2D53BA08DA1D11A4CF /* libPods-ehero.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4803C75B325B7B4E1CB33EE7 /* libPods-ehero.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,9 +203,9 @@
 		04FD3ACE1D3DD942005B13B4 /* YTNetCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTNetCommand.m; sourceTree = "<group>"; };
 		04FD3AD11D3DDA23005B13B4 /* MBProgressHUD+YT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+YT.h"; sourceTree = "<group>"; };
 		04FD3AD21D3DDA23005B13B4 /* MBProgressHUD+YT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+YT.m"; sourceTree = "<group>"; };
-		0BF1B60C2B382860B7250FE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		BFE5132F7394584EE072C978 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		D0787467407A17293EC3E282 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4803C75B325B7B4E1CB33EE7 /* libPods-ehero.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ehero.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B7EFFF3457019F859E1D042 /* Pods-ehero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ehero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ehero/Pods-ehero.debug.xcconfig"; sourceTree = "<group>"; };
+		A7D3DFB712A908623EF807AB /* Pods-ehero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ehero.release.xcconfig"; path = "Pods/Target Support Files/Pods-ehero/Pods-ehero.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				048F12A11D38C4120039808D /* libPods.a in Frameworks */,
+				7BF95F2D53BA08DA1D11A4CF /* libPods-ehero.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -882,8 +882,8 @@
 				04F06CE11D2DFE920081A34D /* eheroTests */,
 				04F06CEC1D2DFE920081A34D /* eheroUITests */,
 				04F06CC61D2DFE920081A34D /* Products */,
-				1D386CA178D8095F920B4A3E /* Pods */,
 				FEC0CEEDEBE9288536D3046F /* Frameworks */,
+				0D082B0091CB69226F9B574A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1059,11 +1059,11 @@
 			path = "MBProgressHUD+YT";
 			sourceTree = "<group>";
 		};
-		1D386CA178D8095F920B4A3E /* Pods */ = {
+		0D082B0091CB69226F9B574A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BFE5132F7394584EE072C978 /* Pods.debug.xcconfig */,
-				0BF1B60C2B382860B7250FE9 /* Pods.release.xcconfig */,
+				4B7EFFF3457019F859E1D042 /* Pods-ehero.debug.xcconfig */,
+				A7D3DFB712A908623EF807AB /* Pods-ehero.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1074,7 +1074,7 @@
 				048F12A21D38C4250039808D /* libM13PDFKit.a */,
 				04C3A8D61D31FDD9003203C0 /* PDFImage.framework */,
 				04C3A8D01D31E518003203C0 /* WebKit.framework */,
-				D0787467407A17293EC3E282 /* libPods.a */,
+				4803C75B325B7B4E1CB33EE7 /* libPods-ehero.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1086,12 +1086,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04F06CF21D2DFE920081A34D /* Build configuration list for PBXNativeTarget "ehero" */;
 			buildPhases = (
-				A853AD0981FF554D68F7E42B /* Check Pods Manifest.lock */,
+				B56457F99DF880B1CD9E068B /* [CP] Check Pods Manifest.lock */,
 				04F06CC11D2DFE910081A34D /* Sources */,
 				04F06CC21D2DFE910081A34D /* Frameworks */,
 				04F06CC31D2DFE910081A34D /* Resources */,
-				D2BBCD57E30F9E0EEE16750A /* Embed Pods Frameworks */,
-				8A1E259B6B0E54114C24C472 /* Copy Pods Resources */,
+				2B89EE988E40145335DC8419 /* [CP] Embed Pods Frameworks */,
+				BE99DB31628100B7513911BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1220,29 +1220,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8A1E259B6B0E54114C24C472 /* Copy Pods Resources */ = {
+		2B89EE988E40145335DC8419 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ehero/Pods-ehero-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A853AD0981FF554D68F7E42B /* Check Pods Manifest.lock */ = {
+		B56457F99DF880B1CD9E068B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1250,19 +1250,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D2BBCD57E30F9E0EEE16750A /* Embed Pods Frameworks */ = {
+		BE99DB31628100B7513911BD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ehero/Pods-ehero-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1455,7 +1455,7 @@
 		};
 		04F06CF31D2DFE920081A34D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFE5132F7394584EE072C978 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 4B7EFFF3457019F859E1D042 /* Pods-ehero.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1492,7 +1492,7 @@
 		};
 		04F06CF41D2DFE920081A34D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BF1B60C2B382860B7250FE9 /* Pods.release.xcconfig */;
+			baseConfigurationReference = A7D3DFB712A908623EF807AB /* Pods-ehero.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

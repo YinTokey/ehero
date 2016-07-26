@@ -57,7 +57,7 @@ static NSString *schema=@"Weibo";
                            @{@"transferObject":[NSKeyedArchiver archivedDataWithRootObject:@{
                                                                                              @"__class" :@"WBSendMessageToWeiboRequest",
                                                                                              @"message":message,
-                                                                                           @"requestID" :uuid,
+                                                                                             @"requestID" :uuid,
                                                                                              }]},
                            @{@"userInfo":[NSKeyedArchiver archivedDataWithRootObject:@{}]},
                            

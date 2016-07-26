@@ -24,7 +24,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-ehero.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,7 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0F7170D391DA22B70AC52EACE81A290C</key>
+		<key>446E2EEDEE23FD65A513ACAED6AFE2D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9BD9308397A85494FFDE9DE4C4B7B313</key>
+		<key>9013560CB19C8584D710F1EB46C70026</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
+		<key>EC4C050F707E13717140D5E96F0503FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FE9E0FB645DF912F576D0F276E2AF919</key>
+		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -19,7 +19,10 @@
 
 @end
 
-@implementation EHAgentInfoController
+@implementation EHAgentInfoController{
+    UIImage *thumbImage;
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +30,8 @@
     self.title = self.name;
     self.view.backgroundColor = RGB(241, 243, 245);
     
+    thumbImage = [UIImage imageNamed:@"share_icon"];
+
 }
 
 
@@ -86,14 +91,18 @@
 
 - (IBAction)shareBtnClick:(id)sender {
     OSMessage *msg=[[OSMessage alloc]init];
-    
     //拼接分享页链接
-    
-    
-    msg.title = @"test";
+    NSString *link = [NSString stringWithFormat:@"http://ehero.cc/agents/%@",self.idStr];
+    msg.link = link;
+    //链接标题
+    NSString *title = [NSString stringWithFormat:@"为您分享经纪人:%@",self.name];
+    msg.title = title;
+    //分享的图标
+    msg.image = UIImagePNGRepresentation(thumbImage);
+
     //分享界面弹窗
     NSMutableArray *titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"微博",@"QQ好友", nil];
-    NSMutableArray *picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_weibo",@"share_qq", nil];
+    NSMutableArray *picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_weibo",@"share_qq",nil];
     ShareView *share = [[ShareView alloc]initWithTitleArray:titleArray picArray:picArray];
     [share showShareView];
     
@@ -118,11 +127,15 @@
                 NSLog(@"分享到微博失败");
             }];
         }else{
+            
+            msg.thumbnail = UIImagePNGRepresentation(thumbImage);
+            msg.desc = @"";
             [OpenShare shareToQQFriends:msg Success:^(OSMessage *message) {
                 NSLog(@"分享到QQ好友成功");
             } Fail:^(OSMessage *message, NSError *error) {
                 NSLog(@"分享到QQ好友失败");
             }];
+        
         }
         
     }];
