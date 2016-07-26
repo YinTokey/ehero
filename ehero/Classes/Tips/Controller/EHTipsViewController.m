@@ -26,6 +26,9 @@
 
     [self setupChildController];
     
+    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height, self.view.frame.size.width, 1)];
+    [lineView setBackgroundColor:RGB(67, 179, 241)];
+    [self.navigationController.navigationBar addSubview:lineView];
 }
 
 - (void)setupChildController{
