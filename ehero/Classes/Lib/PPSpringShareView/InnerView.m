@@ -19,7 +19,7 @@
     if (self) {
         
         self.button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
-        self.button.backgroundColor = [UIColor lightGrayColor];
+        self.button.backgroundColor = [UIColor clearColor];
         self.button.layer.cornerRadius = 5.0;
         self.button.layer.masksToBounds = YES;
         [self.button setCenter:CGPointMake(self.frame.size.width/2, 30)];

@@ -38,8 +38,8 @@
         
         _cancelBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 130 - 40, kSCREENWIDTH, 40)];
         [_cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
-        [_cancelBtn setBackgroundColor:[UIColor whiteColor]];
-        [_cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_cancelBtn setBackgroundColor:RGB(68, 180, 244)];
+        [_cancelBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_cancelBtn addTarget:self action:@selector(cancelBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.bottomShareView addSubview:_cancelBtn];
         
@@ -50,6 +50,7 @@
         scrollView.delegate = self;
         scrollView.showsHorizontalScrollIndicator = NO;
         scrollView.showsVerticalScrollIndicator = NO;
+        scrollView.backgroundColor = [UIColor whiteColor];
         [self.bottomShareView addSubview:scrollView];
         
         
@@ -58,7 +59,7 @@
         _pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
         _pageControl.numberOfPages = (titleArray.count +3)/4;
         _pageControl.center = CGPointMake(kSCREENWIDTH/2, 80);
-        [_bottomShareView addSubview:_pageControl];
+     //   [_bottomShareView addSubview:_pageControl];
         
         __weak typeof(self)wself = self;
         

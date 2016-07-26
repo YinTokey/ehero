@@ -11,7 +11,11 @@
 #import "EHSearchResultCell.h"
 #import "EHAgentInfo.h"
 #import "EHAgentInfoCommentCell.h"
+#import "ShareView.h"
+#import <OpenShareHeader.h>
 @interface EHAgentInfoController ()
+- (IBAction)shareBtnClick:(id)sender;
+- (IBAction)collectBtnClick:(id)sender;
 
 @end
 
@@ -39,7 +43,7 @@
     }else if (indexPath.section == 1){
         return 115;
     }else{
-        return 300;
+        return 125;
 //        EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
 //        cell.translatesAutoresizingMaskIntoConstraints = NO;
 //        CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
@@ -72,21 +76,25 @@
         return cell;
     }else{
         EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
-        
-        CGSize constraintSize;
-        
-        constraintSize. width = 300 ;
-        
-        constraintSize. height = MAXFLOAT ;
-        
-        CGSize sizeFrame =[@"此小区周边配套成熟，出门过马路就是钻石网球场和奥林匹克森林公园，学校：北大为明幼儿园、北师大附中附小； 医院：眼科医院、解放军306医院、北医三院、安贞医院等； 华润万家生活广场、新奥购物广场、家乐福、物美等。幼儿园、北师大附中附小； 医院：眼科医院、解放军306医院、北医三院、安贞医院等； 华润万家生活广场、新奥购物广场、家乐福、物美等。" sizeWithFont:cell.commentView.font constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
-        cell.commentView.frame = CGRectMake( 0 , 0 ,sizeFrame.width,sizeFrame.height);
-        
-        
+
         return cell;
     
     }
 
 }
 
+- (IBAction)shareBtnClick:(id)sender {
+    NSMutableArray *titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"微博",@"QQ好友", nil];
+    NSMutableArray *picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_weibo",@"share_qq", nil];
+    ShareView *share = [[ShareView alloc]initWithTitleArray:titleArray picArray:picArray];
+    [share showShareView];
+   // share_qq,share_timeline,share_wechat,share_weibo,share_cancel_btn
+    
+}
+
+- (IBAction)collectBtnClick:(id)sender {
+    
+    NSLog(@"收藏");
+    
+}
 @end

@@ -576,6 +576,9 @@
                                     <rect key="frame" x="284" y="7" width="20" height="29"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Group"/>
+                                    <connections>
+                                        <action selector="shareBtnClick:" destination="C27-c6-2Ge" eventType="touchUpInside" id="Xpi-Qg-nXD"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                             <barButtonItem style="plain" id="6R6-2y-PUR">
@@ -590,6 +593,9 @@
                                     <rect key="frame" x="231" y="11" width="22" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Star 1"/>
+                                    <connections>
+                                        <action selector="collectBtnClick:" destination="C27-c6-2Ge" eventType="touchUpInside" id="3Wy-Tt-fV0"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                         </rightBarButtonItems>
