@@ -84,11 +84,45 @@
 }
 
 - (IBAction)shareBtnClick:(id)sender {
+    OSMessage *msg=[[OSMessage alloc]init];
+    msg.title = @"test";
+    //分享界面弹窗
     NSMutableArray *titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"微博",@"QQ好友", nil];
     NSMutableArray *picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_weibo",@"share_qq", nil];
     ShareView *share = [[ShareView alloc]initWithTitleArray:titleArray picArray:picArray];
     [share showShareView];
-   // share_qq,share_timeline,share_wechat,share_weibo,share_cancel_btn
+    
+    [share currentIndexWasSelected:^(NSInteger index) {
+        //它的index是从100开始数起，逐个加1
+        if (index == 100) {
+            [OpenShare shareToWeixinSession:msg Success:^(OSMessage *message){
+                NSLog(@"分享微信好友成功！");
+            } Fail:^(OSMessage *message, NSError *error) {
+                NSLog(@"分享微信好友失败!");
+            }];
+        }else if (index == 101){
+            [OpenShare shareToWeixinTimeline:msg Success:^(OSMessage *message) {
+                NSLog(@"微信分享到朋友圈成功：\n%@",message);
+            } Fail:^(OSMessage *message, NSError *error) {
+                NSLog(@"微信分享到朋友圈失败：\n%@\n%@",error,message);
+            }];
+        }else if (index == 102){
+            [OpenShare shareToWeibo:msg Success:^(OSMessage *message) {
+                NSLog(@"分享到微博成功");
+            } Fail:^(OSMessage *message, NSError *error) {
+                NSLog(@"分享到微博失败");
+            }];
+        }else{
+            [OpenShare shareToQQFriends:msg Success:^(OSMessage *message) {
+                NSLog(@"分享到QQ好友成功");
+            } Fail:^(OSMessage *message, NSError *error) {
+                NSLog(@"分享到QQ好友失败");
+            }];
+        }
+        
+    }];
+
+    
     
 }
 
