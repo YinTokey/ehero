@@ -16,12 +16,13 @@
 @interface EHAgentInfoController ()
 - (IBAction)shareBtnClick:(id)sender;
 - (IBAction)collectBtnClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *collectBtn;
 
 @end
 
 @implementation EHAgentInfoController{
     UIImage *thumbImage;
-
+    NSInteger selectedFlag;
 }
 
 - (void)viewDidLoad {
@@ -139,14 +140,18 @@
         }
         
     }];
-
-    
     
 }
 
 - (IBAction)collectBtnClick:(id)sender {
-    
-    NSLog(@"收藏");
-    
+    selectedFlag ++;
+    if (selectedFlag %2 == 1) {
+        self.collectBtn.selected = YES;
+        [MBProgressHUD showSuccess:@"收藏成功"];
+    }else{
+        self.collectBtn.selected = NO;
+        [MBProgressHUD showSuccess:@"取消收藏"];
+    }
+
 }
 @end

@@ -593,6 +593,9 @@
                                     <rect key="frame" x="231" y="11" width="22" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Star 1"/>
+                                    <state key="selected" image="Star 2"/>
+                                    <state key="highlighted" image="Star 2"/>
+                                    <state key="focused" image="Star 2"/>
                                     <connections>
                                         <action selector="collectBtnClick:" destination="C27-c6-2Ge" eventType="touchUpInside" id="3Wy-Tt-fV0"/>
                                     </connections>
@@ -601,6 +604,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="collectBtn" destination="itZ-ef-dB0" id="ls9-JT-gcG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TU6-Vb-gZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -644,6 +650,7 @@
     <resources>
         <image name="Group" width="37" height="52"/>
         <image name="Star 1" width="38" height="36"/>
+        <image name="Star 2" width="38" height="36"/>
         <image name="about_us" width="750" height="1334"/>
         <image name="greenbackground" width="214" height="34"/>
         <image name="home_searchbar" width="462" height="51"/>
