@@ -212,7 +212,6 @@
                                         </state>
                                         <connections>
                                             <action selector="callBtnClick:" destination="iJb-bq-icq" eventType="touchUpInside" id="Kk3-J5-c69"/>
-                                            <segue destination="uAd-9A-BUA" kind="show" id="YNA-EV-1Nh"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="蓝色标准组合02" translatesAutoresizingMaskIntoConstraints="NO" id="HyQ-6i-aN5">
@@ -302,7 +301,7 @@
         <!--Wechat Group Detail View Controller-->
         <scene sceneID="76b-6y-Xio">
             <objects>
-                <viewController id="uAd-9A-BUA" customClass="EHWechatGroupDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WechatGroupDetailViewController" id="uAd-9A-BUA" customClass="EHWechatGroupDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e3d-Tj-dEC"/>
                         <viewControllerLayoutGuide type="bottom" id="HYr-Cc-cji"/>
@@ -311,11 +310,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="iga-iM-TP3">
-                                <rect key="frame" x="40" y="220" width="240" height="240"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wechatBackground" translatesAutoresizingMaskIntoConstraints="NO" id="jCX-Yz-GId">
+                                <rect key="frame" x="20" y="90" width="280" height="401"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="iga-iM-TP3">
+                                <rect key="frame" x="70" y="148" width="180" height="180"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="望京合租群" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-SP-dMC">
+                                <rect key="frame" x="70" y="349" width="180" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jCX-Yz-GId" firstAttribute="top" secondItem="e3d-Tj-dEC" secondAttribute="bottom" constant="26" id="4oZ-OB-9MW"/>
+                            <constraint firstAttribute="trailing" secondItem="jCX-Yz-GId" secondAttribute="trailing" constant="20" id="G4m-Lp-HfT"/>
+                            <constraint firstItem="Fb6-SP-dMC" firstAttribute="leading" secondItem="nO4-3d-1Ml" secondAttribute="leading" constant="70" id="JOV-Qb-22L"/>
+                            <constraint firstItem="iga-iM-TP3" firstAttribute="leading" secondItem="nO4-3d-1Ml" secondAttribute="leading" constant="70" id="Oc2-0x-WEl"/>
+                            <constraint firstAttribute="trailing" secondItem="iga-iM-TP3" secondAttribute="trailing" constant="70" id="QWw-bo-jeo"/>
+                            <constraint firstItem="Fb6-SP-dMC" firstAttribute="top" secondItem="iga-iM-TP3" secondAttribute="bottom" constant="21" id="YjJ-kF-Oje"/>
+                            <constraint firstItem="iga-iM-TP3" firstAttribute="top" secondItem="e3d-Tj-dEC" secondAttribute="bottom" constant="84" id="afg-xK-MXS"/>
+                            <constraint firstItem="jCX-Yz-GId" firstAttribute="leading" secondItem="nO4-3d-1Ml" secondAttribute="leading" constant="20" id="gQ2-Fl-RAm"/>
+                            <constraint firstAttribute="trailing" secondItem="Fb6-SP-dMC" secondAttribute="trailing" constant="70" id="gv1-rq-h5G"/>
+                            <constraint firstItem="HYr-Cc-cji" firstAttribute="top" secondItem="jCX-Yz-GId" secondAttribute="bottom" constant="77" id="qA1-DM-2Z8"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -324,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wp6-06-weK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-611" y="1607"/>
+            <point key="canvasLocation" x="135" y="1597"/>
         </scene>
         <!--个人中心-->
         <scene sceneID="ocV-g9-y4w">
@@ -696,6 +716,7 @@
         <image name="profile_btn7" width="710" height="88"/>
         <image name="profile_img" width="41" height="47"/>
         <image name="search_bar" width="596" height="38"/>
+        <image name="wechatBackground" width="615" height="971"/>
         <image name="蓝色标准组合02" width="1682" height="656"/>
     </resources>
     <inferredMetricsTieBreakers>

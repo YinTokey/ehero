@@ -26,6 +26,7 @@
     EHWechatGroupCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHWechatGroupCell" owner:nil options:nil] lastObject];
+        cell.backgroundColor = RGB(231, 233, 235);
         
     }
     

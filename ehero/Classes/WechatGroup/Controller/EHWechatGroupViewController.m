@@ -9,7 +9,7 @@
 #import "EHWechatGroupViewController.h"
 #import "EHWechatGroupCell.h"
 #import <Photos/Photos.h>
-
+#import "EHWechatGroupDetailViewController.h"
 /** 相册名字 */
 static NSString * const XMGCollectionName = @"易房好介-Photos";
 
@@ -45,14 +45,13 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    return 200;
+    return 280;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
-    
-    
+
+    EHWechatGroupDetailViewController *VC = [[self storyboard]instantiateViewControllerWithIdentifier:@"WechatGroupDetailViewController"];
+    [self.navigationController pushViewController:VC animated:YES];
     
     
     
