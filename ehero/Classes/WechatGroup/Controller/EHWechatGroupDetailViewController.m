@@ -21,17 +21,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    /*
     UILongPressGestureRecognizer*longPress=[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(dealLongPress:)];
     [_QRCodeImgView addGestureRecognizer:longPress];
     
     //5.定时器
     _timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(create) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop]addTimer:_timer forMode:NSRunLoopCommonModes];
+     */
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    // 1.创建要打开的App的URL
+    NSURL *weixinURL = [NSURL URLWithString:@"weixin://timeline"];
+    
+    // 2.判断是否该URL可以打开
+    if ([[UIApplication sharedApplication] canOpenURL:weixinURL]) {
+        
+        // 3.打开URL
+        [[UIApplication sharedApplication] openURL:weixinURL];
+    }
+
 }
 
 #pragma mark-> 长按识别二维码
--(void)dealLongPress:(UIGestureRecognizer*)gesture{
+- (void)dealLongPress:(UIGestureRecognizer*)gesture{
     
     if(gesture.state==UIGestureRecognizerStateBegan){
         

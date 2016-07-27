@@ -37,7 +37,6 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
     return 3;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     EHWechatGroupCell *cell = [EHWechatGroupCell wechatGroupCellWithTableView:tableView];
