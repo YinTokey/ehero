@@ -7,11 +7,10 @@
 //
 
 #import "EHAntidisturbViewController.h"
+#import <WebKit/WebKit.h>
+@interface EHAntidisturbViewController ()<WKNavigationDelegate>
 
-@interface EHAntidisturbViewController ()
-- (IBAction)callBtnClick:(id)sender;
-@property (weak, nonatomic) IBOutlet UITextField *phoneNumber;
-
+@property (nonatomic,strong)WKWebView *webView;
 @end
 
 @implementation EHAntidisturbViewController
@@ -19,23 +18,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //添加手势相应，输textfield时，点击其他区域，键盘消失
-    UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
-    tapGr.cancelsTouchesInView = NO;
-    [self.view addGestureRecognizer:tapGr];
+    WKWebView *webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    webView.scrollView.bounces = NO;
+    self.webView = webView;
+    [self.view addSubview:_webView];
+    self.webView.navigationDelegate = self;
     
+    NSURL *url = [NSURL URLWithString:@"http://ehero.cc/helper"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:request];
     
 }
 
-#pragma mark  -- UITapGestureRecognizer
--(void)viewTapped:(UITapGestureRecognizer*)tapGr
-{
-    [self.phoneNumber resignFirstResponder];
-
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+    [LBProgressHUD showHUDto:self.view animated:NO];
 }
 
-- (IBAction)callBtnClick:(id)sender {
-    
-    NSLog(@"呼叫对方");
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+    [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
 }
 @end
