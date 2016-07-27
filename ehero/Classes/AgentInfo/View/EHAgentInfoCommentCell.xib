@@ -13,10 +13,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OIX-xd-EL5">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" text="此小区周边配套成熟，出门过马路就是钻石网球场和奥林匹克森林公园，学校：北大为明幼儿园、北师大附中附小； 医院：眼科医院、解放军306医院、北医三院、安贞医院等； 华润万家生活广场、新奥购物广场、家乐福、物美等。幼儿园、北师大附中附小； " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OIX-xd-EL5">
                         <rect key="frame" x="13" y="0.0" width="294" height="113"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <string key="text">此小区周边配套成熟，出门过马路就是钻石网球场和奥林匹克森林公园，学校：北大为明幼儿园、北师大附中附小； 医院：眼科医院、解放军306医院、北医三院、安贞医院等； 华润万家生活广场、新奥购物广场、家乐福、物美等。幼儿园、北师大附中附小； 医院：眼科医院、解放军306医院、北医三院、安贞医院等； 华润万家生活广场、新奥购物广场、家乐福、物美等。</string>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>

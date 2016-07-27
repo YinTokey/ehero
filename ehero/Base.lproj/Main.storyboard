@@ -212,6 +212,7 @@
                                         </state>
                                         <connections>
                                             <action selector="callBtnClick:" destination="iJb-bq-icq" eventType="touchUpInside" id="Kk3-J5-c69"/>
+                                            <segue destination="uAd-9A-BUA" kind="show" id="YNA-EV-1Nh"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="蓝色标准组合02" translatesAutoresizingMaskIntoConstraints="NO" id="HyQ-6i-aN5">
@@ -297,6 +298,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcH-v2-BiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="971"/>
+        </scene>
+        <!--Wechat Group Detail View Controller-->
+        <scene sceneID="76b-6y-Xio">
+            <objects>
+                <viewController id="uAd-9A-BUA" customClass="EHWechatGroupDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e3d-Tj-dEC"/>
+                        <viewControllerLayoutGuide type="bottom" id="HYr-Cc-cji"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nO4-3d-1Ml">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="iga-iM-TP3">
+                                <rect key="frame" x="40" y="220" width="240" height="240"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="QRCodeImgView" destination="iga-iM-TP3" id="SUb-MJ-nyh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wp6-06-weK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-611" y="1607"/>
         </scene>
         <!--个人中心-->
         <scene sceneID="ocV-g9-y4w">
@@ -550,7 +578,7 @@
         <scene sceneID="VR9-Bz-Cle">
             <objects>
                 <tableViewController storyboardIdentifier="AgentInfoController" id="C27-c6-2Ge" customClass="EHAgentInfoController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="M5V-vv-V8I">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="M5V-vv-V8I">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -559,7 +587,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Bi-HZ-850" id="Lcv-Is-oSr">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -649,6 +677,7 @@
     </scenes>
     <resources>
         <image name="Group" width="37" height="52"/>
+        <image name="QRCode" width="265" height="263"/>
         <image name="Star 1" width="38" height="36"/>
         <image name="Star 2" width="38" height="36"/>
         <image name="about_us" width="750" height="1334"/>

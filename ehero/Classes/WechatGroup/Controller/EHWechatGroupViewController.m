@@ -41,17 +41,27 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     EHWechatGroupCell *cell = [EHWechatGroupCell wechatGroupCellWithTableView:tableView];
-    
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    return 346;
+    return 200;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // 判断授权状态
+    /*
     [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
         if (status != PHAuthorizationStatusAuthorized) return;
         
@@ -84,7 +94,7 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
             }
         });
     }];
-
+    */
 }
 
 

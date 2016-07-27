@@ -35,6 +35,7 @@
 		047EF38A1D39FFEF00E587BA /* Tips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047EF3891D39FFEF00E587BA /* Tips.storyboard */; };
 		047EF38D1D3A0EAA00E587BA /* EHAsiaViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EF38C1D3A0EAA00E587BA /* EHAsiaViewCell.m */; };
 		048632081D3E238B00800B26 /* EHNetBusinessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 048632071D3E238B00800B26 /* EHNetBusinessManager.m */; };
+		048E90761D476B46005B19BD /* EHWechatGroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048E90751D476B46005B19BD /* EHWechatGroupDetailViewController.m */; };
 		04BB3E911D4476C5002CBF27 /* EHSiteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB3E901D4476C5002CBF27 /* EHSiteButton.m */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
@@ -142,6 +143,8 @@
 		047EF38C1D3A0EAA00E587BA /* EHAsiaViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAsiaViewCell.m; sourceTree = "<group>"; };
 		048632061D3E238B00800B26 /* EHNetBusinessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHNetBusinessManager.h; sourceTree = "<group>"; };
 		048632071D3E238B00800B26 /* EHNetBusinessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHNetBusinessManager.m; sourceTree = "<group>"; };
+		048E90741D476B46005B19BD /* EHWechatGroupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHWechatGroupDetailViewController.h; sourceTree = "<group>"; };
+		048E90751D476B46005B19BD /* EHWechatGroupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHWechatGroupDetailViewController.m; sourceTree = "<group>"; };
 		048F12A21D38C4250039808D /* libM13PDFKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libM13PDFKit.a; path = "../../../../../Library/Developer/Xcode/DerivedData/ehero-apyunbsyuuzpszabggkemknwzsmb/Build/Products/Debug-iphoneos/libM13PDFKit.a"; sourceTree = "<group>"; };
 		04BB3E8F1D4476C5002CBF27 /* EHSiteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSiteButton.h; sourceTree = "<group>"; };
 		04BB3E901D4476C5002CBF27 /* EHSiteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSiteButton.m; sourceTree = "<group>"; };
@@ -283,6 +286,8 @@
 			children = (
 				04C5006C1D336FC0009146E5 /* EHWechatGroupViewController.h */,
 				04C5006D1D336FC0009146E5 /* EHWechatGroupViewController.m */,
+				048E90741D476B46005B19BD /* EHWechatGroupDetailViewController.h */,
+				048E90751D476B46005B19BD /* EHWechatGroupDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1286,6 +1291,7 @@
 				04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */,
 				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
 				0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */,
+				048E90761D476B46005B19BD /* EHWechatGroupDetailViewController.m in Sources */,
 				04E9CFFA1D46082B0087BD70 /* EHAgentInfoCommentCell.m in Sources */,
 				04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */,
 				04716C0B1D35060B00E512EE /* AFURLSessionManager.m in Sources */,

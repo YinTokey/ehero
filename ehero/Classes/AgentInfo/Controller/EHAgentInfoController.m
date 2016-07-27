@@ -98,9 +98,10 @@
     //链接标题
     NSString *title = [NSString stringWithFormat:@"为您分享经纪人:%@",self.name];
     msg.title = title;
+    msg.desc = @"大数据推荐最匹配的经纪人";
     //分享的图标
     msg.image = UIImagePNGRepresentation(thumbImage);
-
+    
     //分享界面弹窗
     NSMutableArray *titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"微博",@"QQ好友", nil];
     NSMutableArray *picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_weibo",@"share_qq",nil];
@@ -130,7 +131,7 @@
         }else{
             
             msg.thumbnail = UIImagePNGRepresentation(thumbImage);
-            msg.desc = @"";
+            
             [OpenShare shareToQQFriends:msg Success:^(OSMessage *message) {
                 NSLog(@"分享到QQ好友成功");
             } Fail:^(OSMessage *message, NSError *error) {
