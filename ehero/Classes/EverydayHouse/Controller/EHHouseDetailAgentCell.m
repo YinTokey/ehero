@@ -7,7 +7,10 @@
 //
 
 #import "EHHouseDetailAgentCell.h"
+@interface EHHouseDetailAgentCell()
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
+@end
 @implementation EHHouseDetailAgentCell
 
 - (void)awakeFromNib {
@@ -27,6 +30,8 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHHouseDetailAgentCell" owner:nil options:nil] lastObject];
         cell.backgroundColor = RGB(241, 243, 245);
+        cell.contentView.layer.cornerRadius = 5;
+        cell.layer.masksToBounds = YES;
     }
     
     return cell;
