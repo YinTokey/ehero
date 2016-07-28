@@ -59,9 +59,6 @@
 		04C5006B1D336D8B009146E5 /* EHWechatGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C500691D336D8B009146E5 /* EHWechatGroupCell.xib */; };
 		04C5006E1D336FC0009146E5 /* EHWechatGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5006D1D336FC0009146E5 /* EHWechatGroupViewController.m */; };
 		04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500791D3386E5009146E5 /* EHCommentAgentViewController.m */; };
-		04C500801D338CBC009146E5 /* CWStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5007D1D338CBC009146E5 /* CWStarRateView.m */; };
-		04C500811D338CBC009146E5 /* heart1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C5007E1D338CBC009146E5 /* heart1.png */; };
-		04C500821D338CBC009146E5 /* heart2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C5007F1D338CBC009146E5 /* heart2.png */; };
 		04CBAE801D470035002BF215 /* EHTipsNavBottomLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CBAE7F1D470035002BF215 /* EHTipsNavBottomLine.m */; };
 		04DA25E31D41E33000235C51 /* EHProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DA25E21D41E33000235C51 /* EHProfileViewController.m */; };
 		04E7AF9E1D38EC860049E668 /* InnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7AF9B1D38EC860049E668 /* InnerView.m */; };
@@ -199,10 +196,6 @@
 		04C5006D1D336FC0009146E5 /* EHWechatGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHWechatGroupViewController.m; sourceTree = "<group>"; };
 		04C500781D3386E5009146E5 /* EHCommentAgentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCommentAgentViewController.h; sourceTree = "<group>"; };
 		04C500791D3386E5009146E5 /* EHCommentAgentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCommentAgentViewController.m; sourceTree = "<group>"; };
-		04C5007C1D338CBC009146E5 /* CWStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWStarRateView.h; sourceTree = "<group>"; };
-		04C5007D1D338CBC009146E5 /* CWStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWStarRateView.m; sourceTree = "<group>"; };
-		04C5007E1D338CBC009146E5 /* heart1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart1.png; sourceTree = "<group>"; };
-		04C5007F1D338CBC009146E5 /* heart2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart2.png; sourceTree = "<group>"; };
 		04C5FFDE1D333292009146E5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		04CBAE7E1D470035002BF215 /* EHTipsNavBottomLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHTipsNavBottomLine.h; path = ehero/Classes/AgentInfo/View/EHTipsNavBottomLine.h; sourceTree = SOURCE_ROOT; };
 		04CBAE7F1D470035002BF215 /* EHTipsNavBottomLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHTipsNavBottomLine.m; path = ehero/Classes/AgentInfo/View/EHTipsNavBottomLine.m; sourceTree = SOURCE_ROOT; };
@@ -283,7 +276,6 @@
 				0472DA501D37B48900CDE148 /* LBProgressHUD */,
 				04716BF81D35060B00E512EE /* AFNetworking */,
 				04716BE81D34A4E200E512EE /* DCNavTabBarController */,
-				04C5007B1D338CBC009146E5 /* CWStarRateView */,
 				04200C341D2F7A7A005DC042 /* XTPopView */,
 			);
 			path = Lib;
@@ -850,17 +842,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		04C5007B1D338CBC009146E5 /* CWStarRateView */ = {
-			isa = PBXGroup;
-			children = (
-				04C5007C1D338CBC009146E5 /* CWStarRateView.h */,
-				04C5007D1D338CBC009146E5 /* CWStarRateView.m */,
-				04C5007E1D338CBC009146E5 /* heart1.png */,
-				04C5007F1D338CBC009146E5 /* heart2.png */,
-			);
-			path = CWStarRateView;
-			sourceTree = "<group>";
-		};
 		04DA25DD1D41E2F200235C51 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -1253,9 +1234,7 @@
 				04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */,
 				04B0EFEA1D49B79700BE301B /* EHHouseDetailCallCell.xib in Resources */,
 				047EF38A1D39FFEF00E587BA /* Tips.storyboard in Resources */,
-				04C500821D338CBC009146E5 /* heart2.png in Resources */,
 				04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */,
-				04C500811D338CBC009146E5 /* heart1.png in Resources */,
 				04C3A8E41D321FE2003203C0 /* EHSearchResultCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1338,7 +1317,6 @@
 				04667FAC1D49FE990051C446 /* STModal.m in Sources */,
 				04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */,
 				047EF3871D39FE3D00E587BA /* EHAsiaViewController.m in Sources */,
-				04C500801D338CBC009146E5 /* CWStarRateView.m in Sources */,
 				04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */,
 				04B0EFE91D49B79700BE301B /* EHHouseDetailCallCell.m in Sources */,
 				04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */,

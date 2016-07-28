@@ -17,11 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSLog(@"%f ",self.view.frame.size.height);
-    NSLog(@"每日一房");
-}
+    //跳转到下一界面的返回按钮样式
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
 
+}
 
 
 #pragma mark - Table view data source
