@@ -13,7 +13,7 @@
 #import "EHAgentInfoCommentCell.h"
 #import "ShareView.h"
 #import <OpenShareHeader.h>
-@interface EHAgentInfoController ()
+@interface EHAgentInfoController ()<EHSearchResultCellDelegate>
 - (IBAction)shareBtnClick:(id)sender;
 - (IBAction)collectBtnClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *collectBtn;
@@ -77,6 +77,7 @@
         EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
         EHAgentInfo *agentInfo = [EHAgentInfo setWithAgentInfoController:self];
         [cell setResultCell:agentInfo];
+        cell.delegate = self;
         return cell;
     }else if(indexPath.section == 1){
         EHAgentInfoCommunityCell *cell = [EHAgentInfoCommunityCell AgentInfoCommunityCellWithTableView:tableView];
@@ -89,6 +90,13 @@
     }
 
 }
+
+# pragma mark - searchResultCellDelegate
+- (void)callBtnClick:(UITableViewCell *)cell{
+    
+    NSLog(@"点击经纪人详情界面的打电话");
+}
+
 # pragma mark - 分享点击
 - (IBAction)shareBtnClick:(id)sender {
     OSMessage *msg=[[OSMessage alloc]init];
@@ -155,4 +163,6 @@
     }
 
 }
+
+
 @end
