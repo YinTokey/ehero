@@ -10,4 +10,6 @@
 
 @interface EHCallAgentView : UIView
 
++ (instancetype)initCallAgentView;
+
 @end

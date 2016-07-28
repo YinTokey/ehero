@@ -13,7 +13,13 @@
 #import "EHAgentInfoCommentCell.h"
 #import "ShareView.h"
 #import <OpenShareHeader.h>
+#import "EHCallAgentView.h"
+#import "STModal.h"
 @interface EHAgentInfoController ()<EHSearchResultCellDelegate>
+{
+    EHCallAgentView *callAgentView;
+    STModal *modal;
+}
 - (IBAction)shareBtnClick:(id)sender;
 - (IBAction)collectBtnClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *collectBtn;
@@ -30,9 +36,11 @@
     
     self.title = self.name;
     self.view.backgroundColor = RGB(241, 243, 245);
-    
+    //初始化分享图标
     thumbImage = [UIImage imageNamed:@"share_icon"];
-
+    //初始化弹窗配置
+    modal = [STModal modal];
+    modal.hideWhenTouchOutside = YES;
 }
 
 
@@ -93,8 +101,12 @@
 
 # pragma mark - searchResultCellDelegate
 - (void)callBtnClick:(UITableViewCell *)cell{
-    
     NSLog(@"点击经纪人详情界面的打电话");
+    
+    callAgentView = [EHCallAgentView initCallAgentView];
+  //  [self showViewAni:callAgentView];
+    [modal showContentView:callAgentView animated:YES];
+    
 }
 
 # pragma mark - 分享点击

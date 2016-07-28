@@ -15,6 +15,11 @@
 
 @implementation EHCallAgentView
 
++ (instancetype)initCallAgentView{
+
+    EHCallAgentView *callAgentView = [[[NSBundle mainBundle] loadNibNamed:@"EHCallAgentView" owner:nil options:nil] lastObject];
+    return callAgentView;
+}
 
 
 @end
