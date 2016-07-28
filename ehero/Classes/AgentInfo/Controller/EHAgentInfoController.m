@@ -89,7 +89,7 @@
     }
 
 }
-
+# pragma mark - 分享点击
 - (IBAction)shareBtnClick:(id)sender {
     OSMessage *msg=[[OSMessage alloc]init];
     //拼接分享页链接
@@ -143,7 +143,7 @@
     }];
     
 }
-
+# pragma mark - 收藏点击
 - (IBAction)collectBtnClick:(id)sender {
     selectedFlag ++;
     if (selectedFlag %2 == 1) {

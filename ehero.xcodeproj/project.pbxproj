@@ -12,6 +12,8 @@
 		04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04348FAF1D2F4DFB00205130 /* buttonCell.m */; };
 		04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04360C891D3CDC2A007C8C17 /* YTHTTPSessionManager.m */; };
 		0455CB281D48B90E00160C83 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C3A8D01D31E518003203C0 /* WebKit.framework */; };
+		0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */; };
+		0456A9E21D49E5640065DC5B /* EHCallAgentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */; };
 		04657FD21D32473200914495 /* EHEverydayHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD11D32473200914495 /* EHEverydayHouseViewController.m */; };
 		04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD41D324B4800914495 /* EHAntidisturbViewController.m */; };
 		04657FDC1D32768B00914495 /* EHTipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FDB1D32768B00914495 /* EHTipsViewController.m */; };
@@ -104,6 +106,9 @@
 		04348FAF1D2F4DFB00205130 /* buttonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buttonCell.m; sourceTree = "<group>"; };
 		04360C881D3CDC2A007C8C17 /* YTHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHTTPSessionManager.h; sourceTree = "<group>"; };
 		04360C891D3CDC2A007C8C17 /* YTHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTHTTPSessionManager.m; sourceTree = "<group>"; };
+		0456A9DE1D49E5390065DC5B /* EHCallAgentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCallAgentView.h; sourceTree = "<group>"; };
+		0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCallAgentView.m; sourceTree = "<group>"; };
+		0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCallAgentView.xib; sourceTree = "<group>"; };
 		04657FD01D32473200914495 /* EHEverydayHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayHouseViewController.h; sourceTree = "<group>"; };
 		04657FD11D32473200914495 /* EHEverydayHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHEverydayHouseViewController.m; sourceTree = "<group>"; };
 		04657FD31D324B4800914495 /* EHAntidisturbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAntidisturbViewController.h; sourceTree = "<group>"; };
@@ -876,6 +881,9 @@
 				04E9CFF71D46082B0087BD70 /* EHAgentInfoCommentCell.h */,
 				04E9CFF81D46082B0087BD70 /* EHAgentInfoCommentCell.m */,
 				04E9CFF91D46082B0087BD70 /* EHAgentInfoCommentCell.xib */,
+				0456A9DE1D49E5390065DC5B /* EHCallAgentView.h */,
+				0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */,
+				0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1196,6 +1204,7 @@
 				04B0EFE51D49AD1A00BE301B /* EHHouseDetailAgentCell.xib in Resources */,
 				04F06CD81D2DFE920081A34D /* LaunchScreen.storyboard in Resources */,
 				04E9CFF61D4608110087BD70 /* EHAgentInfoCommunityCell.xib in Resources */,
+				0456A9E21D49E5640065DC5B /* EHCallAgentView.xib in Resources */,
 				04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */,
 				04716BF31D34C70900E512EE /* EHNewsViewCell.xib in Resources */,
 				04B0EFE01D49A18100BE301B /* EHHouseDetailCell.xib in Resources */,
@@ -1326,6 +1335,7 @@
 				04716BEE1D34A8E000E512EE /* EHTwoViewController.m in Sources */,
 				04B0EFDB1D499DD600BE301B /* EHHouseDetailViewController.m in Sources */,
 				04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */,
+				0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */,
 				04E9CFA81D45CDF70087BD70 /* EHNavBackItem.m in Sources */,
 				04716C061D35060B00E512EE /* AFHTTPSessionManager.m in Sources */,
 				04B0EFE41D49AD1A00BE301B /* EHHouseDetailAgentCell.m in Sources */,

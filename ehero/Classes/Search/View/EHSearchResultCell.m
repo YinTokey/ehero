@@ -122,6 +122,9 @@
 
 }
 - (IBAction)callClick:(id)sender {
-    NSLog(@"呼叫经纪人");
+
+    if ([self.delegate respondsToSelector:@selector(callBtnClick:)]) {
+        [self.delegate callBtnClick:self];
+    }
 }
 @end

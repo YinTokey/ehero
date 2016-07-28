@@ -20,7 +20,7 @@
 #define searchbar_width _mysearchBar.frame.size.width
 #define searchbar_height _mysearchBar.frame.size.height
 
-@interface EHSearchViewController ()<UITextFieldDelegate,EHNetBusinessManagerDelegate>
+@interface EHSearchViewController ()<UITextFieldDelegate,EHNetBusinessManagerDelegate,EHSearchResultCellDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *mysearchBar;
 @property (nonatomic,strong) NSMutableArray *searchResultArr;
 
@@ -52,6 +52,7 @@
     EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
     EHAgentInfo *agentInfo = self.searchResultArr[indexPath.row];
     [cell setResultCell:agentInfo];
+    cell.delegate = self;
     return cell;
 }
 #pragma mark - cell高度
@@ -115,7 +116,7 @@
 
 }
 
-
+# pragma mark － 搜索点击
 - (void)searchClick{
     [LBProgressHUD showHUDto:self.view animated:NO];
     
@@ -125,7 +126,7 @@
     [self searchWithURLString:searchAreaUrlStr Param:param];
 
 }
-
+# pragma mark - 搜索方法
 - (void)searchWithURLString:(NSString *)urlString Param:(NSDictionary *)param{
 
     [YTHttpTool get:urlString params:param success:^(id responseObj) {
@@ -141,7 +142,7 @@
     }];
     
 }
-
+#pragma mark - 搜索结果检测
 - (void)searchStatusTest{
     
     if (_searchResultArr.count == 0) {
@@ -150,6 +151,11 @@
     }else{
         [MBProgressHUD showNormalMessage:@"找到经纪人" showDetailText:nil toView:self.view];
     }
+}
+
+- (void)callBtnClick:(UITableViewCell *)cell{
+    NSLog(@"在控制器里点击");
+    
 }
 
 
