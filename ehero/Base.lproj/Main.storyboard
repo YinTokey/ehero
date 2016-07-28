@@ -136,7 +136,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP1-S5-T8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214" y="-650"/>
+            <point key="canvasLocation" x="-270" y="-1106"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="b6y-a8-fld">
@@ -270,6 +270,60 @@
             </objects>
             <point key="canvasLocation" x="135" y="971"/>
         </scene>
+        <!--详情-->
+        <scene sceneID="bpe-0H-9Ql">
+            <objects>
+                <tableViewController storyboardIdentifier="HouseDetailViewController" id="M8N-z6-2aa" customClass="EHHouseDetailViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nAN-wl-QhP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="S28-Jb-u8k">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S28-Jb-u8k" id="1ob-Kg-MJO">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M8N-z6-2aa" id="dXy-0U-LoQ"/>
+                            <outlet property="delegate" destination="M8N-z6-2aa" id="uSP-OI-lFG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="详情" id="3in-PL-R7J">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="QXL-rA-B6W">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="m9k-45-l7w">
+                                    <rect key="frame" x="284" y="7" width="20" height="29"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="Group"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="j9e-VX-qaC">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Gx-Dq-gL6">
+                                    <rect key="frame" x="261" y="7" width="15" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="near_share_line"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="6Sr-dr-8LI">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iRa-gD-jvu">
+                                    <rect key="frame" x="231" y="11" width="22" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="Star 1"/>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Du0-5r-NIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265" y="1691"/>
+        </scene>
         <!--Wechat Group Detail View Controller-->
         <scene sceneID="76b-6y-Xio">
             <objects>
@@ -322,6 +376,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wp6-06-weK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="1597"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LHX-7E-HSC">
+            <objects>
+                <navigationController id="dP8-jF-Br3" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Az4-4I-jRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="M8N-z6-2aa" kind="relationship" relationship="rootViewController" id="6K0-dt-2pR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BfN-d8-S4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265" y="2375"/>
         </scene>
         <!--个人中心-->
         <scene sceneID="ocV-g9-y4w">
@@ -635,7 +706,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TU6-Vb-gZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="1049"/>
+            <point key="canvasLocation" x="1002" y="1014"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M40-x2-GLU">

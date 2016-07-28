@@ -8,6 +8,7 @@
 
 #import "EHEverydayHouseViewController.h"
 #import "EHEverydayhouseCell.h"
+#import "EHHouseDetailViewController.h"
 @interface EHEverydayHouseViewController ()
 
 @end
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSLog(@"%f ",self.view.frame.size.height);
     NSLog(@"每日一房");
 }
 
@@ -32,7 +34,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    return 125;
+    return 94;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -40,4 +42,10 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    EHHouseDetailViewController *VC = [[self storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
+    [self.navigationController pushViewController:VC animated:YES];
+    
+}
 @end
