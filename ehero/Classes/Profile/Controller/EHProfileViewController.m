@@ -10,6 +10,8 @@
 #import <MessageUI/MessageUI.h>
 #import "AppDelegate.h"
 #import "MBProgressHUD+YT.h"
+#import <Masonry.h>
+#import "SDAutoLayout.h"
 @interface EHProfileViewController ()<MFMailComposeViewControllerDelegate>
 - (IBAction)skimedAgentsClick:(id)sender;
 - (IBAction)skimedHouseClick:(id)sender;
@@ -23,6 +25,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *house;
 @property (weak, nonatomic) IBOutlet UIButton *contact;
 @property (weak, nonatomic) IBOutlet UIButton *about;
+@property (weak, nonatomic) IBOutlet UIButton *recentAgents;
+@property (weak, nonatomic) IBOutlet UIButton *recentHouses;
+@property (weak, nonatomic) IBOutlet UIImageView *icon;
 
 
 @end
@@ -34,13 +39,12 @@
     self.view.backgroundColor = RGB(241, 243, 245);
 
     [self setupButtonsTextAlignment];
+    NSLog(@"%f",self.view.frame.size.height);
+    NSLog(@"%f",self.view.frame.size.width);
     
-    //跳转到下一界面的返回按钮样式
-    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
+    NSLog(@"screen %f",[UIScreen mainScreen].bounds.size.height);
     
-    //适应storyboard
-    [AppDelegate storyBoradAutoLay:self.view];
-    
+    [self fitScreen];
 }
 
 - (void)setupButtonsTextAlignment{
@@ -54,6 +58,56 @@
     self.contact.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
     self.about.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     self.about.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+    
+}
+
+- (void)fitScreen{
+
+     self.recentAgents.sd_layout
+    .widthRatioToView(self.view,0.468)
+    .leftSpaceToView(self.view,ScreenWidth * 0.025)
+    .heightRatioToView(self.view,0.102);
+    
+    
+     self.recentHouses.sd_layout
+    .widthRatioToView(self.view,0.468)
+    .rightSpaceToView(self.view,ScreenWidth * 0.025)
+    .heightRatioToView(self.view,0.102);
+    
+ //   self.tips.sd_layout
+//    .widthRatioToView (self.view,0.95)
+//    .heightRatioToView (self.view,0.0792)
+//    .leftSpaceToView (self.view,ScreenWidth * 0.025)
+ //   .bottomSpaceToView (self.agents,0)
+ //   .topSpaceToView (self.recentAgents,100);
+  
+ //    self.agents.sd_layout
+//    .widthRatioToView (self.view,0.95)
+ //   .heightRatioToView (self.view,0.0792)
+//    .leftSpaceToView (self.view,ScreenWidth * 0.025);
+//    .bottomSpaceToView (self.house,0)
+//   .topSpaceToView (self.tips,0);
+//    
+//   self.house.sd_layout
+//    .widthRatioToView (self.view,0.95)
+//   .heightRatioToView (self.view,0.0792)
+//    .leftSpaceToView (self.view,ScreenWidth * 0.025)
+//   .topSpaceToView (self.agents,0);
+//    self.contact.sd_layout
+//    .widthRatioToView (self.view,0.95)
+//    .heightRatioToView (self.view,0.0792)
+//    .leftSpaceToView (self.view,ScreenWidth * 0.025);
+//    
+//    self.about.sd_layout
+//    .widthRatioToView (self.view,0.95)
+//    .heightRatioToView (self.view,0.0792)
+//    .leftSpaceToView (self.view,ScreenWidth * 0.025);
+//    
+//    self.icon.sd_layout
+//    .widthRatioToView (self.view,0.09375)
+//    .heightRatioToView (self.view,0.1125)
+//    .bottomSpaceToView (self.view,0)
+//    .leftSpaceToView (self.view,ScreenWidth * 0.453125);
     
 }
 
@@ -154,6 +208,7 @@
     // 关闭邮件发送视图
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 
 

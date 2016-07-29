@@ -14,6 +14,8 @@
 		0455CB281D48B90E00160C83 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C3A8D01D31E518003203C0 /* WebKit.framework */; };
 		0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */; };
 		0456A9E21D49E5640065DC5B /* EHCallAgentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */; };
+		0465688A1D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 046568871D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m */; };
+		0465688B1D4B39DE001C9851 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 046568891D4B39DE001C9851 /* UIView+SDAutoLayout.m */; };
 		04657FD21D32473200914495 /* EHEverydayHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD11D32473200914495 /* EHEverydayHouseViewController.m */; };
 		04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD41D324B4800914495 /* EHAntidisturbViewController.m */; };
 		04657FDC1D32768B00914495 /* EHTipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FDB1D32768B00914495 /* EHTipsViewController.m */; };
@@ -107,9 +109,15 @@
 		04348FAF1D2F4DFB00205130 /* buttonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buttonCell.m; sourceTree = "<group>"; };
 		04360C881D3CDC2A007C8C17 /* YTHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHTTPSessionManager.h; sourceTree = "<group>"; };
 		04360C891D3CDC2A007C8C17 /* YTHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTHTTPSessionManager.m; sourceTree = "<group>"; };
+		0436DFEF1D4B35360073D4CA /* libSDAutoLayout.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDAutoLayout.a; path = "Pods/../build/Debug-iphoneos/SDAutoLayout/libSDAutoLayout.a"; sourceTree = "<group>"; };
 		0456A9DE1D49E5390065DC5B /* EHCallAgentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCallAgentView.h; sourceTree = "<group>"; };
 		0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCallAgentView.m; sourceTree = "<group>"; };
 		0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCallAgentView.xib; sourceTree = "<group>"; };
+		046568851D4B39DE001C9851 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
+		046568861D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		046568871D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		046568881D4B39DE001C9851 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
+		046568891D4B39DE001C9851 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
 		04657FD01D32473200914495 /* EHEverydayHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayHouseViewController.h; sourceTree = "<group>"; };
 		04657FD11D32473200914495 /* EHEverydayHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHEverydayHouseViewController.m; sourceTree = "<group>"; };
 		04657FD31D324B4800914495 /* EHAntidisturbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAntidisturbViewController.h; sourceTree = "<group>"; };
@@ -271,6 +279,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				046568841D4B39DE001C9851 /* SDAutoLayout */,
 				04667FA01D49FE990051C446 /* STModal */,
 				04FD3AD01D3DDA23005B13B4 /* MBProgressHUD+YT */,
 				04FD3ACC1D3DD942005B13B4 /* YTNewCommand */,
@@ -300,6 +309,18 @@
 				048632071D3E238B00800B26 /* EHNetBusinessManager.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		046568841D4B39DE001C9851 /* SDAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				046568851D4B39DE001C9851 /* SDAutoLayout.h */,
+				046568861D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.h */,
+				046568871D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m */,
+				046568881D4B39DE001C9851 /* UIView+SDAutoLayout.h */,
+				046568891D4B39DE001C9851 /* UIView+SDAutoLayout.m */,
+			);
+			path = SDAutoLayout;
 			sourceTree = "<group>";
 		};
 		04657FC01D32464800914495 /* WechatGroup */ = {
@@ -1108,6 +1129,7 @@
 		FEC0CEEDEBE9288536D3046F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0436DFEF1D4B35360073D4CA /* libSDAutoLayout.a */,
 				04DEC4D71D4AFA6700B21766 /* libz.1.2.5.tbd */,
 				048F12A21D38C4250039808D /* libM13PDFKit.a */,
 				04C3A8D61D31FDD9003203C0 /* PDFImage.framework */,
@@ -1346,6 +1368,7 @@
 				04BB3E911D4476C5002CBF27 /* EHSiteButton.m in Sources */,
 				04657FDC1D32768B00914495 /* EHTipsViewController.m in Sources */,
 				04E7AF9F1D38EC860049E668 /* ShareView.m in Sources */,
+				0465688A1D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				047EF38D1D3A0EAA00E587BA /* EHAsiaViewCell.m in Sources */,
 				04716C071D35060B00E512EE /* AFNetworkReachabilityManager.m in Sources */,
 				04667FAA1D49FE990051C446 /* STActionSheet.m in Sources */,
@@ -1355,6 +1378,7 @@
 				048632081D3E238B00800B26 /* EHNetBusinessManager.m in Sources */,
 				04CBAE801D470035002BF215 /* EHTipsNavBottomLine.m in Sources */,
 				04E9CFF51D4608110087BD70 /* EHAgentInfoCommunityCell.m in Sources */,
+				0465688B1D4B39DE001C9851 /* UIView+SDAutoLayout.m in Sources */,
 				04667FAB1D49FE990051C446 /* STAlertView.m in Sources */,
 				04DA25E31D41E33000235C51 /* EHProfileViewController.m in Sources */,
 				0472DA531D37B48900CDE148 /* LBProgressHUD.m in Sources */,
@@ -1509,7 +1533,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ehero/Classes/Lib/FastPdfKit.embeddedframework",
 					"$(PROJECT_DIR)/ehero/Classes/Lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1517,6 +1540,7 @@
 				INFOPLIST_FILE = ehero/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1548,7 +1572,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ehero/Classes/Lib/FastPdfKit.embeddedframework",
 					"$(PROJECT_DIR)/ehero/Classes/Lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1556,6 +1579,7 @@
 				INFOPLIST_FILE = ehero/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

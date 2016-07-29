@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>OpenShare.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>446E2EEDEE23FD65A513ACAED6AFE2D9</key>
+		<key>14091E94B2E9C23272A4350994F409B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,12 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9013560CB19C8584D710F1EB46C70026</key>
+		<key>872214176C95D67809ED11374AF3A395</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9EAB3E42EF957541E6C3C76D35FD008E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C71DC8694FEFA5AC8ABB5A4B87E35CF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -68,11 +83,6 @@
 			<true/>
 		</dict>
 		<key>D79C5D02C5B82672F3342670170FC25C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EC4C050F707E13717140D5E96F0503FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

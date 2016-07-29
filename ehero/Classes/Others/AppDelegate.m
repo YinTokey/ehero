@@ -8,8 +8,7 @@
 
 #import "AppDelegate.h"
 #import "OpenShareHeader.h"
-#define ScreenHeight [[UIScreen mainScreen] bounds].size.height//获取屏幕高度，兼容性测试
-#define ScreenWidth [[UIScreen mainScreen] bounds].size.width//获取屏幕宽度，兼容性测试
+
 
 @interface AppDelegate ()
 @end
