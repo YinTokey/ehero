@@ -19,7 +19,7 @@
 #import "YTSearchBar.h"
 
 #import "AppDelegate.h"
-
+#import "SDAutoLayout.h"
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate,UITextFieldDelegate>
 {
     /** 图片数组*/
@@ -45,7 +45,7 @@
     //设置轮播图片
     sourceArr = [NSMutableArray arrayWithObjects:@"img_00",@"img_01",@"img_02",@"img_03",@"img_04", nil];
     
-    [self setupHeaderView];
+  //  [self setupHeaderView];
 
     //读取用户偏好
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -61,10 +61,13 @@
     
     [self setNavBar];
    
-    //适应storyboard
-    [AppDelegate storyBoradAutoLay:self.view];
+
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self setupHeaderView];
+}
 
 - (void)setNavBar{
     //设置导航栏按钮偏移
@@ -99,18 +102,20 @@
 
 #pragma mark - section高度设置
 //- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-//    if (section == 2) {
-//        return 5;
+//    if (section == 0) {
+//        return 10;
 //    }else{
-//        return 0.1;
+//        return  0;
 //    }
-//
 //}
 
 #pragma mark - cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 79;
+        //return 200;
+       return self.view.frame.size.width * 0.246875;
+       // return 120;
+
     }else if(indexPath.section == 1){
         return 30;
     }else{
@@ -124,6 +129,7 @@
     //第一行 4个按钮
     if (indexPath.section == 0) {
         buttonCell *cell = [buttonCell buttonCellWithTableView:tableView];
+
         cell.delegate = self;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setClickEvent];
@@ -145,7 +151,7 @@
     }else{
         
         EHEverydayhouseCell *cell = [EHEverydayhouseCell everydayhouseCellWithTableView:tableView];
-        
+   
         return cell;
     }
 
@@ -159,19 +165,13 @@
 }
 
 
-#pragma mark - section标题
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-//    if (section == 2) {
-//        return @"每日一房";
-//    }else{
-//        return @"";
-//    }
-//}
 
 - (void)setupHeaderView{
    
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width - 10, 150) imageNamesGroup:sourceArr];
-    self.tableView.tableHeaderView = cycleScrollView;
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.tableView.frame.size.width - 10, ScreenHeight * 0.3) imageNamesGroup:sourceArr];
+
+    
+   self.tableView.tableHeaderView = cycleScrollView;
 }
 
 

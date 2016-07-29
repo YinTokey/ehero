@@ -10,7 +10,7 @@
 #import <MessageUI/MessageUI.h>
 #import "AppDelegate.h"
 #import "MBProgressHUD+YT.h"
-#import <Masonry.h>
+
 #import "SDAutoLayout.h"
 @interface EHProfileViewController ()<MFMailComposeViewControllerDelegate>
 - (IBAction)skimedAgentsClick:(id)sender;
@@ -74,40 +74,7 @@
     .rightSpaceToView(self.view,ScreenWidth * 0.025)
     .heightRatioToView(self.view,0.102);
     
- //   self.tips.sd_layout
-//    .widthRatioToView (self.view,0.95)
-//    .heightRatioToView (self.view,0.0792)
-//    .leftSpaceToView (self.view,ScreenWidth * 0.025)
- //   .bottomSpaceToView (self.agents,0)
- //   .topSpaceToView (self.recentAgents,100);
-  
- //    self.agents.sd_layout
-//    .widthRatioToView (self.view,0.95)
- //   .heightRatioToView (self.view,0.0792)
-//    .leftSpaceToView (self.view,ScreenWidth * 0.025);
-//    .bottomSpaceToView (self.house,0)
-//   .topSpaceToView (self.tips,0);
-//    
-//   self.house.sd_layout
-//    .widthRatioToView (self.view,0.95)
-//   .heightRatioToView (self.view,0.0792)
-//    .leftSpaceToView (self.view,ScreenWidth * 0.025)
-//   .topSpaceToView (self.agents,0);
-//    self.contact.sd_layout
-//    .widthRatioToView (self.view,0.95)
-//    .heightRatioToView (self.view,0.0792)
-//    .leftSpaceToView (self.view,ScreenWidth * 0.025);
-//    
-//    self.about.sd_layout
-//    .widthRatioToView (self.view,0.95)
-//    .heightRatioToView (self.view,0.0792)
-//    .leftSpaceToView (self.view,ScreenWidth * 0.025);
-//    
-//    self.icon.sd_layout
-//    .widthRatioToView (self.view,0.09375)
-//    .heightRatioToView (self.view,0.1125)
-//    .bottomSpaceToView (self.view,0)
-//    .leftSpaceToView (self.view,ScreenWidth * 0.453125);
+
     
 }
 

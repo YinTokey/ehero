@@ -6,7 +6,6 @@ pod 'MJRefresh'
 pod 'SDCycleScrollView'
 pod 'OpenShare'
 pod 'MBProgressHUD', '~>1.0.0'
-pod 'Masonry'
 end
 
  

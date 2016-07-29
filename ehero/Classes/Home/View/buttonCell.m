@@ -7,8 +7,12 @@
 //
 
 #import "buttonCell.h"
-
+#import "SDAutoLayout.h"
 @interface buttonCell()
+@property (weak, nonatomic) IBOutlet UIButton *tips;
+@property (weak, nonatomic) IBOutlet UIButton *phoneCall;
+@property (weak, nonatomic) IBOutlet UIButton *wechatGroup;
+@property (weak, nonatomic) IBOutlet UIButton *everyHouse;
 
 
 
@@ -45,6 +49,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -59,6 +65,31 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"buttonCell" owner:nil options:nil] lastObject];
         
+    //    [cell setupAutoHeightWithBottomView:_view4 bottomMargin:10];
+        
+//        cell.tips.sd_layout
+//        .widthRatioToView(cell,0.246875)
+//        .heightRatioToView (cell,1)
+//        .leftSpaceToView (cell,0)
+//        .rightSpaceToView (cell.phoneCall,2);
+//        
+//        cell.phoneCall.sd_layout
+//        .widthRatioToView(cell,0.246875)
+//        .heightRatioToView (cell,1)
+//        .leftSpaceToView (cell.tips,2)
+//        .rightSpaceToView (cell.wechatGroup,2);
+//        
+//        cell.wechatGroup.sd_layout
+//        .widthRatioToView(cell,0.246875)
+//        .heightRatioToView (cell,1)
+//        .leftSpaceToView (cell.phoneCall,2)
+//        .rightSpaceToView (cell.everyHouse,2);
+//        
+//        cell.phoneCall.sd_layout
+//        .widthRatioToView(cell,0.246875)
+//        .heightRatioToView (cell,1)
+//        .leftSpaceToView (cell.wechatGroup,2)
+//        .rightSpaceToView (cell,-2);
     }
 
     return cell;
