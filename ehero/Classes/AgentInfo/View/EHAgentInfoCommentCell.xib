@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,13 +14,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" text="此小区周边配套成熟，出门过马路就是钻石网球场和奥林匹克森林公园，学校：北大为明幼儿园、北师大附中附小； 医院：眼科医院、解放军306医院、北医三院、安贞医院等； 华润万家生活广场、新奥购物广场、家乐福、物美等。幼儿园、北师大附中附小； " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OIX-xd-EL5">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="此小区周边配套成熟，出门过马路就是钻石网球场和奥林匹克森林公园，学校：北大为明幼儿园、北师大附中附小； 医院：眼科医院、解放军306医院、北医三院、安贞医院等； 华润万家生活广场、新奥购物广场、家乐福、物美等。幼儿园、北师大附中附小； " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OIX-xd-EL5">
                         <rect key="frame" x="13" y="0.0" width="294" height="113"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="OIX-xd-EL5" secondAttribute="height" multiplier="294:113" id="DMD-sU-j8F"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="OIX-xd-EL5" secondAttribute="trailing" constant="13" id="BAy-zm-dzS"/>
+                    <constraint firstAttribute="bottom" secondItem="OIX-xd-EL5" secondAttribute="bottom" constant="11" id="iHD-Lz-mTd"/>
+                    <constraint firstItem="OIX-xd-EL5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="iKd-6p-v70"/>
+                    <constraint firstItem="OIX-xd-EL5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="klo-zk-UvQ"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="commentView" destination="OIX-xd-EL5" id="AiW-Bh-m5g"/>

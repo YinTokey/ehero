@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -10,14 +11,23 @@
             <rect key="frame" x="0.0" y="0.0" width="280" height="311"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="电话" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYy-JB-Tsm">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYy-JB-Tsm">
                     <rect key="frame" x="49" y="129" width="182" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="L56-pg-PXg"/>
+                        <constraint firstAttribute="width" secondItem="WYy-JB-Tsm" secondAttribute="height" multiplier="26:3" id="MC4-u9-GfU"/>
+                        <constraint firstAttribute="width" constant="182" id="XjC-kd-Wrz"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="史大伟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyM-fS-ZM7">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="史大伟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyM-fS-ZM7">
                     <rect key="frame" x="49" y="151" width="182" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="182" id="64o-Va-ZGi"/>
+                        <constraint firstAttribute="height" constant="21" id="cJ7-hC-leu"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -44,11 +54,26 @@
                     </subviews>
                     <color key="backgroundColor" red="0.27450980392156865" green="0.71372549019607845" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="agent" translatesAutoresizingMaskIntoConstraints="NO" id="aDR-uX-Uin">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agent" translatesAutoresizingMaskIntoConstraints="NO" id="aDR-uX-Uin">
                     <rect key="frame" x="89" y="8" width="102" height="113"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="102" id="fPV-lh-7bv"/>
+                        <constraint firstAttribute="width" secondItem="aDR-uX-Uin" secondAttribute="height" multiplier="102:113" id="l67-sh-apC"/>
+                        <constraint firstAttribute="height" constant="113" id="w1F-sD-v0P"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="eyM-fS-ZM7" firstAttribute="top" secondItem="WYy-JB-Tsm" secondAttribute="bottom" constant="1" id="60k-Bz-73K"/>
+                <constraint firstItem="aDR-uX-Uin" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="KQt-Hl-J6L"/>
+                <constraint firstItem="WYy-JB-Tsm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NBU-0I-RqM"/>
+                <constraint firstAttribute="trailing" secondItem="eyM-fS-ZM7" secondAttribute="trailing" constant="49" id="QAE-UR-Mez"/>
+                <constraint firstItem="aDR-uX-Uin" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZMi-jM-aPP"/>
+                <constraint firstItem="eyM-fS-ZM7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="49" id="a59-IR-RvZ"/>
+                <constraint firstItem="WYy-JB-Tsm" firstAttribute="top" secondItem="aDR-uX-Uin" secondAttribute="bottom" constant="8" id="iFs-Oe-jTG"/>
+                <constraint firstItem="eyM-fS-ZM7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="z1v-ua-kes"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

@@ -22,7 +22,7 @@
                         <state key="normal" image="community2"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7j8-7D-Ozj">
-                        <rect key="frame" x="163" y="8" width="40" height="40"/>
+                        <rect key="frame" x="163" y="17" width="40" height="40"/>
                         <state key="normal" title="24" backgroundImage="Oval 55">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
@@ -31,14 +31,8 @@
                         <rect key="frame" x="246" y="0.0" width="120" height="74"/>
                         <state key="normal" image="community3"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90C-mX-m5G">
-                        <rect key="frame" x="286" y="8" width="40" height="40"/>
-                        <state key="normal" title="24" backgroundImage="Oval 55">
-                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </state>
-                    </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68O-SE-3rb">
-                        <rect key="frame" x="40" y="8" width="40" height="40"/>
+                        <rect key="frame" x="40" y="17" width="40" height="40"/>
                         <state key="normal" title="14" backgroundImage="Oval 55">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
@@ -46,6 +40,12 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="agent_info_comment_bar" translatesAutoresizingMaskIntoConstraints="NO" id="nl1-k9-iHi">
                         <rect key="frame" x="0.0" y="74" width="320" height="35"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90C-mX-m5G">
+                        <rect key="frame" x="286" y="17" width="40" height="40"/>
+                        <state key="normal" title="24" backgroundImage="Oval 55">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <point key="canvasLocation" x="223" y="222.5"/>
