@@ -112,10 +112,7 @@
 #pragma mark - cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        //return 200;
        return self.view.frame.size.width * 0.246875;
-       // return 120;
-
     }else if(indexPath.section == 1){
         return 30;
     }else{

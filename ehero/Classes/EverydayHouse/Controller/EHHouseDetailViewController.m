@@ -32,11 +32,11 @@
     if (indexPath.row == 0) {
         //总高度的 0.51
        // return self.view.frame.size.height * 0.51;
-        return 313;
+        return ScreenHeight * 0.551;
     }else if (indexPath.row == 1){
         //总高度的 0.352
         //return self.view.frame.size.height * 0.352;
-        return 195;
+        return ScreenHeight * 0.3345;
     }else{
         return 36;
     }
