@@ -1,11 +1,11 @@
-platform:ios, '8.0'
+platform:ios, '9.0'
 target "ehero" do
 pod 'MJExtension'
-pod 'SDWebImage'
+pod 'SDWebImage','~>3.8'
 pod 'MJRefresh'
-pod 'SDCycleScrollView','~> 1.64'
-pod 'OpenShare', '~> 0.0'
-pod 'MBProgressHUD', '~>0.9.2'
+pod 'SDCycleScrollView'
+pod 'OpenShare'
+pod 'MBProgressHUD', '~>1.0.0'
 end
 
  

@@ -16,8 +16,9 @@
 #import "EHAntidisturbViewController.h"
 #import "EHWechatGroupViewController.h"
 #import "EHCommentAgentViewController.h"
-
 #import "YTSearchBar.h"
+
+#import "AppDelegate.h"
 
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate,UITextFieldDelegate>
 {
@@ -60,6 +61,8 @@
     
     [self setNavBar];
    
+    //适应storyboard
+    [AppDelegate storyBoradAutoLay:self.view];
 }
 
 

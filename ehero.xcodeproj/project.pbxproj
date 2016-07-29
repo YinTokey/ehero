@@ -61,6 +61,7 @@
 		04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500791D3386E5009146E5 /* EHCommentAgentViewController.m */; };
 		04CBAE801D470035002BF215 /* EHTipsNavBottomLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CBAE7F1D470035002BF215 /* EHTipsNavBottomLine.m */; };
 		04DA25E31D41E33000235C51 /* EHProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DA25E21D41E33000235C51 /* EHProfileViewController.m */; };
+		04DEC4D81D4AFA6700B21766 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DEC4D71D4AFA6700B21766 /* libz.1.2.5.tbd */; };
 		04E7AF9E1D38EC860049E668 /* InnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7AF9B1D38EC860049E668 /* InnerView.m */; };
 		04E7AF9F1D38EC860049E668 /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7AF9D1D38EC860049E668 /* ShareView.m */; };
 		04E9CFA81D45CDF70087BD70 /* EHNavBackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9CFA71D45CDF70087BD70 /* EHNavBackItem.m */; };
@@ -201,6 +202,7 @@
 		04CBAE7F1D470035002BF215 /* EHTipsNavBottomLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHTipsNavBottomLine.m; path = ehero/Classes/AgentInfo/View/EHTipsNavBottomLine.m; sourceTree = SOURCE_ROOT; };
 		04DA25E11D41E33000235C51 /* EHProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHProfileViewController.h; sourceTree = "<group>"; };
 		04DA25E21D41E33000235C51 /* EHProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHProfileViewController.m; sourceTree = "<group>"; };
+		04DEC4D71D4AFA6700B21766 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		04E7AF9A1D38EC860049E668 /* InnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InnerView.h; sourceTree = "<group>"; };
 		04E7AF9B1D38EC860049E668 /* InnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InnerView.m; sourceTree = "<group>"; };
 		04E7AF9C1D38EC860049E668 /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareView.h; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DEC4D81D4AFA6700B21766 /* libz.1.2.5.tbd in Frameworks */,
 				0455CB281D48B90E00160C83 /* WebKit.framework in Frameworks */,
 				7BF95F2D53BA08DA1D11A4CF /* libPods-ehero.a in Frameworks */,
 			);
@@ -1105,6 +1108,7 @@
 		FEC0CEEDEBE9288536D3046F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04DEC4D71D4AFA6700B21766 /* libz.1.2.5.tbd */,
 				048F12A21D38C4250039808D /* libM13PDFKit.a */,
 				04C3A8D61D31FDD9003203C0 /* PDFImage.framework */,
 				04C3A8D01D31E518003203C0 /* WebKit.framework */,
@@ -1513,6 +1517,7 @@
 				INFOPLIST_FILE = ehero/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1531,6 +1536,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ehero.ehero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -1568,6 +1574,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ehero.ehero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};

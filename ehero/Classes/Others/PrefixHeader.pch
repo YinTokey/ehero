@@ -10,7 +10,6 @@
 #define PrefixHeader_pch
 
 #import "LBProgressHUD.h"
-#import "MBProgressHUD+YT.h"
 #import "EHNavBackItem.h"
 #import "EHTipsNavBottomLine.h"
 

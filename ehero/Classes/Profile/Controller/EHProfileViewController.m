@@ -8,6 +8,8 @@
 
 #import "EHProfileViewController.h"
 #import <MessageUI/MessageUI.h>
+#import "AppDelegate.h"
+#import "MBProgressHUD+YT.h"
 @interface EHProfileViewController ()<MFMailComposeViewControllerDelegate>
 - (IBAction)skimedAgentsClick:(id)sender;
 - (IBAction)skimedHouseClick:(id)sender;
@@ -35,6 +37,9 @@
     
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
+    
+    //适应storyboard
+    [AppDelegate storyBoradAutoLay:self.view];
     
 }
 

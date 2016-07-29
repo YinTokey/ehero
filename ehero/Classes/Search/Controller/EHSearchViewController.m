@@ -16,7 +16,7 @@
 #import "EHAgentInfo.h"
 #import "YTHttpTool.h"
 #import "EHNetBusinessManager.h"
-
+#import "MBProgressHUD+YT.h"
 #define searchbar_width _mysearchBar.frame.size.width
 #define searchbar_height _mysearchBar.frame.size.height
 

@@ -1,7 +1,7 @@
 PODS:
-  - MBProgressHUD (0.9.2)
-  - MJExtension (3.0.11)
-  - MJRefresh (3.1.10)
+  - MBProgressHUD (1.0.0)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.12)
   - OpenShare (0.0.1)
   - SDCycleScrollView (1.65):
     - SDWebImage (~> 3.7)
@@ -10,21 +10,21 @@ PODS:
   - SDWebImage/Core (3.8.1)
 
 DEPENDENCIES:
-  - MBProgressHUD (~> 0.9.2)
+  - MBProgressHUD (~> 1.0.0)
   - MJExtension
   - MJRefresh
-  - OpenShare (~> 0.0)
-  - SDCycleScrollView (~> 1.64)
-  - SDWebImage
+  - OpenShare
+  - SDCycleScrollView
+  - SDWebImage (~> 3.8)
 
 SPEC CHECKSUMS:
-  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  MJExtension: f9ae6ddc0f1c482c3c9af750280ccebd14381958
-  MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
 
-PODFILE CHECKSUM: d6ce9c61d0f7315bfbb0bed9e1c3f504e7d994d1
+PODFILE CHECKSUM: 3dc97feb29c0bcdcf464998cd17f4d1d167e3224
 
 COCOAPODS: 1.0.1
