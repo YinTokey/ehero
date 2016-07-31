@@ -86,6 +86,7 @@
         EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
         EHAgentInfo *agentInfo = [EHAgentInfo setWithAgentInfoController:self];
         [cell setResultCell:agentInfo];
+        cell.isdrawRect = NO;
         cell.delegate = self;
         return cell;
     }else if(indexPath.section == 1){

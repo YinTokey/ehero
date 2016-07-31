@@ -51,6 +51,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
     EHAgentInfo *agentInfo = self.searchResultArr[indexPath.row];
+    cell.isdrawRect = YES;
     [cell setResultCell:agentInfo];
     cell.delegate = self;
     return cell;

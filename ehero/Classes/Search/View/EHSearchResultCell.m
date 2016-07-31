@@ -30,21 +30,24 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    //上分割线，
-    CGContextSetStrokeColorWithColor(context,RGB(241, 243, 245).CGColor);
-    CGRect topRect = CGRectMake(-3, 0, rect.size.width , 8);
-    CGContextStrokeRect(context,topRect);
-    CGContextSetFillColorWithColor(context, RGB(241, 243, 245).CGColor);
-    CGContextFillRect(context,topRect);
     
-    //下分割线
-    CGContextSetStrokeColorWithColor(context,RGB(241, 243, 245).CGColor);
-    CGRect bottomRect = CGRectMake(0, rect.size.height, rect.size.width, 8);
-    CGContextStrokeRect(context, bottomRect);
-    CGContextSetFillColorWithColor(context, RGB(241, 243, 245).CGColor);
-    CGContextFillRect(context,topRect);
-    
+    if (self.isdrawRect == YES) {
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        //上分割线，
+        CGContextSetStrokeColorWithColor(context,RGB(241, 243, 245).CGColor);
+        CGRect topRect = CGRectMake(-3, 0, rect.size.width , 8);
+        CGContextStrokeRect(context,topRect);
+        CGContextSetFillColorWithColor(context, RGB(241, 243, 245).CGColor);
+        CGContextFillRect(context,topRect);
+        
+        //下分割线
+        CGContextSetStrokeColorWithColor(context,RGB(241, 243, 245).CGColor);
+        CGRect bottomRect = CGRectMake(0, rect.size.height, rect.size.width, 8);
+        CGContextStrokeRect(context, bottomRect);
+        CGContextSetFillColorWithColor(context, RGB(241, 243, 245).CGColor);
+        CGContextFillRect(context,topRect);
+    }
+
 }
 
 

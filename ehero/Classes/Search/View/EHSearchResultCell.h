@@ -18,11 +18,11 @@
 
 
 @interface EHSearchResultCell : UITableViewCell
-
 + (instancetype)searchResultCellWithTableView:(UITableView *)tableView;
 
 - (void)setResultCell:(EHAgentInfo *)agentInfo;
 
 @property (nonatomic,weak)id <EHSearchResultCellDelegate> delegate;
-
+//是否绘制灰色分割线
+@property (nonatomic,assign)BOOL isdrawRect;
 @end

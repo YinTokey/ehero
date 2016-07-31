@@ -45,6 +45,9 @@
     NSLog(@"screen %f",[UIScreen mainScreen].bounds.size.height);
     
     [self fitScreen];
+    
+    //跳转到下一界面的返回按钮样式
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
 }
 
 - (void)setupButtonsTextAlignment{
