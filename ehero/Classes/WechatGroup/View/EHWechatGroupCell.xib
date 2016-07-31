@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,17 +18,33 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvY-cg-IaD">
                         <rect key="frame" x="8" y="8" width="304" height="263"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="iC8-9W-E6D">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="iC8-9W-E6D">
                                 <rect key="frame" x="52" y="8" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="E7S-rh-vpC"/>
+                                    <constraint firstAttribute="width" secondItem="iC8-9W-E6D" secondAttribute="height" multiplier="1:1" id="eOA-sx-FFM"/>
+                                    <constraint firstAttribute="width" constant="200" id="en0-ms-zQP"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="望京合租群" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCL-N6-Tyy">
-                                <rect key="frame" x="78" y="221" width="148" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="望京合租群" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCL-N6-Tyy">
+                                <rect key="frame" x="52" y="221" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PBa-uP-rdY"/>
+                                    <constraint firstAttribute="width" constant="200" id="d1a-sm-bMk"/>
+                                    <constraint firstAttribute="width" secondItem="OCL-N6-Tyy" secondAttribute="height" multiplier="200:21" id="yjg-gP-q2r"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OCL-N6-Tyy" firstAttribute="top" secondItem="iC8-9W-E6D" secondAttribute="bottom" constant="13" id="Dnv-BV-60G"/>
+                            <constraint firstItem="iC8-9W-E6D" firstAttribute="top" secondItem="mvY-cg-IaD" secondAttribute="top" constant="8" id="ef3-JD-zpq"/>
+                            <constraint firstItem="iC8-9W-E6D" firstAttribute="centerX" secondItem="mvY-cg-IaD" secondAttribute="centerX" id="goM-sB-a6Z"/>
+                            <constraint firstItem="OCL-N6-Tyy" firstAttribute="centerX" secondItem="mvY-cg-IaD" secondAttribute="centerX" id="t5K-9r-lSn"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>

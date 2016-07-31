@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nXI-Mq-9gS">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
@@ -339,18 +341,33 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wechatBackground" translatesAutoresizingMaskIntoConstraints="NO" id="jCX-Yz-GId">
                                 <rect key="frame" x="20" y="90" width="280" height="401"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="iga-iM-TP3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="iga-iM-TP3">
                                 <rect key="frame" x="70" y="148" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="Wt3-ok-2W6"/>
+                                    <constraint firstAttribute="height" constant="180" id="Ycw-a4-BcP"/>
+                                    <constraint firstAttribute="width" secondItem="iga-iM-TP3" secondAttribute="height" multiplier="1:1" id="kAu-X1-i7W"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="望京合租群" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-SP-dMC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="望京合租群" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-SP-dMC">
                                 <rect key="frame" x="70" y="349" width="180" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="2h0-2D-LXb"/>
+                                    <constraint firstAttribute="width" constant="180" id="PNF-Bk-sqK"/>
+                                    <constraint firstAttribute="width" secondItem="Fb6-SP-dMC" secondAttribute="height" multiplier="20:3" id="xhH-Mj-PdR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhg-VU-mn0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhg-VU-mn0">
                                 <rect key="frame" x="52" y="509" width="216" height="30"/>
                                 <color key="backgroundColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fhg-VU-mn0" secondAttribute="height" multiplier="36:5" id="EaH-AN-MxT"/>
+                                    <constraint firstAttribute="width" constant="216" id="Kkd-J2-YmA"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ttf-hk-nUU"/>
+                                </constraints>
                                 <state key="normal" title="收藏到相册并跳转到微信扫码">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -362,9 +379,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jCX-Yz-GId" firstAttribute="top" secondItem="e3d-Tj-dEC" secondAttribute="bottom" constant="26" id="4oZ-OB-9MW"/>
+                            <constraint firstItem="fhg-VU-mn0" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="8cS-fM-f5O"/>
+                            <constraint firstItem="fhg-VU-mn0" firstAttribute="top" secondItem="jCX-Yz-GId" secondAttribute="bottom" constant="18" id="CwG-XW-QJW"/>
                             <constraint firstAttribute="trailing" secondItem="jCX-Yz-GId" secondAttribute="trailing" constant="20" id="G4m-Lp-HfT"/>
+                            <constraint firstItem="iga-iM-TP3" firstAttribute="top" secondItem="jCX-Yz-GId" secondAttribute="top" constant="58" id="Ypu-La-cBQ"/>
                             <constraint firstItem="jCX-Yz-GId" firstAttribute="leading" secondItem="nO4-3d-1Ml" secondAttribute="leading" constant="20" id="gQ2-Fl-RAm"/>
+                            <constraint firstItem="Fb6-SP-dMC" firstAttribute="top" secondItem="iga-iM-TP3" secondAttribute="bottom" constant="21" id="ofw-N9-krl"/>
                             <constraint firstItem="HYr-Cc-cji" firstAttribute="top" secondItem="jCX-Yz-GId" secondAttribute="bottom" constant="77" id="qA1-DM-2Z8"/>
+                            <constraint firstItem="Fb6-SP-dMC" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="ufM-lC-Dsq"/>
+                            <constraint firstItem="iga-iM-TP3" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="uuu-yq-gpE"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
