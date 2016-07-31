@@ -17,6 +17,7 @@
 #import "EHWechatGroupViewController.h"
 #import "EHCommentAgentViewController.h"
 #import "YTSearchBar.h"
+#import "EHHouseDetailViewController.h"
 
 #import "AppDelegate.h"
 #import "SDAutoLayout.h"
@@ -158,6 +159,10 @@
     if (indexPath.section == 1) {
         EHCommentAgentViewController *commentAgentViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"CommentAgentViewController"];
         [self.navigationController pushViewController:commentAgentViewController animated:YES];
+    }
+    if (indexPath.section == 2) {
+        EHHouseDetailViewController *houseDetailViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
+        [self.navigationController pushViewController:houseDetailViewController animated:YES];
     }
 }
 
