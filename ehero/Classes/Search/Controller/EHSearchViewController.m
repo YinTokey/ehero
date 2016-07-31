@@ -73,7 +73,7 @@
     agentInfoVC.region = agentInfo.region;
     agentInfoVC.company = agentInfo.company;
     agentInfoVC.community = agentInfo.community;
-    
+    agentInfoVC.mobile = agentInfo.mobile;
     [self.navigationController pushViewController:agentInfoVC animated:YES];
 }
 

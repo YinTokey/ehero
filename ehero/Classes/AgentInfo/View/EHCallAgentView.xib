@@ -78,6 +78,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="callView" destination="vvG-WY-4Uc" id="OIO-BF-eFx"/>
+                <outlet property="mobile" destination="WYy-JB-Tsm" id="Fdy-Cf-lpC"/>
+                <outlet property="name" destination="eyM-fS-ZM7" id="zZS-Co-2AZ"/>
+                <outlet property="txView" destination="aDR-uX-Uin" id="nIc-QW-sJs"/>
             </connections>
             <point key="canvasLocation" x="225" y="73.5"/>
         </view>

@@ -8,6 +8,7 @@
 
 #import "EHCallAgentView.h"
 
+#import "YTNetCommand.h"
 @interface EHCallAgentView()
 @property (weak, nonatomic) IBOutlet UIView *callView;
 
@@ -21,5 +22,14 @@
     return callAgentView;
 }
 
+- (void)setCallAgentViewWithName:(NSString *)name mobile:(NSString *)mobile txUrl:(NSString *)txUrl{
+
+    self.name.text = name;
+    self.mobile.text = mobile;
+    self.txView.image = [YTNetCommand downloadImageWithImgStr:txUrl
+                                          placeholderImageStr:@"Profile"
+                                                    imageView:_txView];
+
+}
 
 @end

@@ -105,7 +105,12 @@
     NSLog(@"点击经纪人详情界面的打电话");
     
     callAgentView = [EHCallAgentView initCallAgentView];
-  //  [self showViewAni:callAgentView];
+    //修改电话号码格式
+    NSMutableString *mobileString = [NSMutableString stringWithString:self.mobile];
+    [mobileString insertString:@"-" atIndex:3];
+    [mobileString insertString:@"-" atIndex:8];
+    
+    [callAgentView setCallAgentViewWithName:self.name mobile:mobileString txUrl:self.tx];
     [modal showContentView:callAgentView animated:YES];
     
 }
