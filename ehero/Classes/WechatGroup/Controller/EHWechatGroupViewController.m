@@ -23,6 +23,8 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
     [super viewDidLoad];
 
     NSLog(@"wechatGroup");
+    //跳转到下一界面的返回按钮样式
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
 }
 
 - (void)didReceiveMemoryWarning {
