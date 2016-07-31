@@ -42,6 +42,10 @@
     //初始化弹窗配置
     modal = [STModal modal];
     modal.hideWhenTouchOutside = YES;
+    
+    //设置顶部分割线
+    EHTipsNavBottomLine *lineView = [EHTipsNavBottomLine initNavBottomLineWithController:self];
+    [self.navigationController.navigationBar addSubview:lineView];
 }
 
 

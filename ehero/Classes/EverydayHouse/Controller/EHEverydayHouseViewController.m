@@ -20,6 +20,9 @@
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
 
+    //设置顶部分割线
+    EHTipsNavBottomLine *lineView = [EHTipsNavBottomLine initNavBottomLineWithController:self];
+    [self.navigationController.navigationBar addSubview:lineView];
 }
 
 
