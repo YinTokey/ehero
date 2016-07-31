@@ -7,6 +7,9 @@
 //
 
 #import "EHCommentAgentViewController.h"
+#import "YTHttpTool.h"
+
+
 @interface EHCommentAgentViewController ()<UITextFieldDelegate,UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *line1;
@@ -43,8 +46,10 @@
     [self setInitView];
     
     self.searchBar.delegate = self;
+    //联网状态监测
+    [YTHttpTool netCheck];
 }
-
+# pragma mark -初始状态，控件隐藏
 - (void)setInitView{
     self.line1.hidden = YES;
     self.line2.hidden = YES;
