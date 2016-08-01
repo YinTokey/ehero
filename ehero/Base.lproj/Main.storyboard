@@ -100,7 +100,7 @@
                             </barButtonItem>
                         </leftBarButtonItems>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="Xku-LK-M7X">
-                            <rect key="frame" x="94" y="7" width="181" height="30"/>
+                            <rect key="frame" x="94" y="7" width="191" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" backgroundImage="home_searchbar">
                                 <attributedString key="attributedTitle">
@@ -119,7 +119,7 @@
                         </button>
                         <barButtonItem key="rightBarButtonItem" width="3" style="plain" id="Lo6-dx-J6A">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lhh-UY-FAQ">
-                                <rect key="frame" x="290" y="8" width="14" height="27"/>
+                                <rect key="frame" x="291" y="8" width="13" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="home_top_right"/>
                                 <connections>

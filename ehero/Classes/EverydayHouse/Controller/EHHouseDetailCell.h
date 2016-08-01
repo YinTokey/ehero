@@ -12,4 +12,12 @@
 
 + (instancetype)houseDetailCellWithTableView:(UITableView *)tableView;
 
+@property (weak, nonatomic) IBOutlet UIImageView *blueView1;
+@property (weak, nonatomic) IBOutlet UIImageView *blueView2;
+@property (weak, nonatomic) IBOutlet UIImageView *blueView3;
+@property (weak, nonatomic) IBOutlet UIView *grayView;
+
+
+
+
 @end
