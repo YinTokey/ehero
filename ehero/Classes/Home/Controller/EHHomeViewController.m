@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *searchBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *siteBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *icon;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *profileBarButtonItem;
 - (IBAction)siteBtnClick:(UIButton *)btn;
 @property (weak, nonatomic) IBOutlet UIButton *siteBtn;
 /** 地点*/
@@ -78,6 +79,9 @@
     negativeSpacer1.width = -10;
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer1, _icon, _siteBarButtonItem, nil];
 
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:negativeSpacer1,_profileBarButtonItem,nil];
+    
+    
     //设置按钮的字体偏左(搜索框实际是个按钮)
     self.searchBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     self.searchBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
