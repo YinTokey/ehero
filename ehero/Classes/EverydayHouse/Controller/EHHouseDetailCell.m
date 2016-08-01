@@ -26,7 +26,7 @@
     EHHouseDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHHouseDetailCell" owner:nil options:nil] lastObject];
-        
+        cell.userInteractionEnabled = NO;
     }
     
     return cell;

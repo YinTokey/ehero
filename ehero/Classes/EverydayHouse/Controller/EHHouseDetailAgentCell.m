@@ -32,6 +32,7 @@
         cell.backgroundColor = RGB(241, 243, 245);
         cell.contentView.layer.cornerRadius = 5;
         cell.layer.masksToBounds = YES;
+        cell.userInteractionEnabled = NO;
     }
     
     return cell;

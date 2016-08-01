@@ -29,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *recentHouses;
 @property (weak, nonatomic) IBOutlet UIImageView *icon;
 
+@property (nonatomic,strong)UIButton *ttt;
 
 @end
 
@@ -48,6 +49,11 @@
     
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
+    
+//    UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(150, 150, 50, 50)];
+//    [self.view addSubview:bt];
+//    bt.backgroundColor = [UIColor redColor];
+//    self.ttt = bt;
 }
 
 - (void)setupButtonsTextAlignment{
@@ -95,6 +101,7 @@
 }
 
 - (IBAction)houseClick:(id)sender {
+    
 }
 
 - (IBAction)contactClick:(id)sender {

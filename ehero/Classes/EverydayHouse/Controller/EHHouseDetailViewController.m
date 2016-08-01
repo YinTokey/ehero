@@ -46,6 +46,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         EHHouseDetailCell *cell = [EHHouseDetailCell houseDetailCellWithTableView:tableView];
+        
         return cell;
     }else if (indexPath.row == 1){
         EHHouseDetailAgentCell *cell = [EHHouseDetailAgentCell houseDetailAgentCellWithTableView:tableView];
