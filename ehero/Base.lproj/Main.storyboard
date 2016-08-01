@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
@@ -343,11 +344,16 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="iga-iM-TP3">
                                 <rect key="frame" x="70" y="148" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iga-iM-TP3" secondAttribute="height" multiplier="1:1" id="Spf-h5-cfS"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="望京合租群" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-SP-dMC">
                                 <rect key="frame" x="70" y="349" width="180" height="27"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Fb6-SP-dMC" secondAttribute="height" multiplier="20:3" id="iPR-Bi-eub"/>
+                                    <constraint firstAttribute="height" constant="27" id="9bZ-kk-cxf"/>
+                                    <constraint firstAttribute="width" constant="180" id="SgR-xJ-Uxi"/>
+                                    <constraint firstAttribute="width" secondItem="Fb6-SP-dMC" secondAttribute="height" multiplier="20:3" id="zgz-yv-ESr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -371,19 +377,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Fb6-SP-dMC" secondAttribute="trailing" constant="70" id="2b1-wV-OfE"/>
                             <constraint firstItem="jCX-Yz-GId" firstAttribute="top" secondItem="e3d-Tj-dEC" secondAttribute="bottom" constant="26" id="4oZ-OB-9MW"/>
+                            <constraint firstItem="iga-iM-TP3" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="5qW-Fl-c20"/>
+                            <constraint firstItem="Fb6-SP-dMC" firstAttribute="top" secondItem="iga-iM-TP3" secondAttribute="bottom" constant="21" id="729-Zc-wbK"/>
                             <constraint firstItem="fhg-VU-mn0" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="8cS-fM-f5O"/>
                             <constraint firstItem="fhg-VU-mn0" firstAttribute="top" secondItem="jCX-Yz-GId" secondAttribute="bottom" constant="18" id="CwG-XW-QJW"/>
-                            <constraint firstItem="Fb6-SP-dMC" firstAttribute="leading" secondItem="nO4-3d-1Ml" secondAttribute="leading" constant="70" id="DcM-bp-MyH"/>
                             <constraint firstAttribute="trailing" secondItem="jCX-Yz-GId" secondAttribute="trailing" constant="20" id="G4m-Lp-HfT"/>
-                            <constraint firstItem="iga-iM-TP3" firstAttribute="width" secondItem="jCX-Yz-GId" secondAttribute="height" multiplier="180:401" id="HMb-NW-VoR"/>
-                            <constraint firstItem="iga-iM-TP3" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="IaO-Rl-3dY"/>
-                            <constraint firstItem="iga-iM-TP3" firstAttribute="top" secondItem="jCX-Yz-GId" secondAttribute="top" constant="58" id="JYF-nS-aNl"/>
+                            <constraint firstItem="Fb6-SP-dMC" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="e6E-Kp-Vu0"/>
                             <constraint firstItem="jCX-Yz-GId" firstAttribute="leading" secondItem="nO4-3d-1Ml" secondAttribute="leading" constant="20" id="gQ2-Fl-RAm"/>
-                            <constraint firstItem="Fb6-SP-dMC" firstAttribute="top" secondItem="iga-iM-TP3" secondAttribute="bottom" constant="21" id="lk5-Tq-NDH"/>
+                            <constraint firstItem="iga-iM-TP3" firstAttribute="width" secondItem="jCX-Yz-GId" secondAttribute="width" multiplier="0.6525" id="nCm-7s-chQ"/>
                             <constraint firstItem="HYr-Cc-cji" firstAttribute="top" secondItem="jCX-Yz-GId" secondAttribute="bottom" constant="77" id="qA1-DM-2Z8"/>
-                            <constraint firstItem="Fb6-SP-dMC" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="tlx-Xc-u0J"/>
+                            <constraint firstItem="iga-iM-TP3" firstAttribute="top" secondItem="jCX-Yz-GId" secondAttribute="top" constant="58" id="zHL-mk-HvO"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

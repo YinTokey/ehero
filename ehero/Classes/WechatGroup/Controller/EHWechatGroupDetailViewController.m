@@ -9,6 +9,7 @@
 #import "EHWechatGroupDetailViewController.h"
 #import <Photos/Photos.h>
 #import "MBProgressHUD+YT.h"
+
 /** 相册名字 */
 static NSString * const XMGCollectionName = @"易房好介-Photos";
 
@@ -28,9 +29,8 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
     [super viewDidLoad];
     
     self.view.backgroundColor = RGB(234, 243, 248);
+
 }
-
-
 
 
 
