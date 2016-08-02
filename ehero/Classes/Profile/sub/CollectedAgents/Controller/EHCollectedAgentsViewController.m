@@ -30,7 +30,8 @@
     //去掉分割线
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     
-    NSLog(@"collected count %d",_collectedAgentsArr.count);
+    //跳转到下一界面的返回按钮样式
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
 }
 
 
@@ -60,12 +61,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     EHAgentInfoController *agentInfoVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"AgentInfoController"];
     EHAgentInfo *agentInfo = self.collectedAgentsArr[indexPath.row];
-  //  NSLog(@"%@",agentInfo);
-//    [agentInfo getIdStringFromDictionary];
     
     agentInfoVC.agentInfo = agentInfo;
-    NSLog(@"%@",agentInfoVC.agentInfo.name);
-  // [self.navigationController pushViewController:agentInfoVC animated:YES];
+    [self.navigationController pushViewController:agentInfoVC animated:YES];
 }
 
 

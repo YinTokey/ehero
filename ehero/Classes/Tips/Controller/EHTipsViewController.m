@@ -31,7 +31,7 @@
 - (void)setupChildController{
     EHTwoViewController *one = [[EHTwoViewController alloc]init];
     one.title = @"海淀";
-    
+
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Tips" bundle:[NSBundle mainBundle]];
     
     EHAsiaViewController *two = [sb instantiateViewControllerWithIdentifier:@"AsiaViewController"];

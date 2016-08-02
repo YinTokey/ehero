@@ -99,7 +99,7 @@
 }
 
 - (IBAction)agentsClick:(id)sender {
-    EHCollectedAgentsViewController *collectedAgentsVC = [[EHCollectedAgentsViewController alloc]init];
+    EHCollectedAgentsViewController *collectedAgentsVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"CollectedAgentsViewController"];
     [self.navigationController pushViewController:collectedAgentsVC animated:YES];
 }
 

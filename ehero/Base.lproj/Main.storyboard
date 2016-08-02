@@ -800,10 +800,10 @@
             </objects>
             <point key="canvasLocation" x="-2077" y="-1020"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Collected Agents View Controller-->
         <scene sceneID="nWB-GW-dBc">
             <objects>
-                <tableViewController id="Ma0-MN-KbO" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CollectedAgentsViewController" id="Ma0-MN-KbO" customClass="EHCollectedAgentsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="stB-fR-Bpb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -833,7 +833,7 @@
         <!--Agent Info Controller-->
         <scene sceneID="VR9-Bz-Cle">
             <objects>
-                <tableViewController storyboardIdentifier="AgentInfoController" id="C27-c6-2Ge" customClass="EHAgentInfoController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AgentInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C27-c6-2Ge" customClass="EHAgentInfoController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="M5V-vv-V8I">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
