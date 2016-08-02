@@ -13,11 +13,5 @@
 @property (strong, nonatomic) UIWindow *window;
 
 
-@property float autoSizeScaleX;
-@property float autoSizeScaleY;
-
-//兼容函数(storyboard)
-+ (void)storyBoradAutoLay:(UIView *)allView;
-
 @end
 

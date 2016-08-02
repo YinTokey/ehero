@@ -85,6 +85,8 @@
     //设置按钮的字体偏左(搜索框实际是个按钮)
     self.searchBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     self.searchBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
+
+    
 }
 
 
@@ -177,7 +179,7 @@
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.tableView.frame.size.width - 10, ScreenHeight * 0.3) imageNamesGroup:sourceArr];
 
     
-   self.tableView.tableHeaderView = cycleScrollView;
+    self.tableView.tableHeaderView = cycleScrollView;
 }
 
 

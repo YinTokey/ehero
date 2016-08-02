@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     self.tableView.backgroundColor = RGB(241, 243, 245);
-    
+    self.title = @"收藏的经纪人";
     //从数据库获取数据
     self.collectedAgentsArr = [NSMutableArray arrayWithArray:[EHAgentInfo findAll]];
     
@@ -32,6 +32,8 @@
     
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
+    
+  // self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
 }
 
 
@@ -64,6 +66,22 @@
     
     agentInfoVC.agentInfo = agentInfo;
     [self.navigationController pushViewController:agentInfoVC animated:YES];
+}
+
+#warning  删除的时候要先访问到数组再删除cell，否则会出现数组越界
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewRowAction *action = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        //从数据库中删除对应的纪录
+        EHAgentInfo *agentInfo = self.collectedAgentsArr[indexPath.row];
+        [agentInfo deleteObject];
+
+        //删除cell
+        [self.collectedAgentsArr removeObjectAtIndex:indexPath.row];
+        [self.tableView reloadData];
+    }];
+
+    return @[action];
 }
 
 
