@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
@@ -11,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gf-hc-ZUJ">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gf-hc-ZUJ">
                     <rect key="frame" x="0.0" y="0.0" width="79" height="79"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="0gf-hc-ZUJ" secondAttribute="height" multiplier="1:1" id="zqv-PV-Od9"/>
@@ -31,7 +32,7 @@
                         <action selector="firstBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="XAf-aa-F5V"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-pP-7gR">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-pP-7gR">
                     <rect key="frame" x="81" y="0.0" width="79" height="79"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="1o3-pP-7gR" secondAttribute="height" multiplier="1:1" id="4hY-qO-S64"/>
@@ -51,7 +52,7 @@
                         <action selector="secondBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="7aB-Y8-wcB"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2e-Cs-qhX">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2e-Cs-qhX">
                     <rect key="frame" x="243" y="0.0" width="79" height="79"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="n2e-Cs-qhX" secondAttribute="height" multiplier="1:1" id="kjA-Hb-O1Z"/>
@@ -71,19 +72,19 @@
                         <action selector="thirdBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="YL9-eY-r9E"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="生活锦囊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syE-Df-jga">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="生活锦囊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syE-Df-jga">
                     <rect key="frame" x="18" y="50" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="每日一房" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtG-G7-hg6">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="每日一房" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtG-G7-hg6">
                     <rect key="frame" x="261" y="50" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-hW-Rc8">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-hW-Rc8">
                     <rect key="frame" x="162" y="0.0" width="79" height="79"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="OYm-hW-Rc8" secondAttribute="height" multiplier="1:1" id="F5B-TE-fmX"/>
@@ -103,13 +104,13 @@
                         <action selector="fourthBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="uMq-du-vIV"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="免扰电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upg-k7-fMa">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="免扰电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upg-k7-fMa">
                     <rect key="frame" x="99" y="50" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="微信群组" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwb-Dc-Cem">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="微信群组" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwb-Dc-Cem">
                     <rect key="frame" x="180" y="50" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -121,7 +122,9 @@
                 <constraint firstItem="WtG-G7-hg6" firstAttribute="centerX" secondItem="n2e-Cs-qhX" secondAttribute="centerX" id="0WV-bv-SSU"/>
                 <constraint firstAttribute="bottom" secondItem="kwb-Dc-Cem" secondAttribute="bottom" constant="8" id="2Nm-pj-GHe"/>
                 <constraint firstItem="0gf-hc-ZUJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5LZ-bb-q8o"/>
+                <constraint firstItem="1o3-pP-7gR" firstAttribute="top" secondItem="OYm-hW-Rc8" secondAttribute="top" id="7bc-ON-Z5T"/>
                 <constraint firstItem="1o3-pP-7gR" firstAttribute="leading" secondItem="0gf-hc-ZUJ" secondAttribute="trailing" constant="2" id="7o2-pH-lHz"/>
+                <constraint firstItem="1o3-pP-7gR" firstAttribute="top" secondItem="n2e-Cs-qhX" secondAttribute="top" id="87q-Ja-NCV"/>
                 <constraint firstAttribute="bottom" secondItem="WtG-G7-hg6" secondAttribute="bottom" constant="8" id="9mL-go-uxd"/>
                 <constraint firstItem="OYm-hW-Rc8" firstAttribute="leading" secondItem="1o3-pP-7gR" secondAttribute="trailing" constant="2" id="Ax9-Uh-uJS"/>
                 <constraint firstItem="kwb-Dc-Cem" firstAttribute="centerX" secondItem="OYm-hW-Rc8" secondAttribute="centerX" id="E21-9j-rJp"/>
@@ -130,6 +133,7 @@
                 <constraint firstAttribute="bottom" secondItem="syE-Df-jga" secondAttribute="bottom" constant="8" id="N0k-wx-DDg"/>
                 <constraint firstItem="n2e-Cs-qhX" firstAttribute="leading" secondItem="OYm-hW-Rc8" secondAttribute="trailing" constant="2" id="N3t-7L-Qan"/>
                 <constraint firstAttribute="bottom" secondItem="upg-k7-fMa" secondAttribute="bottom" constant="8" id="NlK-DL-Gb2"/>
+                <constraint firstItem="1o3-pP-7gR" firstAttribute="top" secondItem="0gf-hc-ZUJ" secondAttribute="top" id="R5W-7D-DwP"/>
                 <constraint firstAttribute="trailing" secondItem="n2e-Cs-qhX" secondAttribute="trailing" constant="-2" id="SlE-Sg-hK7"/>
                 <constraint firstItem="1o3-pP-7gR" firstAttribute="width" secondItem="0gf-hc-ZUJ" secondAttribute="width" id="Tvd-Ng-Hz5"/>
                 <constraint firstItem="n2e-Cs-qhX" firstAttribute="height" secondItem="0gf-hc-ZUJ" secondAttribute="height" id="UOs-96-Ya6"/>
@@ -150,7 +154,10 @@
                     <exclude reference="zyy-2K-M3V"/>
                     <exclude reference="N0k-wx-DDg"/>
                     <exclude reference="xga-Es-Snd"/>
+                    <exclude reference="7bc-ON-Z5T"/>
                     <exclude reference="7o2-pH-lHz"/>
+                    <exclude reference="87q-Ja-NCV"/>
+                    <exclude reference="R5W-7D-DwP"/>
                     <exclude reference="Tvd-Ng-Hz5"/>
                     <exclude reference="tbj-Ta-BZR"/>
                     <exclude reference="NlK-DL-Gb2"/>
@@ -176,7 +183,10 @@
                     <include reference="zyy-2K-M3V"/>
                     <include reference="N0k-wx-DDg"/>
                     <include reference="xga-Es-Snd"/>
+                    <include reference="7bc-ON-Z5T"/>
                     <include reference="7o2-pH-lHz"/>
+                    <include reference="87q-Ja-NCV"/>
+                    <include reference="R5W-7D-DwP"/>
                     <include reference="Tvd-Ng-Hz5"/>
                     <include reference="tbj-Ta-BZR"/>
                     <include reference="NlK-DL-Gb2"/>
