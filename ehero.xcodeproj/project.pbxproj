@@ -24,6 +24,7 @@
 		04667FAC1D49FE990051C446 /* STModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 04667FA81D49FE990051C446 /* STModal.m */; };
 		046A7C5E1D503E9600652296 /* JKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 046A7C5B1D503E9600652296 /* JKDBHelper.m */; };
 		046A7C5F1D503E9600652296 /* JKDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046A7C5D1D503E9600652296 /* JKDBModel.m */; };
+		046A7C6A1D50659B00652296 /* EHCollectedAgentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046A7C671D50659B00652296 /* EHCollectedAgentsViewController.m */; };
 		046EF2A41D44DB1D005198E6 /* EHAgentInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046EF2A31D44DB1D005198E6 /* EHAgentInfoController.m */; };
 		04716BEB1D34A4E200E512EE /* DCNavTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04716BEA1D34A4E200E512EE /* DCNavTabBarController.m */; };
 		04716BEE1D34A8E000E512EE /* EHTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04716BED1D34A8E000E512EE /* EHTwoViewController.m */; };
@@ -145,6 +146,8 @@
 		046A7C5B1D503E9600652296 /* JKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBHelper.m; sourceTree = "<group>"; };
 		046A7C5C1D503E9600652296 /* JKDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBModel.h; sourceTree = "<group>"; };
 		046A7C5D1D503E9600652296 /* JKDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBModel.m; sourceTree = "<group>"; };
+		046A7C661D50659B00652296 /* EHCollectedAgentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCollectedAgentsViewController.h; sourceTree = "<group>"; };
+		046A7C671D50659B00652296 /* EHCollectedAgentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCollectedAgentsViewController.m; sourceTree = "<group>"; };
 		046EF2A21D44DB1D005198E6 /* EHAgentInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfoController.h; sourceTree = "<group>"; };
 		046EF2A31D44DB1D005198E6 /* EHAgentInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfoController.m; sourceTree = "<group>"; };
 		04716BE91D34A4E200E512EE /* DCNavTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNavTabBarController.h; sourceTree = "<group>"; };
@@ -548,6 +551,47 @@
 			path = DBModel;
 			sourceTree = "<group>";
 		};
+		046A7C631D50659B00652296 /* sub */ = {
+			isa = PBXGroup;
+			children = (
+				046A7C641D50659B00652296 /* CollectedAgents */,
+			);
+			path = sub;
+			sourceTree = "<group>";
+		};
+		046A7C641D50659B00652296 /* CollectedAgents */ = {
+			isa = PBXGroup;
+			children = (
+				046A7C651D50659B00652296 /* Controller */,
+				046A7C681D50659B00652296 /* Model */,
+				046A7C691D50659B00652296 /* View */,
+			);
+			path = CollectedAgents;
+			sourceTree = "<group>";
+		};
+		046A7C651D50659B00652296 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				046A7C661D50659B00652296 /* EHCollectedAgentsViewController.h */,
+				046A7C671D50659B00652296 /* EHCollectedAgentsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		046A7C681D50659B00652296 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		046A7C691D50659B00652296 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04716BE81D34A4E200E512EE /* DCNavTabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -941,6 +985,7 @@
 		04DA25DD1D41E2F200235C51 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				046A7C631D50659B00652296 /* sub */,
 				04DA25DE1D41E2F200235C51 /* Controller */,
 				04DA25DF1D41E2F200235C51 /* Model */,
 				04DA25E01D41E2F200235C51 /* View */,
@@ -1451,6 +1496,7 @@
 				04667FAA1D49FE990051C446 /* STActionSheet.m in Sources */,
 				04C5004F1D336313009146E5 /* EHNewsViewController.m in Sources */,
 				04C5006E1D336FC0009146E5 /* EHWechatGroupViewController.m in Sources */,
+				046A7C6A1D50659B00652296 /* EHCollectedAgentsViewController.m in Sources */,
 				04716BEB1D34A4E200E512EE /* DCNavTabBarController.m in Sources */,
 				048632081D3E238B00800B26 /* EHNetBusinessManager.m in Sources */,
 				04CBAE801D470035002BF215 /* EHTipsNavBottomLine.m in Sources */,

@@ -10,8 +10,9 @@
 #import <MessageUI/MessageUI.h>
 #import "AppDelegate.h"
 #import "MBProgressHUD+YT.h"
-
 #import "SDAutoLayout.h"
+#import "EHCollectedAgentsViewController.h"
+
 @interface EHProfileViewController ()<MFMailComposeViewControllerDelegate>
 - (IBAction)skimedAgentsClick:(id)sender;
 - (IBAction)skimedHouseClick:(id)sender;
@@ -98,6 +99,8 @@
 }
 
 - (IBAction)agentsClick:(id)sender {
+    EHCollectedAgentsViewController *collectedAgentsVC = [[EHCollectedAgentsViewController alloc]init];
+    [self.navigationController pushViewController:collectedAgentsVC animated:YES];
 }
 
 - (IBAction)houseClick:(id)sender {
@@ -168,7 +171,6 @@
     {
         case MFMailComposeResultCancelled: // 用户取消编辑、
             [self.view makeToast:@"取消编辑" duration:1.0 position:CSToastPositionCenter];
- 
             break;
         case MFMailComposeResultSaved: // 用户保存邮件
             [self.view makeToast:@"保存邮件" duration:1.0 position:CSToastPositionCenter];
