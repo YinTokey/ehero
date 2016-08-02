@@ -10,20 +10,20 @@
 
 @implementation EHAgentInfo
 
-+ (instancetype)setWithAgentInfoController:(EHAgentInfoController *)AgentInfoController{
-    EHAgentInfo *agentInfo = [[EHAgentInfo alloc]init];
-    agentInfo.idStr = AgentInfoController.idStr;
-    agentInfo.name = AgentInfoController.name;
-    agentInfo.tx = AgentInfoController.tx;
-    agentInfo.position = AgentInfoController.position;
-    agentInfo.company = AgentInfoController.company;
-    agentInfo.region = AgentInfoController.region;
-    agentInfo.rates = AgentInfoController.rates;
-    agentInfo.community = AgentInfoController.community;
-
-    return agentInfo;
-
-}
+//+ (instancetype)setWithAgentInfoController:(EHAgentInfoController *)AgentInfoController{
+//    EHAgentInfo *agentInfo = [[EHAgentInfo alloc]init];
+//    agentInfo.idStr = AgentInfoController.idStr;
+//    agentInfo.name = AgentInfoController.name;
+//    agentInfo.tx = AgentInfoController.tx;
+//    agentInfo.position = AgentInfoController.position;
+//    agentInfo.company = AgentInfoController.company;
+//    agentInfo.region = AgentInfoController.region;
+//    agentInfo.rates = AgentInfoController.rates;
+//    agentInfo.community = AgentInfoController.community;
+//
+//    return agentInfo;
+//
+//}
 
 - (void)getIdStringFromDictionary{
     NSDictionary *idDic = self._id;

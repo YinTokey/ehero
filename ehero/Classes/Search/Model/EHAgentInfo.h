@@ -128,7 +128,7 @@
  */
 @property(nonatomic,copy)NSString *visits;
 
-+ (instancetype)setWithAgentInfoController:(EHAgentInfoController *)AgentInfoController;
+//+ (instancetype)setWithAgentInfoController:(EHAgentInfoController *)AgentInfoController;
 
 //把 _id转化为 idStr
 - (void)getIdStringFromDictionary;

@@ -22,6 +22,8 @@
 		04667FAA1D49FE990051C446 /* STActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 04667FA31D49FE990051C446 /* STActionSheet.m */; };
 		04667FAB1D49FE990051C446 /* STAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04667FA61D49FE990051C446 /* STAlertView.m */; };
 		04667FAC1D49FE990051C446 /* STModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 04667FA81D49FE990051C446 /* STModal.m */; };
+		046A7C5E1D503E9600652296 /* JKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 046A7C5B1D503E9600652296 /* JKDBHelper.m */; };
+		046A7C5F1D503E9600652296 /* JKDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046A7C5D1D503E9600652296 /* JKDBModel.m */; };
 		046EF2A41D44DB1D005198E6 /* EHAgentInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046EF2A31D44DB1D005198E6 /* EHAgentInfoController.m */; };
 		04716BEB1D34A4E200E512EE /* DCNavTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04716BEA1D34A4E200E512EE /* DCNavTabBarController.m */; };
 		04716BEE1D34A8E000E512EE /* EHTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04716BED1D34A8E000E512EE /* EHTwoViewController.m */; };
@@ -139,6 +141,10 @@
 		04667FA71D49FE990051C446 /* STModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STModal.h; sourceTree = "<group>"; };
 		04667FA81D49FE990051C446 /* STModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STModal.m; sourceTree = "<group>"; };
 		04667FA91D49FE990051C446 /* STModalUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STModalUtil.h; sourceTree = "<group>"; };
+		046A7C5A1D503E9600652296 /* JKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBHelper.h; sourceTree = "<group>"; };
+		046A7C5B1D503E9600652296 /* JKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBHelper.m; sourceTree = "<group>"; };
+		046A7C5C1D503E9600652296 /* JKDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBModel.h; sourceTree = "<group>"; };
+		046A7C5D1D503E9600652296 /* JKDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBModel.m; sourceTree = "<group>"; };
 		046EF2A21D44DB1D005198E6 /* EHAgentInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfoController.h; sourceTree = "<group>"; };
 		046EF2A31D44DB1D005198E6 /* EHAgentInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfoController.m; sourceTree = "<group>"; };
 		04716BE91D34A4E200E512EE /* DCNavTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNavTabBarController.h; sourceTree = "<group>"; };
@@ -303,6 +309,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				046A7C591D503E9600652296 /* DBModel */,
 				049AA0821D5037DD00761E3F /* Toast */,
 				049AA06D1D5034D600761E3F /* fmdb */,
 				046568841D4B39DE001C9851 /* SDAutoLayout */,
@@ -528,6 +535,17 @@
 				04667FA61D49FE990051C446 /* STAlertView.m */,
 			);
 			path = STAlertView;
+			sourceTree = "<group>";
+		};
+		046A7C591D503E9600652296 /* DBModel */ = {
+			isa = PBXGroup;
+			children = (
+				046A7C5A1D503E9600652296 /* JKDBHelper.h */,
+				046A7C5B1D503E9600652296 /* JKDBHelper.m */,
+				046A7C5C1D503E9600652296 /* JKDBModel.h */,
+				046A7C5D1D503E9600652296 /* JKDBModel.m */,
+			);
+			path = DBModel;
 			sourceTree = "<group>";
 		};
 		04716BE81D34A4E200E512EE /* DCNavTabBarController */ = {
@@ -1422,6 +1440,7 @@
 				04C5006A1D336D8B009146E5 /* EHWechatGroupCell.m in Sources */,
 				04716C091D35060B00E512EE /* AFURLRequestSerialization.m in Sources */,
 				049AA07A1D5034D600761E3F /* FMDatabase.m in Sources */,
+				046A7C5F1D503E9600652296 /* JKDBModel.m in Sources */,
 				04BB3E911D4476C5002CBF27 /* EHSiteButton.m in Sources */,
 				049AA07C1D5034D600761E3F /* FMDatabasePool.m in Sources */,
 				04657FDC1D32768B00914495 /* EHTipsViewController.m in Sources */,
@@ -1444,6 +1463,7 @@
 				04716BEE1D34A8E000E512EE /* EHTwoViewController.m in Sources */,
 				04B0EFDB1D499DD600BE301B /* EHHouseDetailViewController.m in Sources */,
 				04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */,
+				046A7C5E1D503E9600652296 /* JKDBHelper.m in Sources */,
 				049AA07E1D5034D600761E3F /* FMResultSet.m in Sources */,
 				0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */,
 				049AA07B1D5034D600761E3F /* FMDatabaseAdditions.m in Sources */,

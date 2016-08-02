@@ -67,15 +67,9 @@
     EHAgentInfoController *agentInfoVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"AgentInfoController"];
     EHAgentInfo *agentInfo = self.searchResultArr[indexPath.row];
     [agentInfo getIdStringFromDictionary];
-    //这下面几段需要重构一下
-    agentInfoVC.idStr = agentInfo.idStr;
-    agentInfoVC.name = agentInfo.name;
-    agentInfoVC.tx = agentInfo.tx;
-    agentInfoVC.rates = agentInfo.rates;
-    agentInfoVC.region = agentInfo.region;
-    agentInfoVC.company = agentInfo.company;
-    agentInfoVC.community = agentInfo.community;
-    agentInfoVC.mobile = agentInfo.mobile;
+    
+    agentInfoVC.agentInfo = agentInfo;
+    
     [self.navigationController pushViewController:agentInfoVC animated:YES];
 }
 

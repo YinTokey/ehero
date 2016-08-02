@@ -35,7 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = self.name;
+    self.title = self.agentInfo.name;
     self.view.backgroundColor = RGB(241, 243, 245);
     //初始化分享图标
     thumbImage = [UIImage imageNamed:@"share_icon"];
@@ -46,6 +46,9 @@
     //设置顶部分割线
     EHTipsNavBottomLine *lineView = [EHTipsNavBottomLine initNavBottomLineWithController:self];
     [self.navigationController.navigationBar addSubview:lineView];
+    
+
+    
 }
 
 
@@ -88,8 +91,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
-        EHAgentInfo *agentInfo = [EHAgentInfo setWithAgentInfoController:self];
-        [cell setResultCell:agentInfo];
+        [cell setResultCell:self.agentInfo];
         cell.isdrawRect = NO;
         cell.delegate = self;
         return cell;
@@ -111,11 +113,11 @@
     
     callAgentView = [EHCallAgentView initCallAgentView];
     //修改电话号码格式
-    NSMutableString *mobileString = [NSMutableString stringWithString:self.mobile];
+    NSMutableString *mobileString = [NSMutableString stringWithString:self.agentInfo.mobile];
     [mobileString insertString:@"-" atIndex:3];
     [mobileString insertString:@"-" atIndex:8];
     
-    [callAgentView setCallAgentViewWithName:self.name mobile:mobileString txUrl:self.tx];
+    [callAgentView setCallAgentViewWithName:self.agentInfo.name mobile:mobileString txUrl:self.agentInfo.tx];
     [modal showContentView:callAgentView animated:YES];
     
 }
@@ -124,10 +126,10 @@
 - (IBAction)shareBtnClick:(id)sender {
     OSMessage *msg=[[OSMessage alloc]init];
     //拼接分享页链接
-    NSString *link = [NSString stringWithFormat:@"http://ehero.cc/agents/%@",self.idStr];
+    NSString *link = [NSString stringWithFormat:@"http://ehero.cc/agents/%@",self.agentInfo.idStr];
     msg.link = link;
     //链接标题
-    NSString *title = [NSString stringWithFormat:@"为您分享经纪人:%@",self.name];
+    NSString *title = [NSString stringWithFormat:@"为您分享经纪人:%@",self.agentInfo.name];
     msg.title = title;
     msg.desc = @"大数据推荐最匹配的经纪人";
     //分享的图标
@@ -187,5 +189,9 @@
 
 }
 
+- (void)saveToDatabase{
+    
+
+}
 
 @end
