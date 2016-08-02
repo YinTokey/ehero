@@ -33,19 +33,20 @@ static JKDBHelper *_instance = nil;
 
 + (NSString *)dbPathWithDirectoryName:(NSString *)directoryName
 {
-    NSString *docsdir = [NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+ //   NSString *docsdir = [NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
     NSFileManager *filemanage = [NSFileManager defaultManager];
     if (directoryName == nil || directoryName.length == 0) {
-        docsdir = [docsdir stringByAppendingPathComponent:@"JKBD"];
+        cachePath = [cachePath stringByAppendingPathComponent:@"eHero_database"];
     } else {
-        docsdir = [docsdir stringByAppendingPathComponent:directoryName];
+        cachePath = [cachePath stringByAppendingPathComponent:directoryName];
     }
     BOOL isDir;
-    BOOL exit =[filemanage fileExistsAtPath:docsdir isDirectory:&isDir];
+    BOOL exit =[filemanage fileExistsAtPath:cachePath isDirectory:&isDir];
     if (!exit || !isDir) {
-        [filemanage createDirectoryAtPath:docsdir withIntermediateDirectories:YES attributes:nil error:nil];
+        [filemanage createDirectoryAtPath:cachePath withIntermediateDirectories:YES attributes:nil error:nil];
     }
-    NSString *dbpath = [docsdir stringByAppendingPathComponent:@"jkdb.sqlite"];
+    NSString *dbpath = [cachePath stringByAppendingPathComponent:@"ehero.sqlite"];
     return dbpath;
 }
 

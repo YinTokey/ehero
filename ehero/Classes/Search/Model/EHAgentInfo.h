@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "EHAgentInfoController.h"
+#import "JKDBModel.h"
 
-
-@interface EHAgentInfo : NSObject
+@interface EHAgentInfo : JKDBModel
 /**
  *  id (一个字典对象)
  */

@@ -182,6 +182,8 @@
     if (selectedFlag %2 == 1) {
         self.collectBtn.selected = YES;
         [self.view makeToast:@"收藏成功" duration:1.0 position:CSToastPositionCenter];
+        [self saveToDatabase];
+        
     }else{
         self.collectBtn.selected = NO;
         [self.view makeToast:@"取消收藏" duration:1.0 position:CSToastPositionCenter];
@@ -190,8 +192,7 @@
 }
 
 - (void)saveToDatabase{
-    
-
+    [self.agentInfo save];
 }
 
 @end
