@@ -45,7 +45,7 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
 
 - (void)toWechat{
     // 1.创建要打开的App的URL
-    NSURL *weixinURL = [NSURL URLWithString:@"weixin://dl/scan"];
+    NSURL *weixinURL = [NSURL URLWithString:@"weixin://timeline"];
     
     // 2.判断是否该URL可以打开
     if ([[UIApplication sharedApplication] canOpenURL:weixinURL]) {

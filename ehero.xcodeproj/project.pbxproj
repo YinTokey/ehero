@@ -44,6 +44,13 @@
 		047EF38D1D3A0EAA00E587BA /* EHAsiaViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EF38C1D3A0EAA00E587BA /* EHAsiaViewCell.m */; };
 		048632081D3E238B00800B26 /* EHNetBusinessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 048632071D3E238B00800B26 /* EHNetBusinessManager.m */; };
 		048E90761D476B46005B19BD /* EHWechatGroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048E90751D476B46005B19BD /* EHWechatGroupDetailViewController.m */; };
+		049AA07A1D5034D600761E3F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA06F1D5034D600761E3F /* FMDatabase.m */; };
+		049AA07B1D5034D600761E3F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA0711D5034D600761E3F /* FMDatabaseAdditions.m */; };
+		049AA07C1D5034D600761E3F /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA0731D5034D600761E3F /* FMDatabasePool.m */; };
+		049AA07D1D5034D600761E3F /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA0751D5034D600761E3F /* FMDatabaseQueue.m */; };
+		049AA07E1D5034D600761E3F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA0781D5034D600761E3F /* FMResultSet.m */; };
+		049AA07F1D5034D600761E3F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049AA0791D5034D600761E3F /* Info.plist */; };
+		049AA0811D50350F00761E3F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 049AA0801D50350F00761E3F /* libsqlite3.0.tbd */; };
 		04B0EFDB1D499DD600BE301B /* EHHouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFDA1D499DD600BE301B /* EHHouseDetailViewController.m */; };
 		04B0EFDF1D49A18100BE301B /* EHHouseDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFDD1D49A18100BE301B /* EHHouseDetailCell.m */; };
 		04B0EFE01D49A18100BE301B /* EHHouseDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B0EFDE1D49A18100BE301B /* EHHouseDetailCell.xib */; };
@@ -175,6 +182,19 @@
 		048E90741D476B46005B19BD /* EHWechatGroupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHWechatGroupDetailViewController.h; sourceTree = "<group>"; };
 		048E90751D476B46005B19BD /* EHWechatGroupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHWechatGroupDetailViewController.m; sourceTree = "<group>"; };
 		048F12A21D38C4250039808D /* libM13PDFKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libM13PDFKit.a; path = "../../../../../Library/Developer/Xcode/DerivedData/ehero-apyunbsyuuzpszabggkemknwzsmb/Build/Products/Debug-iphoneos/libM13PDFKit.a"; sourceTree = "<group>"; };
+		049AA06E1D5034D600761E3F /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		049AA06F1D5034D600761E3F /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		049AA0701D5034D600761E3F /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		049AA0711D5034D600761E3F /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		049AA0721D5034D600761E3F /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		049AA0731D5034D600761E3F /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		049AA0741D5034D600761E3F /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		049AA0751D5034D600761E3F /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		049AA0761D5034D600761E3F /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		049AA0771D5034D600761E3F /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		049AA0781D5034D600761E3F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		049AA0791D5034D600761E3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		049AA0801D50350F00761E3F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		04B0EFD91D499DD600BE301B /* EHHouseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHouseDetailViewController.h; sourceTree = "<group>"; };
 		04B0EFDA1D499DD600BE301B /* EHHouseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHouseDetailViewController.m; sourceTree = "<group>"; };
 		04B0EFDC1D49A18100BE301B /* EHHouseDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHouseDetailCell.h; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailCell.h; sourceTree = SOURCE_ROOT; };
@@ -253,6 +273,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049AA0811D50350F00761E3F /* libsqlite3.0.tbd in Frameworks */,
 				04DEC4D81D4AFA6700B21766 /* libz.1.2.5.tbd in Frameworks */,
 				0455CB281D48B90E00160C83 /* WebKit.framework in Frameworks */,
 				7BF95F2D53BA08DA1D11A4CF /* libPods-ehero.a in Frameworks */,
@@ -279,6 +300,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				049AA06D1D5034D600761E3F /* fmdb */,
 				046568841D4B39DE001C9851 /* SDAutoLayout */,
 				04667FA01D49FE990051C446 /* STModal */,
 				04FD3AD01D3DDA23005B13B4 /* MBProgressHUD+YT */,
@@ -570,6 +592,25 @@
 				047EB7001D44894700D2F277 /* EHSearchViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		049AA06D1D5034D600761E3F /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				049AA06E1D5034D600761E3F /* FMDatabase.h */,
+				049AA06F1D5034D600761E3F /* FMDatabase.m */,
+				049AA0701D5034D600761E3F /* FMDatabaseAdditions.h */,
+				049AA0711D5034D600761E3F /* FMDatabaseAdditions.m */,
+				049AA0721D5034D600761E3F /* FMDatabasePool.h */,
+				049AA0731D5034D600761E3F /* FMDatabasePool.m */,
+				049AA0741D5034D600761E3F /* FMDatabaseQueue.h */,
+				049AA0751D5034D600761E3F /* FMDatabaseQueue.m */,
+				049AA0761D5034D600761E3F /* FMDB.h */,
+				049AA0771D5034D600761E3F /* FMResultSet.h */,
+				049AA0781D5034D600761E3F /* FMResultSet.m */,
+				049AA0791D5034D600761E3F /* Info.plist */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 		04C3A8E51D322A66003203C0 /* AgentInfo */ = {
@@ -1129,6 +1170,7 @@
 		FEC0CEEDEBE9288536D3046F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				049AA0801D50350F00761E3F /* libsqlite3.0.tbd */,
 				0436DFEF1D4B35360073D4CA /* libSDAutoLayout.a */,
 				04DEC4D71D4AFA6700B21766 /* libz.1.2.5.tbd */,
 				048F12A21D38C4250039808D /* libM13PDFKit.a */,
@@ -1247,6 +1289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049AA07F1D5034D600761E3F /* Info.plist in Resources */,
 				04E9CFFB1D46082B0087BD70 /* EHAgentInfoCommentCell.xib in Resources */,
 				04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */,
 				04B0EFE51D49AD1A00BE301B /* EHHouseDetailAgentCell.xib in Resources */,
@@ -1365,7 +1408,9 @@
 				047EB7011D44894700D2F277 /* EHSearchViewController.m in Sources */,
 				04C5006A1D336D8B009146E5 /* EHWechatGroupCell.m in Sources */,
 				04716C091D35060B00E512EE /* AFURLRequestSerialization.m in Sources */,
+				049AA07A1D5034D600761E3F /* FMDatabase.m in Sources */,
 				04BB3E911D4476C5002CBF27 /* EHSiteButton.m in Sources */,
+				049AA07C1D5034D600761E3F /* FMDatabasePool.m in Sources */,
 				04657FDC1D32768B00914495 /* EHTipsViewController.m in Sources */,
 				04E7AF9F1D38EC860049E668 /* ShareView.m in Sources */,
 				0465688A1D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
@@ -1378,6 +1423,7 @@
 				048632081D3E238B00800B26 /* EHNetBusinessManager.m in Sources */,
 				04CBAE801D470035002BF215 /* EHTipsNavBottomLine.m in Sources */,
 				04E9CFF51D4608110087BD70 /* EHAgentInfoCommunityCell.m in Sources */,
+				049AA07D1D5034D600761E3F /* FMDatabaseQueue.m in Sources */,
 				0465688B1D4B39DE001C9851 /* UIView+SDAutoLayout.m in Sources */,
 				04667FAB1D49FE990051C446 /* STAlertView.m in Sources */,
 				04DA25E31D41E33000235C51 /* EHProfileViewController.m in Sources */,
@@ -1385,7 +1431,9 @@
 				04716BEE1D34A8E000E512EE /* EHTwoViewController.m in Sources */,
 				04B0EFDB1D499DD600BE301B /* EHHouseDetailViewController.m in Sources */,
 				04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */,
+				049AA07E1D5034D600761E3F /* FMResultSet.m in Sources */,
 				0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */,
+				049AA07B1D5034D600761E3F /* FMDatabaseAdditions.m in Sources */,
 				04E9CFA81D45CDF70087BD70 /* EHNavBackItem.m in Sources */,
 				04716C061D35060B00E512EE /* AFHTTPSessionManager.m in Sources */,
 				04B0EFE41D49AD1A00BE301B /* EHHouseDetailAgentCell.m in Sources */,
