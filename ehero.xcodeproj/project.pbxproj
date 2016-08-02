@@ -51,6 +51,7 @@
 		049AA07E1D5034D600761E3F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA0781D5034D600761E3F /* FMResultSet.m */; };
 		049AA07F1D5034D600761E3F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049AA0791D5034D600761E3F /* Info.plist */; };
 		049AA0811D50350F00761E3F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 049AA0801D50350F00761E3F /* libsqlite3.0.tbd */; };
+		049AA0851D5037DD00761E3F /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA0841D5037DD00761E3F /* UIView+Toast.m */; };
 		04B0EFDB1D499DD600BE301B /* EHHouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFDA1D499DD600BE301B /* EHHouseDetailViewController.m */; };
 		04B0EFDF1D49A18100BE301B /* EHHouseDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFDD1D49A18100BE301B /* EHHouseDetailCell.m */; };
 		04B0EFE01D49A18100BE301B /* EHHouseDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B0EFDE1D49A18100BE301B /* EHHouseDetailCell.xib */; };
@@ -195,6 +196,8 @@
 		049AA0781D5034D600761E3F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		049AA0791D5034D600761E3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049AA0801D50350F00761E3F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		049AA0831D5037DD00761E3F /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		049AA0841D5037DD00761E3F /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		04B0EFD91D499DD600BE301B /* EHHouseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHouseDetailViewController.h; sourceTree = "<group>"; };
 		04B0EFDA1D499DD600BE301B /* EHHouseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHouseDetailViewController.m; sourceTree = "<group>"; };
 		04B0EFDC1D49A18100BE301B /* EHHouseDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHouseDetailCell.h; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailCell.h; sourceTree = SOURCE_ROOT; };
@@ -300,6 +303,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				049AA0821D5037DD00761E3F /* Toast */,
 				049AA06D1D5034D600761E3F /* fmdb */,
 				046568841D4B39DE001C9851 /* SDAutoLayout */,
 				04667FA01D49FE990051C446 /* STModal */,
@@ -611,6 +615,15 @@
 				049AA0791D5034D600761E3F /* Info.plist */,
 			);
 			path = fmdb;
+			sourceTree = "<group>";
+		};
+		049AA0821D5037DD00761E3F /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				049AA0831D5037DD00761E3F /* UIView+Toast.h */,
+				049AA0841D5037DD00761E3F /* UIView+Toast.m */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		04C3A8E51D322A66003203C0 /* AgentInfo */ = {
@@ -1434,6 +1447,7 @@
 				049AA07E1D5034D600761E3F /* FMResultSet.m in Sources */,
 				0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */,
 				049AA07B1D5034D600761E3F /* FMDatabaseAdditions.m in Sources */,
+				049AA0851D5037DD00761E3F /* UIView+Toast.m in Sources */,
 				04E9CFA81D45CDF70087BD70 /* EHNavBackItem.m in Sources */,
 				04716C061D35060B00E512EE /* AFHTTPSessionManager.m in Sources */,
 				04B0EFE41D49AD1A00BE301B /* EHHouseDetailAgentCell.m in Sources */,

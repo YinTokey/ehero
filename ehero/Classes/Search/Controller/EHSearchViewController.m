@@ -148,10 +148,10 @@
 - (void)searchStatusTest{
     
     if (_searchResultArr.count == 0) {
-        [MBProgressHUD showNormalMessage:@"没有找到经纪人" showDetailText:nil toView:self.view];
+        [self.view makeToast:@"没有找到经纪人" duration:1.0 position:CSToastPositionCenter];
 
     }else{
-        [MBProgressHUD showNormalMessage:@"找到经纪人" showDetailText:nil toView:self.view];
+        [self.view makeToast:@"为您找到经纪人" duration:1.0 position:CSToastPositionCenter];
     }
 }
 

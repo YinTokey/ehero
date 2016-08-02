@@ -34,7 +34,6 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
 
 
 
-
 - (IBAction)toWechatClick:(id)sender {
     [self savePhoto];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -70,7 +69,7 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
             } error:&error];
             
             if (error) {
-                [MBProgressHUD showError:@"保存失败"];
+                [self.view makeToast:@"保存失败" duration:1.0 position:CSToastPositionCenter];
                 NSLog(@"保存失败：%@", error);
                 return;
             }
@@ -84,10 +83,11 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
             } error:&error];
             
             if (error) {
-                [MBProgressHUD showError:@"保存失败"];
+                [self.view makeToast:@"保存失败" duration:1.0 position:CSToastPositionCenter];
+
                 NSLog(@"保存失败：%@", error);
             } else {
-                [MBProgressHUD showSuccess:@"保存成功"];
+                [self.view makeToast:@"保存成功" duration:1.0 position:CSToastPositionCenter];
                 NSLog(@"保存成功");
             }
         });
@@ -115,7 +115,7 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
     } error:&error];
     
     if (error) {
-        [MBProgressHUD showError:@"获取相册失败"];
+        [self.view makeToast:@"获取相册失败" duration:1.0 position:CSToastPositionCenter];
         NSLog(@"获取相册【%@】失败", XMGCollectionName);
         return nil;
     }

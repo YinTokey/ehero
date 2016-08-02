@@ -179,10 +179,10 @@
     selectedFlag ++;
     if (selectedFlag %2 == 1) {
         self.collectBtn.selected = YES;
-        [MBProgressHUD showSuccess:@"收藏成功"];
+        [self.view makeToast:@"收藏成功" duration:1.0 position:CSToastPositionCenter];
     }else{
         self.collectBtn.selected = NO;
-        [MBProgressHUD showSuccess:@"取消收藏"];
+        [self.view makeToast:@"取消收藏" duration:1.0 position:CSToastPositionCenter];
     }
 
 }
