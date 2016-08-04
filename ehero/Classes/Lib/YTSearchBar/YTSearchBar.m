@@ -20,6 +20,11 @@
     searchBar.delegate = searchBar;
     searchBar.placeholder = placeholder;
     searchBar.tintColor = [UIColor blackColor];
+    searchBar.returnKeyType = UIReturnKeySearch;
+    searchBar.backgroundImage = [UIImage imageNamed:@"home_bar_frame"];
+    UIImageView *imgView = [[UIImageView alloc]init];
+    imgView.userInteractionEnabled = YES;
+    imgView.image = [UIImage imageNamed:@"home_bar_right_icon"];
     // [searchBar setImage:[UIImage imageNamed:@"search_sousuoicon"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
     UIView *searchBarSub = searchBar.subviews[0];
     for (UIView *subView in searchBarSub.subviews) {
@@ -39,6 +44,11 @@
             textField.textColor = [UIColor grayColor];
             [textField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
             textField.borderStyle = UITextBorderStyleNone;
+        }
+        if([subView isKindOfClass:[NSClassFromString(@"UINavigationButton") class]]) {
+            UIButton * cancel =(UIButton *)subView;
+            [cancel setTitle:@"搜索" forState:UIControlStateNormal];
+            cancel.titleLabel.font = [UIFont systemFontOfSize:14];
         }
     }
 

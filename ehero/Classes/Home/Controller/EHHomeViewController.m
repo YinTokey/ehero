@@ -21,13 +21,14 @@
 
 #import "AppDelegate.h"
 #import "SDAutoLayout.h"
+#import "EHHomeSearchBar.h"
+#import "EHSearchViewController.h"
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate,UITextFieldDelegate>
 {
     /** 图片数组*/
     NSMutableArray *sourceArr;
 }
 @property (weak, nonatomic) IBOutlet UIButton *profileBtn;
-@property (weak, nonatomic) IBOutlet UIButton *searchBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *siteBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *icon;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *profileBarButtonItem;
@@ -62,31 +63,23 @@
    // [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"profile_back"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
     [self setNavBar];
-   
+    [self setupHeaderView];
 
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    [self setupHeaderView];
+   // self.edgesForExtendedLayout = UIRectEdgeNone;
+   // [self setupHeaderView];
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
 }
 
 - (void)setNavBar{
-    //设置导航栏按钮偏移
-    UIBarButtonItem *negativeSpacer1 = [[UIBarButtonItem alloc]
-                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
-                                       target:nil action:nil];
-    negativeSpacer1.width = -10;
-    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer1, _icon, _siteBarButtonItem, nil];
+    
 
-    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:negativeSpacer1,_profileBarButtonItem,nil];
-    
-    
-    //设置按钮的字体偏左(搜索框实际是个按钮)
-    self.searchBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    self.searchBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
-
-    
+    EHHomeSearchBar *searchbar = [[EHHomeSearchBar alloc]initWithFrame:CGRectMake(20, 20, ScreenWidth, 30)];
+    searchbar.clipsToBounds = YES;
+    searchbar.delegate = self;
+    self.navigationItem.titleView = searchbar;
 }
 
 
@@ -177,8 +170,7 @@
 - (void)setupHeaderView{
    
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.tableView.frame.size.width - 10, ScreenHeight * 0.3) imageNamesGroup:sourceArr];
-
-    
+   
     self.tableView.tableHeaderView = cycleScrollView;
 }
 
@@ -192,8 +184,8 @@
 
 #pragma mark - textfield delegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
-    NSLog(@"g");
-
+        EHSearchViewController *searchVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"SearchViewController"];
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 
 
@@ -263,7 +255,6 @@
 
 - (void)thirdBtnClick:(UITableViewCell *)cell{
     EHEverydayHouseViewController *everydayHouseViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"EverydayHouseViewController"];
-    
     [self.navigationController pushViewController:everydayHouseViewController animated:YES];
 }
 

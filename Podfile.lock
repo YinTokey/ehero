@@ -8,6 +8,7 @@ PODS:
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
+  - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
   - MBProgressHUD (~> 1.0.0)
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - OpenShare
   - SDCycleScrollView
   - SDWebImage (~> 3.8)
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -24,7 +26,8 @@ SPEC CHECKSUMS:
   OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 3dc97feb29c0bcdcf464998cd17f4d1d167e3224
+PODFILE CHECKSUM: dcfce01d9a80381b1ff6d2529f0e0d17b6be1d36
 
 COCOAPODS: 1.0.1

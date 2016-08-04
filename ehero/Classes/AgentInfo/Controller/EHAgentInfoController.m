@@ -47,11 +47,16 @@
     EHTipsNavBottomLine *lineView = [EHTipsNavBottomLine initNavBottomLineWithController:self];
     [self.navigationController.navigationBar addSubview:lineView];
     
-
+    
+ //   NSString *sql = [NSString stringWithFormat:@"where name = %@",self.agentInfo.name];
+    [self isCollected];
     
 }
 
-
+- (void)viewWillAppear:(BOOL)animated{
+   // [self isCollected];
+    
+}
 
 #pragma mark - Table view data source
 //
@@ -193,6 +198,17 @@
 
 - (void)saveToDatabase{
     [self.agentInfo save];
+}
+
+- (void)isCollected{
+    NSString *sql = [NSString stringWithFormat:@"where name = %@",self.agentInfo.name];
+    if ([EHAgentInfo findByCriteria:sql] == nil) {
+        self.collectBtn.selected = NO;
+        
+    }else{
+        self.collectBtn.selected = YES;
+    }
+    
 }
 
 @end

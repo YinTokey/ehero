@@ -95,18 +95,18 @@
                         <nil key="title"/>
                         <leftBarButtonItems>
                             <barButtonItem style="plain" id="2IK-74-1OK">
-                                <inset key="imageInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageInsets" minX="-5" minY="-5" maxX="0.0" maxY="0.0"/>
                                 <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="Qyb-dI-DhU">
-                                    <rect key="frame" x="16" y="4" width="26" height="35"/>
+                                    <rect key="frame" x="16" y="2" width="34" height="39"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="home_top_left"/>
                                 </button>
                             </barButtonItem>
                             <barButtonItem style="plain" id="Jxl-ic-awF">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Y9z-Uv-fXY" customClass="EHSiteButton">
-                                    <rect key="frame" x="50" y="11" width="38" height="22"/>
+                                    <rect key="frame" x="58" y="11" width="45" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <state key="normal" title="北京" image="home_two">
                                         <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
@@ -116,53 +116,42 @@
                                 </button>
                             </barButtonItem>
                         </leftBarButtonItems>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="Xku-LK-M7X">
-                            <rect key="frame" x="94" y="7" width="191" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" backgroundImage="home_searchbar">
-                                <attributedString key="attributedTitle">
-                                    <fragment content="输入小区或商圈名称">
-                                        <attributes>
-                                            <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="13" name="PingFangSC-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                            </state>
-                            <connections>
-                                <segue destination="Frh-BS-zpg" kind="show" id="NaX-kz-88j"/>
-                            </connections>
-                        </button>
-                        <barButtonItem key="rightBarButtonItem" width="3" style="plain" id="Lo6-dx-J6A">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lhh-UY-FAQ">
-                                <rect key="frame" x="291" y="8" width="13" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="home_top_right"/>
-                                <connections>
-                                    <segue destination="1ff-Qr-lH1" kind="show" id="xZJ-qi-NBk"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem width="3" style="plain" id="Lo6-dx-J6A">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lhh-UY-FAQ">
+                                    <rect key="frame" x="291" y="8" width="13" height="27"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="home_top_right"/>
+                                    <connections>
+                                        <segue destination="1ff-Qr-lH1" kind="show" id="xZJ-qi-NBk"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="APU-Df-m8p">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oyR-Ur-Zha">
+                                    <rect key="frame" x="280" y="7" width="3" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="icon" destination="2IK-74-1OK" id="PWG-Kh-T1F"/>
                         <outlet property="profileBarButtonItem" destination="Lo6-dx-J6A" id="cBq-IG-9HB"/>
                         <outlet property="profileBtn" destination="Lhh-UY-FAQ" id="TPa-4f-biV"/>
-                        <outlet property="searchBtn" destination="Xku-LK-M7X" id="Fof-Rg-PIh"/>
                         <outlet property="siteBarButtonItem" destination="Jxl-ic-awF" id="NbO-ZG-II3"/>
                         <outlet property="siteBtn" destination="Y9z-Uv-fXY" id="ERk-bh-xS3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP1-S5-T8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-270" y="-1106"/>
+            <point key="canvasLocation" x="-251" y="-1208"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="b6y-a8-fld">
             <objects>
-                <tableViewController id="Frh-BS-zpg" customClass="EHSearchViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SearchViewController" id="Frh-BS-zpg" customClass="EHSearchViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pb7-7n-iFy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +163,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="jlK-uK-epl">
                         <nil key="title"/>
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="search_bar" id="HCP-Ga-PUX">
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="home_bar_frame" id="HCP-Ga-PUX" customClass="EHSearchBar">
                             <rect key="frame" x="8" y="7" width="304" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <nil key="textColor"/>
@@ -365,6 +354,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iga-iM-TP3" secondAttribute="height" multiplier="1:1" id="Spf-h5-cfS"/>
                                 </constraints>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="69" y="104" width="182" height="183"/>
+                                </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="望京合租群" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-SP-dMC">
                                 <rect key="frame" x="70" y="349" width="180" height="27"/>
@@ -376,6 +368,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="70" y="308" width="180" height="27"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhg-VU-mn0">
                                 <rect key="frame" x="52" y="509" width="216" height="30"/>
@@ -628,7 +623,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wy1-OO-vK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="-968"/>
+            <point key="canvasLocation" x="301.5" y="-987"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="37s-O8-rGc">
@@ -942,6 +937,7 @@
         <image name="area_background" width="100" height="26"/>
         <image name="commentBtn1" width="160" height="48"/>
         <image name="commentBtn2" width="160" height="48"/>
+        <image name="home_bar_frame" width="462" height="51"/>
         <image name="home_searchbar" width="462" height="51"/>
         <image name="home_top_left" width="43" height="50"/>
         <image name="home_top_right" width="35" height="67"/>
@@ -955,11 +951,9 @@
         <image name="profile_btn6" width="711" height="89"/>
         <image name="profile_btn7" width="710" height="88"/>
         <image name="profile_img" width="41" height="47"/>
-        <image name="search_bar" width="596" height="38"/>
         <image name="wechatBackground" width="615" height="971"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NaX-kz-88j"/>
         <segue reference="xZJ-qi-NBk"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,10 +17,14 @@
 #import "YTHttpTool.h"
 #import "EHNetBusinessManager.h"
 #import "MBProgressHUD+YT.h"
+
+#import "EHSearchBar.h"
+
 #define searchbar_width _mysearchBar.frame.size.width
 #define searchbar_height _mysearchBar.frame.size.height
 
 @interface EHSearchViewController ()<UITextFieldDelegate,EHNetBusinessManagerDelegate,EHSearchResultCellDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *mysearchBar;
 @property (nonatomic,strong) NSMutableArray *searchResultArr;
 
@@ -40,7 +44,7 @@
     [YTHttpTool netCheck];
 
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
-    
+
 }
 
 
@@ -99,6 +103,10 @@
 
 - (void)setupSearchBar{
 
+    EHSearchBar *search = [[EHSearchBar alloc]initWithFrame:CGRectMake(20, 20, ScreenWidth, 30)];
+    search.clipsToBounds = YES;
+    self.mysearchBar = search;
+    self.navigationItem.titleView = _mysearchBar;
     self.mysearchBar.delegate = self;
     [self.mysearchBar becomeFirstResponder];
 }

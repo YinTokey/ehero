@@ -7,7 +7,7 @@
 //
 
 #import "YTHttpTool.h"
-#import "MBProgressHUD+YT.h"
+
 @implementation YTHttpTool
 
 
@@ -62,8 +62,8 @@
         if (status==AFNetworkReachabilityStatusReachableViaWiFi ||status==AFNetworkReachabilityStatusReachableViaWWAN) {
             NSLog(@"可以联网");
         }else if(status==AFNetworkReachabilityStatusNotReachable){
+            [SVProgressHUD showWithStatus:@"请检查网路连接"];
             
-            [MBProgressHUD showError:@"请检查网络连接"];
         }else{
             NSLog(@"未知网络");
         }
