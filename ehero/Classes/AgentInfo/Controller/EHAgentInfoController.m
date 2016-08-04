@@ -50,7 +50,8 @@
     
  //   NSString *sql = [NSString stringWithFormat:@"where name = %@",self.agentInfo.name];
     [self isCollected];
-    
+
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -201,14 +202,15 @@
 }
 
 - (void)isCollected{
-    NSString *sql = [NSString stringWithFormat:@"where name = %@",self.agentInfo.name];
-    if ([EHAgentInfo findByCriteria:sql] == nil) {
-        self.collectBtn.selected = NO;
-        
-    }else{
-        self.collectBtn.selected = YES;
+    //查询全部效率比较低，以后要改，暂时先这样写
+    NSArray *AgentsArr = [EHAgentInfo findAll];
+    for (EHAgentInfo *info in AgentsArr) {
+        if ([info.name isEqualToString:self.agentInfo.name]) {
+            self.collectBtn.selected = YES;
+        }else{
+            self.collectBtn.selected = NO;
+        }
     }
-    
 }
 
 @end

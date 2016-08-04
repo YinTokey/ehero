@@ -105,7 +105,7 @@
 }
 
 - (IBAction)houseClick:(id)sender {
-
+    
 }
 
 - (IBAction)contactClick:(id)sender {

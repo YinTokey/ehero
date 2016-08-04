@@ -79,8 +79,7 @@ static EHNetBusinessManager *_manager;
                 {
                     [self.delegate EHNetBusinessDataFetchedSuccess:responseObj forAction:action andIdentifier:self.identifier];
                     
-                }
-            
+                }    
         }
 
     } failure:^(NSError *error) {

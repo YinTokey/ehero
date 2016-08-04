@@ -44,6 +44,8 @@
 
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
 
+    NSLog(@"%@",[EHAgentInfo findFirstByCriteria:@"where name = 赵洪涛"]);
+    
 }
 
 
