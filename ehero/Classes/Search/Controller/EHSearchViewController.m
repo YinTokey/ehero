@@ -17,7 +17,6 @@
 #import "YTHttpTool.h"
 #import "EHNetBusinessManager.h"
 #import "MBProgressHUD+YT.h"
-
 #import "EHSearchBar.h"
 
 #define searchbar_width _mysearchBar.frame.size.width
@@ -151,7 +150,6 @@
     
     if (_searchResultArr.count == 0) {
         [self.view makeToast:@"没有找到经纪人" duration:1.0 position:CSToastPositionCenter];
-
     }else{
         [self.view makeToast:@"为您找到经纪人" duration:1.0 position:CSToastPositionCenter];
     }

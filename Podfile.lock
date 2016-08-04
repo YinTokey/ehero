@@ -1,5 +1,5 @@
 PODS:
-  - MBProgressHUD (1.0.0)
+  - MBProgressHUD (0.9.2)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - OpenShare (0.0.1)
@@ -11,7 +11,7 @@ PODS:
   - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
-  - MBProgressHUD (~> 1.0.0)
+  - MBProgressHUD (~> 0.9.2)
   - MJExtension
   - MJRefresh
   - OpenShare
@@ -20,7 +20,7 @@ DEPENDENCIES:
   - SVProgressHUD
 
 SPEC CHECKSUMS:
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
@@ -28,6 +28,6 @@ SPEC CHECKSUMS:
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: dcfce01d9a80381b1ff6d2529f0e0d17b6be1d36
+PODFILE CHECKSUM: 38b610c480b2aa9b70252876f6b41e452f33083c
 
 COCOAPODS: 1.0.1

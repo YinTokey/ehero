@@ -33,7 +33,7 @@
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
     
-  // self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
+    NSLog(@"collected count %d",self.collectedAgentsArr.count);
 }
 
 

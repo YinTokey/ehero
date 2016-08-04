@@ -15,7 +15,7 @@
 #import <OpenShareHeader.h>
 #import "EHCallAgentView.h"
 #import "STModal.h"
-#import "MBProgressHUD+YT.h"
+
 @interface EHAgentInfoController ()<EHSearchResultCellDelegate>
 {
     EHCallAgentView *callAgentView;

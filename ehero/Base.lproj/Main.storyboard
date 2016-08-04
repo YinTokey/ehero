@@ -573,6 +573,15 @@
                             <constraint firstAttribute="trailing" secondItem="ivr-5s-0O1" secondAttribute="trailing" constant="8" id="zfi-rn-he4"/>
                             <constraint firstItem="hOi-6h-cY7" firstAttribute="top" secondItem="5Kf-cu-q5V" secondAttribute="bottom" id="zvW-Q6-Wm4"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WNV-5n-ou6"/>
+                                <exclude reference="ubS-X8-1FI"/>
+                                <exclude reference="dab-Lq-Msm"/>
+                                <exclude reference="emG-D4-kTr"/>
+                                <exclude reference="olv-44-krf"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="个人中心" id="Yrx-rh-eeK"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

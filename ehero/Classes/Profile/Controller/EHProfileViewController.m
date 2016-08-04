@@ -12,6 +12,7 @@
 #import "MBProgressHUD+YT.h"
 #import "SDAutoLayout.h"
 #import "EHCollectedAgentsViewController.h"
+#import <MBProgressHUD.h>
 
 @interface EHProfileViewController ()<MFMailComposeViewControllerDelegate>
 - (IBAction)skimedAgentsClick:(id)sender;
@@ -55,6 +56,7 @@
 //    [self.view addSubview:bt];
 //    bt.backgroundColor = [UIColor redColor];
 //    self.ttt = bt;
+    
 }
 
 - (void)setupButtonsTextAlignment{
@@ -77,8 +79,7 @@
     .widthRatioToView(self.view,0.468)
     .leftSpaceToView(self.view,ScreenWidth * 0.025)
     .heightRatioToView(self.view,0.102);
-    
-    
+
      self.recentHouses.sd_layout
     .widthRatioToView(self.view,0.468)
     .rightSpaceToView(self.view,ScreenWidth * 0.025)
@@ -104,7 +105,7 @@
 }
 
 - (IBAction)houseClick:(id)sender {
-    
+
 }
 
 - (IBAction)contactClick:(id)sender {
@@ -159,8 +160,6 @@
     [self presentViewController:mailCompose animated:YES completion:nil];
     //[MBProgressHUD showNormalMessage:@"Set your email!" showDetailText:nil  toView:self.view];
 }
-
-
 
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller
