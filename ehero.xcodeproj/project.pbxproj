@@ -78,6 +78,7 @@
 		04C8FDDE1D5426310081CE73 /* EHHomeAgentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C8FDDC1D5426310081CE73 /* EHHomeAgentCell.xib */; };
 		04C8FDE11D54744B0081CE73 /* EHVerifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C8FDE01D54744B0081CE73 /* EHVerifyView.m */; };
 		04C8FDE31D5484010081CE73 /* EHVerifyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C8FDE21D5484010081CE73 /* EHVerifyView.xib */; };
+		04C8FDE71D54A1080081CE73 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C8FDE61D54A1080081CE73 /* MZTimerLabel.m */; };
 		04CBAE801D470035002BF215 /* EHTipsNavBottomLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CBAE7F1D470035002BF215 /* EHTipsNavBottomLine.m */; };
 		04DA25E31D41E33000235C51 /* EHProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DA25E21D41E33000235C51 /* EHProfileViewController.m */; };
 		04DEC4D81D4AFA6700B21766 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DEC4D71D4AFA6700B21766 /* libz.1.2.5.tbd */; };
@@ -254,6 +255,8 @@
 		04C8FDDF1D54744B0081CE73 /* EHVerifyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHVerifyView.h; sourceTree = "<group>"; };
 		04C8FDE01D54744B0081CE73 /* EHVerifyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHVerifyView.m; sourceTree = "<group>"; };
 		04C8FDE21D5484010081CE73 /* EHVerifyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHVerifyView.xib; sourceTree = "<group>"; };
+		04C8FDE51D54A1080081CE73 /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimerLabel.h; sourceTree = "<group>"; };
+		04C8FDE61D54A1080081CE73 /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTimerLabel.m; sourceTree = "<group>"; };
 		04CBAE7E1D470035002BF215 /* EHTipsNavBottomLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHTipsNavBottomLine.h; path = ehero/Classes/AgentInfo/View/EHTipsNavBottomLine.h; sourceTree = SOURCE_ROOT; };
 		04CBAE7F1D470035002BF215 /* EHTipsNavBottomLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHTipsNavBottomLine.m; path = ehero/Classes/AgentInfo/View/EHTipsNavBottomLine.m; sourceTree = SOURCE_ROOT; };
 		04DA25E11D41E33000235C51 /* EHProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHProfileViewController.h; sourceTree = "<group>"; };
@@ -328,6 +331,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				04C8FDE41D54A0F40081CE73 /* MZTimerLabel */,
 				046A7C591D503E9600652296 /* DBModel */,
 				049AA0821D5037DD00761E3F /* Toast */,
 				049AA06D1D5034D600761E3F /* fmdb */,
@@ -998,6 +1002,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		04C8FDE41D54A0F40081CE73 /* MZTimerLabel */ = {
+			isa = PBXGroup;
+			children = (
+				04C8FDE51D54A1080081CE73 /* MZTimerLabel.h */,
+				04C8FDE61D54A1080081CE73 /* MZTimerLabel.m */,
+			);
+			path = MZTimerLabel;
+			sourceTree = "<group>";
+		};
 		04DA25DD1D41E2F200235C51 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -1485,6 +1498,7 @@
 				04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */,
 				04200C371D2F7A7A005DC042 /* XTPopView.m in Sources */,
 				0472DA571D37BA5400CDE148 /* YTHttpTool.m in Sources */,
+				04C8FDE71D54A1080081CE73 /* MZTimerLabel.m in Sources */,
 				046EF2A41D44DB1D005198E6 /* EHAgentInfoController.m in Sources */,
 				04716C0A1D35060B00E512EE /* AFURLResponseSerialization.m in Sources */,
 				04667FAC1D49FE990051C446 /* STModal.m in Sources */,
