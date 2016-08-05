@@ -74,6 +74,8 @@
 		04C5006B1D336D8B009146E5 /* EHWechatGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C500691D336D8B009146E5 /* EHWechatGroupCell.xib */; };
 		04C5006E1D336FC0009146E5 /* EHWechatGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5006D1D336FC0009146E5 /* EHWechatGroupViewController.m */; };
 		04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500791D3386E5009146E5 /* EHCommentAgentViewController.m */; };
+		04C8FDDD1D5426310081CE73 /* EHHomeAgentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C8FDDB1D5426310081CE73 /* EHHomeAgentCell.m */; };
+		04C8FDDE1D5426310081CE73 /* EHHomeAgentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C8FDDC1D5426310081CE73 /* EHHomeAgentCell.xib */; };
 		04CBAE801D470035002BF215 /* EHTipsNavBottomLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CBAE7F1D470035002BF215 /* EHTipsNavBottomLine.m */; };
 		04DA25E31D41E33000235C51 /* EHProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DA25E21D41E33000235C51 /* EHProfileViewController.m */; };
 		04DEC4D81D4AFA6700B21766 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DEC4D71D4AFA6700B21766 /* libz.1.2.5.tbd */; };
@@ -244,6 +246,9 @@
 		04C500781D3386E5009146E5 /* EHCommentAgentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCommentAgentViewController.h; sourceTree = "<group>"; };
 		04C500791D3386E5009146E5 /* EHCommentAgentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCommentAgentViewController.m; sourceTree = "<group>"; };
 		04C5FFDE1D333292009146E5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		04C8FDDA1D5426310081CE73 /* EHHomeAgentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHomeAgentCell.h; sourceTree = "<group>"; };
+		04C8FDDB1D5426310081CE73 /* EHHomeAgentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHomeAgentCell.m; sourceTree = "<group>"; };
+		04C8FDDC1D5426310081CE73 /* EHHomeAgentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHHomeAgentCell.xib; sourceTree = "<group>"; };
 		04CBAE7E1D470035002BF215 /* EHTipsNavBottomLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHTipsNavBottomLine.h; path = ehero/Classes/AgentInfo/View/EHTipsNavBottomLine.h; sourceTree = SOURCE_ROOT; };
 		04CBAE7F1D470035002BF215 /* EHTipsNavBottomLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHTipsNavBottomLine.m; path = ehero/Classes/AgentInfo/View/EHTipsNavBottomLine.m; sourceTree = SOURCE_ROOT; };
 		04DA25E11D41E33000235C51 /* EHProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHProfileViewController.h; sourceTree = "<group>"; };
@@ -1189,6 +1194,9 @@
 				04BB3E901D4476C5002CBF27 /* EHSiteButton.m */,
 				04E9CFA61D45CDF70087BD70 /* EHNavBackItem.h */,
 				04E9CFA71D45CDF70087BD70 /* EHNavBackItem.m */,
+				04C8FDDA1D5426310081CE73 /* EHHomeAgentCell.h */,
+				04C8FDDB1D5426310081CE73 /* EHHomeAgentCell.m */,
+				04C8FDDC1D5426310081CE73 /* EHHomeAgentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1388,6 +1396,7 @@
 				04C5006B1D336D8B009146E5 /* EHWechatGroupCell.xib in Resources */,
 				04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */,
 				04B0EFEA1D49B79700BE301B /* EHHouseDetailCallCell.xib in Resources */,
+				04C8FDDE1D5426310081CE73 /* EHHomeAgentCell.xib in Resources */,
 				047EF38A1D39FFEF00E587BA /* Tips.storyboard in Resources */,
 				04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */,
 				04C3A8E41D321FE2003203C0 /* EHSearchResultCell.xib in Resources */,
@@ -1520,6 +1529,7 @@
 				042B43DC1D5322EE005FCFB0 /* EHHomeSearchBar.m in Sources */,
 				04716BEE1D34A8E000E512EE /* EHTwoViewController.m in Sources */,
 				04B0EFDB1D499DD600BE301B /* EHHouseDetailViewController.m in Sources */,
+				04C8FDDD1D5426310081CE73 /* EHHomeAgentCell.m in Sources */,
 				04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */,
 				046A7C5E1D503E9600652296 /* JKDBHelper.m in Sources */,
 				049AA07E1D5034D600761E3F /* FMResultSet.m in Sources */,

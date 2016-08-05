@@ -23,6 +23,8 @@
 #import "SDAutoLayout.h"
 #import "EHHomeSearchBar.h"
 #import "EHSearchViewController.h"
+#import "EHHomeAgentCell.h"
+
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate,UITextFieldDelegate>
 {
     /** 图片数组*/
@@ -87,12 +89,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    if (section == 2) {
+    if (section == 3) {
         return 5;
     }else{
         return 1;
@@ -101,13 +103,13 @@
 }
 
 #pragma mark - section高度设置
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-//    if (section == 0) {
-//        return 10;
-//    }else{
-//        return  0;
-//    }
-//}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 2) {
+        return 10;
+    }else{
+        return  0;
+    }
+}
 
 #pragma mark - cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -115,6 +117,8 @@
        return self.view.frame.size.width * 0.246875;
     }else if(indexPath.section == 1){
         return 30;
+    }else if(indexPath.section == 2){
+        return 85;
     }else{
         return 94;
     }
@@ -143,8 +147,12 @@
 
        // EHCommentAgentCell *cell = [EHCommentAgentCell commentAgentCellWithTableView:tableView];
         return cell;
-     
-    //第三行 每日一房
+    //第三行，显示一个经纪人
+    }else if(indexPath.section == 2){
+        EHHomeAgentCell *cell = [EHHomeAgentCell homeAgentCellWithTableView:tableView];
+        return cell;
+        
+    //第四行 每日一房
     }else{
         
         EHEverydayhouseCell *cell = [EHEverydayhouseCell everydayhouseCellWithTableView:tableView];
@@ -159,7 +167,7 @@
         EHCommentAgentViewController *commentAgentViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"CommentAgentViewController"];
         [self.navigationController pushViewController:commentAgentViewController animated:YES];
     }
-    if (indexPath.section == 2) {
+    if (indexPath.section == 3) {
         EHHouseDetailViewController *houseDetailViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
         [self.navigationController pushViewController:houseDetailViewController animated:YES];
     }
