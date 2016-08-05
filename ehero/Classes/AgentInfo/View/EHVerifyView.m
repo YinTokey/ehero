@@ -27,14 +27,18 @@
 }
 
 - (void)setupCountdownBtn{
-    UIButton *sendCodeBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, self.myPhoneNumber.bounds.size.width / 4, self.myPhoneNumber.bounds.size.height)];
-    sendCodeBtn.titleLabel.text = @"发送验证码";
-    sendCodeBtn.titleLabel.tintColor = [UIColor whiteColor];
-    sendCodeBtn.backgroundColor = RGB(89, 182, 210);
+    UIButton *sendCodeBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, self.myPhoneNumber.bounds.size.width / 3.5, self.myPhoneNumber.bounds.size.height)];
+    [sendCodeBtn setTitle:@"发送验证码" forState:UIControlStateNormal];
+    sendCodeBtn.titleLabel.font = [UIFont systemFontOfSize: 14.0];
+    sendCodeBtn.titleLabel.textColor = [UIColor whiteColor];
+    [sendCodeBtn setBackgroundImage:[UIImage imageNamed:@"sendCodeBtn"] forState:UIControlStateNormal];
     [sendCodeBtn addTarget:self action:@selector(sendClick) forControlEvents:UIControlEventTouchUpInside];
     self.myPhoneNumber.rightView = sendCodeBtn;
     self.myPhoneNumber.rightViewMode = UITextFieldViewModeAlways;
-
+    //添加边框
+    self.code.layer.borderColor = [[UIColor lightGrayColor]CGColor];
+    self.myPhoneNumber.layer.borderColor = [[UIColor lightGrayColor]CGColor];
+    
 }
 
 - (void)sendClick{
