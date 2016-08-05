@@ -67,6 +67,7 @@
     [self setNavBar];
     [self setupHeaderView];
 
+   
 }
 
 - (void)viewWillAppear:(BOOL)animated{

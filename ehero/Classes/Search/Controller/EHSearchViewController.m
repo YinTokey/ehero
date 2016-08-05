@@ -19,6 +19,7 @@
 #import "MBProgressHUD+YT.h"
 #import "EHSearchBar.h"
 
+
 #define searchbar_width _mysearchBar.frame.size.width
 #define searchbar_height _mysearchBar.frame.size.height
 
@@ -82,6 +83,8 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
 
     NSLog(@"begin edit");
+    
+
 }
 
 
@@ -91,6 +94,17 @@
     [self.searchResultArr removeAllObjects];
     [self searchClick];
     [self.mysearchBar resignFirstResponder ];
+    
+//    //http://ehero.cc/users/sms.json
+//    NSDictionary *params = @{@"mobile":@"18396532162",
+//                             @"id":@"57430a69724e1130b2517d92",
+//                             @"code":@"7992"};
+//    [YTHttpTool post:@"http://www.ehero.cc/agents/call.json" params:params success:^(id responseObj) {
+//        NSLog(@"%@",responseObj);
+//    } failure:^(NSError *error) {
+//        NSLog(@"faild,%@",error);
+//    }];
+  
     return YES;
 }
 
@@ -161,8 +175,6 @@
     NSLog(@"在控制器里点击");
     
 }
-
-
 
 
 @end

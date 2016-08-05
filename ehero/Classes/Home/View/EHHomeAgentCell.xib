@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -20,7 +19,6 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="61" id="YTB-70-qXh"/>
                             <constraint firstAttribute="height" constant="19" id="gLC-22-QmP"/>
-                            <constraint firstAttribute="width" secondItem="wbh-BX-7Gc" secondAttribute="height" multiplier="61:19" id="jfx-0x-Fbb"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -31,7 +29,6 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="17" id="88k-1N-Ml1"/>
                             <constraint firstAttribute="width" constant="72" id="DNZ-IU-RHK"/>
-                            <constraint firstAttribute="width" secondItem="mla-2d-eZr" secondAttribute="height" multiplier="72:17" id="LwO-xv-4zf"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,7 +38,6 @@
                         <rect key="frame" x="86" y="59" width="72" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="17" id="E44-Ry-tva"/>
-                            <constraint firstAttribute="width" secondItem="n7b-mZ-ehO" secondAttribute="height" multiplier="72:17" id="TU5-yC-1gd"/>
                             <constraint firstAttribute="width" constant="72" id="goI-Hi-eQn"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -51,7 +47,6 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店经理" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbG-75-Mq6">
                         <rect key="frame" x="162" y="9" width="35" height="17"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="WbG-75-Mq6" secondAttribute="height" multiplier="35:17" id="3Ch-Qu-Sbd"/>
                             <constraint firstAttribute="width" constant="35" id="fku-TZ-6Vn"/>
                             <constraint firstAttribute="height" constant="17" id="mNy-1q-m7O"/>
                         </constraints>
@@ -64,7 +59,6 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="N1r-p1-L8y"/>
                             <constraint firstAttribute="width" constant="158" id="RJv-Aj-zFD"/>
-                            <constraint firstAttribute="width" secondItem="zHh-4g-C53" secondAttribute="height" multiplier="158:21" id="wbz-bZ-EeW"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.4392156862745098" green="0.71764705882352942" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,7 +79,6 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="Cnq-KG-zF7"/>
                             <constraint firstAttribute="height" constant="60" id="jZq-BZ-Sug"/>
-                            <constraint firstAttribute="width" secondItem="iD9-6d-qry" secondAttribute="height" multiplier="1:1" id="zL5-0j-3el"/>
                         </constraints>
                     </imageView>
                 </subviews>

@@ -76,6 +76,8 @@
 		04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500791D3386E5009146E5 /* EHCommentAgentViewController.m */; };
 		04C8FDDD1D5426310081CE73 /* EHHomeAgentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C8FDDB1D5426310081CE73 /* EHHomeAgentCell.m */; };
 		04C8FDDE1D5426310081CE73 /* EHHomeAgentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C8FDDC1D5426310081CE73 /* EHHomeAgentCell.xib */; };
+		04C8FDE11D54744B0081CE73 /* EHVerifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C8FDE01D54744B0081CE73 /* EHVerifyView.m */; };
+		04C8FDE31D5484010081CE73 /* EHVerifyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C8FDE21D5484010081CE73 /* EHVerifyView.xib */; };
 		04CBAE801D470035002BF215 /* EHTipsNavBottomLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CBAE7F1D470035002BF215 /* EHTipsNavBottomLine.m */; };
 		04DA25E31D41E33000235C51 /* EHProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DA25E21D41E33000235C51 /* EHProfileViewController.m */; };
 		04DEC4D81D4AFA6700B21766 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DEC4D71D4AFA6700B21766 /* libz.1.2.5.tbd */; };
@@ -249,6 +251,9 @@
 		04C8FDDA1D5426310081CE73 /* EHHomeAgentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHomeAgentCell.h; sourceTree = "<group>"; };
 		04C8FDDB1D5426310081CE73 /* EHHomeAgentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHomeAgentCell.m; sourceTree = "<group>"; };
 		04C8FDDC1D5426310081CE73 /* EHHomeAgentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHHomeAgentCell.xib; sourceTree = "<group>"; };
+		04C8FDDF1D54744B0081CE73 /* EHVerifyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHVerifyView.h; sourceTree = "<group>"; };
+		04C8FDE01D54744B0081CE73 /* EHVerifyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHVerifyView.m; sourceTree = "<group>"; };
+		04C8FDE21D5484010081CE73 /* EHVerifyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHVerifyView.xib; sourceTree = "<group>"; };
 		04CBAE7E1D470035002BF215 /* EHTipsNavBottomLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHTipsNavBottomLine.h; path = ehero/Classes/AgentInfo/View/EHTipsNavBottomLine.h; sourceTree = SOURCE_ROOT; };
 		04CBAE7F1D470035002BF215 /* EHTipsNavBottomLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHTipsNavBottomLine.m; path = ehero/Classes/AgentInfo/View/EHTipsNavBottomLine.m; sourceTree = SOURCE_ROOT; };
 		04DA25E11D41E33000235C51 /* EHProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHProfileViewController.h; sourceTree = "<group>"; };
@@ -1058,6 +1063,9 @@
 				0456A9DE1D49E5390065DC5B /* EHCallAgentView.h */,
 				0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */,
 				0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */,
+				04C8FDDF1D54744B0081CE73 /* EHVerifyView.h */,
+				04C8FDE01D54744B0081CE73 /* EHVerifyView.m */,
+				04C8FDE21D5484010081CE73 /* EHVerifyView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1391,6 +1399,7 @@
 				04E9CFF61D4608110087BD70 /* EHAgentInfoCommunityCell.xib in Resources */,
 				0456A9E21D49E5640065DC5B /* EHCallAgentView.xib in Resources */,
 				04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */,
+				04C8FDE31D5484010081CE73 /* EHVerifyView.xib in Resources */,
 				04716BF31D34C70900E512EE /* EHNewsViewCell.xib in Resources */,
 				04B0EFE01D49A18100BE301B /* EHHouseDetailCell.xib in Resources */,
 				04C5006B1D336D8B009146E5 /* EHWechatGroupCell.xib in Resources */,
@@ -1506,6 +1515,7 @@
 				04716C091D35060B00E512EE /* AFURLRequestSerialization.m in Sources */,
 				049AA07A1D5034D600761E3F /* FMDatabase.m in Sources */,
 				046A7C5F1D503E9600652296 /* JKDBModel.m in Sources */,
+				04C8FDE11D54744B0081CE73 /* EHVerifyView.m in Sources */,
 				04BB3E911D4476C5002CBF27 /* EHSiteButton.m in Sources */,
 				049AA07C1D5034D600761E3F /* FMDatabasePool.m in Sources */,
 				04657FDC1D32768B00914495 /* EHTipsViewController.m in Sources */,

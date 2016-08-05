@@ -29,7 +29,7 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHAgentInfoCommunityCell" owner:nil options:nil] lastObject];
         cell.backgroundColor = RGB(241, 243, 245);
-        
+        cell.userInteractionEnabled = NO;
     }
     
     return cell;

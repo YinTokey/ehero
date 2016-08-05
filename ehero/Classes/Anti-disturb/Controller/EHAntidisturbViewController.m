@@ -18,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+}
+
+- (void)webViewLoad{
     WKWebView *webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     webView.scrollView.bounces = NO;
     self.webView = webView;
@@ -27,14 +31,15 @@
     NSURL *url = [NSURL URLWithString:@"http://ehero.cc/helper"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
-    
+
 }
 
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
-    [LBProgressHUD showHUDto:self.view animated:NO];
-}
 
-- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
-    [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
-}
+//- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+//    [LBProgressHUD showHUDto:self.view animated:NO];
+//}
+//
+//- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+//    [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+//}
 @end

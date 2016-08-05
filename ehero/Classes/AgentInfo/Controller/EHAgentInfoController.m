@@ -46,11 +46,6 @@
     //设置顶部分割线
     EHTipsNavBottomLine *lineView = [EHTipsNavBottomLine initNavBottomLineWithController:self];
     [self.navigationController.navigationBar addSubview:lineView];
-    
-    
- //   NSString *sql = [NSString stringWithFormat:@"where name = %@",self.agentInfo.name];
-    [self isCollected];
-
 
 }
 
@@ -110,8 +105,9 @@
         return cell;
     
     }
-
 }
+
+
 
 # pragma mark - searchResultCellDelegate
 - (void)callBtnClick:(UITableViewCell *)cell{
@@ -201,16 +197,7 @@
     [self.agentInfo save];
 }
 
-- (void)isCollected{
-    //查询全部效率比较低，以后要改，暂时先这样写
-    NSArray *AgentsArr = [EHAgentInfo findAll];
-    for (EHAgentInfo *info in AgentsArr) {
-        if ([info.name isEqualToString:self.agentInfo.name]) {
-            self.collectBtn.selected = YES;
-        }else{
-            self.collectBtn.selected = NO;
-        }
-    }
-}
+
+
 
 @end

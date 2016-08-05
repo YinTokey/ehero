@@ -64,7 +64,6 @@
     buttonCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"buttonCell" owner:nil options:nil] lastObject];
-        
     //    [cell setupAutoHeightWithBottomView:_view4 bottomMargin:10];
         
 //        cell.tips.sd_layout

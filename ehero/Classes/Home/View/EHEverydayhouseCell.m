@@ -51,7 +51,6 @@
     EHEverydayhouseCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHEverydayhouseCell" owner:nil options:nil] lastObject];
-        
     }
     
     return cell;
