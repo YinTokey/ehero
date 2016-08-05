@@ -33,11 +33,18 @@
                     <state key="normal" title="呼叫">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="callBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="e3l-OA-mh0"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="code" destination="Lzf-Lg-ggE" id="Wsi-fl-2ky"/>
+                <outlet property="myPhoneNumber" destination="iLI-Tq-GFP" id="sCJ-cF-dcO"/>
+            </connections>
             <point key="canvasLocation" x="253" y="-3.5"/>
         </view>
     </objects>

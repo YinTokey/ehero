@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    [self webViewLoad];
 }
 
 - (void)webViewLoad{
@@ -35,11 +35,11 @@
 }
 
 
-//- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
-//    [LBProgressHUD showHUDto:self.view animated:NO];
-//}
-//
-//- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
-//    [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
-//}
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+    [LBProgressHUD showHUDto:self.view animated:NO];
+}
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+    [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+}
 @end

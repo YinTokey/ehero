@@ -10,4 +10,7 @@
 
 @interface EHVerifyView : UIView
 
++ (instancetype)initVerifyView;
+- (void)setupCountdownBtn;
+
 @end

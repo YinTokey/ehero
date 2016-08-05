@@ -15,6 +15,8 @@
 #import <OpenShareHeader.h>
 #import "EHCallAgentView.h"
 #import "STModal.h"
+#import "EHVerifyView.h"
+
 
 @interface EHAgentInfoController ()<EHSearchResultCellDelegate>
 {
@@ -120,7 +122,11 @@
     [mobileString insertString:@"-" atIndex:8];
     
     [callAgentView setCallAgentViewWithName:self.agentInfo.name mobile:mobileString txUrl:self.agentInfo.tx];
-    [modal showContentView:callAgentView animated:YES];
+    
+    
+    EHVerifyView *verifyV = [EHVerifyView initVerifyView];
+    [verifyV setupCountdownBtn];
+    [modal showContentView:verifyV animated:YES];
     
 }
 
