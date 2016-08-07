@@ -48,7 +48,11 @@
     //设置顶部分割线
     EHTipsNavBottomLine *lineView = [EHTipsNavBottomLine initNavBottomLineWithController:self];
     [self.navigationController.navigationBar addSubview:lineView];
-
+    //浏览过的经纪人加入数据库
+    EHSkimedAgentInfo *skimedAgentInfo = [[EHSkimedAgentInfo alloc]init];
+    [skimedAgentInfo setWithAgentInfoAndTimeLabel:self.agentInfo];
+    [skimedAgentInfo save];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
