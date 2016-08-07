@@ -43,7 +43,7 @@
     //textview从顶开始显示
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    [self setInitView];
+    //[self setInitView];
     
     self.searchBar.delegate = self;
     //联网状态监测
@@ -67,7 +67,7 @@
 }
 
 - (void)setCornerRadius{
-    self.commentView.layer.borderColor = RGB(59,175,247).CGColor;
+    self.commentView.layer.borderColor = RGB(150,209,250).CGColor;
     self.commentView.layer.borderWidth = 1;
     self.commentView.layer.cornerRadius = 5;
     self.commentView.layer.masksToBounds = YES;
@@ -91,7 +91,7 @@
 
 
 - (IBAction)commitBtnClick:(id)sender {
-    NSLog(@"提交");
+    [MBProgressHUD showError:@"暂时没有提交接口" toView:self.view];
 }
 
 #pragma mark  -- UITapGestureRecognizer
