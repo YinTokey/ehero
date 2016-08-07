@@ -49,11 +49,12 @@
 
 - (void)sendClick{
     NSLog(@"发验证码测试");
+    //还有很多bug逻辑需要处理
     MZTimerLabel *timer = [[MZTimerLabel alloc] initWithLabel:self.sendCodeBtn.titleLabel andTimerType:MZTimerLabelTypeTimer];
     timer.timeFormat = @"ss 秒";
     [timer setCountDownTime:60];
     
-    [self.sendCodeBtn setFrame:CGRectMake(0, 0, self.myPhoneNumber.bounds.size.width / 6, self.myPhoneNumber.bounds.size.height)];
+    [self.sendCodeBtn setFrame:CGRectMake(self.myPhoneNumber.bounds.size.width - self.sendCodeBtn.bounds.size.width, 0, self.myPhoneNumber.bounds.size.width / 6, self.myPhoneNumber.bounds.size.height)];
     
     [timer start];
     

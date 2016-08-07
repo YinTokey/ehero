@@ -44,31 +44,20 @@
                         <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店经理" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbG-75-Mq6">
-                        <rect key="frame" x="162" y="9" width="35" height="17"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="35" id="fku-TZ-6Vn"/>
-                            <constraint firstAttribute="height" constant="17" id="mNy-1q-m7O"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" red="0.36862745099999999" green="0.70980392160000005" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="华清嘉园 东升园公寓 水清木华园" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHh-4g-C53">
-                        <rect key="frame" x="162" y="58" width="158" height="21"/>
+                        <rect key="frame" x="148" y="57" width="158" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="N1r-p1-L8y"/>
-                            <constraint firstAttribute="width" constant="158" id="RJv-Aj-zFD"/>
+                            <constraint firstAttribute="height" constant="21" id="xf5-uF-6Fr"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.4392156862745098" green="0.71764705882352942" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="五道口" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqo-gi-hhB">
-                        <rect key="frame" x="162" y="33" width="48" height="21"/>
+                        <rect key="frame" x="149" y="31" width="48" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="48" id="LnU-oz-ymP"/>
-                            <constraint firstAttribute="height" constant="21" id="cyd-df-6e2"/>
+                            <constraint firstAttribute="height" constant="21" id="0mJ-xb-o72"/>
+                            <constraint firstAttribute="width" constant="48" id="Xhs-KM-5CR"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -81,23 +70,33 @@
                             <constraint firstAttribute="height" constant="60" id="jZq-BZ-Sug"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店经理" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbG-75-Mq6">
+                        <rect key="frame" x="149" y="9" width="35" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="HY8-tn-z9k"/>
+                            <constraint firstAttribute="height" constant="17" id="JTp-jQ-UVP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.36862745099999999" green="0.70980392160000005" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="zHh-4g-C53" firstAttribute="top" secondItem="eqo-gi-hhB" secondAttribute="bottom" constant="4" id="7JS-1X-y5M"/>
+                    <constraint firstItem="zHh-4g-C53" firstAttribute="leading" secondItem="iD9-6d-qry" secondAttribute="trailing" constant="80" id="65Z-xJ-RQ3"/>
+                    <constraint firstItem="eqo-gi-hhB" firstAttribute="leading" secondItem="iD9-6d-qry" secondAttribute="trailing" constant="81" id="6hQ-Gy-Xio"/>
                     <constraint firstItem="wbh-BX-7Gc" firstAttribute="leading" secondItem="iD9-6d-qry" secondAttribute="trailing" constant="18" id="Gn4-VC-7O9"/>
                     <constraint firstItem="mla-2d-eZr" firstAttribute="top" secondItem="wbh-BX-7Gc" secondAttribute="bottom" constant="6" id="HAE-ms-v2t"/>
-                    <constraint firstItem="WbG-75-Mq6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="IVF-Ao-tpo"/>
-                    <constraint firstItem="zHh-4g-C53" firstAttribute="leading" secondItem="n7b-mZ-ehO" secondAttribute="trailing" constant="4" id="NB9-gV-X3H"/>
+                    <constraint firstItem="eqo-gi-hhB" firstAttribute="centerY" secondItem="mla-2d-eZr" secondAttribute="centerY" id="Jac-7x-hnq"/>
                     <constraint firstItem="n7b-mZ-ehO" firstAttribute="leading" secondItem="iD9-6d-qry" secondAttribute="trailing" constant="18" id="NSx-Ej-eZ9"/>
-                    <constraint firstItem="eqo-gi-hhB" firstAttribute="leading" secondItem="mla-2d-eZr" secondAttribute="trailing" constant="4" id="Srf-38-fjK"/>
                     <constraint firstItem="iD9-6d-qry" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Z9Z-nY-pcC"/>
                     <constraint firstItem="wbh-BX-7Gc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="aNR-Ev-7ck"/>
                     <constraint firstItem="n7b-mZ-ehO" firstAttribute="top" secondItem="mla-2d-eZr" secondAttribute="bottom" constant="9" id="cYm-hA-oY6"/>
                     <constraint firstItem="mla-2d-eZr" firstAttribute="leading" secondItem="iD9-6d-qry" secondAttribute="trailing" constant="18" id="hql-lX-G0l"/>
-                    <constraint firstItem="WbG-75-Mq6" firstAttribute="leading" secondItem="wbh-BX-7Gc" secondAttribute="trailing" constant="15" id="o3U-JX-E1o"/>
-                    <constraint firstAttribute="trailing" secondItem="zHh-4g-C53" secondAttribute="trailing" id="qr9-nr-4s1"/>
-                    <constraint firstItem="eqo-gi-hhB" firstAttribute="top" secondItem="WbG-75-Mq6" secondAttribute="bottom" constant="7" id="sz7-JY-KOT"/>
+                    <constraint firstAttribute="trailing" secondItem="zHh-4g-C53" secondAttribute="trailing" constant="14" id="oLQ-jT-wvG"/>
+                    <constraint firstItem="WbG-75-Mq6" firstAttribute="leading" secondItem="wbh-BX-7Gc" secondAttribute="trailing" constant="2" id="tPT-QM-Jeu"/>
                     <constraint firstItem="iD9-6d-qry" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="vWZ-zT-c8Q"/>
+                    <constraint firstItem="zHh-4g-C53" firstAttribute="top" secondItem="eqo-gi-hhB" secondAttribute="bottom" constant="5" id="za5-fW-M2X"/>
+                    <constraint firstItem="WbG-75-Mq6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="zdQ-Tb-YGp"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
