@@ -48,7 +48,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //设置轮播图片
-    sourceArr = [NSMutableArray arrayWithObjects:@"img_00",@"img_01",@"img_02",@"img_03",@"img_04", nil];
+    sourceArr = [NSMutableArray arrayWithObjects:@"img_00",@"img_01",@"img_02", nil];
     
   //  [self setupHeaderView];
 

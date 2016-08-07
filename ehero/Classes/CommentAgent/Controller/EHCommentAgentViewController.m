@@ -170,7 +170,12 @@
                                                placeholderImageStr:@"Profile"
                                                          imageView:self.txImageView];
     self.name.text = agentInfo.name;
-    self.position.text = agentInfo.position;
+    
+    if (agentInfo.position.length < 1) {
+        self.position.hidden = YES;
+    }else{
+        self.position.text = agentInfo.position;
+    }
     NSString *ratesStr = [NSString stringWithFormat:@"好评率:%@％",agentInfo.rates];
     self.rates.text = ratesStr;
 }
