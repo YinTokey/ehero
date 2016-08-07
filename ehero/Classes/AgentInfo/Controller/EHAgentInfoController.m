@@ -16,7 +16,7 @@
 #import "EHCallAgentView.h"
 #import "STModal.h"
 #import "EHVerifyView.h"
-
+#import "EHSkimedAgentInfo.h"
 
 @interface EHAgentInfoController ()<EHSearchResultCellDelegate>
 {
