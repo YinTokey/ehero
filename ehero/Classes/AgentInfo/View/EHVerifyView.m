@@ -8,8 +8,8 @@
 
 #import "EHVerifyView.h"
 #import "MZTimerLabel.h"
-
-
+#import "YTHttpTool.h"
+#import "EHRegularExpression.h"
 @interface EHVerifyView()<MZTimerLabelDelegate>
 {
     CGRect resendBtnRect;
@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *myPhoneNumber;
 @property (nonatomic,strong) UIButton *sendCodeBtn;
 @property (nonatomic,strong)MZTimerLabel *timer;
+
 
 @end
 
@@ -60,14 +61,13 @@
 - (void)setTimer{
     self.timer = [[MZTimerLabel alloc] initWithLabel:self.sendCodeBtn.titleLabel andTimerType:MZTimerLabelTypeTimer];
     self.timer.timeFormat = @"ss 秒";
-    [self.timer setCountDownTime:3];
+    [self.timer setCountDownTime:60];
     //设置代理
     self.timer.delegate = self;
 }
 
 
 - (void)sendClick{
-    NSLog(@"发验证码测试");
     
     if ([self.timer counting]) {
         //如果正在计时，则按钮不可点击
@@ -75,11 +75,21 @@
         self.sendCodeBtn.userInteractionEnabled = NO;
         
     }else{
-        [self.sendCodeBtn setFrame:CGRectMake(self.myPhoneNumber.bounds.size.width - self.sendCodeBtn.bounds.size.width, 0, self.myPhoneNumber.bounds.size.width / 6, self.myPhoneNumber.bounds.size.height)];
-        [self.timer start];
-        //计时启动后不可点击
-        self.sendCodeBtn.alpha = 0.7;
-        self.sendCodeBtn.userInteractionEnabled = NO;
+        //正则表达式判断电话号码，电话格式正确，才可以发送
+        if ([EHRegularExpression validateMobile:self.myPhoneNumber.text ]) {
+            self.sendCodeBtn.userInteractionEnabled = YES;
+            [self.sendCodeBtn setFrame:CGRectMake(self.myPhoneNumber.bounds.size.width - self.sendCodeBtn.bounds.size.width, 0, self.myPhoneNumber.bounds.size.width / 6, self.myPhoneNumber.bounds.size.height)];
+            [self.timer start];
+            //计时启动后不可点击
+            self.sendCodeBtn.alpha = 0.7;
+            self.sendCodeBtn.userInteractionEnabled = NO;
+            [self sendCodeRequest];
+            
+        }else{
+        //电话格式填写错误，不能点击发送按钮
+            [MBProgressHUD showError:@"电话格式错误" toView:self];
+        }
+        
     }
   
 }
@@ -97,8 +107,22 @@
     NSLog(@"倒计时结束");
 }
 
+- (void)sendCodeRequest{
+    
+        NSDictionary *params = @{@"mobile":self.myPhoneNumber.text};
+        [YTHttpTool post:sendCodeUrlStr params:params success:^(id responseObj) {
+            NSLog(@"success");
+        } failure:^(NSError *error) {
+            NSLog(@"faild,%@",error);
+        }];
+}
 
 - (IBAction)callBtnClick:(id)sender {
     [MBProgressHUD showError:@"暂时无法呼叫" toView:self];
 }
+
+
+
+
+
 @end
