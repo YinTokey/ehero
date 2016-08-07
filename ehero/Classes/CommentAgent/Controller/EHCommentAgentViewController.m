@@ -8,8 +8,9 @@
 
 #import "EHCommentAgentViewController.h"
 #import "YTHttpTool.h"
-
-
+#import "EHAgentInfo.h"
+#import <MJExtension.h>
+#import "YTNetCommand.h"
 @interface EHCommentAgentViewController ()<UITextFieldDelegate,UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *line1;
@@ -26,7 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *commitBtn;
 @property (weak, nonatomic) IBOutlet UITextField *searchBar;
 
-
+@property (nonatomic,strong) NSMutableArray *searchResultArr;
 
 
 @end
@@ -43,7 +44,7 @@
     //textview从顶开始显示
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    //[self setInitView];
+    [self setInitView];
     
     self.searchBar.delegate = self;
     //联网状态监测
@@ -62,7 +63,7 @@
     self.moderateComment.hidden = YES;
     self.highPraise.hidden = YES;
     self.commitBtn.hidden = YES;
-
+    self.position.backgroundColor = RGB(234, 243, 248);
 
 }
 
@@ -91,7 +92,7 @@
 
 
 - (IBAction)commitBtnClick:(id)sender {
-    [MBProgressHUD showError:@"暂时没有提交接口" toView:self.view];
+    [MBProgressHUD showError:@"暂时没有开放提交接口" toView:self.view];
 }
 
 #pragma mark  -- UITapGestureRecognizer
@@ -105,6 +106,7 @@
 #pragma mark  -- uiTextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [self.searchBar resignFirstResponder];
+    [self searchClick];
     
     return YES;
 }
@@ -117,6 +119,75 @@
     }
     
     return YES;
+}
+
+# pragma mark － 搜索点击
+- (void)searchClick{
+    [LBProgressHUD showHUDto:self.view animated:NO];
+    
+    NSString *keyword = self.searchBar.text;
+    //搜索经纪人
+    NSDictionary *param =@{@"arg":keyword};
+    [self searchWithURLString:searchAgentUrlStr Param:param];
+    
+}
+# pragma mark - 搜索方法
+- (void)searchWithURLString:(NSString *)urlString Param:(NSDictionary *)param{
+    
+    [YTHttpTool get:urlString params:param success:^(id responseObj) {
+        //json转模型
+        self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
+        //如果找到经纪人，则取消控件的隐藏
+        if([self searchStatusTest]){
+            EHAgentInfo *agentInfo = [self.searchResultArr firstObject];
+            [self loadResultWithAgentInfo:agentInfo];
+            [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+            [self cancelHidden];
+        }else{
+            [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+        }
+    
+
+    } failure:^(NSError *error) {
+        NSLog(@"失败");
+    }];
+    
+}
+#pragma mark - 搜索结果检测
+- (BOOL)searchStatusTest{
+    
+    if (_searchResultArr.count == 0) {
+        [self.view makeToast:@"没有找到经纪人" duration:1.0 position:CSToastPositionCenter];
+        return NO;
+    }else{
+        [self.view makeToast:@"为您找到经纪人" duration:1.0 position:CSToastPositionCenter];
+        return YES;
+    }
+}
+
+- (void)loadResultWithAgentInfo:(EHAgentInfo *)agentInfo{
+    self.txImageView.image = [YTNetCommand downloadImageWithImgStr:agentInfo.tx
+                                               placeholderImageStr:@"Profile"
+                                                         imageView:self.txImageView];
+    self.name.text = agentInfo.name;
+    self.position.text = agentInfo.position;
+    NSString *ratesStr = [NSString stringWithFormat:@"好评率:%@％",agentInfo.rates];
+    self.rates.text = ratesStr;
+}
+#pragma mark - 取消控件的隐藏
+- (void)cancelHidden{
+    self.line1.hidden = NO;
+    self.line2.hidden = NO;
+    self.commentView.hidden = NO;
+    self.txImageView.hidden = NO;
+    self.name.hidden = NO;
+    self.position.hidden = NO;
+    self.rates.hidden = NO;
+    self.negativeComment.hidden = NO;
+    self.moderateComment.hidden = NO;
+    self.highPraise.hidden = NO;
+    self.commitBtn.hidden = NO;
+
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView{
