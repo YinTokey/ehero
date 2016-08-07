@@ -12,6 +12,7 @@
 #import "MBProgressHUD+YT.h"
 #import "SDAutoLayout.h"
 #import "EHCollectedAgentsViewController.h"
+#import "EHSkimedAgentsViewController.h"
 #import <MBProgressHUD.h>
 
 @interface EHProfileViewController ()<MFMailComposeViewControllerDelegate>
@@ -91,6 +92,10 @@
 
 
 - (IBAction)skimedAgentsClick:(id)sender {
+
+    EHCollectedAgentsViewController *collectedAgentsVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"SkimedAgentsViewController"];
+    [self.navigationController pushViewController:collectedAgentsVC animated:YES];
+    
 }
 
 - (IBAction)skimedHouseClick:(id)sender {

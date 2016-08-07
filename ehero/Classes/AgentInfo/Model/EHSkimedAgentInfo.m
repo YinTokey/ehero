@@ -37,6 +37,7 @@
     self.percentile = agentInfo.percentile;
     self.position = agentInfo.position;
     self.rates = agentInfo.rates;
+    self.region = agentInfo.region;
     self.rents = agentInfo.rents;
     self.sales = agentInfo.sales;
     self.stars = agentInfo.stars;
