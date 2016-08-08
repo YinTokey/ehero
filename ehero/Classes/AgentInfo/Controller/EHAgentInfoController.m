@@ -27,6 +27,7 @@
 - (IBAction)collectBtnClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *collectBtn;
 
+//@property (strong, nonatomic)
 @end
 
 @implementation EHAgentInfoController{
@@ -48,10 +49,9 @@
     //设置顶部分割线
     EHTipsNavBottomLine *lineView = [EHTipsNavBottomLine initNavBottomLineWithController:self];
     [self.navigationController.navigationBar addSubview:lineView];
-    //浏览过的经纪人加入数据库
-    EHSkimedAgentInfo *skimedAgentInfo = [[EHSkimedAgentInfo alloc]init];
-    [skimedAgentInfo setWithAgentInfoAndTimeLabel:self.agentInfo];
-    [skimedAgentInfo save];
+    
+    NSLog(@"数据总数 %ld",[EHSkimedAgentInfo findCounts]);
+    
     
 }
 
@@ -112,7 +112,6 @@
     
     }
 }
-
 
 
 # pragma mark - searchResultCellDelegate
@@ -194,7 +193,7 @@
     if (selectedFlag %2 == 1) {
         self.collectBtn.selected = YES;
         [self.view makeToast:@"收藏成功" duration:1.0 position:CSToastPositionCenter];
-        [self saveToDatabase];
+        [self collect];
         
     }else{
         self.collectBtn.selected = NO;
@@ -203,10 +202,27 @@
 
 }
 
-- (void)saveToDatabase{
+- (void)collect{
     [self.agentInfo save];
 }
 
+- (void)skimedAndSave{
+    NSArray *allSkimedAgentsArr = [EHSkimedAgentInfo findAll];
+ //   NSString *sqlForPK =
+    
+    NSString *sqlForName = [NSString stringWithFormat:@" WHERE name = '%@' ",self.agentInfo.name];
+    EHSkimedAgentInfo *skimedAgentInfo = [EHSkimedAgentInfo findFirstByCriteria:sqlForName];
+    
+    //小于30条记录
+    if (allSkimedAgentsArr.count <= 30) {
+        //数据库里没有
+        if (skimedAgentInfo == nil) {
+            
+        }
+        
+    }
+
+}
 
 
 

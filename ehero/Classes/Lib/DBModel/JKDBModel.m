@@ -631,6 +631,24 @@
     return result;
 }
 
++ (NSInteger)findCounts{
+    JKDBHelper *jkDB = [JKDBHelper shareInstance];
+    __block int totalCountInt;
+    
+    [jkDB.dbQueue inDatabase:^(FMDatabase *db) {
+        NSString *tableName = NSStringFromClass(self.class);
+        NSString *sql = [NSString stringWithFormat:@"SELECT COUNT (*) FROM %@ ",tableName];
+        FMResultSet *resultSet = [db executeQuery:sql];
+        if ([resultSet next]) {
+            totalCountInt = [resultSet intForColumnIndex:0];
+        }
+        
+    }];
+    NSInteger totalCount = totalCountInt;
+    
+    return totalCount;
+}
+
 #pragma mark - must be override method
 /** 如果子类中有一些property不需要创建数据库字段，那么这个方法必须在子类中重写
  */
