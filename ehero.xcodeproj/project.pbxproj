@@ -50,6 +50,7 @@
 		047EF38D1D3A0EAA00E587BA /* EHAsiaViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EF38C1D3A0EAA00E587BA /* EHAsiaViewCell.m */; };
 		048632081D3E238B00800B26 /* EHNetBusinessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 048632071D3E238B00800B26 /* EHNetBusinessManager.m */; };
 		048E90761D476B46005B19BD /* EHWechatGroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048E90751D476B46005B19BD /* EHWechatGroupDetailViewController.m */; };
+		04946B521D58307100B2C034 /* EHSendCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04946B511D58307100B2C034 /* EHSendCodeButton.m */; };
 		049AA07A1D5034D600761E3F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA06F1D5034D600761E3F /* FMDatabase.m */; };
 		049AA07B1D5034D600761E3F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA0711D5034D600761E3F /* FMDatabaseAdditions.m */; };
 		049AA07C1D5034D600761E3F /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA0731D5034D600761E3F /* FMDatabasePool.m */; };
@@ -208,6 +209,8 @@
 		048E90741D476B46005B19BD /* EHWechatGroupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHWechatGroupDetailViewController.h; sourceTree = "<group>"; };
 		048E90751D476B46005B19BD /* EHWechatGroupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHWechatGroupDetailViewController.m; sourceTree = "<group>"; };
 		048F12A21D38C4250039808D /* libM13PDFKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libM13PDFKit.a; path = "../../../../../Library/Developer/Xcode/DerivedData/ehero-apyunbsyuuzpszabggkemknwzsmb/Build/Products/Debug-iphoneos/libM13PDFKit.a"; sourceTree = "<group>"; };
+		04946B501D58307100B2C034 /* EHSendCodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSendCodeButton.h; sourceTree = "<group>"; };
+		04946B511D58307100B2C034 /* EHSendCodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSendCodeButton.m; sourceTree = "<group>"; };
 		049AA06E1D5034D600761E3F /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		049AA06F1D5034D600761E3F /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		049AA0701D5034D600761E3F /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -1126,6 +1129,8 @@
 				04C8FDDF1D54744B0081CE73 /* EHVerifyView.h */,
 				04C8FDE01D54744B0081CE73 /* EHVerifyView.m */,
 				04C8FDE21D5484010081CE73 /* EHVerifyView.xib */,
+				04946B501D58307100B2C034 /* EHSendCodeButton.h */,
+				04946B511D58307100B2C034 /* EHSendCodeButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1567,6 +1572,7 @@
 				04B0EFDF1D49A18100BE301B /* EHHouseDetailCell.m in Sources */,
 				04716BF21D34C70900E512EE /* EHNewsViewCell.m in Sources */,
 				04E7AF9E1D38EC860049E668 /* InnerView.m in Sources */,
+				04946B521D58307100B2C034 /* EHSendCodeButton.m in Sources */,
 				0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */,
 				0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */,
 				04FD3AD31D3DDA23005B13B4 /* MBProgressHUD+YT.m in Sources */,

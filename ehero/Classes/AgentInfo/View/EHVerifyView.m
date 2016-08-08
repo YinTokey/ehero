@@ -47,7 +47,7 @@
     [sendCodeBtn setBackgroundImage:[UIImage imageNamed:@"sendCodeBtn"] forState:UIControlStateNormal];
     [sendCodeBtn addTarget:self action:@selector(sendClick) forControlEvents:UIControlEventTouchUpInside];
     self.sendCodeBtn =  sendCodeBtn;
-    
+
     
     self.myPhoneNumber.rightView = _sendCodeBtn;
     self.myPhoneNumber.rightViewMode = UITextFieldViewModeAlways;
