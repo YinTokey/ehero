@@ -50,8 +50,12 @@
     EHTipsNavBottomLine *lineView = [EHTipsNavBottomLine initNavBottomLineWithController:self];
     [self.navigationController.navigationBar addSubview:lineView];
     
-    NSLog(@"数据总数 %ld",[EHSkimedAgentInfo findCounts]);
-    
+//    NSLog(@"数据总数 %ld",[EHSkimedAgentInfo findCounts]);
+    [self skimedAndSave];
+//    
+//    EHSkimedAgentInfo *skimedAgent = [[EHSkimedAgentInfo alloc]init];
+//    [skimedAgent setWithAgentInfoAndTimeLabel:self.agentInfo];
+//    [skimedAgent save];
     
 }
 
@@ -207,16 +211,42 @@
 }
 
 - (void)skimedAndSave{
-    NSArray *allSkimedAgentsArr = [EHSkimedAgentInfo findAll];
- //   NSString *sqlForPK =
+    
+    EHSkimedAgentInfo *skimedAgent = [[EHSkimedAgentInfo alloc]init];
+    [skimedAgent setWithAgentInfoAndTimeLabel:self.agentInfo];
+    //    [skimedAgent save];
     
     NSString *sqlForName = [NSString stringWithFormat:@" WHERE name = '%@' ",self.agentInfo.name];
-    EHSkimedAgentInfo *skimedAgentInfo = [EHSkimedAgentInfo findFirstByCriteria:sqlForName];
+    EHSkimedAgentInfo *skimedAgentExisted = [EHSkimedAgentInfo findFirstByCriteria:sqlForName];
     
     //小于30条记录
-    if (allSkimedAgentsArr.count <= 30) {
-        //数据库里没有
-        if (skimedAgentInfo == nil) {
+    if ([EHSkimedAgentInfo findCounts] < 30) {
+        //数据库里没有,直接插入
+        if (skimedAgentExisted == nil) {
+            NSLog(@"数据库里没有,直接插入");
+            [skimedAgent save];
+        //数据库里有
+        }else{
+            NSLog(@"数据库里有,先删再插");
+            [skimedAgentExisted deleteObject];
+            [skimedAgent save];
+        }
+        
+    }
+    //大于等于30条记录
+    else{
+        //大于30条里，数据库里没有
+        if (skimedAgentExisted == nil) {
+            NSLog(@"大于等于30条里，数据库里没有,删除第一条");
+            NSString *sqlForName = [NSString stringWithFormat:@" LIMIT 1 OFFSET 0 "];
+            [[EHSkimedAgentInfo findFirstByCriteria:sqlForName] deleteObject];;
+            [skimedAgent save];
+            
+        }else{
+        //大于30条里，数据库里有
+            NSLog(@"大于30条里，数据库里有,删除原来的，重新插入");
+            [skimedAgentExisted deleteObject];
+            [skimedAgent save];
             
         }
         

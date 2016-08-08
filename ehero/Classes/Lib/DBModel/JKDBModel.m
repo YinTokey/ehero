@@ -633,18 +633,19 @@
 
 + (NSInteger)findCounts{
     JKDBHelper *jkDB = [JKDBHelper shareInstance];
-    __block int totalCountInt;
-    
+    __block NSInteger totalCount;
     [jkDB.dbQueue inDatabase:^(FMDatabase *db) {
         NSString *tableName = NSStringFromClass(self.class);
         NSString *sql = [NSString stringWithFormat:@"SELECT COUNT (*) FROM %@ ",tableName];
         FMResultSet *resultSet = [db executeQuery:sql];
         if ([resultSet next]) {
-            totalCountInt = [resultSet intForColumnIndex:0];
+            int totalCountInt = [resultSet intForColumnIndex:0];
+            totalCount = totalCountInt;
+            FMDBRelease(totalCountInt);
         }
-        
+        [resultSet close];
     }];
-    NSInteger totalCount = totalCountInt;
+    
     
     return totalCount;
 }
