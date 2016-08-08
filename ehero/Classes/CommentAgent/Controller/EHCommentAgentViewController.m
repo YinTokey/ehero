@@ -44,7 +44,7 @@
     //textview从顶开始显示
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    [self setInitView];
+  //  [self setInitView];
     
     self.searchBar.delegate = self;
     //联网状态监测
