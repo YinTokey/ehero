@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -42,8 +41,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agent_info_comment_bar" translatesAutoresizingMaskIntoConstraints="NO" id="nl1-k9-iHi">
                         <rect key="frame" x="0.0" y="74" width="320" height="35"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="35" id="6Kk-t0-OdW"/>
-                            <constraint firstAttribute="width" secondItem="nl1-k9-iHi" secondAttribute="height" multiplier="64:7" id="Yt1-iZ-rDE"/>
+                            <constraint firstAttribute="height" constant="35" id="vWS-wE-dRQ"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90C-mX-m5G">
@@ -54,9 +52,9 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="nl1-k9-iHi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2iG-qj-BPO"/>
-                    <constraint firstAttribute="bottom" secondItem="nl1-k9-iHi" secondAttribute="bottom" constant="5" id="919-lz-eF2"/>
-                    <constraint firstAttribute="trailing" secondItem="nl1-k9-iHi" secondAttribute="trailing" id="crg-hI-Hwe"/>
+                    <constraint firstAttribute="bottom" secondItem="nl1-k9-iHi" secondAttribute="bottom" constant="5" id="AsV-h2-gUa"/>
+                    <constraint firstAttribute="trailing" secondItem="nl1-k9-iHi" secondAttribute="trailing" id="q5O-fv-kTf"/>
+                    <constraint firstItem="nl1-k9-iHi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uOm-JD-R81"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="223" y="222.5"/>
