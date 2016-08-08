@@ -78,12 +78,17 @@
 }
 
 - (void)setNavBar{
-    
 
     EHHomeSearchBar *searchbar = [[EHHomeSearchBar alloc]initWithFrame:CGRectMake(20, 20, ScreenWidth, 30)];
     searchbar.clipsToBounds = YES;
     searchbar.delegate = self;
     self.navigationItem.titleView = searchbar;
+    
+    UIBarButtonItem *negativeSpacer = [[ UIBarButtonItem alloc ] initWithBarButtonSystemItem : UIBarButtonSystemItemFixedSpace target : nil action : nil ];
+    
+    negativeSpacer. width = - 10 ;//这个数值可以根据情况自由变化
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer,_icon,_siteBarButtonItem];
+
 }
 
 
