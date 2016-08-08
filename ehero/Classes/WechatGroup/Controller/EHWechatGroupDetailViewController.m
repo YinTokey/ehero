@@ -32,7 +32,9 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
 
 }
 
-
+- (void)viewWillAppear:(BOOL)animated{
+    
+}
 
 - (IBAction)toWechatClick:(id)sender {
     [self savePhoto];

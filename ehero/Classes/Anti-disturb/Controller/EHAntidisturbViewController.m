@@ -18,7 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self webViewLoad];
+   // [self webViewLoad];
+    
+    
+    
 }
 
 - (void)webViewLoad{
@@ -34,7 +37,7 @@
 
 }
 
-
+#pragma mark - webview delegate
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
     [LBProgressHUD showHUDto:self.view animated:NO];
 }
