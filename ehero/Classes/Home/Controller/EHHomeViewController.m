@@ -49,16 +49,9 @@
     [super viewDidLoad];
     //设置轮播图片
     sourceArr = [NSMutableArray arrayWithObjects:@"img_00",@"img_01",@"img_02", nil];
-    
-  //  [self setupHeaderView];
-
     //读取用户偏好
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *siteString = [defaults objectForKey:@"siteString"];
-    if (siteString.length > 1) {
-        [self.siteBtn setTitle:siteString forState:UIControlStateNormal];
-    }
-
+    [self readDefaults];
+    
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
     //设置返回图片
@@ -74,6 +67,14 @@
    // self.edgesForExtendedLayout = UIRectEdgeNone;
    // [self setupHeaderView];
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+}
+
+- (void)readDefaults{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *siteString = [defaults objectForKey:@"siteString"];
+    if (siteString.length > 1) {
+        [self.siteBtn setTitle:siteString forState:UIControlStateNormal];
+    }
 }
 
 - (void)setNavBar{
