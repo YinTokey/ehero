@@ -16,6 +16,7 @@
 		0455CB281D48B90E00160C83 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C3A8D01D31E518003203C0 /* WebKit.framework */; };
 		0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */; };
 		0456A9E21D49E5640065DC5B /* EHCallAgentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */; };
+		04629F651D59CB0A00AB2DC9 /* UILabel+GetWidth.m in Sources */ = {isa = PBXBuildFile; fileRef = 04629F641D59CB0A00AB2DC9 /* UILabel+GetWidth.m */; };
 		0463EB0B1D5705B100C75B36 /* EHRegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463EB0A1D5705B100C75B36 /* EHRegularExpression.m */; };
 		0465688A1D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 046568871D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		0465688B1D4B39DE001C9851 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 046568891D4B39DE001C9851 /* UIView+SDAutoLayout.m */; };
@@ -139,6 +140,8 @@
 		0456A9DE1D49E5390065DC5B /* EHCallAgentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCallAgentView.h; sourceTree = "<group>"; };
 		0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCallAgentView.m; sourceTree = "<group>"; };
 		0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCallAgentView.xib; sourceTree = "<group>"; };
+		04629F631D59CB0A00AB2DC9 /* UILabel+GetWidth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+GetWidth.h"; sourceTree = "<group>"; };
+		04629F641D59CB0A00AB2DC9 /* UILabel+GetWidth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+GetWidth.m"; sourceTree = "<group>"; };
 		0463EB091D5705B100C75B36 /* EHRegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHRegularExpression.h; sourceTree = "<group>"; };
 		0463EB0A1D5705B100C75B36 /* EHRegularExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRegularExpression.m; sourceTree = "<group>"; };
 		046568851D4B39DE001C9851 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
@@ -1303,6 +1306,8 @@
 				04C3A8E01D321FE2003203C0 /* EHSearchResultCell.h */,
 				04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */,
 				04C3A8E21D321FE2003203C0 /* EHSearchResultCell.xib */,
+				04629F631D59CB0A00AB2DC9 /* UILabel+GetWidth.h */,
+				04629F641D59CB0A00AB2DC9 /* UILabel+GetWidth.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1548,6 +1553,7 @@
 			files = (
 				04716C081D35060B00E512EE /* AFSecurityPolicy.m in Sources */,
 				04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */,
+				04629F651D59CB0A00AB2DC9 /* UILabel+GetWidth.m in Sources */,
 				04200C371D2F7A7A005DC042 /* XTPopView.m in Sources */,
 				0472DA571D37BA5400CDE148 /* YTHttpTool.m in Sources */,
 				04C8FDE71D54A1080081CE73 /* MZTimerLabel.m in Sources */,
