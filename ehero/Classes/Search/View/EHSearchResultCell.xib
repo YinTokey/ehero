@@ -104,17 +104,6 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="幸福一村西里" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jq-a6-fHJ">
-                        <rect key="frame" x="88" y="93" width="224" height="17"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="17" id="0Dd-e9-hn2"/>
-                            <constraint firstAttribute="width" secondItem="4jq-a6-fHJ" secondAttribute="height" multiplier="224:17" id="Egv-FK-NcD"/>
-                            <constraint firstAttribute="width" constant="224" id="wPe-a2-O8i"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好评率：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWU-wF-ayq">
                         <rect key="frame" x="217" y="12" width="53" height="17"/>
                         <constraints>
@@ -153,7 +142,6 @@
                     <constraint firstItem="EOz-GR-gf8" firstAttribute="baseline" secondItem="gIK-Ia-w7Z" secondAttribute="baseline" id="8SX-to-SbY"/>
                     <constraint firstAttribute="trailing" secondItem="vCP-0q-yyd" secondAttribute="trailing" id="Alf-5d-WLl"/>
                     <constraint firstItem="FWg-gq-wKJ" firstAttribute="leading" secondItem="cwL-hk-R4h" secondAttribute="trailing" constant="8" id="B17-Hu-rvz"/>
-                    <constraint firstItem="4jq-a6-fHJ" firstAttribute="leading" secondItem="qjC-ND-XmC" secondAttribute="trailing" constant="8" id="Btl-Iv-iIz"/>
                     <constraint firstAttribute="bottom" secondItem="qjC-ND-XmC" secondAttribute="bottom" constant="13" id="ERy-o5-lCD"/>
                     <constraint firstItem="cEV-nh-cb1" firstAttribute="top" secondItem="FWg-gq-wKJ" secondAttribute="bottom" constant="7" id="FQQ-bk-5C1"/>
                     <constraint firstItem="cwL-hk-R4h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="JJn-X5-g9D"/>
@@ -170,14 +158,12 @@
                     <constraint firstItem="cEV-nh-cb1" firstAttribute="top" secondItem="lvd-BR-siG" secondAttribute="bottom" constant="7" id="rwM-Tl-El1"/>
                     <constraint firstItem="cwL-hk-R4h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="tQf-1b-a0X"/>
                     <constraint firstItem="qjC-ND-XmC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="uat-j3-q17"/>
-                    <constraint firstAttribute="bottom" secondItem="4jq-a6-fHJ" secondAttribute="bottom" constant="14" id="wSg-Xq-3wW"/>
                     <constraint firstItem="qjC-ND-XmC" firstAttribute="top" secondItem="cwL-hk-R4h" secondAttribute="bottom" constant="8" id="way-wp-27O"/>
                     <constraint firstItem="RWU-wF-ayq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="z2t-J4-IKp"/>
                     <constraint firstItem="gIK-Ia-w7Z" firstAttribute="top" secondItem="cEV-nh-cb1" secondAttribute="bottom" constant="31" id="znf-rE-BBE"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="communities" destination="4jq-a6-fHJ" id="4XN-3A-qUv"/>
                 <outlet property="company" destination="PQv-mP-aMR" id="lkD-fV-Myo"/>
                 <outlet property="name" destination="FWg-gq-wKJ" id="dj2-GW-sHA"/>
                 <outlet property="position" destination="lvd-BR-siG" id="V4r-Xx-ilB"/>
@@ -185,7 +171,7 @@
                 <outlet property="region" destination="gIK-Ia-w7Z" id="tHc-iV-y0A"/>
                 <outlet property="txView" destination="cwL-hk-R4h" id="GGY-3b-DPE"/>
             </connections>
-            <point key="canvasLocation" x="101" y="140.5"/>
+            <point key="canvasLocation" x="117" y="97.5"/>
         </tableViewCell>
     </objects>
     <resources>

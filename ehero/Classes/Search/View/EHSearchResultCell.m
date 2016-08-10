@@ -7,8 +7,9 @@
 //
 
 #import "EHSearchResultCell.h"
-
+#import "UILabel+GetWidth.h"
 #import "YTNetCommand.h"
+#import "EHCommunityLabel.h"
 @interface EHSearchResultCell()
 @property (weak, nonatomic) IBOutlet UIImageView *txView;
 @property (weak, nonatomic) IBOutlet UILabel *name;
@@ -16,12 +17,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *rates;
 @property (weak, nonatomic) IBOutlet UILabel *company;
 @property (weak, nonatomic) IBOutlet UILabel *region;
-@property (weak, nonatomic) IBOutlet UILabel *community1;
-@property (weak, nonatomic) IBOutlet UILabel *community2;
-@property (weak, nonatomic) IBOutlet UILabel *community3;
+
 
 - (IBAction)callClick:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *communities;
+
 
 @end
 
@@ -72,6 +71,10 @@
         cell.position.backgroundColor = RGB(234, 243, 248);
         cell.region.backgroundColor = RGB(68, 180, 244);
         
+//        UIColor *colorImg = [UIColor colorWithPatternImage:[UIImage imageNamed:@"comment_btn_background"]];
+//        [cell.community1 setBackgroundColor:colorImg];
+//        [cell.community2 setBackgroundColor:colorImg];
+//        [cell.community3 setBackgroundColor:colorImg];
     }
     
     return cell;
@@ -96,9 +99,23 @@
     }
     self.company.text = agentInfo.company;
     self.region.text = agentInfo.region;
-    self.communities.text = agentInfo.community;
-//    //判断主营小区个数 ,分割空格符，存在bug，这段先放着
-//    NSArray *communitiesArr = [agentInfo.community componentsSeparatedByString:@" "];
+
+    
+    //将小区分割成3个 存数组里
+    NSArray *array = [agentInfo.community componentsSeparatedByString:@" "];
+    NSMutableArray *communitiesArr = [NSMutableArray array];
+    for (NSString *comStr in array) {
+        if (comStr.length >= 1) {
+            [communitiesArr addObject:comStr];
+        }
+    }
+    
+    EHCommunityLabel *communityLabel = [EHCommunityLabel communityLabel];
+    
+    
+    //label改用动态创建，这样自适应才有效
+    
+    //没有小区
 //    if (communitiesArr.count < 1) {
 //        self.community1.hidden = YES;
 //        self.community2.hidden = YES;
@@ -106,8 +123,16 @@
 //    }else if(communitiesArr.count == 1){
 //        NSString *communityStr1 = [communitiesArr firstObject];
 //        self.community1.text = communityStr1;
+//        self.community1.frame = CGRectMake(0, 0, 100, 30);
 //        self.community2.hidden = YES;
 //        self.community3.hidden = YES;
+//        CGFloat width = [UILabel getWidthWithTitle:self.community1.text font:self.community1.font];
+//        UILabel *la = [[UILabel alloc]init];
+//        la.text = communityStr1;
+//        
+//        
+//     //   [self.community1 setFrame:CGRectMake(self.community1.frame.origin.x, self.community1.frame.origin.y, width, self.community1.frame.size.height)];
+//        [self addSubview:self.community1];
 //    }else if(communitiesArr.count == 2){
 //        NSString *communityStr1 = [communitiesArr objectAtIndex:0];
 //        NSString *communityStr2 = [communitiesArr objectAtIndex:1];
@@ -121,7 +146,19 @@
 //        self.community1.text = communityStr1;
 //        self.community2.text = communityStr2;
 //        self.community3.text = communityStr3;
+//        CGFloat width = [UILabel getWidthWithTitle:self.community2.text font:self.community2.font];
+//        self.community2.frame = CGRectMake(self.community2.frame.origin.x, self.community2.frame.origin.y, width, self.community2.frame.size.height);
+//        self.community3.frame = CGRectMake(20, 20, 150, 30);
+//        
+//        UILabel *la = [[UILabel alloc]init];
+//        la.font = self.community2.font;
+//        la.text = communityStr2;
+//        UIColor *colorImg = [UIColor colorWithPatternImage:[UIImage imageNamed:@"comment_btn_background"]];
+//        [la setBackgroundColor:colorImg];
+//        la.frame = CGRectMake(30, 40, width, 30);
+//        [self addSubview:la];
 //    }
+    
 
 }
 - (IBAction)callClick:(id)sender {
