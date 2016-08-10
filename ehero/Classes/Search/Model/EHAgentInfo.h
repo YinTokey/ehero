@@ -36,7 +36,7 @@
  */
 @property(nonatomic,copy)NSString *clicks;
 /**
- *  评论数量
+ *  评论
  */
 @property(nonatomic,copy)NSString *comments;
 /**

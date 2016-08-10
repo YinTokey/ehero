@@ -45,8 +45,7 @@
 
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
 
-  
-    
+
 }
 
 
@@ -81,9 +80,7 @@
 
 #pragma mark - textfield delegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
-
     NSLog(@"begin edit");
-    
 
 }
 

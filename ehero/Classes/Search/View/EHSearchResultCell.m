@@ -7,9 +7,9 @@
 //
 
 #import "EHSearchResultCell.h"
-#import "UILabel+GetWidth.h"
 #import "YTNetCommand.h"
-#import "EHCommunityLabel.h"
+#import "UIButton+GetWidth.h"
+#import "EHCommunityButton.h"
 @interface EHSearchResultCell()
 @property (weak, nonatomic) IBOutlet UIImageView *txView;
 @property (weak, nonatomic) IBOutlet UILabel *name;
@@ -110,55 +110,25 @@
         }
     }
     
-    EHCommunityLabel *communityLabel = [EHCommunityLabel communityLabel];
+    //用动态创建，这样自适应才有效
+    for (NSInteger i = 0;i < communitiesArr.count; i++) {
+        NSString *comStr = [communitiesArr objectAtIndex:i];
+        EHCommunityButton *comBtn = [EHCommunityButton communityButton:@"永泰西里一区"];
+    }
+    EHCommunityButton *comBtn1 = [EHCommunityButton communityButton:@"永泰西里一区"];
+    comBtn1.frame = CGRectMake(70, 95, comBtn1.realWidth, 16);
     
     
-    //label改用动态创建，这样自适应才有效
+    [self addSubview:comBtn1];
     
-    //没有小区
-//    if (communitiesArr.count < 1) {
-//        self.community1.hidden = YES;
-//        self.community2.hidden = YES;
-//        self.community3.hidden = YES;
-//    }else if(communitiesArr.count == 1){
-//        NSString *communityStr1 = [communitiesArr firstObject];
-//        self.community1.text = communityStr1;
-//        self.community1.frame = CGRectMake(0, 0, 100, 30);
-//        self.community2.hidden = YES;
-//        self.community3.hidden = YES;
-//        CGFloat width = [UILabel getWidthWithTitle:self.community1.text font:self.community1.font];
-//        UILabel *la = [[UILabel alloc]init];
-//        la.text = communityStr1;
-//        
-//        
-//     //   [self.community1 setFrame:CGRectMake(self.community1.frame.origin.x, self.community1.frame.origin.y, width, self.community1.frame.size.height)];
-//        [self addSubview:self.community1];
-//    }else if(communitiesArr.count == 2){
-//        NSString *communityStr1 = [communitiesArr objectAtIndex:0];
-//        NSString *communityStr2 = [communitiesArr objectAtIndex:1];
-//        self.community1.text = communityStr1;
-//        self.community2.text = communityStr2;
-//        self.community3.hidden = YES;
-//    }else{
-//        NSString *communityStr1 = [communitiesArr objectAtIndex:0];
-//        NSString *communityStr2 = [communitiesArr objectAtIndex:1];
-//        NSString *communityStr3 = [communitiesArr objectAtIndex:2];
-//        self.community1.text = communityStr1;
-//        self.community2.text = communityStr2;
-//        self.community3.text = communityStr3;
-//        CGFloat width = [UILabel getWidthWithTitle:self.community2.text font:self.community2.font];
-//        self.community2.frame = CGRectMake(self.community2.frame.origin.x, self.community2.frame.origin.y, width, self.community2.frame.size.height);
-//        self.community3.frame = CGRectMake(20, 20, 150, 30);
-//        
-//        UILabel *la = [[UILabel alloc]init];
-//        la.font = self.community2.font;
-//        la.text = communityStr2;
-//        UIColor *colorImg = [UIColor colorWithPatternImage:[UIImage imageNamed:@"comment_btn_background"]];
-//        [la setBackgroundColor:colorImg];
-//        la.frame = CGRectMake(30, 40, width, 30);
-//        [self addSubview:la];
-//    }
     
+    
+    
+    
+    
+    
+
+
 
 }
 - (IBAction)callClick:(id)sender {
