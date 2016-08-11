@@ -18,10 +18,11 @@
 #import "EHVerifyView.h"
 #import "EHSkimedAgentInfo.h"
 
-@interface EHAgentInfoController ()<EHSearchResultCellDelegate>
+@interface EHAgentInfoController ()<EHSearchResultCellDelegate,EHVerifyViewDelegate>
 {
     EHCallAgentView *callAgentView;
     STModal *modal;
+    EHVerifyView *verifyView;
 }
 - (IBAction)shareBtnClick:(id)sender;
 - (IBAction)collectBtnClick:(id)sender;
@@ -57,6 +58,7 @@
 //    [skimedAgent setWithAgentInfoAndTimeLabel:self.agentInfo];
 //    [skimedAgent save];
     
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -132,10 +134,26 @@
     [callAgentView setCallAgentViewWithName:self.agentInfo.name mobile:mobileString txUrl:self.agentInfo.tx];
     
     
-    EHVerifyView *verifyV = [EHVerifyView initVerifyView];
-    [verifyV setupCountdownBtn];
-    [modal showContentView:verifyV animated:YES];
+    verifyView = [EHVerifyView initVerifyView];
+    verifyView.delegate = self;
+    [verifyView setupCountdownBtn];
+    [modal showContentView:verifyView animated:YES];
 }
+# pragma mark - EHVerifyViewDelegate
+- (void)closeVerifyView:(EHVerifyView *)verifyView{
+    [modal hide:YES];
+
+    callAgentView = [EHCallAgentView initCallAgentView];
+    [callAgentView setCallAgentViewWithName:self.agentInfo.name mobile:self.agentInfo.mobile txUrl:self.agentInfo.tx];
+//    [modal showContentView:callAgentView animated:YES];
+    STModal *modalCallAgent = [STModal modal];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [modalCallAgent showContentView:callAgentView animated:YES];
+        [MBProgressHUD showNormalMessage:@"正在接通电话" toView:nil];
+    });
+    
+}
+
 
 # pragma mark - 分享点击
 - (IBAction)shareBtnClick:(id)sender {

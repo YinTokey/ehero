@@ -131,6 +131,7 @@
 //    
 //    
 //    });
+   /*
     [YTHttpTool get:codeCheckUrlStr params:param success:^(id responseObj) {
         NSLog(@"success %@",responseObj);
         NSLog(@"class call %@",[responseObj class]);
@@ -149,8 +150,11 @@
         [MBProgressHUD hideHUD];
         [MBProgressHUD showSuccess:@"验证失败"];
     }];
-    
-
+    */
+    //向代理对象发送消息
+    if ([self.delegate respondsToSelector:@selector(closeVerifyView:)]) {
+        [self.delegate closeVerifyView:self];
+    }
 
 }
 
