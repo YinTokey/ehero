@@ -27,7 +27,8 @@
 #define sendCodeUrlStr @"http://ehero.cc/users/sms.json"
 #define codeCheckUrlStr @"http://ehero.cc/api/v1/users/check_code.json"
 #define callAgentUrlStr @"http://ehero.cc/agents/call.json"
-
+#define commentAgentUrlStr @"http://ehero.cc/api/v1/comments.json"
+#define anti_disturbCallUrlStr @"http://ehero.cc/api/v1/customers/call.json"
 
 #define QQAppId @"1103194207"
 #define WeiboAppKey @"402180334"

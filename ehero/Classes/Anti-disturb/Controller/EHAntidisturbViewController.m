@@ -153,10 +153,28 @@
     return YES;
 }
 
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if(textField == self.code){
+        NSLog(@"检查验证码");
+    }
+
+}
 
 - (IBAction)CALL:(id)sender {
-    NSString *code = self.code.text;
-    NSDictionary *param = @{@"code":code};
+
+    NSDictionary *helper = @{@"from":self.myPhoneNumber.text,
+                             @"code":self.code.text,
+                             @"to":self.otherPhone.text};
+    NSDictionary *param = @{@"helper":helper};
+    [YTHttpTool post:anti_disturbCallUrlStr params:param success:^(id responseObj) {
+        NSLog(@"success %@",responseObj);
+        [MBProgressHUD showSuccess:@"接通成功，正在转接，请耐心等待"];
+    } failure:^(NSError *error) {
+        NSLog(@"failed %@",error);
+        [MBProgressHUD showError:@"呼叫失败"];
+    }];
+    
+ /*
     [YTHttpTool get:codeCheckUrlStr params:param  success:^(id responseObj) {
         NSLog(@"success %@",responseObj);
         NSLog(@"class %@",[responseObj class]);
@@ -165,24 +183,25 @@
         NSLog(@"responString %@",responStr);
         //block嵌套，先验证后打电话
        // NSString *code1 = self.code.text;
-        NSDictionary *callParam = @{@"from":@"18396532162",
-                                    @"id":@"57430a2e724e1130b2516e8d",
-                                    @"code":code};
-        [YTHttpTool post:callAgentUrlStr params:callParam success:^(id responseObj) {
-            NSLog(@"success call %@",responseObj);
-            NSLog(@"class call %@",[responseObj class]);
-            
-            NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
-            NSLog(@"responString call %@",responStr);
-        } failure:^(NSError *error) {
-            NSLog(@"failed call %@",error);
-        }];
+//        NSDictionary *callParam = @{@"from":@"18396532162",
+//                                    @"id":@"57430a2e724e1130b2516e8d",
+//                                    @"code":code};
+//        [YTHttpTool post:callAgentUrlStr params:callParam success:^(id responseObj) {
+//            NSLog(@"success call %@",responseObj);
+//            NSLog(@"class call %@",[responseObj class]);
+//            
+//            NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
+//            NSLog(@"responString call %@",responStr);
+//        } failure:^(NSError *error) {
+//            NSLog(@"failed call %@",error);
+//        }];
         
         
     } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"验证出错"];
         NSLog(@"failed %@",error);
     }];
-    
+    */
     
 }
 @end
