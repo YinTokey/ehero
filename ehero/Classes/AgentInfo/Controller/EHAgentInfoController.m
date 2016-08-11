@@ -135,7 +135,6 @@
     EHVerifyView *verifyV = [EHVerifyView initVerifyView];
     [verifyV setupCountdownBtn];
     [modal showContentView:verifyV animated:YES];
-    
 }
 
 # pragma mark - 分享点击

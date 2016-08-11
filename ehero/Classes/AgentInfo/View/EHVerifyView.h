@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+@class EHVerifyView;
+@protocol EHVerifyViewDelegate <NSObject>
 
+@optional
+- (void)closeVerifyView:(EHVerifyView *)verifyView;
+
+
+@end
 @interface EHVerifyView : UIView
+
+@property(nonatomic,weak) id<EHVerifyViewDelegate> delegate;
 
 + (instancetype)initVerifyView;
 - (void)setupCountdownBtn;

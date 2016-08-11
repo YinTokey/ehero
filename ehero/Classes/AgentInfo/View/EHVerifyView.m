@@ -137,7 +137,12 @@
         NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
         NSLog(@"responString call %@",responStr);
         [MBProgressHUD hideHUD];
-        [MBProgressHUD showSuccess:@"验证成功，正在呼叫"];
+        [MBProgressHUD showSuccess:@"验证成功，转接电话"];
+        //向代理对象发送消息
+        if ([self.delegate respondsToSelector:@selector(closeVerifyView:)]) {
+            [self.delegate closeVerifyView:self];
+        }
+        
     } failure:^(NSError *error) {
         NSLog(@"failed %@",error);
         
