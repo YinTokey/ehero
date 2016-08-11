@@ -7,7 +7,7 @@
 //
 
 #import "EHCallAgentView.h"
-
+#import "YTHttpTool.h"
 #import "YTNetCommand.h"
 @interface EHCallAgentView()
 @property (weak, nonatomic) IBOutlet UIView *callView;
@@ -15,6 +15,7 @@
 @end
 
 @implementation EHCallAgentView
+
 
 + (instancetype)initCallAgentView{
 
@@ -29,7 +30,6 @@
     self.txView.image = [YTNetCommand downloadImageWithImgStr:txUrl
                                           placeholderImageStr:@"Profile"
                                                     imageView:_txView];
-
 }
 
 @end

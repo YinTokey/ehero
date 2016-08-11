@@ -11,7 +11,7 @@
 @protocol EHVerifyViewDelegate <NSObject>
 
 @optional
-- (void)closeVerifyView:(EHVerifyView *)verifyView;
+- (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code;
 
 
 @end

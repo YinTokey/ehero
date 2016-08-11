@@ -120,6 +120,10 @@
         } failure:^(NSError *error) {
             NSLog(@"faild,%@",error);
         }];
+    //发送一次验证吗时，就把用户电话存起来
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:self.myPhoneNumber.text forKey:@"userPhoneNumber"];
+    
 }
 
 - (IBAction)callBtnClick:(id)sender {
@@ -127,21 +131,16 @@
     NSDictionary *param = @{@"code":code};
     
     [MBProgressHUD showMessage:@"正在验证"];
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//    
-//    
-//    });
-   /*
+  
     [YTHttpTool get:codeCheckUrlStr params:param success:^(id responseObj) {
         NSLog(@"success %@",responseObj);
         NSLog(@"class call %@",[responseObj class]);
         NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
         NSLog(@"responString call %@",responStr);
         [MBProgressHUD hideHUD];
-        [MBProgressHUD showSuccess:@"验证成功，转接电话"];
-        //向代理对象发送消息
-        if ([self.delegate respondsToSelector:@selector(closeVerifyView:)]) {
-            [self.delegate closeVerifyView:self];
+        //向代理对象发送消息,传递验证码
+        if ([self.delegate respondsToSelector:@selector(closeVerifyView:code:)]) {
+            [self.delegate closeVerifyView:self code:code];
         }
         
     } failure:^(NSError *error) {
@@ -150,14 +149,8 @@
         [MBProgressHUD hideHUD];
         [MBProgressHUD showSuccess:@"验证失败"];
     }];
-    */
-    //向代理对象发送消息
-    if ([self.delegate respondsToSelector:@selector(closeVerifyView:)]) {
-        [self.delegate closeVerifyView:self];
-    }
 
 }
-
 - (void)addGesture{
     //添加手势相应，输textfield时，点击其他区域，键盘消失
     UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];

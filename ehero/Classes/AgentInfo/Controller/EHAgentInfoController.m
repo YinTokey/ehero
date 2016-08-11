@@ -17,7 +17,7 @@
 #import "STModal.h"
 #import "EHVerifyView.h"
 #import "EHSkimedAgentInfo.h"
-
+#import "YTHttpTool.h"
 @interface EHAgentInfoController ()<EHSearchResultCellDelegate,EHVerifyViewDelegate>
 {
     EHCallAgentView *callAgentView;
@@ -53,10 +53,7 @@
     
 //    NSLog(@"数据总数 %ld",[EHSkimedAgentInfo findCounts]);
     [self skimedAndSave];
-//    
-//    EHSkimedAgentInfo *skimedAgent = [[EHSkimedAgentInfo alloc]init];
-//    [skimedAgent setWithAgentInfoAndTimeLabel:self.agentInfo];
-//    [skimedAgent save];
+
     
 
 }
@@ -140,16 +137,31 @@
     [modal showContentView:verifyView animated:YES];
 }
 # pragma mark - EHVerifyViewDelegate
-- (void)closeVerifyView:(EHVerifyView *)verifyView{
+- (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code{
     [modal hide:YES];
 
     callAgentView = [EHCallAgentView initCallAgentView];
     [callAgentView setCallAgentViewWithName:self.agentInfo.name mobile:self.agentInfo.mobile txUrl:self.agentInfo.tx];
-//    [modal showContentView:callAgentView animated:YES];
     STModal *modalCallAgent = [STModal modal];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [modalCallAgent showContentView:callAgentView animated:YES];
         [MBProgressHUD showNormalMessage:@"正在接通电话" toView:nil];
+        
+        
+        NSDictionary *param = @{@"from":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
+                                @"id":self.agentInfo.idStr,
+                                @"code":code};
+        [YTHttpTool post:callAgentUrlStr params:param success:^(id responseObj) {
+            NSLog(@"success %@",responseObj);
+            [modalCallAgent hide:YES];
+            
+        } failure:^(NSError *error) {
+            NSLog(@"failed %@",error);
+        }];
+        
+        
+        
+        
     });
     
 }
