@@ -45,7 +45,7 @@
     [sendCodeBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
     
     [sendCodeBtn setBackgroundImage:[UIImage imageNamed:@"sendCodeBtn"] forState:UIControlStateNormal];
-    [sendCodeBtn addTarget:self action:@selector(sendClick) forControlEvents:UIControlEventTouchUpInside];
+    [sendCodeBtn addTarget:self action:@selector(sendCodeClick) forControlEvents:UIControlEventTouchUpInside];
     self.sendCodeBtn =  sendCodeBtn;
 
     
@@ -72,7 +72,7 @@
 }
 
 
-- (void)sendClick{
+- (void)sendCodeClick{
     
     if ([self.timer counting]) {
         //如果正在计时，则按钮不可点击
@@ -123,7 +123,30 @@
 }
 
 - (IBAction)callBtnClick:(id)sender {
-    [MBProgressHUD showError:@"暂时无法呼叫" toView:self];
+    NSString *code = self.code.text;
+    NSDictionary *param = @{@"code":code};
+    
+    [MBProgressHUD showMessage:@"正在验证"];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//    
+//    
+//    });
+    [YTHttpTool get:codeCheckUrlStr params:param success:^(id responseObj) {
+        NSLog(@"success %@",responseObj);
+        NSLog(@"class call %@",[responseObj class]);
+        NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
+        NSLog(@"responString call %@",responStr);
+        [MBProgressHUD hideHUD];
+        [MBProgressHUD showSuccess:@"验证成功，正在呼叫"];
+    } failure:^(NSError *error) {
+        NSLog(@"failed %@",error);
+        
+        [MBProgressHUD hideHUD];
+        [MBProgressHUD showSuccess:@"验证失败"];
+    }];
+    
+
+
 }
 
 - (void)addGesture{

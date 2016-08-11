@@ -22,5 +22,5 @@
 
 + (void)hideHUDForView:(UIView *)view;
 + (void)hideHUD;
-+(void)showNormalMessage:(NSString *)NormalMessage showDetailText:(NSString*)DetailText toView:(UIView *)view;
++(void)showNormalMessage:(NSString *)NormalMessage toView:(UIView *)view;
 @end

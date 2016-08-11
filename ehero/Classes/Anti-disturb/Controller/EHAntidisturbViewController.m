@@ -164,10 +164,10 @@
         NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
         NSLog(@"responString %@",responStr);
         //block嵌套，先验证后打电话
-        NSString *code1 = self.code.text;
+       // NSString *code1 = self.code.text;
         NSDictionary *callParam = @{@"from":@"18396532162",
                                     @"id":@"57430a2e724e1130b2516e8d",
-                                    @"code":code1};
+                                    @"code":code};
         [YTHttpTool post:callAgentUrlStr params:callParam success:^(id responseObj) {
             NSLog(@"success call %@",responseObj);
             NSLog(@"class call %@",[responseObj class]);

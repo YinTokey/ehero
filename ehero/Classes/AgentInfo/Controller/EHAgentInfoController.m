@@ -103,6 +103,7 @@
     if (indexPath.section == 0) {
         EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
         [cell setResultCell:self.agentInfo];
+        //cell.userInteractionEnabled = NO;
         cell.isdrawRect = NO;
         cell.delegate = self;
         return cell;
@@ -209,7 +210,7 @@
 - (void)collect{
     [self.agentInfo save];
 }
-
+#pragma mark - 浏览过的经纪人，不重复地存到数据库
 - (void)skimedAndSave{
     
     EHSkimedAgentInfo *skimedAgent = [[EHSkimedAgentInfo alloc]init];

@@ -25,7 +25,7 @@
     hud.removeFromSuperViewOnHide = YES;
     
     // 1秒之后再消失
-    [hud hide:YES afterDelay:1.2];
+    [hud hide:YES afterDelay:0.7];
 }
 
 #pragma mark 显示错误信息
@@ -56,32 +56,32 @@
     [self showSuccess:success toView:nil];
 }
 
-+ (void)showError:(NSString *)error
-{
-    [self showError:error toView:nil];
-}
-
-+(void)showNormalMessage:(NSString *)NormalMessage showDetailText:(NSString*)DetailText toView:(UIView *)view{
++(void)showNormalMessage:(NSString *)NormalMessage toView:(UIView *)view{
     if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
     
     MBProgressHUD *hud = [[MBProgressHUD alloc]initWithView:view];
     [view addSubview:hud];
     hud.labelText =NormalMessage;
-    hud.detailsLabelText = DetailText;
     hud.mode = MBProgressHUDModeText;
     [hud showAnimated:YES whileExecutingBlock:^{
-        sleep(2.0);
+        sleep(1);
     }completionBlock:^{
         [hud setRemoveFromSuperViewOnHide:YES];
     }];
     
 }
 
++ (void)showError:(NSString *)error
+{
+    [self showError:error toView:nil];
+}
 
 + (MBProgressHUD *)showMessage:(NSString *)message
 {
     return [self showMessage:message toView:nil];
 }
+
+
 
 + (void)hideHUDForView:(UIView *)view
 {
