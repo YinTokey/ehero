@@ -15,11 +15,13 @@
 {
     CGRect resendBtnRect;
 }
+@property (weak, nonatomic) IBOutlet UIButton *callClick;
 @property (weak, nonatomic) IBOutlet UITextField *myPhoneNumber;
 @property (weak, nonatomic) IBOutlet UITextField *code;
 @property (weak, nonatomic) IBOutlet UITextField *otherPhone;
 @property (nonatomic,strong)MZTimerLabel *timer;
 @property (nonatomic,strong) UIButton *sendCodeBtn;
+- (IBAction)CALL:(id)sender;
 
 @property (nonatomic,strong)WKWebView *webView;
 @end
@@ -150,51 +152,37 @@
     [self.otherPhone resignFirstResponder];
     return YES;
 }
-/*
-#pragma mark - 开始输入时，视图上移
-- (void)textFieldDidBeginEditing:(UITextField *)textField{
-    CGRect frame = textField.frame;
-    
-    int offset = frame.origin.y + 0 - (self.view.frame.size.height - 263.0);//iPhone键盘高度216，iPad的为352,这里设成263更方便，并且考虑到搜狗的键盘比系统的键盘高一点
-    
-    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
-    
-    [UIView setAnimationDuration:0.5f];
-    
-    //将视图的Y坐标向上移动offset个单位，以使下面腾出地方用于软键盘的显示
-    
-    if(offset < -15)
+
+
+- (IBAction)CALL:(id)sender {
+    NSString *code = self.code.text;
+    NSDictionary *param = @{@"code":code};
+    [YTHttpTool get:codeCheckUrlStr params:param  success:^(id responseObj) {
+        NSLog(@"success %@",responseObj);
+        NSLog(@"class %@",[responseObj class]);
+
+        NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
+        NSLog(@"responString %@",responStr);
+        //block嵌套，先验证后打电话
+        NSString *code1 = self.code.text;
+        NSDictionary *callParam = @{@"from":@"18396532162",
+                                    @"id":@"57430a2e724e1130b2516e8d",
+                                    @"code":code1};
+        [YTHttpTool post:callAgentUrlStr params:callParam success:^(id responseObj) {
+            NSLog(@"success call %@",responseObj);
+            NSLog(@"class call %@",[responseObj class]);
+            
+            NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
+            NSLog(@"responString call %@",responStr);
+        } failure:^(NSError *error) {
+            NSLog(@"failed call %@",error);
+        }];
         
-        self.view.frame = CGRectMake(0.0f, offset, self.view.frame.size.width, self.view.frame.size.height);
+        
+    } failure:^(NSError *error) {
+        NSLog(@"failed %@",error);
+    }];
     
-    [UIView commitAnimations];
-}
-
-#pragma mark - 输入框编辑完成以后，将视图恢复到原始状态
-- (void)textViewDidEndEditing:(UITextView *)textView{
-    self.view.frame =CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-}
-#pragma mark - 初始化网页
-- (void)webViewLoad{
-    WKWebView *webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    webView.scrollView.bounces = NO;
-    self.webView = webView;
-    [self.view addSubview:_webView];
-    self.webView.navigationDelegate = self;
-    
-    NSURL *url = [NSURL URLWithString:@"http://ehero.cc/helper"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:request];
     
 }
-
-#pragma mark - webview delegate
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
-    [LBProgressHUD showHUDto:self.view animated:NO];
-}
-
-- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
-    [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
-}
- */
 @end

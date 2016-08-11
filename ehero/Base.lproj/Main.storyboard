@@ -293,6 +293,9 @@
                                         <include reference="uMl-1y-KOh"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="CALL:" destination="iJb-bq-icq" eventType="touchUpInside" id="0Bm-2z-cwU"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="对方号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mms-xR-Xt1">
                                 <rect key="frame" x="8" y="93" width="260" height="30"/>
@@ -423,6 +426,7 @@
                     <navigationItem key="navigationItem" title="免扰电话" id="HSt-Kp-HTN"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="callClick" destination="Fm5-aV-0ZV" id="oZM-Ys-H1q"/>
                         <outlet property="code" destination="NEb-sE-OOj" id="w9V-4l-dpt"/>
                         <outlet property="myPhoneNumber" destination="7f9-g1-6OV" id="ICA-fv-cva"/>
                         <outlet property="otherPhone" destination="Mms-xR-Xt1" id="pAR-7M-6gW"/>

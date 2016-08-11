@@ -92,7 +92,30 @@
 
 
 - (IBAction)commitBtnClick:(id)sender {
-    [MBProgressHUD showError:@"暂时没有开放提交接口" toView:self.view];
+   // [MBProgressHUD showError:@"暂时没有开放提交接口" toView:self.view];
+    
+   
+    NSDictionary *comment = @{@"author":@"15695951945",
+                              @"kind":@"好评",
+                              @"text":@"3"};
+    NSDictionary *param = @{@"agent_id":@"57430a56724e1130b2517980",
+                            @"comment":comment};
+    
+    NSDictionary *p = @{@"code":@"9569"};
+  //  http://ehero.cc/api/v1/comments.json
+    // http://ehero.cc/api/v1/users/check_code.json
+    [YTHttpTool post:@"http://ehero.cc/api/v1/users/check_code.json" params:p  success:^(id responseObj) {
+        NSLog(@"success %@",responseObj);
+        NSLog(@"class %@",[responseObj class]);
+        
+        NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
+        NSLog(@"responString %@",responStr);
+        
+    } failure:^(NSError *error) {
+        NSLog(@"failed %@",error);
+    }];
+    
+    
 }
 
 #pragma mark  -- UITapGestureRecognizer

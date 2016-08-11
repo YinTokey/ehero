@@ -25,6 +25,9 @@
 #define searchAreaUrlStr @"http://ehero.cc/agents/search.json"
 #define searchAgentUrlStr @"http://ehero.cc/agents/asearch.json"
 #define sendCodeUrlStr @"http://ehero.cc/users/sms.json"
+#define codeCheckUrlStr @"http://ehero.cc/api/v1/users/check_code.json"
+#define callAgentUrlStr @"http://ehero.cc/agents/call.json"
+
 
 #define QQAppId @"1103194207"
 #define WeiboAppKey @"402180334"
