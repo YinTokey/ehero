@@ -145,11 +145,14 @@
 # pragma mark - 搜索方法
 - (void)searchWithURLString:(NSString *)urlString Param:(NSDictionary *)param{
 
-    [YTHttpTool get:urlString params:param success:^(id responseObj) {
+    [YTHttpTool get:urlString params:param success:^(NSURLSessionTask *task, id responseObj) {
         //json转模型
         self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
-        
         [self searchStatusTest];
+        
+        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+        NSDictionary *allHeaders = response.allHeaderFields;
+        NSLog(@"print headers date %@",[allHeaders objectForKey:@"Date"]);
         
         [self.tableView reloadData];
         [LBProgressHUD hideAllHUDsForView:self.view animated:NO];

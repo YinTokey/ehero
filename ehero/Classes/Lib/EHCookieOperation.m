@@ -23,6 +23,7 @@
     NSHTTPCookie *cookie = [NSKeyedUnarchiver unarchiveObjectWithData:[userDefaults objectForKey:@"cookie"]];
     //如果有cookie,则设置cookie
     if (cookie) {
+   
         NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
         [cookieStorage setCookie:cookie];
         NSLog(@"setCookie %@",cookie);

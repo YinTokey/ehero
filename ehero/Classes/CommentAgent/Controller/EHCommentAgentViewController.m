@@ -99,7 +99,7 @@
     NSDictionary *param = @{@"agent_id":@"57430a56724e1130b2517980",
                             @"comment":comment};
 
-    [YTHttpTool post:commentAgentUrlStr params:param  success:^(id responseObj) {
+    [YTHttpTool post:commentAgentUrlStr params:param  success:^(NSURLSessionDataTask *task,id responseObj) {
         NSLog(@"success %@",responseObj);
         NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
         NSLog(@"responString %@",responStr);
@@ -150,7 +150,7 @@
 # pragma mark - 搜索方法
 - (void)searchWithURLString:(NSString *)urlString Param:(NSDictionary *)param{
     
-    [YTHttpTool get:urlString params:param success:^(id responseObj) {
+    [YTHttpTool get:urlString params:param success:^(NSURLSessionTask *task,id responseObj) {
         //json转模型
         self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
         //如果找到经纪人，则取消控件的隐藏

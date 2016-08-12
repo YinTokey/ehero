@@ -117,7 +117,7 @@
 - (void)sendCodeRequest{
     
         NSDictionary *params = @{@"mobile":self.myPhoneNumber.text};
-        [YTHttpTool post:sendCodeUrlStr params:params success:^(id responseObj) {
+        [YTHttpTool post:sendCodeUrlStr params:params success:^(NSURLSessionDataTask *task,id responseObj) {
             NSLog(@"success");
             [EHCookieOperation saveCookie];
             
@@ -133,7 +133,7 @@
 - (IBAction)callBtnClick:(id)sender {
     NSString *code = self.code.text;
     NSDictionary *param = @{@"code":code};
-    [EHCookieOperation setCookie];
+  //  [EHCookieOperation setCookie];
 //    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
 //    [mgr GET:codeCheckUrlStr parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
 //        

@@ -9,9 +9,9 @@
 #import "YTHttpTool.h"
 #import  "MBProgressHUD+YT.h"
 @implementation YTHttpTool
+// failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
 
-
-+ (void)get:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (void)get:(NSString *)url params:(NSDictionary *)params success:(void (^)(NSURLSessionDataTask *task ,id responseObj))success failure:(void (^)(NSError *error))failure
 {
     // 1.获得请求管理者
     AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
@@ -21,8 +21,9 @@
     [mgr GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (success) {
-            success(responseObject);
+        if (success) {       
+            success(task,responseObject);
+            
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
@@ -33,8 +34,7 @@
 }
 
 
-+ (void)post:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
-{
++ (void)post:(NSString *)url params:(NSDictionary *)params success:(void (^)(NSURLSessionDataTask *task ,id responseObj))success failure:(void (^)(NSError *error))failure{
     // 1.获得请求管理者
     AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     // 2.申明返回的结果是text/html类型
@@ -46,7 +46,7 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
-            success(responseObject);
+            success(task,responseObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {

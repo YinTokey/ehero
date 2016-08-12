@@ -123,7 +123,7 @@
 - (void)sendCodeRequest{
     
     NSDictionary *params = @{@"mobile":self.myPhoneNumber.text};
-    [YTHttpTool post:sendCodeUrlStr params:params success:^(id responseObj) {
+    [YTHttpTool post:sendCodeUrlStr params:params success:^(NSURLSessionDataTask *task,id responseObj) {
         NSLog(@"success");
     } failure:^(NSError *error) {
         NSLog(@"faild,%@",error);
@@ -166,7 +166,7 @@
                              @"code":self.code.text,
                              @"to":self.otherPhone.text};
     NSDictionary *param = @{@"helper":helper};
-    [YTHttpTool post:anti_disturbCallUrlStr params:param success:^(id responseObj) {
+    [YTHttpTool post:anti_disturbCallUrlStr params:param success:^(NSURLSessionDataTask *task,id responseObj) {
         NSLog(@"success %@",responseObj);
         [MBProgressHUD showSuccess:@"接通成功，正在转接，请耐心等待"];
     } failure:^(NSError *error) {

@@ -121,18 +121,23 @@
 # pragma mark - searchResultCellDelegate
 - (void)callBtnClick:(UITableViewCell *)cell{
     NSLog(@"点击经纪人详情界面的打电话");
-    
+    //如果有cookie
+//    if ([EHCookieOperation setCookie]) {
+//        <#statements#>
+//    }
+    //呼叫经纪人界面
     callAgentView = [EHCallAgentView initCallAgentView];
     //修改电话号码格式
     NSMutableString *mobileString = [NSMutableString stringWithString:self.agentInfo.mobile];
     [mobileString insertString:@"-" atIndex:3];
     [mobileString insertString:@"-" atIndex:8];
-    
     [callAgentView setCallAgentViewWithName:self.agentInfo.name mobile:mobileString txUrl:self.agentInfo.tx];
   
+    //验证界面
     verifyView = [EHVerifyView initVerifyView];
     verifyView.delegate = self;
     [verifyView setupCountdownBtn];
+    
     [modal showContentView:verifyView animated:YES];
 
 }
@@ -153,7 +158,7 @@
                              //  @"code":code
                                 };
         
-        [YTHttpTool post:callAgentUrlStr params:param success:^(id responseObj) {
+        [YTHttpTool post:callAgentUrlStr params:param success:^(NSURLSessionDataTask *task, id responseObj) {
             NSLog(@"success %@",responseObj);
             [modalCallAgent hide:YES];
             

@@ -66,7 +66,7 @@ static EHNetBusinessManager *_manager;
 #pragma mark - 整合网络请求和字典转模型
 - (void)get:(NSString *)urlStr params:(NSDictionary *)params dataType:(Class)dataClass forAction:action
 {
-    [YTHttpTool get:urlStr params:params success:^(id responseObj) {
+    [YTHttpTool get:urlStr params:params success:^(NSURLSessionTask *task, id responseObj) {
         if ([self.delegate respondsToSelector:@selector(EHNetBusinessDataFetchedSuccess:forAction:andIdentifier:)]) {
             
             if (dataClass) {
@@ -91,7 +91,7 @@ static EHNetBusinessManager *_manager;
 #pragma mark - post
 - (void)post:(NSString *)urlStr params:(NSDictionary *)params dataType:(Class)dataClass forAction:action
 {
-    [YTHttpTool post:urlStr params:params success:^(id responseObj) {
+    [YTHttpTool post:urlStr params:params success:^(NSURLSessionDataTask *task,id responseObj) {
         if ([self.delegate respondsToSelector:@selector(EHNetBusinessDataFetchedSuccess:forAction:andIdentifier:)]) {
             
             if (dataClass) {
