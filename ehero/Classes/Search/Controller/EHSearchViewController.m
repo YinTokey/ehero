@@ -101,7 +101,7 @@
 //    } failure:^(NSError *error) {
 //        NSLog(@"faild,%@",error);
 //    }];
-  
+    
     return YES;
 }
 
@@ -150,10 +150,6 @@
         self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
         [self searchStatusTest];
         
-        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
-        NSDictionary *allHeaders = response.allHeaderFields;
-        NSLog(@"print headers date %@",[allHeaders objectForKey:@"Date"]);
-        
         [self.tableView reloadData];
         [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
     } failure:^(NSError *error) {
@@ -165,9 +161,11 @@
 - (void)searchStatusTest{
     
     if (_searchResultArr.count == 0) {
-        [self.view makeToast:@"没有找到经纪人" duration:1.0 position:CSToastPositionCenter];
+        [MBProgressHUD showError:@"没有找到经纪人"];
+       // [self.view makeToast:@"没有找到经纪人" duration:1.0 position:CSToastPositionCenter];
     }else{
-        [self.view makeToast:@"为您找到经纪人" duration:1.0 position:CSToastPositionCenter];
+        [MBProgressHUD showSuccess:@"为您找到经纪人"];
+       // [self.view makeToast:@"为您找到经纪人" duration:1.0 position:CSToastPositionCenter];
     }
 }
 

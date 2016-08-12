@@ -10,7 +10,7 @@
 
 @interface EHCookieOperation : NSObject
 
-+ (void)saveCookie;
++ (void)saveCookieWithDate:(NSDate *)date;
 
 + (BOOL)setCookie;
 

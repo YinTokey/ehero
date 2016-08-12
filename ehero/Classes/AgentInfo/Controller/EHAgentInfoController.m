@@ -122,24 +122,43 @@
 - (void)callBtnClick:(UITableViewCell *)cell{
     NSLog(@"点击经纪人详情界面的打电话");
     //如果有cookie
-//    if ([EHCookieOperation setCookie]) {
-//        <#statements#>
-//    }
-    //呼叫经纪人界面
-    callAgentView = [EHCallAgentView initCallAgentView];
-    //修改电话号码格式
-    NSMutableString *mobileString = [NSMutableString stringWithString:self.agentInfo.mobile];
-    [mobileString insertString:@"-" atIndex:3];
-    [mobileString insertString:@"-" atIndex:8];
-    [callAgentView setCallAgentViewWithName:self.agentInfo.name mobile:mobileString txUrl:self.agentInfo.tx];
-  
-    //验证界面
-    verifyView = [EHVerifyView initVerifyView];
-    verifyView.delegate = self;
-    [verifyView setupCountdownBtn];
     
-    [modal showContentView:verifyView animated:YES];
+    if ([EHCookieOperation setCookie]) {
+        NSLog(@"有cookie,设置成功，不用再验证");
+        //呼叫经纪人界面
+        callAgentView = [EHCallAgentView initCallAgentView];
+        //修改电话号码格式
+        NSMutableString *mobileString = [NSMutableString stringWithString:self.agentInfo.mobile];
+        [mobileString insertString:@"-" atIndex:3];
+        [mobileString insertString:@"-" atIndex:8];
+        [callAgentView setCallAgentViewWithName:self.agentInfo.name mobile:mobileString txUrl:self.agentInfo.tx];
+        [modal showContentView:callAgentView animated:YES];
+        
+        //[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"]
+        NSDictionary *param = @{@"from":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
+                                @"id":self.agentInfo.idStr,
+                                @"code":@" "
+                                };
+        [MBProgressHUD showMessage:@"正在接通电话中..."];
+        [YTHttpTool post:callAgentUrlStr params:param success:^(NSURLSessionDataTask *task, id responseObj) {
+            NSLog(@"接通成功 %@",responseObj);
+            [MBProgressHUD hideHUD];
+            [MBProgressHUD showSuccess:@"接通成功，请耐心等待"];
+            
+            
+        } failure:^(NSError *error) {
+            NSLog(@"failed %@",error);
+        }];
+        
+        
+    }else{
+        //验证界面
+        verifyView = [EHVerifyView initVerifyView];
+        verifyView.delegate = self;
+        [verifyView setupCountdownBtn];
+        [modal showContentView:verifyView animated:YES];
 
+    }
 }
 
 # pragma mark - EHVerifyViewDelegate
@@ -151,16 +170,17 @@
     STModal *modalCallAgent = [STModal modal];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [modalCallAgent showContentView:callAgentView animated:YES];
-        [MBProgressHUD showNormalMessage:@"正在接通电话" toView:nil];
         
         NSDictionary *param = @{@"from":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
                                 @"id":self.agentInfo.idStr,
-                             //  @"code":code
+                                @"code":code
                                 };
-        
+        [MBProgressHUD showMessage:@"正在接通电话中..."];
         [YTHttpTool post:callAgentUrlStr params:param success:^(NSURLSessionDataTask *task, id responseObj) {
-            NSLog(@"success %@",responseObj);
-            [modalCallAgent hide:YES];
+            NSLog(@"接通成功  %@",responseObj);
+           // [modalCallAgent hide:YES];
+            [MBProgressHUD hideHUD];
+            [MBProgressHUD showSuccess:@"接通成功，请耐心等待"];
             
         } failure:^(NSError *error) {
             NSLog(@"failed %@",error);

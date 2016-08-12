@@ -10,7 +10,6 @@
 #import "MZTimerLabel.h"
 #import "YTHttpTool.h"
 #import "EHRegularExpression.h"
-#import "AFNetworking.h"
 #import "EHCookieOperation.h"
 
 @interface EHVerifyView()<MZTimerLabelDelegate,UITextFieldDelegate>
@@ -98,7 +97,6 @@
             [MBProgressHUD showError:@"电话格式错误" toView:self];
         }
     }
-  
 }
 
 #pragma mark - 倒计时结束后的代理方法
@@ -118,65 +116,45 @@
     
         NSDictionary *params = @{@"mobile":self.myPhoneNumber.text};
         [YTHttpTool post:sendCodeUrlStr params:params success:^(NSURLSessionDataTask *task,id responseObj) {
-            NSLog(@"success");
-            [EHCookieOperation saveCookie];
+            NSLog(@"success %@",responseObj);
+            //取得验证吗时，就把用户电话存起来
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setObject:self.myPhoneNumber.text forKey:@"userPhoneNumber"];
             
         } failure:^(NSError *error) {
             NSLog(@"faild,%@",error);
         }];
-    //发送一次验证吗时，就把用户电话存起来
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:self.myPhoneNumber.text forKey:@"userPhoneNumber"];
     
 }
 
 - (IBAction)callBtnClick:(id)sender {
     NSString *code = self.code.text;
     NSDictionary *param = @{@"code":code};
-  //  [EHCookieOperation setCookie];
-//    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
-//    [mgr GET:codeCheckUrlStr parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
-//        
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage]cookies];
-//        for (NSHTTPCookie *tempCookie in cookies) {
-//            //打印获得的cookie
-//            NSLog(@"getCookie: %@", tempCookie);
-//        }
-//        
-//        
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        NSLog(@"失败 %@",error);
-//    }];
-    
-    
-/*
     [MBProgressHUD showMessage:@"正在验证"];
   
-    [YTHttpTool get:codeCheckUrlStr params:param success:^(id responseObj) {
-        NSLog(@"success %@",responseObj);
-        NSLog(@"class call %@",[responseObj class]);
+    [YTHttpTool get:codeCheckUrlStr params:param success:^(NSURLSessionDataTask *task, id responseObj) {
+
         NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
-        NSLog(@"responString call %@",responStr);
+        NSLog(@"success responString call %@",responStr);
         [MBProgressHUD hideHUD];
+        [MBProgressHUD showSuccess:@"验证成功"];
+        //验证成功，把cookie和时间保存起来
+        [EHCookieOperation saveCookieWithDate:[NSDate date]];
+        
         //向代理对象发送消息,传递验证码
-//        if ([self.delegate respondsToSelector:@selector(closeVerifyView:code:)]) {
-//            [self.delegate closeVerifyView:self code:code];
-//        }
-//                NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage]cookies];
-//                for (NSHTTPCookie *tempCookie in cookies) {
-//                    //打印获得的cookie
-//                    NSLog(@"getCookie: %@", tempCookie);
-//                }
+        if ([self.delegate respondsToSelector:@selector(closeVerifyView:code:)]) {
+            [self.delegate closeVerifyView:self code:code];
+        }
+        
   
         
     } failure:^(NSError *error) {
         NSLog(@"failed %@",error);
         
         [MBProgressHUD hideHUD];
-        [MBProgressHUD showSuccess:@"验证失败"];
+        [MBProgressHUD showError:@"验证失败"];
     }];
-   */
+ 
 }
 #pragma mark - 保存cookie
 
