@@ -72,6 +72,7 @@
 		04B4F43F1D5AFCB900C6D4F3 /* EHCommunityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4F43E1D5AFCB900C6D4F3 /* EHCommunityButton.m */; };
 		04B857211D57280300BEA6CB /* EHSkimedAgentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B857201D57280300BEA6CB /* EHSkimedAgentInfo.m */; };
 		04B857281D5731D100BEA6CB /* EHSkimedAgentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B857271D5731D100BEA6CB /* EHSkimedAgentsViewController.m */; };
+		04B87B5E1D5D72F000D0C3A6 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04B87B5D1D5D72F000D0C3A6 /* MBProgressHUD.bundle */; };
 		04BB3E911D4476C5002CBF27 /* EHSiteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB3E901D4476C5002CBF27 /* EHSiteButton.m */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
@@ -252,6 +253,7 @@
 		04B857201D57280300BEA6CB /* EHSkimedAgentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSkimedAgentInfo.m; sourceTree = "<group>"; };
 		04B857261D5731D100BEA6CB /* EHSkimedAgentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSkimedAgentsViewController.h; sourceTree = "<group>"; };
 		04B857271D5731D100BEA6CB /* EHSkimedAgentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSkimedAgentsViewController.m; sourceTree = "<group>"; };
+		04B87B5D1D5D72F000D0C3A6 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		04BB3E8F1D4476C5002CBF27 /* EHSiteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSiteButton.h; sourceTree = "<group>"; };
 		04BB3E901D4476C5002CBF27 /* EHSiteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSiteButton.m; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -1337,6 +1339,7 @@
 		04FD3AD01D3DDA23005B13B4 /* MBProgressHUD+YT */ = {
 			isa = PBXGroup;
 			children = (
+				04B87B5D1D5D72F000D0C3A6 /* MBProgressHUD.bundle */,
 				04FD3AD11D3DDA23005B13B4 /* MBProgressHUD+YT.h */,
 				04FD3AD21D3DDA23005B13B4 /* MBProgressHUD+YT.m */,
 			);
@@ -1491,6 +1494,7 @@
 				04B0EFEA1D49B79700BE301B /* EHHouseDetailCallCell.xib in Resources */,
 				04C8FDDE1D5426310081CE73 /* EHHomeAgentCell.xib in Resources */,
 				047EF38A1D39FFEF00E587BA /* Tips.storyboard in Resources */,
+				04B87B5E1D5D72F000D0C3A6 /* MBProgressHUD.bundle in Resources */,
 				04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */,
 				04C3A8E41D321FE2003203C0 /* EHSearchResultCell.xib in Resources */,
 			);

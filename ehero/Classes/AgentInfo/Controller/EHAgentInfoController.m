@@ -54,8 +54,6 @@
 //    NSLog(@"数据总数 %ld",[EHSkimedAgentInfo findCounts]);
     [self skimedAndSave];
 
-    
-
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -129,13 +127,14 @@
     [mobileString insertString:@"-" atIndex:8];
     
     [callAgentView setCallAgentViewWithName:self.agentInfo.name mobile:mobileString txUrl:self.agentInfo.tx];
-    
-    
+  
     verifyView = [EHVerifyView initVerifyView];
     verifyView.delegate = self;
     [verifyView setupCountdownBtn];
     [modal showContentView:verifyView animated:YES];
+
 }
+
 # pragma mark - EHVerifyViewDelegate
 - (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code{
     [modal hide:YES];
@@ -150,7 +149,8 @@
         
         NSDictionary *param = @{@"from":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
                                 @"id":self.agentInfo.idStr,
-                                @"code":code};
+                             //  @"code":code
+                                };
         [YTHttpTool post:callAgentUrlStr params:param success:^(id responseObj) {
             NSLog(@"success %@",responseObj);
             [modalCallAgent hide:YES];
@@ -158,10 +158,7 @@
         } failure:^(NSError *error) {
             NSLog(@"failed %@",error);
         }];
-        
-        
-        
-        
+
     });
     
 }

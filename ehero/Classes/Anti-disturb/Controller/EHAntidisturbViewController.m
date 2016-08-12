@@ -163,7 +163,7 @@
 - (IBAction)CALL:(id)sender {
 
     NSDictionary *helper = @{@"from":self.myPhoneNumber.text,
-                             @"code":self.code.text,
+                           //  @"code":self.code.text,
                              @"to":self.otherPhone.text};
     NSDictionary *param = @{@"helper":helper};
     [YTHttpTool post:anti_disturbCallUrlStr params:param success:^(id responseObj) {
