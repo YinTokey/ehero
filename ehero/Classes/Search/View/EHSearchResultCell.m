@@ -120,7 +120,7 @@
     {
         NSString *comStr = [communitiesArr objectAtIndex:0];
         EHCommunityButton *comBtn = [EHCommunityButton communityButton:comStr];
-        comBtn.frame = CGRectMake( 75 , 95, comBtn.realWidth, 16);
+        comBtn.frame = CGRectMake( 70 , 95, comBtn.realWidth, 16);
         [self addSubview:comBtn];
     }
     if(communitiesArr.count == 2)
@@ -129,8 +129,8 @@
         EHCommunityButton *comBtn0 = [EHCommunityButton communityButton:comStr0];
         NSString *comStr1 = [communitiesArr objectAtIndex:1];
         EHCommunityButton *comBtn1 = [EHCommunityButton communityButton:comStr1];
-        CGFloat x0 = 75;
-        CGFloat x1 = 75 + comBtn0.realWidth + 10;
+        CGFloat x0 = 70;
+        CGFloat x1 = x0 + comBtn0.realWidth + 8;
         comBtn0.frame = CGRectMake(x0, 95, comBtn0.realWidth, 16);
         comBtn1.frame = CGRectMake(x1, 95, comBtn1.realWidth, 16);
         [self addSubview:comBtn0];
@@ -144,9 +144,9 @@
         EHCommunityButton *comBtn1 = [EHCommunityButton communityButton:comStr1];
         NSString *comStr2 = [communitiesArr objectAtIndex:2];
         EHCommunityButton *comBtn2 = [EHCommunityButton communityButton:comStr2];
-        CGFloat x0 = 75;
-        CGFloat x1 = x0 + comBtn0.realWidth + 10;
-        CGFloat x2 = x1 + comBtn1.realWidth + 10;
+        CGFloat x0 = 70;
+        CGFloat x1 = x0 + comBtn0.realWidth + 8;
+        CGFloat x2 = x1 + comBtn1.realWidth + 8;
         comBtn0.frame = CGRectMake(x0 , 95, comBtn0.realWidth, 16);
         comBtn1.frame = CGRectMake(x1 , 95, comBtn1.realWidth, 16);
         comBtn2.frame = CGRectMake(x2 , 95, comBtn2.realWidth, 16);

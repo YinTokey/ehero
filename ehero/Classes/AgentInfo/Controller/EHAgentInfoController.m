@@ -147,6 +147,7 @@
             
             
         } failure:^(NSError *error) {
+            [MBProgressHUD hideHUD];
             NSLog(@"failed %@",error);
         }];
         
