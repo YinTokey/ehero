@@ -32,10 +32,12 @@
     [super viewDidLoad];
     
    // [self webViewLoad];
-    
-    
     [self setupCountdownBtn];
     
+    //如果有cookie，读取cookie
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+ 
 }
 
 - (void)setupCountdownBtn{
@@ -53,8 +55,7 @@
     [sendCodeBtn setBackgroundImage:[UIImage imageNamed:@"sendCodeBtn"] forState:UIControlStateNormal];
     [sendCodeBtn addTarget:self action:@selector(sendClick) forControlEvents:UIControlEventTouchUpInside];
     self.sendCodeBtn =  sendCodeBtn;
-    
-    
+ 
     self.myPhoneNumber.rightView = _sendCodeBtn;
     self.myPhoneNumber.rightViewMode = UITextFieldViewModeAlways;
     //添加边框
@@ -65,8 +66,7 @@
     [self addGesture];
     self.myPhoneNumber.delegate =  self;
     self.code.delegate = self;
-    
-    
+
 }
 
 
@@ -163,7 +163,7 @@
 - (IBAction)CALL:(id)sender {
 
     NSDictionary *helper = @{@"from":self.myPhoneNumber.text,
-                           //  @"code":self.code.text,
+                             @"code":self.code.text,
                              @"to":self.otherPhone.text};
     NSDictionary *param = @{@"helper":helper};
     [YTHttpTool post:anti_disturbCallUrlStr params:param success:^(id responseObj) {

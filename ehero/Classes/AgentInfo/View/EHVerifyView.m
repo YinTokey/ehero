@@ -10,6 +10,9 @@
 #import "MZTimerLabel.h"
 #import "YTHttpTool.h"
 #import "EHRegularExpression.h"
+#import "AFNetworking.h"
+#import "EHCookieOperation.h"
+
 @interface EHVerifyView()<MZTimerLabelDelegate,UITextFieldDelegate>
 {
     CGRect resendBtnRect;
@@ -94,7 +97,6 @@
         //电话格式填写错误，不能点击发送按钮
             [MBProgressHUD showError:@"电话格式错误" toView:self];
         }
-        
     }
   
 }
@@ -117,6 +119,8 @@
         NSDictionary *params = @{@"mobile":self.myPhoneNumber.text};
         [YTHttpTool post:sendCodeUrlStr params:params success:^(id responseObj) {
             NSLog(@"success");
+            [EHCookieOperation saveCookie];
+            
         } failure:^(NSError *error) {
             NSLog(@"faild,%@",error);
         }];
@@ -129,7 +133,24 @@
 - (IBAction)callBtnClick:(id)sender {
     NSString *code = self.code.text;
     NSDictionary *param = @{@"code":code};
+    [EHCookieOperation setCookie];
+//    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+//    [mgr GET:codeCheckUrlStr parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
+//        
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage]cookies];
+//        for (NSHTTPCookie *tempCookie in cookies) {
+//            //打印获得的cookie
+//            NSLog(@"getCookie: %@", tempCookie);
+//        }
+//        
+//        
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"失败 %@",error);
+//    }];
     
+    
+/*
     [MBProgressHUD showMessage:@"正在验证"];
   
     [YTHttpTool get:codeCheckUrlStr params:param success:^(id responseObj) {
@@ -139,9 +160,15 @@
         NSLog(@"responString call %@",responStr);
         [MBProgressHUD hideHUD];
         //向代理对象发送消息,传递验证码
-        if ([self.delegate respondsToSelector:@selector(closeVerifyView:code:)]) {
-            [self.delegate closeVerifyView:self code:code];
-        }
+//        if ([self.delegate respondsToSelector:@selector(closeVerifyView:code:)]) {
+//            [self.delegate closeVerifyView:self code:code];
+//        }
+//                NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage]cookies];
+//                for (NSHTTPCookie *tempCookie in cookies) {
+//                    //打印获得的cookie
+//                    NSLog(@"getCookie: %@", tempCookie);
+//                }
+  
         
     } failure:^(NSError *error) {
         NSLog(@"failed %@",error);
@@ -149,8 +176,10 @@
         [MBProgressHUD hideHUD];
         [MBProgressHUD showSuccess:@"验证失败"];
     }];
-
+   */
 }
+#pragma mark - 保存cookie
+
 - (void)addGesture{
     //添加手势相应，输textfield时，点击其他区域，键盘消失
     UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];

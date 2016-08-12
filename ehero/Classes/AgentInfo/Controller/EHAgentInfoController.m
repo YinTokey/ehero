@@ -18,6 +18,8 @@
 #import "EHVerifyView.h"
 #import "EHSkimedAgentInfo.h"
 #import "YTHttpTool.h"
+#import "EHCookieOperation.h"
+
 @interface EHAgentInfoController ()<EHSearchResultCellDelegate,EHVerifyViewDelegate>
 {
     EHCallAgentView *callAgentView;
@@ -146,11 +148,11 @@
         [modalCallAgent showContentView:callAgentView animated:YES];
         [MBProgressHUD showNormalMessage:@"正在接通电话" toView:nil];
         
-        
         NSDictionary *param = @{@"from":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
                                 @"id":self.agentInfo.idStr,
                              //  @"code":code
                                 };
+        
         [YTHttpTool post:callAgentUrlStr params:param success:^(id responseObj) {
             NSLog(@"success %@",responseObj);
             [modalCallAgent hide:YES];

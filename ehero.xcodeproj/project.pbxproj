@@ -73,6 +73,7 @@
 		04B857211D57280300BEA6CB /* EHSkimedAgentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B857201D57280300BEA6CB /* EHSkimedAgentInfo.m */; };
 		04B857281D5731D100BEA6CB /* EHSkimedAgentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B857271D5731D100BEA6CB /* EHSkimedAgentsViewController.m */; };
 		04B87B5E1D5D72F000D0C3A6 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04B87B5D1D5D72F000D0C3A6 /* MBProgressHUD.bundle */; };
+		04B87B611D5D8FA700D0C3A6 /* EHCookieOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B87B601D5D8FA700D0C3A6 /* EHCookieOperation.m */; };
 		04BB3E911D4476C5002CBF27 /* EHSiteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB3E901D4476C5002CBF27 /* EHSiteButton.m */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
@@ -254,6 +255,8 @@
 		04B857261D5731D100BEA6CB /* EHSkimedAgentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSkimedAgentsViewController.h; sourceTree = "<group>"; };
 		04B857271D5731D100BEA6CB /* EHSkimedAgentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSkimedAgentsViewController.m; sourceTree = "<group>"; };
 		04B87B5D1D5D72F000D0C3A6 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		04B87B5F1D5D8FA700D0C3A6 /* EHCookieOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHCookieOperation.h; path = ../Lib/EHCookieOperation.h; sourceTree = "<group>"; };
+		04B87B601D5D8FA700D0C3A6 /* EHCookieOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHCookieOperation.m; path = ../Lib/EHCookieOperation.m; sourceTree = "<group>"; };
 		04BB3E8F1D4476C5002CBF27 /* EHSiteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSiteButton.h; sourceTree = "<group>"; };
 		04BB3E901D4476C5002CBF27 /* EHSiteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSiteButton.m; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -386,6 +389,8 @@
 		04360C871D3CDAEF007C8C17 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				04B87B601D5D8FA700D0C3A6 /* EHCookieOperation.m */,
+				04B87B5F1D5D8FA700D0C3A6 /* EHCookieOperation.h */,
 				048632061D3E238B00800B26 /* EHNetBusinessManager.h */,
 				048632071D3E238B00800B26 /* EHNetBusinessManager.m */,
 				0463EB091D5705B100C75B36 /* EHRegularExpression.h */,
@@ -1590,6 +1595,7 @@
 				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
 				0471D9D71D2FB73000BCC2EE /* YTSearchBar.m in Sources */,
 				048E90761D476B46005B19BD /* EHWechatGroupDetailViewController.m in Sources */,
+				04B87B611D5D8FA700D0C3A6 /* EHCookieOperation.m in Sources */,
 				04E9CFFA1D46082B0087BD70 /* EHAgentInfoCommentCell.m in Sources */,
 				04B4F43C1D5AF1E100C6D4F3 /* UIButton+GetWidth.m in Sources */,
 				04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */,
