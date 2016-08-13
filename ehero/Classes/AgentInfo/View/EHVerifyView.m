@@ -16,7 +16,7 @@
 {
     CGRect resendBtnRect;
 }
-- (IBAction)callBtnClick:(id)sender;
+- (IBAction)confirmBtnClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *code;
 @property (weak, nonatomic) IBOutlet UITextField *myPhoneNumber;
 @property (nonatomic,strong) UIButton *sendCodeBtn;
@@ -127,7 +127,7 @@
     
 }
 
-- (IBAction)callBtnClick:(id)sender {
+- (IBAction)confirmBtnClick:(id)sender {
     NSString *code = self.code.text;
     NSDictionary *param = @{@"code":code};
     [MBProgressHUD showMessage:@"正在验证"];

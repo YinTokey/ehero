@@ -181,11 +181,10 @@
         [MBProgressHUD showMessage:@"正在接通电话中..."];
         [YTHttpTool post:callAgentUrlStr params:param success:^(NSURLSessionDataTask *task, id responseObj) {
             NSLog(@"接通成功  %@",responseObj);
-           // [modalCallAgent hide:YES];
-            [MBProgressHUD hideHUD];
-            [MBProgressHUD showSuccess:@"接通成功，请耐心等待"];
             
         } failure:^(NSError *error) {
+            [MBProgressHUD hideHUD];
+            [MBProgressHUD showError:@"拨打失败"];
             NSLog(@"failed %@",error);
         }];
 

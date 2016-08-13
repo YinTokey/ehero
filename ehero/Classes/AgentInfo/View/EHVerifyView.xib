@@ -20,14 +20,14 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="免扰电话" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfe-CT-kU0">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户验证" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfe-CT-kU0">
                     <rect key="frame" x="13" y="21" width="255" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="255" id="If6-rW-Z1b"/>
                         <constraint firstAttribute="height" constant="22" id="gD6-vJ-IIp"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lzf-Lg-ggE">
@@ -46,11 +46,11 @@
                         <constraint firstAttribute="height" constant="30" id="DIH-VE-BS3"/>
                         <constraint firstAttribute="width" constant="260" id="UwS-N1-sXO"/>
                     </constraints>
-                    <state key="normal" title="呼叫">
+                    <state key="normal" title="确认">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="callBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="e3l-OA-mh0"/>
+                        <action selector="confirmBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="cSg-3b-9SW"/>
                     </connections>
                 </button>
             </subviews>

@@ -11,8 +11,13 @@
 #import "EHAgentInfo.h"
 #import <MJExtension.h>
 #import "YTNetCommand.h"
-@interface EHCommentAgentViewController ()<UITextFieldDelegate,UITextViewDelegate>
-
+#import "STModal.h"
+#import "EHVerifyView.h"
+@interface EHCommentAgentViewController ()<UITextFieldDelegate,UITextViewDelegate,EHVerifyViewDelegate>
+{
+    STModal *modal;
+    EHVerifyView *verifyView;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *line1;
 @property (weak, nonatomic) IBOutlet UIImageView *line2;
 @property (weak, nonatomic) IBOutlet UITextView *commentView;
@@ -49,6 +54,11 @@
     self.searchBar.delegate = self;
     //联网状态监测
     [YTHttpTool netCheck];
+
+    //初始化弹窗配置
+    modal = [STModal modal];
+    modal.hideWhenTouchOutside = YES;
+    
 }
 # pragma mark -初始状态，控件隐藏
 - (void)setInitView{
@@ -93,21 +103,25 @@
 
 - (IBAction)commitBtnClick:(id)sender {
 
-    NSDictionary *comment = @{@"author":@"15695951945",
-                              @"kind":@"好评",
-                              @"text":@"3"};
-    NSDictionary *param = @{@"agent_id":@"57430a56724e1130b2517980",
-                            @"comment":comment};
-
-    [YTHttpTool post:commentAgentUrlStr params:param  success:^(NSURLSessionDataTask *task,id responseObj) {
-        NSLog(@"success %@",responseObj);
-        NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
-        NSLog(@"responString %@",responStr);
-        
-    } failure:^(NSError *error) {
-        NSLog(@"failed %@",error);
-    }];
-  
+//    NSDictionary *comment = @{@"author":@"15695951945",
+//                              @"kind":@"好评",
+//                              @"text":@"3"};
+//    NSDictionary *param = @{@"agent_id":@"57430a56724e1130b2517980",
+//                            @"comment":comment};
+//
+//    [YTHttpTool post:commentAgentUrlStr params:param  success:^(NSURLSessionDataTask *task,id responseObj) {
+//        NSLog(@"success %@",responseObj);
+//        NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
+//        NSLog(@"responString %@",responStr);
+//        
+//    } failure:^(NSError *error) {
+//        NSLog(@"failed %@",error);
+//    }];
+    //验证界面
+    verifyView = [EHVerifyView initVerifyView];
+    verifyView.delegate = self;
+    [verifyView setupCountdownBtn];
+    [modal showContentView:verifyView animated:YES];
 }
 
 #pragma mark  -- UITapGestureRecognizer
