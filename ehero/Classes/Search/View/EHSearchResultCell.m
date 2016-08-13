@@ -104,7 +104,7 @@
     }
     self.company.text = agentInfo.company;
     self.region.text = agentInfo.region;
-
+    self.region.adjustsFontSizeToFitWidth = YES;
     
     //将小区分割成3个 存数组里
     NSArray *array = [agentInfo.community componentsSeparatedByString:@" "];

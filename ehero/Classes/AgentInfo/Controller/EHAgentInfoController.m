@@ -146,10 +146,7 @@
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [modal hide:YES];
             });
-            
-            
-            
-            
+  
         } failure:^(NSError *error) {
             [MBProgressHUD hideHUD];
             [MBProgressHUD showError:@"拨打失败"];

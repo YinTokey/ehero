@@ -107,8 +107,7 @@
     } failure:^(NSError *error) {
         NSLog(@"failed %@",error);
     }];
-    
-    
+  
 }
 
 #pragma mark  -- UITapGestureRecognizer
