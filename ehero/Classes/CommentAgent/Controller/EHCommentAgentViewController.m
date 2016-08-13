@@ -13,6 +13,7 @@
 #import "YTNetCommand.h"
 #import "STModal.h"
 #import "EHVerifyView.h"
+#import "EHCookieOperation.h"
 @interface EHCommentAgentViewController ()<UITextFieldDelegate,UITextViewDelegate,EHVerifyViewDelegate>
 {
     STModal *modal;
@@ -103,26 +104,50 @@
 
 - (IBAction)commitBtnClick:(id)sender {
 
-//    NSDictionary *comment = @{@"author":@"15695951945",
-//                              @"kind":@"好评",
-//                              @"text":@"3"};
-//    NSDictionary *param = @{@"agent_id":@"57430a56724e1130b2517980",
-//                            @"comment":comment};
-//
-//    [YTHttpTool post:commentAgentUrlStr params:param  success:^(NSURLSessionDataTask *task,id responseObj) {
-//        NSLog(@"success %@",responseObj);
-//        NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
-//        NSLog(@"responString %@",responStr);
-//        
-//    } failure:^(NSError *error) {
-//        NSLog(@"failed %@",error);
-//    }];
+    
+    if ([EHCookieOperation setCookie]) {
+        [self submitComment];
+    }else{
+        [self popVerifyView];
+    }
+    
+    
+}
+
+- (void)popVerifyView{
     //验证界面
     verifyView = [EHVerifyView initVerifyView];
     verifyView.delegate = self;
     [verifyView setupCountdownBtn];
     [modal showContentView:verifyView animated:YES];
 }
+
+- (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code{
+    [modal hide:YES];
+    
+}
+
+- (void)submitComment{
+    NSDictionary *comment = @{@"author":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
+                              @"kind":@"中评",
+                              @"text":self.commentView.text};
+    
+    EHAgentInfo *agentInfo = [self.searchResultArr firstObject];
+    [agentInfo getIdStringFromDictionary];
+    NSDictionary *param = @{@"agent_id":agentInfo.idStr,
+                            @"comment":comment};
+    
+    [YTHttpTool post:commentAgentUrlStr params:param  success:^(NSURLSessionDataTask *task,id responseObj) {
+        NSLog(@"success %@",responseObj);
+        NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
+        NSLog(@"responString %@",responStr);
+        [MBProgressHUD showSuccess:@"评论成功"];
+    } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"评论失败"];
+        NSLog(@"failed %@",error);
+    }];
+}
+
 
 #pragma mark  -- UITapGestureRecognizer
 -(void)viewTapped:(UITapGestureRecognizer*)tapGr
