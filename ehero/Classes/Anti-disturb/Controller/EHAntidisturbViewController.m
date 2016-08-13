@@ -11,10 +11,12 @@
 #import "MZTimerLabel.h"
 #import "YTHttpTool.h"
 #import "EHRegularExpression.h"
+#import "EHCookieOperation.h"
 @interface EHAntidisturbViewController ()<WKNavigationDelegate,MZTimerLabelDelegate,UITextFieldDelegate>
 {
     CGRect resendBtnRect;
 }
+@property (weak, nonatomic) IBOutlet UIView *backView;
 @property (weak, nonatomic) IBOutlet UIButton *callClick;
 @property (weak, nonatomic) IBOutlet UITextField *myPhoneNumber;
 @property (weak, nonatomic) IBOutlet UITextField *code;
@@ -22,20 +24,28 @@
 @property (nonatomic,strong)MZTimerLabel *timer;
 @property (nonatomic,strong) UIButton *sendCodeBtn;
 - (IBAction)CALL:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *verifiedView;
+@property (weak, nonatomic) IBOutlet UITextField *verifiedOtherPhone;
+- (IBAction)verifiedCallClick:(id)sender;
 
 @property (nonatomic,strong)WKWebView *webView;
+
 @end
 
 @implementation EHAntidisturbViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-   // [self webViewLoad];
+
     [self setupCountdownBtn];
-    
+
     //如果有cookie，读取cookie
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([EHCookieOperation setCookie]) {
+        self.backView.hidden = YES;
+    }else{
+        self.verifiedView.hidden = YES;
+    
+    }
     
  
 }
@@ -185,5 +195,7 @@
         [MBProgressHUD hideHUD];
         [MBProgressHUD showError:@"呼叫失败"];
     }];
+}
+- (IBAction)verifiedCallClick:(id)sender {
 }
 @end
