@@ -39,15 +39,19 @@
 
     [self setupCountdownBtn];
 
+    [self cookieCheck];
+    
+ 
+}
+
+- (void)cookieCheck{
     //如果有cookie，读取cookie
     if ([EHCookieOperation setCookie]) {
         self.backView.hidden = YES;
+        
     }else{
         self.verifiedView.hidden = YES;
-    
     }
-    
- 
 }
 
 - (void)setupCountdownBtn{
@@ -153,6 +157,7 @@
     [self.myPhoneNumber resignFirstResponder];
     [self.code resignFirstResponder];
     [self.otherPhone resignFirstResponder];
+    [self.verifiedOtherPhone resignFirstResponder];
 }
 
 #pragma mark  - uiTextFieldDelegate
@@ -160,6 +165,7 @@
     [self.myPhoneNumber resignFirstResponder];
     [self.code resignFirstResponder];
     [self.otherPhone resignFirstResponder];
+    [self.verifiedOtherPhone resignFirstResponder];
     return YES;
 }
 
@@ -170,7 +176,9 @@
     [YTHttpTool get:codeCheckUrlStr params:params  success:^(NSURLSessionDataTask *task, id responseObj) {
         
         //block嵌套，先验证后打电话
-        [MBProgressHUD showMessage:@"验证成功，开始拨打电话"];
+        [MBProgressHUD showSuccess:@"验证成功"];
+        [EHCookieOperation saveCookieWithDate:[NSDate date]];
+        
         [self callAction];
 
     } failure:^(NSError *error) {
@@ -182,10 +190,20 @@
 }
 # pragma mark - 打电话请求
 - (void)callAction{
-    NSDictionary *helper = @{@"from":self.myPhoneNumber.text,
-                             @"code":self.code.text,
-                             @"to":self.otherPhone.text};
+    NSDictionary *helper = [NSDictionary dictionary];
+    if ([EHCookieOperation setCookie]) {
+        helper = @{@"from":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
+                   @"code":@"",
+                   @"to":self.verifiedOtherPhone.text};
+        
+    }else{
+        helper = @{@"from":self.myPhoneNumber.text,
+                   @"code":self.code.text,
+                   @"to":self.otherPhone.text};
+    }
     NSDictionary *param = @{@"helper":helper};
+    [MBProgressHUD showMessage:@"正在接入，请稍后"];
+    
     [YTHttpTool post:anti_disturbCallUrlStr params:param success:^(NSURLSessionDataTask *task,id responseObj) {
         NSLog(@"success %@",responseObj);
         [MBProgressHUD hideHUD];
@@ -197,5 +215,7 @@
     }];
 }
 - (IBAction)verifiedCallClick:(id)sender {
+    [self callAction];
+ 
 }
 @end
