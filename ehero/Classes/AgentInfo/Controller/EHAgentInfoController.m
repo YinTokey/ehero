@@ -139,15 +139,20 @@
                                 @"id":self.agentInfo.idStr,
                                 @"code":@" "
                                 };
-        [MBProgressHUD showMessage:@"正在接通电话中..."];
+        [MBProgressHUD showMessage:@"正在接入,请稍后"];
         [YTHttpTool post:callAgentUrlStr params:param success:^(NSURLSessionDataTask *task, id responseObj) {
             NSLog(@"接通成功 %@",responseObj);
-            [MBProgressHUD hideHUD];
-            [MBProgressHUD showSuccess:@"接通成功，请耐心等待"];
+            //10秒后 隐藏弹窗
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [modal hide:YES];
+            });
+            
+            
             
             
         } failure:^(NSError *error) {
             [MBProgressHUD hideHUD];
+            [MBProgressHUD showError:@"拨打失败"];
             NSLog(@"failed %@",error);
         }];
         

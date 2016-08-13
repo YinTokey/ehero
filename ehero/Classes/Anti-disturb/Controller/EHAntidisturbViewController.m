@@ -12,6 +12,7 @@
 #import "YTHttpTool.h"
 #import "EHRegularExpression.h"
 #import "EHCookieOperation.h"
+
 @interface EHAntidisturbViewController ()<WKNavigationDelegate,MZTimerLabelDelegate,UITextFieldDelegate>
 {
     CGRect resendBtnRect;
@@ -29,6 +30,8 @@
 - (IBAction)verifiedCallClick:(id)sender;
 
 @property (nonatomic,strong)WKWebView *webView;
+
+
 
 @end
 
@@ -205,17 +208,19 @@
     [MBProgressHUD showMessage:@"正在接入，请稍后"];
     
     [YTHttpTool post:anti_disturbCallUrlStr params:param success:^(NSURLSessionDataTask *task,id responseObj) {
-        NSLog(@"success %@",responseObj);
-        [MBProgressHUD hideHUD];
-        [MBProgressHUD showSuccess:@"接通成功，请耐心等待"];
+        NSLog(@"success call %@",responseObj);
+
     } failure:^(NSError *error) {
-        NSLog(@"failed %@",error);
         [MBProgressHUD hideHUD];
-        [MBProgressHUD showError:@"呼叫失败"];
+        [MBProgressHUD showError:@"拨打失败"];
+        NSLog(@"failed call %@",error);
+
     }];
 }
 - (IBAction)verifiedCallClick:(id)sender {
     [self callAction];
- 
 }
+
+
+
 @end

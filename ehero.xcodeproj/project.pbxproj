@@ -13,6 +13,7 @@
 		04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04348FAC1D2F4A7300205130 /* buttonCell.xib */; };
 		04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04348FAF1D2F4DFB00205130 /* buttonCell.m */; };
 		04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04360C891D3CDC2A007C8C17 /* YTHTTPSessionManager.m */; };
+		043A542B1D5EF2310021C390 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043A542A1D5EF2310021C390 /* CoreTelephony.framework */; };
 		0455CB281D48B90E00160C83 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C3A8D01D31E518003203C0 /* WebKit.framework */; };
 		0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */; };
 		0456A9E21D49E5640065DC5B /* EHCallAgentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */; };
@@ -142,6 +143,7 @@
 		04360C881D3CDC2A007C8C17 /* YTHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHTTPSessionManager.h; sourceTree = "<group>"; };
 		04360C891D3CDC2A007C8C17 /* YTHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTHTTPSessionManager.m; sourceTree = "<group>"; };
 		0436DFEF1D4B35360073D4CA /* libSDAutoLayout.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDAutoLayout.a; path = "Pods/../build/Debug-iphoneos/SDAutoLayout/libSDAutoLayout.a"; sourceTree = "<group>"; };
+		043A542A1D5EF2310021C390 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		0456A9DE1D49E5390065DC5B /* EHCallAgentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCallAgentView.h; sourceTree = "<group>"; };
 		0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCallAgentView.m; sourceTree = "<group>"; };
 		0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCallAgentView.xib; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043A542B1D5EF2310021C390 /* CoreTelephony.framework in Frameworks */,
 				049AA0811D50350F00761E3F /* libsqlite3.0.tbd in Frameworks */,
 				04DEC4D81D4AFA6700B21766 /* libz.1.2.5.tbd in Frameworks */,
 				0455CB281D48B90E00160C83 /* WebKit.framework in Frameworks */,
@@ -1363,6 +1366,7 @@
 		FEC0CEEDEBE9288536D3046F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				043A542A1D5EF2310021C390 /* CoreTelephony.framework */,
 				049AA0801D50350F00761E3F /* libsqlite3.0.tbd */,
 				0436DFEF1D4B35360073D4CA /* libSDAutoLayout.a */,
 				04DEC4D71D4AFA6700B21766 /* libz.1.2.5.tbd */,
