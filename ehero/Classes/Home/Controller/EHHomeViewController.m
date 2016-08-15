@@ -54,18 +54,14 @@
     
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
-    //设置返回图片
-   // [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"profile_back"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
     [self setNavBar];
     [self setupHeaderView];
 
-   
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-   // self.edgesForExtendedLayout = UIRectEdgeNone;
-   // [self setupHeaderView];
+
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
 }
 
@@ -150,6 +146,7 @@
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseId];
         }
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.textLabel.font = [UIFont systemFontOfSize:13.0];
         cell.textLabel.text = @"评价你的经纪人";
 
        // EHCommentAgentCell *cell = [EHCommentAgentCell commentAgentCellWithTableView:tableView];

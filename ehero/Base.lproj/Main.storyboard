@@ -212,75 +212,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3k0-sa-Mps">
-                                <rect key="frame" x="12" y="78" width="296" height="339"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="我的号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7f9-g1-6OV">
-                                        <rect key="frame" x="18" y="94" width="260" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="txO-m0-o7Q"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NEb-sE-OOj">
-                                        <rect key="frame" x="18" y="144" width="260" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="iNj-uj-rfw"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="对方号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mms-xR-Xt1">
-                                        <rect key="frame" x="18" y="194" width="260" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="DFt-lV-Nia"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                    </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon2" translatesAutoresizingMaskIntoConstraints="NO" id="eqZ-Ww-VJk">
-                                        <rect key="frame" x="84" y="8" width="128" height="64"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="128" id="K48-uh-9Zh"/>
-                                            <constraint firstAttribute="height" constant="64" id="fDv-hp-4f7"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm5-aV-0ZV">
-                                        <rect key="frame" x="18" y="268" width="260" height="30"/>
-                                        <color key="backgroundColor" red="0.3921568627" green="0.61176470589999998" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Ade-DQ-aEf"/>
-                                        </constraints>
-                                        <state key="normal" title="呼叫">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="CALL:" destination="iJb-bq-icq" eventType="touchUpInside" id="0Bm-2z-cwU"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Mms-xR-Xt1" secondAttribute="trailing" constant="18" id="0UA-RZ-5nT"/>
-                                    <constraint firstItem="7f9-g1-6OV" firstAttribute="leading" secondItem="3k0-sa-Mps" secondAttribute="leading" constant="18" id="2gR-D2-m9p"/>
-                                    <constraint firstAttribute="trailing" secondItem="Fm5-aV-0ZV" secondAttribute="trailing" constant="18" id="2uF-VD-2Rn"/>
-                                    <constraint firstItem="7f9-g1-6OV" firstAttribute="top" secondItem="eqZ-Ww-VJk" secondAttribute="bottom" constant="22" id="2yx-cu-XLd"/>
-                                    <constraint firstItem="Mms-xR-Xt1" firstAttribute="leading" secondItem="3k0-sa-Mps" secondAttribute="leading" constant="18" id="4US-B8-vvc"/>
-                                    <constraint firstAttribute="height" constant="339" id="CKf-ve-OuD"/>
-                                    <constraint firstAttribute="trailing" secondItem="NEb-sE-OOj" secondAttribute="trailing" constant="18" id="CYG-3t-bLM"/>
-                                    <constraint firstItem="NEb-sE-OOj" firstAttribute="top" secondItem="7f9-g1-6OV" secondAttribute="bottom" constant="20" id="FMA-5e-dRF"/>
-                                    <constraint firstItem="Mms-xR-Xt1" firstAttribute="top" secondItem="NEb-sE-OOj" secondAttribute="bottom" constant="20" id="So5-a8-ELJ"/>
-                                    <constraint firstItem="NEb-sE-OOj" firstAttribute="leading" secondItem="3k0-sa-Mps" secondAttribute="leading" constant="18" id="Ujs-5f-vq9"/>
-                                    <constraint firstItem="eqZ-Ww-VJk" firstAttribute="centerX" secondItem="3k0-sa-Mps" secondAttribute="centerX" id="bY5-Bn-nAO"/>
-                                    <constraint firstItem="Fm5-aV-0ZV" firstAttribute="top" secondItem="Mms-xR-Xt1" secondAttribute="bottom" constant="44" id="iSt-3m-u0f"/>
-                                    <constraint firstItem="Fm5-aV-0ZV" firstAttribute="leading" secondItem="3k0-sa-Mps" secondAttribute="leading" constant="18" id="p4e-3g-xme"/>
-                                    <constraint firstItem="eqZ-Ww-VJk" firstAttribute="top" secondItem="3k0-sa-Mps" secondAttribute="top" constant="8" id="pK6-ba-KcJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="7f9-g1-6OV" secondAttribute="trailing" constant="18" id="s6F-sv-SZc"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6VY-tO-bZK">
-                                <rect key="frame" x="12" y="440" width="296" height="167"/>
+                                <rect key="frame" x="14" y="86" width="293" height="185"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="对方号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJA-rp-lmQ">
                                         <rect key="frame" x="18" y="80" width="261" height="30"/>
@@ -328,21 +261,13 @@
                         <color key="backgroundColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6VY-tO-bZK" firstAttribute="leading" secondItem="JRQ-hz-BkA" secondAttribute="leading" constant="12" id="3H6-mv-Z8Z"/>
-                            <constraint firstAttribute="trailing" secondItem="3k0-sa-Mps" secondAttribute="trailing" constant="12" id="Nxy-1q-9Og"/>
                             <constraint firstItem="6VY-tO-bZK" firstAttribute="top" secondItem="1eD-ok-zBs" secondAttribute="bottom" constant="14" id="Pfa-ba-lIW"/>
-                            <constraint firstItem="3k0-sa-Mps" firstAttribute="leading" secondItem="JRQ-hz-BkA" secondAttribute="leading" constant="12" id="cZT-er-XjE"/>
                             <constraint firstAttribute="trailing" secondItem="6VY-tO-bZK" secondAttribute="trailing" constant="12" id="e4Z-Wo-UbG"/>
-                            <constraint firstItem="3k0-sa-Mps" firstAttribute="top" secondItem="1eD-ok-zBs" secondAttribute="bottom" constant="14" id="h5i-U6-OHP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="免扰电话" id="HSt-Kp-HTN"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="backView" destination="3k0-sa-Mps" id="qfm-f4-iBL"/>
-                        <outlet property="callClick" destination="Fm5-aV-0ZV" id="oZM-Ys-H1q"/>
-                        <outlet property="code" destination="NEb-sE-OOj" id="w9V-4l-dpt"/>
-                        <outlet property="myPhoneNumber" destination="7f9-g1-6OV" id="ICA-fv-cva"/>
-                        <outlet property="otherPhone" destination="Mms-xR-Xt1" id="pAR-7M-6gW"/>
                         <outlet property="verifiedOtherPhone" destination="tJA-rp-lmQ" id="fY4-dG-teC"/>
                         <outlet property="verifiedView" destination="6VY-tO-bZK" id="0Bx-3n-E3z"/>
                     </connections>

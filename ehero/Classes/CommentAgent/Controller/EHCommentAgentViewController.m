@@ -124,7 +124,6 @@
 
 - (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code{
     [modal hide:YES];
-    
 }
 
 - (void)submitComment{

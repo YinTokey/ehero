@@ -52,23 +52,14 @@
     //设置顶部分割线
     EHTipsNavBottomLine *lineView = [EHTipsNavBottomLine initNavBottomLineWithController:self];
     [self.navigationController.navigationBar addSubview:lineView];
-    
-//    NSLog(@"数据总数 %ld",[EHSkimedAgentInfo findCounts]);
+
     [self skimedAndSave];
 
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-   // [self isCollected];
-    
-}
 
 #pragma mark - Table view data source
-//
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
-//    return 0;
-//}
+
 #pragma mark - cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
@@ -255,12 +246,12 @@
     selectedFlag ++;
     if (selectedFlag %2 == 1) {
         self.collectBtn.selected = YES;
-        [self.view makeToast:@"收藏成功" duration:1.0 position:CSToastPositionCenter];
+        [MBProgressHUD showSuccess:@"收藏成功"];
         [self collect];
         
     }else{
         self.collectBtn.selected = NO;
-        [self.view makeToast:@"取消收藏" duration:1.0 position:CSToastPositionCenter];
+        [MBProgressHUD showSuccess:@"取消收藏"];
     }
 
 }
