@@ -15,6 +15,7 @@
 {
     CTCallCenter *callCenter;
 }
+
 @end
 
 @implementation AppDelegate
@@ -72,6 +73,7 @@
 - (void)callCallBack
 {
     callCenter = [[CTCallCenter alloc] init];
+
     callCenter.callEventHandler = ^(CTCall* call) {
         if ([call.callState isEqualToString:CTCallStateDisconnected])
         {
@@ -85,6 +87,7 @@
         {
             NSLog(@"Call is incoming");
             [MBProgressHUD hideHUD];
+
         }
         else if ([call.callState isEqualToString:CTCallStateDialing])
         {

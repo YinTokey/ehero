@@ -136,13 +136,15 @@
     [agentInfo getIdStringFromDictionary];
     NSDictionary *param = @{@"agent_id":agentInfo.idStr,
                             @"comment":comment};
-    
+    [MBProgressHUD showMessage:@"正在提交评论"];
     [YTHttpTool post:commentAgentUrlStr params:param  success:^(NSURLSessionDataTask *task,id responseObj) {
         NSLog(@"success %@",responseObj);
         NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
         NSLog(@"responString %@",responStr);
+        [MBProgressHUD hideHUD];
         [MBProgressHUD showSuccess:@"评论成功"];
     } failure:^(NSError *error) {
+        [MBProgressHUD hideHUD];
         [MBProgressHUD showError:@"评论失败"];
         NSLog(@"failed %@",error);
     }];

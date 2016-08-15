@@ -21,7 +21,7 @@
                             <constraint firstAttribute="height" constant="19" id="gLC-22-QmP"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主营板块：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mla-2d-eZr">
@@ -60,7 +60,7 @@
                             <constraint firstAttribute="width" constant="48" id="Xhs-KM-5CR"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agent" translatesAutoresizingMaskIntoConstraints="NO" id="iD9-6d-qry">
@@ -80,8 +80,19 @@
                         <color key="textColor" red="0.36862745099999999" green="0.70980392160000005" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公司内排名：5%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jD1-05-ebe">
+                        <rect key="frame" x="223" y="7" width="97" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="W2O-GP-0hg"/>
+                            <constraint firstAttribute="width" constant="97" id="tpX-6B-0cd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="jD1-05-ebe" secondAttribute="trailing" id="0tY-4L-8Z2"/>
                     <constraint firstItem="zHh-4g-C53" firstAttribute="leading" secondItem="iD9-6d-qry" secondAttribute="trailing" constant="80" id="65Z-xJ-RQ3"/>
                     <constraint firstItem="eqo-gi-hhB" firstAttribute="leading" secondItem="iD9-6d-qry" secondAttribute="trailing" constant="81" id="6hQ-Gy-Xio"/>
                     <constraint firstItem="wbh-BX-7Gc" firstAttribute="leading" secondItem="iD9-6d-qry" secondAttribute="trailing" constant="18" id="Gn4-VC-7O9"/>
@@ -91,6 +102,7 @@
                     <constraint firstItem="iD9-6d-qry" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Z9Z-nY-pcC"/>
                     <constraint firstItem="wbh-BX-7Gc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="aNR-Ev-7ck"/>
                     <constraint firstItem="n7b-mZ-ehO" firstAttribute="top" secondItem="mla-2d-eZr" secondAttribute="bottom" constant="9" id="cYm-hA-oY6"/>
+                    <constraint firstItem="jD1-05-ebe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="fTw-bU-lfe"/>
                     <constraint firstItem="mla-2d-eZr" firstAttribute="leading" secondItem="iD9-6d-qry" secondAttribute="trailing" constant="18" id="hql-lX-G0l"/>
                     <constraint firstAttribute="trailing" secondItem="zHh-4g-C53" secondAttribute="trailing" constant="14" id="oLQ-jT-wvG"/>
                     <constraint firstItem="WbG-75-Mq6" firstAttribute="leading" secondItem="wbh-BX-7Gc" secondAttribute="trailing" constant="2" id="tPT-QM-Jeu"/>

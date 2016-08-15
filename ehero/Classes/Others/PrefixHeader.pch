@@ -40,6 +40,7 @@
 
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
+
 /**
  *  1.返回一个RGBA格式的UIColor对象
  */

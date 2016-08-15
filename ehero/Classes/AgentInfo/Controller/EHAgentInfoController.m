@@ -134,7 +134,6 @@
         [callAgentView setCallAgentViewWithName:self.agentInfo.name mobile:mobileString txUrl:self.agentInfo.tx];
         [modal showContentView:callAgentView animated:YES];
         
-        //[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"]
         NSDictionary *param = @{@"from":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
                                 @"id":self.agentInfo.idStr,
                                 @"code":@" "
@@ -181,6 +180,10 @@
         [MBProgressHUD showMessage:@"正在接通电话中..."];
         [YTHttpTool post:callAgentUrlStr params:param success:^(NSURLSessionDataTask *task, id responseObj) {
             NSLog(@"接通成功  %@",responseObj);
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [modal hide:YES];
+            });
+
             
         } failure:^(NSError *error) {
             [MBProgressHUD hideHUD];
