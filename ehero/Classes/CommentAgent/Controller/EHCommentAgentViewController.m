@@ -34,12 +34,20 @@
 @property (weak, nonatomic) IBOutlet UITextField *searchBar;
 
 @property (nonatomic,strong) NSMutableArray *searchResultArr;
+- (IBAction)highPriseClick:(id)sender;
+- (IBAction)moderateClick:(id)sender;
+- (IBAction)negativeClick:(id)sender;
 
 
 @end
 
 @implementation EHCommentAgentViewController
+{
+    NSInteger highBtnFlag;
+    NSInteger moderBtnFlag;
+    NSInteger negativeBtnFlag;
 
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -63,6 +71,20 @@
 }
 # pragma mark -初始状态，控件隐藏
 - (void)setInitView{
+    
+//    self.highPraise.layer.cornerRadius = 4.0;
+//    self.highPraise.layer.masksToBounds = YES;
+//    self.moderateComment.layer.cornerRadius = 4.0;
+//    self.moderateComment.layer.masksToBounds = YES;
+//    self.negativeComment.layer.cornerRadius = 4.0;
+//    self.negativeComment.layer.masksToBounds = YES;
+    [self.highPraise setBackgroundImage:[UIImage imageNamed:@"commentBackground"] forState:UIControlStateSelected];
+    [self.highPraise setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+    [self.moderateComment setBackgroundImage:[UIImage imageNamed:@"commentBackground"] forState:UIControlStateSelected];
+    [self.moderateComment setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+    [self.negativeComment setBackgroundImage:[UIImage imageNamed:@"commentBackground"] forState:UIControlStateSelected];
+    [self.negativeComment setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+    
     self.line1.hidden = YES;
     self.line2.hidden = YES;
     self.commentView.hidden = YES;
@@ -252,22 +274,13 @@
 
 - (void)textViewDidBeginEditing:(UITextView *)textView{
     CGRect frame = textView.frame;
-    
     int offset = frame.origin.y + 0 - (self.view.frame.size.height - 263.0);//iPhone键盘高度216，iPad的为352,这里设成263更方便，并且考虑到搜狗的键盘比系统的键盘高一点
-    
     [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
-    
     [UIView setAnimationDuration:0.5f];
-    
     //将视图的Y坐标向上移动offset个单位，以使下面腾出地方用于软键盘的显示
-    
     if(offset < -15)
-        
     self.view.frame = CGRectMake(0.0f, offset, self.view.frame.size.width, self.view.frame.size.height);
-    
     [UIView commitAnimations];
-
-
 }
 
 //输入框编辑完成以后，将视图恢复到原始状态
@@ -277,4 +290,37 @@
 
 
 
+- (IBAction)highPriseClick:(id)sender {
+    highBtnFlag ++;
+    self.moderateComment.selected = NO;
+    self.negativeComment.selected = NO;
+    if (highBtnFlag %2 == 1) {
+        self.highPraise.selected = YES;
+    }else{
+        self.highPraise.selected = NO;
+    }
+    
+}
+
+- (IBAction)moderateClick:(id)sender {
+    moderBtnFlag ++;
+    self.highPraise.selected = NO;
+    self.negativeComment.selected = NO;
+    if (moderBtnFlag %2 == 1) {
+        self.moderateComment.selected = YES;
+    }else{
+        self.moderateComment.selected = NO;
+    }
+}
+
+- (IBAction)negativeClick:(id)sender {
+    negativeBtnFlag ++;
+    self.moderateComment.selected = NO;
+    self.highPraise.selected = NO;
+    if (negativeBtnFlag %2 == 1 ) {
+        self.negativeComment.selected = YES;
+    }else{
+        self.negativeComment.selected = NO;
+    }
+}
 @end

@@ -305,7 +305,6 @@
 - (void)callCallBack
 {
     callCenter = [[CTCallCenter alloc] init];
-  //  __weak EHAgentInfoController *weakself = self;
     __weak STModal *weakmodal = modal;
     callCenter.callEventHandler = ^(CTCall* call) {
         if([call.callState isEqualToString:CTCallStateIncoming])
@@ -314,7 +313,6 @@
             [MBProgressHUD hideHUD];
             [weakmodal hide:YES];
         }
-        
     };
 }
 

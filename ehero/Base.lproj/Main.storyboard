@@ -863,16 +863,6 @@
                                 <color key="textColor" red="0.36862745099999999" green="0.70980392160000005" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好评率：100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZR1-o3-CKg">
-                                <rect key="frame" x="221" y="84" width="87" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="YZb-48-yVy"/>
-                                    <constraint firstAttribute="width" constant="87" id="f6E-Rc-YWN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line1" translatesAutoresizingMaskIntoConstraints="NO" id="I2g-DU-1EW">
                                 <rect key="frame" x="107" y="108" width="200" height="1"/>
                                 <constraints>
@@ -897,6 +887,9 @@
                                         <state key="focused" title="好评">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="highPriseClick:" destination="rlP-ow-We4" eventType="touchUpInside" id="lXQ-QR-BAM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx1-vn-VBf">
                                         <rect key="frame" x="74" y="10" width="52" height="25"/>
@@ -906,12 +899,18 @@
                                         <state key="highlighted">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="moderateClick:" destination="rlP-ow-We4" eventType="touchUpInside" id="bfg-nX-Bjd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmL-X2-j21">
                                         <rect key="frame" x="148" y="10" width="52" height="25"/>
                                         <state key="normal" title="差评" backgroundImage="commentBtn2">
                                             <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="negativeClick:" destination="rlP-ow-We4" eventType="touchUpInside" id="iNm-kt-cbq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -928,6 +927,16 @@
                                     <constraint firstItem="6EW-6a-Fp4" firstAttribute="leading" secondItem="8b2-kM-tCk" secondAttribute="leading" id="wxy-lW-3Cw"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公司内排名:100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZR1-o3-CKg">
+                                <rect key="frame" x="227" y="84" width="93" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="bZ3-3s-1BM"/>
+                                    <constraint firstAttribute="width" constant="93" id="mtm-Wb-xqX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -939,11 +948,12 @@
                             <constraint firstItem="xq5-Dh-TFr" firstAttribute="leading" secondItem="aLF-pd-HrY" secondAttribute="leading" constant="16" id="Dh4-UD-e3z"/>
                             <constraint firstItem="I2g-DU-1EW" firstAttribute="leading" secondItem="Epd-dM-BF9" secondAttribute="trailing" constant="13" id="F5g-Bl-hgv"/>
                             <constraint firstItem="XJJ-f2-WCY" firstAttribute="top" secondItem="1JA-n0-VEE" secondAttribute="bottom" constant="17" id="KJl-BD-qLN"/>
-                            <constraint firstItem="ZR1-o3-CKg" firstAttribute="top" secondItem="1JA-n0-VEE" secondAttribute="bottom" constant="20" id="LQY-A5-rbs"/>
                             <constraint firstAttribute="trailing" secondItem="xq5-Dh-TFr" secondAttribute="trailing" constant="15" id="Oaf-nb-3Kc"/>
                             <constraint firstItem="8b2-kM-tCk" firstAttribute="top" secondItem="I2g-DU-1EW" secondAttribute="bottom" constant="8" id="ROM-ya-LTe"/>
+                            <constraint firstAttribute="trailing" secondItem="ZR1-o3-CKg" secondAttribute="trailing" id="SrV-2h-TNw"/>
                             <constraint firstAttribute="trailing" secondItem="I2g-DU-1EW" secondAttribute="trailing" constant="13" id="TWC-Hc-zfi"/>
                             <constraint firstItem="S5A-3E-SAg" firstAttribute="leading" secondItem="aLF-pd-HrY" secondAttribute="leading" constant="13" id="Y5d-zw-Nw6"/>
+                            <constraint firstItem="ZR1-o3-CKg" firstAttribute="top" secondItem="1JA-n0-VEE" secondAttribute="bottom" constant="20" id="ZEr-iD-ZxP"/>
                             <constraint firstItem="S5A-3E-SAg" firstAttribute="top" secondItem="Epd-dM-BF9" secondAttribute="bottom" constant="12" id="bCh-VY-cHk"/>
                             <constraint firstAttribute="trailing" secondItem="8b2-kM-tCk" secondAttribute="trailing" constant="13" id="bFT-Lh-YbU"/>
                             <constraint firstItem="oG4-yd-QD2" firstAttribute="leading" secondItem="XJJ-f2-WCY" secondAttribute="trailing" constant="6" id="e5b-2O-KJw"/>
@@ -951,7 +961,6 @@
                             <constraint firstItem="I2g-DU-1EW" firstAttribute="top" secondItem="XJJ-f2-WCY" secondAttribute="bottom" constant="6" id="p7I-HW-4e7"/>
                             <constraint firstAttribute="trailing" secondItem="S5A-3E-SAg" secondAttribute="trailing" constant="13" id="rag-XV-p59"/>
                             <constraint firstItem="XJJ-f2-WCY" firstAttribute="leading" secondItem="Epd-dM-BF9" secondAttribute="trailing" constant="13" id="s33-VK-qSe"/>
-                            <constraint firstAttribute="trailing" secondItem="ZR1-o3-CKg" secondAttribute="trailing" constant="12" id="sst-Gy-nfJ"/>
                             <constraint firstItem="7rf-me-Mke" firstAttribute="top" secondItem="xq5-Dh-TFr" secondAttribute="bottom" constant="18" id="uHP-Cy-22v"/>
                             <constraint firstItem="8b2-kM-tCk" firstAttribute="leading" secondItem="Epd-dM-BF9" secondAttribute="trailing" constant="13" id="wD8-NH-ntC"/>
                         </constraints>
