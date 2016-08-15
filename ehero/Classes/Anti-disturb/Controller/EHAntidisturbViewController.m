@@ -12,19 +12,20 @@
 #import "EHCookieOperation.h"
 #import "STModal.h"
 #import "EHVerifyView.h"
+
+#import <CoreTelephony/CTCall.h>
+#import <CoreTelephony/CTCallCenter.h>
+
 @interface EHAntidisturbViewController ()<UITextFieldDelegate,EHVerifyViewDelegate>
 {
     STModal *modal;
     EHVerifyView *verifyView;
+    CTCallCenter *callCenter;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *verifiedView;
 @property (weak, nonatomic) IBOutlet UITextField *verifiedOtherPhone;
 - (IBAction)verifiedCallClick:(id)sender;
-
-
-
-
 
 @end
 
@@ -39,7 +40,8 @@
  
     [self addGesture];
     self.verifiedOtherPhone.delegate = self;
-    
+ 
+    [self callCallBack];
 }
 
 - (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code{
@@ -69,21 +71,20 @@
 
 # pragma mark - 打电话请求
 - (void)callAction{
-  // [MBProgressHUD showMessage:@"正在接入，请稍后"];
-   //
+
     NSDictionary *helper =  @{@"from":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
-                              @"code":@"",
+                              @"code":@" ",
                               @"to":self.verifiedOtherPhone.text};
 
     NSDictionary *param = @{@"helper":helper};
-       
+
+    [MBProgressHUD showMessage:@"正在接通电话中..." toView:self.view];
     [YTHttpTool post:anti_disturbCallUrlStr params:param success:^(NSURLSessionDataTask *task,id responseObj) {
-       NSLog(@"呼叫成功 %@",responseObj);
-            
+        NSLog(@"呼叫成功 %@",responseObj);
     } failure:^(NSError *error) {
-   //    [MBProgressHUD hideHUD];
-       [MBProgressHUD showError:@"拨打失败"];
-       NSLog(@"呼叫失败 %@",error);
+        [MBProgressHUD hideHUDForView:self.view];
+        [MBProgressHUD showError:@"拨打失败"];
+        NSLog(@"呼叫失败 %@",error);
   }];
 
 }
@@ -93,6 +94,7 @@
     //如果有cookie，读取cookie
     if ([EHCookieOperation setCookie]) {
        // [MBProgressHUD showMessage:@"正在接通电话中..."];
+        
         [self callAction];
         
     }else{
@@ -109,10 +111,23 @@
 }
 
 - (IBAction)verifiedCallClick:(id)sender {
-    [MBProgressHUD showMessage:@"正在接通电话中..."];
+ 
     [self cookieCheck];
 }
 
+- (void)callCallBack
+{
+    callCenter = [[CTCallCenter alloc] init];
+    __weak EHAntidisturbViewController *weakself = self;
+    callCenter.callEventHandler = ^(CTCall* call) {
+        if([call.callState isEqualToString:CTCallStateIncoming])
+        {
+            NSLog(@"Call is incoming");
+            [MBProgressHUD hideHUDForView:weakself.view];
+        }
+
+    };
+}
 
 
 @end

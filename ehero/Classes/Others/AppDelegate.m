@@ -8,13 +8,9 @@
 
 #import "AppDelegate.h"
 #import "OpenShareHeader.h"
-#import <CoreTelephony/CTCall.h>
-#import <CoreTelephony/CTCallCenter.h>
+
 
 @interface AppDelegate ()
-{
-    CTCallCenter *callCenter;
-}
 
 @end
 
@@ -33,7 +29,6 @@
     [OpenShare connectWeiboWithAppKey:WeiboAppKey];
     [OpenShare connectWeixinWithAppId:WeixinAppId];
 
-    [self callCallBack];
     
     return YES;
 }
@@ -70,34 +65,6 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void)callCallBack
-{
-    callCenter = [[CTCallCenter alloc] init];
 
-    callCenter.callEventHandler = ^(CTCall* call) {
-        if ([call.callState isEqualToString:CTCallStateDisconnected])
-        {
-            NSLog(@"Call has been disconnected");
-        }
-        else if ([call.callState isEqualToString:CTCallStateConnected])
-        {
-            NSLog(@"Call has just been connected");
-        }
-        else if([call.callState isEqualToString:CTCallStateIncoming])
-        {
-            NSLog(@"Call is incoming");
-            [MBProgressHUD hideHUD];
-
-        }
-        else if ([call.callState isEqualToString:CTCallStateDialing])
-        {
-            NSLog(@"call is dialing");
-        }
-        else
-        {
-            NSLog(@"Nothing is done");
-        }
-    };
-}
 
 @end

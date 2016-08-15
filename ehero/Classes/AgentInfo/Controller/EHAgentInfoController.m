@@ -20,11 +20,14 @@
 #import "YTHttpTool.h"
 #import "EHCookieOperation.h"
 
+#import <CoreTelephony/CTCall.h>
+#import <CoreTelephony/CTCallCenter.h>
 @interface EHAgentInfoController ()<EHSearchResultCellDelegate,EHVerifyViewDelegate>
 {
     EHCallAgentView *callAgentView;
     STModal *modal;
     EHVerifyView *verifyView;
+    CTCallCenter *callCenter;
 }
 - (IBAction)shareBtnClick:(id)sender;
 - (IBAction)collectBtnClick:(id)sender;
@@ -170,9 +173,6 @@
         [MBProgressHUD showMessage:@"正在接通电话中..."];
         [YTHttpTool post:callAgentUrlStr params:param success:^(NSURLSessionDataTask *task, id responseObj) {
             NSLog(@"接通成功  %@",responseObj);
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [modal hide:YES];
-            });
             
         } failure:^(NSError *error) {
             [MBProgressHUD hideHUD];
@@ -301,6 +301,21 @@
 
 }
 
-
+#pragma mark - 监听电话回调
+- (void)callCallBack
+{
+    callCenter = [[CTCallCenter alloc] init];
+  //  __weak EHAgentInfoController *weakself = self;
+    __weak STModal *weakmodal = modal;
+    callCenter.callEventHandler = ^(CTCall* call) {
+        if([call.callState isEqualToString:CTCallStateIncoming])
+        {
+            NSLog(@"Call is incoming");
+            [MBProgressHUD hideHUD];
+            [weakmodal hide:YES];
+        }
+        
+    };
+}
 
 @end
