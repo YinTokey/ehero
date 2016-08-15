@@ -29,6 +29,7 @@
 {
     /** 图片数组*/
     NSMutableArray *sourceArr;
+    
 }
 - (IBAction)styleSel:(id)sender;
 
@@ -44,7 +45,9 @@
 @end
 
 @implementation EHHomeViewController
-
+{
+    NSInteger selectedFlag;
+}
 
 
 - (void)viewDidLoad {
@@ -59,6 +62,8 @@
     
     [self setNavBar];
     [self setupHeaderView];
+    
+    
 
 }
 
@@ -279,7 +284,13 @@
 
 }
 
-
 - (IBAction)styleSel:(id)sender {
+    selectedFlag ++;
+    self.styleBtn.selected  = YES;
+    if (selectedFlag %2 == 1) {
+        self.styleBtn.selected  = YES;
+    }else{
+        self.styleBtn.selected = NO;
+    }
 }
 @end
