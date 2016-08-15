@@ -24,16 +24,18 @@
 #import "EHHomeSearchBar.h"
 #import "EHSearchViewController.h"
 #import "EHHomeAgentCell.h"
-
+#import "EHSiteButton.h"
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate,UITextFieldDelegate>
 {
     /** 图片数组*/
     NSMutableArray *sourceArr;
 }
-@property (weak, nonatomic) IBOutlet UIButton *profileBtn;
+- (IBAction)styleSel:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *styleBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *siteBarButtonItem;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *icon;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *profileBarButtonItem;
+
 - (IBAction)siteBtnClick:(UIButton *)btn;
 @property (weak, nonatomic) IBOutlet UIButton *siteBtn;
 /** 地点*/
@@ -83,7 +85,7 @@
     UIBarButtonItem *negativeSpacer = [[ UIBarButtonItem alloc ] initWithBarButtonSystemItem : UIBarButtonSystemItemFixedSpace target : nil action : nil ];
     
     negativeSpacer. width = - 10 ;//这个数值可以根据情况自由变化
-    self.navigationItem.leftBarButtonItems = @[negativeSpacer,_icon,_siteBarButtonItem];
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer,_profileBarButtonItem,_siteBarButtonItem];
 
 }
 
@@ -278,4 +280,6 @@
 }
 
 
+- (IBAction)styleSel:(id)sender {
+}
 @end
