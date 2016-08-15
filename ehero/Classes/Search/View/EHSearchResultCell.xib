@@ -102,17 +102,6 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好评率：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWU-wF-ayq">
-                        <rect key="frame" x="217" y="12" width="53" height="17"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="53" id="H9A-1z-BnH"/>
-                            <constraint firstAttribute="width" secondItem="RWU-wF-ayq" secondAttribute="height" multiplier="53:17" id="Vpc-Gx-GSa"/>
-                            <constraint firstAttribute="height" constant="17" id="wh7-gs-Al5"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line1" translatesAutoresizingMaskIntoConstraints="NO" id="cEV-nh-cb1">
                         <rect key="frame" x="89" y="37" width="218" height="1"/>
                         <constraints>
@@ -130,16 +119,26 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公司内排名：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWU-wF-ayq">
+                        <rect key="frame" x="208" y="13" width="75" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="A0u-g4-v3A"/>
+                            <constraint firstAttribute="height" constant="17" id="Jnq-JW-tVc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="PQv-mP-aMR" firstAttribute="leading" secondItem="BXw-Ft-NPN" secondAttribute="trailing" constant="25" id="1EP-cj-PCO"/>
                     <constraint firstAttribute="trailingMargin" secondItem="cEV-nh-cb1" secondAttribute="trailing" constant="5" id="1v4-8Y-m91"/>
                     <constraint firstItem="cEV-nh-cb1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="81" id="2lk-Mz-abU"/>
-                    <constraint firstItem="vCP-0q-yyd" firstAttribute="leading" secondItem="RWU-wF-ayq" secondAttribute="trailing" constant="8" id="4WP-de-glX"/>
                     <constraint firstItem="vCP-0q-yyd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="5Ho-9T-Pug"/>
                     <constraint firstItem="EOz-GR-gf8" firstAttribute="baseline" secondItem="gIK-Ia-w7Z" secondAttribute="baseline" id="8SX-to-SbY"/>
                     <constraint firstAttribute="trailing" secondItem="vCP-0q-yyd" secondAttribute="trailing" id="Alf-5d-WLl"/>
                     <constraint firstItem="FWg-gq-wKJ" firstAttribute="leading" secondItem="cwL-hk-R4h" secondAttribute="trailing" constant="8" id="B17-Hu-rvz"/>
+                    <constraint firstItem="RWU-wF-ayq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="B1X-9x-8NJ"/>
                     <constraint firstAttribute="bottom" secondItem="qjC-ND-XmC" secondAttribute="bottom" constant="13" id="ERy-o5-lCD"/>
                     <constraint firstItem="cEV-nh-cb1" firstAttribute="top" secondItem="FWg-gq-wKJ" secondAttribute="bottom" constant="7" id="FQQ-bk-5C1"/>
                     <constraint firstItem="cwL-hk-R4h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="JJn-X5-g9D"/>
@@ -150,7 +149,7 @@
                     <constraint firstItem="Jyw-2q-ujV" firstAttribute="top" secondItem="cEV-nh-cb1" secondAttribute="bottom" constant="11" id="bbL-pJ-tuW"/>
                     <constraint firstItem="cEV-nh-cb1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="29" id="bwc-jt-kiG"/>
                     <constraint firstItem="EOz-GR-gf8" firstAttribute="leading" secondItem="cwL-hk-R4h" secondAttribute="trailing" constant="8" id="eA9-Kh-kF7"/>
-                    <constraint firstItem="vCP-0q-yyd" firstAttribute="leading" secondItem="RWU-wF-ayq" secondAttribute="trailing" constant="8" id="fVH-Jt-peq"/>
+                    <constraint firstAttribute="trailing" secondItem="RWU-wF-ayq" secondAttribute="trailing" constant="37" id="hbs-DF-cXv"/>
                     <constraint firstItem="lvd-BR-siG" firstAttribute="leading" secondItem="FWg-gq-wKJ" secondAttribute="trailing" constant="8" id="j8f-xP-4qb"/>
                     <constraint firstItem="gIK-Ia-w7Z" firstAttribute="leading" secondItem="cwL-hk-R4h" secondAttribute="trailing" constant="74" id="lTi-lz-RyY"/>
                     <constraint firstItem="PQv-mP-aMR" firstAttribute="top" secondItem="Jyw-2q-ujV" secondAttribute="top" id="p6n-Wm-PW2"/>
@@ -159,7 +158,6 @@
                     <constraint firstItem="cwL-hk-R4h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="tQf-1b-a0X"/>
                     <constraint firstItem="qjC-ND-XmC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="uat-j3-q17"/>
                     <constraint firstItem="qjC-ND-XmC" firstAttribute="top" secondItem="cwL-hk-R4h" secondAttribute="bottom" constant="8" id="way-wp-27O"/>
-                    <constraint firstItem="RWU-wF-ayq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="z2t-J4-IKp"/>
                     <constraint firstItem="gIK-Ia-w7Z" firstAttribute="top" secondItem="cEV-nh-cb1" secondAttribute="bottom" constant="31" id="znf-rE-BBE"/>
                 </constraints>
             </tableViewCellContentView>

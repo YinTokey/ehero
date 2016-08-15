@@ -119,9 +119,9 @@
                         <rightBarButtonItems>
                             <barButtonItem width="3" style="plain" id="Lo6-dx-J6A">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lhh-UY-FAQ">
-                                    <rect key="frame" x="291" y="8" width="13" height="27"/>
+                                    <rect key="frame" x="277" y="8" width="27" height="27"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="home_top_right"/>
+                                    <state key="normal" image="profileN"/>
                                     <connections>
                                         <segue destination="1ff-Qr-lH1" kind="show" id="xZJ-qi-NBk"/>
                                     </connections>
@@ -129,7 +129,7 @@
                             </barButtonItem>
                             <barButtonItem style="plain" id="APU-Df-m8p">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oyR-Ur-Zha">
-                                    <rect key="frame" x="280" y="7" width="3" height="30"/>
+                                    <rect key="frame" x="266" y="7" width="3" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </button>
                             </barButtonItem>
@@ -1135,10 +1135,10 @@
         <image name="home_bar_frame" width="462" height="51"/>
         <image name="home_searchbar" width="462" height="51"/>
         <image name="home_top_left" width="43" height="50"/>
-        <image name="home_top_right" width="35" height="67"/>
         <image name="home_two" width="10" height="5"/>
         <image name="icon2" width="320" height="168"/>
         <image name="near_share_line" width="2" height="12"/>
+        <image name="profileN" width="49" height="49"/>
         <image name="profile_btn1" width="350" height="128"/>
         <image name="profile_btn2" width="350" height="128"/>
         <image name="profile_btn3" width="711" height="89"/>
