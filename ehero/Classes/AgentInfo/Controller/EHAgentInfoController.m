@@ -142,8 +142,7 @@
             [MBProgressHUD showError:@"拨打失败"];
             NSLog(@"failed %@",error);
         }];
-        
-        
+     
     }else{
         //验证界面
         verifyView = [EHVerifyView initVerifyView];
@@ -174,7 +173,6 @@
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [modal hide:YES];
             });
-
             
         } failure:^(NSError *error) {
             [MBProgressHUD hideHUD];
@@ -297,7 +295,6 @@
             NSLog(@"大于30条里，数据库里有,删除原来的，重新插入");
             [skimedAgentExisted deleteObject];
             [skimedAgent save];
-            
         }
         
     }

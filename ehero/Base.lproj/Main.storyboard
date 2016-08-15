@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
@@ -126,7 +125,7 @@
                                 <state key="normal" title="买卖" image="home_two">
                                     <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <state key="selected" title="租赁" image="home_two"/>
+                                <state key="selected" title="租赁"/>
                                 <connections>
                                     <action selector="styleSel:" destination="iSZ-bj-OnQ" eventType="touchUpInside" id="WmE-9v-odR"/>
                                 </connections>
@@ -399,24 +398,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wechatBackground" translatesAutoresizingMaskIntoConstraints="NO" id="jCX-Yz-GId">
-                                <rect key="frame" x="20" y="90" width="280" height="401"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wechatGroupCard" translatesAutoresizingMaskIntoConstraints="NO" id="jCX-Yz-GId">
+                                <rect key="frame" x="20" y="42" width="280" height="436"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="iga-iM-TP3">
-                                <rect key="frame" x="70" y="148" width="180" height="180"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="iga-iM-TP3" secondAttribute="height" multiplier="1:1" id="Spf-h5-cfS"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="iga-iM-TP3">
+                                <rect key="frame" x="45" y="90" width="230" height="230"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="69" y="104" width="182" height="183"/>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="望京合租群" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-SP-dMC">
-                                <rect key="frame" x="70" y="349" width="180" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="望京合租群" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-SP-dMC">
+                                <rect key="frame" x="45" y="328" width="230" height="27"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="9bZ-kk-cxf"/>
-                                    <constraint firstAttribute="width" constant="180" id="SgR-xJ-Uxi"/>
-                                    <constraint firstAttribute="width" secondItem="Fb6-SP-dMC" secondAttribute="height" multiplier="20:3" id="zgz-yv-ESr"/>
+                                    <constraint firstAttribute="height" constant="27" id="8pS-fF-MHU"/>
+                                    <constraint firstAttribute="width" constant="230" id="OX3-70-njT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -426,12 +421,11 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhg-VU-mn0">
-                                <rect key="frame" x="52" y="509" width="216" height="30"/>
+                                <rect key="frame" x="52" y="518" width="216" height="30"/>
                                 <color key="backgroundColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="fhg-VU-mn0" secondAttribute="height" multiplier="36:5" id="EaH-AN-MxT"/>
-                                    <constraint firstAttribute="width" constant="216" id="Kkd-J2-YmA"/>
-                                    <constraint firstAttribute="height" constant="30" id="Ttf-hk-nUU"/>
+                                    <constraint firstAttribute="width" constant="216" id="bRQ-PK-hTk"/>
+                                    <constraint firstAttribute="height" constant="30" id="x94-cj-jAD"/>
                                 </constraints>
                                 <state key="normal" title="收藏到相册并跳转到微信">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -440,20 +434,54 @@
                                     <action selector="toWechatClick:" destination="uAd-9A-BUA" eventType="touchUpInside" id="cH7-Oh-Fki"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.点击下方按钮后，跳转到微信。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B5I-wP-PEf">
+                                <rect key="frame" x="35" y="357" width="250" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="VHY-Jx-2ub"/>
+                                    <constraint firstAttribute="width" constant="250" id="iaS-dh-kac"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2.点击微信右上角“＋”，选择“扫一扫”。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5x-AW-Z7q">
+                                <rect key="frame" x="35" y="384" width="250" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Ps5-5l-NSp"/>
+                                    <constraint firstAttribute="width" constant="250" id="eje-O1-GtH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3.点击右上角“相册”，选择最新图片。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1b-eI-b4c">
+                                <rect key="frame" x="35" y="408" width="250" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="DrU-rz-HC4"/>
+                                    <constraint firstAttribute="width" constant="250" id="mH5-DT-XlA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jCX-Yz-GId" firstAttribute="top" secondItem="e3d-Tj-dEC" secondAttribute="bottom" constant="26" id="4oZ-OB-9MW"/>
-                            <constraint firstItem="iga-iM-TP3" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="5qW-Fl-c20"/>
-                            <constraint firstItem="Fb6-SP-dMC" firstAttribute="top" secondItem="iga-iM-TP3" secondAttribute="bottom" constant="21" id="729-Zc-wbK"/>
-                            <constraint firstItem="fhg-VU-mn0" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="8cS-fM-f5O"/>
-                            <constraint firstItem="fhg-VU-mn0" firstAttribute="top" secondItem="jCX-Yz-GId" secondAttribute="bottom" constant="18" id="CwG-XW-QJW"/>
-                            <constraint firstAttribute="trailing" secondItem="jCX-Yz-GId" secondAttribute="trailing" constant="20" id="G4m-Lp-HfT"/>
-                            <constraint firstItem="Fb6-SP-dMC" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="e6E-Kp-Vu0"/>
-                            <constraint firstItem="jCX-Yz-GId" firstAttribute="leading" secondItem="nO4-3d-1Ml" secondAttribute="leading" constant="20" id="gQ2-Fl-RAm"/>
-                            <constraint firstItem="iga-iM-TP3" firstAttribute="width" secondItem="jCX-Yz-GId" secondAttribute="width" multiplier="0.6525" id="nCm-7s-chQ"/>
-                            <constraint firstItem="HYr-Cc-cji" firstAttribute="top" secondItem="jCX-Yz-GId" secondAttribute="bottom" constant="77" id="qA1-DM-2Z8"/>
-                            <constraint firstItem="iga-iM-TP3" firstAttribute="top" secondItem="jCX-Yz-GId" secondAttribute="top" constant="58" id="zHL-mk-HvO"/>
+                            <constraint firstItem="o1b-eI-b4c" firstAttribute="top" secondItem="C5x-AW-Z7q" secondAttribute="bottom" constant="3" id="18e-C5-Sbe"/>
+                            <constraint firstItem="fhg-VU-mn0" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="91G-IM-B9h"/>
+                            <constraint firstItem="iga-iM-TP3" firstAttribute="top" secondItem="e3d-Tj-dEC" secondAttribute="bottom" constant="70" id="ABY-Nu-fN0"/>
+                            <constraint firstItem="Fb6-SP-dMC" firstAttribute="top" secondItem="iga-iM-TP3" secondAttribute="bottom" constant="8" id="BBA-wd-JGI"/>
+                            <constraint firstItem="o1b-eI-b4c" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="CWs-Et-FXj"/>
+                            <constraint firstItem="iga-iM-TP3" firstAttribute="height" secondItem="nO4-3d-1Ml" secondAttribute="height" multiplier="0.4049" id="JPr-TF-xQE"/>
+                            <constraint firstItem="C5x-AW-Z7q" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="L9s-vG-gqH"/>
+                            <constraint firstItem="iga-iM-TP3" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="PHQ-54-QM9"/>
+                            <constraint firstItem="jCX-Yz-GId" firstAttribute="leading" secondItem="nO4-3d-1Ml" secondAttribute="leading" constant="20" id="SNh-zm-99k"/>
+                            <constraint firstItem="B5I-wP-PEf" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="Ump-bI-fB4"/>
+                            <constraint firstItem="C5x-AW-Z7q" firstAttribute="top" secondItem="B5I-wP-PEf" secondAttribute="bottom" constant="1" id="Y9o-ah-Ehi"/>
+                            <constraint firstItem="jCX-Yz-GId" firstAttribute="top" secondItem="e3d-Tj-dEC" secondAttribute="bottom" constant="22" id="bTm-EC-EGh"/>
+                            <constraint firstItem="fhg-VU-mn0" firstAttribute="top" secondItem="jCX-Yz-GId" secondAttribute="bottom" constant="40" id="cQ7-HS-cff"/>
+                            <constraint firstItem="B5I-wP-PEf" firstAttribute="top" secondItem="Fb6-SP-dMC" secondAttribute="bottom" constant="2" id="dOQ-dT-Y3V"/>
+                            <constraint firstItem="HYr-Cc-cji" firstAttribute="top" secondItem="fhg-VU-mn0" secondAttribute="bottom" constant="20" id="lPM-NM-GdI"/>
+                            <constraint firstAttribute="trailing" secondItem="jCX-Yz-GId" secondAttribute="trailing" constant="20" id="uma-iz-yw0"/>
+                            <constraint firstItem="Fb6-SP-dMC" firstAttribute="centerX" secondItem="nO4-3d-1Ml" secondAttribute="centerX" id="w3K-D2-BAI"/>
+                            <constraint firstItem="iga-iM-TP3" firstAttribute="width" secondItem="nO4-3d-1Ml" secondAttribute="width" multiplier="0.71875" id="wFd-qP-Q6t"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -464,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wp6-06-weK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="363" y="1572.75"/>
+            <point key="canvasLocation" x="363" y="1572"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LHX-7E-HSC">
@@ -1143,7 +1171,7 @@
         <image name="profile_btn6" width="711" height="89"/>
         <image name="profile_btn7" width="710" height="88"/>
         <image name="profile_img" width="41" height="47"/>
-        <image name="wechatBackground" width="615" height="971"/>
+        <image name="wechatGroupCard" width="615" height="1026"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PEK-rC-yNB"/>
