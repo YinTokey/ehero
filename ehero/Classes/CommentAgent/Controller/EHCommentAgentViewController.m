@@ -42,7 +42,9 @@
 @end
 
 @implementation EHCommentAgentViewController
-
+{
+    NSString *commentKind;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -111,7 +113,12 @@
 
     
     if ([EHCookieOperation setCookie]) {
-        [self submitComment];
+        if (commentKind.length < 2) {
+            [MBProgressHUD showNormalMessage:@"请选择评价级别" toView:self.view];
+        }else{
+            [self submitComment];
+        }
+        
     }else{
         [self popVerifyView];
     }
@@ -133,23 +140,21 @@
 
 - (void)submitComment{
     NSDictionary *comment = @{@"author":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
-                              @"kind":@"中评",
+                              @"kind":commentKind,
                               @"text":self.commentView.text};
     
     EHAgentInfo *agentInfo = [self.searchResultArr firstObject];
     [agentInfo getIdStringFromDictionary];
     NSDictionary *param = @{@"agent_id":agentInfo.idStr,
                             @"comment":comment};
-    [MBProgressHUD showMessage:@"正在提交评论"];
+
     [YTHttpTool post:commentAgentUrlStr params:param  success:^(NSURLSessionDataTask *task,id responseObj) {
         NSLog(@"success %@",responseObj);
         NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
         NSLog(@"responString %@",responStr);
-        [MBProgressHUD hideHUD];
-        [MBProgressHUD showSuccess:@"评论成功"];
+        [MBProgressHUD showSuccess:@"评论成功" toView:self.view];
     } failure:^(NSError *error) {
-        [MBProgressHUD hideHUD];
-        [MBProgressHUD showError:@"评论失败"];
+        [MBProgressHUD showSuccess:@"评论失败" toView:self.view];
         NSLog(@"failed %@",error);
     }];
 }
@@ -278,7 +283,7 @@
     self.moderateComment.selected = NO;
     self.negativeComment.selected = NO;
     self.highPraise.selected = YES;
-    
+    commentKind = @"好评";
 }
 
 - (IBAction)moderateClick:(id)sender {
@@ -286,7 +291,7 @@
     self.highPraise.selected = NO;
     self.negativeComment.selected = NO;
     self.moderateComment.selected = YES;
-
+    commentKind = @"中评";
 }
 
 - (IBAction)negativeClick:(id)sender {
@@ -294,6 +299,6 @@
     self.moderateComment.selected = NO;
     self.highPraise.selected = NO;
     self.negativeComment.selected = YES;
-
+    commentKind = @"差评";
 }
 @end
