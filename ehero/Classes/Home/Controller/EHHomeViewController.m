@@ -25,6 +25,7 @@
 #import "EHSearchViewController.h"
 #import "EHHomeAgentCell.h"
 #import "EHSiteButton.h"
+#import "EHHomePopView.h"
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate,UITextFieldDelegate>
 {
     /** 图片数组*/
@@ -141,9 +142,7 @@
     //第一行 4个按钮
     if (indexPath.section == 0) {
         buttonCell *cell = [buttonCell buttonCellWithTableView:tableView];
-
         cell.delegate = self;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setClickEvent];
         return cell;
     //第二行 点评经纪人
@@ -156,8 +155,6 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.font = [UIFont systemFontOfSize:13.0];
         cell.textLabel.text = @"评价你的经纪人";
-
-       // EHCommentAgentCell *cell = [EHCommentAgentCell commentAgentCellWithTableView:tableView];
         return cell;
     //第三行，显示一个经纪人
     }else if(indexPath.section == 2){
@@ -168,7 +165,6 @@
     }else{
         
         EHEverydayhouseCell *cell = [EHEverydayhouseCell everydayhouseCellWithTableView:tableView];
-   
         return cell;
     }
 
@@ -197,7 +193,7 @@
 
 
 - (IBAction)siteBtnClick:(UIButton *)btn {
-
+    
     [self setupPopView];
 
 }
@@ -211,14 +207,9 @@
 
 #pragma mark - 设置左上角地点弹窗
 - (void)setupPopView{
-    CGPoint point = CGPointMake(_siteBtn.center.x,_siteBtn.center.y + 45);
-    XTPopView *view1 = [[XTPopView alloc] initWithOrigin:point Width:80 Height:40 * 4 Type:XTTypeOfUpCenter Color:[UIColor whiteColor] superView:self.view];
-    view1.dataArray = @[@"北京",@"上海",@"广州", @"深圳"];
-    view1.fontSize = 13;
-    view1.row_height = 40;
-    view1.titleTextColor = [UIColor blackColor];
-    view1.delegate = self;
-    [view1 popView];
+    EHHomePopView *homePopView = [EHHomePopView initPopView:_siteBtn SuperView:self.view];
+    homePopView.delegate = self;
+    [homePopView popView];
 }
 #pragma mark - 实现代理方法，左上角弹窗点击事件
 - (void)selectIndexPathRow:(NSInteger)index{
@@ -259,9 +250,7 @@
 }
 #pragma mark - 实现自定义cell里按钮点击的代理方法
 - (void)firstBtnClick:(UITableViewCell *)cell{
-    
     EHTipsViewController  *tipsViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"TipsViewController"];
-    
     [self.navigationController pushViewController:tipsViewController animated:YES];
 
 }
