@@ -891,39 +891,54 @@
                                             <action selector="highPriseClick:" destination="rlP-ow-We4" eventType="touchUpInside" id="lXQ-QR-BAM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx1-vn-VBf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvn-nz-Khz">
                                         <rect key="frame" x="74" y="10" width="52" height="25"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="fjA-eo-lof"/>
+                                            <constraint firstAttribute="width" constant="52" id="uHJ-vx-5qe"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="中评" backgroundImage="commentBtn2">
                                             <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <state key="highlighted">
+                                        <state key="highlighted" title="好评"/>
+                                        <state key="focused" title="好评">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="moderateClick:" destination="rlP-ow-We4" eventType="touchUpInside" id="bfg-nX-Bjd"/>
+                                            <action selector="highPriseClick:" destination="rlP-ow-We4" eventType="touchUpInside" id="g10-I6-qGK"/>
+                                            <action selector="moderateClick:" destination="rlP-ow-We4" eventType="touchUpInside" id="T10-NS-yCR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmL-X2-j21">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekR-WM-unE">
                                         <rect key="frame" x="148" y="10" width="52" height="25"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="W1f-6h-4H5"/>
+                                            <constraint firstAttribute="width" constant="52" id="sSK-tD-mbe"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="差评" backgroundImage="commentBtn2">
                                             <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <state key="highlighted" title="好评"/>
+                                        <state key="focused" title="好评">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
-                                            <action selector="negativeClick:" destination="rlP-ow-We4" eventType="touchUpInside" id="iNm-kt-cbq"/>
+                                            <action selector="highPriseClick:" destination="rlP-ow-We4" eventType="touchUpInside" id="tiC-SE-miP"/>
+                                            <action selector="negativeClick:" destination="rlP-ow-We4" eventType="touchUpInside" id="69S-ox-geX"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="JmL-X2-j21" firstAttribute="top" secondItem="8b2-kM-tCk" secondAttribute="top" constant="10" id="DLe-nr-4af"/>
-                                    <constraint firstItem="nx1-vn-VBf" firstAttribute="height" secondItem="6EW-6a-Fp4" secondAttribute="height" id="Dar-Va-zOh"/>
-                                    <constraint firstItem="nx1-vn-VBf" firstAttribute="centerY" secondItem="8b2-kM-tCk" secondAttribute="centerY" id="ERN-7C-rNS"/>
-                                    <constraint firstItem="JmL-X2-j21" firstAttribute="width" secondItem="6EW-6a-Fp4" secondAttribute="width" id="OtU-gL-NWp"/>
-                                    <constraint firstItem="nx1-vn-VBf" firstAttribute="centerX" secondItem="8b2-kM-tCk" secondAttribute="centerX" id="UDr-9g-O3d"/>
-                                    <constraint firstAttribute="trailing" secondItem="JmL-X2-j21" secondAttribute="trailing" id="XQx-Gg-4Pb"/>
+                                    <constraint firstItem="ekR-WM-unE" firstAttribute="top" secondItem="8b2-kM-tCk" secondAttribute="top" constant="10" id="7lZ-Vc-Zxk"/>
+                                    <constraint firstItem="uvn-nz-Khz" firstAttribute="centerX" secondItem="8b2-kM-tCk" secondAttribute="centerX" id="HKN-iz-hXn"/>
+                                    <constraint firstItem="uvn-nz-Khz" firstAttribute="centerY" secondItem="8b2-kM-tCk" secondAttribute="centerY" id="WvA-cm-cON"/>
                                     <constraint firstItem="6EW-6a-Fp4" firstAttribute="top" secondItem="8b2-kM-tCk" secondAttribute="top" constant="10" id="Z4g-25-cX2"/>
-                                    <constraint firstItem="JmL-X2-j21" firstAttribute="height" secondItem="6EW-6a-Fp4" secondAttribute="height" id="dXU-Ba-Xzn"/>
-                                    <constraint firstItem="nx1-vn-VBf" firstAttribute="width" secondItem="6EW-6a-Fp4" secondAttribute="width" id="kiI-cZ-dzv"/>
+                                    <constraint firstAttribute="trailing" secondItem="ekR-WM-unE" secondAttribute="trailing" id="ci2-pt-NvO"/>
                                     <constraint firstItem="6EW-6a-Fp4" firstAttribute="leading" secondItem="8b2-kM-tCk" secondAttribute="leading" id="wxy-lW-3Cw"/>
                                 </constraints>
                             </view>
@@ -981,9 +996,9 @@
                         <outlet property="highPraise" destination="6EW-6a-Fp4" id="2Yk-73-AIz"/>
                         <outlet property="line1" destination="I2g-DU-1EW" id="83E-4M-zhI"/>
                         <outlet property="line2" destination="S5A-3E-SAg" id="u54-xh-aiL"/>
-                        <outlet property="moderateComment" destination="nx1-vn-VBf" id="Bpi-FA-dlj"/>
+                        <outlet property="moderateComment" destination="uvn-nz-Khz" id="zBo-Us-qrG"/>
                         <outlet property="name" destination="XJJ-f2-WCY" id="sRq-ZL-SYK"/>
-                        <outlet property="negativeComment" destination="JmL-X2-j21" id="g28-Gt-RAP"/>
+                        <outlet property="negativeComment" destination="ekR-WM-unE" id="WUV-Ok-5mb"/>
                         <outlet property="position" destination="oG4-yd-QD2" id="YBV-hP-HwQ"/>
                         <outlet property="rates" destination="ZR1-o3-CKg" id="769-xU-bSj"/>
                         <outlet property="searchBar" destination="671-bn-jb8" id="vrD-mC-aNM"/>

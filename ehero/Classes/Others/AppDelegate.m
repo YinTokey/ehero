@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "OpenShareHeader.h"
 
-
 @interface AppDelegate ()
 
 @end
@@ -29,7 +28,7 @@
     [OpenShare connectWeiboWithAppKey:WeiboAppKey];
     [OpenShare connectWeixinWithAppId:WeixinAppId];
 
-    
+    [YTHttpTool netCheck];
     return YES;
 }
 

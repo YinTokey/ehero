@@ -42,6 +42,8 @@
     self.verifiedOtherPhone.delegate = self;
  
     [self callCallBack];
+    
+    [YTHttpTool netCheck];
 }
 
 - (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code{

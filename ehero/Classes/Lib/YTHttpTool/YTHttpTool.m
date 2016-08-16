@@ -62,7 +62,7 @@
         if (status==AFNetworkReachabilityStatusReachableViaWiFi ||status==AFNetworkReachabilityStatusReachableViaWWAN) {
             NSLog(@"可以联网");
         }else if(status==AFNetworkReachabilityStatusNotReachable){
-            [MBProgressHUD showSuccess:@"检查网络连接"];
+            [MBProgressHUD showError:@"检查网络连接"];
         }else{
             NSLog(@"未知网络");
         }

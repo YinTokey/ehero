@@ -63,6 +63,7 @@
     [self setNavBar];
     [self setupHeaderView];
     
+    [YTHttpTool netCheck];
     
 
 }

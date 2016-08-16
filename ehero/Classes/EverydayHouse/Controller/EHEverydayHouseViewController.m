@@ -23,6 +23,8 @@
     //设置顶部分割线
     EHTipsNavBottomLine *lineView = [EHTipsNavBottomLine initNavBottomLineWithController:self];
     [self.navigationController.navigationBar addSubview:lineView];
+    
+    [YTHttpTool netCheck];
 }
 
 
