@@ -42,10 +42,34 @@
     [self setupSearchBar];
     [self addGesture];
     [YTHttpTool netCheck];
-
+    [self setNavBar];
+    
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
 
 
+}
+
+- (void)setNavBar{
+    //自定义返回按钮
+    UIButton * leftBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    leftBtn.frame = CGRectMake(0, 0, 14, 23.6);
+    [leftBtn setImage:[UIImage imageNamed:@"Back Arrow"] forState:UIControlStateNormal];
+    [leftBtn addTarget:self action:@selector(NavPop) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    self.navigationItem.leftBarButtonItem = backItem;
+    self.navigationItem.hidesBackButton = YES;
+    
+    UIBarButtonItem *negativeSpacer1 = [[ UIBarButtonItem alloc ] initWithBarButtonSystemItem : UIBarButtonSystemItemFixedSpace target : nil action : nil ];
+    
+    UIBarButtonItem *negativeSpacer2 = [[ UIBarButtonItem alloc ] initWithBarButtonSystemItem : UIBarButtonSystemItemFixedSpace target : nil action : nil ];
+    
+    negativeSpacer2.width = 15;
+    negativeSpacer1.width = - 10 ;//这个数值可以根据情况自由变化
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer1,backItem,negativeSpacer2];
+}
+
+- (void)NavPop{
+    [[self navigationController]popViewControllerAnimated:YES];
 }
 
 
@@ -91,17 +115,7 @@
     [self.searchResultArr removeAllObjects];
     [self searchClick];
     [self.mysearchBar resignFirstResponder ];
-    
-//    //http://ehero.cc/users/sms.json
-//    NSDictionary *params = @{@"mobile":@"18396532162",
-//                             @"id":@"57430a69724e1130b2517d92",
-//                             @"code":@"7992"};
-//    [YTHttpTool post:@"http://www.ehero.cc/agents/call.json" params:params success:^(id responseObj) {
-//        NSLog(@"%@",responseObj);
-//    } failure:^(NSError *error) {
-//        NSLog(@"faild,%@",error);
-//    }];
-    
+
     return YES;
 }
 

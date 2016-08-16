@@ -86,8 +86,6 @@
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
     
-    
-    
     EHHomeSearchBar *searchbar = [[EHHomeSearchBar alloc]initWithFrame:CGRectMake(20, 20, ScreenWidth, 30)];
     searchbar.clipsToBounds = YES;
     searchbar.delegate = self;
@@ -95,7 +93,7 @@
     
     UIBarButtonItem *negativeSpacer = [[ UIBarButtonItem alloc ] initWithBarButtonSystemItem : UIBarButtonSystemItemFixedSpace target : nil action : nil ];
     
-    negativeSpacer. width = - 10 ;//这个数值可以根据情况自由变化
+    negativeSpacer.width = - 10 ;//这个数值可以根据情况自由变化
     self.navigationItem.leftBarButtonItems = @[negativeSpacer,_profileBarButtonItem,_siteBarButtonItem];
 
 }
@@ -183,7 +181,6 @@
         [self.navigationController pushViewController:houseDetailViewController animated:YES];
     }
 }
-
 
 
 - (void)setupHeaderView{

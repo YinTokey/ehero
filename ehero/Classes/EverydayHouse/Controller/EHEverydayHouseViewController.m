@@ -15,6 +15,7 @@
 @interface EHEverydayHouseViewController ()<selectIndexPathDelegate,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *regionBtn;
 - (IBAction)regionClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *regionBarButtom;
 
 @end
 
@@ -41,6 +42,7 @@
     searchbar.delegate = self;
     self.navigationItem.titleView = searchbar;
     
+    //自定义返回按钮
     UIButton * leftBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     leftBtn.frame = CGRectMake(0, 0, 14, 23.6);
     [leftBtn setImage:[UIImage imageNamed:@"Back Arrow"] forState:UIControlStateNormal];
@@ -48,7 +50,12 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
     self.navigationItem.leftBarButtonItem = backItem;
     self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.rightBarButtonItem = nil;
     
+    UIBarButtonItem *negativeSpacer1 = [[ UIBarButtonItem alloc ] initWithBarButtonSystemItem : UIBarButtonSystemItemFixedSpace target : nil action : nil ];
+
+    negativeSpacer1.width = - 10 ;//这个数值可以根据情况自由变化
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer1,backItem,_regionBarButtom];
     
 }
 
