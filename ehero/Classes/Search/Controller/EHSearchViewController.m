@@ -43,7 +43,7 @@
     [self addGesture];
     [YTHttpTool netCheck];
 
-    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
 
 
 }

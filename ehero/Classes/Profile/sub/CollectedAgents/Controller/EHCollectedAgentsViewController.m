@@ -31,7 +31,7 @@
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     
     //跳转到下一界面的返回按钮样式
-    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
     
     NSLog(@"collected count %d",self.collectedAgentsArr.count);
 }

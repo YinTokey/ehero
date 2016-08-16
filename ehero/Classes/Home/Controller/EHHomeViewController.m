@@ -26,6 +26,7 @@
 #import "EHHomeAgentCell.h"
 #import "EHSiteButton.h"
 #import "EHHomePopView.h"
+#
 @interface EHHomeViewController ()<selectIndexPathDelegate,buttonCellDelegate,UITextFieldDelegate>
 {
     /** 图片数组*/
@@ -58,14 +59,12 @@
     //读取用户偏好
     [self readDefaults];
     
-    //跳转到下一界面的返回按钮样式
-    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
-    
     [self setNavBar];
     [self setupHeaderView];
     
     [YTHttpTool netCheck];
     
+  
 
 }
 
@@ -83,7 +82,12 @@
 }
 
 - (void)setNavBar{
-
+    self.navigationController.navigationBar.tintColor= RGB(68, 180, 244);
+    //跳转到下一界面的返回按钮样式
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
+    
+    
+    
     EHHomeSearchBar *searchbar = [[EHHomeSearchBar alloc]initWithFrame:CGRectMake(20, 20, ScreenWidth, 30)];
     searchbar.clipsToBounds = YES;
     searchbar.delegate = self;
@@ -95,7 +99,6 @@
     self.navigationItem.leftBarButtonItems = @[negativeSpacer,_profileBarButtonItem,_siteBarButtonItem];
 
 }
-
 
 #pragma mark - Table view data source
 

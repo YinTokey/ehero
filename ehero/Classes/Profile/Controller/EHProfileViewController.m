@@ -51,7 +51,7 @@
     [self fitScreen];
     
     //跳转到下一界面的返回按钮样式
-    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
     
 //    UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(150, 150, 50, 50)];
 //    [self.view addSubview:bt];

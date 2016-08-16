@@ -25,7 +25,7 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
     [YTHttpTool netCheck];
     NSLog(@"wechatGroup");
     //跳转到下一界面的返回按钮样式
-    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@"返回"];
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
 }
 
 - (void)didReceiveMemoryWarning {
