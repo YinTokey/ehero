@@ -9,6 +9,7 @@
 #import "EHSkimedAgentsViewController.h"
 #import "EHSkimedAgentInfo.h"
 #import "EHSearchResultCell.h"
+#import "EHAgentInfoController.h"
 @interface EHSkimedAgentsViewController ()
 
 @property (nonatomic,strong) NSArray *skimedAgentsArr;
@@ -51,4 +52,11 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    EHAgentInfoController *agentInfoVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"AgentInfoController"];
+    EHAgentInfo *agentInfo = self.skimedAgentsArr[indexPath.row];
+    
+    agentInfoVC.agentInfo = agentInfo;
+    [self.navigationController pushViewController:agentInfoVC animated:YES];
+}
 @end

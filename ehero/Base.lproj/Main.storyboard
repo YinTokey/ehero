@@ -272,7 +272,7 @@
             </objects>
             <point key="canvasLocation" x="-718" y="970"/>
         </scene>
-        <!--每日一房-->
+        <!--Everyday House View Controller-->
         <scene sceneID="whe-o3-bPp">
             <objects>
                 <tableViewController storyboardIdentifier="EverydayHouseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kZa-Qi-3aT" customClass="EHEverydayHouseViewController" sceneMemberID="viewController">
@@ -295,12 +295,23 @@
                             <outlet property="delegate" destination="kZa-Qi-3aT" id="qqV-vb-Sb4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="每日一房" id="ago-fS-Pz1"/>
+                    <navigationItem key="navigationItem" id="ago-fS-Pz1">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="aFf-G7-PGK">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gKY-ud-Gul">
+                                <rect key="frame" x="264" y="7" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="商圈">
+                                    <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CF7-oY-VFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-199.5" y="955.5"/>
+            <point key="canvasLocation" x="-200" y="955"/>
         </scene>
         <!--微信群组-->
         <scene sceneID="atV-aY-9BO">
