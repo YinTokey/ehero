@@ -42,12 +42,7 @@
 @end
 
 @implementation EHCommentAgentViewController
-{
-    NSInteger highBtnFlag;
-    NSInteger moderBtnFlag;
-    NSInteger negativeBtnFlag;
 
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -72,18 +67,6 @@
 # pragma mark -初始状态，控件隐藏
 - (void)setInitView{
     
-//    self.highPraise.layer.cornerRadius = 4.0;
-//    self.highPraise.layer.masksToBounds = YES;
-//    self.moderateComment.layer.cornerRadius = 4.0;
-//    self.moderateComment.layer.masksToBounds = YES;
-//    self.negativeComment.layer.cornerRadius = 4.0;
-//    self.negativeComment.layer.masksToBounds = YES;
-    [self.highPraise setBackgroundImage:[UIImage imageNamed:@"commentBackground"] forState:UIControlStateSelected];
-    [self.highPraise setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-    [self.moderateComment setBackgroundImage:[UIImage imageNamed:@"commentBackground"] forState:UIControlStateSelected];
-    [self.moderateComment setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-    [self.negativeComment setBackgroundImage:[UIImage imageNamed:@"commentBackground"] forState:UIControlStateSelected];
-    [self.negativeComment setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
     
     self.line1.hidden = YES;
     self.line2.hidden = YES;
@@ -291,36 +274,26 @@
 
 
 - (IBAction)highPriseClick:(id)sender {
-    highBtnFlag ++;
+
     self.moderateComment.selected = NO;
     self.negativeComment.selected = NO;
-    if (highBtnFlag %2 == 1) {
-        self.highPraise.selected = YES;
-    }else{
-        self.highPraise.selected = NO;
-    }
+    self.highPraise.selected = YES;
     
 }
 
 - (IBAction)moderateClick:(id)sender {
-    moderBtnFlag ++;
+
     self.highPraise.selected = NO;
     self.negativeComment.selected = NO;
-    if (moderBtnFlag %2 == 1) {
-        self.moderateComment.selected = YES;
-    }else{
-        self.moderateComment.selected = NO;
-    }
+    self.moderateComment.selected = YES;
+
 }
 
 - (IBAction)negativeClick:(id)sender {
-    negativeBtnFlag ++;
+
     self.moderateComment.selected = NO;
     self.highPraise.selected = NO;
-    if (negativeBtnFlag %2 == 1 ) {
-        self.negativeComment.selected = YES;
-    }else{
-        self.negativeComment.selected = NO;
-    }
+    self.negativeComment.selected = YES;
+
 }
 @end

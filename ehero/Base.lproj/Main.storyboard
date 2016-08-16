@@ -872,8 +872,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8b2-kM-tCk">
                                 <rect key="frame" x="107" y="117" width="200" height="46"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EW-6a-Fp4">
-                                        <rect key="frame" x="0.0" y="10" width="52" height="25"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EW-6a-Fp4">
+                                        <rect key="frame" x="-54" y="-2" width="160" height="48"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="52" id="2GF-eH-sKq"/>
@@ -882,6 +882,9 @@
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="好评" backgroundImage="commentBtn2">
                                             <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected" backgroundImage="commentBackground">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <state key="highlighted" title="好评"/>
                                         <state key="focused" title="好评">
@@ -902,6 +905,9 @@
                                         <state key="normal" title="中评" backgroundImage="commentBtn2">
                                             <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <state key="selected" backgroundImage="commentBackground">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <state key="highlighted" title="好评"/>
                                         <state key="focused" title="好评">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -921,6 +927,9 @@
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="差评" backgroundImage="commentBtn2">
                                             <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected" backgroundImage="commentBackground">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <state key="highlighted" title="好评"/>
                                         <state key="focused" title="好评">
@@ -1180,6 +1189,7 @@
         <image name="about_us" width="750" height="1334"/>
         <image name="agent" width="150" height="200"/>
         <image name="area_background" width="100" height="26"/>
+        <image name="commentBackground" width="160" height="48"/>
         <image name="commentBtn2" width="160" height="48"/>
         <image name="home_bar_frame" width="462" height="51"/>
         <image name="home_searchbar" width="462" height="51"/>
