@@ -13,6 +13,7 @@ NSString *const IDENTIFIER = @"CELL";
 {
     NSArray *tables;
     UIView *bgView;
+    CGFloat cancelAreaY;
 }
 @end
 
@@ -26,7 +27,7 @@ NSString *const IDENTIFIER = @"CELL";
         for(int i=0; i!=2; ++i) {
             sels[i] = -1;
         }
-        self.frame = CGRectMake(0,32, SCREEN_WIDTH, SCREEN_HEIGHT - 32);
+        self.frame = CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT);
         self.userInteractionEnabled = YES;
         UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         cancelBtn.frame = self.frame;
@@ -41,7 +42,7 @@ NSString *const IDENTIFIER = @"CELL";
             table.frame = CGRectMake(0, 0, 0, SCREEN_HEIGHT * 3 / 5);
             table.backgroundColor = RGB(241, 243, 245);
             table.tableFooterView = [UIView new];
-            //table.bounces = NO;
+            cancelAreaY = table.frame.size.height;
         }];
         bgView = [[UIView alloc] init];
         bgView.backgroundColor = [UIColor colorWithRed:.0f green:.0f blue:.0f alpha:.3f];
@@ -64,10 +65,10 @@ NSString *const IDENTIFIER = @"CELL";
 
 {
     CGPoint point = [sender locationInView:self];
-    if (point.y >  SCREEN_HEIGHT * 3 / 5 ) {
+    UITableView *table1 = [tables objectAtIndex:0];
+    if (point.y > table1.frame.origin.y + table1.frame.size.height + 30) {
         [self dismiss];
     }
-    
 }
 
 
@@ -150,13 +151,13 @@ NSString *const IDENTIFIER = @"CELL";
     sels[0] = idx_1;
     sels[1] = idx_2;
 
- 
 }
 
 - (void)showAsDrawDownView:(UIView *)view {
-    CGRect showFrame = view.frame;
+ //   CGRect showFrame = view.frame;
     CGFloat x = 0.f;
-    CGFloat y = showFrame.origin.y+showFrame.size.height;
+  //  CGFloat y = showFrame.origin.y+showFrame.size.height;
+    CGFloat y = 64; //64是状态栏高度＋导航栏高度
     CGFloat w = SCREEN_WIDTH;
     CGFloat h = SCREEN_HEIGHT-y;
     bgView.frame = CGRectMake(x, y, w, h);

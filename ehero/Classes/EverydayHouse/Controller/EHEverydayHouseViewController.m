@@ -13,7 +13,7 @@
 #import "SkyAssociationMenuView.h"
 
 
-@interface EHEverydayHouseViewController ()<UITextFieldDelegate,SkyAssociationMenuViewDelegate>
+@interface EHEverydayHouseViewController ()<UITextFieldDelegate,SkyAssociationMenuViewDelegate,UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *regionBtn;
 - (IBAction)regionClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *regionBarButtom;
@@ -39,7 +39,7 @@
     
     _menuView = [SkyAssociationMenuView new];
     _menuView.delegate = self;
- 
+
 }
 
 - (void)setupNavBar{
@@ -105,7 +105,7 @@
 - (NSInteger)assciationMenuView:(SkyAssociationMenuView*)asView countForClass:(NSInteger)idx {
 
     if (idx == 0) {
-        return 5;
+        return 15;
     }else{
         return 10;
     }
