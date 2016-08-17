@@ -39,7 +39,7 @@
     
     _menuView = [SkyAssociationMenuView new];
     _menuView.delegate = self;
-    
+ 
 }
 
 - (void)setupNavBar{
@@ -73,14 +73,12 @@
 
 #pragma mark - Table view data source
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
     return 10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-
     return 94;
 }
 
@@ -97,35 +95,44 @@
 }
 
 - (IBAction)regionClick:(id)sender {
-    NSLog(@"a");
 
     [_menuView showAsDrawDownView:sender];
 
 }
 
+
+#pragma mark - tableview的cell的数量
 - (NSInteger)assciationMenuView:(SkyAssociationMenuView*)asView countForClass:(NSInteger)idx {
-    NSLog(@"choose %ld", idx);
-    return 10;
+
+    if (idx == 0) {
+        return 5;
+    }else{
+        return 10;
+    }
 }
 
+#pragma mark - table1的内容
 - (NSString*)assciationMenuView:(SkyAssociationMenuView*)asView titleForClass_1:(NSInteger)idx_1 {
-    NSLog(@"title %ld", idx_1);
-    return [NSString stringWithFormat:@"title %ld", idx_1];
+    return @"菜单1";
+   // return [NSString stringWithFormat:@"title %ld", idx_1];
 }
 
+#pragma mark - table2的内容
 - (NSString*)assciationMenuView:(SkyAssociationMenuView*)asView titleForClass_1:(NSInteger)idx_1 class_2:(NSInteger)idx_2 {
-    NSLog(@"title %ld, %ld", idx_1, idx_2);
-    return [NSString stringWithFormat:@"title %ld, %ld", idx_1, idx_2];
+    return @"菜单2";
+  //  return [NSString stringWithFormat:@"title %ld, %ld", idx_1, idx_2];
 }
 
 - (BOOL)assciationMenuView:(SkyAssociationMenuView*)asView idxChooseInClass1:(NSInteger)idx_1 class2:(NSInteger)idx_2{
     return NO;
 }
 
-- (void)assciationMenuViewCancel{
-    NSLog(@"取消回调");
+- (void)menuDidSelectedAtIndex1:(SkyAssociationMenuView *)asView idxInClass1:(NSInteger)idx_1{
+    NSLog(@"在控制器选择第一项");
 }
 
-
+- (void)menuDidSelectedAtIndex2:(SkyAssociationMenuView *)asView idxInClass2:(NSInteger)idx_2{
+    NSLog(@"在控制器选择第二项");
+}
 
 @end

@@ -72,6 +72,19 @@
  */
 - (BOOL)assciationMenuView:(SkyAssociationMenuView*)asView idxChooseInClass1:(NSInteger)idx_1 class2:(NSInteger)idx_2;
 
+/**
+ *  点击回调
+ *
+ *  @param asView 联想菜单
+ *  @param idx_1  第一级
+ *  @param idx_2  第二级
+ *
+ *
+ */
+
+- (void)menuDidSelectedAtIndex1:(SkyAssociationMenuView*)asView idxInClass1:(NSInteger)idx_1;
+
+- (void)menuDidSelectedAtIndex2:(SkyAssociationMenuView*)asView idxInClass2:(NSInteger)idx_2;
 @end
 
 /**

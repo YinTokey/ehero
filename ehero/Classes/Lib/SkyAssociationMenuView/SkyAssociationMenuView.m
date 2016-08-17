@@ -39,9 +39,9 @@ NSString *const IDENTIFIER = @"CELL";
             table.dataSource = self;
             table.delegate = self;
             table.frame = CGRectMake(0, 0, 0, SCREEN_HEIGHT * 3 / 5);
-            table.backgroundColor = [UIColor clearColor];
+            table.backgroundColor = RGB(241, 243, 245);
             table.tableFooterView = [UIView new];
-            table.bounces = NO;
+            //table.bounces = NO;
         }];
         bgView = [[UIView alloc] init];
         bgView.backgroundColor = [UIColor colorWithRed:.0f green:.0f blue:.0f alpha:.3f];
@@ -56,7 +56,6 @@ NSString *const IDENTIFIER = @"CELL";
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
-
 {
     return YES;
 }
@@ -68,7 +67,6 @@ NSString *const IDENTIFIER = @"CELL";
     if (point.y >  SCREEN_HEIGHT * 3 / 5 ) {
         [self dismiss];
     }
-    NSLog(@"handleSingleTap!pointx:%f,y:%f",point.x,point.y);
     
 }
 
@@ -93,7 +91,7 @@ NSString *const IDENTIFIER = @"CELL";
         CGRect f = t.frame;
         if (i == 0) {
             f.size.width = w;
-            t.backgroundColor = [UIColor grayColor];
+            t.backgroundColor = RGB(241, 243, 245);
             t.separatorStyle = UITableViewCellSeparatorStyleNone;
         }else{
             f.size.width = w / showTableCount;
@@ -117,9 +115,21 @@ NSString *const IDENTIFIER = @"CELL";
 /**
  *  保存table选中项
  */
+#pragma mark - 点击回调，可以在这设置代理
 - (void)saveSels{
     [tables enumerateObjectsUsingBlock:^(UITableView *t, NSUInteger idx, BOOL *stop) {
         sels[idx] = t.superview ? t.indexPathForSelectedRow.row : -1;
+        //选择菜单1
+        if (idx == 0) {
+            if([self.delegate respondsToSelector:@selector(menuDidSelectedAtIndex1:idxInClass1:)]) {
+                [self.delegate menuDidSelectedAtIndex1:self idxInClass1:idx];
+            }
+        //选择菜单2
+        }else{
+            if([self.delegate respondsToSelector:@selector(menuDidSelectedAtIndex2:idxInClass2:)]) {
+                [self.delegate menuDidSelectedAtIndex2:self idxInClass2:idx];
+            }
+        }
     }];
 }
 
@@ -139,6 +149,7 @@ NSString *const IDENTIFIER = @"CELL";
 - (void)setSelectIndexForClass1:(NSInteger)idx_1 class2:(NSInteger)idx_2 {
     sels[0] = idx_1;
     sels[1] = idx_2;
+
  
 }
 
