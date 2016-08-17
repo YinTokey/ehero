@@ -10,11 +10,10 @@
 #import "EHEverydayhouseCell.h"
 #import "EHHouseDetailViewController.h"
 #import "EHHomeSearchBar.h"
-#import "XTPopView.h"
 #import "SkyAssociationMenuView.h"
 
 
-@interface EHEverydayHouseViewController ()<selectIndexPathDelegate,UITextFieldDelegate,SkyAssociationMenuViewDelegate>
+@interface EHEverydayHouseViewController ()<UITextFieldDelegate,SkyAssociationMenuViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *regionBtn;
 - (IBAction)regionClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *regionBarButtom;
@@ -22,7 +21,9 @@
 @end
 
 @implementation EHEverydayHouseViewController
-
+{
+    NSInteger showMenuFlag;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -96,15 +97,10 @@
 }
 
 - (IBAction)regionClick:(id)sender {
-//    CGPoint point = CGPointMake(_regionBtn.center.x,_regionBtn.center.y + 45);
-//    XTPopView *popView = [[XTPopView alloc] initWithOrigin:point Width:80 Height:40 * 4 Type:XTTypeOfUpCenter Color:[UIColor whiteColor] superView:self.view];
-//    popView.dataArray = @[@"三里屯",@"CBD",@"五道口", @"望京"];
-//    popView.fontSize = 13;
-//    popView.row_height = 40;
-//    popView.titleTextColor = [UIColor blackColor];
-//    popView.delegate = self;
-//    [popView popView];
+    NSLog(@"a");
+
     [_menuView showAsDrawDownView:sender];
+
 }
 
 - (NSInteger)assciationMenuView:(SkyAssociationMenuView*)asView countForClass:(NSInteger)idx {
@@ -126,6 +122,9 @@
     return NO;
 }
 
+- (void)assciationMenuViewCancel{
+    NSLog(@"取消回调");
+}
 
 
 

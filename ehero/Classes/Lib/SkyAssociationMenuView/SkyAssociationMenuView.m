@@ -26,29 +26,52 @@ NSString *const IDENTIFIER = @"CELL";
         for(int i=0; i!=2; ++i) {
             sels[i] = -1;
         }
-        self.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        self.frame = CGRectMake(0,32, SCREEN_WIDTH, SCREEN_HEIGHT - 32);
         self.userInteractionEnabled = YES;
         UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         cancelBtn.frame = self.frame;
         [cancelBtn addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:cancelBtn];
         // 初始化菜单
-        tables = @[[[UITableView alloc] init], [[UITableView alloc] init], [[UITableView alloc] init] ];
+        tables = @[[[UITableView alloc] init], [[UITableView alloc] init] ];
         [tables enumerateObjectsUsingBlock:^(UITableView *table, NSUInteger idx, BOOL *stop) {
             [table registerClass:[UITableViewCell class] forCellReuseIdentifier:IDENTIFIER ];
             table.dataSource = self;
             table.delegate = self;
-            table.frame = CGRectMake(0, 0, 0, 0);
+            table.frame = CGRectMake(0, 0, 0, SCREEN_HEIGHT * 3 / 5);
             table.backgroundColor = [UIColor clearColor];
             table.tableFooterView = [UIView new];
+            table.bounces = NO;
         }];
         bgView = [[UIView alloc] init];
         bgView.backgroundColor = [UIColor colorWithRed:.0f green:.0f blue:.0f alpha:.3f];
+        UITapGestureRecognizer* singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+        singleTap.delegate = self;
+        singleTap.cancelsTouchesInView = NO;
         bgView.userInteractionEnabled = YES;
-        [bgView addSubview:[tables objectAtIndex:0] ];
+        [bgView addSubview:[tables objectAtIndex:0]];
+        [bgView addGestureRecognizer:singleTap];
     }
     return self;
 }
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+
+{
+    return YES;
+}
+
+-(void)handleSingleTap:(UITapGestureRecognizer *)sender
+
+{
+    CGPoint point = [sender locationInView:self];
+    if (point.y >  SCREEN_HEIGHT * 3 / 5 ) {
+        [self dismiss];
+    }
+    NSLog(@"handleSingleTap!pointx:%f,y:%f",point.x,point.y);
+    
+}
+
 
 #pragma mark private
 /**
@@ -59,7 +82,7 @@ NSString *const IDENTIFIER = @"CELL";
     int __block showTableCount = 0;
     [tables enumerateObjectsUsingBlock:^(UITableView *t, NSUInteger idx, BOOL *stop) {
         CGRect rect = t.frame;
-        rect.size.height = SCREEN_HEIGHT - bgView.frame.origin.y;
+        rect.size.height = SCREEN_HEIGHT * 3 / 5;
         t.frame = rect;
        // if(t.superview)
         showTableCount = 2;
@@ -68,7 +91,15 @@ NSString *const IDENTIFIER = @"CELL";
     for(int i=0; i!=showTableCount; ++i){
         UITableView *t = [tables objectAtIndex:i];
         CGRect f = t.frame;
-        f.size.width = w / showTableCount;
+        if (i == 0) {
+            f.size.width = w;
+            t.backgroundColor = [UIColor grayColor];
+            t.separatorStyle = UITableViewCellSeparatorStyleNone;
+        }else{
+            f.size.width = w / showTableCount;
+            t.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+            t.separatorColor = [UIColor lightGrayColor];
+        }
         f.origin.x = f.size.width * i;
         t.frame = f;
     }
@@ -151,8 +182,15 @@ NSString *const IDENTIFIER = @"CELL";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:IDENTIFIER];
     if(tableView == [tables objectAtIndex:0]){
         cell.textLabel.text = [_delegate assciationMenuView:self titleForClass_1:indexPath.row];
+        cell.backgroundColor = RGB(241, 243, 245);
+        
+        cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
+        cell.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
+        
+        
     }else{
         cell.textLabel.text = [_delegate assciationMenuView:self titleForClass_1:((UITableView*)tables[0]).indexPathForSelectedRow.row class_2:indexPath.row];
+        
     }
     return cell;
 }
