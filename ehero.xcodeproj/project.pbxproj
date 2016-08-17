@@ -86,6 +86,7 @@
 		04C5006E1D336FC0009146E5 /* EHWechatGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5006D1D336FC0009146E5 /* EHWechatGroupViewController.m */; };
 		04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C500791D3386E5009146E5 /* EHCommentAgentViewController.m */; };
 		04C6054E1D62D35C00039217 /* EHHomePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C6054D1D62D35C00039217 /* EHHomePopView.m */; };
+		04C605561D63148C00039217 /* SkyAssociationMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C605551D63148C00039217 /* SkyAssociationMenuView.m */; };
 		04C8FDDD1D5426310081CE73 /* EHHomeAgentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C8FDDB1D5426310081CE73 /* EHHomeAgentCell.m */; };
 		04C8FDDE1D5426310081CE73 /* EHHomeAgentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C8FDDC1D5426310081CE73 /* EHHomeAgentCell.xib */; };
 		04C8FDE11D54744B0081CE73 /* EHVerifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C8FDE01D54744B0081CE73 /* EHVerifyView.m */; };
@@ -282,6 +283,8 @@
 		04C5FFDE1D333292009146E5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		04C6054C1D62D35C00039217 /* EHHomePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHomePopView.h; sourceTree = "<group>"; };
 		04C6054D1D62D35C00039217 /* EHHomePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHomePopView.m; sourceTree = "<group>"; };
+		04C605541D63148C00039217 /* SkyAssociationMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyAssociationMenuView.h; sourceTree = "<group>"; };
+		04C605551D63148C00039217 /* SkyAssociationMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyAssociationMenuView.m; sourceTree = "<group>"; };
 		04C8FDDA1D5426310081CE73 /* EHHomeAgentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHomeAgentCell.h; sourceTree = "<group>"; };
 		04C8FDDB1D5426310081CE73 /* EHHomeAgentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHomeAgentCell.m; sourceTree = "<group>"; };
 		04C8FDDC1D5426310081CE73 /* EHHomeAgentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHHomeAgentCell.xib; sourceTree = "<group>"; };
@@ -365,6 +368,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				04C605531D63148C00039217 /* SkyAssociationMenuView */,
 				04C8FDE41D54A0F40081CE73 /* MZTimerLabel */,
 				046A7C591D503E9600652296 /* DBModel */,
 				049AA0821D5037DD00761E3F /* Toast */,
@@ -1077,6 +1081,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		04C605531D63148C00039217 /* SkyAssociationMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				04C605541D63148C00039217 /* SkyAssociationMenuView.h */,
+				04C605551D63148C00039217 /* SkyAssociationMenuView.m */,
+			);
+			path = SkyAssociationMenuView;
+			sourceTree = "<group>";
+		};
 		04C8FDE41D54A0F40081CE73 /* MZTimerLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1617,6 +1630,7 @@
 				0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */,
 				04FD3AD31D3DDA23005B13B4 /* MBProgressHUD+YT.m in Sources */,
 				04B4F43F1D5AFCB900C6D4F3 /* EHCommunityButton.m in Sources */,
+				04C605561D63148C00039217 /* SkyAssociationMenuView.m in Sources */,
 				04B857211D57280300BEA6CB /* EHSkimedAgentInfo.m in Sources */,
 				04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */,
 				04657FD21D32473200914495 /* EHEverydayHouseViewController.m in Sources */,

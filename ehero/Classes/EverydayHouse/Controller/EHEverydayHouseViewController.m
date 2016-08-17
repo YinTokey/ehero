@@ -11,12 +11,14 @@
 #import "EHHouseDetailViewController.h"
 #import "EHHomeSearchBar.h"
 #import "XTPopView.h"
+#import "SkyAssociationMenuView.h"
 
-@interface EHEverydayHouseViewController ()<selectIndexPathDelegate,UITextFieldDelegate>
+
+@interface EHEverydayHouseViewController ()<selectIndexPathDelegate,UITextFieldDelegate,SkyAssociationMenuViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *regionBtn;
 - (IBAction)regionClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *regionBarButtom;
-
+@property (strong, nonatomic) SkyAssociationMenuView *menuView;
 @end
 
 @implementation EHEverydayHouseViewController
@@ -33,6 +35,10 @@
     [self.navigationController.navigationBar addSubview:lineView];
     
     [YTHttpTool netCheck];
+    
+    _menuView = [SkyAssociationMenuView new];
+    _menuView.delegate = self;
+    
 }
 
 - (void)setupNavBar{
@@ -86,19 +92,41 @@
 
     EHHouseDetailViewController *houseDetailViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
     [self.navigationController pushViewController:houseDetailViewController animated:YES];
-    
-    
-    
+
 }
+
 - (IBAction)regionClick:(id)sender {
-    CGPoint point = CGPointMake(_regionBtn.center.x,_regionBtn.center.y + 45);
-    XTPopView *popView = [[XTPopView alloc] initWithOrigin:point Width:80 Height:40 * 4 Type:XTTypeOfUpCenter Color:[UIColor whiteColor] superView:self.view];
-    popView.dataArray = @[@"三里屯",@"CBD",@"五道口", @"望京"];
-    popView.fontSize = 13;
-    popView.row_height = 40;
-    popView.titleTextColor = [UIColor blackColor];
-    popView.delegate = self;
-    [popView popView];
-    
+//    CGPoint point = CGPointMake(_regionBtn.center.x,_regionBtn.center.y + 45);
+//    XTPopView *popView = [[XTPopView alloc] initWithOrigin:point Width:80 Height:40 * 4 Type:XTTypeOfUpCenter Color:[UIColor whiteColor] superView:self.view];
+//    popView.dataArray = @[@"三里屯",@"CBD",@"五道口", @"望京"];
+//    popView.fontSize = 13;
+//    popView.row_height = 40;
+//    popView.titleTextColor = [UIColor blackColor];
+//    popView.delegate = self;
+//    [popView popView];
+    [_menuView showAsDrawDownView:sender];
 }
+
+- (NSInteger)assciationMenuView:(SkyAssociationMenuView*)asView countForClass:(NSInteger)idx {
+    NSLog(@"choose %ld", idx);
+    return 10;
+}
+
+- (NSString*)assciationMenuView:(SkyAssociationMenuView*)asView titleForClass_1:(NSInteger)idx_1 {
+    NSLog(@"title %ld", idx_1);
+    return [NSString stringWithFormat:@"title %ld", idx_1];
+}
+
+- (NSString*)assciationMenuView:(SkyAssociationMenuView*)asView titleForClass_1:(NSInteger)idx_1 class_2:(NSInteger)idx_2 {
+    NSLog(@"title %ld, %ld", idx_1, idx_2);
+    return [NSString stringWithFormat:@"title %ld, %ld", idx_1, idx_2];
+}
+
+- (BOOL)assciationMenuView:(SkyAssociationMenuView*)asView idxChooseInClass1:(NSInteger)idx_1 class2:(NSInteger)idx_2{
+    return NO;
+}
+
+
+
+
 @end
