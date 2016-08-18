@@ -66,7 +66,7 @@
 @property (nonatomic,weak) id<WSDropMenuViewDataSource> dataSource;
 @property (nonatomic,weak) id<WSDropMenuViewDelegate> delegate;
 
-
+- (void)clickAction;
 
 - (void)reloadLeftTableView;
 

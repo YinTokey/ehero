@@ -298,7 +298,7 @@
                     <navigationItem key="navigationItem" id="ago-fS-Pz1">
                         <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="aFf-G7-PGK">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gKY-ud-Gul" customClass="EHSiteButton">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gKY-ud-Gul">
                                 <rect key="frame" x="258" y="11" width="46" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="商圈" image="home_two">

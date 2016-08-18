@@ -107,12 +107,12 @@ static NSString *cellIdent = @"cellIdent";
 
 - (void)_setButton{
     self.leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.leftButton.frame = CGRectMake(0, 0, Main_Screen_Width/2, KTopButtonHeight);
+    self.leftButton.frame = CGRectMake(0, 0, Main_Screen_Width/2, 0.1);
    // [self.leftButton setTitle:LeftButtonTitle forState:UIControlStateNormal];
     [self.leftButton setTitleColor:[UIColor colorWithWhite:0.004 alpha:1.000] forState:UIControlStateNormal];
     self.leftButton.titleLabel.font = [UIFont systemFontOfSize:15];
     [self.leftButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-    self.leftButton.backgroundColor = [UIColor blueColor];
+    self.leftButton.backgroundColor = [UIColor clearColor];
     [self addSubview:self.leftButton];
     
     UIView *line = [[UIView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.leftButton.frame), 12, 1, 20)];
@@ -240,7 +240,7 @@ static NSString *cellIdent = @"cellIdent";
         _bgButton.backgroundColor = [UIColor clearColor];
         _bgButton.frame = CGRectMake(0, KTopButtonHeight, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - KTopButtonHeight);
         [_bgButton addTarget:self action:@selector(bgAction:) forControlEvents:UIControlEventTouchUpInside];
-    //    _bgButton.clipsToBounds = YES;
+        _bgButton.clipsToBounds = YES;
         
     }
     
@@ -348,6 +348,11 @@ static NSString *cellIdent = @"cellIdent";
     }];
 }
 
+- (void)clickAction{
+    [self buttonAction:self.leftButton];
+}
+
+
 - (void)bgAction:(UIButton *)sender{
 
     _isRightOpen = NO;
@@ -401,15 +406,17 @@ static NSString *cellIdent = @"cellIdent";
     cell.textLabel.font = [UIFont systemFontOfSize:16];
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.highlightedTextColor = [UIColor blackColor];
-//    [UIColor colorWithRed:233/255.0 green:233/255.0 blue:233/255.0 alpha:1.0];
+
     if (self.dataSource && [self.dataSource respondsToSelector:@selector(dropMenuView:titleWithIndexPath:)]) {
         
        cell.textLabel.text =  [self.dataSource dropMenuView:self titleWithIndexPath:twIndexPath];
+    //   cell.backgroundColor = RGB(241, 243, 245);
+       cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
+       cell.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
     }else{
         
-        cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+        //cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
     }
-    
     
     return cell;
     
