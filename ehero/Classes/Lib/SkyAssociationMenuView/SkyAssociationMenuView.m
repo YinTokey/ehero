@@ -66,7 +66,7 @@ NSString *const IDENTIFIER = @"CELL";
 {
     CGPoint point = [sender locationInView:self];
     UITableView *table1 = [tables objectAtIndex:0];
-    if (point.y > table1.frame.origin.y + table1.frame.size.height + 30) {
+    if (point.y > table1.frame.origin.y + table1.frame.size.height + 60) {
         [self dismiss];
     }
 }
@@ -98,6 +98,7 @@ NSString *const IDENTIFIER = @"CELL";
             f.size.width = w / showTableCount;
             t.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
             t.separatorColor = [UIColor lightGrayColor];
+            t.backgroundColor = [UIColor whiteColor];
         }
         f.origin.x = f.size.width * i;
         t.frame = f;

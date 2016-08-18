@@ -11,6 +11,10 @@
 #import "EHHouseDetailViewController.h"
 #import "EHHomeSearchBar.h"
 #import "SkyAssociationMenuView.h"
+#import "YTHttpTool.h"
+#import <MJExtension.h>
+#import "AFNetworking.h"
+#import "EHDistricts.h"
 
 
 @interface EHEverydayHouseViewController ()<UITextFieldDelegate,SkyAssociationMenuViewDelegate,UIGestureRecognizerDelegate>
@@ -18,6 +22,9 @@
 - (IBAction)regionClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *regionBarButtom;
 @property (strong, nonatomic) SkyAssociationMenuView *menuView;
+@property (nonatomic,strong) NSArray *districtsObjArray;
+
+
 @end
 
 @implementation EHEverydayHouseViewController
@@ -36,9 +43,11 @@
     [self.navigationController.navigationBar addSubview:lineView];
     
     [YTHttpTool netCheck];
-    
+    //设置二级菜单
     _menuView = [SkyAssociationMenuView new];
     _menuView.delegate = self;
+    
+    [self getRegionInfo];
 
 }
 
@@ -71,6 +80,23 @@
  
 }
 
+- (void)getRegionInfo{
+    [YTHttpTool get:getRegionsInfoUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
+     //数据处理
+      NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:nil] ;
+      NSDictionary *dic = [responseArray firstObject];
+      NSArray *districtsArray = [dic objectForKey:@"districts"];
+      _districtsObjArray = [EHDistricts mj_objectArrayWithKeyValuesArray:districtsArray];
+        
+        
+
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -101,25 +127,41 @@
 }
 
 
+
 #pragma mark - tableview的cell的数量
 - (NSInteger)assciationMenuView:(SkyAssociationMenuView*)asView countForClass:(NSInteger)idx {
-
     if (idx == 0) {
-        return 15;
-    }else{
-        return 10;
+        return _districtsObjArray.count;
     }
+    else{
+        
+        EHDistricts *district = self.districtsObjArray[idx];
+        
+        return district.regions.count ;
+    }
+//    if(idx == 0 && )
+//    {
+//        NSInteger regionsCount;
+//        for(EHDistricts *district in _districtsObjArray )
+//            regionsCount = district.regions.count;
+//
+//    }
 }
 
 #pragma mark - table1的内容
 - (NSString*)assciationMenuView:(SkyAssociationMenuView*)asView titleForClass_1:(NSInteger)idx_1 {
-    return @"菜单1";
+    EHDistricts *district = self.districtsObjArray[idx_1];
+    
+    return district.district;
    // return [NSString stringWithFormat:@"title %ld", idx_1];
 }
 
 #pragma mark - table2的内容
 - (NSString*)assciationMenuView:(SkyAssociationMenuView*)asView titleForClass_1:(NSInteger)idx_1 class_2:(NSInteger)idx_2 {
-    return @"菜单2";
+    EHDistricts *district = self.districtsObjArray[idx_1];
+    NSString *regionStr = district.regions[idx_2];
+    
+    return regionStr;
   //  return [NSString stringWithFormat:@"title %ld, %ld", idx_1, idx_2];
 }
 

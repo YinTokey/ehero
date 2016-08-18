@@ -60,6 +60,7 @@
 		049AA07F1D5034D600761E3F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049AA0791D5034D600761E3F /* Info.plist */; };
 		049AA0811D50350F00761E3F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 049AA0801D50350F00761E3F /* libsqlite3.0.tbd */; };
 		049AA0851D5037DD00761E3F /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA0841D5037DD00761E3F /* UIView+Toast.m */; };
+		049ADF181D64796100C54F4D /* EHDistricts.m in Sources */ = {isa = PBXBuildFile; fileRef = 049ADF171D64796100C54F4D /* EHDistricts.m */; };
 		04B0EFDB1D499DD600BE301B /* EHHouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFDA1D499DD600BE301B /* EHHouseDetailViewController.m */; };
 		04B0EFDF1D49A18100BE301B /* EHHouseDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFDD1D49A18100BE301B /* EHHouseDetailCell.m */; };
 		04B0EFE01D49A18100BE301B /* EHHouseDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B0EFDE1D49A18100BE301B /* EHHouseDetailCell.xib */; };
@@ -236,6 +237,8 @@
 		049AA0801D50350F00761E3F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		049AA0831D5037DD00761E3F /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		049AA0841D5037DD00761E3F /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		049ADF161D64796100C54F4D /* EHDistricts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHDistricts.h; path = ehero/Classes/Home/View/EHDistricts.h; sourceTree = SOURCE_ROOT; };
+		049ADF171D64796100C54F4D /* EHDistricts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHDistricts.m; path = ehero/Classes/Home/View/EHDistricts.m; sourceTree = SOURCE_ROOT; };
 		04B0EFD91D499DD600BE301B /* EHHouseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHouseDetailViewController.h; sourceTree = "<group>"; };
 		04B0EFDA1D499DD600BE301B /* EHHouseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHouseDetailViewController.m; sourceTree = "<group>"; };
 		04B0EFDC1D49A18100BE301B /* EHHouseDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHouseDetailCell.h; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailCell.h; sourceTree = SOURCE_ROOT; };
@@ -483,6 +486,8 @@
 		04657FC61D32466500914495 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				049ADF161D64796100C54F4D /* EHDistricts.h */,
+				049ADF171D64796100C54F4D /* EHDistricts.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1626,6 +1631,7 @@
 				04716BF21D34C70900E512EE /* EHNewsViewCell.m in Sources */,
 				04E7AF9E1D38EC860049E668 /* InnerView.m in Sources */,
 				04946B521D58307100B2C034 /* EHSendCodeButton.m in Sources */,
+				049ADF181D64796100C54F4D /* EHDistricts.m in Sources */,
 				0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */,
 				0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */,
 				04FD3AD31D3DDA23005B13B4 /* MBProgressHUD+YT.m in Sources */,

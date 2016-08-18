@@ -30,6 +30,7 @@
 #define callAgentUrlStr @"http://ehero.cc/agents/call.json"
 #define commentAgentUrlStr @"http://ehero.cc/api/v1/comments.json"
 #define anti_disturbCallUrlStr @"http://ehero.cc/api/v1/customers/call.json"
+#define getRegionsInfoUrlStr @"http://ehero.cc/api/v1/tips/regions"
 
 #define QQAppId @"1103194207"
 #define WeiboAppKey @"402180334"
