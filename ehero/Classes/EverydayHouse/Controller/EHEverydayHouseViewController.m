@@ -29,6 +29,8 @@
 {
     NSInteger showMenuFlag;
     WSDropMenuView *dropMenu;
+    EHHomeSearchBar *searchbar;
+    BOOL canClickRegionBtn ;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,22 +43,44 @@
     EHTipsNavBottomLine *lineView = [EHTipsNavBottomLine initNavBottomLineWithController:self];
     [self.navigationController.navigationBar addSubview:lineView];
     
+    [self addGesture];
+    self.tableView.bounces = NO;
+    
     [YTHttpTool netCheck];
-    //设置二级菜单
-//    _menuView = [SkyAssociationMenuView new];
-//    _menuView.delegate = self;
     
     [self getRegionInfo];
-
-    NSLog(@"x %f",self.regionBtn.frame.origin.x);
-    NSLog(@"y %f",self.regionBtn.frame.origin.y);
-    NSLog(@"h %f",self.regionBtn.frame.size.height);
-    NSLog(@"w %f",self.regionBtn.frame.size.width);
+    
+    
     
 }
 
+- (void)addGesture{
+    //添加手势相应，输textfield时，点击其他区域，键盘消失
+    UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
+    tapGr.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapGr];
+    
+}
+
+#pragma mark - 编辑完成，点击搜索时调用代理方法
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    [searchbar resignFirstResponder];
+    
+    return YES;
+}
+
+
+#pragma mark  -- UITapGestureRecognizer
+- (void)viewTapped:(UITapGestureRecognizer*)tapGr
+{
+    [searchbar resignFirstResponder];
+}
+
+
+
 - (void)setupNavBar{
-    EHHomeSearchBar *searchbar = [[EHHomeSearchBar alloc]initWithFrame:CGRectMake(20, 20, ScreenWidth, 30)];
+    searchbar = [[EHHomeSearchBar alloc]initWithFrame:CGRectMake(20, 20, ScreenWidth, 30)];
     searchbar.placeholder = @"搜索地区或商圈房源";
     searchbar.clipsToBounds = YES;
     searchbar.delegate = self;
@@ -91,14 +115,15 @@
 }
 
 - (void)getRegionInfo{
+    [LBProgressHUD showHUDto:self.view animated:NO];
     [YTHttpTool get:getRegionsInfoUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
      //数据处理
       NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:nil] ;
       NSDictionary *dic = [responseArray firstObject];
       NSArray *districtsArray = [dic objectForKey:@"districts"];
       _districtsObjArray = [EHDistricts mj_objectArrayWithKeyValuesArray:districtsArray];
-        NSLog(@"success get");
-        NSLog(@"第一级个数 %d",_districtsObjArray.count);
+        [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+        canClickRegionBtn = YES;
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
@@ -130,9 +155,9 @@
 }
 
 - (IBAction)regionClick:(id)sender {
-
-    [dropMenu clickAction];
-
+    if (canClickRegionBtn == YES) {
+         [dropMenu clickAction];
+    }
 }
 
 - (NSInteger)dropMenuView:(WSDropMenuView *)dropMenuView numberWithIndexPath:(WSIndexPath *)indexPath{
