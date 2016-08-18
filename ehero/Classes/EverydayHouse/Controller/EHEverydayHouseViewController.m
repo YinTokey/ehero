@@ -87,8 +87,6 @@
       NSDictionary *dic = [responseArray firstObject];
       NSArray *districtsArray = [dic objectForKey:@"districts"];
       _districtsObjArray = [EHDistricts mj_objectArrayWithKeyValuesArray:districtsArray];
-        
-        
 
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
@@ -126,26 +124,18 @@
 
 }
 
-
-
 #pragma mark - tableview的cell的数量
-- (NSInteger)assciationMenuView:(SkyAssociationMenuView*)asView countForClass:(NSInteger)idx {
+- (NSInteger)assciationMenuView:(SkyAssociationMenuView*)asView countForClass:(NSInteger)idx numberForClass_1:(NSInteger)idx_1 {
+    //表1的行数
     if (idx == 0) {
         return _districtsObjArray.count;
     }
+    //表2的行数
     else{
-        
-        EHDistricts *district = self.districtsObjArray[idx];
-        
+        EHDistricts *district = self.districtsObjArray[idx_1];
         return district.regions.count ;
     }
-//    if(idx == 0 && )
-//    {
-//        NSInteger regionsCount;
-//        for(EHDistricts *district in _districtsObjArray )
-//            regionsCount = district.regions.count;
-//
-//    }
+
 }
 
 #pragma mark - table1的内容
@@ -159,9 +149,9 @@
 #pragma mark - table2的内容
 - (NSString*)assciationMenuView:(SkyAssociationMenuView*)asView titleForClass_1:(NSInteger)idx_1 class_2:(NSInteger)idx_2 {
     EHDistricts *district = self.districtsObjArray[idx_1];
-    NSString *regionStr = district.regions[idx_2];
-    
-    return regionStr;
+//    NSString *regionStr = district.regions[idx_2];
+//    return regionStr;
+    return @"菜单2";
   //  return [NSString stringWithFormat:@"title %ld, %ld", idx_1, idx_2];
 }
 

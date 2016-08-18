@@ -14,6 +14,8 @@ NSString *const IDENTIFIER = @"CELL";
     NSArray *tables;
     UIView *bgView;
     CGFloat cancelAreaY;
+    NSInteger globalIdx_1,globalIdx_2;
+      NSIndexPath __block *indexPathSel;
 }
 @end
 
@@ -125,6 +127,8 @@ NSString *const IDENTIFIER = @"CELL";
         if (idx == 0) {
             if([self.delegate respondsToSelector:@selector(menuDidSelectedAtIndex1:idxInClass1:)]) {
                 [self.delegate menuDidSelectedAtIndex1:self idxInClass1:idx];
+                indexPathSel = [t indexPathForSelectedRow];
+                
             }
         //选择菜单2
         }else{
@@ -134,6 +138,21 @@ NSString *const IDENTIFIER = @"CELL";
         }
     }];
 }
+
+- (void)saveSelTable1{
+    [tables enumerateObjectsUsingBlock:^(UITableView *t, NSUInteger idx, BOOL *stop) {
+        sels[idx] = t.superview ? t.indexPathForSelectedRow.row : -1;
+        //选择菜单1
+        if (idx == 0) {
+            if([self.delegate respondsToSelector:@selector(menuDidSelectedAtIndex1:idxInClass1:)]) {
+                [self.delegate menuDidSelectedAtIndex1:self idxInClass1:idx];
+                indexPathSel = [t indexPathForSelectedRow];
+                
+            }
+        }
+    }];
+}
+
 
 /**
  *  加载保存的选中项
@@ -210,14 +229,27 @@ NSString *const IDENTIFIER = @"CELL";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSInteger __block count;
+  
     [tables enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if(obj == tableView) {
-            count = [_delegate assciationMenuView:self countForClass:idx];
-            *stop = YES;
+            //表1的行数
+            if (idx == 0) {
+                count = [_delegate assciationMenuView:self countForClass:idx numberForClass_1:0];
+   
+                *stop = YES;
+            //表2的行数
+            }else{
+                count = [_delegate assciationMenuView:self countForClass:idx numberForClass_1:indexPathSel.row];
+            
+                *stop = YES;
+            }
+            //*stop = YES;
         }
     }];
     return count;
 }
+
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 
 #pragma mark UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -227,24 +259,30 @@ NSString *const IDENTIFIER = @"CELL";
     if(tableView == t0){
         if([self.delegate respondsToSelector:@selector(assciationMenuView:idxChooseInClass1:)]) {
             isNexClass = [_delegate assciationMenuView:self idxChooseInClass1:indexPath.row];
+            globalIdx_1 = indexPath.row;
         }
         if(isNexClass) {
             [t1 reloadData];
             if(!t1.superview) {
                 [bgView addSubview:t1];
             }
-
+          //  [self saveSels];
+            [self saveSelTable1];
             [self adjustTableViews];
         }else{
             if(t1.superview) {
                 [t1 removeFromSuperview];
             }
-            [self saveSels];
+          //  [self saveSels];
+          //  [self saveSelTable1];
             [self dismiss];
+           
         }
     }else if(tableView == t1) {
         if([self.delegate respondsToSelector:@selector(assciationMenuView:idxChooseInClass1:class2:)]) {
             isNexClass = [_delegate assciationMenuView:self idxChooseInClass1:t0.indexPathForSelectedRow.row class2:indexPath.row];
+            globalIdx_2 = indexPath.row;
+            
         }
         if(isNexClass){
 

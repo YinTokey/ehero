@@ -19,10 +19,10 @@
  *
  *  @param asView 联想菜单
  *  @param idx    第几级
- *
+ *  @param idx_1  第一个表格的索引
  *  @return 第class级菜单的数据数量
  */
-- (NSInteger)assciationMenuView:(SkyAssociationMenuView*)asView countForClass:(NSInteger)idx;
+- (NSInteger)assciationMenuView:(SkyAssociationMenuView*)asView countForClass:(NSInteger)idx numberForClass_1:(NSInteger)idx_1;
 
 /**
  *  获取第一级菜单选项的title
@@ -44,7 +44,6 @@
  *  @return 标题
  */
 - (NSString*)assciationMenuView:(SkyAssociationMenuView*)asView titleForClass_1:(NSInteger)idx_1 class_2:(NSInteger)idx_2;
-
 
 @optional
 /**
