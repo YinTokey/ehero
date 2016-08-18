@@ -15,9 +15,9 @@
 #import <MJExtension.h>
 #import "AFNetworking.h"
 #import "EHDistricts.h"
+#import "WSDropMenuView.h"
 
-
-@interface EHEverydayHouseViewController ()<UITextFieldDelegate,SkyAssociationMenuViewDelegate,UIGestureRecognizerDelegate>
+@interface EHEverydayHouseViewController ()<UITextFieldDelegate,SkyAssociationMenuViewDelegate,UIGestureRecognizerDelegate,WSDropMenuViewDataSource,WSDropMenuViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *regionBtn;
 - (IBAction)regionClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *regionBarButtom;
@@ -44,11 +44,16 @@
     
     [YTHttpTool netCheck];
     //设置二级菜单
-    _menuView = [SkyAssociationMenuView new];
-    _menuView.delegate = self;
+//    _menuView = [SkyAssociationMenuView new];
+//    _menuView.delegate = self;
     
     [self getRegionInfo];
 
+    WSDropMenuView *dropMenu = [[WSDropMenuView alloc] initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, 40)];
+    dropMenu.dataSource = self;
+    dropMenu.delegate  =self;
+    [self.view addSubview:dropMenu];
+    
 }
 
 - (void)setupNavBar{
@@ -87,7 +92,8 @@
       NSDictionary *dic = [responseArray firstObject];
       NSArray *districtsArray = [dic objectForKey:@"districts"];
       _districtsObjArray = [EHDistricts mj_objectArrayWithKeyValuesArray:districtsArray];
-
+        NSLog(@"success get");
+        NSLog(@"第一级个数 %d",_districtsObjArray.count);
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
@@ -120,51 +126,99 @@
 
 - (IBAction)regionClick:(id)sender {
 
-    [_menuView showAsDrawDownView:sender];
-
+   // [_menuView showAsDrawDownView:sender];
+    NSLog(@"第二次弹窗");
 }
 
-#pragma mark - tableview的cell的数量
-- (NSInteger)assciationMenuView:(SkyAssociationMenuView*)asView countForClass:(NSInteger)idx numberForClass_1:(NSInteger)idx_1 {
-    //表1的行数
-    if (idx == 0) {
-        return _districtsObjArray.count;
-    }
-    //表2的行数
-    else{
-        EHDistricts *district = self.districtsObjArray[idx_1];
-        return district.regions.count ;
-    }
-
-}
-
-#pragma mark - table1的内容
-- (NSString*)assciationMenuView:(SkyAssociationMenuView*)asView titleForClass_1:(NSInteger)idx_1 {
-    EHDistricts *district = self.districtsObjArray[idx_1];
+- (NSInteger)dropMenuView:(WSDropMenuView *)dropMenuView numberWithIndexPath:(WSIndexPath *)indexPath{
     
-    return district.district;
-   // return [NSString stringWithFormat:@"title %ld", idx_1];
+    //WSIndexPath 类里面有注释
+    
+    if (indexPath.column == 0 && indexPath.row == WSNoFound) {
+        return 15;
+      //  return self.districtsObjArray.count;
+    }
+    if (indexPath.column == 0 && indexPath.row != WSNoFound && indexPath.item == WSNoFound) {
+        EHDistricts *district = self.districtsObjArray[indexPath.row];
+        return district.regions.count ;
+      
+    }
+    
+    return 0;
 }
 
-#pragma mark - table2的内容
-- (NSString*)assciationMenuView:(SkyAssociationMenuView*)asView titleForClass_1:(NSInteger)idx_1 class_2:(NSInteger)idx_2 {
-    EHDistricts *district = self.districtsObjArray[idx_1];
-//    NSString *regionStr = district.regions[idx_2];
-//    return regionStr;
-    return @"菜单2";
-  //  return [NSString stringWithFormat:@"title %ld, %ld", idx_1, idx_2];
+- (NSString *)dropMenuView:(WSDropMenuView *)dropMenuView titleWithIndexPath:(WSIndexPath *)indexPath{
+    //左边 第一级
+    if (indexPath.column == 0 && indexPath.row != WSNoFound && indexPath.item == WSNoFound) {
+         EHDistricts *district = self.districtsObjArray[indexPath.row];
+         return district.district;
+    }
+    
+    if (indexPath.column == 0 && indexPath.row != WSNoFound && indexPath.item != WSNoFound && indexPath.rank == WSNoFound) {
+            EHDistricts *district = self.districtsObjArray[indexPath.row];
+            NSString *regionStr = district.regions[indexPath.item];
+            return regionStr;
+    }
+    return @"";
 }
 
-- (BOOL)assciationMenuView:(SkyAssociationMenuView*)asView idxChooseInClass1:(NSInteger)idx_1 class2:(NSInteger)idx_2{
-    return NO;
+#pragma mark - WSDropMenuView Delegate -
+
+- (void)dropMenuView:(WSDropMenuView *)dropMenuView didSelectWithIndexPath:(WSIndexPath *)indexPath{
+    NSLog(@"ggg");
+//    if (indexPath.column == 0 && indexPath.row != WSNoFound && indexPath.item != WSNoFound && indexPath.rank == WSNoFound) {
+//        EHDistricts *district = self.districtsObjArray[indexPath.row];
+//        NSString *regionStr = district.regions[indexPath.item];
+//        NSLog(@"sel %@",regionStr);
+//        
+//    }
+//    EHDistricts *district = self.districtsObjArray[indexPath.row];
+//    NSString *regionStr = district.regions[indexPath.item];
+//    NSLog(@"sel %@",regionStr);
 }
 
-- (void)menuDidSelectedAtIndex1:(SkyAssociationMenuView *)asView idxInClass1:(NSInteger)idx_1{
-    NSLog(@"在控制器选择第一项");
-}
 
-- (void)menuDidSelectedAtIndex2:(SkyAssociationMenuView *)asView idxInClass2:(NSInteger)idx_2{
-    NSLog(@"在控制器选择第二项");
-}
+//#pragma mark - tableview的cell的数量
+//- (NSInteger)assciationMenuView:(SkyAssociationMenuView*)asView countForClass:(NSInteger)idx numberForClass_1:(NSInteger)idx_1 {
+//    //表1的行数
+//    if (idx == 0) {
+//        return _districtsObjArray.count;
+//    }
+//    //表2的行数
+//    else{
+//        EHDistricts *district = self.districtsObjArray[idx_1];
+//        return district.regions.count ;
+//    }
+//
+//}
+//
+//#pragma mark - table1的内容
+//- (NSString*)assciationMenuView:(SkyAssociationMenuView*)asView titleForClass_1:(NSInteger)idx_1 {
+//    EHDistricts *district = self.districtsObjArray[idx_1];
+//    
+//    return district.district;
+//   // return [NSString stringWithFormat:@"title %ld", idx_1];
+//}
+//
+//#pragma mark - table2的内容
+//- (NSString*)assciationMenuView:(SkyAssociationMenuView*)asView titleForClass_1:(NSInteger)idx_1 class_2:(NSInteger)idx_2 {
+//    EHDistricts *district = self.districtsObjArray[idx_1];
+////    NSString *regionStr = district.regions[idx_2];
+////    return regionStr;
+//    return @"菜单2";
+//  //  return [NSString stringWithFormat:@"title %ld, %ld", idx_1, idx_2];
+//}
+//
+//- (BOOL)assciationMenuView:(SkyAssociationMenuView*)asView idxChooseInClass1:(NSInteger)idx_1 class2:(NSInteger)idx_2{
+//    return NO;
+//}
+//
+//- (void)menuDidSelectedAtIndex1:(SkyAssociationMenuView *)asView idxInClass1:(NSInteger)idx_1{
+//    NSLog(@"在控制器选择第一项");
+//}
+//
+//- (void)menuDidSelectedAtIndex2:(SkyAssociationMenuView *)asView idxInClass2:(NSInteger)idx_2{
+//    NSLog(@"在控制器选择第二项");
+//}
 
 @end

@@ -147,7 +147,6 @@ NSString *const IDENTIFIER = @"CELL";
             if([self.delegate respondsToSelector:@selector(menuDidSelectedAtIndex1:idxInClass1:)]) {
                 [self.delegate menuDidSelectedAtIndex1:self idxInClass1:idx];
                 indexPathSel = [t indexPathForSelectedRow];
-                
             }
         }
     }];
@@ -273,8 +272,6 @@ NSString *const IDENTIFIER = @"CELL";
             if(t1.superview) {
                 [t1 removeFromSuperview];
             }
-          //  [self saveSels];
-          //  [self saveSelTable1];
             [self dismiss];
            
         }

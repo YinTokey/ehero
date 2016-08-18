@@ -77,6 +77,7 @@
 		04B87B5E1D5D72F000D0C3A6 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04B87B5D1D5D72F000D0C3A6 /* MBProgressHUD.bundle */; };
 		04B87B611D5D8FA700D0C3A6 /* EHCookieOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B87B601D5D8FA700D0C3A6 /* EHCookieOperation.m */; };
 		04BB3E911D4476C5002CBF27 /* EHSiteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB3E901D4476C5002CBF27 /* EHSiteButton.m */; };
+		04BBBDAC1D65937600577DAB /* WSDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBBDAB1D65937600577DAB /* WSDropMenuView.m */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
 		04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */; };
@@ -266,6 +267,8 @@
 		04B87B601D5D8FA700D0C3A6 /* EHCookieOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHCookieOperation.m; path = ../Lib/EHCookieOperation.m; sourceTree = "<group>"; };
 		04BB3E8F1D4476C5002CBF27 /* EHSiteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSiteButton.h; sourceTree = "<group>"; };
 		04BB3E901D4476C5002CBF27 /* EHSiteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSiteButton.m; sourceTree = "<group>"; };
+		04BBBDAA1D65937600577DAB /* WSDropMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSDropMenuView.h; sourceTree = "<group>"; };
+		04BBBDAB1D65937600577DAB /* WSDropMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDropMenuView.m; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04C3A8D61D31FDD9003203C0 /* PDFImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFImage.framework; path = ../../../../../Downloads/PDFImage.framework; sourceTree = "<group>"; };
 		04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayhouseCell.h; sourceTree = "<group>"; };
@@ -371,6 +374,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				04BBBDA91D65937600577DAB /* WSDropMenuView */,
 				04C605531D63148C00039217 /* SkyAssociationMenuView */,
 				04C8FDE41D54A0F40081CE73 /* MZTimerLabel */,
 				046A7C591D503E9600652296 /* DBModel */,
@@ -790,6 +794,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04BBBDA91D65937600577DAB /* WSDropMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				04BBBDAA1D65937600577DAB /* WSDropMenuView.h */,
+				04BBBDAB1D65937600577DAB /* WSDropMenuView.m */,
+			);
+			path = WSDropMenuView;
 			sourceTree = "<group>";
 		};
 		04C3A8E51D322A66003203C0 /* AgentInfo */ = {
@@ -1614,6 +1627,7 @@
 				047EF3871D39FE3D00E587BA /* EHAsiaViewController.m in Sources */,
 				04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */,
 				04B0EFE91D49B79700BE301B /* EHHouseDetailCallCell.m in Sources */,
+				04BBBDAC1D65937600577DAB /* WSDropMenuView.m in Sources */,
 				04B857281D5731D100BEA6CB /* EHSkimedAgentsViewController.m in Sources */,
 				04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */,
 				0463EB0B1D5705B100C75B36 /* EHRegularExpression.m in Sources */,
