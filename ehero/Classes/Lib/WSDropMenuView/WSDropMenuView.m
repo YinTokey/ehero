@@ -130,7 +130,7 @@ static NSString *cellIdent = @"cellIdent";
     
     UIView *bottomShadow = [[UIView alloc]
                             initWithFrame:CGRectMake(0, self.frame.size.height - 0.5, Main_Screen_Width, 0.5)];
-    bottomShadow.backgroundColor = [UIColor colorWithRed:0.468 green:0.485 blue:0.465 alpha:1.000];
+    bottomShadow.backgroundColor = [UIColor colorWithRed:0.468 green:0.485 blue:0.465 alpha:0.800];
     [self addSubview:bottomShadow];
 }
 
@@ -168,6 +168,7 @@ static NSString *cellIdent = @"cellIdent";
         [_leftTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdent];
         _leftTableView.frame = CGRectMake(0, 0, self.bgButton.frame.size.width, 0);
         _leftTableView.tableFooterView = [[UIView alloc]init];
+        _leftTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     
     return _leftTableView;
@@ -182,7 +183,7 @@ static NSString *cellIdent = @"cellIdent";
         _leftTableView_1.dataSource = self;
         [_leftTableView_1 registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdent];
         _leftTableView_1.frame = CGRectMake( self.bgButton.frame.size.width/2.0, 0 , self.bgButton.frame.size.width/2.0, 0);
-        _leftTableView_1.backgroundColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1.0];
+        _leftTableView_1.backgroundColor = RGB(241, 243, 245);
         _leftTableView_1.tableFooterView = [[UIView alloc]init];
 
         
@@ -237,6 +238,7 @@ static NSString *cellIdent = @"cellIdent";
     if (!_bgButton) {
         
         _bgButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _bgButton.backgroundColor = [UIColor colorWithRed:.0f green:.0f blue:.0f alpha:.3f];
         _bgButton.backgroundColor = [UIColor clearColor];
         _bgButton.frame = CGRectMake(0, KTopButtonHeight, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - KTopButtonHeight);
         [_bgButton addTarget:self action:@selector(bgAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -401,7 +403,7 @@ static NSString *cellIdent = @"cellIdent";
     WSIndexPath *twIndexPath = [self _getTwIndexPathForCellWithTableView:tableView indexPath:indexPath];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdent];
     cell.selectedBackgroundView = [[UIView alloc] init];
-    cell.selectedBackgroundView.backgroundColor =  [UIColor colorWithRed:233/255.0 green:233/255.0 blue:233/255.0 alpha:1.0];
+    cell.selectedBackgroundView.backgroundColor =  RGB(241, 243, 245);
     cell.textLabel.textColor = [UIColor colorWithWhite:0.004 alpha:1.000];
     cell.textLabel.font = [UIFont systemFontOfSize:16];
     cell.backgroundColor = [UIColor clearColor];
@@ -410,12 +412,12 @@ static NSString *cellIdent = @"cellIdent";
     if (self.dataSource && [self.dataSource respondsToSelector:@selector(dropMenuView:titleWithIndexPath:)]) {
         
        cell.textLabel.text =  [self.dataSource dropMenuView:self titleWithIndexPath:twIndexPath];
-    //   cell.backgroundColor = RGB(241, 243, 245);
+      
        cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
-       cell.selectedBackgroundView.backgroundColor =  [UIColor colorWithRed:233/255.0 green:233/255.0 blue:233/255.0 alpha:1.0];
-    //   cell.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
+       cell.selectedBackgroundView.backgroundColor =  RGB(241, 243, 245);
+        //   cell.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
     }else{
-        
+         cell.backgroundColor = RGB(241, 243, 245);
         //cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
     }
     

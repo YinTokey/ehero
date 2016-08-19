@@ -145,7 +145,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-   // EHEverydayhouseCell *cell = [EHEverydayhouseCell everydayhouseCellWithTableView:tableView];
+  //  EHEverydayhouseCell *cell = [EHEverydayhouseCell everydayhouseCellWithTableView:tableView];
     EHHouseSourcesCell *cell = [EHHouseSourcesCell houseSourcesCellWithTableView:tableView];
     return cell;
 }
@@ -173,7 +173,7 @@
     }
     if (indexPath.column == 0 && indexPath.row != WSNoFound && indexPath.item == WSNoFound) {
         EHDistricts *district = self.districtsObjArray[indexPath.row];
-        return district.regions.count ;
+        return district.regions.count;
       
     }
     
@@ -201,6 +201,9 @@
 
     EHDistricts *district = self.districtsObjArray[indexPath.row];
     NSString *regionStr = district.regions[indexPath.item];
+    
+    searchbar.text = regionStr;
+    
     NSLog(@"sel %@",regionStr);
 }
 
