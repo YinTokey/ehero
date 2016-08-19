@@ -33,7 +33,6 @@
 - (IBAction)collectBtnClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *collectBtn;
 
-//@property (strong, nonatomic)
 @end
 
 @implementation EHAgentInfoController{
@@ -91,14 +90,14 @@
     return 2;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
         [cell setResultCell:self.agentInfo];
-        //cell.userInteractionEnabled = NO;
         cell.isdrawRect = NO;
         cell.delegate = self;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
         return cell;
     }else if(indexPath.section == 1){
         EHAgentInfoCommunityCell *cell = [EHAgentInfoCommunityCell AgentInfoCommunityCellWithTableView:tableView];

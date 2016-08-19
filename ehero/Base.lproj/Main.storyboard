@@ -453,7 +453,7 @@
                                     <action selector="toWechatClick:" destination="uAd-9A-BUA" eventType="touchUpInside" id="cH7-Oh-Fki"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.点击下方按钮后，跳转到微信。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B5I-wP-PEf">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.点击下方按钮后，跳转到微信。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B5I-wP-PEf">
                                 <rect key="frame" x="35" y="357" width="250" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="VHY-Jx-2ub"/>
@@ -462,7 +462,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2.点击微信右上角“＋”，选“扫一扫”。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5x-AW-Z7q">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2.点击微信右上角“＋”，选“扫一扫”。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5x-AW-Z7q">
                                 <rect key="frame" x="35" y="384" width="250" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ps5-5l-NSp"/>
@@ -471,7 +471,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3.点击右上角“相册”，选择最新图片。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1b-eI-b4c">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3.点击右上角“相册”，选择最新图片。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1b-eI-b4c">
                                 <rect key="frame" x="35" y="408" width="250" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="DrU-rz-HC4"/>
