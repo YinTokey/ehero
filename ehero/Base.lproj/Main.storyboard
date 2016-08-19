@@ -137,6 +137,7 @@
                         <outlet property="profileBarButtonItem" destination="e11-7Y-XBA" id="Y2n-W1-rRm"/>
                         <outlet property="siteBarButtonItem" destination="Jxl-ic-awF" id="NbO-ZG-II3"/>
                         <outlet property="siteBtn" destination="Y9z-Uv-fXY" id="ERk-bh-xS3"/>
+                        <outlet property="styleBarButtonItem" destination="Lo6-dx-J6A" id="V35-Zf-TfH"/>
                         <outlet property="styleBtn" destination="Lhh-UY-FAQ" id="PBo-Fj-asW"/>
                     </connections>
                 </tableViewController>
@@ -461,7 +462,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2.点击微信右上角“＋”，选择“扫一扫”。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5x-AW-Z7q">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2.点击微信右上角“＋”，选“扫一扫”。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5x-AW-Z7q">
                                 <rect key="frame" x="35" y="384" width="250" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ps5-5l-NSp"/>

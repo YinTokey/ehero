@@ -10,4 +10,6 @@
 
 @interface EHHouseSourcesCell : UITableViewCell
 
++ (instancetype)houseSourcesCellWithTableView:(UITableView *)tableView;
+
 @end

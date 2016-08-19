@@ -15,6 +15,7 @@
 #import "AFNetworking.h"
 #import "EHDistricts.h"
 #import "WSDropMenuView.h"
+#import "EHHouseSourcesCell.h"
 
 @interface EHEverydayHouseViewController ()<UITextFieldDelegate,UIGestureRecognizerDelegate,WSDropMenuViewDataSource,WSDropMenuViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *regionBtn;
@@ -135,24 +136,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 94;
+    //return 94;
+    return 288;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    EHEverydayhouseCell *cell = [EHEverydayhouseCell everydayhouseCellWithTableView:tableView];
+   // EHEverydayhouseCell *cell = [EHEverydayhouseCell everydayhouseCellWithTableView:tableView];
+    EHHouseSourcesCell *cell = [EHHouseSourcesCell houseSourcesCellWithTableView:tableView];
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
-    EHHouseDetailViewController *houseDetailViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
-    [self.navigationController pushViewController:houseDetailViewController animated:YES];
-
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//
+//    EHHouseDetailViewController *houseDetailViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
+//    [self.navigationController pushViewController:houseDetailViewController animated:YES];
+//
+//}
 
 - (IBAction)regionClick:(id)sender {
     if (canClickRegionBtn == YES) {

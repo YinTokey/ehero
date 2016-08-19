@@ -34,6 +34,7 @@
     
 }
 - (IBAction)styleSel:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *styleBarButtonItem;
 
 @property (weak, nonatomic) IBOutlet UIButton *styleBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *siteBarButtonItem;
@@ -96,6 +97,8 @@
     negativeSpacer.width = - 10 ;//这个数值可以根据情况自由变化
     self.navigationItem.leftBarButtonItems = @[negativeSpacer,_profileBarButtonItem,_siteBarButtonItem];
 
+    self.navigationItem.rightBarButtonItems = @[negativeSpacer,_styleBarButtonItem];
+    
 }
 
 #pragma mark - Table view data source
@@ -154,7 +157,7 @@
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseId];
         }
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.textLabel.font = [UIFont systemFontOfSize:13.0];
+        cell.textLabel.font = [UIFont systemFontOfSize:14.0];
         cell.textLabel.text = @"评价你的经纪人";
         return cell;
     //第三行，显示一个经纪人

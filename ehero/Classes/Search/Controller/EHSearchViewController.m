@@ -46,7 +46,6 @@
     
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
 
-
 }
 
 - (void)setNavBar{
@@ -108,7 +107,6 @@
 
 }
 
-
 #pragma mark - 编辑完成，点击搜索时调用代理方法
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     
@@ -125,7 +123,6 @@
 {
     [self.mysearchBar resignFirstResponder];
 }
-
 
 - (void)setupSearchBar{
 
@@ -176,11 +173,10 @@
     
     if (_searchResultArr.count == 0) {
         [MBProgressHUD showError:@"没有找到经纪人"];
-       // [self.view makeToast:@"没有找到经纪人" duration:1.0 position:CSToastPositionCenter];
     }else{
         [MBProgressHUD showSuccess:@"为您找到经纪人"];
-       // [self.view makeToast:@"为您找到经纪人" duration:1.0 position:CSToastPositionCenter];
     }
+    
 }
 
 - (void)callBtnClick:(UITableViewCell *)cell{
