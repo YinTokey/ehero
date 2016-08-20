@@ -7,9 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WJTextView.h"
+@class EHHouseSourcesCell;
+@protocol houseSourcesDelegate <NSObject>
+
+- (void)extendBtnClick:(EHHouseSourcesCell *)cell;
+
+@end
+
+
 
 @interface EHHouseSourcesCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *line;
 + (instancetype)houseSourcesCellWithTableView:(UITableView *)tableView;
+@property (weak, nonatomic) IBOutlet WJTextView *textView;
+
+@property (nonatomic,weak)id<houseSourcesDelegate> delegate;
+
+- (void)setClickEvent;
 
 @end

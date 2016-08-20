@@ -65,7 +65,27 @@
     modal = [STModal modal];
     modal.hideWhenTouchOutside = YES;
     
+    [self setupNavBar];
 }
+
+- (void)setupNavBar{
+//自定义返回按钮
+    UIButton * leftBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    leftBtn.frame = CGRectMake(0, 0, 14, 23.6);
+    [leftBtn setImage:[UIImage imageNamed:@"Back Arrow"] forState:UIControlStateNormal];
+    [leftBtn addTarget:self action:@selector(NavPop) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    self.navigationItem.leftBarButtonItem = backItem;
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.rightBarButtonItem = nil;
+}
+
+- (void)NavPop{
+    [[self navigationController]popViewControllerAnimated:YES];
+    
+}
+
+
 # pragma mark -初始状态，控件隐藏
 - (void)setInitView{
     
@@ -108,9 +128,7 @@
 }
 
 
-
 - (IBAction)commitBtnClick:(id)sender {
-
     
     if ([EHCookieOperation setCookie]) {
         if (commentKind.length < 2) {
@@ -122,8 +140,7 @@
     }else{
         [self popVerifyView];
     }
-    
-    
+
 }
 
 - (void)popVerifyView{

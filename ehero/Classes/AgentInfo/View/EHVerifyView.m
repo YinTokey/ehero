@@ -116,10 +116,7 @@
     
         NSDictionary *params = @{@"mobile":self.myPhoneNumber.text};
         [YTHttpTool post:sendCodeUrlStr params:params success:^(NSURLSessionDataTask *task,id responseObj) {
-            NSLog(@"success %@",responseObj);
-            //取得验证吗时，就把用户电话存起来
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            [defaults setObject:self.myPhoneNumber.text forKey:@"userPhoneNumber"];
+            NSLog(@"请求成功，查看手机验证码 %@",responseObj);
             
         } failure:^(NSError *error) {
             NSLog(@"faild,%@",error);
@@ -138,6 +135,11 @@
         NSLog(@"success responString call %@",responStr);
         [MBProgressHUD hideHUD];
         [MBProgressHUD showSuccess:@"验证成功"];
+        
+        //取得验证吗时，就把用户电话存起来
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:self.myPhoneNumber.text forKey:@"userPhoneNumber"];
+        
         //验证成功，把cookie和时间保存起来
         [EHCookieOperation saveCookieWithDate:[NSDate date]];
         

@@ -17,7 +17,7 @@
 #import "WSDropMenuView.h"
 #import "EHHouseSourcesCell.h"
 
-@interface EHEverydayHouseViewController ()<UITextFieldDelegate,UIGestureRecognizerDelegate,WSDropMenuViewDataSource,WSDropMenuViewDelegate>
+@interface EHEverydayHouseViewController ()<UITextFieldDelegate,UIGestureRecognizerDelegate,UITextViewDelegate, WSDropMenuViewDataSource,WSDropMenuViewDelegate,houseSourcesDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *regionBtn;
 - (IBAction)regionClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *regionBarButtom;
@@ -32,6 +32,8 @@
     WSDropMenuView *dropMenu;
     EHHomeSearchBar *searchbar;
     BOOL canClickRegionBtn ;
+    NSInteger hideCellsFlag;
+    BOOL extendCellFlag;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -136,17 +138,32 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 1;
+    
+
+    return 3;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    //return 94;
-    return 288;
+
+        EHHouseSourcesCell *cell = [EHHouseSourcesCell houseSourcesCellWithTableView:tableView];
+    
+        
+        return  cell.frame.size.height + cell.textView.frame.size.height;
+        
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-  //  EHEverydayhouseCell *cell = [EHEverydayhouseCell everydayhouseCellWithTableView:tableView];
+
     EHHouseSourcesCell *cell = [EHHouseSourcesCell houseSourcesCellWithTableView:tableView];
+    
+    cell.textView.delegate = self;
+    cell.delegate = self;
+    [cell setClickEvent];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//    cell.textView.alwaysBounceVertical = YES;
+//    cell.textView.isAutoHeight = YES;
+    
     return cell;
 }
 
@@ -159,7 +176,8 @@
 
 - (IBAction)regionClick:(id)sender {
     if (canClickRegionBtn == YES) {
-         [dropMenu clickAction];
+        [dropMenu clickAction];
+        
     }
 }
 
@@ -207,5 +225,12 @@
     NSLog(@"sel %@",regionStr);
 }
 
+- (void)extendBtnClick:(EHHouseSourcesCell *)cell{
+    cell.textView.alwaysBounceVertical = YES;
+    cell.textView.isAutoHeight = YES;
+//
+//    NSLog(@"jop %f",cell.textView.frame.size.height);
+    extendCellFlag = YES;
+}
 
 @end

@@ -105,9 +105,9 @@
                             </barButtonItem>
                             <barButtonItem style="plain" id="Jxl-ic-awF">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Y9z-Uv-fXY" customClass="EHSiteButton">
-                                    <rect key="frame" x="51" y="11" width="45" height="22"/>
+                                    <rect key="frame" x="51" y="11" width="38" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <state key="normal" title="北京" image="home_two">
                                         <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
@@ -119,9 +119,9 @@
                         </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" width="3" style="plain" id="Lo6-dx-J6A">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lhh-UY-FAQ">
-                                <rect key="frame" x="259" y="12" width="45" height="20"/>
+                                <rect key="frame" x="266" y="12" width="38" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="买卖" image="home_two">
                                     <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -300,8 +300,9 @@
                         <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="aFf-G7-PGK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gKY-ud-Gul">
-                                <rect key="frame" x="258" y="11" width="46" height="22"/>
+                                <rect key="frame" x="266" y="11" width="38" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="商圈" image="home_two">
                                     <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>

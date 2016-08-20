@@ -37,7 +37,7 @@
                             <constraint firstAttribute="width" constant="61" id="N0r-UI-U5Y"/>
                             <constraint firstAttribute="height" constant="19" id="ziv-M6-T85"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>

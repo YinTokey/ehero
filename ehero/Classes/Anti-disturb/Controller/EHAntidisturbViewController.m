@@ -95,10 +95,7 @@
 - (void)cookieCheck{
     //如果有cookie，读取cookie
     if ([EHCookieOperation setCookie]) {
-       // [MBProgressHUD showMessage:@"正在接通电话中..."];
-        
         [self callAction];
-        
     }else{
         [self popVerifyView];
     }
