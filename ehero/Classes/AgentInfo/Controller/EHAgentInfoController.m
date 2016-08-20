@@ -37,7 +37,7 @@
 
 @implementation EHAgentInfoController{
     UIImage *thumbImage;
-    NSInteger selectedFlag;
+    BOOL selectedFlag;
 }
 
 - (void)viewDidLoad {
@@ -57,6 +57,7 @@
 
     [self skimedAndSave];
 
+    [self isCollected];
 }
 
 
@@ -70,10 +71,6 @@
         return 115;
     }else{
         return 125;
-//        EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
-//        cell.translatesAutoresizingMaskIntoConstraints = NO;
-//        CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-//        return 1  + size.height;
     }
     
 }
@@ -240,15 +237,16 @@
 }
 # pragma mark - 收藏点击
 - (IBAction)collectBtnClick:(id)sender {
-    selectedFlag ++;
-    if (selectedFlag %2 == 1) {
+    selectedFlag = !selectedFlag;
+    if (selectedFlag) {
         self.collectBtn.selected = YES;
-        [MBProgressHUD showSuccess:@"收藏成功"];
+        [MBProgressHUD showSuccess:@"收藏成功" toView:self.view];
         [self collect];
         
     }else{
         self.collectBtn.selected = NO;
-        [MBProgressHUD showSuccess:@"取消收藏"];
+        [self.agentInfo deleteObject];
+        [MBProgressHUD showSuccess:@"取消收藏" toView:self.view];
     }
 
 }
@@ -256,6 +254,28 @@
 - (void)collect{
     [self.agentInfo save];
 }
+
+- (void)cancelCollect{
+    [self.agentInfo deleteObject];
+
+}
+#pragma mark - 判断是否收藏已经收藏
+- (void)isCollected{
+    //EHAgentInfo *agentInfo
+    NSString *sqlForName = [NSString stringWithFormat:@" WHERE name = '%@' ",self.agentInfo.name];
+    EHAgentInfo *collectedAgentExisted = [EHAgentInfo findFirstByCriteria:sqlForName];
+    
+    if (collectedAgentExisted == nil) {
+        self.collectBtn.selected = NO;
+    }else{
+        self.collectBtn.selected = YES;
+    }
+    
+}
+
+
+
+
 #pragma mark - 浏览过的经纪人，不重复地存到数据库
 - (void)skimedAndSave{
     
