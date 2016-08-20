@@ -16,6 +16,8 @@
 #import "EHDistricts.h"
 #import "WSDropMenuView.h"
 #import "EHHouseSourcesCell.h"
+#import "SDAutoLayout.h"
+#import "EHHouseSourcesMessage.h"
 
 @interface EHEverydayHouseViewController ()<UITextFieldDelegate,UIGestureRecognizerDelegate,UITextViewDelegate, WSDropMenuViewDataSource,WSDropMenuViewDelegate,houseSourcesDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *regionBtn;
@@ -34,6 +36,7 @@
     BOOL canClickRegionBtn ;
     NSInteger hideCellsFlag;
     BOOL extendCellFlag;
+    NSIndexPath *selIndexPath;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -138,19 +141,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    
 
-    return 3;
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-
-        EHHouseSourcesCell *cell = [EHHouseSourcesCell houseSourcesCellWithTableView:tableView];
-    
-        
-        return  cell.frame.size.height + cell.textView.frame.size.height;
-        
-
+    if (extendCellFlag) {
+      return 360;
+    }
+    return 300;
+  
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -161,9 +161,12 @@
     cell.delegate = self;
     [cell setClickEvent];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    cell.textView.alwaysBounceVertical = YES;
-//    cell.textView.isAutoHeight = YES;
-    
+    if (extendCellFlag) {
+       [cell.extendBtn setBackgroundImage:[UIImage imageNamed:@"houseDetail_less"] forState:UIControlStateNormal];
+    }else{
+       [cell.extendBtn setBackgroundImage:[UIImage imageNamed:@"houseDetail_more"] forState:UIControlStateNormal];
+    }
+
     return cell;
 }
 
@@ -226,11 +229,10 @@
 }
 
 - (void)extendBtnClick:(EHHouseSourcesCell *)cell{
-    cell.textView.alwaysBounceVertical = YES;
-    cell.textView.isAutoHeight = YES;
-//
-//    NSLog(@"jop %f",cell.textView.frame.size.height);
-    extendCellFlag = YES;
+
+    extendCellFlag = !extendCellFlag;
+    selIndexPath = [self.tableView indexPathForCell:cell];
+    [self.tableView reloadData];
 }
 
 @end

@@ -9,5 +9,15 @@
 #import "EHHouseSourcesMessage.h"
 
 @implementation EHHouseSourcesMessage
-
+- (instancetype)initWithDict:(NSDictionary *)dict
+{
+    self = [super init];
+    if (self)
+    {
+        self.textId = [[dict objectForKey:@"textId"]intValue];
+        self.textContent = [dict objectForKey:@"textContent"];
+        self.isShowMoreText = NO;
+    }
+    return self;
+}
 @end

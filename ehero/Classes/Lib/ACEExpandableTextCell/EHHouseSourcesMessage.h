@@ -10,4 +10,11 @@
 
 @interface EHHouseSourcesMessage : NSObject
 
+@property(nonatomic, assign)int       textId;
+@property(nonatomic, strong)NSString  *textContent;
+///是否展开状态，默认No
+@property(nonatomic, assign)BOOL      isShowMoreText;
+
+- (instancetype)initWithDict:(NSDictionary *)dict;
+
 @end
