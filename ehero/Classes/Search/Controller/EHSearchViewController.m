@@ -34,6 +34,13 @@
 
 @implementation EHSearchViewController
 
+- (NSMutableArray *)searchResultArr{
+    if (_searchResultArr == nil) {
+        _searchResultArr = [NSMutableArray array];
+    }
+    return _searchResultArr;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
