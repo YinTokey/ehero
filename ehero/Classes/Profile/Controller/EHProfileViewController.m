@@ -125,7 +125,7 @@
     if ([MFMailComposeViewController canSendMail]) { // 用户已设置邮件账户
         [self sendEmailAction]; // 调用发送邮件的代码
     }else{
-        [self.view makeToast:@"设置邮箱账号" duration:1.0 position:CSToastPositionCenter];
+        [MBProgressHUD showNormalMessage:@"请设置邮箱帐号" toView:self.view];
     }
 }
 
@@ -174,18 +174,19 @@
     switch (result)
     {
         case MFMailComposeResultCancelled: // 用户取消编辑、
-            [self.view makeToast:@"取消编辑" duration:1.0 position:CSToastPositionCenter];
+            
+             [MBProgressHUD showNormalMessage:@"取消编辑" toView:self.view];
             break;
         case MFMailComposeResultSaved: // 用户保存邮件
-            [self.view makeToast:@"保存邮件" duration:1.0 position:CSToastPositionCenter];
+             [MBProgressHUD showNormalMessage:@"保存邮件" toView:self.view];
             break;
         case MFMailComposeResultSent: // 用户点击发送
-            [self.view makeToast:@"发送成功" duration:1.0 position:CSToastPositionCenter];
+             [MBProgressHUD showSuccess:@"发送成功" toView:self.view];
             //  NSLog(@"Mail sent...");
             break;
         case MFMailComposeResultFailed: // 用户尝试保存或发送邮件失败
             //  NSLog(@"Mail send errored: %@...", [error localizedDescription]);
-            [self.view makeToast:@"发送失败" duration:1.0 position:CSToastPositionCenter];
+            [MBProgressHUD showError:@"发送失败"];
             break;
     }
     

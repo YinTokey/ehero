@@ -238,10 +238,10 @@
 - (BOOL)searchStatusTest{
     
     if (_searchResultArr.count == 0) {
-        [self.view makeToast:@"没有找到经纪人" duration:1.0 position:CSToastPositionCenter];
+        [MBProgressHUD showSuccess:@"没有找到经纪人" toView:self.view];
         return NO;
     }else{
-        [self.view makeToast:@"为您找到经纪人" duration:1.0 position:CSToastPositionCenter];
+        [MBProgressHUD showSuccess:@"为您找到经纪人" toView:self.view];
         return YES;
     }
 }

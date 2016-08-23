@@ -71,8 +71,8 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
             } error:&error];
             
             if (error) {
-                [self.view makeToast:@"保存失败" duration:1.0 position:CSToastPositionCenter];
-                NSLog(@"保存失败：%@", error);
+                [MBProgressHUD showError:@"保存失败" toView:self.view];
+                //[self.view makeToast:@"保存失败" duration:1.0 position:CSToastPositionCenter];
                 return;
             }
             
@@ -85,12 +85,9 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
             } error:&error];
             
             if (error) {
-                [self.view makeToast:@"保存失败" duration:1.0 position:CSToastPositionCenter];
-
-                NSLog(@"保存失败：%@", error);
+                [MBProgressHUD showError:@"保存失败" toView:self.view];
             } else {
-                [self.view makeToast:@"保存成功" duration:1.0 position:CSToastPositionCenter];
-                NSLog(@"保存成功");
+                [MBProgressHUD showError:@"保存成功" toView:self.view];
             }
         });
     }];
@@ -117,7 +114,7 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
     } error:&error];
     
     if (error) {
-        [self.view makeToast:@"获取相册失败" duration:1.0 position:CSToastPositionCenter];
+        [MBProgressHUD showError:@"获取相册失败" toView:self.view];
         NSLog(@"获取相册【%@】失败", XMGCollectionName);
         return nil;
     }
