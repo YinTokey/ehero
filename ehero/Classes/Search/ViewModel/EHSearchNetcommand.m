@@ -24,9 +24,7 @@
 //    } failure:^(NSError *error) {
 //        NSLog(@"失败");
 //    }];
-    
-    
-    
+
     
 }
 @end

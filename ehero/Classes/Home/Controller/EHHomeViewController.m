@@ -272,7 +272,7 @@
 
 - (void)fourthBtnClick:(UITableViewCell *)cell{
 
-    EHWechatGroupViewController *wechatGroupViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"WechatGroupViewController"];
+    EHWechatGroupViewController *wechatGroupViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"WechatGroupDetailViewController"];
     [self.navigationController pushViewController:wechatGroupViewController animated:YES];
 
 }
