@@ -7,7 +7,6 @@
 //
 
 #import "EHCallAgentView.h"
-#import "YTHttpTool.h"
 #import "YTNetCommand.h"
 @interface EHCallAgentView()
 @property (weak, nonatomic) IBOutlet UIView *callView;

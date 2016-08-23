@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YTHttpTool.h"
 
 @protocol EHNetBusinessManagerDelegate <NSObject>
 @required

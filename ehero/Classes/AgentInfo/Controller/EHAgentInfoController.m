@@ -17,7 +17,6 @@
 #import "STModal.h"
 #import "EHVerifyView.h"
 #import "EHSkimedAgentInfo.h"
-#import "YTHttpTool.h"
 #import "EHCookieOperation.h"
 
 #import <CoreTelephony/CTCall.h>

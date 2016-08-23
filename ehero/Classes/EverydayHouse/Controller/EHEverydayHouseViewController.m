@@ -10,7 +10,6 @@
 #import "EHEverydayhouseCell.h"
 #import "EHHouseDetailViewController.h"
 #import "EHHomeSearchBar.h"
-#import "YTHttpTool.h"
 #import <MJExtension.h>
 #import "AFNetworking.h"
 #import "EHDistricts.h"

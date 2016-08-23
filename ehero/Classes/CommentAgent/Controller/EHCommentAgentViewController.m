@@ -7,7 +7,6 @@
 //
 
 #import "EHCommentAgentViewController.h"
-#import "YTHttpTool.h"
 #import "EHAgentInfo.h"
 #import <MJExtension.h>
 #import "YTNetCommand.h"

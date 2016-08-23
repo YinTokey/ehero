@@ -7,7 +7,6 @@
 //
 
 #import "EHAntidisturbViewController.h"
-#import "YTHttpTool.h"
 #import "EHRegularExpression.h"
 #import "EHCookieOperation.h"
 #import "STModal.h"

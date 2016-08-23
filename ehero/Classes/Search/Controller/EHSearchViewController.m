@@ -14,7 +14,6 @@
 #import "AFNetworking.h"
 #import <MJExtension.h>
 #import "EHAgentInfo.h"
-#import "YTHttpTool.h"
 #import "EHNetBusinessManager.h"
 #import "MBProgressHUD+YT.h"
 #import "EHSearchBar.h"

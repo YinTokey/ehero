@@ -8,7 +8,6 @@
 
 #import "EHVerifyView.h"
 #import "MZTimerLabel.h"
-#import "YTHttpTool.h"
 #import "EHRegularExpression.h"
 #import "EHCookieOperation.h"
 
