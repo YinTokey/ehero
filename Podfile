@@ -7,6 +7,7 @@ pod 'SDCycleScrollView'
 pod 'OpenShare'
 pod 'SVProgressHUD'
 pod 'MBProgressHUD','~>0.9.2' 
+pod 'ReactiveCocoa', '~> 2.5'
 end
 
  

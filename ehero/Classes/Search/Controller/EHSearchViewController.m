@@ -17,7 +17,7 @@
 #import "EHNetBusinessManager.h"
 #import "MBProgressHUD+YT.h"
 #import "EHSearchBar.h"
-
+#import "EHSearchTableViewModel.h"
 
 #define searchbar_width _mysearchBar.frame.size.width
 #define searchbar_height _mysearchBar.frame.size.height
@@ -25,20 +25,22 @@
 @interface EHSearchViewController ()<UITextFieldDelegate,EHNetBusinessManagerDelegate,EHSearchResultCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *mysearchBar;
-@property (nonatomic,strong) NSMutableArray *searchResultArr;
+//@property (nonatomic,strong) NSMutableArray *searchResultArr;
 
 @property (nonatomic,strong) UIButton *cancelBtn;
+
+@property (nonatomic,strong) EHSearchTableViewModel *tableViewModel;
 
 @end
 
 @implementation EHSearchViewController
 
-- (NSMutableArray *)searchResultArr{
-    if (_searchResultArr == nil) {
-        _searchResultArr = [NSMutableArray array];
-    }
-    return _searchResultArr;
-}
+//- (NSMutableArray *)searchResultArr{
+//    if (_searchResultArr == nil) {
+//        _searchResultArr = [NSMutableArray array];
+//    }
+//    return _searchResultArr;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,6 +53,21 @@
     [self setNavBar];
     
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
+    
+    _tableViewModel = [[EHSearchTableViewModel alloc]init];
+    
+    self.tableView.dataSource = _tableViewModel;
+    self.tableView.delegate = _tableViewModel;
+    
+    @weakify(self);
+    [RACObserve(_tableViewModel, searchResultArr) subscribeNext:^(id x) {
+        
+        @strongify(self);
+        [self.tableView reloadData];
+        [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+        
+    }];
+    
 
 }
 
@@ -78,45 +95,23 @@
 }
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return _searchResultArr.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
-    EHAgentInfo *agentInfo = self.searchResultArr[indexPath.row];
-    cell.isdrawRect = YES;
-    [cell setResultCell:agentInfo];
-    cell.delegate = self;
-    return cell;
-}
-#pragma mark - cell高度
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 125;
-}
 
 #pragma mark - 选择cell
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    EHAgentInfoController *agentInfoVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"AgentInfoController"];
-    EHAgentInfo *agentInfo = self.searchResultArr[indexPath.row];
-    [agentInfo getIdStringFromDictionary];
-    
-    agentInfoVC.agentInfo = agentInfo;
-    
-    [self.navigationController pushViewController:agentInfoVC animated:YES];
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    EHAgentInfoController *agentInfoVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"AgentInfoController"];
+//    EHAgentInfo *agentInfo = self.searchResultArr[indexPath.row];
+//    [agentInfo getIdStringFromDictionary];
+//    
+//    agentInfoVC.agentInfo = agentInfo;
+//    
+//    [self.navigationController pushViewController:agentInfoVC animated:YES];
+//}
 
-#pragma mark - textfield delegate
-- (void)textFieldDidBeginEditing:(UITextField *)textField{
-    NSLog(@"begin edit");
-
-}
 
 #pragma mark - 编辑完成，点击搜索时调用代理方法
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     
-    [self.searchResultArr removeAllObjects];
+    //[self.searchResultArr removeAllObjects];
     [self searchClick];
     [self.mysearchBar resignFirstResponder ];
 
@@ -156,34 +151,11 @@
     NSString *keyword = self.mysearchBar.text;
     //搜索地区
     NSDictionary *param =@{@"address":keyword};
-    [self searchWithURLString:searchAreaUrlStr Param:param];
+    [self.tableViewModel searchWithURLString:searchAreaUrlStr Param:param];
+
 
 }
-# pragma mark - 搜索方法
-- (void)searchWithURLString:(NSString *)urlString Param:(NSDictionary *)param{
 
-    [YTHttpTool get:urlString params:param success:^(NSURLSessionTask *task, id responseObj) {
-        //json转模型
-        self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
-        [self searchStatusTest];
-        
-        [self.tableView reloadData];
-        [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
-    } failure:^(NSError *error) {
-        NSLog(@"失败");
-    }];
-    
-}
-#pragma mark - 搜索结果检测
-- (void)searchStatusTest{
-    
-    if (_searchResultArr.count == 0) {
-        [MBProgressHUD showError:@"没有找到经纪人"];
-    }else{
-        [MBProgressHUD showSuccess:@"为您找到经纪人"];
-    }
-    
-}
 
 - (void)callBtnClick:(UITableViewCell *)cell{
     NSLog(@"在控制器里点击");

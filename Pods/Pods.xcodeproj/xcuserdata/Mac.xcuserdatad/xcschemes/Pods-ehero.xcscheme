@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'EE74C13A4D655357C0DBD7DCEE95E1A8'
+               BlueprintIdentifier = '3A9501335D9C053028E1D669927097D7'
                BlueprintName = 'Pods-ehero'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-ehero.a'>

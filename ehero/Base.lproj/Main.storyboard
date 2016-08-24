@@ -153,10 +153,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="Frh-BS-zpg" id="CuI-R8-fQs"/>
-                            <outlet property="delegate" destination="Frh-BS-zpg" id="BSi-VP-Qge"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="jlK-uK-epl">
                         <nil key="title"/>
@@ -1204,7 +1200,7 @@
     <resources>
         <image name="Group" width="37" height="52"/>
         <image name="Line1" width="713" height="1"/>
-        <image name="QRCode" width="265" height="263"/>
+        <image name="QRCode" width="294" height="291"/>
         <image name="Star 1" width="38" height="36"/>
         <image name="Star 2" width="38" height="36"/>
         <image name="about_us" width="750" height="1334"/>

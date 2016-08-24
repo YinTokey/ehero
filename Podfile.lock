@@ -3,6 +3,13 @@ PODS:
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - OpenShare (0.0.1)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
   - SDCycleScrollView (1.65):
     - SDWebImage (~> 3.7)
   - SDWebImage (3.8.1):
@@ -15,6 +22,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - OpenShare
+  - ReactiveCocoa (~> 2.5)
   - SDCycleScrollView
   - SDWebImage (~> 3.8)
   - SVProgressHUD
@@ -24,10 +32,11 @@ SPEC CHECKSUMS:
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 38b610c480b2aa9b70252876f6b41e452f33083c
+PODFILE CHECKSUM: 077c23c809a24cab5976e06b8181ad868dea5300
 
 COCOAPODS: 1.0.1
