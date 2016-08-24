@@ -8,10 +8,9 @@
 
 #import "EHSearchTableViewModel.h"
 #import <MJExtension.h>
-#import "EHAgentInfo.h"
 #import "EHSearchResultCell.h"
-
-
+#import "EHAgentInfoController.h"
+#import "EHSearchViewController.h"
 @implementation EHSearchTableViewModel
 
 
@@ -28,21 +27,18 @@
     [cell setResultCell:agentInfo];
     return cell;
 }
-#pragma mark - cell高度
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 125;
-}
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    EHAgentInfoController *agentInfoVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"AgentInfoController"];
+-(void)agentInfoVCWithIndexPath:(NSIndexPath *)indexPath WithViewController:(UIViewController *)superController
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    EHAgentInfoController *agentInfoVC = [storyboard instantiateViewControllerWithIdentifier:@"AgentInfoController"];
+    
     EHAgentInfo *agentInfo = self.searchResultArr[indexPath.row];
     [agentInfo getIdStringFromDictionary];
-
+    
     agentInfoVC.agentInfo = agentInfo;
-
-    [self.navigationController pushViewController:agentInfoVC animated:YES];
+    [superController.navigationController pushViewController:agentInfoVC animated:YES];
 }
-
 
 
 # pragma mark - 搜索方法
@@ -52,9 +48,7 @@
         //json转模型
         self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
         [self searchStatusTest];
-      //  NSLog(@"%d",_searchResultArr.count);
 //        [self.tableView reloadData];
-//        [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
     } failure:^(NSError *error) {
         NSLog(@"失败");
     }];

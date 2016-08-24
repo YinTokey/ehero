@@ -16,7 +16,6 @@
 #import "EHAntidisturbViewController.h"
 #import "EHWechatGroupViewController.h"
 #import "EHCommentAgentViewController.h"
-#import "YTSearchBar.h"
 #import "EHHouseDetailViewController.h"
 
 #import "AppDelegate.h"
@@ -115,7 +114,6 @@
     }else{
         return 1;
     }
-
 }
 
 #pragma mark - section高度设置

@@ -55,12 +55,7 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
 
     EHWechatGroupDetailViewController *VC = [[self storyboard]instantiateViewControllerWithIdentifier:@"WechatGroupDetailViewController"];
     [self.navigationController pushViewController:VC animated:YES];
-    
-    
-    
-    
-    
-    
+
 }
 
 

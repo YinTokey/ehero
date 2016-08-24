@@ -7,7 +7,6 @@
 //
 
 #import "EHSearchViewController.h"
-#import "YTSearchBar.h"
 #import "UIBarButtonItem+Extension.h"
 #import "EHSearchResultCell.h"
 #import "EHAgentInfoController.h"
@@ -22,25 +21,15 @@
 #define searchbar_width _mysearchBar.frame.size.width
 #define searchbar_height _mysearchBar.frame.size.height
 
-@interface EHSearchViewController ()<UITextFieldDelegate,EHNetBusinessManagerDelegate,EHSearchResultCellDelegate>
+@interface EHSearchViewController ()<UITextFieldDelegate,EHNetBusinessManagerDelegate,EHSearchResultCellDelegate,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *mysearchBar;
-//@property (nonatomic,strong) NSMutableArray *searchResultArr;
-
-@property (nonatomic,strong) UIButton *cancelBtn;
-
 @property (nonatomic,strong) EHSearchTableViewModel *tableViewModel;
 
 @end
 
 @implementation EHSearchViewController
 
-//- (NSMutableArray *)searchResultArr{
-//    if (_searchResultArr == nil) {
-//        _searchResultArr = [NSMutableArray array];
-//    }
-//    return _searchResultArr;
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -57,7 +46,7 @@
     _tableViewModel = [[EHSearchTableViewModel alloc]init];
     
     self.tableView.dataSource = _tableViewModel;
-    self.tableView.delegate = _tableViewModel;
+    self.tableView.delegate = self;
     
     @weakify(self);
     [RACObserve(_tableViewModel, searchResultArr) subscribeNext:^(id x) {
@@ -67,7 +56,8 @@
         [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
         
     }];
-    
+
+
 
 }
 
@@ -94,24 +84,9 @@
     [[self navigationController]popViewControllerAnimated:YES];
 }
 
-
-
-#pragma mark - 选择cell
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    EHAgentInfoController *agentInfoVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"AgentInfoController"];
-//    EHAgentInfo *agentInfo = self.searchResultArr[indexPath.row];
-//    [agentInfo getIdStringFromDictionary];
-//    
-//    agentInfoVC.agentInfo = agentInfo;
-//    
-//    [self.navigationController pushViewController:agentInfoVC animated:YES];
-//}
-
-
 #pragma mark - 编辑完成，点击搜索时调用代理方法
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    
-    //[self.searchResultArr removeAllObjects];
+
     [self searchClick];
     [self.mysearchBar resignFirstResponder ];
 
@@ -156,11 +131,17 @@
 
 }
 
-
-- (void)callBtnClick:(UITableViewCell *)cell{
-    NSLog(@"在控制器里点击");
-    
+#pragma mark - cell高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 125;
 }
+
+# pragma mark -tableviewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [_tableViewModel agentInfoVCWithIndexPath:indexPath WithViewController:self];
+
+}
+
 
 
 @end

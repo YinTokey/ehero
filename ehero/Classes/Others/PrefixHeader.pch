@@ -33,7 +33,7 @@
 #define getRegionsInfoUrlStr @"http://ehero.cc/api/v1/tips/regions"
 
 #define QQAppId @"1105635926"
-#define WeiboAppKey @"402180334"
+#define WeiboAppKey @"1139543641"
 #define WeixinAppId @"wxd930ea5d5a258f4f"
 
 #define EheroHOST     @"http://ehero.cc"

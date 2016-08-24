@@ -133,7 +133,7 @@
         NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
         NSLog(@"success responString call %@",responStr);
         if ([responStr isEqualToString:@"true"]) {
-            [MBProgressHUD showError:@"验证成功"];
+            [MBProgressHUD showSuccess:@"验证成功"];
               [MBProgressHUD hideHUD];
             //取得验证吗时，就把用户电话存起来
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

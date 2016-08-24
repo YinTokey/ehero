@@ -25,6 +25,16 @@
 //
 //}
 
+//- (id)init{
+//    self = [super init];
+//    if (self) {
+//        NSDictionary *idDic = self._id;
+//        self.idStr = [idDic objectForKey:@"$oid"];
+//    }
+//    return self;
+//
+//}
+
 - (void)getIdStringFromDictionary{
     NSDictionary *idDic = self._id;
     self.idStr = [idDic objectForKey:@"$oid"];
