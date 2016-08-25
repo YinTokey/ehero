@@ -85,9 +85,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <sections/>
-                        <connections>
-                            <outlet property="delegate" destination="iSZ-bj-OnQ" id="W5c-xb-tRi"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Bus-qJ-WBW">
                         <nil key="title"/>

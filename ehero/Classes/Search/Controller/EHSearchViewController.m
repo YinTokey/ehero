@@ -40,13 +40,10 @@
     [self addGesture];
     [YTHttpTool netCheck];
     [self setNavBar];
+    [self initViewModels];
+    
     
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
-    
-    _tableViewModel = [[EHSearchTableViewModel alloc]init];
-    
-    self.tableView.dataSource = _tableViewModel;
-    self.tableView.delegate = self;
     
     @weakify(self);
     [RACObserve(_tableViewModel, searchResultArr) subscribeNext:^(id x) {
@@ -56,6 +53,13 @@
         [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
         
     }];
+}
+
+- (void)initViewModels{
+    _tableViewModel = [[EHSearchTableViewModel alloc]init];
+    _tableViewModel.superVC = self;
+    self.tableView.dataSource = _tableViewModel;
+    self.tableView.delegate = _tableViewModel;
 }
 
 - (void)setNavBar{
@@ -127,16 +131,6 @@
 
 }
 
-#pragma mark - cell高度
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 125;
-}
-
-# pragma mark -tableviewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [_tableViewModel agentInfoVCWithIndexPath:indexPath WithViewController:self];
-
-}
 
 
 

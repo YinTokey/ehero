@@ -13,6 +13,8 @@
 #import "EHEverydayHouseViewController.h"
 #import "EHAntidisturbViewController.h"
 #import "EHWechatGroupViewController.h"
+#import "EHCommentAgentViewController.h"
+#import "EHHouseDetailViewController.h"
 @implementation EHHomeTableViewModel
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -63,6 +65,40 @@
     
 }
 
+#pragma mark - section高度设置
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 2) {
+        return 10;
+    }else{
+        return  0;
+    }
+}
+
+#pragma mark - cell高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return ScreenWidth * 0.246875;
+    }else if(indexPath.section == 1){
+        return 30;
+    }else if(indexPath.section == 2){
+        return 85;
+    }else{
+        return 94;
+    }
+}
+#pragma mark -tableviewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1) {
+        EHCommentAgentViewController *commentAgentViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"CommentAgentViewController"];
+        [self.superVC.navigationController pushViewController:commentAgentViewController animated:YES];
+    }
+    if (indexPath.section == 3) {
+        EHHouseDetailViewController *houseDetailViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
+        [self.superVC.navigationController pushViewController:houseDetailViewController animated:YES];
+    }
+}
+
+
 - (void)firstBtnClick:(UITableViewCell *)cell{
 
     EHTipsViewController  *tipsViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"TipsViewController"];
@@ -87,4 +123,7 @@
     [self.superVC.navigationController pushViewController:wechatGroupViewController animated:YES];
     
 }
+
+
+
 @end

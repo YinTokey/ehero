@@ -12,7 +12,7 @@
 #import "EHCallAgentView.h"
 #import "STModal.h"
 #import "EHVerifyView.h"
-#import "EHSkimedAgentInfo.h"
+
 #import "EHCookieOperation.h"
 #import "EHSocialShareViewModel.h"
 #import "EHAgentInfoTableViewModel.h"

@@ -8,15 +8,6 @@
 
 #import "EHHomeViewController.h"
 #import <SDCycleScrollView.h>
-#import "buttonCell.h"
-#import "EHEverydayhouseCell.h"
-#import "XTPopView.h"
-#import "EHTipsViewController.h"
-#import "EHEverydayHouseViewController.h"
-#import "EHAntidisturbViewController.h"
-#import "EHWechatGroupViewController.h"
-#import "EHCommentAgentViewController.h"
-#import "EHHouseDetailViewController.h"
 
 #import "AppDelegate.h"
 #import "SDAutoLayout.h"
@@ -78,6 +69,7 @@
     _homeTableViewModel.superVC = self;
 
     self.tableView.dataSource = _homeTableViewModel;
+    self.tableView.delegate = _homeTableViewModel;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -104,38 +96,6 @@
     
 }
 
-#pragma mark - section高度设置
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 2) {
-        return 10;
-    }else{
-        return  0;
-    }
-}
-
-#pragma mark - cell高度
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0) {
-       return self.view.frame.size.width * 0.246875;
-    }else if(indexPath.section == 1){
-        return 30;
-    }else if(indexPath.section == 2){
-        return 85;
-    }else{
-        return 94;
-    }
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 1) {
-        EHCommentAgentViewController *commentAgentViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"CommentAgentViewController"];
-        [self.navigationController pushViewController:commentAgentViewController animated:YES];
-    }
-    if (indexPath.section == 3) {
-        EHHouseDetailViewController *houseDetailViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
-        [self.navigationController pushViewController:houseDetailViewController animated:YES];
-    }
-}
 
 - (void)setupHeaderView{
     sourceArr = [NSMutableArray arrayWithObjects:@"img_00",@"img_01",@"img_02", nil];
@@ -154,7 +114,6 @@
         EHSearchViewController *searchVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"SearchViewController"];
     [self.navigationController pushViewController:searchVC animated:YES];
 }
-
 
 #pragma mark - 设置左上角地点弹窗
 - (void)setupPopView{

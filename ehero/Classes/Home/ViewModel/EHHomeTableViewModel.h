@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "buttonCell.h"
-@interface EHHomeTableViewModel : NSObject<UITableViewDataSource,buttonCellDelegate>
+@interface EHHomeTableViewModel : NSObject<UITableViewDataSource,UITableViewDelegate,buttonCellDelegate>
 
 @property (nonatomic,strong) id super;
 

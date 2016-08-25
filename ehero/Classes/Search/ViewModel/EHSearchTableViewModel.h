@@ -17,9 +17,11 @@
 
 @property (nonatomic,strong) NSIndexPath *selectedIndexPath;
 
+@property (nonatomic,strong) UIViewController *superVC;
+
 # pragma mark - 搜索方法
 - (void)searchWithURLString:(NSString *)urlString Param:(NSDictionary *)param;
 
--(void)agentInfoVCWithIndexPath:(NSIndexPath *)indexPath WithViewController:(UIViewController *)superController;
+//-(void)agentInfoVCWithIndexPath:(NSIndexPath *)indexPath WithViewController:(UIViewController *)superController;
 
 @end

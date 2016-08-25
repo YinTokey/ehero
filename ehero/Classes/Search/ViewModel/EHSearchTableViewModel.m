@@ -28,16 +28,22 @@
     return cell;
 }
 
--(void)agentInfoVCWithIndexPath:(NSIndexPath *)indexPath WithViewController:(UIViewController *)superController
-{
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    EHAgentInfoController *agentInfoVC = [storyboard instantiateViewControllerWithIdentifier:@"AgentInfoController"];
+#pragma mark - cell高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 125;
+}
+
+# pragma mark -tableviewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //[_tableViewModel agentInfoVCWithIndexPath:indexPath WithViewController:self];
+    EHAgentInfoController *agentInfoVC = [[self.superVC storyboard] instantiateViewControllerWithIdentifier:@"AgentInfoController"];
     
     EHAgentInfo *agentInfo = self.searchResultArr[indexPath.row];
     [agentInfo getIdStringFromDictionary];
     
     agentInfoVC.agentInfo = agentInfo;
-    [superController.navigationController pushViewController:agentInfoVC animated:YES];
+    [self.superVC.navigationController pushViewController:agentInfoVC animated:YES];
+    
 }
 
 
@@ -48,7 +54,6 @@
         //json转模型
         self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
         [self searchStatusTest];
-//        [self.tableView reloadData];
     } failure:^(NSError *error) {
         NSLog(@"失败");
     }];
