@@ -16,6 +16,7 @@
 #import "MBProgressHUD+YT.h"
 #import "YTHttpTool.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
@@ -31,6 +32,8 @@
 #define commentAgentUrlStr @"http://ehero.cc/api/v1/comments.json"
 #define anti_disturbCallUrlStr @"http://ehero.cc/api/v1/customers/call.json"
 #define getRegionsInfoUrlStr @"http://ehero.cc/api/v1/tips/regions"
+#define slidesUrlStr @"http://ehero.cc/api/v1/users/slides"
+
 
 #define QQAppId @"1105635926"
 #define WeiboAppKey @"2459331788"

@@ -17,10 +17,13 @@
 #import "EHSiteButton.h"
 #import "EHHomePopView.h"
 #import "EHOfficialAccountController.h"
+#import "EHSlides.h"
+#import "YTNetCommand.h"
 
 #import "EHSiteSelectDelegate.h"
 #import "EHHomeTableViewModel.h"
 
+#import <MJExtension.h>
 
 @interface EHHomeViewController ()<UITextFieldDelegate,SDCycleScrollViewDelegate>
 {
@@ -28,17 +31,15 @@
     NSMutableArray *sourceArr;
     
 }
+- (IBAction)siteBtnClick:(UIButton *)btn;
 - (IBAction)styleSel:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *styleBarButtonItem;
 
 @property (weak, nonatomic) IBOutlet UIButton *styleBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *siteBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *profileBarButtonItem;
-
-- (IBAction)siteBtnClick:(UIButton *)btn;
 @property (weak, nonatomic) IBOutlet UIButton *siteBtn;
-
-
+@property (nonatomic,strong) NSMutableArray *slidesArray;
 @property (nonatomic,strong) SDCycleScrollView *cycleScrollView;
 @property (nonatomic,strong) EHSiteSelectDelegate *siteSelectDelegate;
 @property (nonatomic,strong) EHHomeTableViewModel *homeTableViewModel;
@@ -54,12 +55,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self getSlides];
     [self setNavBar];
-    [self setupHeaderView];
+
     [self initViewModels];
     [YTHttpTool netCheck];
-    
+  
+    //[self setupHeaderView];
 }
 
 - (void)initViewModels{
@@ -100,13 +102,14 @@
 }
 
 - (void)setupHeaderView{
-    sourceArr = [NSMutableArray arrayWithObjects:@"img_00",@"img_01",@"img_02", nil];
-    _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.tableView.frame.size.width - 10, ScreenHeight * 0.3) imageNamesGroup:sourceArr];
+
     _cycleScrollView.autoScrollTimeInterval = 3.5;
 
+   _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.tableView.frame.size.width - 10, ScreenHeight * 0.3)
+                                       delegate:self
+                               placeholderImage:[UIImage imageNamed:@"home_placeholder"]];
+    _cycleScrollView.imageURLStringsGroup = sourceArr;
     self.tableView.tableHeaderView = _cycleScrollView;
-    
-    _cycleScrollView.delegate = self;
 }
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
@@ -114,6 +117,25 @@
     EHOfficialAccountController *officialAccountVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"OfficialAccountController"];
     [self.navigationController pushViewController:officialAccountVC animated:YES];
     
+}
+
+- (void)getSlides{
+    sourceArr = [NSMutableArray array];
+    
+    [MBProgressHUD showMessage:@"正在加载图片" toView:self.view];
+    [YTHttpTool get:slidesUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
+        [MBProgressHUD hideHUDForView:self.view];
+        //数据处理
+        NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:nil] ;
+        _slidesArray = [EHSlides mj_objectArrayWithKeyValuesArray:responseArray];
+        NSLog(@"%d",_slidesArray.count);
+        for (EHSlides *slide in _slidesArray) {
+            [sourceArr addObject:slide.image];
+        }
+        [self setupHeaderView];
+    } failure:^(NSError *error) {
+        NSLog(@"failed");
+    }];
 }
 
 - (IBAction)siteBtnClick:(UIButton *)btn {
