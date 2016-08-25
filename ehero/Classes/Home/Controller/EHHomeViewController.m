@@ -16,10 +16,13 @@
 #import "EHHomeAgentCell.h"
 #import "EHSiteButton.h"
 #import "EHHomePopView.h"
+#import "EHOfficialAccountController.h"
 
 #import "EHSiteSelectDelegate.h"
 #import "EHHomeTableViewModel.h"
-@interface EHHomeViewController ()<UITextFieldDelegate>
+
+
+@interface EHHomeViewController ()<UITextFieldDelegate,SDCycleScrollViewDelegate>
 {
     /** 图片数组*/
     NSMutableArray *sourceArr;
@@ -34,9 +37,9 @@
 
 - (IBAction)siteBtnClick:(UIButton *)btn;
 @property (weak, nonatomic) IBOutlet UIButton *siteBtn;
-/** 地点*/
-@property (nonatomic,copy) NSString *siteString;
 
+
+@property (nonatomic,strong) SDCycleScrollView *cycleScrollView;
 @property (nonatomic,strong) EHSiteSelectDelegate *siteSelectDelegate;
 @property (nonatomic,strong) EHHomeTableViewModel *homeTableViewModel;
 
@@ -96,13 +99,21 @@
     
 }
 
-
 - (void)setupHeaderView{
     sourceArr = [NSMutableArray arrayWithObjects:@"img_00",@"img_01",@"img_02", nil];
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.tableView.frame.size.width - 10, ScreenHeight * 0.3) imageNamesGroup:sourceArr];
-    cycleScrollView.autoScrollTimeInterval = 3.5;
+    _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.tableView.frame.size.width - 10, ScreenHeight * 0.3) imageNamesGroup:sourceArr];
+    _cycleScrollView.autoScrollTimeInterval = 3.5;
 
-    self.tableView.tableHeaderView = cycleScrollView;
+    self.tableView.tableHeaderView = _cycleScrollView;
+    
+    _cycleScrollView.delegate = self;
+}
+
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    NSLog(@"%d",index);
+    EHOfficialAccountController *officialAccountVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"OfficialAccountController"];
+    [self.navigationController pushViewController:officialAccountVC animated:YES];
+    
 }
 
 - (IBAction)siteBtnClick:(UIButton *)btn {

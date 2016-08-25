@@ -88,6 +88,7 @@
 		04C1576F1D6EB31A0036E5A1 /* EHHomeTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1576E1D6EB31A0036E5A1 /* EHHomeTableViewModel.m */; };
 		04C157751D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C157741D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.m */; };
 		04C157781D6EC6D70036E5A1 /* EHHomeNetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C157771D6EC6D70036E5A1 /* EHHomeNetViewModel.m */; };
+		04C157801D6ED5810036E5A1 /* EHOfficialAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1577F1D6ED5810036E5A1 /* EHOfficialAccountController.m */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
 		04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */; };
@@ -299,6 +300,8 @@
 		04C157741D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAntiDisturbNetViewModel.m; sourceTree = "<group>"; };
 		04C157761D6EC6D70036E5A1 /* EHHomeNetViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHomeNetViewModel.h; sourceTree = "<group>"; };
 		04C157771D6EC6D70036E5A1 /* EHHomeNetViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHomeNetViewModel.m; sourceTree = "<group>"; };
+		04C1577E1D6ED5810036E5A1 /* EHOfficialAccountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHOfficialAccountController.h; sourceTree = "<group>"; };
+		04C1577F1D6ED5810036E5A1 /* EHOfficialAccountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHOfficialAccountController.m; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04C3A8D61D31FDD9003203C0 /* PDFImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFImage.framework; path = ../../../../../Downloads/PDFImage.framework; sourceTree = "<group>"; };
 		04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayhouseCell.h; sourceTree = "<group>"; };
@@ -891,6 +894,47 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		04C157791D6ED5320036E5A1 /* OfficialAccount */ = {
+			isa = PBXGroup;
+			children = (
+				04C1577A1D6ED5320036E5A1 /* Controller */,
+				04C1577B1D6ED5320036E5A1 /* Model */,
+				04C1577C1D6ED5320036E5A1 /* View */,
+				04C1577D1D6ED5320036E5A1 /* ViewModel */,
+			);
+			path = OfficialAccount;
+			sourceTree = "<group>";
+		};
+		04C1577A1D6ED5320036E5A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C1577E1D6ED5810036E5A1 /* EHOfficialAccountController.h */,
+				04C1577F1D6ED5810036E5A1 /* EHOfficialAccountController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C1577B1D6ED5320036E5A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C1577C1D6ED5320036E5A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C1577D1D6ED5320036E5A1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		04C3A8E51D322A66003203C0 /* AgentInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1344,6 +1388,7 @@
 		04F06D231D2E0E040081A34D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04C157791D6ED5320036E5A1 /* OfficialAccount */,
 				04DA25DD1D41E2F200235C51 /* Profile */,
 				04200C331D2F7A6A005DC042 /* Lib */,
 				04360C871D3CDAEF007C8C17 /* Tools */,
@@ -1774,6 +1819,7 @@
 				04C1576F1D6EB31A0036E5A1 /* EHHomeTableViewModel.m in Sources */,
 				04716BEE1D34A8E000E512EE /* EHTwoViewController.m in Sources */,
 				04C6054E1D62D35C00039217 /* EHHomePopView.m in Sources */,
+				04C157801D6ED5810036E5A1 /* EHOfficialAccountController.m in Sources */,
 				04B0EFDB1D499DD600BE301B /* EHHouseDetailViewController.m in Sources */,
 				04C8FDDD1D5426310081CE73 /* EHHomeAgentCell.m in Sources */,
 				04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */,
