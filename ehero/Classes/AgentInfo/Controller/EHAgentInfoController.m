@@ -18,6 +18,8 @@
 #import "EHVerifyView.h"
 #import "EHSkimedAgentInfo.h"
 #import "EHCookieOperation.h"
+#import "EHSocialShareViewModel.h"
+
 
 #import <CoreTelephony/CTCall.h>
 #import <CoreTelephony/CTCallCenter.h>
@@ -31,11 +33,12 @@
 - (IBAction)shareBtnClick:(id)sender;
 - (IBAction)collectBtnClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *collectBtn;
+@property (nonatomic,strong) EHSocialShareViewModel *socialViewModel;
+
 
 @end
 
 @implementation EHAgentInfoController{
-    UIImage *thumbImage;
     BOOL selectedFlag;
 }
 
@@ -44,8 +47,7 @@
     
     self.title = self.agentInfo.name;
     self.view.backgroundColor = RGB(241, 243, 245);
-    //初始化分享图标
-    thumbImage = [UIImage imageNamed:@"share_icon"];
+
     //初始化弹窗配置
     modal = [STModal modal];
     modal.hideWhenTouchOutside = YES;
@@ -57,6 +59,9 @@
     [self skimedAndSave];
 
     [self isCollected];
+    
+    _socialViewModel = [[EHSocialShareViewModel alloc]init];
+    
 }
 
 
@@ -178,54 +183,18 @@
 
 # pragma mark - 分享点击
 - (IBAction)shareBtnClick:(id)sender {
-    OSMessage *msg=[[OSMessage alloc]init];
-    //拼接分享页链接
-    NSString *link = [NSString stringWithFormat:@"http://ehero.cc/agents/%@",self.agentInfo.idStr];
-    msg.link = link;
-    //链接标题
-    NSString *title = [NSString stringWithFormat:@"为您分享经纪人:%@",self.agentInfo.name];
-    msg.title = title;
-    msg.desc = @"大数据推荐最匹配的经纪人";
-    //分享的图标
-    msg.image = UIImagePNGRepresentation(thumbImage);
     
     //分享界面弹窗
     NSMutableArray *titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"微博",@"QQ好友", nil];
     NSMutableArray *picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_weibo",@"share_qq",nil];
     ShareView *share = [[ShareView alloc]initWithTitleArray:titleArray picArray:picArray];
     [share showShareView];
-    
     [share currentIndexWasSelected:^(NSInteger index) {
-        //它的index是从100开始数起，逐个加1
-        if (index == 100) {
-            [OpenShare shareToWeixinSession:msg Success:^(OSMessage *message){
-                NSLog(@"分享微信好友成功！");
-            } Fail:^(OSMessage *message, NSError *error) {
-                NSLog(@"分享微信好友失败!");
-            }];
-        }else if (index == 101){
-            [OpenShare shareToWeixinTimeline:msg Success:^(OSMessage *message) {
-                NSLog(@"微信分享到朋友圈成功：\n%@",message);
-            } Fail:^(OSMessage *message, NSError *error) {
-                NSLog(@"微信分享到朋友圈失败：\n%@\n%@",error,message);
-            }];
-        }else if (index == 102){
-            [OpenShare shareToWeibo:msg Success:^(OSMessage *message) {
-                NSLog(@"分享到微博成功");
-            } Fail:^(OSMessage *message, NSError *error) {
-                NSLog(@"分享到微博失败");
-            }];
-        }else{
-            
-            msg.thumbnail = UIImagePNGRepresentation(thumbImage);
-            
-            [OpenShare shareToQQFriends:msg Success:^(OSMessage *message) {
-                NSLog(@"分享到QQ好友成功");
-            } Fail:^(OSMessage *message, NSError *error) {
-                NSLog(@"分享到QQ好友失败");
-            }];
         
-        }
+        [_socialViewModel shareWithIndex:index
+                                   idStr:self.agentInfo.idStr
+                               agentName:self.agentInfo.name];
+
         
     }];
     

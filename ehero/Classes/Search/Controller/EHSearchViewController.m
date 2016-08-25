@@ -56,9 +56,6 @@
         [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
         
     }];
-
-
-
 }
 
 - (void)setNavBar{
@@ -127,7 +124,6 @@
     //搜索地区
     NSDictionary *param =@{@"address":keyword};
     [self.tableViewModel searchWithURLString:searchAreaUrlStr Param:param];
-
 
 }
 

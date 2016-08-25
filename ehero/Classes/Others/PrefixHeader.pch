@@ -34,7 +34,7 @@
 
 #define QQAppId @"1105635926"
 #define WeiboAppKey @"1139543641"
-#define WeixinAppId @"wxd930ea5d5a258f4f"
+#define WeixinAppId @"wx3ef956a4f5088998"
 
 #define EheroHOST     @"http://ehero.cc"
 #define searchAreaAction @"/agents/search.json?"
