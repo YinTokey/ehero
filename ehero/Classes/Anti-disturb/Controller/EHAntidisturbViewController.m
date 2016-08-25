@@ -11,6 +11,7 @@
 #import "EHCookieOperation.h"
 #import "STModal.h"
 #import "EHVerifyView.h"
+#import "EHAntiDisturbNetViewModel.h"
 
 #import <CoreTelephony/CTCall.h>
 #import <CoreTelephony/CTCallCenter.h>
@@ -21,6 +22,8 @@
     EHVerifyView *verifyView;
     CTCallCenter *callCenter;
 }
+
+@property (nonatomic,strong) EHAntiDisturbNetViewModel *antiDisturbNetViewModel;
 
 @property (weak, nonatomic) IBOutlet UIView *verifiedView;
 @property (weak, nonatomic) IBOutlet UITextField *verifiedOtherPhone;
@@ -43,6 +46,9 @@
     [self callCallBack];
     
     [YTHttpTool netCheck];
+    
+    _antiDisturbNetViewModel = [[EHAntiDisturbNetViewModel alloc]init];
+    
 }
 
 - (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code{
@@ -70,31 +76,11 @@
 }
 
 
-# pragma mark - 打电话请求
-- (void)callAction{
-
-    NSDictionary *helper =  @{@"from":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
-                              @"code":@" ",
-                              @"to":self.verifiedOtherPhone.text};
-
-    NSDictionary *param = @{@"helper":helper};
-
-    [MBProgressHUD showMessage:@"正在接通电话中..." toView:self.view];
-    [YTHttpTool post:anti_disturbCallUrlStr params:param success:^(NSURLSessionDataTask *task,id responseObj) {
-        NSLog(@"呼叫成功 %@",responseObj);
-    } failure:^(NSError *error) {
-        [MBProgressHUD hideHUDForView:self.view];
-        [MBProgressHUD showError:@"拨打失败"];
-        NSLog(@"呼叫失败 %@",error);
-  }];
-
-}
-
-
 - (void)cookieCheck{
     //如果有cookie，读取cookie
     if ([EHCookieOperation setCookie]) {
-        [self callAction];
+        //打电话
+        [ _antiDisturbNetViewModel callAgentWithPhoneText:self.verifiedOtherPhone.text super:self];
     }else{
         [self popVerifyView];
     }
@@ -123,7 +109,6 @@
             NSLog(@"Call is incoming");
             [MBProgressHUD hideHUDForView:weakself.view];
         }
-
     };
 }
 

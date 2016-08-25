@@ -86,6 +86,7 @@
 		04C157661D6E9E850036E5A1 /* EHSkimedAgentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C157651D6E9E850036E5A1 /* EHSkimedAgentViewModel.m */; };
 		04C1576C1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1576B1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m */; };
 		04C1576F1D6EB31A0036E5A1 /* EHHomeTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1576E1D6EB31A0036E5A1 /* EHHomeTableViewModel.m */; };
+		04C157751D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C157741D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.m */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
 		04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */; };
@@ -293,6 +294,8 @@
 		04C1576B1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSiteSelectDelegate.m; sourceTree = "<group>"; };
 		04C1576D1D6EB31A0036E5A1 /* EHHomeTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHomeTableViewModel.h; sourceTree = "<group>"; };
 		04C1576E1D6EB31A0036E5A1 /* EHHomeTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHomeTableViewModel.m; sourceTree = "<group>"; };
+		04C157731D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAntiDisturbNetViewModel.h; sourceTree = "<group>"; };
+		04C157741D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAntiDisturbNetViewModel.m; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04C3A8D61D31FDD9003203C0 /* PDFImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFImage.framework; path = ../../../../../Downloads/PDFImage.framework; sourceTree = "<group>"; };
 		04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayhouseCell.h; sourceTree = "<group>"; };
@@ -545,9 +548,10 @@
 		04657FC81D32467000914495 /* Anti-disturb */ = {
 			isa = PBXGroup;
 			children = (
+				04C157701D6EC29E0036E5A1 /* Model */,
+				04C157711D6EC29E0036E5A1 /* View */,
+				04C157721D6EC29E0036E5A1 /* ViewModel */,
 				04657FC91D32467000914495 /* Controller */,
-				04657FCA1D32467000914495 /* Model */,
-				04657FCB1D32467000914495 /* View */,
 			);
 			path = "Anti-disturb";
 			sourceTree = "<group>";
@@ -559,20 +563,6 @@
 				04657FD41D324B4800914495 /* EHAntidisturbViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		04657FCA1D32467000914495 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		04657FCB1D32467000914495 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		04657FCC1D32469C00914495 /* Tips */ = {
@@ -871,6 +861,29 @@
 				04BBBDAB1D65937600577DAB /* WSDropMenuView.m */,
 			);
 			path = WSDropMenuView;
+			sourceTree = "<group>";
+		};
+		04C157701D6EC29E0036E5A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C157711D6EC29E0036E5A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C157721D6EC29E0036E5A1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04C157731D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.h */,
+				04C157741D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		04C3A8E51D322A66003203C0 /* AgentInfo */ = {
@@ -1714,6 +1727,7 @@
 				0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */,
 				0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */,
 				04FD3AD31D3DDA23005B13B4 /* MBProgressHUD+YT.m in Sources */,
+				04C157751D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.m in Sources */,
 				04B4F43F1D5AFCB900C6D4F3 /* EHCommunityButton.m in Sources */,
 				04C605561D63148C00039217 /* SkyAssociationMenuView.m in Sources */,
 				04A991F01D682C8C00053E29 /* EHHouseSourcesMessage.m in Sources */,
