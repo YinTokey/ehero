@@ -19,7 +19,7 @@
 #import "EHSkimedAgentInfo.h"
 #import "EHCookieOperation.h"
 #import "EHSocialShareViewModel.h"
-
+#import "EHAgentInfoTableViewModel.h"
 
 #import <CoreTelephony/CTCall.h>
 #import <CoreTelephony/CTCallCenter.h>
@@ -34,7 +34,7 @@
 - (IBAction)collectBtnClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *collectBtn;
 @property (nonatomic,strong) EHSocialShareViewModel *socialViewModel;
-
+@property (nonatomic,strong) EHAgentInfoTableViewModel *agentInfoTableViewModel;
 
 @end
 
@@ -61,7 +61,11 @@
     [self isCollected];
     
     _socialViewModel = [[EHSocialShareViewModel alloc]init];
+    _agentInfoTableViewModel = [[EHAgentInfoTableViewModel alloc]init];
+    _agentInfoTableViewModel.agentInfo = self.agentInfo;
+    _agentInfoTableViewModel.superVC = self;
     
+    self.tableView.dataSource = _agentInfoTableViewModel;
 }
 
 
@@ -78,37 +82,6 @@
     }
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    if (section == 0 || section == 1) {
-        return 1;
-    }else
-    return 2;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0) {
-        EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
-        [cell setResultCell:self.agentInfo];
-        cell.isdrawRect = NO;
-        cell.delegate = self;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
-        return cell;
-    }else if(indexPath.section == 1){
-        EHAgentInfoCommunityCell *cell = [EHAgentInfoCommunityCell AgentInfoCommunityCellWithTableView:tableView];
-        return cell;
-    }else{
-        EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
-
-        return cell;
-    
-    }
-}
 
 
 # pragma mark - searchResultCellDelegate
