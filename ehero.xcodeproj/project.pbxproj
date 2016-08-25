@@ -83,6 +83,8 @@
 		04BB3E911D4476C5002CBF27 /* EHSiteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB3E901D4476C5002CBF27 /* EHSiteButton.m */; };
 		04BBBDAC1D65937600577DAB /* WSDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBBDAB1D65937600577DAB /* WSDropMenuView.m */; };
 		04C157601D6E8D8E0036E5A1 /* EHAgentInfoTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1575F1D6E8D8E0036E5A1 /* EHAgentInfoTableViewModel.m */; };
+		04C157631D6E987F0036E5A1 /* EHAgentInfoNetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C157621D6E987F0036E5A1 /* EHAgentInfoNetViewModel.m */; };
+		04C157661D6E9E850036E5A1 /* EHSkimedAgentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C157651D6E9E850036E5A1 /* EHSkimedAgentViewModel.m */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
 		04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */; };
@@ -284,6 +286,10 @@
 		04BBBDAB1D65937600577DAB /* WSDropMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDropMenuView.m; sourceTree = "<group>"; };
 		04C1575E1D6E8D8E0036E5A1 /* EHAgentInfoTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfoTableViewModel.h; sourceTree = "<group>"; };
 		04C1575F1D6E8D8E0036E5A1 /* EHAgentInfoTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfoTableViewModel.m; sourceTree = "<group>"; };
+		04C157611D6E987F0036E5A1 /* EHAgentInfoNetViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfoNetViewModel.h; sourceTree = "<group>"; };
+		04C157621D6E987F0036E5A1 /* EHAgentInfoNetViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfoNetViewModel.m; sourceTree = "<group>"; };
+		04C157641D6E9E850036E5A1 /* EHSkimedAgentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSkimedAgentViewModel.h; sourceTree = "<group>"; };
+		04C157651D6E9E850036E5A1 /* EHSkimedAgentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSkimedAgentViewModel.m; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04C3A8D61D31FDD9003203C0 /* PDFImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFImage.framework; path = ../../../../../Downloads/PDFImage.framework; sourceTree = "<group>"; };
 		04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayhouseCell.h; sourceTree = "<group>"; };
@@ -784,6 +790,10 @@
 				047ED18F1D6DACE2008EC261 /* EHSocialShareViewModel.m */,
 				04C1575E1D6E8D8E0036E5A1 /* EHAgentInfoTableViewModel.h */,
 				04C1575F1D6E8D8E0036E5A1 /* EHAgentInfoTableViewModel.m */,
+				04C157611D6E987F0036E5A1 /* EHAgentInfoNetViewModel.h */,
+				04C157621D6E987F0036E5A1 /* EHAgentInfoNetViewModel.m */,
+				04C157641D6E9E850036E5A1 /* EHSkimedAgentViewModel.h */,
+				04C157651D6E9E850036E5A1 /* EHSkimedAgentViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1728,6 +1738,7 @@
 				048632081D3E238B00800B26 /* EHNetBusinessManager.m in Sources */,
 				047ED1901D6DACE2008EC261 /* EHSocialShareViewModel.m in Sources */,
 				04CBAE801D470035002BF215 /* EHTipsNavBottomLine.m in Sources */,
+				04C157631D6E987F0036E5A1 /* EHAgentInfoNetViewModel.m in Sources */,
 				04E9CFF51D4608110087BD70 /* EHAgentInfoCommunityCell.m in Sources */,
 				049AA07D1D5034D600761E3F /* FMDatabaseQueue.m in Sources */,
 				0465688B1D4B39DE001C9851 /* UIView+SDAutoLayout.m in Sources */,
@@ -1741,6 +1752,7 @@
 				04C8FDDD1D5426310081CE73 /* EHHomeAgentCell.m in Sources */,
 				04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */,
 				046A7C5E1D503E9600652296 /* JKDBHelper.m in Sources */,
+				04C157661D6E9E850036E5A1 /* EHSkimedAgentViewModel.m in Sources */,
 				049AA07E1D5034D600761E3F /* FMResultSet.m in Sources */,
 				0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */,
 				049AA07B1D5034D600761E3F /* FMDatabaseAdditions.m in Sources */,

@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "EHSearchResultCell.h"
 @class EHAgentInfo;
-@interface EHAgentInfoTableViewModel : NSObject<EHSearchResultCellDelegate,UITableViewDataSource>
+@interface EHAgentInfoTableViewModel : NSObject<EHSearchResultCellDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong) EHAgentInfo *agentInfo;
 @property (nonatomic,strong) id superVC;
