@@ -86,7 +86,6 @@
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <sections/>
                         <connections>
-                            <outlet property="dataSource" destination="iSZ-bj-OnQ" id="YR0-xK-yM7"/>
                             <outlet property="delegate" destination="iSZ-bj-OnQ" id="W5c-xb-tRi"/>
                         </connections>
                     </tableView>

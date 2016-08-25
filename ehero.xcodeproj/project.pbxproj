@@ -47,7 +47,6 @@
 		0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B86C1D3631A500C2D788 /* EHAgentInfo.m */; };
 		047EB7011D44894700D2F277 /* EHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EB7001D44894700D2F277 /* EHSearchViewController.m */; };
 		047ED1801D6D3DF6008EC261 /* EHSearchTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ED17F1D6D3DF6008EC261 /* EHSearchTableViewModel.m */; };
-		047ED1851D6D9059008EC261 /* EHHomeTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ED1841D6D9059008EC261 /* EHHomeTableDataSource.m */; };
 		047ED1901D6DACE2008EC261 /* EHSocialShareViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ED18F1D6DACE2008EC261 /* EHSocialShareViewModel.m */; };
 		047EF3871D39FE3D00E587BA /* EHAsiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EF3851D39FE3D00E587BA /* EHAsiaViewController.m */; };
 		047EF38A1D39FFEF00E587BA /* Tips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047EF3891D39FFEF00E587BA /* Tips.storyboard */; };
@@ -85,6 +84,8 @@
 		04C157601D6E8D8E0036E5A1 /* EHAgentInfoTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1575F1D6E8D8E0036E5A1 /* EHAgentInfoTableViewModel.m */; };
 		04C157631D6E987F0036E5A1 /* EHAgentInfoNetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C157621D6E987F0036E5A1 /* EHAgentInfoNetViewModel.m */; };
 		04C157661D6E9E850036E5A1 /* EHSkimedAgentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C157651D6E9E850036E5A1 /* EHSkimedAgentViewModel.m */; };
+		04C1576C1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1576B1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m */; };
+		04C1576F1D6EB31A0036E5A1 /* EHHomeTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1576E1D6EB31A0036E5A1 /* EHHomeTableViewModel.m */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
 		04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */; };
@@ -220,8 +221,6 @@
 		047EB7001D44894700D2F277 /* EHSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSearchViewController.m; sourceTree = "<group>"; };
 		047ED17E1D6D3DF6008EC261 /* EHSearchTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSearchTableViewModel.h; sourceTree = "<group>"; };
 		047ED17F1D6D3DF6008EC261 /* EHSearchTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSearchTableViewModel.m; sourceTree = "<group>"; };
-		047ED1831D6D9059008EC261 /* EHHomeTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHomeTableDataSource.h; sourceTree = "<group>"; };
-		047ED1841D6D9059008EC261 /* EHHomeTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHomeTableDataSource.m; sourceTree = "<group>"; };
 		047ED18E1D6DACE2008EC261 /* EHSocialShareViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSocialShareViewModel.h; sourceTree = "<group>"; };
 		047ED18F1D6DACE2008EC261 /* EHSocialShareViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSocialShareViewModel.m; sourceTree = "<group>"; };
 		047EF3841D39FE3D00E587BA /* EHAsiaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAsiaViewController.h; sourceTree = "<group>"; };
@@ -290,6 +289,10 @@
 		04C157621D6E987F0036E5A1 /* EHAgentInfoNetViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfoNetViewModel.m; sourceTree = "<group>"; };
 		04C157641D6E9E850036E5A1 /* EHSkimedAgentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSkimedAgentViewModel.h; sourceTree = "<group>"; };
 		04C157651D6E9E850036E5A1 /* EHSkimedAgentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSkimedAgentViewModel.m; sourceTree = "<group>"; };
+		04C1576A1D6EACFD0036E5A1 /* EHSiteSelectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSiteSelectDelegate.h; sourceTree = "<group>"; };
+		04C1576B1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSiteSelectDelegate.m; sourceTree = "<group>"; };
+		04C1576D1D6EB31A0036E5A1 /* EHHomeTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHomeTableViewModel.h; sourceTree = "<group>"; };
+		04C1576E1D6EB31A0036E5A1 /* EHHomeTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHomeTableViewModel.m; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04C3A8D61D31FDD9003203C0 /* PDFImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFImage.framework; path = ../../../../../Downloads/PDFImage.framework; sourceTree = "<group>"; };
 		04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayhouseCell.h; sourceTree = "<group>"; };
@@ -770,8 +773,10 @@
 		047ED1811D6D9031008EC261 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				047ED1831D6D9059008EC261 /* EHHomeTableDataSource.h */,
-				047ED1841D6D9059008EC261 /* EHHomeTableDataSource.m */,
+				04C1576A1D6EACFD0036E5A1 /* EHSiteSelectDelegate.h */,
+				04C1576B1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m */,
+				04C1576D1D6EB31A0036E5A1 /* EHHomeTableViewModel.h */,
+				04C1576E1D6EB31A0036E5A1 /* EHHomeTableViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1694,12 +1699,12 @@
 				04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */,
 				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
 				048E90761D476B46005B19BD /* EHWechatGroupDetailViewController.m in Sources */,
+				04C1576C1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m in Sources */,
 				04B87B611D5D8FA700D0C3A6 /* EHCookieOperation.m in Sources */,
 				04E9CFFA1D46082B0087BD70 /* EHAgentInfoCommentCell.m in Sources */,
 				04B4F43C1D5AF1E100C6D4F3 /* UIButton+GetWidth.m in Sources */,
 				047ED1801D6D3DF6008EC261 /* EHSearchTableViewModel.m in Sources */,
 				04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */,
-				047ED1851D6D9059008EC261 /* EHHomeTableDataSource.m in Sources */,
 				04716C0B1D35060B00E512EE /* AFURLSessionManager.m in Sources */,
 				04B0EFDF1D49A18100BE301B /* EHHouseDetailCell.m in Sources */,
 				04716BF21D34C70900E512EE /* EHNewsViewCell.m in Sources */,
@@ -1746,6 +1751,7 @@
 				04DA25E31D41E33000235C51 /* EHProfileViewController.m in Sources */,
 				0472DA531D37B48900CDE148 /* LBProgressHUD.m in Sources */,
 				042B43DC1D5322EE005FCFB0 /* EHHomeSearchBar.m in Sources */,
+				04C1576F1D6EB31A0036E5A1 /* EHHomeTableViewModel.m in Sources */,
 				04716BEE1D34A8E000E512EE /* EHTwoViewController.m in Sources */,
 				04C6054E1D62D35C00039217 /* EHHomePopView.m in Sources */,
 				04B0EFDB1D499DD600BE301B /* EHHouseDetailViewController.m in Sources */,

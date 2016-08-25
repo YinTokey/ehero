@@ -10,6 +10,10 @@
 
 @interface EHHomePopView : XTPopView
 
+
+
 + (instancetype)initPopView:(UIButton *)superButton SuperView:(UIView *)superView;
+
+
 
 @end

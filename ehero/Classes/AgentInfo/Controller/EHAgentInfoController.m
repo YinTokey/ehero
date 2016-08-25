@@ -32,7 +32,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *collectBtn;
 
 @property (nonatomic,strong) STModal *modal;
-
 @property (nonatomic,strong) EHSocialShareViewModel *socialViewModel;
 @property (nonatomic,strong) EHAgentInfoTableViewModel *agentInfoTableViewModel;
 @property (nonatomic,strong) EHAgentInfoNetViewModel *agentInfoNetViewModel;
@@ -60,11 +59,16 @@
     _modal.hideWhenTouchOutside = YES;
     
     //设置顶部分割线
-    EHTipsNavBottomLine *lineView = [EHTipsNavBottomLine initNavBottomLineWithController:self];
-    [self.navigationController.navigationBar addSubview:lineView];
+    [self.navigationController.navigationBar
+     addSubview:[EHTipsNavBottomLine initNavBottomLineWithController:self]];
 
     [self isCollected];
+    [self callCallBack];
+    [self initViewModels];
     
+}
+
+- (void)initViewModels{
     _socialViewModel = [[EHSocialShareViewModel alloc]init];
     _agentInfoTableViewModel = [[EHAgentInfoTableViewModel alloc]init];
     _agentInfoTableViewModel.agentInfo = self.agentInfo;
@@ -72,8 +76,6 @@
     
     self.tableView.dataSource = _agentInfoTableViewModel;
     self.tableView.delegate = _agentInfoTableViewModel;
-    
-    [self callCallBack];
     
     _agentInfoNetViewModel = [[EHAgentInfoNetViewModel alloc]init];
     
