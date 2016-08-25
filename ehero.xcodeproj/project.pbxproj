@@ -87,6 +87,7 @@
 		04C1576C1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1576B1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m */; };
 		04C1576F1D6EB31A0036E5A1 /* EHHomeTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1576E1D6EB31A0036E5A1 /* EHHomeTableViewModel.m */; };
 		04C157751D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C157741D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.m */; };
+		04C157781D6EC6D70036E5A1 /* EHHomeNetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C157771D6EC6D70036E5A1 /* EHHomeNetViewModel.m */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
 		04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */; };
@@ -296,6 +297,8 @@
 		04C1576E1D6EB31A0036E5A1 /* EHHomeTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHomeTableViewModel.m; sourceTree = "<group>"; };
 		04C157731D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAntiDisturbNetViewModel.h; sourceTree = "<group>"; };
 		04C157741D6EC3190036E5A1 /* EHAntiDisturbNetViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAntiDisturbNetViewModel.m; sourceTree = "<group>"; };
+		04C157761D6EC6D70036E5A1 /* EHHomeNetViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHomeNetViewModel.h; sourceTree = "<group>"; };
+		04C157771D6EC6D70036E5A1 /* EHHomeNetViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHomeNetViewModel.m; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04C3A8D61D31FDD9003203C0 /* PDFImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFImage.framework; path = ../../../../../Downloads/PDFImage.framework; sourceTree = "<group>"; };
 		04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayhouseCell.h; sourceTree = "<group>"; };
@@ -767,6 +770,8 @@
 				04C1576B1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m */,
 				04C1576D1D6EB31A0036E5A1 /* EHHomeTableViewModel.h */,
 				04C1576E1D6EB31A0036E5A1 /* EHHomeTableViewModel.m */,
+				04C157761D6EC6D70036E5A1 /* EHHomeNetViewModel.h */,
+				04C157771D6EC6D70036E5A1 /* EHHomeNetViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1709,6 +1714,7 @@
 				04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */,
 				0463EB0B1D5705B100C75B36 /* EHRegularExpression.m in Sources */,
 				042B43DF1D53231F005FCFB0 /* EHSearchBar.m in Sources */,
+				04C157781D6EC6D70036E5A1 /* EHHomeNetViewModel.m in Sources */,
 				04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */,
 				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
 				048E90761D476B46005B19BD /* EHWechatGroupDetailViewController.m in Sources */,

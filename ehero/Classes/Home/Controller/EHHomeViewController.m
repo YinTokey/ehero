@@ -101,6 +101,7 @@
     sourceArr = [NSMutableArray arrayWithObjects:@"img_00",@"img_01",@"img_02", nil];
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.tableView.frame.size.width - 10, ScreenHeight * 0.3) imageNamesGroup:sourceArr];
     cycleScrollView.autoScrollTimeInterval = 3.5;
+
     self.tableView.tableHeaderView = cycleScrollView;
 }
 
