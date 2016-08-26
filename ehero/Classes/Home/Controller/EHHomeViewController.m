@@ -29,7 +29,7 @@
 {
     /** 图片数组*/
     NSMutableArray *sourceArr;
-    
+    NSMutableArray *titleArr;
 }
 - (IBAction)siteBtnClick:(UIButton *)btn;
 - (IBAction)styleSel:(id)sender;
@@ -109,18 +109,25 @@
                                        delegate:self
                                placeholderImage:[UIImage imageNamed:@"home_placeholder"]];
     _cycleScrollView.imageURLStringsGroup = sourceArr;
+    _cycleScrollView.titlesGroup = titleArr;
+    _cycleScrollView.showPageControl = NO;
     self.tableView.tableHeaderView = _cycleScrollView;
 }
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
     NSLog(@"%d",index);
+    
     EHOfficialAccountController *officialAccountVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"OfficialAccountController"];
+    EHSlides *slide = _slidesArray[index];
+    
+    officialAccountVC.href = slide.href;
     [self.navigationController pushViewController:officialAccountVC animated:YES];
     
 }
 
 - (void)getSlides{
     sourceArr = [NSMutableArray array];
+    titleArr = [NSMutableArray array];
     
     [MBProgressHUD showMessage:@"正在加载图片" toView:self.view];
     [YTHttpTool get:slidesUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
@@ -131,6 +138,7 @@
         NSLog(@"%d",_slidesArray.count);
         for (EHSlides *slide in _slidesArray) {
             [sourceArr addObject:slide.image];
+            [titleArr addObject:slide.title];
         }
         [self setupHeaderView];
     } failure:^(NSError *error) {

@@ -10,4 +10,6 @@
 
 @interface EHOfficialAccountController : UIViewController
 
+@property (nonatomic,copy) NSString *href;
+
 @end
