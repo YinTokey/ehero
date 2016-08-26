@@ -12,17 +12,17 @@
 
 @implementation EHSocialShareViewModel
 
-- (void)shareWithIndex:(NSInteger)index idStr:(NSString *)idStr agentName:(NSString *)agentName{
+- (void)shareWithIndex:(NSInteger)index{
     //初始化分享图标
     UIImage *thumbImage = [UIImage imageNamed:@"share_icon"];
     OSMessage *msg=[[OSMessage alloc]init];
     //拼接分享页链接
-    NSString *link = [NSString stringWithFormat:@"http://ehero.cc/agents/%@",idStr];
-    msg.link = link;
+  //  NSString *link = [NSString stringWithFormat:@"http://ehero.cc/agents/%@",idStr];
+    msg.link = self.link;
     //链接标题
-    NSString *title = [NSString stringWithFormat:@"为您分享经纪人:%@",agentName];
-    msg.title = title;
-    msg.desc = @"大数据推荐最匹配的经纪人";
+   // NSString *title = [NSString stringWithFormat:@"为您分享经纪人:%@",agentName];
+    msg.title = self.title;
+    msg.desc = self.desc;
     //分享的图标
     msg.image = UIImagePNGRepresentation(thumbImage);
     

@@ -121,6 +121,7 @@
     EHSlides *slide = _slidesArray[index];
     
     officialAccountVC.href = slide.href;
+    officialAccountVC.title = slide.title;
     [self.navigationController pushViewController:officialAccountVC animated:YES];
     
 }

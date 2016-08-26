@@ -8,31 +8,46 @@
 
 #import "EHOfficialAccountController.h"
 #import <WebKit/WebKit.h>
+#import "ShareView.h"
+#import "EHSocialShareViewModel.h"
+#import <IDMPhotoBrowser.h>
+#import <MWPhotoBrowser.h>
 
-#define js  @"function addImgClickEvent() { \
+#define jsClick  @"function addImgClickEvent() { \
                 var imgs = document.getElementsByTagName('img'); \
                 for (var i = 0; i < imgs.length; ++i) { \
-                var img = imgs[i]; \
-                img.onclick = function () { \
-                window.location.href = 'hyb-image-preview:' + this.src; \
-                }; \
-                } \
+                    var img = imgs[i]; \
+                    img.onclick = function () { \
+                        window.location.href = 'hyb-image-preview:' + this.src; \
+                        }; \
+                    } \
                 }"
+
 
 @interface EHOfficialAccountController()<WKNavigationDelegate>
 
 @property (nonatomic,strong) WKWebView *webView;
+- (IBAction)shareBtnClick:(id)sender;
+- (IBAction)collectBtnClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *collectBtn;
+
+@property (nonatomic,strong) EHSocialShareViewModel *socialViewModel;
 
 @end
 
 @implementation EHOfficialAccountController
 {
     BOOL navFlag;
+    NSMutableArray *titleArray;
+    NSMutableArray *picArray;
 }
 
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    //跳转到下一界面的返回按钮样式
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
     
     _webView = [[WKWebView alloc]initWithFrame:self.view.frame];
     NSURL *url = [NSURL URLWithString:self.href];
@@ -43,7 +58,16 @@
     [_webView loadRequest:request];
     [self.view addSubview:_webView];
 
+    titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"微博",@"QQ好友", nil];
+    picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_weibo",@"share_qq",nil];
+    [self initViewModels];
     
+    
+}
+
+- (void)initViewModels{
+    _socialViewModel = [[EHSocialShareViewModel alloc]init];
+
 }
 
 
@@ -61,6 +85,8 @@
         NSString *src = [navigationAction.request.URL.absoluteString stringByReplacingOccurrencesOfString:@"hyb-image-preview:" withString:@""];
         if (src.length > 0) {
             NSLog(@"所点击的HTML中的img标签的图片的URL为：%@", src);
+            
+            [self gotoPhotoBrowser:src];
         }
     }
     
@@ -78,9 +104,11 @@
     [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
     NSLog(@"end load");
     //注入js代码
-    [self.webView evaluateJavaScript:js completionHandler:^(id Result , NSError * _Nullable error) {
+    [self.webView evaluateJavaScript:jsClick completionHandler:^(id Result , NSError * _Nullable error) {
 
      }];
+    
+    
     //执行js
     [self.webView evaluateJavaScript:@"addImgClickEvent();" completionHandler:^(id Result, NSError * error) {
         NSLog(@"c:%@",Result);
@@ -89,7 +117,30 @@
     
 }
 
+- (void)gotoPhotoBrowser:(NSString *)photoUrlString{
+//    NSURL *photoUrl = [NSURL URLWithString:photoUrlString];
+//    NSArray *photoArray = @[photoUrl];
+//    
+//    IDMPhotoBrowser *browser = [[IDMPhotoBrowser alloc]initWithPhotoURLs:photoArray];
+//    [self.navigationController pushViewController:browser animated:YES];
+    
+    MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+    
+}
 
 
+- (IBAction)shareBtnClick:(id)sender {
+    //分享界面弹窗
+    ShareView *share = [[ShareView alloc]initWithTitleArray:titleArray picArray:picArray];
+    [share showShareView];
+    [share currentIndexWasSelected:^(NSInteger index) {
+        _socialViewModel.desc = @" ";
+        _socialViewModel.title = self.title;
+        _socialViewModel.link = self.href;
+        [_socialViewModel shareWithIndex:index];
 
+    }];
+}
+- (IBAction)collectBtnClick:(id)sender {
+}
 @end

@@ -136,9 +136,10 @@
     ShareView *share = [[ShareView alloc]initWithTitleArray:titleArray picArray:picArray];
     [share showShareView];
     [share currentIndexWasSelected:^(NSInteger index) {
-        [_socialViewModel shareWithIndex:index
-                                   idStr:self.agentInfo.idStr
-                               agentName:self.agentInfo.name];
+        _socialViewModel.desc = @"大数据推荐最匹配的经纪人";
+        _socialViewModel.title = [NSString stringWithFormat:@"为您分享经纪人:%@",self.agentInfo.name];
+        _socialViewModel.link = [NSString stringWithFormat:@"http://ehero.cc/agents/%@",self.agentInfo.idStr];
+        [_socialViewModel shareWithIndex:index];
     }];
 }
 

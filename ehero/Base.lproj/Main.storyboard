@@ -1068,6 +1068,9 @@
                                     <rect key="frame" x="284" y="7" width="20" height="29"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Group"/>
+                                    <connections>
+                                        <action selector="shareBtnClick:" destination="UeG-9o-ttg" eventType="touchUpInside" id="ysg-Xj-YvY"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                             <barButtonItem style="plain" id="6Df-Dx-DJb">
@@ -1083,11 +1086,17 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Star 1"/>
                                     <state key="selected" image="Star 2"/>
+                                    <connections>
+                                        <action selector="collectBtnClick:" destination="UeG-9o-ttg" eventType="touchUpInside" id="CVX-HF-L05"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="collectBtn" destination="7gK-Uz-8Gn" id="Hqg-Xa-MQb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abh-Q3-MEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

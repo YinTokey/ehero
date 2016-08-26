@@ -10,6 +10,13 @@
 
 @interface EHSocialShareViewModel : NSObject
 
-- (void)shareWithIndex:(NSInteger)index idStr:(NSString *)idStr agentName:(NSString *)agentName;
+- (void)shareWithIndex:(NSInteger)index;
+
+
+@property (nonatomic,copy) NSString *link;
+@property (nonatomic,copy) NSString *title;
+@property (nonatomic,copy) NSString *desc;
+
+
 
 @end

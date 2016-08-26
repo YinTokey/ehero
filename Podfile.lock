@@ -1,8 +1,18 @@
 PODS:
+  - DACircularProgress (2.3.1)
+  - IDMPhotoBrowser (1.8.4):
+    - DACircularProgress
+    - pop
+    - SDWebImage
   - MBProgressHUD (0.9.2)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
+  - MWPhotoBrowser (2.1.2):
+    - DACircularProgress (~> 2.3)
+    - MBProgressHUD (~> 0.9)
+    - SDWebImage (!= 3.7.2, ~> 3.7)
   - OpenShare (0.0.1)
+  - pop (1.0.9)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -18,9 +28,11 @@ PODS:
   - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
+  - IDMPhotoBrowser
   - MBProgressHUD (~> 0.9.2)
   - MJExtension
   - MJRefresh
+  - MWPhotoBrowser
   - OpenShare
   - ReactiveCocoa (~> 2.5)
   - SDCycleScrollView
@@ -28,15 +40,19 @@ DEPENDENCIES:
   - SVProgressHUD
 
 SPEC CHECKSUMS:
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  IDMPhotoBrowser: b574fe3229754e701f32df271afbc4ac7e4e1997
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
   OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 2490e615dcb28e70d5a8a1b8e1f4c4f3793a0858
+PODFILE CHECKSUM: 059501a813b804d45b5e5827f4ea7d40f643b5c3
 
 COCOAPODS: 1.0.1
