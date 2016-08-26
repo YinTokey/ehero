@@ -9,6 +9,16 @@
 #import "EHOfficialAccountController.h"
 #import <WebKit/WebKit.h>
 
+#define js  @"function addImgClickEvent() { \
+                var imgs = document.getElementsByTagName('img'); \
+                for (var i = 0; i < imgs.length; ++i) { \
+                var img = imgs[i]; \
+                img.onclick = function () { \
+                window.location.href = 'hyb-image-preview:' + this.src; \
+                }; \
+                } \
+                }"
+
 @interface EHOfficialAccountController()<WKNavigationDelegate>
 
 @property (nonatomic,strong) WKWebView *webView;
@@ -16,10 +26,13 @@
 @end
 
 @implementation EHOfficialAccountController
+{
+    BOOL navFlag;
+}
+
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [LBProgressHUD showHUDto:self.view animated:NO];
     
     _webView = [[WKWebView alloc]initWithFrame:self.view.frame];
     NSURL *url = [NSURL URLWithString:self.href];
@@ -32,10 +45,12 @@
 
     
 }
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
-   
-    NSLog(@"star load");
 
+
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+    [LBProgressHUD showHUDto:self.view animated:NO];
+    NSLog(@"star load");
+    navFlag = YES;
 }
 
 
@@ -45,11 +60,16 @@
         // 获取原始图片的完整URL
         NSString *src = [navigationAction.request.URL.absoluteString stringByReplacingOccurrencesOfString:@"hyb-image-preview:" withString:@""];
         if (src.length > 0) {
-  
             NSLog(@"所点击的HTML中的img标签的图片的URL为：%@", src);
         }
     }
-    decisionHandler(WKNavigationActionPolicyAllow);
+    
+    if (navFlag) {
+        decisionHandler(WKNavigationActionPolicyCancel);
+    }else{
+        decisionHandler(WKNavigationActionPolicyAllow);
+    }
+    
 }
 
 
@@ -58,15 +78,7 @@
     [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
     NSLog(@"end load");
     //注入js代码
-    [self.webView evaluateJavaScript:@"function addImgClickEvent() { \
-     var imgs = document.getElementsByTagName('img'); \
-     for (var i = 0; i < imgs.length; ++i) { \
-     var img = imgs[i]; \
-     img.onclick = function () { \
-     window.location.href = 'hyb-image-preview:' + this.src; \
-     }; \
-     } \
-     }" completionHandler:^(id Result , NSError * _Nullable error) {
+    [self.webView evaluateJavaScript:js completionHandler:^(id Result , NSError * _Nullable error) {
 
      }];
     //执行js
