@@ -49,12 +49,38 @@
     if (cell==nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseId];
     }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     EHSlides *slide = self.collectedArticleArray[indexPath.row];
     cell.textLabel.text = slide.title;
     
     return cell;
 }
 
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewRowAction *action = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        //从数据库中删除对应的纪录
+        EHSlides *slide = self.collectedArticleArray[indexPath.row];
+        [slide deleteObject];
+        
+        //删除cell
+        [self.collectedArticleArray removeObjectAtIndex:indexPath.row];
+        [self.tableView reloadData];
+    }];
+    
+    
+    return @[action];
+}
+
+#pragma mark - 选择cell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    EHOfficialAccountController *officialAccountVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"OfficialAccountController"];
+    EHSlides *slide = self.collectedArticleArray[indexPath.row];
+    
+    officialAccountVC.slide = slide;
+    [self.navigationController pushViewController:officialAccountVC animated:YES];
+}
 
 
 @end
