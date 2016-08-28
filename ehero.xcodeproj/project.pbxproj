@@ -26,6 +26,7 @@
 		04667FAA1D49FE990051C446 /* STActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 04667FA31D49FE990051C446 /* STActionSheet.m */; };
 		04667FAB1D49FE990051C446 /* STAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04667FA61D49FE990051C446 /* STAlertView.m */; };
 		04667FAC1D49FE990051C446 /* STModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 04667FA81D49FE990051C446 /* STModal.m */; };
+		046738A01D72D80600DDE9BD /* EHCollectedArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0467389F1D72D80600DDE9BD /* EHCollectedArticleViewController.m */; };
 		046A7C5E1D503E9600652296 /* JKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 046A7C5B1D503E9600652296 /* JKDBHelper.m */; };
 		046A7C5F1D503E9600652296 /* JKDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046A7C5D1D503E9600652296 /* JKDBModel.m */; };
 		046A7C6A1D50659B00652296 /* EHCollectedAgentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046A7C671D50659B00652296 /* EHCollectedAgentsViewController.m */; };
@@ -183,6 +184,8 @@
 		04667FA71D49FE990051C446 /* STModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STModal.h; sourceTree = "<group>"; };
 		04667FA81D49FE990051C446 /* STModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STModal.m; sourceTree = "<group>"; };
 		04667FA91D49FE990051C446 /* STModalUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STModalUtil.h; sourceTree = "<group>"; };
+		0467389E1D72D80600DDE9BD /* EHCollectedArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCollectedArticleViewController.h; sourceTree = "<group>"; };
+		0467389F1D72D80600DDE9BD /* EHCollectedArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCollectedArticleViewController.m; sourceTree = "<group>"; };
 		046A7C5A1D503E9600652296 /* JKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBHelper.h; sourceTree = "<group>"; };
 		046A7C5B1D503E9600652296 /* JKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBHelper.m; sourceTree = "<group>"; };
 		046A7C5C1D503E9600652296 /* JKDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBModel.h; sourceTree = "<group>"; };
@@ -640,6 +643,47 @@
 			path = STAlertView;
 			sourceTree = "<group>";
 		};
+		046738911D72CB6C00DDE9BD /* CollectedArticle */ = {
+			isa = PBXGroup;
+			children = (
+				046738921D72CB6C00DDE9BD /* Controller */,
+				046738931D72CB6C00DDE9BD /* Model */,
+				046738941D72CB6C00DDE9BD /* View */,
+				046738951D72CB6C00DDE9BD /* ViewModel */,
+			);
+			path = CollectedArticle;
+			sourceTree = "<group>";
+		};
+		046738921D72CB6C00DDE9BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0467389E1D72D80600DDE9BD /* EHCollectedArticleViewController.h */,
+				0467389F1D72D80600DDE9BD /* EHCollectedArticleViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		046738931D72CB6C00DDE9BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		046738941D72CB6C00DDE9BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		046738951D72CB6C00DDE9BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		046A7C591D503E9600652296 /* DBModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -654,6 +698,7 @@
 		046A7C631D50659B00652296 /* sub */ = {
 			isa = PBXGroup;
 			children = (
+				046738911D72CB6C00DDE9BD /* CollectedArticle */,
 				04B857221D57319300BEA6CB /* SkimedAgents */,
 				046A7C641D50659B00652296 /* CollectedAgents */,
 			);
@@ -1766,6 +1811,7 @@
 				042B43DF1D53231F005FCFB0 /* EHSearchBar.m in Sources */,
 				04C157781D6EC6D70036E5A1 /* EHHomeNetViewModel.m in Sources */,
 				04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */,
+				046738A01D72D80600DDE9BD /* EHCollectedArticleViewController.m in Sources */,
 				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
 				048E90761D476B46005B19BD /* EHWechatGroupDetailViewController.m in Sources */,
 				04C1576C1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m in Sources */,

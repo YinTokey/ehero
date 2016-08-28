@@ -14,18 +14,22 @@
 #import "EHCollectedAgentsViewController.h"
 #import "EHSkimedAgentsViewController.h"
 #import <MBProgressHUD.h>
+#import "EHCollectedArticleViewController.h"
+
 
 @interface EHProfileViewController ()<MFMailComposeViewControllerDelegate>
 - (IBAction)skimedAgentsClick:(id)sender;
 - (IBAction)skimedHouseClick:(id)sender;
 - (IBAction)tipsClick:(id)sender;
 - (IBAction)agentsClick:(id)sender;
+- (IBAction)articleClick:(id)sender;
 - (IBAction)houseClick:(id)sender;
 - (IBAction)contactClick:(id)sender;
 - (IBAction)aboutClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *tips;
 @property (weak, nonatomic) IBOutlet UIButton *agents;
 @property (weak, nonatomic) IBOutlet UIButton *house;
+@property (weak, nonatomic) IBOutlet UIButton *article;
 @property (weak, nonatomic) IBOutlet UIButton *contact;
 @property (weak, nonatomic) IBOutlet UIButton *about;
 @property (weak, nonatomic) IBOutlet UIButton *recentAgents;
@@ -71,7 +75,8 @@
     self.contact.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
     self.about.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     self.about.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
-    
+    self.article.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    self.article.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
 }
 
 - (void)fitScreen{
@@ -107,6 +112,12 @@
 - (IBAction)agentsClick:(id)sender {
     EHCollectedAgentsViewController *collectedAgentsVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"CollectedAgentsViewController"];
     [self.navigationController pushViewController:collectedAgentsVC animated:YES];
+}
+
+- (IBAction)articleClick:(id)sender {
+    EHCollectedArticleViewController *collectedArticleVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"CollectedArticleViewController"];
+    [self.navigationController pushViewController:collectedArticleVC animated:YES];
+    
 }
 
 - (IBAction)houseClick:(id)sender {

@@ -49,6 +49,8 @@
     
     self.title = self.slide.title;
     
+    [self isCollected];
+    
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
     
@@ -155,5 +157,15 @@
     }
 }
 
-
+- (void)isCollected{
+    NSString *sqlForName = [NSString stringWithFormat:@" WHERE title = '%@' ",self.slide.title];
+    EHSlides *slideExisted = [EHSlides findFirstByCriteria:sqlForName];
+    
+    if (slideExisted == nil) {
+        self.collectBtn.selected = NO;
+    }else{
+        self.collectBtn.selected = YES;
+    }
+    
+}
 @end
