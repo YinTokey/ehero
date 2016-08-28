@@ -68,6 +68,7 @@
     
 }
 
+
 - (void)initViewModels{
     _socialViewModel = [[EHSocialShareViewModel alloc]init];
     _agentInfoTableViewModel = [[EHAgentInfoTableViewModel alloc]init];
@@ -81,6 +82,10 @@
     
     _skimedAgentViewModel = [[EHSkimedAgentViewModel alloc]init];
     [_skimedAgentViewModel skimedAndSaveWithAgentInfo:self.agentInfo];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [self.tableView reloadData];
 }
 
 # pragma mark - searchResultCellDelegate
@@ -174,8 +179,10 @@
     EHAgentInfo *collectedAgentExisted = [EHAgentInfo findFirstByCriteria:sqlForName];
     
     if (collectedAgentExisted == nil) {
+        selectedFlag = NO;
         self.collectBtn.selected = NO;
     }else{
+        selectedFlag = YES;
         self.collectBtn.selected = YES;
     }
     

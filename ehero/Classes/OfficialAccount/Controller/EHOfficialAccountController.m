@@ -146,14 +146,16 @@
 - (IBAction)collectBtnClick:(id)sender {
     selectedFlag = !selectedFlag;
     if (selectedFlag) {
-        [self.slide save];
+        
         self.collectBtn.selected = YES;
         [MBProgressHUD showSuccess:@"收藏成功" toView:self.view];
+        [self.slide save];
                 
     }else{
-        [self.slide deleteObject];
+        
         self.collectBtn.selected = NO;
         [MBProgressHUD showSuccess:@"取消收藏" toView:self.view];
+        [self.slide deleteObject];
     }
 }
 
@@ -162,8 +164,10 @@
     EHSlides *slideExisted = [EHSlides findFirstByCriteria:sqlForName];
     
     if (slideExisted == nil) {
+        selectedFlag = NO;
         self.collectBtn.selected = NO;
     }else{
+        selectedFlag = YES;
         self.collectBtn.selected = YES;
     }
     
