@@ -94,7 +94,7 @@
     if ([EHCookieOperation setCookie]) {
         NSLog(@"有cookie,设置成功，不用再验证");
         [self showCallAgentView];
-        [_agentInfoNetViewModel callAgentWithIdStr:self.agentInfo.idStr code:@" " failure:^{
+        [_agentInfoNetViewModel callAgentWithIdStr:self.agentInfo.idStr code:@"" failure:^{
             [_modal hide:YES];
          }];
     }else{

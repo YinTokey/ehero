@@ -10,10 +10,10 @@
 
 @implementation EHAntiDisturbNetViewModel
 
-- (void)callAgentWithPhoneText:(NSString *)phoneText super:(UIViewController *)superVC{
+- (void)callAgentWithPhoneText:(NSString *)phoneText super:(UIViewController *)superVC code:(NSString *)code{
 
     NSDictionary *helper =  @{@"from":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
-                              @"code":@" ",
+                              @"code":code,
                               @"to":phoneText};
     
     NSDictionary *param = @{@"helper":helper};

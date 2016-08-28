@@ -23,11 +23,16 @@
     
     self.tableView.backgroundColor = RGB(241, 243, 245);
     self.title = @"最近浏览的经纪人";
-    //从数据库获取数据,数组反转输出
-    self.skimedAgentsArr = [[[EHSkimedAgentInfo findAll]reverseObjectEnumerator]allObjects];
+
     NSLog(@"第一条:%@",[EHSkimedAgentInfo findFirstByCriteria:@" WHERE name = '梁青' "]);
     //去掉分割线
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    //从数据库获取数据,数组反转输出
+    self.skimedAgentsArr = [[[EHSkimedAgentInfo findAll]reverseObjectEnumerator]allObjects];
+    [self.tableView reloadData];
 }
 
 

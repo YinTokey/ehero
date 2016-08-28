@@ -27,6 +27,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *verifiedView;
 @property (weak, nonatomic) IBOutlet UITextField *verifiedOtherPhone;
+@property (nonatomic,copy) NSString *code;
 - (IBAction)verifiedCallClick:(id)sender;
 
 @end
@@ -53,6 +54,8 @@
 
 - (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code{
     [modal hide:YES];
+    self.code = code;
+    
 }
 
 - (void)addGesture{
@@ -80,7 +83,12 @@
     //如果有cookie，读取cookie
     if ([EHCookieOperation setCookie]) {
         //打电话
-        [ _antiDisturbNetViewModel callAgentWithPhoneText:self.verifiedOtherPhone.text super:self];
+        if (_code.length > 2) {
+            [ _antiDisturbNetViewModel callAgentWithPhoneText:self.verifiedOtherPhone.text super:self code:self.code];
+        }else{
+            [ _antiDisturbNetViewModel callAgentWithPhoneText:self.verifiedOtherPhone.text super:self code:@" "];
+        }
+        
     }else{
         [self popVerifyView];
     }

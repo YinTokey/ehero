@@ -10,6 +10,6 @@
 
 @interface EHAntiDisturbNetViewModel : NSObject
 
-- (void)callAgentWithPhoneText:(NSString *)phoneText super:(UIViewController *)superVC;
+- (void)callAgentWithPhoneText:(NSString *)phoneText super:(UIViewController *)superVC code:(NSString *)code;
 
 @end

@@ -24,16 +24,19 @@
     
     self.tableView.backgroundColor = RGB(241, 243, 245);
     self.title = @"收藏的经纪人";
-    //从数据库获取数据
-    self.collectedAgentsArr = [NSMutableArray arrayWithArray:[EHAgentInfo findAll]];
     
     //去掉分割线
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
-    
-    NSLog(@"collected count %d",self.collectedAgentsArr.count);
+
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    //从数据库获取数据
+    self.collectedAgentsArr = [NSMutableArray arrayWithArray:[EHAgentInfo findAll]];
+    [self.tableView reloadData];
 }
 
 

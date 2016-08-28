@@ -23,12 +23,23 @@
     [super viewDidLoad];
     
     //从数据库获取数据
-    self.collectedArticleArray = [NSMutableArray arrayWithArray:[EHSlides findAll]];
+ //   self.collectedArticleArray = [NSMutableArray arrayWithArray:[EHSlides findAll]];
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
+    
+//    @weakify(self);
+//    [RACObserve(self, collectedArticleArray) subscribeNext:^(id x) {
+//        
+//        @strongify(self);
+//        [self.tableView reloadData];
+//        
+//    }];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    //从数据库获取数据
+    self.collectedArticleArray = [NSMutableArray arrayWithArray:[EHSlides findAll]];
     [self.tableView reloadData];
 }
 
