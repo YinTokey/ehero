@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EHSlides.h"
 
 @interface EHOfficialAccountController : UIViewController
 
-@property (nonatomic,copy) NSString *href;
+
+@property (nonatomic,strong) EHSlides *slide;
 
 
 @end

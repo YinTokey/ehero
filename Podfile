@@ -8,7 +8,6 @@ pod 'OpenShare'
 pod 'SVProgressHUD'
 pod 'MBProgressHUD','~>0.9.2' 
 pod 'ReactiveCocoa', '~> 2.5'
-pod 'IDMPhotoBrowser'
 pod 'MWPhotoBrowser'
 #pod 'WebViewJavascriptBridge', '~> 5.0'
 end

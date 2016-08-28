@@ -10,7 +10,6 @@
 #import <WebKit/WebKit.h>
 #import "ShareView.h"
 #import "EHSocialShareViewModel.h"
-#import <IDMPhotoBrowser.h>
 #import <MWPhotoBrowser.h>
 
 #define jsClick  @"function addImgClickEvent() { \
@@ -37,20 +36,24 @@
 
 @implementation EHOfficialAccountController
 {
-    BOOL navFlag;
+    BOOL starLoadFlag;
+    BOOL selectedFlag;
     NSMutableArray *titleArray;
     NSMutableArray *picArray;
+    
 }
 
 
 - (void)viewDidLoad{
     [super viewDidLoad];
     
+    self.title = self.slide.title;
+    
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
     
     _webView = [[WKWebView alloc]initWithFrame:self.view.frame];
-    NSURL *url = [NSURL URLWithString:self.href];
+    NSURL *url = [NSURL URLWithString:self.slide.href];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
@@ -74,7 +77,7 @@
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
     [LBProgressHUD showHUDto:self.view animated:NO];
     NSLog(@"star load");
-    navFlag = YES;
+    starLoadFlag = YES;
 }
 
 
@@ -90,7 +93,7 @@
         }
     }
     
-    if (navFlag) {
+    if (starLoadFlag) {
         decisionHandler(WKNavigationActionPolicyCancel);
     }else{
         decisionHandler(WKNavigationActionPolicyAllow);
@@ -107,8 +110,6 @@
     [self.webView evaluateJavaScript:jsClick completionHandler:^(id Result , NSError * _Nullable error) {
 
      }];
-    
-    
     //执行js
     [self.webView evaluateJavaScript:@"addImgClickEvent();" completionHandler:^(id Result, NSError * error) {
         NSLog(@"c:%@",Result);
@@ -118,13 +119,12 @@
 }
 
 - (void)gotoPhotoBrowser:(NSString *)photoUrlString{
-//    NSURL *photoUrl = [NSURL URLWithString:photoUrlString];
-//    NSArray *photoArray = @[photoUrl];
-//    
-//    IDMPhotoBrowser *browser = [[IDMPhotoBrowser alloc]initWithPhotoURLs:photoArray];
-//    [self.navigationController pushViewController:browser animated:YES];
     
-    MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+     NSURL *photoUrl = [NSURL URLWithString:photoUrlString];
+     NSArray *photoArray = @[[MWPhoto photoWithURL:photoUrl]];
+     MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithPhotos:photoArray];
+     [self.navigationController pushViewController:browser animated:YES];
+    
     
 }
 
@@ -135,12 +135,25 @@
     [share showShareView];
     [share currentIndexWasSelected:^(NSInteger index) {
         _socialViewModel.desc = @" ";
-        _socialViewModel.title = self.title;
-        _socialViewModel.link = self.href;
+        _socialViewModel.title = self.slide.title;
+        _socialViewModel.link = self.slide.href;
         [_socialViewModel shareWithIndex:index];
 
     }];
 }
 - (IBAction)collectBtnClick:(id)sender {
+    selectedFlag = !selectedFlag;
+    if (selectedFlag) {
+        [self.slide save];
+        self.collectBtn.selected = YES;
+        [MBProgressHUD showSuccess:@"收藏成功" toView:self.view];
+                
+    }else{
+        [self.slide deleteObject];
+        self.collectBtn.selected = NO;
+        [MBProgressHUD showSuccess:@"取消收藏" toView:self.view];
+    }
 }
+
+
 @end

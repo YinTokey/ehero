@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface EHSlides : NSObject
+#import "JKDBModel.h"
+@interface EHSlides : JKDBModel
 
 @property (nonatomic,copy) NSString *title;
 

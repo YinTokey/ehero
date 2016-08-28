@@ -119,9 +119,8 @@
     
     EHOfficialAccountController *officialAccountVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"OfficialAccountController"];
     EHSlides *slide = _slidesArray[index];
-    
-    officialAccountVC.href = slide.href;
-    officialAccountVC.title = slide.title;
+    officialAccountVC.slide = slide;
+
     [self.navigationController pushViewController:officialAccountVC animated:YES];
     
 }

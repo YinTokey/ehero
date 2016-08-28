@@ -17,6 +17,16 @@
 
 @implementation EHHomeAgentCell
 
+- (void)drawRect:(CGRect)rect{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    //上分割线，
+    CGContextSetStrokeColorWithColor(context,RGB(241, 243, 245).CGColor);
+    CGRect topRect = CGRectMake(0, 0, rect.size.width , 8);
+    CGContextStrokeRect(context,topRect);
+    CGContextSetFillColorWithColor(context, RGB(241, 243, 245).CGColor);
+    CGContextFillRect(context,topRect);
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
