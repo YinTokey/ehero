@@ -29,6 +29,7 @@
 
 @property (nonatomic,strong) NSMutableArray *searchResultArr;
 
+@property (weak, nonatomic) IBOutlet UIView *mask;
 @property (weak, nonatomic) IBOutlet UIImageView *line1;
 @property (weak, nonatomic) IBOutlet UIImageView *line2;
 @property (weak, nonatomic) IBOutlet UITextView *commentView;
@@ -62,8 +63,6 @@
     self.commentView.delegate = self;
     //textview从顶开始显示
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    [self setInitView];
     
     self.searchBar.delegate = self;
     //联网状态监测
@@ -100,31 +99,12 @@
     
 }
 
-# pragma mark -初始状态，控件隐藏
-- (void)setInitView{
-    
-    
-    self.line1.hidden = YES;
-    self.line2.hidden = YES;
-    self.commentView.hidden = YES;
-    self.txImageView.hidden = YES;
-    self.name.hidden = YES;
-    self.position.hidden = YES;
-    self.rates.hidden = YES;
-    self.negativeComment.hidden = YES;
-    self.moderateComment.hidden = YES;
-    self.highPraise.hidden = YES;
-    self.commitBtn.hidden = YES;
-    self.position.backgroundColor = RGB(234, 243, 248);
-
-}
 
 - (void)setCornerRadius{
     self.commentView.layer.borderColor = RGB(150,209,250).CGColor;
     self.commentView.layer.borderWidth = 1;
     self.commentView.layer.cornerRadius = 5;
     self.commentView.layer.masksToBounds = YES;
-
 }
 
 - (void)addGesture{
@@ -215,17 +195,17 @@
 # pragma mark － 搜索点击
 - (void)searchClick{
     [LBProgressHUD showHUDto:self.view animated:NO];
-    
     NSString *keyword = self.searchBar.text;
     //搜索经纪人
-    NSDictionary *param =@{@"arg":keyword};
-    [self searchWithURLString:searchAgentUrlStr Param:param];
+    NSDictionary *param =@{@"major":@"agents",
+                           @"arg":keyword};
+    [self searchWithURLString:searchAreaUrlStr Param:param];
     
 }
 # pragma mark - 搜索方法
 - (void)searchWithURLString:(NSString *)urlString Param:(NSDictionary *)param{
     
-    [YTHttpTool get:urlString params:param success:^(NSURLSessionTask *task,id responseObj) {
+    [YTHttpTool post:urlString params:param success:^(NSURLSessionTask *task,id responseObj) {
         //json转模型
         self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
         //如果找到经纪人，则取消控件的隐藏
@@ -242,7 +222,6 @@
     } failure:^(NSError *error) {
         NSLog(@"失败");
     }];
-    
 }
 #pragma mark - 搜索结果检测
 - (BOOL)searchStatusTest{
@@ -272,18 +251,7 @@
 }
 #pragma mark - 取消控件的隐藏
 - (void)cancelHidden{
-    self.line1.hidden = NO;
-    self.line2.hidden = NO;
-    self.commentView.hidden = NO;
-    self.txImageView.hidden = NO;
-    self.name.hidden = NO;
-    self.position.hidden = NO;
-    self.rates.hidden = NO;
-    self.negativeComment.hidden = NO;
-    self.moderateComment.hidden = NO;
-    self.highPraise.hidden = NO;
-    self.commitBtn.hidden = NO;
-
+    self.mask.hidden = YES;
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView{
@@ -294,7 +262,6 @@
 - (void)textViewDidEndEditing:(UITextView *)textView{
     self.view.frame =CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
 }
-
 
 
 - (IBAction)highPriseClick:(id)sender {

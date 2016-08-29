@@ -998,6 +998,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3SA-62-kRY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1042,6 +1046,7 @@
                         <outlet property="highPraise" destination="6EW-6a-Fp4" id="2Yk-73-AIz"/>
                         <outlet property="line1" destination="I2g-DU-1EW" id="83E-4M-zhI"/>
                         <outlet property="line2" destination="S5A-3E-SAg" id="u54-xh-aiL"/>
+                        <outlet property="mask" destination="3SA-62-kRY" id="oG5-6C-FVb"/>
                         <outlet property="moderateComment" destination="uvn-nz-Khz" id="zBo-Us-qrG"/>
                         <outlet property="name" destination="XJJ-f2-WCY" id="sRq-ZL-SYK"/>
                         <outlet property="negativeComment" destination="ekR-WM-unE" id="WUV-Ok-5mb"/>

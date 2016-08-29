@@ -50,7 +50,7 @@
 # pragma mark - 搜索方法
 - (void)searchWithURLString:(NSString *)urlString Param:(NSDictionary *)param{
     
-    [YTHttpTool get:urlString params:param success:^(NSURLSessionTask *task, id responseObj) {
+    [YTHttpTool post:urlString params:param success:^(NSURLSessionTask *task, id responseObj) {
         //json转模型
         self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
         [self searchStatusTest];
