@@ -13,15 +13,25 @@
 #import "STModal.h"
 #import "EHVerifyView.h"
 #import "EHCookieOperation.h"
+
+#import "EHChangeOffsetViewModel.h"
+#import "EHCommentAgentNetViewModel.h"
+
 @interface EHCommentAgentViewController ()<UITextFieldDelegate,UITextViewDelegate,EHVerifyViewDelegate>
 {
     STModal *modal;
     EHVerifyView *verifyView;
 }
+
+@property (nonatomic,strong) EHChangeOffsetViewModel *changeOffsetViewModel;
+@property (nonatomic,strong) EHCommentAgentNetViewModel *commentAgentNetViewModel;
+
+
+@property (nonatomic,strong) NSMutableArray *searchResultArr;
+
 @property (weak, nonatomic) IBOutlet UIImageView *line1;
 @property (weak, nonatomic) IBOutlet UIImageView *line2;
 @property (weak, nonatomic) IBOutlet UITextView *commentView;
-- (IBAction)commitBtnClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *txImageView;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *position;
@@ -32,11 +42,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *commitBtn;
 @property (weak, nonatomic) IBOutlet UITextField *searchBar;
 
-@property (nonatomic,strong) NSMutableArray *searchResultArr;
 - (IBAction)highPriseClick:(id)sender;
 - (IBAction)moderateClick:(id)sender;
 - (IBAction)negativeClick:(id)sender;
-
+- (IBAction)commitBtnClick:(id)sender;
 
 @end
 
@@ -65,6 +74,13 @@
     modal.hideWhenTouchOutside = YES;
     
     [self setupNavBar];
+    
+    [self initViewModels];
+}
+
+- (void)initViewModels{
+    _changeOffsetViewModel = [[EHChangeOffsetViewModel alloc]init];
+    _commentAgentNetViewModel = [[EHCommentAgentNetViewModel alloc]init];
 }
 
 - (void)setupNavBar{
@@ -83,7 +99,6 @@
     [[self navigationController]popViewControllerAnimated:YES];
     
 }
-
 
 # pragma mark -初始状态，控件隐藏
 - (void)setInitView{
@@ -133,7 +148,12 @@
         if (commentKind.length < 2) {
             [MBProgressHUD showNormalMessage:@"请选择评价级别" toView:self.view];
         }else{
-            [self submitComment];
+            EHAgentInfo *agentInfo = [self.searchResultArr firstObject];
+            [agentInfo getIdStringFromDictionary];
+            [_commentAgentNetViewModel submitWithText:self.commentView.text
+                                                 Kind:commentKind
+                                                idStr:agentInfo.idStr
+                                            superView:self.view];
         }
         
     }else{
@@ -163,27 +183,6 @@
     [defaults synchronize];
     
     
-}
-
-- (void)submitComment{
-    NSDictionary *comment = @{@"author":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
-                              @"kind":commentKind,
-                              @"text":self.commentView.text};
-    
-    EHAgentInfo *agentInfo = [self.searchResultArr firstObject];
-    [agentInfo getIdStringFromDictionary];
-    NSDictionary *param = @{@"agent_id":agentInfo.idStr,
-                            @"comment":comment};
-
-    [YTHttpTool post:commentAgentUrlStr params:param  success:^(NSURLSessionDataTask *task,id responseObj) {
-        NSLog(@"success %@",responseObj);
-        NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
-        NSLog(@"responString %@",responStr);
-        [MBProgressHUD showSuccess:@"评论成功" toView:self.view];
-    } failure:^(NSError *error) {
-        [MBProgressHUD showSuccess:@"评论失败" toView:self.view];
-        NSLog(@"failed %@",error);
-    }];
 }
 
 
@@ -288,14 +287,7 @@
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView{
-    CGRect frame = textView.frame;
-    int offset = frame.origin.y + 0 - (self.view.frame.size.height - 263.0);//iPhone键盘高度216，iPad的为352,这里设成263更方便，并且考虑到搜狗的键盘比系统的键盘高一点
-    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
-    [UIView setAnimationDuration:0.5f];
-    //将视图的Y坐标向上移动offset个单位，以使下面腾出地方用于软键盘的显示
-    if(offset < -15)
-    self.view.frame = CGRectMake(0.0f, offset, self.view.frame.size.width, self.view.frame.size.height);
-    [UIView commitAnimations];
+    [_changeOffsetViewModel changeOffsetWithTextView:textView superView:self.view];
 }
 
 //输入框编辑完成以后，将视图恢复到原始状态
