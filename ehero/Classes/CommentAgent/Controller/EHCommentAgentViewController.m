@@ -152,6 +152,17 @@
 
 - (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code{
     [modal hide:YES];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSDate *systemDate = [NSDate date];
+    NSDictionary *codeDic = @{@"date":systemDate,
+                              @"code":code};
+    
+    [defaults setObject:codeDic forKey:@"codeDic"];
+    [defaults synchronize];
+    
+    
 }
 
 - (void)submitComment{
