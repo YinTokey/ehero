@@ -7,7 +7,6 @@
 //
 
 #import "EHProfileViewController.h"
-#import <MessageUI/MessageUI.h>
 #import "AppDelegate.h"
 #import "MBProgressHUD+YT.h"
 #import "SDAutoLayout.h"
@@ -15,9 +14,9 @@
 #import "EHSkimedAgentsViewController.h"
 #import <MBProgressHUD.h>
 #import "EHCollectedArticleViewController.h"
+#import "EHMailViewModel.h"
 
-
-@interface EHProfileViewController ()<MFMailComposeViewControllerDelegate>
+@interface EHProfileViewController ()
 - (IBAction)skimedAgentsClick:(id)sender;
 - (IBAction)skimedHouseClick:(id)sender;
 - (IBAction)tipsClick:(id)sender;
@@ -36,7 +35,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *recentHouses;
 @property (weak, nonatomic) IBOutlet UIImageView *icon;
 
-@property (nonatomic,strong)UIButton *ttt;
+@property (nonatomic,strong)EHMailViewModel *mailViewModel;
 
 @end
 
@@ -45,22 +44,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = RGB(241, 243, 245);
-
+    [self initViewModels];
     [self setupButtonsTextAlignment];
-    NSLog(@"%f",self.view.frame.size.height);
-    NSLog(@"%f",self.view.frame.size.width);
-    
-    NSLog(@"screen %f",[UIScreen mainScreen].bounds.size.height);
-    
+
     [self fitScreen];
     
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
-    
-//    UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(150, 150, 50, 50)];
-//    [self.view addSubview:bt];
-//    bt.backgroundColor = [UIColor redColor];
-//    self.ttt = bt;
+
     
 }
 
@@ -95,6 +86,10 @@
     
 }
 
+- (void)initViewModels{
+    _mailViewModel = [[EHMailViewModel alloc]init];
+    _mailViewModel.superVC = self;
+}
 
 - (IBAction)skimedAgentsClick:(id)sender {
 
@@ -134,78 +129,10 @@
 # pragma mark - 邮件推送
 -(void)sendEmail{
     if ([MFMailComposeViewController canSendMail]) { // 用户已设置邮件账户
-        [self sendEmailAction]; // 调用发送邮件的代码
+        [_mailViewModel sendEmailAction]; // 调用发送邮件的代码
     }else{
         [MBProgressHUD showNormalMessage:@"请设置邮箱帐号" toView:self.view];
     }
 }
-
-# pragma mark - MFMailComposeViewControllerDelegate的代理方法：
-- (void)sendEmailAction
-{
-    // 邮件服务器
-    MFMailComposeViewController *mailCompose = [[MFMailComposeViewController alloc] init];
-    // 设置邮件代理
-    [mailCompose setMailComposeDelegate:self];
-    // 设置邮件主题
-    [mailCompose setSubject:@"易房好介反馈"];
-    // 设置收件人
-    [mailCompose setToRecipients:@[@"ehero.cc@qq.com"]];
-    // 设置抄送人
-    //  [mailCompose setCcRecipients:@[@"YinjChen@163.com"]];
-    // 设置密抄送
-    //  [mailCompose setBccRecipients:@[@"348232068@qq.com"]];
-    /**
-     *  设置邮件的正文内容
-     */
-    NSString *emailContent = @"";
-    // 是否为HTML格式
-    [mailCompose setMessageBody:emailContent isHTML:NO];
-    // 如使用HTML格式，则为以下代码
-    //	[mailCompose setMessageBody:@"<html><body><p>Hello</p><p>World！</p></body></html>" isHTML:YES];
-    /**
-     *  添加附件
-     */
-    //    UIImage *image = [UIImage imageNamed:@"image"];
-    //    NSData *imageData = UIImagePNGRepresentation(image);
-    //    [mailCompose addAttachmentData:imageData mimeType:@"" fileName:@"custom.png"];
-    //    NSString *file = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"pdf"];
-    //    NSData *pdf = [NSData dataWithContentsOfFile:file];
-    //    [mailCompose addAttachmentData:pdf mimeType:@"" fileName:@"7天精通IOS233333"];
-    // 弹出邮件发送视图
-    [self presentViewController:mailCompose animated:YES completion:nil];
-    //[MBProgressHUD showNormalMessage:@"Set your email!" showDetailText:nil  toView:self.view];
-}
-
-
-- (void)mailComposeController:(MFMailComposeViewController *)controller
-          didFinishWithResult:(MFMailComposeResult)result
-                        error:(NSError *)error
-{
-    switch (result)
-    {
-        case MFMailComposeResultCancelled: // 用户取消编辑、
-            
-             [MBProgressHUD showNormalMessage:@"取消编辑" toView:self.view];
-            break;
-        case MFMailComposeResultSaved: // 用户保存邮件
-             [MBProgressHUD showNormalMessage:@"保存邮件" toView:self.view];
-            break;
-        case MFMailComposeResultSent: // 用户点击发送
-             [MBProgressHUD showSuccess:@"发送成功" toView:self.view];
-            //  NSLog(@"Mail sent...");
-            break;
-        case MFMailComposeResultFailed: // 用户尝试保存或发送邮件失败
-            //  NSLog(@"Mail send errored: %@...", [error localizedDescription]);
-            [MBProgressHUD showError:@"发送失败"];
-            break;
-    }
-    
-    // 关闭邮件发送视图
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-
 
 @end

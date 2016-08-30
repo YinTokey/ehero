@@ -21,8 +21,6 @@ window.location.href = 'hyb-image-preview:' + this.src; \
 
 @interface EHOfficialViewModel : NSObject<WKNavigationDelegate>
 
-//@property (nonatomic,strong) UIView *superView;
-@property (nonatomic,strong) WKWebView *webView;
 @property (nonatomic,strong) UIViewController *superVC;
 
 
