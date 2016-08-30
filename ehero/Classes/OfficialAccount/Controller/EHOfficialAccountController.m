@@ -63,8 +63,8 @@
     [_webView loadRequest:request];
     [self.view addSubview:_webView];
 
-    titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"微博",@"QQ好友", nil];
-    picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_weibo",@"share_qq",nil];
+    titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"QQ空间",@"QQ好友", nil];
+    picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_qzone",@"share_qq",nil];
     [self initViewModels];
 
 }
@@ -125,8 +125,7 @@
      NSArray *photoArray = @[[MWPhoto photoWithURL:photoUrl]];
      MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithPhotos:photoArray];
      [self.navigationController pushViewController:browser animated:YES];
-    
-    
+
 }
 
 
@@ -134,6 +133,7 @@
     //分享界面弹窗
     ShareView *share = [[ShareView alloc]initWithTitleArray:titleArray picArray:picArray];
     [share showShareView];
+    _socialViewModel.shareToQzoneFlag = YES;
     [share currentIndexWasSelected:^(NSInteger index) {
         _socialViewModel.desc = @" ";
         _socialViewModel.title = self.slide.title;

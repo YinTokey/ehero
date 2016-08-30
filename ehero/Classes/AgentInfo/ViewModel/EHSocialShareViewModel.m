@@ -41,11 +41,19 @@
             NSLog(@"微信分享到朋友圈失败：\n%@\n%@",error,message);
         }];
     }else if (index == 102){
-        [OpenShare shareToWeibo:msg Success:^(OSMessage *message) {
-            NSLog(@"分享到微博成功");
-        } Fail:^(OSMessage *message, NSError *error) {
-            NSLog(@"分享到微博失败");
-        }];
+        if (self.shareToQzoneFlag == YES) {
+            [OpenShare shareToQQZone:msg Success:^(OSMessage *message) {
+                NSLog(@"分享到QQ空间成功");
+            } Fail:^(OSMessage *message, NSError *error) {
+                NSLog(@"分享到QQ空间失败");
+            }];
+        }else{
+            [OpenShare shareToWeibo:msg Success:^(OSMessage *message) {
+                NSLog(@"分享到微博成功");
+            } Fail:^(OSMessage *message, NSError *error) {
+                NSLog(@"分享到微博失败");
+            }];
+        }
     }else{
         
         msg.thumbnail = UIImagePNGRepresentation(thumbImage);
