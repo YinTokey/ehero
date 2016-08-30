@@ -22,6 +22,8 @@
 
 #import "EHSiteSelectDelegate.h"
 #import "EHHomeTableViewModel.h"
+#import "EHHomeNetViewModel.h"
+
 
 #import <MJExtension.h>
 
@@ -39,11 +41,11 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *siteBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *profileBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIButton *siteBtn;
-@property (nonatomic,strong) NSMutableArray *slidesArray;
+
 @property (nonatomic,strong) SDCycleScrollView *cycleScrollView;
 @property (nonatomic,strong) EHSiteSelectDelegate *siteSelectDelegate;
 @property (nonatomic,strong) EHHomeTableViewModel *homeTableViewModel;
-
+@property (nonatomic,strong) EHHomeNetViewModel *homeNetViewModel;
 
 @end
 
@@ -52,16 +54,13 @@
     NSInteger selectedFlag;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [YTHttpTool netCheck];
+    [self initViewModels];
+ 
     [self getSlides];
     [self setNavBar];
-
-    [self initViewModels];
-    [YTHttpTool netCheck];
-  
-    //[self setupHeaderView];
 }
 
 - (void)initViewModels{
@@ -73,6 +72,8 @@
     _homeTableViewModel.super = self;
     _homeTableViewModel.superVC = self;
 
+    _homeNetViewModel = [[EHHomeNetViewModel alloc]init];
+    
     self.tableView.dataSource = _homeTableViewModel;
     self.tableView.delegate = _homeTableViewModel;
 }
@@ -115,10 +116,9 @@
 }
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
-    NSLog(@"%d",index);
     
     EHOfficialAccountController *officialAccountVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"OfficialAccountController"];
-    EHSlides *slide = _slidesArray[index];
+    EHSlides *slide = _homeNetViewModel.slidesArray[index];
     officialAccountVC.slide = slide;
 
     [self.navigationController pushViewController:officialAccountVC animated:YES];
@@ -128,21 +128,10 @@
 - (void)getSlides{
     sourceArr = [NSMutableArray array];
     titleArr = [NSMutableArray array];
-    
-    [MBProgressHUD showMessage:@"正在加载图片" toView:self.view];
-    [YTHttpTool get:slidesUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
-        [MBProgressHUD hideHUDForView:self.view];
-        //数据处理
-        NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:nil] ;
-        _slidesArray = [EHSlides mj_objectArrayWithKeyValuesArray:responseArray];
-        NSLog(@"%d",_slidesArray.count);
-        for (EHSlides *slide in _slidesArray) {
-            [sourceArr addObject:slide.image];
-            [titleArr addObject:slide.title];
-        }
+    [_homeNetViewModel getSlidesWithSourceArr:sourceArr titleArr:titleArr superView:self.view success:^{
         [self setupHeaderView];
-    } failure:^(NSError *error) {
-        NSLog(@"failed");
+    } failure:^{
+        [MBProgressHUD showError:@"加载失败"];
     }];
 }
 
