@@ -66,9 +66,7 @@
     titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"微博",@"QQ好友", nil];
     picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_weibo",@"share_qq",nil];
     [self initViewModels];
-    
-    
-    
+
 }
 
 - (void)initViewModels{

@@ -126,7 +126,7 @@
     
     NSString *keyword = self.mysearchBar.text;
     //搜索地区
-    NSDictionary *param =@{@"major":@"rent",
+    NSDictionary *param =@{@"major":self.major,
                            @"arg":keyword};
     [self.tableViewModel searchWithURLString:searchAreaUrlStr Param:param];
 

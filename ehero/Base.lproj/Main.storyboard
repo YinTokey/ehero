@@ -139,18 +139,18 @@
                                 </state>
                                 <state key="selected" title="租赁"/>
                                 <connections>
-                                    <action selector="styleSel:" destination="iSZ-bj-OnQ" eventType="touchUpInside" id="WmE-9v-odR"/>
+                                    <action selector="majorBtnClick:" destination="iSZ-bj-OnQ" eventType="touchUpInside" id="rTR-jU-Mb3"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="majorBtn" destination="Lhh-UY-FAQ" id="BPh-Uo-zFN"/>
                         <outlet property="profileBarButtonItem" destination="e11-7Y-XBA" id="Y2n-W1-rRm"/>
                         <outlet property="siteBarButtonItem" destination="Jxl-ic-awF" id="NbO-ZG-II3"/>
                         <outlet property="siteBtn" destination="Y9z-Uv-fXY" id="ERk-bh-xS3"/>
                         <outlet property="styleBarButtonItem" destination="Lo6-dx-J6A" id="V35-Zf-TfH"/>
-                        <outlet property="styleBtn" destination="Lhh-UY-FAQ" id="PBo-Fj-asW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP1-S5-T8s" userLabel="First Responder" sceneMemberID="firstResponder"/>

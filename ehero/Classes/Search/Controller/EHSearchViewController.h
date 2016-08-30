@@ -10,6 +10,6 @@
 
 @interface EHSearchViewController : UITableViewController
 
-
+@property (nonatomic,copy)NSString  *major;
 
 @end

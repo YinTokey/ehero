@@ -34,10 +34,11 @@
     NSMutableArray *titleArr;
 }
 - (IBAction)siteBtnClick:(UIButton *)btn;
-- (IBAction)styleSel:(id)sender;
+- (IBAction)majorBtnClick:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *styleBarButtonItem;
 
-@property (weak, nonatomic) IBOutlet UIButton *styleBtn;
+@property (weak, nonatomic) IBOutlet UIButton *majorBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *siteBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *profileBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIButton *siteBtn;
@@ -51,12 +52,15 @@
 
 @implementation EHHomeViewController
 {
-    NSInteger selectedFlag;
+  //  NSInteger selectedFlag;
+    BOOL selectedFlag;
+    NSString *major;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [YTHttpTool netCheck];
+    major = @"sale";
     [self initViewModels];
  
     [self getSlides];
@@ -140,9 +144,22 @@
     [self setupPopView];
 }
 
+- (IBAction)majorBtnClick:(id)sender {
+    selectedFlag =! selectedFlag;
+    self.majorBtn.selected = YES;
+    if (selectedFlag) {
+        self.majorBtn.selected = YES;
+        major = @"rent";
+    }else{
+        self.majorBtn.selected = NO;
+        major = @"sale";
+    }
+}
+
 #pragma mark - textfield delegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
-        EHSearchViewController *searchVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"SearchViewController"];
+    EHSearchViewController *searchVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"SearchViewController"];
+    searchVC.major = major;
     [self.navigationController pushViewController:searchVC animated:YES];
 }
 
@@ -153,13 +170,5 @@
     [homePopView popView];
 }
 
-- (IBAction)styleSel:(id)sender {
-    selectedFlag ++;
-    self.styleBtn.selected  = YES;
-    if (selectedFlag %2 == 1) {
-        self.styleBtn.selected  = YES;
-    }else{
-        self.styleBtn.selected = NO;
-    }
-}
+
 @end
