@@ -169,12 +169,6 @@
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//
-//    EHHouseDetailViewController *houseDetailViewController = [[self storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
-//    [self.navigationController pushViewController:houseDetailViewController animated:YES];
-//
-//}
 
 - (IBAction)regionClick:(id)sender {
     if (canClickRegionBtn == YES) {
