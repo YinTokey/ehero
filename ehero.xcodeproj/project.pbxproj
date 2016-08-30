@@ -14,6 +14,7 @@
 		04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04348FAF1D2F4DFB00205130 /* buttonCell.m */; };
 		04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04360C891D3CDC2A007C8C17 /* YTHTTPSessionManager.m */; };
 		043A542B1D5EF2310021C390 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043A542A1D5EF2310021C390 /* CoreTelephony.framework */; };
+		044308191D75651700166036 /* EHOfficialViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044308181D75651700166036 /* EHOfficialViewModel.m */; };
 		0455CB281D48B90E00160C83 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C3A8D01D31E518003203C0 /* WebKit.framework */; };
 		0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */; };
 		0456A9E21D49E5640065DC5B /* EHCallAgentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */; };
@@ -165,6 +166,8 @@
 		04360C891D3CDC2A007C8C17 /* YTHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTHTTPSessionManager.m; sourceTree = "<group>"; };
 		0436DFEF1D4B35360073D4CA /* libSDAutoLayout.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDAutoLayout.a; path = "Pods/../build/Debug-iphoneos/SDAutoLayout/libSDAutoLayout.a"; sourceTree = "<group>"; };
 		043A542A1D5EF2310021C390 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		044308171D75651700166036 /* EHOfficialViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHOfficialViewModel.h; sourceTree = "<group>"; };
+		044308181D75651700166036 /* EHOfficialViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHOfficialViewModel.m; sourceTree = "<group>"; };
 		0456A9DE1D49E5390065DC5B /* EHCallAgentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCallAgentView.h; sourceTree = "<group>"; };
 		0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCallAgentView.m; sourceTree = "<group>"; };
 		0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCallAgentView.xib; sourceTree = "<group>"; };
@@ -995,6 +998,8 @@
 		04C1577D1D6ED5320036E5A1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				044308171D75651700166036 /* EHOfficialViewModel.h */,
+				044308181D75651700166036 /* EHOfficialViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1835,6 +1840,7 @@
 				04BBBDAC1D65937600577DAB /* WSDropMenuView.m in Sources */,
 				04B857281D5731D100BEA6CB /* EHSkimedAgentsViewController.m in Sources */,
 				04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */,
+				044308191D75651700166036 /* EHOfficialViewModel.m in Sources */,
 				0463EB0B1D5705B100C75B36 /* EHRegularExpression.m in Sources */,
 				042B43DF1D53231F005FCFB0 /* EHSearchBar.m in Sources */,
 				04C157781D6EC6D70036E5A1 /* EHHomeNetViewModel.m in Sources */,
