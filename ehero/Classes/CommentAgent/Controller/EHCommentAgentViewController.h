@@ -10,5 +10,7 @@
 
 @interface EHCommentAgentViewController : UIViewController
 
+- (void)storeCode:(NSString *)code;
+
 @end
 

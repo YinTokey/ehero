@@ -9,8 +9,18 @@
 #import <Foundation/Foundation.h>
 
 @interface EHCommentAgentNetViewModel : NSObject
+
+@property (nonatomic,strong) NSMutableArray *searchResultArr;
+
 - (void)submitWithText:(NSString *)text
                   Kind:(NSString *)commentKind
                  idStr:(NSString *)idStr
              superView:(UIView *)superView;
+
+- (void)searchWithURLString:(NSString *)urlString
+                      Param:(NSDictionary *)param
+                  superView:(UIView *)superView
+                    success:(void(^)())success
+                    failure:(void(^)())failure;
+
 @end

@@ -7,6 +7,9 @@
 //
 
 #import "EHCommentAgentNetViewModel.h"
+#import "EHAgentInfo.h"
+#import <MJExtension.h>
+
 
 @implementation EHCommentAgentNetViewModel
 
@@ -36,6 +39,32 @@
 
 }
 
+- (void)searchWithURLString:(NSString *)urlString
+                      Param:(NSDictionary *)param
+                  superView:(UIView *)superView
+                    success:(void(^)())success
+                    failure:(void(^)())failure
+{
+    
+    [YTHttpTool post:urlString params:param success:^(NSURLSessionTask *task,id responseObj) {
+        //json转模型
+        self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
+        //如果找到经纪人，则取消控件的隐藏
+        [LBProgressHUD hideAllHUDsForView:superView animated:NO];
+        if (_searchResultArr.count > 0) {
+            [MBProgressHUD showSuccess:@"为您找到经纪人" toView:superView];
+            success();
+        }else{
+            [MBProgressHUD showError:@"没有找到经纪人" toView:superView];
+            failure();
+        }
+
+    } failure:^(NSError *error) {
+        [LBProgressHUD hideAllHUDsForView:superView animated:NO];
+        [MBProgressHUD showSuccess:@"没有找到经纪人" toView:superView];
+        NSLog(@"失败");
+    }];
+}
 
 
 @end

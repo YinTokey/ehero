@@ -8,26 +8,25 @@
 
 #import "EHCommentAgentViewController.h"
 #import "EHAgentInfo.h"
-#import <MJExtension.h>
 #import "YTNetCommand.h"
 #import "STModal.h"
 #import "EHVerifyView.h"
 #import "EHCookieOperation.h"
 
-#import "EHChangeOffsetViewModel.h"
 #import "EHCommentAgentNetViewModel.h"
+#import "EHCommentAgentDelegate.h"
+#import "EHStorageViewModel.h"
 
-@interface EHCommentAgentViewController ()<UITextFieldDelegate,UITextViewDelegate,EHVerifyViewDelegate>
+@interface EHCommentAgentViewController ()<UITextFieldDelegate,EHVerifyViewDelegate>
 {
     STModal *modal;
     EHVerifyView *verifyView;
 }
 
-@property (nonatomic,strong) EHChangeOffsetViewModel *changeOffsetViewModel;
+@property (nonatomic,strong) EHCommentAgentDelegate *commentAgentDelegate;
 @property (nonatomic,strong) EHCommentAgentNetViewModel *commentAgentNetViewModel;
+@property (nonatomic,strong) EHStorageViewModel *storeViewModel;
 
-
-@property (nonatomic,strong) NSMutableArray *searchResultArr;
 
 @property (weak, nonatomic) IBOutlet UIView *mask;
 @property (weak, nonatomic) IBOutlet UIImageView *line1;
@@ -60,7 +59,10 @@
     [self setupCommentViewFrame];
     [self addGesture];
     [self setCornerRadius];
-    self.commentView.delegate = self;
+    
+    [self initViewModels];
+    
+    self.commentView.delegate = _commentAgentDelegate;
     //textview从顶开始显示
     self.automaticallyAdjustsScrollViewInsets = NO;
     
@@ -73,17 +75,18 @@
     modal.hideWhenTouchOutside = YES;
     
     [self setupNavBar];
-    
-    [self initViewModels];
+
 }
 
 - (void)initViewModels{
-    _changeOffsetViewModel = [[EHChangeOffsetViewModel alloc]init];
+    _commentAgentDelegate = [[EHCommentAgentDelegate alloc]init];
+    _commentAgentDelegate.superView = self.view;
     _commentAgentNetViewModel = [[EHCommentAgentNetViewModel alloc]init];
+    _storeViewModel = [[EHStorageViewModel alloc]init];
 }
 
 - (void)setupNavBar{
-//自定义返回按钮
+    //自定义返回按钮
     UIButton * leftBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     leftBtn.frame = CGRectMake(0, 0, 14, 23.6);
     [leftBtn setImage:[UIImage imageNamed:@"Back Arrow"] forState:UIControlStateNormal];
@@ -96,9 +99,7 @@
 
 - (void)NavPop{
     [[self navigationController]popViewControllerAnimated:YES];
-    
 }
-
 
 - (void)setCornerRadius{
     self.commentView.layer.borderColor = RGB(150,209,250).CGColor;
@@ -108,7 +109,6 @@
 }
 
 - (void)addGesture{
-    //添加手势相应，输textfield时，点击其他区域，键盘消失
     UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
     tapGr.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tapGr];
@@ -128,7 +128,7 @@
         if (commentKind.length < 2) {
             [MBProgressHUD showNormalMessage:@"请选择评价级别" toView:self.view];
         }else{
-            EHAgentInfo *agentInfo = [self.searchResultArr firstObject];
+            EHAgentInfo *agentInfo = [_commentAgentNetViewModel.searchResultArr firstObject];
             [agentInfo getIdStringFromDictionary];
             [_commentAgentNetViewModel submitWithText:self.commentView.text
                                                  Kind:commentKind
@@ -152,17 +152,7 @@
 
 - (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code{
     [modal hide:YES];
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    NSDate *systemDate = [NSDate date];
-    NSDictionary *codeDic = @{@"date":systemDate,
-                              @"code":code};
-    
-    [defaults setObject:codeDic forKey:@"codeDic"];
-    [defaults synchronize];
-    
-    
+    [_storeViewModel storeCode:code];
 }
 
 
@@ -182,16 +172,6 @@
     return YES;
 }
 
-#pragma mark - textview 点击回车 键盘消失
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
-
-    if ([text isEqualToString:@"\n"]) {
-        [textView resignFirstResponder];
-    }
-    
-    return YES;
-}
-
 # pragma mark － 搜索点击
 - (void)searchClick{
     [LBProgressHUD showHUDto:self.view animated:NO];
@@ -199,41 +179,19 @@
     //搜索经纪人
     NSDictionary *param =@{@"major":@"agents",
                            @"arg":keyword};
-    [self searchWithURLString:searchAreaUrlStr Param:param];
-    
+    [_commentAgentNetViewModel
+     searchWithURLString:searchAreaUrlStr
+                   Param:param superView:self.view
+                 success:^{
+                       EHAgentInfo *agentInfo = [_commentAgentNetViewModel.searchResultArr firstObject];
+                       [self loadResultWithAgentInfo:agentInfo];
+                       self.mask.hidden = YES;
+                          }
+                 failure:^{
+                       self.mask.hidden = NO;
+                }];
 }
-# pragma mark - 搜索方法
-- (void)searchWithURLString:(NSString *)urlString Param:(NSDictionary *)param{
-    
-    [YTHttpTool post:urlString params:param success:^(NSURLSessionTask *task,id responseObj) {
-        //json转模型
-        self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
-        //如果找到经纪人，则取消控件的隐藏
-        if([self searchStatusTest]){
-            EHAgentInfo *agentInfo = [self.searchResultArr firstObject];
-            [self loadResultWithAgentInfo:agentInfo];
-            [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
-            [self cancelHidden];
-        }else{
-            [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
-        }
-    
 
-    } failure:^(NSError *error) {
-        NSLog(@"失败");
-    }];
-}
-#pragma mark - 搜索结果检测
-- (BOOL)searchStatusTest{
-    
-    if (_searchResultArr.count == 0) {
-        [MBProgressHUD showSuccess:@"没有找到经纪人" toView:self.view];
-        return NO;
-    }else{
-        [MBProgressHUD showSuccess:@"为您找到经纪人" toView:self.view];
-        return YES;
-    }
-}
 
 - (void)loadResultWithAgentInfo:(EHAgentInfo *)agentInfo{
     self.txImageView.image = [YTNetCommand downloadImageWithImgStr:agentInfo.tx
@@ -253,16 +211,6 @@
 - (void)cancelHidden{
     self.mask.hidden = YES;
 }
-
-- (void)textViewDidBeginEditing:(UITextView *)textView{
-    [_changeOffsetViewModel changeOffsetWithTextView:textView superView:self.view];
-}
-
-//输入框编辑完成以后，将视图恢复到原始状态
-- (void)textViewDidEndEditing:(UITextView *)textView{
-    self.view.frame =CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-}
-
 
 - (IBAction)highPriseClick:(id)sender {
 

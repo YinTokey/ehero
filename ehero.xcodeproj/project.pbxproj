@@ -17,6 +17,8 @@
 		0455CB281D48B90E00160C83 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C3A8D01D31E518003203C0 /* WebKit.framework */; };
 		0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */; };
 		0456A9E21D49E5640065DC5B /* EHCallAgentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */; };
+		04634AC11D753100003C0CFF /* EHCommentAgentDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04634AC01D753100003C0CFF /* EHCommentAgentDelegate.m */; };
+		04634AC71D753810003C0CFF /* EHStorageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04634AC61D753810003C0CFF /* EHStorageViewModel.m */; };
 		0463EB0B1D5705B100C75B36 /* EHRegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463EB0A1D5705B100C75B36 /* EHRegularExpression.m */; };
 		0465688A1D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 046568871D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		0465688B1D4B39DE001C9851 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 046568891D4B39DE001C9851 /* UIView+SDAutoLayout.m */; };
@@ -166,6 +168,10 @@
 		0456A9DE1D49E5390065DC5B /* EHCallAgentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCallAgentView.h; sourceTree = "<group>"; };
 		0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCallAgentView.m; sourceTree = "<group>"; };
 		0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCallAgentView.xib; sourceTree = "<group>"; };
+		04634ABF1D753100003C0CFF /* EHCommentAgentDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCommentAgentDelegate.h; sourceTree = "<group>"; };
+		04634AC01D753100003C0CFF /* EHCommentAgentDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCommentAgentDelegate.m; sourceTree = "<group>"; };
+		04634AC51D753810003C0CFF /* EHStorageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHStorageViewModel.h; sourceTree = "<group>"; };
+		04634AC61D753810003C0CFF /* EHStorageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHStorageViewModel.m; sourceTree = "<group>"; };
 		0463EB091D5705B100C75B36 /* EHRegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHRegularExpression.h; sourceTree = "<group>"; };
 		0463EB0A1D5705B100C75B36 /* EHRegularExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRegularExpression.m; sourceTree = "<group>"; };
 		046568851D4B39DE001C9851 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
@@ -458,6 +464,8 @@
 				048632071D3E238B00800B26 /* EHNetBusinessManager.m */,
 				0463EB091D5705B100C75B36 /* EHRegularExpression.h */,
 				0463EB0A1D5705B100C75B36 /* EHRegularExpression.m */,
+				04634AC51D753810003C0CFF /* EHStorageViewModel.h */,
+				04634AC61D753810003C0CFF /* EHStorageViewModel.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1346,6 +1354,8 @@
 				04E0DEBE1D74028A0003ED4A /* EHChangeOffsetViewModel.m */,
 				04E0DEC01D7405320003ED4A /* EHCommentAgentNetViewModel.h */,
 				04E0DEC11D7405320003ED4A /* EHCommentAgentNetViewModel.m */,
+				04634ABF1D753100003C0CFF /* EHCommentAgentDelegate.h */,
+				04634AC01D753100003C0CFF /* EHCommentAgentDelegate.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1902,8 +1912,10 @@
 				049AA07B1D5034D600761E3F /* FMDatabaseAdditions.m in Sources */,
 				049AA0851D5037DD00761E3F /* UIView+Toast.m in Sources */,
 				04E9CFA81D45CDF70087BD70 /* EHNavBackItem.m in Sources */,
+				04634AC11D753100003C0CFF /* EHCommentAgentDelegate.m in Sources */,
 				04716C061D35060B00E512EE /* AFHTTPSessionManager.m in Sources */,
 				04B0EFE41D49AD1A00BE301B /* EHHouseDetailAgentCell.m in Sources */,
+				04634AC71D753810003C0CFF /* EHStorageViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
