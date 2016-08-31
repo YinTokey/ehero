@@ -12,10 +12,10 @@
 #import "STModal.h"
 #import "EHVerifyView.h"
 #import "EHAntiDisturbNetViewModel.h"
-
 #import <CoreTelephony/CTCall.h>
 #import <CoreTelephony/CTCallCenter.h>
 
+#import "AppDelegate.h"
 @interface EHAntidisturbViewController ()<UITextFieldDelegate,EHVerifyViewDelegate>
 {
     STModal *modal;
@@ -36,7 +36,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     //初始化弹窗配置
     modal = [STModal modal];
     modal.hideWhenTouchOutside = YES;
@@ -49,7 +48,6 @@
     [YTHttpTool netCheck];
     
     _antiDisturbNetViewModel = [[EHAntiDisturbNetViewModel alloc]init];
-    
 }
 
 - (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code{

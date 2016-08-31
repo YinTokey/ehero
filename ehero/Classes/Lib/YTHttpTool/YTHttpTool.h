@@ -41,5 +41,6 @@ typedef NS_ENUM(NSInteger, YTHttpRequestType)
  *  联网状态监测
  */
 + (void)netCheck;
+@property (nonatomic,assign)BOOL netStatus;
 
 @end

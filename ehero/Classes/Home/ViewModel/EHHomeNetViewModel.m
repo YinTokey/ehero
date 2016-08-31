@@ -33,6 +33,7 @@
         success();
       //  [self setupHeaderView];
     } failure:^(NSError *error) {
+        [MBProgressHUD hideHUDForView:superView];
         failure();
         NSLog(@"failed");
     }];

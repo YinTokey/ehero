@@ -59,11 +59,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [YTHttpTool netCheck];
     major = @"sale";
     [self initViewModels];
- 
+    
     [self getSlides];
+    [YTHttpTool netCheck];
     [self setNavBar];
 }
 
@@ -135,7 +135,8 @@
     [_homeNetViewModel getSlidesWithSourceArr:sourceArr titleArr:titleArr superView:self.view success:^{
         [self setupHeaderView];
     } failure:^{
-        [MBProgressHUD showError:@"加载失败"];
+       // [MBProgressHUD showError:@"加载失败"];
+        [self setupHeaderView];
     }];
 }
 

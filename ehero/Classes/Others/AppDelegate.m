@@ -8,13 +8,16 @@
 
 #import "AppDelegate.h"
 #import "OpenShareHeader.h"
+#import <Reachability.h>
 
 @interface AppDelegate ()
+{
+    Reachability *hostReach;
+}
 
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -28,8 +31,31 @@
     [OpenShare connectWeiboWithAppKey:WeiboAppKey];
     [OpenShare connectWeixinWithAppId:WeixinAppId];
 
-    [YTHttpTool netCheck];
+    //监测网络情况
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityChanged:)
+                                                 name: kReachabilityChangedNotification
+                                               object: nil];
+    //初始化Reachability类，并添加一个监测的网址。
+    hostReach = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    //开始监测
+    [hostReach startNotifier];
     return YES;
+}
+
+#pragma mark - 监测网络情况，当网络发生改变时会调用
+- (void)reachabilityChanged:(NSNotification *)note {
+    
+    Reachability* curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass: [Reachability class]]);
+    //对连接改变做出响应的处理动作。
+    NetworkStatus status=[curReach currentReachabilityStatus];
+    self.isReachable = YES;
+    if (status== NotReachable) { //没有连接到网络就弹出提实况
+        [MBProgressHUD showError:@"请检查网络连接"];
+        self.isReachable = NO;
+    }
+    
 }
 
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{

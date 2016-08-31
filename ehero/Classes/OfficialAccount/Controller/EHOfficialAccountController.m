@@ -40,7 +40,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
+    [YTHttpTool netCheck];
     self.title = self.slide.title;
     [self isCollected];
     //跳转到下一界面的返回按钮样式

@@ -56,18 +56,21 @@
 }
 
 + (void)netCheck{
-    
+    //__block BOOL _netStatus ;
     AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     [mgr.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         if (status==AFNetworkReachabilityStatusReachableViaWiFi ||status==AFNetworkReachabilityStatusReachableViaWWAN) {
             NSLog(@"可以联网");
+           // _netStatus = YES;
         }else if(status==AFNetworkReachabilityStatusNotReachable){
             [MBProgressHUD showError:@"检查网络连接"];
+           // _netStatus = NO;
         }else{
             NSLog(@"未知网络");
         }
     }];
     [mgr.reachabilityManager startMonitoring];
+
 }
 
 
