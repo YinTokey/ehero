@@ -109,8 +109,8 @@
 #pragma mark NewPagedFlowView Datasource
 - (NSInteger)numberOfPagesInFlowView:(NewPagedFlowView *)flowView {
     
-    //return self.imageArray.count;
-    return 3;
+    return self.imageArray.count;
+
 }
 
 - (UIView *)flowView:(NewPagedFlowView *)flowView cellForPageAtIndex:(NSInteger)index{
@@ -119,8 +119,9 @@
         bannerView = [[PGIndexBannerSubiew alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth - 84, 300)];
         bannerView.layer.cornerRadius = 4;
         bannerView.layer.masksToBounds = YES;
-        bannerView.backgroundColor = [UIColor redColor];
+       // bannerView.backgroundColor = [UIColor redColor];
     }
+
     //在这里下载网络图片
     //  [bannerView.mainImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:hostUrlsImg,imageDict[@"img"]]] placeholderImage:[UIImage imageNamed:@""]];
     bannerView.mainImageView.image = self.imageArray[index];

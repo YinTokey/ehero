@@ -34,17 +34,11 @@
         //        pageFlowView.delegate = self;
         //        pageFlowView.dataSource = self;
         cell.pageFlowView.minimumPageAlpha = 0.4;
-        cell.pageFlowView.minimumPageScale = 0.7;
-        
+        cell.pageFlowView.minimumPageScale = 0.7;     
         //提前告诉有多少页
         cell.pageFlowView.orginPageCount = 3;
         
         cell.pageFlowView.isOpenAutoScroll = YES;
-        
-        //初始化pageControl
-        //        UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, cell.pageFlowView.frame.size.height -8, ScreenWidth, 8)];
-        //        cell.pageFlowView.pageControl = pageControl;
-        //        [cell.pageFlowView addSubview:pageControl];
         
         UIScrollView *bottomScrollView = [[UIScrollView alloc] initWithFrame:cell.bounds];
         

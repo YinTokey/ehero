@@ -75,6 +75,7 @@
     _homeTableViewModel = [[EHHomeTableViewModel alloc]init];
     _homeTableViewModel.super = self;
     _homeTableViewModel.superVC = self;
+    _homeTableViewModel.imageArray = [NSMutableArray array];
     UIImage *image0 = [UIImage imageNamed:@"community1"];
     UIImage *image1 = [UIImage imageNamed:@"community2"];
     UIImage *image2 = [UIImage imageNamed:@"community3"];
