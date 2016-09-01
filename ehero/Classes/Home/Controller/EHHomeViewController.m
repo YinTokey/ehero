@@ -180,5 +180,8 @@
     [homePopView popView];
 }
 
+- (void)getTipsInfo{
 
+
+}
 @end
