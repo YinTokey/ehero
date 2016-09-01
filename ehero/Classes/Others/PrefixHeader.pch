@@ -33,7 +33,7 @@
 #define anti_disturbCallUrlStr @"http://ehero.cc/api/v1/customers/call.json"
 #define getRegionsInfoUrlStr @"http://ehero.cc/api/v1/tips/regions"
 #define slidesUrlStr @"http://ehero.cc/api/v1/users/slides"
-
+#define TipsRecommendUrlStr @"http://ehero.cc/api/v1/tips/recommend"
 
 #define QQAppId @"1105635926"
 #define WeiboAppKey @"2459331788"

@@ -18,6 +18,7 @@
 #import "EHHomePopView.h"
 #import "EHOfficialAccountController.h"
 #import "EHSlides.h"
+#import "EHTipsRecommend.h"
 #import "YTNetCommand.h"
 
 #import "EHSiteSelectDelegate.h"
@@ -32,6 +33,8 @@
     /** 图片数组*/
     NSMutableArray *sourceArr;
     NSMutableArray *titleArr;
+    //锦囊对象
+    NSMutableArray *tipsRecommendArr;
 }
 - (IBAction)siteBtnClick:(UIButton *)btn;
 - (IBAction)majorBtnClick:(id)sender;
@@ -48,6 +51,8 @@
 @property (nonatomic,strong) EHHomeTableViewModel *homeTableViewModel;
 @property (nonatomic,strong) EHHomeNetViewModel *homeNetViewModel;
 
+//@property (nonatomic,strong) NSMutableArray *tipsRecommendArr;
+
 @end
 
 @implementation EHHomeViewController
@@ -60,11 +65,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     major = @"sale";
+    
+   // [self getTipsInfo];
     [self initViewModels];
+    
+   
     
     [self getSlides];
     [YTHttpTool netCheck];
     [self setNavBar];
+    
+   
 }
 
 - (void)initViewModels{
@@ -76,6 +87,7 @@
     _homeTableViewModel.super = self;
     _homeTableViewModel.superVC = self;
     _homeTableViewModel.imageArray = [NSMutableArray array];
+    
     UIImage *image0 = [UIImage imageNamed:@"community1"];
     UIImage *image1 = [UIImage imageNamed:@"community2"];
     UIImage *image2 = [UIImage imageNamed:@"community3"];
@@ -181,7 +193,16 @@
 }
 
 - (void)getTipsInfo{
+    [YTHttpTool get:TipsRecommendUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
+        tipsRecommendArr = [EHTipsRecommend mj_objectArrayWithKeyValuesArray:responseObj];
+        NSLog(@"tips %d",tipsRecommendArr.count);
+        for (EHTipsRecommend *tipsR in tipsRecommendArr) {
+            [_homeTableViewModel.imageArray addObject:[YTNetCommand downloadImageWithImgStr:tipsR.thumb placeholderImageStr:@"home_placeholder" imageView:[[UIImageView alloc]init]]];
+        }
 
+    } failure:^(NSError *error) {
+        NSLog(@"failure");
+    }];
 
 }
 @end

@@ -117,7 +117,7 @@
     PGIndexBannerSubiew *bannerView = (PGIndexBannerSubiew *)[flowView dequeueReusableCell];
     if (!bannerView) {
         bannerView = [[PGIndexBannerSubiew alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth - 84, 300)];
-        bannerView.layer.cornerRadius = 4;
+        bannerView.layer.cornerRadius = 1;
         bannerView.layer.masksToBounds = YES;
        // bannerView.backgroundColor = [UIColor redColor];
     }
