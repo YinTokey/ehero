@@ -15,87 +15,55 @@
 #import "EHWechatGroupViewController.h"
 #import "EHCommentAgentViewController.h"
 #import "EHHouseDetailViewController.h"
+#import "EHTipsViewCell.h"
+
+
+
 @implementation EHHomeTableViewModel
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 4;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    if (section == 3) {
-        return 5;
-    }else{
-        return 1;
-    }
+    return 1;
 }
 
 #pragma mark - cell内容
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *reuseId = @"reuseCell";
+  //  static NSString *reuseId = @"reuseCell";
     //第一行 4个按钮
     if (indexPath.section == 0) {
         buttonCell *cell = [buttonCell buttonCellWithTableView:tableView];
         cell.delegate = self;
         [cell setClickEvent];
         return cell;
-        //第二行 点评经纪人
-    }else if(indexPath.section == 1){
-        
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
-        if (cell==nil) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseId];
-        }
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.textLabel.font = [UIFont systemFontOfSize:14.0];
-        cell.textLabel.text = @"评价你的经纪人";
-        return cell;
-        //第三行，显示一个经纪人
-    }else if(indexPath.section == 2){
-        EHHomeAgentCell *cell = [EHHomeAgentCell homeAgentCellWithTableView:tableView];
-        return cell;
-        
-        //第四行 每日一房
+        //第二行 锦囊
     }else{
-        
-        EHEverydayhouseCell *cell = [EHEverydayhouseCell everydayhouseCellWithTableView:tableView];
+        EHTipsViewCell *cell = [EHTipsViewCell tipsViewCellWithTableView:tableView];
+        cell.pageFlowView.delegate = self;
+        cell.pageFlowView.dataSource = self;
         return cell;
     }
     
 }
 
-#pragma mark - section高度设置
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-//    if (section == 2) {
-//        return 10;
-//    }else{
-//        return  0;
-//    }
-    return 0;
-}
+
+
 
 #pragma mark - cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         return ScreenWidth * 0.246875;
-    }else if(indexPath.section == 1){
-        return 30;
-    }else if(indexPath.section == 2){
-        return 90;
-    }else{
-        return 94;
-    }
+    }else return ScreenWidth *0.4;
 }
 #pragma mark -tableviewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 1) {
         EHCommentAgentViewController *commentAgentViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"CommentAgentViewController"];
         [self.superVC.navigationController pushViewController:commentAgentViewController animated:YES];
-    }
-    if (indexPath.section == 3) {
-        EHHouseDetailViewController *houseDetailViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
-        [self.superVC.navigationController pushViewController:houseDetailViewController animated:YES];
     }
 }
 
@@ -125,6 +93,42 @@
     
 }
 
+#pragma mark NewPagedFlowView Delegate
+- (CGSize)sizeForPageInFlowView:(NewPagedFlowView *)flowView {
+    return CGSizeMake(ScreenWidth - 84, 55);
+}
+
+- (void)didSelectCell:(UIView *)subView withSubViewIndex:(NSInteger)subIndex {
+    
+    NSLog(@"点击了第%ld张图",(long)subIndex + 1);
+
+}
+
+#pragma mark NewPagedFlowView Datasource
+- (NSInteger)numberOfPagesInFlowView:(NewPagedFlowView *)flowView {
+    
+    //return self.imageArray.count;
+    return 3;
+}
+
+- (UIView *)flowView:(NewPagedFlowView *)flowView cellForPageAtIndex:(NSInteger)index{
+    PGIndexBannerSubiew *bannerView = (PGIndexBannerSubiew *)[flowView dequeueReusableCell];
+    if (!bannerView) {
+        bannerView = [[PGIndexBannerSubiew alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth - 84, (ScreenWidth - 84) * 9 / 16)];
+        bannerView.layer.cornerRadius = 4;
+        bannerView.layer.masksToBounds = YES;
+    }
+    //在这里下载网络图片
+    //  [bannerView.mainImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:hostUrlsImg,imageDict[@"img"]]] placeholderImage:[UIImage imageNamed:@""]];
+    bannerView.mainImageView.image = self.imageArray[index];
+    
+    return bannerView;
+}
+
+- (void)didScrollToPage:(NSInteger)pageNumber inFlowView:(NewPagedFlowView *)flowView {
+    
+    NSLog(@"ViewController 滚动到了第%ld页",pageNumber);
+}
 
 
 @end

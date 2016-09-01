@@ -9,9 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "buttonCell.h"
-@interface EHHomeTableViewModel : NSObject<UITableViewDataSource,UITableViewDelegate,buttonCellDelegate>
+#import "NewPagedFlowView.h"
+#import "PGIndexBannerSubiew.h"
+@interface EHHomeTableViewModel : NSObject<UITableViewDataSource,UITableViewDelegate,buttonCellDelegate,NewPagedFlowViewDelegate, NewPagedFlowViewDataSource>
 
 @property (nonatomic,strong) id super;
 
 @property (nonatomic,strong) UIViewController *superVC;
+
+@property (nonatomic,strong) NSMutableArray *imageArray;
 @end

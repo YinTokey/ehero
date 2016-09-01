@@ -75,8 +75,16 @@
     _homeTableViewModel = [[EHHomeTableViewModel alloc]init];
     _homeTableViewModel.super = self;
     _homeTableViewModel.superVC = self;
-
+    UIImage *image0 = [UIImage imageNamed:@"community1"];
+    UIImage *image1 = [UIImage imageNamed:@"community2"];
+    UIImage *image2 = [UIImage imageNamed:@"community3"];
+    [_homeTableViewModel.imageArray  addObject:image0];
+    [_homeTableViewModel.imageArray  addObject:image1];
+    [_homeTableViewModel.imageArray  addObject:image2];
+   
+    
     _homeNetViewModel = [[EHHomeNetViewModel alloc]init];
+    
     
     self.tableView.dataSource = _homeTableViewModel;
     self.tableView.delegate = _homeTableViewModel;
