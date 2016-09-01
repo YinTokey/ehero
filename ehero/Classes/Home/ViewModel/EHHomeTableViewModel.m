@@ -57,15 +57,17 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         return ScreenWidth * 0.246875;
-    }else return ScreenWidth *0.4;
-}
-#pragma mark -tableviewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 1) {
-        EHCommentAgentViewController *commentAgentViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"CommentAgentViewController"];
-        [self.superVC.navigationController pushViewController:commentAgentViewController animated:YES];
+    }else{
+        return ScreenHeight *0.47;
     }
 }
+#pragma mark -tableviewDelegate
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    if (indexPath.section == 1) {
+//        EHCommentAgentViewController *commentAgentViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"CommentAgentViewController"];
+//        [self.superVC.navigationController pushViewController:commentAgentViewController animated:YES];
+//    }
+//}
 
 
 - (void)firstBtnClick:(UITableViewCell *)cell{
@@ -95,7 +97,7 @@
 
 #pragma mark NewPagedFlowView Delegate
 - (CGSize)sizeForPageInFlowView:(NewPagedFlowView *)flowView {
-    return CGSizeMake(ScreenWidth - 84, 55);
+    return CGSizeMake(ScreenWidth * 0.4, ScreenHeight * 0.37);
 }
 
 - (void)didSelectCell:(UIView *)subView withSubViewIndex:(NSInteger)subIndex {
@@ -114,9 +116,10 @@
 - (UIView *)flowView:(NewPagedFlowView *)flowView cellForPageAtIndex:(NSInteger)index{
     PGIndexBannerSubiew *bannerView = (PGIndexBannerSubiew *)[flowView dequeueReusableCell];
     if (!bannerView) {
-        bannerView = [[PGIndexBannerSubiew alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth - 84, (ScreenWidth - 84) * 9 / 16)];
+        bannerView = [[PGIndexBannerSubiew alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth - 84, 300)];
         bannerView.layer.cornerRadius = 4;
         bannerView.layer.masksToBounds = YES;
+        bannerView.backgroundColor = [UIColor redColor];
     }
     //在这里下载网络图片
     //  [bannerView.mainImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:hostUrlsImg,imageDict[@"img"]]] placeholderImage:[UIImage imageNamed:@""]];

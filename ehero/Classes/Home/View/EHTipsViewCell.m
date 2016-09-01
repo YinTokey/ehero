@@ -7,7 +7,7 @@
 //
 
 #import "EHTipsViewCell.h"
-
+#import "SDAutoLayout.h"
 
 @implementation EHTipsViewCell
 
@@ -27,12 +27,14 @@
     EHTipsViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHTipsViewCell" owner:nil options:nil] lastObject];
-        cell.pageFlowView = [[NewPagedFlowView alloc] initWithFrame:CGRectMake(0, 8, ScreenWidth, (ScreenWidth - 84) * 9 / 16 + 24)];
-        cell.pageFlowView.backgroundColor = [UIColor whiteColor];
-//        pageFlowView.delegate = self;
-//        pageFlowView.dataSource = self;
+        [cell setSize:CGSizeMake(ScreenWidth,ScreenHeight*0.47)];
+        cell.pageFlowView = [[NewPagedFlowView alloc] initWithFrame:CGRectMake(0, 30,ScreenWidth , ScreenHeight * 0.41)];
+
+        cell.pageFlowView.backgroundColor = [UIColor clearColor];
+        //        pageFlowView.delegate = self;
+        //        pageFlowView.dataSource = self;
         cell.pageFlowView.minimumPageAlpha = 0.4;
-        cell.pageFlowView.minimumPageScale = 0.85;
+        cell.pageFlowView.minimumPageScale = 0.7;
         
         //提前告诉有多少页
         cell.pageFlowView.orginPageCount = 3;
@@ -40,11 +42,12 @@
         cell.pageFlowView.isOpenAutoScroll = YES;
         
         //初始化pageControl
-        UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, cell.pageFlowView.frame.size.height - 24 - 8, ScreenWidth, 8)];
-        cell.pageFlowView.pageControl = pageControl;
-        [cell.pageFlowView addSubview:pageControl];
+        //        UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, cell.pageFlowView.frame.size.height -8, ScreenWidth, 8)];
+        //        cell.pageFlowView.pageControl = pageControl;
+        //        [cell.pageFlowView addSubview:pageControl];
         
         UIScrollView *bottomScrollView = [[UIScrollView alloc] initWithFrame:cell.bounds];
+        
         [bottomScrollView addSubview:cell.pageFlowView];
         
         [cell addSubview:bottomScrollView];
@@ -54,6 +57,7 @@
     return cell;
     
 }
+
 
 
 @end

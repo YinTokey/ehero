@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "NewPagedFlowView.h"
 #import "PGIndexBannerSubiew.h"
 @interface EHTipsViewCell : UITableViewCell
 
 @property (nonatomic,strong) NewPagedFlowView *pageFlowView;
 
-+ (instancetype)tipsViewCellWithTableView:(UITableView *)tableView;
 
++ (instancetype)tipsViewCellWithTableView:(UITableView *)tableView;
 
 @end
