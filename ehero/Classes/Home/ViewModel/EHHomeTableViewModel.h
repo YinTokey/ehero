@@ -17,7 +17,7 @@
 
 @property (nonatomic,strong) UIViewController *superVC;
 
-@property (nonatomic,strong) NSMutableArray *imageArray;
+@property (nonatomic,strong) NSMutableArray *tipsRecommendArray;
 @property (nonatomic,strong) NSMutableArray *imageUrlStrArray;
 
 

@@ -21,6 +21,8 @@
 #import "YTNetCommand.h"
 
 #import "UIImageView+WebCache.h"
+#import "EHOfficialAccountController.h"
+
 
 @implementation EHHomeTableViewModel
 {
@@ -116,6 +118,12 @@
 - (void)didSelectCell:(UIView *)subView withSubViewIndex:(NSInteger)subIndex {
     
     NSLog(@"点击了第%ld张图",(long)subIndex + 1);
+    EHTipsRecommend *tip = _tipsRecommendArray[subIndex];
+    EHOfficialAccountController *officialAccountVC = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"OfficialAccountController"];
+    officialAccountVC.tipsRecomnend = tip;
+    [self.superVC.navigationController pushViewController:officialAccountVC animated:YES];
+    //NSLog(@"%@",tip.name);
+    
 }
 
 #pragma mark NewPagedFlowView Datasource
@@ -145,19 +153,19 @@
     NSLog(@"ViewController 滚动到了第%ld页",pageNumber);
 }
 
-- (void)getTipsInfo{
-
-    [YTHttpTool get:TipsRecommendUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
-        tipsRecommendArr = [EHTipsRecommend mj_objectArrayWithKeyValuesArray:responseObj];
-        for (EHTipsRecommend *tipsR in tipsRecommendArr) {
-            [self.imageUrlStrArray addObject:tipsR.thumb];
-        }
-        NSLog(@"urls %@",self.imageUrlStrArray);
-   
-    } failure:^(NSError *error) {
-        NSLog(@"failure");
-    }];
-}
+//- (void)getTipsInfo{
+//
+//    [YTHttpTool get:TipsRecommendUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
+//        tipsRecommendArr = [EHTipsRecommend mj_objectArrayWithKeyValuesArray:responseObj];
+//        for (EHTipsRecommend *tipsR in tipsRecommendArr) {
+//            [self.imageUrlStrArray addObject:tipsR.thumb];
+//        }
+//        NSLog(@"urls %@",self.imageUrlStrArray);
+//   
+//    } failure:^(NSError *error) {
+//        NSLog(@"failure");
+//    }];
+//}
 
 - (NewPagedFlowView *)flowView{
     if (!_flowView) {

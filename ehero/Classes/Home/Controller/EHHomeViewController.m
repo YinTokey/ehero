@@ -36,8 +36,6 @@
     /** 图片数组*/
     NSMutableArray *sourceArr;
     NSMutableArray *titleArr;
-    //锦囊对象
-    NSMutableArray *tipsRecommendArr;
 }
 - (IBAction)siteBtnClick:(UIButton *)btn;
 - (IBAction)majorBtnClick:(id)sender;
@@ -86,7 +84,7 @@
     _homeTableViewModel = [[EHHomeTableViewModel alloc]init];
     _homeTableViewModel.super = self;
     _homeTableViewModel.superVC = self;
-    _homeTableViewModel.imageArray = [NSMutableArray array];
+    _homeTableViewModel.tipsRecommendArray = [NSMutableArray array];
 //    _homeTableViewModel.imageUrlStrArray = [NSMutableArray array];
     
     
@@ -193,12 +191,12 @@
 - (void)getTipsInfo{
     _homeTableViewModel.imageUrlStrArray = [NSMutableArray array];
     [YTHttpTool get:TipsRecommendUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
-        tipsRecommendArr = [EHTipsRecommend mj_objectArrayWithKeyValuesArray:responseObj];
-        for (EHTipsRecommend *tip in tipsRecommendArr) {
+        _homeTableViewModel.tipsRecommendArray = [EHTipsRecommend mj_objectArrayWithKeyValuesArray:responseObj];
+        for (EHTipsRecommend *tip in _homeTableViewModel.tipsRecommendArray) {
             NSString *realUrlStr = [tip.thumb stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
             [_homeTableViewModel.imageUrlStrArray addObject:realUrlStr];
         }
-        //请求成功后，在设置数据源
+        //请求成功后，再设置数据源
         self.tableView.dataSource = _homeTableViewModel;
         self.tableView.delegate = _homeTableViewModel;
     } failure:^(NSError *error) {

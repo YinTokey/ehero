@@ -49,8 +49,17 @@
     [self initViewModels];
     
     _webView = [[WKWebView alloc]initWithFrame:self.view.frame];
-    NSURL *url = [NSURL URLWithString:self.slide.href];
-    
+    NSURL *url = [[NSURL alloc]init] ;
+    if (self.slide!=nil) {
+        url = [NSURL URLWithString:self.slide.href];
+    }
+    if (self.tipsRecomnend!=nil) {
+        //url中文要转义
+        self.tipsRecomnend.route = [self.tipsRecomnend.route stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+        url = [NSURL URLWithString:self.tipsRecomnend.route];
+    }
+  //  NSURL *url = [NSURL URLWithString:self.slide.href];
+
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
     self.webView.navigationDelegate = _officialViewModel;
@@ -59,7 +68,7 @@
 
     titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"QQ空间",@"QQ好友", nil];
     picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_qzone",@"share_qq",nil];
-  
+
 }
 
 - (void)initViewModels{
