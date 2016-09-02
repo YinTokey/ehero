@@ -20,9 +20,12 @@
 #import "EHTipsRecommend.h"
 #import "YTNetCommand.h"
 
+#import "UIImageView+WebCache.h"
+
 @implementation EHHomeTableViewModel
 {
     NSMutableArray *tipsRecommendArr;
+  //  NSMutableArray *imgUrlArray;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
@@ -106,7 +109,7 @@
 
 #pragma mark NewPagedFlowView Delegate
 - (CGSize)sizeForPageInFlowView:(NewPagedFlowView *)flowView {
-    flowView = self.flowView;
+
     return CGSizeMake(ScreenWidth * 0.4, ScreenHeight * 0.37);
 }
 
@@ -117,45 +120,40 @@
 
 #pragma mark NewPagedFlowView Datasource
 - (NSInteger)numberOfPagesInFlowView:(NewPagedFlowView *)flowView {
-    flowView = self.flowView;
-    return self.imageArray.count;
+
+    return self.imageUrlStrArray.count;
 
 }
 
 - (UIView *)flowView:(NewPagedFlowView *)flowView cellForPageAtIndex:(NSInteger)index{
-    flowView = self.flowView;
     PGIndexBannerSubiew *bannerView = (PGIndexBannerSubiew *)[flowView dequeueReusableCell];
     if (!bannerView) {
         bannerView = [[PGIndexBannerSubiew alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth - 84, 300)];
         bannerView.layer.cornerRadius = 1;
         bannerView.layer.masksToBounds = YES;
-       // bannerView.backgroundColor = [UIColor redColor];
+        bannerView.backgroundColor = [UIColor whiteColor];
     }
-    //在这里下载网络图片
-    //  [bannerView.mainImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:hostUrlsImg,imageDict[@"img"]]] placeholderImage:[UIImage imageNamed:@""]];
-    bannerView.mainImageView.image = self.imageArray[index];
-    
+    //根据url下载网络图片
+    bannerView.mainImageView.image = [YTNetCommand downloadImageWithImgStr:
+                                      [self.imageUrlStrArray objectAtIndex:index] placeholderImageStr:@"home_placeholder" imageView:bannerView.mainImageView];
+
     return bannerView;
 }
 
 - (void)didScrollToPage:(NSInteger)pageNumber inFlowView:(NewPagedFlowView *)flowView {
-    flowView = self.flowView;
+
     NSLog(@"ViewController 滚动到了第%ld页",pageNumber);
 }
 
 - (void)getTipsInfo{
-    UIImageView *imageView = [[UIImageView alloc]init];
+
     [YTHttpTool get:TipsRecommendUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
         tipsRecommendArr = [EHTipsRecommend mj_objectArrayWithKeyValuesArray:responseObj];
-        
         for (EHTipsRecommend *tipsR in tipsRecommendArr) {
-            [self.imageArray addObject:[YTNetCommand downloadImageWithImgStr:tipsR.thumb placeholderImageStr:@"home_placeholder" imageView:imageView]];
-            NSLog(@"%@");
+            [self.imageUrlStrArray addObject:tipsR.thumb];
         }
-        [self.imageArray removeObjectAtIndex:0];
-        [_flowView reloadData];
-        NSLog(@"tips %d",self.imageArray.count);
-        self.netImageFlag = YES;
+        NSLog(@"urls %@",self.imageUrlStrArray);
+   
     } failure:^(NSError *error) {
         NSLog(@"failure");
     }];

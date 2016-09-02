@@ -29,6 +29,8 @@
 
 #import "EHTipsViewCell.h"
 
+#import "UIImageView+WebCache.h"
+
 @interface EHHomeViewController ()<UITextFieldDelegate,SDCycleScrollViewDelegate>
 {
     /** 图片数组*/
@@ -66,20 +68,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     major = @"sale";
-
+//    _homeTableViewModel = [[EHHomeTableViewModel alloc]init];
+  
     [self initViewModels];
     [self getSlides];
     [YTHttpTool netCheck];
     [self setNavBar];
     
-//    NSIndexPath *tipsCellIndex = [NSIndexPath indexPathForRow:0 inSection:1];
-//    EHTipsViewCell *TipsCell = [self.tableView cellForRowAtIndexPath:tipsCellIndex];
-//    
-//    [RACObserve(_homeTableViewModel, netImageFlag)subscribeNext:^(id x) {
-//        [TipsCell.pageFlowView reloadData];
-//        NSLog(@"reload");
-//    }];
-
+    [self getTipsInfo];
 }
 
 - (void)initViewModels{
@@ -91,15 +87,18 @@
     _homeTableViewModel.super = self;
     _homeTableViewModel.superVC = self;
     _homeTableViewModel.imageArray = [NSMutableArray array];
+//    _homeTableViewModel.imageUrlStrArray = [NSMutableArray array];
+    
+    
     //[_homeTableViewModel getTipsInfo];
-    UIImage *image0 = [UIImage imageNamed:@"community1"];
-    [_homeTableViewModel.imageArray  addObject:image0];
-    [_homeTableViewModel getTipsInfo];
+//    UIImage *image0 = [UIImage imageNamed:@"community1"];
+//    [_homeTableViewModel.imageArray  addObject:image0];
+  //  [_homeTableViewModel getTipsInfo];
     
     _homeNetViewModel = [[EHHomeNetViewModel alloc]init];
 
-    self.tableView.dataSource = _homeTableViewModel;
-    self.tableView.delegate = _homeTableViewModel;
+//    self.tableView.dataSource = _homeTableViewModel;
+//    self.tableView.delegate = _homeTableViewModel;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -191,17 +190,20 @@
     [homePopView popView];
 }
 
-//- (void)getTipsInfo{
-//    UIImageView *imageView = [[UIImageView alloc]init];
-//    [YTHttpTool get:TipsRecommendUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
-//        tipsRecommendArr = [EHTipsRecommend mj_objectArrayWithKeyValuesArray:responseObj];
-//        
-//        for (EHTipsRecommend *tipsR in tipsRecommendArr) {
-//            [_homeTableViewModel.imageArray addObject:[YTNetCommand downloadImageWithImgStr:tipsR.thumb placeholderImageStr:@"home_placeholder" imageView:imageView]];
-//        }
-//        NSLog(@"tips %d",_homeTableViewModel.imageArray.count);
-//    } failure:^(NSError *error) {
-//        NSLog(@"failure");
-//    }];
-//}
+- (void)getTipsInfo{
+    _homeTableViewModel.imageUrlStrArray = [NSMutableArray array];
+    [YTHttpTool get:TipsRecommendUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
+        tipsRecommendArr = [EHTipsRecommend mj_objectArrayWithKeyValuesArray:responseObj];
+        for (EHTipsRecommend *tip in tipsRecommendArr) {
+            NSString *realUrlStr = [tip.thumb stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+            [_homeTableViewModel.imageUrlStrArray addObject:realUrlStr];
+        }
+        //请求成功后，在设置数据源
+        self.tableView.dataSource = _homeTableViewModel;
+        self.tableView.delegate = _homeTableViewModel;
+    } failure:^(NSError *error) {
+        NSLog(@"failure");
+    }];
+}
+
 @end

@@ -8,7 +8,7 @@
 
 #import "EHTipsViewCell.h"
 #import "SDAutoLayout.h"
-
+#import "YTNetCommand.h"
 @implementation EHTipsViewCell
 
 - (void)awakeFromNib {
@@ -33,8 +33,8 @@
         cell.pageFlowView.backgroundColor = [UIColor clearColor];
         //        pageFlowView.delegate = self;
         //        pageFlowView.dataSource = self;
-        cell.pageFlowView.minimumPageAlpha = 0.4;
-        cell.pageFlowView.minimumPageScale = 0.7;     
+        cell.pageFlowView.minimumPageAlpha = 0.1;
+        cell.pageFlowView.minimumPageScale = 0.6;
         //提前告诉有多少页
         cell.pageFlowView.orginPageCount = 3;
         
@@ -51,7 +51,6 @@
     return cell;
     
 }
-
 
 
 @end

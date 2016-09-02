@@ -18,6 +18,8 @@
 @property (nonatomic,strong) UIViewController *superVC;
 
 @property (nonatomic,strong) NSMutableArray *imageArray;
+@property (nonatomic,strong) NSMutableArray *imageUrlStrArray;
+
 
 @property (nonatomic,strong) NewPagedFlowView *flowView;
 

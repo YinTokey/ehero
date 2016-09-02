@@ -26,6 +26,7 @@
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
       //  NSLog(@"cacheType:%ld",(long)cacheType);
       //  NSLog(@"imageurl:%@",imageURL);
+        NSLog(@"done %@",image);
     }];
 
     UIImage *img = imageView.image;

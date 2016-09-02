@@ -123,14 +123,15 @@
                 
                 if (delta < _pageSize.width) {
                     
-                    cell.coverView.alpha = (delta / _pageSize.width) * (1 - _minimumPageAlpha);
+                //    cell.coverView.alpha = (delta / _pageSize.width) * (1 - _minimumPageAlpha);
                     
                     CGFloat inset = (_pageSize.width * (1 - _minimumPageScale)) * (delta / _pageSize.width)/2.0;
                     cell.frame = UIEdgeInsetsInsetRect(originCellFrame, UIEdgeInsetsMake(inset, inset, inset, inset));
                     cell.mainImageView.frame = cell.bounds;
                 } else {
                 
-                    cell.coverView.alpha = _minimumPageAlpha;
+               //     cell.coverView.alpha = _minimumPageAlpha;
+                    cell.coverView.alpha = 1.0;
                     CGFloat inset = _pageSize.width * (1 - _minimumPageScale) / 2.0 ;
                     cell.frame = UIEdgeInsetsInsetRect(originCellFrame, UIEdgeInsetsMake(inset, inset, inset, inset));
                     cell.mainImageView.frame = cell.bounds;
