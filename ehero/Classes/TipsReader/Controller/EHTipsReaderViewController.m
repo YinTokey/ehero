@@ -53,7 +53,6 @@
     
     titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"微博",@"QQ好友", nil];
     picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_weibo",@"share_qq",nil];
-    
 }
 
 - (void)initViewModels{
@@ -62,22 +61,19 @@
     _officialViewModel.superVC = self;
 }
 
-
-
-
 - (IBAction)collectBtnClick:(id)sender {
     selectedFlag = !selectedFlag;
     if (selectedFlag) {
         
         self.collectBtn.selected = YES;
         [MBProgressHUD showSuccess:@"收藏成功" toView:self.view];
-       // [self.slide save];
+        [self.tipsRecomnend save];
         
     }else{
         
         self.collectBtn.selected = NO;
         [MBProgressHUD showSuccess:@"取消收藏" toView:self.view];
-        //[self.slide deleteObject];
+        [self.tipsRecomnend deleteObject];
     }
 }
 

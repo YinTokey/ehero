@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JKDBModel.h"
 
-@interface EHTipsRecommend : NSObject
+@interface EHTipsRecommend : JKDBModel
 
 /**
  *  id (一个字典对象)
