@@ -18,4 +18,11 @@
 @property (nonatomic,strong) UIViewController *superVC;
 
 @property (nonatomic,strong) NSMutableArray *imageArray;
+
+@property (nonatomic,strong) NewPagedFlowView *flowView;
+
+@property (nonatomic,assign) BOOL netImageFlag;
+
+- (void)getTipsInfo;
+
 @end

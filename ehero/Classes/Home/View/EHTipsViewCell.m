@@ -29,7 +29,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHTipsViewCell" owner:nil options:nil] lastObject];
         [cell setSize:CGSizeMake(ScreenWidth,ScreenHeight*0.47)];
         cell.pageFlowView = [[NewPagedFlowView alloc] initWithFrame:CGRectMake(0, 30,ScreenWidth , ScreenHeight * 0.41)];
-
+        
         cell.pageFlowView.backgroundColor = [UIColor clearColor];
         //        pageFlowView.delegate = self;
         //        pageFlowView.dataSource = self;

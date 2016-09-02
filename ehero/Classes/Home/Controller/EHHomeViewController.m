@@ -25,8 +25,9 @@
 #import "EHHomeTableViewModel.h"
 #import "EHHomeNetViewModel.h"
 
-
 #import <MJExtension.h>
+
+#import "EHTipsViewCell.h"
 
 @interface EHHomeViewController ()<UITextFieldDelegate,SDCycleScrollViewDelegate>
 {
@@ -65,17 +66,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     major = @"sale";
-    
-   // [self getTipsInfo];
+
     [self initViewModels];
-    
-   
-    
     [self getSlides];
     [YTHttpTool netCheck];
     [self setNavBar];
     
-   
+//    NSIndexPath *tipsCellIndex = [NSIndexPath indexPathForRow:0 inSection:1];
+//    EHTipsViewCell *TipsCell = [self.tableView cellForRowAtIndexPath:tipsCellIndex];
+//    
+//    [RACObserve(_homeTableViewModel, netImageFlag)subscribeNext:^(id x) {
+//        [TipsCell.pageFlowView reloadData];
+//        NSLog(@"reload");
+//    }];
+
 }
 
 - (void)initViewModels{
@@ -87,18 +91,13 @@
     _homeTableViewModel.super = self;
     _homeTableViewModel.superVC = self;
     _homeTableViewModel.imageArray = [NSMutableArray array];
-    
+    //[_homeTableViewModel getTipsInfo];
     UIImage *image0 = [UIImage imageNamed:@"community1"];
-    UIImage *image1 = [UIImage imageNamed:@"community2"];
-    UIImage *image2 = [UIImage imageNamed:@"community3"];
     [_homeTableViewModel.imageArray  addObject:image0];
-    [_homeTableViewModel.imageArray  addObject:image1];
-    [_homeTableViewModel.imageArray  addObject:image2];
-   
+    [_homeTableViewModel getTipsInfo];
     
     _homeNetViewModel = [[EHHomeNetViewModel alloc]init];
-    
-    
+
     self.tableView.dataSource = _homeTableViewModel;
     self.tableView.delegate = _homeTableViewModel;
 }
@@ -192,17 +191,17 @@
     [homePopView popView];
 }
 
-- (void)getTipsInfo{
-    [YTHttpTool get:TipsRecommendUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
-        tipsRecommendArr = [EHTipsRecommend mj_objectArrayWithKeyValuesArray:responseObj];
-        NSLog(@"tips %d",tipsRecommendArr.count);
-        for (EHTipsRecommend *tipsR in tipsRecommendArr) {
-            [_homeTableViewModel.imageArray addObject:[YTNetCommand downloadImageWithImgStr:tipsR.thumb placeholderImageStr:@"home_placeholder" imageView:[[UIImageView alloc]init]]];
-        }
-
-    } failure:^(NSError *error) {
-        NSLog(@"failure");
-    }];
-
-}
+//- (void)getTipsInfo{
+//    UIImageView *imageView = [[UIImageView alloc]init];
+//    [YTHttpTool get:TipsRecommendUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
+//        tipsRecommendArr = [EHTipsRecommend mj_objectArrayWithKeyValuesArray:responseObj];
+//        
+//        for (EHTipsRecommend *tipsR in tipsRecommendArr) {
+//            [_homeTableViewModel.imageArray addObject:[YTNetCommand downloadImageWithImgStr:tipsR.thumb placeholderImageStr:@"home_placeholder" imageView:imageView]];
+//        }
+//        NSLog(@"tips %d",_homeTableViewModel.imageArray.count);
+//    } failure:^(NSError *error) {
+//        NSLog(@"failure");
+//    }];
+//}
 @end

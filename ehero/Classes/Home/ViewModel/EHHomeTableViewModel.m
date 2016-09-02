@@ -16,11 +16,14 @@
 #import "EHCommentAgentViewController.h"
 #import "EHHouseDetailViewController.h"
 #import "EHTipsViewCell.h"
-
-
+#import <MJExtension.h>
+#import "EHTipsRecommend.h"
+#import "YTNetCommand.h"
 
 @implementation EHHomeTableViewModel
-
+{
+    NSMutableArray *tipsRecommendArr;
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
     return 2;
@@ -45,6 +48,12 @@
         EHTipsViewCell *cell = [EHTipsViewCell tipsViewCellWithTableView:tableView];
         cell.pageFlowView.delegate = self;
         cell.pageFlowView.dataSource = self;
+        
+        [RACObserve(self, netImageFlag)subscribeNext:^(id x) {
+            [cell.pageFlowView reloadData];
+            NSLog(@"reload in model");
+        }];
+        
         return cell;
     }
     
@@ -97,23 +106,24 @@
 
 #pragma mark NewPagedFlowView Delegate
 - (CGSize)sizeForPageInFlowView:(NewPagedFlowView *)flowView {
+    flowView = self.flowView;
     return CGSizeMake(ScreenWidth * 0.4, ScreenHeight * 0.37);
 }
 
 - (void)didSelectCell:(UIView *)subView withSubViewIndex:(NSInteger)subIndex {
     
     NSLog(@"点击了第%ld张图",(long)subIndex + 1);
-
 }
 
 #pragma mark NewPagedFlowView Datasource
 - (NSInteger)numberOfPagesInFlowView:(NewPagedFlowView *)flowView {
-    
+    flowView = self.flowView;
     return self.imageArray.count;
 
 }
 
 - (UIView *)flowView:(NewPagedFlowView *)flowView cellForPageAtIndex:(NSInteger)index{
+    flowView = self.flowView;
     PGIndexBannerSubiew *bannerView = (PGIndexBannerSubiew *)[flowView dequeueReusableCell];
     if (!bannerView) {
         bannerView = [[PGIndexBannerSubiew alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth - 84, 300)];
@@ -121,7 +131,6 @@
         bannerView.layer.masksToBounds = YES;
        // bannerView.backgroundColor = [UIColor redColor];
     }
-
     //在这里下载网络图片
     //  [bannerView.mainImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:hostUrlsImg,imageDict[@"img"]]] placeholderImage:[UIImage imageNamed:@""]];
     bannerView.mainImageView.image = self.imageArray[index];
@@ -130,9 +139,33 @@
 }
 
 - (void)didScrollToPage:(NSInteger)pageNumber inFlowView:(NewPagedFlowView *)flowView {
-    
+    flowView = self.flowView;
     NSLog(@"ViewController 滚动到了第%ld页",pageNumber);
 }
 
+- (void)getTipsInfo{
+    UIImageView *imageView = [[UIImageView alloc]init];
+    [YTHttpTool get:TipsRecommendUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
+        tipsRecommendArr = [EHTipsRecommend mj_objectArrayWithKeyValuesArray:responseObj];
+        
+        for (EHTipsRecommend *tipsR in tipsRecommendArr) {
+            [self.imageArray addObject:[YTNetCommand downloadImageWithImgStr:tipsR.thumb placeholderImageStr:@"home_placeholder" imageView:imageView]];
+            NSLog(@"%@");
+        }
+        [self.imageArray removeObjectAtIndex:0];
+        [_flowView reloadData];
+        NSLog(@"tips %d",self.imageArray.count);
+        self.netImageFlag = YES;
+    } failure:^(NSError *error) {
+        NSLog(@"failure");
+    }];
+}
+
+- (NewPagedFlowView *)flowView{
+    if (!_flowView) {
+        _flowView = [[NewPagedFlowView alloc]init];
+    }
+    return _flowView;
+}
 
 @end
