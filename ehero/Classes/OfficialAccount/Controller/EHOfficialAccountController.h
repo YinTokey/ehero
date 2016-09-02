@@ -8,14 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "EHSlides.h"
-#import "EHTipsRecommend.h"
+
 
 
 @interface EHOfficialAccountController : UIViewController
 
 
 @property (nonatomic,strong) EHSlides *slide;
-
-@property (nonatomic,strong) EHTipsRecommend *tipsRecomnend;
 
 @end

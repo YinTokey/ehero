@@ -22,7 +22,7 @@
 
 #import "UIImageView+WebCache.h"
 #import "EHOfficialAccountController.h"
-
+#import "EHTipsReaderViewController.h"
 
 @implementation EHHomeTableViewModel
 {
@@ -119,10 +119,9 @@
     
     NSLog(@"点击了第%ld张图",(long)subIndex + 1);
     EHTipsRecommend *tip = _tipsRecommendArray[subIndex];
-    EHOfficialAccountController *officialAccountVC = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"OfficialAccountController"];
-    officialAccountVC.tipsRecomnend = tip;
-    [self.superVC.navigationController pushViewController:officialAccountVC animated:YES];
-    //NSLog(@"%@",tip.name);
+    EHTipsReaderViewController *tipsReaderVC = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"TipsReaderViewController"];
+    tipsReaderVC.tipsRecomnend = tip;
+    [self.superVC.navigationController pushViewController:tipsReaderVC animated:YES];
     
 }
 
@@ -144,13 +143,12 @@
     //根据url下载网络图片
     bannerView.mainImageView.image = [YTNetCommand downloadImageWithImgStr:
                                       [self.imageUrlStrArray objectAtIndex:index] placeholderImageStr:@"home_placeholder" imageView:bannerView.mainImageView];
-
     return bannerView;
 }
 
 - (void)didScrollToPage:(NSInteger)pageNumber inFlowView:(NewPagedFlowView *)flowView {
 
-    NSLog(@"ViewController 滚动到了第%ld页",pageNumber);
+ //   NSLog(@"ViewController 滚动到了第%ld页",pageNumber);
 }
 
 //- (void)getTipsInfo{

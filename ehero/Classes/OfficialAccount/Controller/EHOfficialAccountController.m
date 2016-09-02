@@ -10,7 +10,7 @@
 #import <WebKit/WebKit.h>
 #import "ShareView.h"
 #import "EHSocialShareViewModel.h"
-//#import <MWPhotoBrowser.h>
+
 #import "EHOfficialViewModel.h"
 
 
@@ -18,14 +18,14 @@
 
 @property (nonatomic,strong) WKWebView *webView;
 @property (nonatomic,strong) EHOfficialViewModel *officialViewModel;
-
+@property (nonatomic,strong) EHSocialShareViewModel *socialViewModel;
 
 @property (weak, nonatomic) IBOutlet UIButton *collectBtn;
 - (IBAction)shareBtnClick:(id)sender;
 - (IBAction)collectBtnClick:(id)sender;
 
 
-@property (nonatomic,strong) EHSocialShareViewModel *socialViewModel;
+
 
 @end
 
@@ -49,17 +49,9 @@
     [self initViewModels];
     
     _webView = [[WKWebView alloc]initWithFrame:self.view.frame];
-    NSURL *url = [[NSURL alloc]init] ;
-    if (self.slide!=nil) {
-        url = [NSURL URLWithString:self.slide.href];
-    }
-    if (self.tipsRecomnend!=nil) {
-        //url中文要转义
-        self.tipsRecomnend.route = [self.tipsRecomnend.route stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
-        url = [NSURL URLWithString:self.tipsRecomnend.route];
-    }
-  //  NSURL *url = [NSURL URLWithString:self.slide.href];
 
+    NSURL  *url = [NSURL URLWithString:self.slide.href];
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
     self.webView.navigationDelegate = _officialViewModel;

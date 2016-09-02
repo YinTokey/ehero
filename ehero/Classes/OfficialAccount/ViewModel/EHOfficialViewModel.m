@@ -12,14 +12,13 @@
 
 @implementation EHOfficialViewModel
 {
-       BOOL starLoadFlag;
+    BOOL starLoadFlag;
 }
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
     [LBProgressHUD showHUDto:_superVC.view animated:NO];
     NSLog(@"star load");
     starLoadFlag = YES;
 }
-
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
     

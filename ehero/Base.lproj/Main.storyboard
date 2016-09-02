@@ -185,6 +185,77 @@
             </objects>
             <point key="canvasLocation" x="311" y="-335"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t3J-fH-ywy">
+            <objects>
+                <navigationController id="5g6-ek-b73" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kgM-Pv-U8i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="T70-A6-NEr" kind="relationship" relationship="rootViewController" id="Pap-MO-k2Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IrW-GA-DHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2616" y="780"/>
+        </scene>
+        <!--Tips Reader View Controller-->
+        <scene sceneID="1vY-gy-vng">
+            <objects>
+                <viewController storyboardIdentifier="TipsReaderViewController" id="T70-A6-NEr" customClass="EHTipsReaderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lDx-Uj-Px9"/>
+                        <viewControllerLayoutGuide type="bottom" id="tKy-3A-EnW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FJi-c5-Hew">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aOy-fh-ypR">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="X65-3h-ahj">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JBI-C6-CfY">
+                                    <rect key="frame" x="284" y="7" width="20" height="29"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="Group"/>
+                                    <connections>
+                                        <action selector="shareBtnClick:" destination="T70-A6-NEr" eventType="touchUpInside" id="fqn-XQ-12h"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="gYA-Vh-Kph">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LBF-gI-hY5">
+                                    <rect key="frame" x="261" y="7" width="15" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="near_share_line"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="vkL-8E-qfL">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g58-y1-wWV">
+                                    <rect key="frame" x="231" y="11" width="22" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="Star 1"/>
+                                    <state key="selected" image="Star 2"/>
+                                    <connections>
+                                        <action selector="collectBtnClick:" destination="T70-A6-NEr" eventType="touchUpInside" id="zgr-Qb-WW8"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="collectBtn" destination="g58-y1-wWV" id="CZZ-8f-omU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JLY-zb-kxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2616" y="1424"/>
+        </scene>
         <!--生活锦囊-->
         <scene sceneID="G2E-rd-uA4">
             <objects>
