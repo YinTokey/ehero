@@ -155,6 +155,8 @@
     //根据url下载网络图片
     bannerView.mainImageView.image = [YTNetCommand downloadImageWithImgStr:
                                       [self.imageUrlStrArray objectAtIndex:index] placeholderImageStr:@"home_placeholder" imageView:bannerView.mainImageView];
+    EHTipsRecommend *tip = self.tipsRecommendArray[index];
+    bannerView.titleLable.text = tip.name;
     return bannerView;
 }
 

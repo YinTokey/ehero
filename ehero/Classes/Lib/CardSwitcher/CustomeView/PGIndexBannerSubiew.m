@@ -28,8 +28,9 @@
 
 - (UILabel *)titleLable{
     if (_titleLable == nil) {
-        _titleLable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 10)];
+        _titleLable = [[UILabel alloc]initWithFrame:CGRectMake(0, 8, self.bounds.size.width/2, 8)];
         _titleLable.textAlignment = NSTextAlignmentCenter;
+        //_titleLable.font = [UIFont systemFontOfSize:13];
     }
     return _titleLable;
 }
@@ -37,12 +38,12 @@
 - (UIImageView *)mainImageView {
     
     if (_mainImageView == nil) {
-        _mainImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 10, self.bounds.size.width, self.bounds.size.height - 10)];
+        _mainImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 15, self.bounds.size.width, self.bounds.size.height - 15)];
         _mainImageView.userInteractionEnabled = YES;
+ 
     }
     return _mainImageView;
 }
-
 
 
 - (UIView *)coverView {
