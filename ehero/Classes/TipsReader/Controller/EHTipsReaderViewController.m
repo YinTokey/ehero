@@ -81,7 +81,7 @@
     //分享界面弹窗
     ShareView *share = [[ShareView alloc]initWithTitleArray:titleArray picArray:picArray];
     [share showShareView];
-    _socialViewModel.shareToQzoneFlag = YES;
+    _socialViewModel.shareToQzoneFlag = NO;
     [share currentIndexWasSelected:^(NSInteger index) {
         _socialViewModel.desc = @" ";
         NSString *title = [NSString stringWithFormat:@"分享租房锦囊之 %@",self.tipsRecomnend.name];

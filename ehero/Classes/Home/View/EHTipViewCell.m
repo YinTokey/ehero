@@ -1,15 +1,15 @@
 //
-//  EHTipsViewCell.m
-//  ehero
+//  EHTipViewCell.m
+//  易房好介
 //
-//  Created by Mac on 16/9/1.
+//  Created by Mac on 16/9/3.
 //  Copyright © 2016年 ehero. All rights reserved.
 //
 
-#import "EHTipsViewCell.h"
+#import "EHTipViewCell.h"
 #import "SDAutoLayout.h"
 #import "YTNetCommand.h"
-@interface EHTipsViewCell()
+@interface EHTipViewCell()
 - (IBAction)moreBtnClick:(id)sender;
 - (IBAction)guessBtnClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *moreButton;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation EHTipsViewCell
+@implementation EHTipViewCell
 //- (IBAction)moreBtnClick:(id)sender {
 //    if ([self.delegate respondsToSelector:@selector(moreClick:)]) {
 //        [self.delegate moreClick:self];
@@ -37,18 +37,18 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
-+ (instancetype)tipsViewCellWithTableView:(UITableView *)tableView{
-    static NSString *reuseId = @"reuseHomeAgentCell";
-    EHTipsViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
++ (instancetype)tipViewCellWithTableView:(UITableView *)tableView{
+    static NSString *reuseId = @"reuseTipViewCell";
+    EHTipViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"EHTipsViewCell" owner:nil options:nil] lastObject];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"EHTipViewCell" owner:nil options:nil] lastObject];
         [cell setSize:CGSizeMake(ScreenWidth,ScreenHeight*0.47)];
-        cell.pageFlowView = [[NewPagedFlowView alloc] initWithFrame:CGRectMake(0, 30,ScreenWidth , ScreenHeight * 0.41)];
-        
+        cell.pageFlowView = [[NewPagedFlowView alloc] initWithFrame:CGRectMake(0, 18,ScreenWidth , ScreenHeight * 0.41)];
+        cell.backgroundColor = RGB(238, 245, 250);
         cell.pageFlowView.backgroundColor = [UIColor clearColor];
         //        pageFlowView.delegate = self;
         //        pageFlowView.dataSource = self;
@@ -58,8 +58,10 @@
         cell.pageFlowView.orginPageCount = 3;
         
         cell.pageFlowView.isOpenAutoScroll = YES;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        UIScrollView *bottomScrollView = [[UIScrollView alloc] initWithFrame:cell.bounds];
+        
+        UIScrollView *bottomScrollView = [[UIScrollView alloc] initWithFrame:cell.pageFlowView.frame];
         
         [bottomScrollView addSubview:cell.pageFlowView];
         
@@ -73,15 +75,16 @@
 
 - (void)setClickEvent{
     //xcode7 自定义xib中要相应按钮事件，必须将cell加到contentView上，或者直接移除掉contentView
-//    [self.contentView addSubview:_moreButton];
-//    [self.contentView addSubview:_guessButton];
-    
+     //   [self.contentView addSubview:_moreButton];
+   //   [self.contentView addSubview:_guessButton];
+  [self.contentView removeFromSuperview];
+
 }
 
 - (IBAction)moreBtnClick:(id)sender {
-   if ([self.delegate respondsToSelector:@selector(moreClick:)]) {
-       [self.delegate moreClick:self];
-   }
+    if ([self.delegate respondsToSelector:@selector(moreClick:)]) {
+        [self.delegate moreClick:self];
+    }
 }
 
 - (IBAction)guessBtnClick:(id)sender {
@@ -89,4 +92,5 @@
         [self.delegate guessClick:self];
     }
 }
+
 @end

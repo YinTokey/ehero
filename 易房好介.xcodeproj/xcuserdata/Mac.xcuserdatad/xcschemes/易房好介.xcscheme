@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "04F06CC41D2DFE910081A34D"
-               BuildableName = "ehero.app"
-               BlueprintName = "ehero"
-               ReferencedContainer = "container:ehero.xcodeproj">
+               BuildableName = "&#x6613;&#x623f;&#x597d;&#x4ecb;.app"
+               BlueprintName = "&#x6613;&#x623f;&#x597d;&#x4ecb;"
+               ReferencedContainer = "container:&#x6613;&#x623f;&#x597d;&#x4ecb;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "04F06CDD1D2DFE920081A34D"
-               BuildableName = "eheroTests.xctest"
-               BlueprintName = "eheroTests"
-               ReferencedContainer = "container:ehero.xcodeproj">
+               BuildableName = "&#x6613;&#x623f;&#x597d;&#x4ecb;.xctest"
+               BlueprintName = "&#x6613;&#x623f;&#x597d;&#x4ecb;Tests"
+               ReferencedContainer = "container:&#x6613;&#x623f;&#x597d;&#x4ecb;.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "04F06CE81D2DFE920081A34D"
-               BuildableName = "eheroUITests.xctest"
-               BlueprintName = "eheroUITests"
-               ReferencedContainer = "container:ehero.xcodeproj">
+               BuildableName = "&#x6613;&#x623f;&#x597d;&#x4ecb;.xctest"
+               BlueprintName = "&#x6613;&#x623f;&#x597d;&#x4ecb;UITests"
+               ReferencedContainer = "container:&#x6613;&#x623f;&#x597d;&#x4ecb;.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04F06CC41D2DFE910081A34D"
-            BuildableName = "ehero.app"
-            BlueprintName = "ehero"
-            ReferencedContainer = "container:ehero.xcodeproj">
+            BuildableName = "&#x6613;&#x623f;&#x597d;&#x4ecb;.app"
+            BlueprintName = "&#x6613;&#x623f;&#x597d;&#x4ecb;"
+            ReferencedContainer = "container:&#x6613;&#x623f;&#x597d;&#x4ecb;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04F06CC41D2DFE910081A34D"
-            BuildableName = "ehero.app"
-            BlueprintName = "ehero"
-            ReferencedContainer = "container:ehero.xcodeproj">
+            BuildableName = "&#x6613;&#x623f;&#x597d;&#x4ecb;.app"
+            BlueprintName = "&#x6613;&#x623f;&#x597d;&#x4ecb;"
+            ReferencedContainer = "container:&#x6613;&#x623f;&#x597d;&#x4ecb;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04F06CC41D2DFE910081A34D"
-            BuildableName = "ehero.app"
-            BlueprintName = "ehero"
-            ReferencedContainer = "container:ehero.xcodeproj">
+            BuildableName = "&#x6613;&#x623f;&#x597d;&#x4ecb;.app"
+            BlueprintName = "&#x6613;&#x623f;&#x597d;&#x4ecb;"
+            ReferencedContainer = "container:&#x6613;&#x623f;&#x597d;&#x4ecb;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

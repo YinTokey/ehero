@@ -49,12 +49,11 @@
         return cell;
         //第二行 锦囊
     }else{
-        EHTipsViewCell *cell = [EHTipsViewCell tipsViewCellWithTableView:tableView];
+        EHTipViewCell *cell = [EHTipViewCell tipViewCellWithTableView:tableView];
         cell.pageFlowView.delegate = self;
         cell.pageFlowView.dataSource = self;
    //     [cell setClickEvent];
         cell.delegate = self;
-
         [cell setClickEvent];
         [RACObserve(self, netImageFlag)subscribeNext:^(id x) {
             [cell.pageFlowView reloadData];

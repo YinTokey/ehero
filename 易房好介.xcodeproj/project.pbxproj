@@ -34,8 +34,6 @@
 		046738A01D72D80600DDE9BD /* EHCollectedArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0467389F1D72D80600DDE9BD /* EHCollectedArticleViewController.m */; };
 		046885181D77F85D00B6EAC4 /* PGIndexBannerSubiew.m in Sources */ = {isa = PBXBuildFile; fileRef = 046885141D77F85D00B6EAC4 /* PGIndexBannerSubiew.m */; };
 		046885191D77F85D00B6EAC4 /* NewPagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046885171D77F85D00B6EAC4 /* NewPagedFlowView.m */; };
-		046885221D78257A00B6EAC4 /* EHTipsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046885201D78257A00B6EAC4 /* EHTipsViewCell.m */; };
-		046885231D78257A00B6EAC4 /* EHTipsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046885211D78257A00B6EAC4 /* EHTipsViewCell.xib */; };
 		046A7C5E1D503E9600652296 /* JKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 046A7C5B1D503E9600652296 /* JKDBHelper.m */; };
 		046A7C5F1D503E9600652296 /* JKDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046A7C5D1D503E9600652296 /* JKDBModel.m */; };
 		046A7C6A1D50659B00652296 /* EHCollectedAgentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046A7C671D50659B00652296 /* EHCollectedAgentsViewController.m */; };
@@ -102,6 +100,8 @@
 		04C157801D6ED5810036E5A1 /* EHOfficialAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1577F1D6ED5810036E5A1 /* EHOfficialAccountController.m */; };
 		04C157831D6EE40F0036E5A1 /* EHSlides.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C157821D6EE40F0036E5A1 /* EHSlides.m */; };
 		04C217B01D7A6FEE00908935 /* EHCollectedTipsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C217AF1D7A6FEE00908935 /* EHCollectedTipsController.m */; };
+		04C2FFCC1D7AB152000CA92D /* EHTipViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C2FFCA1D7AB152000CA92D /* EHTipViewCell.m */; };
+		04C2FFCF1D7ABC39000CA92D /* EHTipViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C2FFCE1D7ABC39000CA92D /* EHTipViewCell.xib */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
 		04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */; };
@@ -213,9 +213,6 @@
 		046885141D77F85D00B6EAC4 /* PGIndexBannerSubiew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGIndexBannerSubiew.m; sourceTree = "<group>"; };
 		046885161D77F85D00B6EAC4 /* NewPagedFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPagedFlowView.h; sourceTree = "<group>"; };
 		046885171D77F85D00B6EAC4 /* NewPagedFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPagedFlowView.m; sourceTree = "<group>"; };
-		0468851F1D78257A00B6EAC4 /* EHTipsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTipsViewCell.h; sourceTree = "<group>"; };
-		046885201D78257A00B6EAC4 /* EHTipsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTipsViewCell.m; sourceTree = "<group>"; };
-		046885211D78257A00B6EAC4 /* EHTipsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHTipsViewCell.xib; sourceTree = "<group>"; };
 		046A7C5A1D503E9600652296 /* JKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBHelper.h; sourceTree = "<group>"; };
 		046A7C5B1D503E9600652296 /* JKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBHelper.m; sourceTree = "<group>"; };
 		046A7C5C1D503E9600652296 /* JKDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBModel.h; sourceTree = "<group>"; };
@@ -342,6 +339,9 @@
 		04C157821D6EE40F0036E5A1 /* EHSlides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSlides.m; sourceTree = "<group>"; };
 		04C217AE1D7A6FEE00908935 /* EHCollectedTipsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCollectedTipsController.h; sourceTree = "<group>"; };
 		04C217AF1D7A6FEE00908935 /* EHCollectedTipsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCollectedTipsController.m; sourceTree = "<group>"; };
+		04C2FFC91D7AB152000CA92D /* EHTipViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTipViewCell.h; sourceTree = "<group>"; };
+		04C2FFCA1D7AB152000CA92D /* EHTipViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTipViewCell.m; sourceTree = "<group>"; };
+		04C2FFCE1D7ABC39000CA92D /* EHTipViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHTipViewCell.xib; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04C3A8D61D31FDD9003203C0 /* PDFImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFImage.framework; path = ../../../../../Downloads/PDFImage.framework; sourceTree = "<group>"; };
 		04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayhouseCell.h; sourceTree = "<group>"; };
@@ -393,16 +393,16 @@
 		04E9CFF71D46082B0087BD70 /* EHAgentInfoCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfoCommentCell.h; sourceTree = "<group>"; };
 		04E9CFF81D46082B0087BD70 /* EHAgentInfoCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfoCommentCell.m; sourceTree = "<group>"; };
 		04E9CFF91D46082B0087BD70 /* EHAgentInfoCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHAgentInfoCommentCell.xib; sourceTree = "<group>"; };
-		04F06CC51D2DFE920081A34D /* ehero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ehero.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F06CC51D2DFE920081A34D /* 易房好介.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "易房好介.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06CC91D2DFE920081A34D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F06CD21D2DFE920081A34D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04F06CD41D2DFE920081A34D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04F06CD71D2DFE920081A34D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04F06CD91D2DFE920081A34D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04F06CDE1D2DFE920081A34D /* eheroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eheroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F06CDE1D2DFE920081A34D /* 易房好介.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "易房好介.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06CE21D2DFE920081A34D /* eheroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eheroTests.m; sourceTree = "<group>"; };
 		04F06CE41D2DFE920081A34D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04F06CE91D2DFE920081A34D /* eheroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eheroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F06CE91D2DFE920081A34D /* 易房好介.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "易房好介.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06CED1D2DFE920081A34D /* eheroUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eheroUITests.m; sourceTree = "<group>"; };
 		04F06CEF1D2DFE920081A34D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04F06D2E1D2E0E040081A34D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1555,9 +1555,9 @@
 		04F06CBC1D2DFE910081A34D = {
 			isa = PBXGroup;
 			children = (
-				04F06CC71D2DFE920081A34D /* ehero */,
-				04F06CE11D2DFE920081A34D /* eheroTests */,
-				04F06CEC1D2DFE920081A34D /* eheroUITests */,
+				04F06CC71D2DFE920081A34D /* 易房好介 */,
+				04F06CE11D2DFE920081A34D /* 易房好介Tests */,
+				04F06CEC1D2DFE920081A34D /* 易房好介UITests */,
 				04F06CC61D2DFE920081A34D /* Products */,
 				FEC0CEEDEBE9288536D3046F /* Frameworks */,
 				0D082B0091CB69226F9B574A /* Pods */,
@@ -1567,14 +1567,14 @@
 		04F06CC61D2DFE920081A34D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04F06CC51D2DFE920081A34D /* ehero.app */,
-				04F06CDE1D2DFE920081A34D /* eheroTests.xctest */,
-				04F06CE91D2DFE920081A34D /* eheroUITests.xctest */,
+				04F06CC51D2DFE920081A34D /* 易房好介.app */,
+				04F06CDE1D2DFE920081A34D /* 易房好介.xctest */,
+				04F06CE91D2DFE920081A34D /* 易房好介.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		04F06CC71D2DFE920081A34D /* ehero */ = {
+		04F06CC71D2DFE920081A34D /* 易房好介 */ = {
 			isa = PBXGroup;
 			children = (
 				04F06D231D2E0E040081A34D /* Classes */,
@@ -1585,6 +1585,7 @@
 				04F06CD91D2DFE920081A34D /* Info.plist */,
 				04F06CC81D2DFE920081A34D /* Supporting Files */,
 			);
+			name = "易房好介";
 			path = ehero;
 			sourceTree = "<group>";
 		};
@@ -1596,21 +1597,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		04F06CE11D2DFE920081A34D /* eheroTests */ = {
+		04F06CE11D2DFE920081A34D /* 易房好介Tests */ = {
 			isa = PBXGroup;
 			children = (
 				04F06CE21D2DFE920081A34D /* eheroTests.m */,
 				04F06CE41D2DFE920081A34D /* Info.plist */,
 			);
+			name = "易房好介Tests";
 			path = eheroTests;
 			sourceTree = "<group>";
 		};
-		04F06CEC1D2DFE920081A34D /* eheroUITests */ = {
+		04F06CEC1D2DFE920081A34D /* 易房好介UITests */ = {
 			isa = PBXGroup;
 			children = (
 				04F06CED1D2DFE920081A34D /* eheroUITests.m */,
 				04F06CEF1D2DFE920081A34D /* Info.plist */,
 			);
+			name = "易房好介UITests";
 			path = eheroUITests;
 			sourceTree = "<group>";
 		};
@@ -1685,9 +1688,9 @@
 				04C8FDDC1D5426310081CE73 /* EHHomeAgentCell.xib */,
 				04C6054C1D62D35C00039217 /* EHHomePopView.h */,
 				04C6054D1D62D35C00039217 /* EHHomePopView.m */,
-				0468851F1D78257A00B6EAC4 /* EHTipsViewCell.h */,
-				046885201D78257A00B6EAC4 /* EHTipsViewCell.m */,
-				046885211D78257A00B6EAC4 /* EHTipsViewCell.xib */,
+				04C2FFC91D7AB152000CA92D /* EHTipViewCell.h */,
+				04C2FFCA1D7AB152000CA92D /* EHTipViewCell.m */,
+				04C2FFCE1D7ABC39000CA92D /* EHTipViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1776,9 +1779,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		04F06CC41D2DFE910081A34D /* ehero */ = {
+		04F06CC41D2DFE910081A34D /* 易房好介 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04F06CF21D2DFE920081A34D /* Build configuration list for PBXNativeTarget "ehero" */;
+			buildConfigurationList = 04F06CF21D2DFE920081A34D /* Build configuration list for PBXNativeTarget "易房好介" */;
 			buildPhases = (
 				B56457F99DF880B1CD9E068B /* [CP] Check Pods Manifest.lock */,
 				04F06CC11D2DFE910081A34D /* Sources */,
@@ -1791,14 +1794,14 @@
 			);
 			dependencies = (
 			);
-			name = ehero;
+			name = "易房好介";
 			productName = ehero;
-			productReference = 04F06CC51D2DFE920081A34D /* ehero.app */;
+			productReference = 04F06CC51D2DFE920081A34D /* 易房好介.app */;
 			productType = "com.apple.product-type.application";
 		};
-		04F06CDD1D2DFE920081A34D /* eheroTests */ = {
+		04F06CDD1D2DFE920081A34D /* 易房好介Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04F06CF51D2DFE920081A34D /* Build configuration list for PBXNativeTarget "eheroTests" */;
+			buildConfigurationList = 04F06CF51D2DFE920081A34D /* Build configuration list for PBXNativeTarget "易房好介Tests" */;
 			buildPhases = (
 				04F06CDA1D2DFE920081A34D /* Sources */,
 				04F06CDB1D2DFE920081A34D /* Frameworks */,
@@ -1809,14 +1812,14 @@
 			dependencies = (
 				04F06CE01D2DFE920081A34D /* PBXTargetDependency */,
 			);
-			name = eheroTests;
+			name = "易房好介Tests";
 			productName = eheroTests;
-			productReference = 04F06CDE1D2DFE920081A34D /* eheroTests.xctest */;
+			productReference = 04F06CDE1D2DFE920081A34D /* 易房好介.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		04F06CE81D2DFE920081A34D /* eheroUITests */ = {
+		04F06CE81D2DFE920081A34D /* 易房好介UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04F06CF81D2DFE920081A34D /* Build configuration list for PBXNativeTarget "eheroUITests" */;
+			buildConfigurationList = 04F06CF81D2DFE920081A34D /* Build configuration list for PBXNativeTarget "易房好介UITests" */;
 			buildPhases = (
 				04F06CE51D2DFE920081A34D /* Sources */,
 				04F06CE61D2DFE920081A34D /* Frameworks */,
@@ -1827,9 +1830,9 @@
 			dependencies = (
 				04F06CEB1D2DFE920081A34D /* PBXTargetDependency */,
 			);
-			name = eheroUITests;
+			name = "易房好介UITests";
 			productName = eheroUITests;
-			productReference = 04F06CE91D2DFE920081A34D /* eheroUITests.xctest */;
+			productReference = 04F06CE91D2DFE920081A34D /* 易房好介.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -1856,7 +1859,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 04F06CC01D2DFE910081A34D /* Build configuration list for PBXProject "ehero" */;
+			buildConfigurationList = 04F06CC01D2DFE910081A34D /* Build configuration list for PBXProject "易房好介" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1869,9 +1872,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04F06CC41D2DFE910081A34D /* ehero */,
-				04F06CDD1D2DFE920081A34D /* eheroTests */,
-				04F06CE81D2DFE920081A34D /* eheroUITests */,
+				04F06CC41D2DFE910081A34D /* 易房好介 */,
+				04F06CDD1D2DFE920081A34D /* 易房好介Tests */,
+				04F06CE81D2DFE920081A34D /* 易房好介UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1887,6 +1890,7 @@
 				04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */,
 				04B0EFE51D49AD1A00BE301B /* EHHouseDetailAgentCell.xib in Resources */,
 				04F06CD81D2DFE920081A34D /* LaunchScreen.storyboard in Resources */,
+				04C2FFCF1D7ABC39000CA92D /* EHTipViewCell.xib in Resources */,
 				04E9CFF61D4608110087BD70 /* EHAgentInfoCommunityCell.xib in Resources */,
 				0456A9E21D49E5640065DC5B /* EHCallAgentView.xib in Resources */,
 				04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */,
@@ -1894,7 +1898,6 @@
 				04716BF31D34C70900E512EE /* EHNewsViewCell.xib in Resources */,
 				04B0EFE01D49A18100BE301B /* EHHouseDetailCell.xib in Resources */,
 				04C5006B1D336D8B009146E5 /* EHWechatGroupCell.xib in Resources */,
-				046885231D78257A00B6EAC4 /* EHTipsViewCell.xib in Resources */,
 				04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */,
 				04B0EFEA1D49B79700BE301B /* EHHouseDetailCallCell.xib in Resources */,
 				04C8FDDE1D5426310081CE73 /* EHHomeAgentCell.xib in Resources */,
@@ -2007,6 +2010,7 @@
 				04B4F43C1D5AF1E100C6D4F3 /* UIButton+GetWidth.m in Sources */,
 				047ED1801D6D3DF6008EC261 /* EHSearchTableViewModel.m in Sources */,
 				04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */,
+				04C2FFCC1D7AB152000CA92D /* EHTipViewCell.m in Sources */,
 				04716C0B1D35060B00E512EE /* AFURLSessionManager.m in Sources */,
 				04B0EFDF1D49A18100BE301B /* EHHouseDetailCell.m in Sources */,
 				04716BF21D34C70900E512EE /* EHNewsViewCell.m in Sources */,
@@ -2052,7 +2056,6 @@
 				04E9CFF51D4608110087BD70 /* EHAgentInfoCommunityCell.m in Sources */,
 				0430D1D91D783519004BAD5C /* EHTipsRecommend.m in Sources */,
 				049AA07D1D5034D600761E3F /* FMDatabaseQueue.m in Sources */,
-				046885221D78257A00B6EAC4 /* EHTipsViewCell.m in Sources */,
 				0465688B1D4B39DE001C9851 /* UIView+SDAutoLayout.m in Sources */,
 				04667FAB1D49FE990051C446 /* STAlertView.m in Sources */,
 				04DA25E31D41E33000235C51 /* EHProfileViewController.m in Sources */,
@@ -2104,12 +2107,12 @@
 /* Begin PBXTargetDependency section */
 		04F06CE01D2DFE920081A34D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 04F06CC41D2DFE910081A34D /* ehero */;
+			target = 04F06CC41D2DFE910081A34D /* 易房好介 */;
 			targetProxy = 04F06CDF1D2DFE920081A34D /* PBXContainerItemProxy */;
 		};
 		04F06CEB1D2DFE920081A34D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 04F06CC41D2DFE910081A34D /* ehero */;
+			target = 04F06CC41D2DFE910081A34D /* 易房好介 */;
 			targetProxy = 04F06CEA1D2DFE920081A34D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2251,7 +2254,7 @@
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eherocc.ehero;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "易房好介";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -2292,7 +2295,7 @@
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eherocc.ehero;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "易房好介";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -2306,8 +2309,8 @@
 				INFOPLIST_FILE = eheroTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ehero.eheroTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ehero.app/ehero";
+				PRODUCT_NAME = "易房好介";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/易房好介.app/易房好介";
 			};
 			name = Debug;
 		};
@@ -2318,8 +2321,8 @@
 				INFOPLIST_FILE = eheroTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ehero.eheroTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ehero.app/ehero";
+				PRODUCT_NAME = "易房好介";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/易房好介.app/易房好介";
 			};
 			name = Release;
 		};
@@ -2329,7 +2332,7 @@
 				INFOPLIST_FILE = eheroUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ehero.eheroUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "易房好介";
 				TEST_TARGET_NAME = ehero;
 			};
 			name = Debug;
@@ -2340,7 +2343,7 @@
 				INFOPLIST_FILE = eheroUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ehero.eheroUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "易房好介";
 				TEST_TARGET_NAME = ehero;
 			};
 			name = Release;
@@ -2348,7 +2351,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04F06CC01D2DFE910081A34D /* Build configuration list for PBXProject "ehero" */ = {
+		04F06CC01D2DFE910081A34D /* Build configuration list for PBXProject "易房好介" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04F06CF01D2DFE920081A34D /* Debug */,
@@ -2357,7 +2360,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04F06CF21D2DFE920081A34D /* Build configuration list for PBXNativeTarget "ehero" */ = {
+		04F06CF21D2DFE920081A34D /* Build configuration list for PBXNativeTarget "易房好介" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04F06CF31D2DFE920081A34D /* Debug */,
@@ -2366,7 +2369,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04F06CF51D2DFE920081A34D /* Build configuration list for PBXNativeTarget "eheroTests" */ = {
+		04F06CF51D2DFE920081A34D /* Build configuration list for PBXNativeTarget "易房好介Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04F06CF61D2DFE920081A34D /* Debug */,
@@ -2375,7 +2378,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04F06CF81D2DFE920081A34D /* Build configuration list for PBXNativeTarget "eheroUITests" */ = {
+		04F06CF81D2DFE920081A34D /* Build configuration list for PBXNativeTarget "易房好介UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04F06CF91D2DFE920081A34D /* Debug */,

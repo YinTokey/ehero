@@ -1,8 +1,8 @@
 //
-//  EHTipsViewCell.h
-//  ehero
+//  EHTipViewCell.h
+//  易房好介
 //
-//  Created by Mac on 16/9/1.
+//  Created by Mac on 16/9/3.
 //  Copyright © 2016年 ehero. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 #import "NewPagedFlowView.h"
 #import "PGIndexBannerSubiew.h"
 
-@protocol tipsViewCellDelegate <NSObject>
+@protocol tipViewCellDelegate <NSObject>
 
 - (void)guessClick:(UITableViewCell *)cell;
 - (void)moreClick:(UITableViewCell *)cell;
@@ -19,13 +19,13 @@
 @end
 
 
-@interface EHTipsViewCell : UITableViewCell
+@interface EHTipViewCell : UITableViewCell
 
 @property (nonatomic,strong) NewPagedFlowView *pageFlowView;
 
-@property (nonatomic,weak)id<tipsViewCellDelegate> delegate;
+@property (nonatomic,weak)id<tipViewCellDelegate> delegate;
 
-+ (instancetype)tipsViewCellWithTableView:(UITableView *)tableView;
++ (instancetype)tipViewCellWithTableView:(UITableView *)tableView;
 
 - (void)setClickEvent;
 
