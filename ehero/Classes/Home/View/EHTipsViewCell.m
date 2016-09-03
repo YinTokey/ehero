@@ -73,8 +73,8 @@
 
 - (void)setClickEvent{
     //xcode7 自定义xib中要相应按钮事件，必须将cell加到contentView上，或者直接移除掉contentView
-    [self.contentView addSubview:_moreButton];
-    [self.contentView addSubview:_guessButton];
+//    [self.contentView addSubview:_moreButton];
+//    [self.contentView addSubview:_guessButton];
     
 }
 

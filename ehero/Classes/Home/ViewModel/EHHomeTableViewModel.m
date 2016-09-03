@@ -54,7 +54,7 @@
         cell.pageFlowView.dataSource = self;
    //     [cell setClickEvent];
         cell.delegate = self;
-        cell.userInteractionEnabled = YES;
+
         [cell setClickEvent];
         [RACObserve(self, netImageFlag)subscribeNext:^(id x) {
             [cell.pageFlowView reloadData];

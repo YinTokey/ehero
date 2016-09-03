@@ -19,6 +19,11 @@
 @interface PGIndexBannerSubiew : UIView
 
 /**
+ *  标题
+ */
+@property (nonatomic, strong) UILabel *titleLable;
+
+/**
  *  主图
  */
 @property (nonatomic, strong) UIImageView *mainImageView;
