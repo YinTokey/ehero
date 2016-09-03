@@ -48,7 +48,7 @@
     if (cell==nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseId];
     }
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+  //  cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     EHTipsRecommend *tip = self.collectedTipsArray[indexPath.row];
     

@@ -9,7 +9,26 @@
 #import "EHTipsViewCell.h"
 #import "SDAutoLayout.h"
 #import "YTNetCommand.h"
+@interface EHTipsViewCell()
+- (IBAction)moreBtnClick:(id)sender;
+- (IBAction)guessBtnClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *moreButton;
+@property (weak, nonatomic) IBOutlet UIButton *guessButton;
+
+@end
+
 @implementation EHTipsViewCell
+//- (IBAction)moreBtnClick:(id)sender {
+//    if ([self.delegate respondsToSelector:@selector(moreClick:)]) {
+//        [self.delegate moreClick:self];
+//    }
+//}
+//- (IBAction)guessBtnClick:(id)sender {
+//    if ([self.delegate respondsToSelector:@selector(guessClick:)]) {
+//        [self.delegate guessClick:self];
+//    }
+//
+//}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -52,5 +71,22 @@
     
 }
 
+- (void)setClickEvent{
+    //xcode7 自定义xib中要相应按钮事件，必须将cell加到contentView上，或者直接移除掉contentView
+    [self.contentView addSubview:_moreButton];
+    [self.contentView addSubview:_guessButton];
+    
+}
 
+- (IBAction)moreBtnClick:(id)sender {
+   if ([self.delegate respondsToSelector:@selector(moreClick:)]) {
+       [self.delegate moreClick:self];
+   }
+}
+
+- (IBAction)guessBtnClick:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(guessClick:)]) {
+        [self.delegate guessClick:self];
+    }
+}
 @end

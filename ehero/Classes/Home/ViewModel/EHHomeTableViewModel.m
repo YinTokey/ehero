@@ -15,7 +15,6 @@
 #import "EHWechatGroupViewController.h"
 #import "EHCommentAgentViewController.h"
 #import "EHHouseDetailViewController.h"
-#import "EHTipsViewCell.h"
 #import <MJExtension.h>
 #import "EHTipsRecommend.h"
 #import "YTNetCommand.h"
@@ -53,7 +52,10 @@
         EHTipsViewCell *cell = [EHTipsViewCell tipsViewCellWithTableView:tableView];
         cell.pageFlowView.delegate = self;
         cell.pageFlowView.dataSource = self;
-        
+   //     [cell setClickEvent];
+        cell.delegate = self;
+        cell.userInteractionEnabled = YES;
+        [cell setClickEvent];
         [RACObserve(self, netImageFlag)subscribeNext:^(id x) {
             [cell.pageFlowView reloadData];
             NSLog(@"reload in model");
@@ -108,6 +110,17 @@
     [self.superVC.navigationController pushViewController:wechatGroupViewController animated:YES];
     
 }
+
+- (void)moreClick:(UITableViewCell *)cell{
+    NSLog(@"more");
+    [MBProgressHUD showNormalMessage:@"敬请期待" toView:_superVC.view];
+}
+
+- (void)guessClick:(UITableViewCell *)cell{
+    NSLog(@"guess");
+    [MBProgressHUD showNormalMessage:@"敬请期待" toView:_superVC.view];
+}
+
 
 #pragma mark NewPagedFlowView Delegate
 - (CGSize)sizeForPageInFlowView:(NewPagedFlowView *)flowView {

@@ -11,7 +11,9 @@
 #import "buttonCell.h"
 #import "NewPagedFlowView.h"
 #import "PGIndexBannerSubiew.h"
-@interface EHHomeTableViewModel : NSObject<UITableViewDataSource,UITableViewDelegate,buttonCellDelegate,NewPagedFlowViewDelegate, NewPagedFlowViewDataSource>
+#import "EHTipsViewCell.h"
+
+@interface EHHomeTableViewModel : NSObject<UITableViewDataSource,UITableViewDelegate,buttonCellDelegate,NewPagedFlowViewDelegate, NewPagedFlowViewDataSource,tipsViewCellDelegate>
 
 @property (nonatomic,strong) id super;
 

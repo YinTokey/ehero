@@ -60,7 +60,7 @@
     if (cell==nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseId];
     }
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+   // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     EHSlides *slide = self.collectedArticleArray[indexPath.row];
     cell.textLabel.text = slide.title;
