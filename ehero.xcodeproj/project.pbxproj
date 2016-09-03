@@ -101,6 +101,7 @@
 		04C157781D6EC6D70036E5A1 /* EHHomeNetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C157771D6EC6D70036E5A1 /* EHHomeNetViewModel.m */; };
 		04C157801D6ED5810036E5A1 /* EHOfficialAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1577F1D6ED5810036E5A1 /* EHOfficialAccountController.m */; };
 		04C157831D6EE40F0036E5A1 /* EHSlides.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C157821D6EE40F0036E5A1 /* EHSlides.m */; };
+		04C217B01D7A6FEE00908935 /* EHCollectedTipsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C217AF1D7A6FEE00908935 /* EHCollectedTipsController.m */; };
 		04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8DC1D321596003203C0 /* EHEverydayhouseCell.m */; };
 		04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3A8DD1D321596003203C0 /* EHEverydayhouseCell.xib */; };
 		04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3A8E11D321FE2003203C0 /* EHSearchResultCell.m */; };
@@ -339,6 +340,8 @@
 		04C1577F1D6ED5810036E5A1 /* EHOfficialAccountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHOfficialAccountController.m; sourceTree = "<group>"; };
 		04C157811D6EE40F0036E5A1 /* EHSlides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSlides.h; sourceTree = "<group>"; };
 		04C157821D6EE40F0036E5A1 /* EHSlides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSlides.m; sourceTree = "<group>"; };
+		04C217AE1D7A6FEE00908935 /* EHCollectedTipsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCollectedTipsController.h; sourceTree = "<group>"; };
+		04C217AF1D7A6FEE00908935 /* EHCollectedTipsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCollectedTipsController.m; sourceTree = "<group>"; };
 		04C3A8D01D31E518003203C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		04C3A8D61D31FDD9003203C0 /* PDFImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFImage.framework; path = ../../../../../Downloads/PDFImage.framework; sourceTree = "<group>"; };
 		04C3A8DB1D321596003203C0 /* EHEverydayhouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEverydayhouseCell.h; sourceTree = "<group>"; };
@@ -786,6 +789,7 @@
 		046A7C631D50659B00652296 /* sub */ = {
 			isa = PBXGroup;
 			children = (
+				04C217A91D7A6FD500908935 /* CollectedTips */,
 				046738911D72CB6C00DDE9BD /* CollectedArticle */,
 				04B857221D57319300BEA6CB /* SkimedAgents */,
 				046A7C641D50659B00652296 /* CollectedAgents */,
@@ -1114,6 +1118,47 @@
 			children = (
 				044308171D75651700166036 /* EHOfficialViewModel.h */,
 				044308181D75651700166036 /* EHOfficialViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04C217A91D7A6FD500908935 /* CollectedTips */ = {
+			isa = PBXGroup;
+			children = (
+				04C217AA1D7A6FD500908935 /* Controller */,
+				04C217AB1D7A6FD500908935 /* Model */,
+				04C217AC1D7A6FD500908935 /* View */,
+				04C217AD1D7A6FD500908935 /* ViewModel */,
+			);
+			path = CollectedTips;
+			sourceTree = "<group>";
+		};
+		04C217AA1D7A6FD500908935 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C217AE1D7A6FEE00908935 /* EHCollectedTipsController.h */,
+				04C217AF1D7A6FEE00908935 /* EHCollectedTipsController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C217AB1D7A6FD500908935 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04C217AC1D7A6FD500908935 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C217AD1D7A6FD500908935 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1947,6 +1992,7 @@
 				04B857281D5731D100BEA6CB /* EHSkimedAgentsViewController.m in Sources */,
 				0443081F1D756C3100166036 /* EHMailViewModel.m in Sources */,
 				04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */,
+				04C217B01D7A6FEE00908935 /* EHCollectedTipsController.m in Sources */,
 				044308191D75651700166036 /* EHOfficialViewModel.m in Sources */,
 				0463EB0B1D5705B100C75B36 /* EHRegularExpression.m in Sources */,
 				042B43DF1D53231F005FCFB0 /* EHSearchBar.m in Sources */,

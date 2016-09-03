@@ -195,6 +195,8 @@
         for (EHTipsRecommend *tip in _homeTableViewModel.tipsRecommendArray) {
             NSString *realUrlStr = [tip.thumb stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
             [_homeTableViewModel.imageUrlStrArray addObject:realUrlStr];
+            NSLog(@"%@",tip.thumb);
+           // NSLog(@"%@",realUrlStr);
         }
         //请求成功后，再设置数据源
         self.tableView.dataSource = _homeTableViewModel;

@@ -15,6 +15,9 @@
 #import <MBProgressHUD.h>
 #import "EHCollectedArticleViewController.h"
 #import "EHMailViewModel.h"
+#import "EHCollectedTipsController.h"
+
+
 
 @interface EHProfileViewController ()
 - (IBAction)skimedAgentsClick:(id)sender;
@@ -102,6 +105,8 @@
 }
 
 - (IBAction)tipsClick:(id)sender {
+    EHCollectedTipsController  *collectedTipsVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"CollectedTipsController"];
+    [self.navigationController pushViewController:collectedTipsVC animated:YES];
 }
 
 - (IBAction)agentsClick:(id)sender {
