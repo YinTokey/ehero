@@ -124,7 +124,7 @@
 #pragma mark NewPagedFlowView Delegate
 - (CGSize)sizeForPageInFlowView:(NewPagedFlowView *)flowView {
 
-    return CGSizeMake(ScreenWidth * 0.4, ScreenHeight * 0.352);
+    return CGSizeMake(ScreenWidth * 0.4, ScreenHeight * 0.36);
 }
 
 - (void)didSelectCell:(UIView *)subView withSubViewIndex:(NSInteger)subIndex {
@@ -146,7 +146,7 @@
 - (UIView *)flowView:(NewPagedFlowView *)flowView cellForPageAtIndex:(NSInteger)index{
     PGIndexBannerSubiew *bannerView = (PGIndexBannerSubiew *)[flowView dequeueReusableCell];
     if (!bannerView) {
-        bannerView = [[PGIndexBannerSubiew alloc] initWithFrame:CGRectMake(0, 0 , ScreenWidth * 0.4, ScreenHeight * 0.352)];
+        bannerView = [[PGIndexBannerSubiew alloc] initWithFrame:CGRectMake(0, 0 , ScreenWidth * 0.4, ScreenHeight * 0.36)];
         bannerView.layer.cornerRadius = 1;
         bannerView.layer.masksToBounds = YES;
         bannerView.backgroundColor = [UIColor whiteColor];

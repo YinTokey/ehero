@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,9 +13,6 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C5Z-LE-8QO">
                     <rect key="frame" x="0.0" y="27" width="120" height="180"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="C5Z-LE-8QO" secondAttribute="height" multiplier="2:3" id="qmy-wf-mU9"/>
-                    </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFB-xX-rQR">
                     <rect key="frame" x="0.0" y="0.0" width="120" height="24"/>
@@ -30,13 +26,13 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="C5Z-LE-8QO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5NA-ko-vSo"/>
-                <constraint firstAttribute="bottom" secondItem="C5Z-LE-8QO" secondAttribute="bottom" id="93O-lR-sf2"/>
+                <constraint firstAttribute="bottom" secondItem="C5Z-LE-8QO" secondAttribute="bottom" id="7jO-bj-pgn"/>
+                <constraint firstItem="C5Z-LE-8QO" firstAttribute="top" secondItem="wFB-xX-rQR" secondAttribute="bottom" constant="3" id="E6X-Bg-zNU"/>
+                <constraint firstItem="C5Z-LE-8QO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="G0S-Qw-6Gc"/>
+                <constraint firstAttribute="trailing" secondItem="C5Z-LE-8QO" secondAttribute="trailing" id="G5I-hB-YEq"/>
                 <constraint firstItem="wFB-xX-rQR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Trz-Nq-LUj"/>
                 <constraint firstAttribute="trailing" secondItem="wFB-xX-rQR" secondAttribute="trailing" id="Wc7-K1-s9h"/>
-                <constraint firstAttribute="trailing" secondItem="C5Z-LE-8QO" secondAttribute="trailing" id="XFE-nx-90C"/>
                 <constraint firstItem="wFB-xX-rQR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gGY-zt-aZU"/>
-                <constraint firstItem="C5Z-LE-8QO" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="tCM-SN-6Bt"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
