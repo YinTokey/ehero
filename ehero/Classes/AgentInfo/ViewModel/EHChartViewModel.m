@@ -1,66 +1,15 @@
 //
-//  EHAgentInfoTableViewModel.m
-//  ehero
+//  EHChartViewModel.m
+//  易房好介
 //
-//  Created by Mac on 16/8/25.
+//  Created by Mac on 16/9/5.
 //  Copyright © 2016年 ehero. All rights reserved.
 //
 
-#import "EHAgentInfoTableViewModel.h"
-#import "EHAgentInfoChartCell.h"
-#import "EHAgentInfoCommentCell.h"
-@implementation EHAgentInfoTableViewModel
+#import "EHChartViewModel.h"
 
-#pragma mark - Table view data source
+@implementation EHChartViewModel
 
-#pragma mark - cell高度
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0) {
-        return 125;
-    }else if (indexPath.section == 1){
-        return ScreenHeight * 0.42 + 30;
-    }else{
-        return 125;
-    }
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    if (section == 0 || section == 1) {
-        return 1;
-    }else
-        return 2;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0) {
-        EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
-        [cell setResultCell:self.agentInfo];
-        cell.isdrawRect = NO;
-        cell.delegate = self.superVC;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        return cell;
-    }else if(indexPath.section == 1){
-        EHAgentInfoChartCell *cell = [EHAgentInfoChartCell AgentInfoChartCellWithTableView:tableView];
-        cell.backgroundColor = RGB(235, 247, 255);
-        cell.chart.dataSource = self;
-        cell.chart.delegate = self;
-        [cell.chart reloadData];
-        return cell;
-    }else{
-        EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
-        
-        return cell;
-        
-    }
-}
-
-#pragma mark - 雷达图代理
 - (NSInteger)numberOfStepForRadarChart:(LQRadarChart *)radarChart
 {
     return 10;
@@ -144,5 +93,7 @@
     return [UIFont systemFontOfSize:11];
     
 }
+
+
 
 @end

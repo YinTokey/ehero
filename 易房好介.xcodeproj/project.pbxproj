@@ -11,6 +11,8 @@
 		042B43DC1D5322EE005FCFB0 /* EHHomeSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B43DB1D5322EE005FCFB0 /* EHHomeSearchBar.m */; };
 		042B43DF1D53231F005FCFB0 /* EHSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B43DE1D53231F005FCFB0 /* EHSearchBar.m */; };
 		042EFF631D7D4FE8008AD130 /* PGIndexBannerSubiew.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042EFF621D7D4FE8008AD130 /* PGIndexBannerSubiew.xib */; };
+		042EFF671D7D6FAF008AD130 /* LQRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 042EFF661D7D6FAF008AD130 /* LQRadarChart.m */; };
+		042EFF6A1D7D7AA3008AD130 /* EHChartViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 042EFF691D7D7AA3008AD130 /* EHChartViewModel.m */; };
 		0430D1D91D783519004BAD5C /* EHTipsRecommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430D1D81D783519004BAD5C /* EHTipsRecommend.m */; };
 		04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04348FAC1D2F4A7300205130 /* buttonCell.xib */; };
 		04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04348FAF1D2F4DFB00205130 /* buttonCell.m */; };
@@ -126,8 +128,8 @@
 		04E7AF9E1D38EC860049E668 /* InnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7AF9B1D38EC860049E668 /* InnerView.m */; };
 		04E7AF9F1D38EC860049E668 /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7AF9D1D38EC860049E668 /* ShareView.m */; };
 		04E9CFA81D45CDF70087BD70 /* EHNavBackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9CFA71D45CDF70087BD70 /* EHNavBackItem.m */; };
-		04E9CFF51D4608110087BD70 /* EHAgentInfoCommunityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9CFF31D4608110087BD70 /* EHAgentInfoCommunityCell.m */; };
-		04E9CFF61D4608110087BD70 /* EHAgentInfoCommunityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E9CFF41D4608110087BD70 /* EHAgentInfoCommunityCell.xib */; };
+		04E9CFF51D4608110087BD70 /* EHAgentInfoChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9CFF31D4608110087BD70 /* EHAgentInfoChartCell.m */; };
+		04E9CFF61D4608110087BD70 /* EHAgentInfoChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E9CFF41D4608110087BD70 /* EHAgentInfoChartCell.xib */; };
 		04E9CFFA1D46082B0087BD70 /* EHAgentInfoCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9CFF81D46082B0087BD70 /* EHAgentInfoCommentCell.m */; };
 		04E9CFFB1D46082B0087BD70 /* EHAgentInfoCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E9CFF91D46082B0087BD70 /* EHAgentInfoCommentCell.xib */; };
 		04F06CCA1D2DFE920081A34D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06CC91D2DFE920081A34D /* main.m */; };
@@ -169,6 +171,10 @@
 		042B43DD1D53231F005FCFB0 /* EHSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSearchBar.h; sourceTree = "<group>"; };
 		042B43DE1D53231F005FCFB0 /* EHSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSearchBar.m; sourceTree = "<group>"; };
 		042EFF621D7D4FE8008AD130 /* PGIndexBannerSubiew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PGIndexBannerSubiew.xib; sourceTree = "<group>"; };
+		042EFF651D7D6FAF008AD130 /* LQRadarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQRadarChart.h; sourceTree = "<group>"; };
+		042EFF661D7D6FAF008AD130 /* LQRadarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQRadarChart.m; sourceTree = "<group>"; };
+		042EFF681D7D7AA3008AD130 /* EHChartViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHChartViewModel.h; sourceTree = "<group>"; };
+		042EFF691D7D7AA3008AD130 /* EHChartViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHChartViewModel.m; sourceTree = "<group>"; };
 		0430D1D71D783519004BAD5C /* EHTipsRecommend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTipsRecommend.h; sourceTree = "<group>"; };
 		0430D1D81D783519004BAD5C /* EHTipsRecommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTipsRecommend.m; sourceTree = "<group>"; };
 		04348FAC1D2F4A7300205130 /* buttonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = buttonCell.xib; sourceTree = "<group>"; };
@@ -387,9 +393,9 @@
 		04E7AF9D1D38EC860049E668 /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareView.m; sourceTree = "<group>"; };
 		04E9CFA61D45CDF70087BD70 /* EHNavBackItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHNavBackItem.h; sourceTree = "<group>"; };
 		04E9CFA71D45CDF70087BD70 /* EHNavBackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHNavBackItem.m; sourceTree = "<group>"; };
-		04E9CFF21D4608110087BD70 /* EHAgentInfoCommunityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfoCommunityCell.h; sourceTree = "<group>"; };
-		04E9CFF31D4608110087BD70 /* EHAgentInfoCommunityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfoCommunityCell.m; sourceTree = "<group>"; };
-		04E9CFF41D4608110087BD70 /* EHAgentInfoCommunityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHAgentInfoCommunityCell.xib; sourceTree = "<group>"; };
+		04E9CFF21D4608110087BD70 /* EHAgentInfoChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfoChartCell.h; sourceTree = "<group>"; };
+		04E9CFF31D4608110087BD70 /* EHAgentInfoChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfoChartCell.m; sourceTree = "<group>"; };
+		04E9CFF41D4608110087BD70 /* EHAgentInfoChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHAgentInfoChartCell.xib; sourceTree = "<group>"; };
 		04E9CFF71D46082B0087BD70 /* EHAgentInfoCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfoCommentCell.h; sourceTree = "<group>"; };
 		04E9CFF81D46082B0087BD70 /* EHAgentInfoCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfoCommentCell.m; sourceTree = "<group>"; };
 		04E9CFF91D46082B0087BD70 /* EHAgentInfoCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHAgentInfoCommentCell.xib; sourceTree = "<group>"; };
@@ -455,6 +461,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				042EFF641D7D6FAF008AD130 /* LQRadarChart */,
 				046885111D77F85D00B6EAC4 /* CardSwitcher */,
 				046EBD761D66F98E00CD6346 /* WJTextView */,
 				04BBBDA91D65937600577DAB /* WSDropMenuView */,
@@ -483,6 +490,15 @@
 				04200C361D2F7A7A005DC042 /* XTPopView.m */,
 			);
 			path = XTPopView;
+			sourceTree = "<group>";
+		};
+		042EFF641D7D6FAF008AD130 /* LQRadarChart */ = {
+			isa = PBXGroup;
+			children = (
+				042EFF651D7D6FAF008AD130 /* LQRadarChart.h */,
+				042EFF661D7D6FAF008AD130 /* LQRadarChart.m */,
+			);
+			path = LQRadarChart;
 			sourceTree = "<group>";
 		};
 		04360C871D3CDAEF007C8C17 /* Tools */ = {
@@ -986,6 +1002,8 @@
 				04C157621D6E987F0036E5A1 /* EHAgentInfoNetViewModel.m */,
 				04C157641D6E9E850036E5A1 /* EHSkimedAgentViewModel.h */,
 				04C157651D6E9E850036E5A1 /* EHSkimedAgentViewModel.m */,
+				042EFF681D7D7AA3008AD130 /* EHChartViewModel.h */,
+				042EFF691D7D7AA3008AD130 /* EHChartViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1529,9 +1547,9 @@
 		04E9CFF11D4608110087BD70 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04E9CFF31D4608110087BD70 /* EHAgentInfoCommunityCell.m */,
-				04E9CFF21D4608110087BD70 /* EHAgentInfoCommunityCell.h */,
-				04E9CFF41D4608110087BD70 /* EHAgentInfoCommunityCell.xib */,
+				04E9CFF31D4608110087BD70 /* EHAgentInfoChartCell.m */,
+				04E9CFF21D4608110087BD70 /* EHAgentInfoChartCell.h */,
+				04E9CFF41D4608110087BD70 /* EHAgentInfoChartCell.xib */,
 				04E9CFF71D46082B0087BD70 /* EHAgentInfoCommentCell.h */,
 				04E9CFF81D46082B0087BD70 /* EHAgentInfoCommentCell.m */,
 				04E9CFF91D46082B0087BD70 /* EHAgentInfoCommentCell.xib */,
@@ -1889,7 +1907,7 @@
 				04B0EFE51D49AD1A00BE301B /* EHHouseDetailAgentCell.xib in Resources */,
 				04F06CD81D2DFE920081A34D /* LaunchScreen.storyboard in Resources */,
 				04C2FFCF1D7ABC39000CA92D /* EHTipViewCell.xib in Resources */,
-				04E9CFF61D4608110087BD70 /* EHAgentInfoCommunityCell.xib in Resources */,
+				04E9CFF61D4608110087BD70 /* EHAgentInfoChartCell.xib in Resources */,
 				0456A9E21D49E5640065DC5B /* EHCallAgentView.xib in Resources */,
 				04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */,
 				04C8FDE31D5484010081CE73 /* EHVerifyView.xib in Resources */,
@@ -1992,6 +2010,7 @@
 				04B0EFE91D49B79700BE301B /* EHHouseDetailCallCell.m in Sources */,
 				04BBBDAC1D65937600577DAB /* WSDropMenuView.m in Sources */,
 				04B857281D5731D100BEA6CB /* EHSkimedAgentsViewController.m in Sources */,
+				042EFF6A1D7D7AA3008AD130 /* EHChartViewModel.m in Sources */,
 				0443081F1D756C3100166036 /* EHMailViewModel.m in Sources */,
 				04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */,
 				04C217B01D7A6FEE00908935 /* EHCollectedTipsController.m in Sources */,
@@ -2036,6 +2055,7 @@
 				046A7C5F1D503E9600652296 /* JKDBModel.m in Sources */,
 				04C8FDE11D54744B0081CE73 /* EHVerifyView.m in Sources */,
 				04BB3E911D4476C5002CBF27 /* EHSiteButton.m in Sources */,
+				042EFF671D7D6FAF008AD130 /* LQRadarChart.m in Sources */,
 				049AA07C1D5034D600761E3F /* FMDatabasePool.m in Sources */,
 				04657FDC1D32768B00914495 /* EHTipsViewController.m in Sources */,
 				04E7AF9F1D38EC860049E668 /* ShareView.m in Sources */,
@@ -2052,7 +2072,7 @@
 				047ED1901D6DACE2008EC261 /* EHSocialShareViewModel.m in Sources */,
 				04CBAE801D470035002BF215 /* EHTipsNavBottomLine.m in Sources */,
 				04C157631D6E987F0036E5A1 /* EHAgentInfoNetViewModel.m in Sources */,
-				04E9CFF51D4608110087BD70 /* EHAgentInfoCommunityCell.m in Sources */,
+				04E9CFF51D4608110087BD70 /* EHAgentInfoChartCell.m in Sources */,
 				0430D1D91D783519004BAD5C /* EHTipsRecommend.m in Sources */,
 				049AA07D1D5034D600761E3F /* FMDatabaseQueue.m in Sources */,
 				0465688B1D4B39DE001C9851 /* UIView+SDAutoLayout.m in Sources */,
