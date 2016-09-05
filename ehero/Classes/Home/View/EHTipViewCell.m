@@ -47,22 +47,19 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHTipViewCell" owner:nil options:nil] lastObject];
         [cell setSize:CGSizeMake(ScreenWidth,ScreenHeight*0.47)];
-        cell.pageFlowView = [[NewPagedFlowView alloc] initWithFrame:CGRectMake(0, 18,ScreenWidth , ScreenHeight * 0.41)];
+        cell.pageFlowView = [[NewPagedFlowView alloc] initWithFrame:CGRectMake(0, 0,ScreenWidth , ScreenHeight * 0.41)];
         cell.backgroundColor = RGB(238, 245, 250);
         cell.pageFlowView.backgroundColor = [UIColor clearColor];
-        //        pageFlowView.delegate = self;
-        //        pageFlowView.dataSource = self;
         cell.pageFlowView.minimumPageAlpha = 0.1;
         cell.pageFlowView.minimumPageScale = 0.6;
         //提前告诉有多少页
         cell.pageFlowView.orginPageCount = 3;
-        
+    
         cell.pageFlowView.isOpenAutoScroll = YES;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        
-        UIScrollView *bottomScrollView = [[UIScrollView alloc] initWithFrame:cell.pageFlowView.frame];
-        
+
+        UIScrollView *bottomScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(cell.pageFlowView.frame.origin.x, 30, cell.pageFlowView.frame.size.width, cell.pageFlowView.size.height)];
+      //  bottomScrollView.backgroundColor = [UIColor redColor];
         [bottomScrollView addSubview:cell.pageFlowView];
         
         [cell addSubview:bottomScrollView];

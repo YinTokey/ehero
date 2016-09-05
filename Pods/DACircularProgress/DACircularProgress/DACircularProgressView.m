@@ -20,8 +20,7 @@
 @property(nonatomic) CGFloat progress;
 @property(nonatomic) NSInteger clockwiseProgress;
 
-@end
-
+@end 
 @implementation DACircularProgressLayer
 
 @dynamic trackTintColor;

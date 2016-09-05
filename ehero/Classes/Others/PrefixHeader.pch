@@ -12,7 +12,6 @@
 #import "LBProgressHUD.h"
 #import "EHNavBackItem.h"
 #import "EHTipsNavBottomLine.h"
-#import <SVProgressHUD.h>
 #import "MBProgressHUD+YT.h"
 #import "YTHttpTool.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>

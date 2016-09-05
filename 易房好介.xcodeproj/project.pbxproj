@@ -70,7 +70,6 @@
 		049AA07E1D5034D600761E3F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA0781D5034D600761E3F /* FMResultSet.m */; };
 		049AA07F1D5034D600761E3F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049AA0791D5034D600761E3F /* Info.plist */; };
 		049AA0811D50350F00761E3F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 049AA0801D50350F00761E3F /* libsqlite3.0.tbd */; };
-		049AA0851D5037DD00761E3F /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA0841D5037DD00761E3F /* UIView+Toast.m */; };
 		049ADF181D64796100C54F4D /* EHDistricts.m in Sources */ = {isa = PBXBuildFile; fileRef = 049ADF171D64796100C54F4D /* EHDistricts.m */; };
 		04A991F01D682C8C00053E29 /* EHHouseSourcesMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A991EF1D682C8C00053E29 /* EHHouseSourcesMessage.m */; };
 		04B0EFDB1D499DD600BE301B /* EHHouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFDA1D499DD600BE301B /* EHHouseDetailViewController.m */; };
@@ -141,6 +140,7 @@
 		04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD3ACE1D3DD942005B13B4 /* YTNetCommand.m */; };
 		04FD3AD31D3DDA23005B13B4 /* MBProgressHUD+YT.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD3AD21D3DDA23005B13B4 /* MBProgressHUD+YT.m */; };
 		7BF95F2D53BA08DA1D11A4CF /* libPods-ehero.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4803C75B325B7B4E1CB33EE7 /* libPods-ehero.a */; };
+		F965115CC91166FFEBBF445F /* libPods-易房好介.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F1925BB3F0B5A1801B0AF6 /* libPods-易房好介.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,8 +284,6 @@
 		049AA0781D5034D600761E3F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		049AA0791D5034D600761E3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049AA0801D50350F00761E3F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		049AA0831D5037DD00761E3F /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
-		049AA0841D5037DD00761E3F /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		049ADF161D64796100C54F4D /* EHDistricts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHDistricts.h; path = ehero/Classes/Home/View/EHDistricts.h; sourceTree = SOURCE_ROOT; };
 		049ADF171D64796100C54F4D /* EHDistricts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHDistricts.m; path = ehero/Classes/Home/View/EHDistricts.m; sourceTree = SOURCE_ROOT; };
 		04A991EE1D682C8C00053E29 /* EHHouseSourcesMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHouseSourcesMessage.h; path = ehero/Classes/Lib/ACEExpandableTextCell/EHHouseSourcesMessage.h; sourceTree = SOURCE_ROOT; };
@@ -413,9 +411,12 @@
 		04FD3ACE1D3DD942005B13B4 /* YTNetCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTNetCommand.m; sourceTree = "<group>"; };
 		04FD3AD11D3DDA23005B13B4 /* MBProgressHUD+YT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+YT.h"; sourceTree = "<group>"; };
 		04FD3AD21D3DDA23005B13B4 /* MBProgressHUD+YT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+YT.m"; sourceTree = "<group>"; };
+		2F076C1F9E53536937CB0E9D /* Pods-易房好介.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-易房好介.release.xcconfig"; path = "Pods/Target Support Files/Pods-易房好介/Pods-易房好介.release.xcconfig"; sourceTree = "<group>"; };
 		4803C75B325B7B4E1CB33EE7 /* libPods-ehero.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ehero.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7EFFF3457019F859E1D042 /* Pods-ehero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ehero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ehero/Pods-ehero.debug.xcconfig"; sourceTree = "<group>"; };
+		75F1925BB3F0B5A1801B0AF6 /* libPods-易房好介.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-易房好介.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D3DFB712A908623EF807AB /* Pods-ehero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ehero.release.xcconfig"; path = "Pods/Target Support Files/Pods-ehero/Pods-ehero.release.xcconfig"; sourceTree = "<group>"; };
+		CEC0026F1A0457B464C0E5B3 /* Pods-易房好介.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-易房好介.debug.xcconfig"; path = "Pods/Target Support Files/Pods-易房好介/Pods-易房好介.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -428,6 +429,7 @@
 				04DEC4D81D4AFA6700B21766 /* libz.1.2.5.tbd in Frameworks */,
 				0455CB281D48B90E00160C83 /* WebKit.framework in Frameworks */,
 				7BF95F2D53BA08DA1D11A4CF /* libPods-ehero.a in Frameworks */,
+				F965115CC91166FFEBBF445F /* libPods-易房好介.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +459,6 @@
 				04C605531D63148C00039217 /* SkyAssociationMenuView */,
 				04C8FDE41D54A0F40081CE73 /* MZTimerLabel */,
 				046A7C591D503E9600652296 /* DBModel */,
-				049AA0821D5037DD00761E3F /* Toast */,
 				049AA06D1D5034D600761E3F /* fmdb */,
 				046568841D4B39DE001C9851 /* SDAutoLayout */,
 				04667FA01D49FE990051C446 /* STModal */,
@@ -1003,15 +1004,6 @@
 				049AA0791D5034D600761E3F /* Info.plist */,
 			);
 			path = fmdb;
-			sourceTree = "<group>";
-		};
-		049AA0821D5037DD00761E3F /* Toast */ = {
-			isa = PBXGroup;
-			children = (
-				049AA0831D5037DD00761E3F /* UIView+Toast.h */,
-				049AA0841D5037DD00761E3F /* UIView+Toast.m */,
-			);
-			path = Toast;
 			sourceTree = "<group>";
 		};
 		04B857221D57319300BEA6CB /* SkimedAgents */ = {
@@ -1620,10 +1612,10 @@
 		04F06D231D2E0E040081A34D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04200C331D2F7A6A005DC042 /* Lib */,
 				0478B63C1D798A4E00C25183 /* TipsReader */,
 				04C157791D6ED5320036E5A1 /* OfficialAccount */,
 				04DA25DD1D41E2F200235C51 /* Profile */,
-				04200C331D2F7A6A005DC042 /* Lib */,
 				04360C871D3CDAEF007C8C17 /* Tools */,
 				04C500741D3386A7009146E5 /* CommentAgent */,
 				04657FCC1D32469C00914495 /* Tips */,
@@ -1757,6 +1749,8 @@
 			children = (
 				4B7EFFF3457019F859E1D042 /* Pods-ehero.debug.xcconfig */,
 				A7D3DFB712A908623EF807AB /* Pods-ehero.release.xcconfig */,
+				CEC0026F1A0457B464C0E5B3 /* Pods-易房好介.debug.xcconfig */,
+				2F076C1F9E53536937CB0E9D /* Pods-易房好介.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1772,6 +1766,7 @@
 				04C3A8D61D31FDD9003203C0 /* PDFImage.framework */,
 				04C3A8D01D31E518003203C0 /* WebKit.framework */,
 				4803C75B325B7B4E1CB33EE7 /* libPods-ehero.a */,
+				75F1925BB3F0B5A1801B0AF6 /* libPods-易房好介.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1937,7 +1932,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ehero/Pods-ehero-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-易房好介/Pods-易房好介-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B56457F99DF880B1CD9E068B /* [CP] Check Pods Manifest.lock */ = {
@@ -1967,7 +1962,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ehero/Pods-ehero-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-易房好介/Pods-易房好介-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2077,7 +2072,6 @@
 				04E0DEC21D7405320003ED4A /* EHCommentAgentNetViewModel.m in Sources */,
 				0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */,
 				049AA07B1D5034D600761E3F /* FMDatabaseAdditions.m in Sources */,
-				049AA0851D5037DD00761E3F /* UIView+Toast.m in Sources */,
 				04E9CFA81D45CDF70087BD70 /* EHNavBackItem.m in Sources */,
 				04634AC11D753100003C0CFF /* EHCommentAgentDelegate.m in Sources */,
 				04716C061D35060B00E512EE /* AFHTTPSessionManager.m in Sources */,
@@ -2222,7 +2216,7 @@
 		};
 		04F06CF31D2DFE920081A34D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B7EFFF3457019F859E1D042 /* Pods-ehero.debug.xcconfig */;
+			baseConfigurationReference = CEC0026F1A0457B464C0E5B3 /* Pods-易房好介.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2234,7 +2228,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ehero/Classes/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = ehero/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
@@ -2242,7 +2236,6 @@
 					"$(inherited)",
 					"-ObjC",
 					"-l\"MJExtension\"",
-					"-l\"MJRefresh\"",
 					"-l\"SDCycleScrollView\"",
 					"-l\"SDWebImage\"",
 					"-framework",
@@ -2263,7 +2256,7 @@
 		};
 		04F06CF41D2DFE920081A34D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7D3DFB712A908623EF807AB /* Pods-ehero.release.xcconfig */;
+			baseConfigurationReference = 2F076C1F9E53536937CB0E9D /* Pods-易房好介.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2275,7 +2268,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ehero/Classes/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = ehero/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
@@ -2283,7 +2276,6 @@
 					"$(inherited)",
 					"-ObjC",
 					"-l\"MJExtension\"",
-					"-l\"MJRefresh\"",
 					"-l\"SDCycleScrollView\"",
 					"-l\"SDWebImage\"",
 					"-framework",

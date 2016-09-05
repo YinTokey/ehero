@@ -124,7 +124,7 @@
 #pragma mark NewPagedFlowView Delegate
 - (CGSize)sizeForPageInFlowView:(NewPagedFlowView *)flowView {
 
-    return CGSizeMake(ScreenWidth * 0.4, ScreenHeight * 0.37);
+    return CGSizeMake(ScreenWidth * 0.4, ScreenHeight * 0.352);
 }
 
 - (void)didSelectCell:(UIView *)subView withSubViewIndex:(NSInteger)subIndex {
@@ -146,7 +146,7 @@
 - (UIView *)flowView:(NewPagedFlowView *)flowView cellForPageAtIndex:(NSInteger)index{
     PGIndexBannerSubiew *bannerView = (PGIndexBannerSubiew *)[flowView dequeueReusableCell];
     if (!bannerView) {
-        bannerView = [[PGIndexBannerSubiew alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth - 84, 300)];
+        bannerView = [[PGIndexBannerSubiew alloc] initWithFrame:CGRectMake(0, 0 , ScreenWidth * 0.4, ScreenHeight * 0.352)];
         bannerView.layer.cornerRadius = 1;
         bannerView.layer.masksToBounds = YES;
         bannerView.backgroundColor = [UIColor whiteColor];
@@ -154,6 +154,7 @@
     //根据url下载网络图片
     bannerView.mainImageView.image = [YTNetCommand downloadImageWithImgStr:
                                       [self.imageUrlStrArray objectAtIndex:index] placeholderImageStr:@"home_placeholder" imageView:bannerView.mainImageView];
+    //标题
     EHTipsRecommend *tip = self.tipsRecommendArray[index];
     bannerView.titleLable.text = tip.name;
     return bannerView;
