@@ -17,16 +17,18 @@
 #import <UIKit/UIKit.h>
 
 @interface PGIndexBannerSubiew : UIView
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
 
 /**
  *  标题
  */
-@property (nonatomic, strong) UILabel *titleLable;
+//@property (nonatomic, strong) UILabel *titleLable;
 
 /**
  *  主图
  */
-@property (nonatomic, strong) UIImageView *mainImageView;
+//@property (nonatomic, strong) UIImageView *mainImageView;
 
 /**
  *  用来变色的view

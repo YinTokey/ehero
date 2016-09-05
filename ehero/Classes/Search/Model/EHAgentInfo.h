@@ -24,6 +24,10 @@
  */
 @property(nonatomic,copy)NSString *_slugs;
 /**
+ *  author
+ */
+@property(nonatomic,copy)NSString *author;
+/**
  *  从业年数
  */
 @property(nonatomic,copy)NSString *career;
@@ -52,6 +56,10 @@
  */
 @property(nonatomic,copy)NSString *company;
 /**
+ *  content
+ */
+@property(nonatomic,copy)NSString *content;
+/**
  *  created_at
  */
 @property(nonatomic,copy)NSString *created_at;
@@ -68,6 +76,10 @@
  */
 @property(nonatomic,copy)NSString *followers;
 /**
+ *  href
+ */
+@property(nonatomic,copy)NSString *href;
+/**
  *  个人标签
  */
 @property(nonatomic,copy)NSString *label;
@@ -80,7 +92,11 @@
  */
 @property(nonatomic,copy)NSString *name;
 /**
- *  percentile
+ *  money
+ */
+@property(nonatomic,copy)NSString *money;
+/**
+ *  公司内排名
  */
 @property(nonatomic,copy)NSString *percentile;
 /**
@@ -107,7 +123,7 @@
  *  点赞数
  */
 @property(nonatomic,copy)NSString *stars;
-/**
+/**  
  *  transactions
  */
 @property(nonatomic,copy)NSString *transactions;

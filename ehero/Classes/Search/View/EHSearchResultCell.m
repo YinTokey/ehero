@@ -100,7 +100,7 @@
     if (agentInfo.rates.length < 1) {
         self.rates.text = @"";
     }else{
-        self.rates.text = [NSString stringWithFormat:@"%@％",agentInfo.rates];
+        self.rates.text = [NSString stringWithFormat:@"%@％",agentInfo.percentile];
     }
     self.company.text = agentInfo.company;
     self.region.text = agentInfo.region;

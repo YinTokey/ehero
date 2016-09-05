@@ -156,7 +156,7 @@
                                       [self.imageUrlStrArray objectAtIndex:index] placeholderImageStr:@"home_placeholder" imageView:bannerView.mainImageView];
     //标题
     EHTipsRecommend *tip = self.tipsRecommendArray[index];
-    bannerView.titleLable.text = tip.name;
+    bannerView.titleLabel.text = tip.name;
     return bannerView;
 }
 

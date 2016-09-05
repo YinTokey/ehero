@@ -10,6 +10,7 @@
 		04200C371D2F7A7A005DC042 /* XTPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200C361D2F7A7A005DC042 /* XTPopView.m */; };
 		042B43DC1D5322EE005FCFB0 /* EHHomeSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B43DB1D5322EE005FCFB0 /* EHHomeSearchBar.m */; };
 		042B43DF1D53231F005FCFB0 /* EHSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B43DE1D53231F005FCFB0 /* EHSearchBar.m */; };
+		042EFF631D7D4FE8008AD130 /* PGIndexBannerSubiew.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042EFF621D7D4FE8008AD130 /* PGIndexBannerSubiew.xib */; };
 		0430D1D91D783519004BAD5C /* EHTipsRecommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430D1D81D783519004BAD5C /* EHTipsRecommend.m */; };
 		04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04348FAC1D2F4A7300205130 /* buttonCell.xib */; };
 		04348FB01D2F4DFB00205130 /* buttonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04348FAF1D2F4DFB00205130 /* buttonCell.m */; };
@@ -167,6 +168,7 @@
 		042B43DB1D5322EE005FCFB0 /* EHHomeSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHomeSearchBar.m; sourceTree = "<group>"; };
 		042B43DD1D53231F005FCFB0 /* EHSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSearchBar.h; sourceTree = "<group>"; };
 		042B43DE1D53231F005FCFB0 /* EHSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSearchBar.m; sourceTree = "<group>"; };
+		042EFF621D7D4FE8008AD130 /* PGIndexBannerSubiew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PGIndexBannerSubiew.xib; sourceTree = "<group>"; };
 		0430D1D71D783519004BAD5C /* EHTipsRecommend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTipsRecommend.h; sourceTree = "<group>"; };
 		0430D1D81D783519004BAD5C /* EHTipsRecommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTipsRecommend.m; sourceTree = "<group>"; };
 		04348FAC1D2F4A7300205130 /* buttonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = buttonCell.xib; sourceTree = "<group>"; };
@@ -763,6 +765,7 @@
 			children = (
 				046885131D77F85D00B6EAC4 /* PGIndexBannerSubiew.h */,
 				046885141D77F85D00B6EAC4 /* PGIndexBannerSubiew.m */,
+				042EFF621D7D4FE8008AD130 /* PGIndexBannerSubiew.xib */,
 			);
 			path = CustomeView;
 			sourceTree = "<group>";
@@ -1899,6 +1902,7 @@
 				047EF38A1D39FFEF00E587BA /* Tips.storyboard in Resources */,
 				04B87B5E1D5D72F000D0C3A6 /* MBProgressHUD.bundle in Resources */,
 				04348FAD1D2F4A7300205130 /* buttonCell.xib in Resources */,
+				042EFF631D7D4FE8008AD130 /* PGIndexBannerSubiew.xib in Resources */,
 				04C3A8E41D321FE2003203C0 /* EHSearchResultCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

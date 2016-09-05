@@ -73,6 +73,9 @@
     
     [self getTipsInfo];
     
+}
+
+- (void)viewDidAppear:(BOOL)animated{
     [self.tableView reloadData];
 }
 

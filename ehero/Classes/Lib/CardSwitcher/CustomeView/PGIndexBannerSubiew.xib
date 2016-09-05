@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PGIndexBannerSubiew">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="207"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C5Z-LE-8QO">
+                    <rect key="frame" x="0.0" y="27" width="120" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="C5Z-LE-8QO" secondAttribute="height" multiplier="2:3" id="qmy-wf-mU9"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFB-xX-rQR">
+                    <rect key="frame" x="0.0" y="0.0" width="120" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="FTR-G2-Tm0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="C5Z-LE-8QO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5NA-ko-vSo"/>
+                <constraint firstAttribute="bottom" secondItem="C5Z-LE-8QO" secondAttribute="bottom" id="93O-lR-sf2"/>
+                <constraint firstItem="wFB-xX-rQR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Trz-Nq-LUj"/>
+                <constraint firstAttribute="trailing" secondItem="wFB-xX-rQR" secondAttribute="trailing" id="Wc7-K1-s9h"/>
+                <constraint firstAttribute="trailing" secondItem="C5Z-LE-8QO" secondAttribute="trailing" id="XFE-nx-90C"/>
+                <constraint firstItem="wFB-xX-rQR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gGY-zt-aZU"/>
+                <constraint firstItem="C5Z-LE-8QO" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="tCM-SN-6Bt"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mainImageView" destination="C5Z-LE-8QO" id="HoF-Q7-dfK"/>
+                <outlet property="titleLabel" destination="wFB-xX-rQR" id="Gh0-jK-Xah"/>
+            </connections>
+            <point key="canvasLocation" x="174" y="333.5"/>
+        </view>
+    </objects>
+</document>
