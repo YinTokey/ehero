@@ -51,6 +51,10 @@
         cell.chart.dataSource = self;
         cell.chart.delegate = self;
         [cell.chart reloadData];
+        NSString *averageStr = [NSString stringWithFormat:@"%@平均值",self.agentInfo.company];
+        cell.average.text = averageStr;
+        NSString *personStr = [NSString stringWithFormat:@"%@能力值",self.agentInfo.name];
+        cell.person.text = personStr;
         return cell;
     }else{
         EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
@@ -92,7 +96,7 @@
 - (UIColor *)colorOfTitleForRadarChart:(LQRadarChart *)radarChart
 {
     return [UIColor blackColor];
-    
+   
 }
 - (UIColor *)colorOfLineForRadarChart:(LQRadarChart *)radarChart
 {
