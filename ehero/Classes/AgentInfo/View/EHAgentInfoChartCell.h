@@ -13,6 +13,9 @@
 @interface EHAgentInfoChartCell : UITableViewCell
 @property (nonatomic,strong) LQRadarChart * chart;
 @property (nonatomic,strong) EHChartViewModel *chartViewModel;
+@property (weak, nonatomic) IBOutlet UILabel *person;
+@property (weak, nonatomic) IBOutlet UILabel *average;
+@property (weak, nonatomic) IBOutlet UIView *chartView;
 
 + (instancetype)AgentInfoChartCellWithTableView:(UITableView *)tableView;
 

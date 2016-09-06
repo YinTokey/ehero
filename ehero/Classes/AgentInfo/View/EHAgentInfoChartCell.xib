@@ -49,6 +49,10 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzH-JH-9fw">
+                        <rect key="frame" x="0.0" y="39" width="320" height="249"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="YNh-NA-zRf" firstAttribute="leading" secondItem="QYu-A0-1gc" secondAttribute="trailing" constant="10" id="4KV-O7-UgO"/>
@@ -56,11 +60,20 @@
                     <constraint firstItem="YNh-NA-zRf" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-45" id="598-Xw-JhC"/>
                     <constraint firstItem="QYu-A0-1gc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="Md5-k6-497"/>
                     <constraint firstItem="KqJ-S0-AiO" firstAttribute="leading" secondItem="OVJ-jb-F1W" secondAttribute="trailing" constant="7" id="O8c-Zb-Fhm"/>
+                    <constraint firstItem="bzH-JH-9fw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TuS-Vj-29r"/>
                     <constraint firstItem="OVJ-jb-F1W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="WSh-Vn-d2Q"/>
                     <constraint firstItem="KqJ-S0-AiO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="X7F-Xx-6GP"/>
+                    <constraint firstAttribute="trailing" secondItem="bzH-JH-9fw" secondAttribute="trailing" id="XFN-z4-w1Z"/>
+                    <constraint firstItem="bzH-JH-9fw" firstAttribute="top" secondItem="YNh-NA-zRf" secondAttribute="bottom" constant="6" id="eAF-pi-9CV"/>
+                    <constraint firstAttribute="bottom" secondItem="bzH-JH-9fw" secondAttribute="bottom" id="ffN-R1-RVe"/>
                     <constraint firstItem="YNh-NA-zRf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="yPK-ii-zt2"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="average" destination="YNh-NA-zRf" id="CSa-8q-830"/>
+                <outlet property="chartView" destination="bzH-JH-9fw" id="OLt-ix-dcw"/>
+                <outlet property="person" destination="KqJ-S0-AiO" id="a1B-pM-dnM"/>
+            </connections>
             <point key="canvasLocation" x="214" y="217.5"/>
         </tableViewCell>
     </objects>

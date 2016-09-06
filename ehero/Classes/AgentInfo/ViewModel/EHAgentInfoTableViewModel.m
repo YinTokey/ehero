@@ -101,7 +101,7 @@
 }
 - (UIColor *)colorOfFillStepForRadarChart:(LQRadarChart *)radarChart step:(NSInteger)step
 {
-    UIColor * color = [UIColor whiteColor];
+    UIColor * color = [UIColor clearColor];
     //    switch (step) {
     //        case 1:
     //            color = [UIColor colorWithRed:0.545 green:0.906 blue:0.996 alpha:1];
