@@ -27,6 +27,9 @@
     NSLog(@"第一条:%@",[EHSkimedAgentInfo findFirstByCriteria:@" WHERE name = '梁青' "]);
     //去掉分割线
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    
+    //跳转到下一界面的返回按钮样式
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -51,7 +54,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     EHSearchResultCell *cell = [EHSearchResultCell searchResultCellWithTableView:tableView];
-    EHAgentInfo *agentInfo = self.skimedAgentsArr[indexPath.row];
+    EHSkimedAgentInfo *skimedInfo = self.skimedAgentsArr[indexPath.row];
+    EHAgentInfo *agentInfo = [skimedInfo toAgentInfo];
     cell.isdrawRect = YES;
     [cell setResultCell:agentInfo];
     return cell;
@@ -59,8 +63,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     EHAgentInfoController *agentInfoVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"AgentInfoController"];
-    EHAgentInfo *agentInfo = self.skimedAgentsArr[indexPath.row];
-    
+    EHSkimedAgentInfo *skimedInfo = self.skimedAgentsArr[indexPath.row];
+    EHAgentInfo *agentInfo = [skimedInfo toAgentInfo];
     agentInfoVC.agentInfo = agentInfo;
     [self.navigationController pushViewController:agentInfoVC animated:YES];
 }

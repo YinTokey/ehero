@@ -29,6 +29,10 @@
  */
 @property(nonatomic,copy)NSString *_slugs;
 /**
+ *  author
+ */
+@property(nonatomic,copy)NSString *author;
+/**
  *  从业年数
  */
 @property(nonatomic,copy)NSString *career;
@@ -39,15 +43,15 @@
 /**
  *  点击量
  */
-@property(nonatomic,copy)NSString *clicks;
+@property(nonatomic,assign)CGFloat clicks;
 /**
- *  评论数量
+ *  评论
  */
 @property(nonatomic,copy)NSString *comments;
 /**
  *  成交
  */
-@property(nonatomic,copy)NSString *commissions;
+@property(nonatomic,assign)CGFloat commissions;
 /**
  *  小区
  */
@@ -57,25 +61,37 @@
  */
 @property(nonatomic,copy)NSString *company;
 /**
+ *  content
+ */
+@property(nonatomic,copy)NSString *content;
+/**
  *  created_at
  */
 @property(nonatomic,copy)NSString *created_at;
 /**
  *  顾客数量
  */
-@property(nonatomic,copy)NSString *customers;
+@property(nonatomic,assign)CGFloat customers;
 /**
  *  地区
  */
 @property(nonatomic,copy)NSString *district;
 /**
- *  粉丝数量
+ *  关注量
  */
-@property(nonatomic,copy)NSString *followers;
+@property(nonatomic,assign)CGFloat followers;
+/**
+ *  href
+ */
+@property(nonatomic,copy)NSString *href;
 /**
  *  个人标签
  */
 @property(nonatomic,copy)NSString *label;
+/**
+ *  主要业务
+ */
+@property(nonatomic,copy)NSString *major;
 /**
  *  电话号码
  */
@@ -85,7 +101,11 @@
  */
 @property(nonatomic,copy)NSString *name;
 /**
- *  percentile
+ *  money
+ */
+@property(nonatomic,copy)NSString *money;
+/**
+ *  公司内排名
  */
 @property(nonatomic,copy)NSString *percentile;
 /**
@@ -95,7 +115,7 @@
 /**
  *  好评率
  */
-@property(nonatomic,copy)NSString *rates;
+@property(nonatomic,assign)CGFloat rates;
 /**
  *  板块
  */
@@ -103,11 +123,15 @@
 /**
  *  rents
  */
-@property(nonatomic,copy)NSString *rents;
+@property(nonatomic,assign)CGFloat rents;
+/**
+ *  评论数（链家特有）
+ */
+@property(nonatomic,assign)CGFloat reviews;
 /**
  *  销售数
  */
-@property(nonatomic,copy)NSString *sales;
+@property(nonatomic,assign)CGFloat sales;
 /**
  *  点赞数
  */
@@ -115,7 +139,7 @@
 /**
  *  transactions
  */
-@property(nonatomic,copy)NSString *transactions;
+@property(nonatomic,assign)CGFloat transactions;
 /**
  *  头像url
  */
@@ -131,7 +155,9 @@
 /**
  *  visits
  */
-@property(nonatomic,copy)NSString *visits;
+@property(nonatomic,assign)CGFloat visits;
 
 - (void)setWithAgentInfoAndTimeLabel:(EHAgentInfo *)agentInfo;
+
+- (EHAgentInfo *)toAgentInfo;
 @end

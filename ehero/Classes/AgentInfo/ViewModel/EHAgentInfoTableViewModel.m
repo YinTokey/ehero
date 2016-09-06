@@ -99,11 +99,9 @@
 - (CGFloat)valueOfSectionForRadarChart:(LQRadarChart *)radarChart row:(NSInteger)row section:(NSInteger)section
 {
     if (section == 0 ){
-        if (row == 0) {
-            return 5;
-        }else{
-            return 0.8;
-        }
+        NSArray *percentArray = [self.agentInfo percentageWithMaxValue:self.averageInfo];
+        NSNumber *percentage = percentArray[row];
+        return 5 * [percentage floatValue];
     } else {
         if ([self.agentInfo.company isEqualToString:@"链家"]) {
             NSArray *percentArray = [self.averageInfo percentOfLianjia];

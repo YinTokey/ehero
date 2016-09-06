@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "EHAgentInfoController.h"
 #import "JKDBModel.h"
+#import "EHAverageInfo.h"
 
 @interface EHAgentInfo : JKDBModel
 /**
@@ -38,7 +39,7 @@
 /**
  *  点击量
  */
-@property(nonatomic,copy)NSString *clicks;
+@property(nonatomic,assign)CGFloat clicks;
 /**
  *  评论
  */
@@ -46,7 +47,7 @@
 /**
  *  成交
  */
-@property(nonatomic,copy)NSString *commissions;
+@property(nonatomic,assign)CGFloat commissions;
 /**
  *  小区
  */
@@ -66,15 +67,15 @@
 /**
  *  顾客数量
  */
-@property(nonatomic,copy)NSString *customers;
+@property(nonatomic,assign)CGFloat customers;
 /**
  *  地区
  */
 @property(nonatomic,copy)NSString *district;
 /**
- *  粉丝数量
+ *  关注量
  */
-@property(nonatomic,copy)NSString *followers;
+@property(nonatomic,assign)CGFloat followers;
 /**
  *  href
  */
@@ -83,6 +84,10 @@
  *  个人标签
  */
 @property(nonatomic,copy)NSString *label;
+/**
+ *  主要业务
+ */
+@property(nonatomic,copy)NSString *major;
 /**
  *  电话号码
  */
@@ -106,7 +111,7 @@
 /**
  *  好评率
  */
-@property(nonatomic,copy)NSString *rates;
+@property(nonatomic,assign)CGFloat rates;
 /**
  *  板块
  */
@@ -114,19 +119,23 @@
 /**
  *  rents
  */
-@property(nonatomic,copy)NSString *rents;
+@property(nonatomic,assign)CGFloat rents;
+/**
+ *  评论数（链家特有）
+ */
+@property(nonatomic,assign)CGFloat reviews;
 /**
  *  销售数
  */
-@property(nonatomic,copy)NSString *sales;
+@property(nonatomic,assign)CGFloat sales;
 /**
  *  点赞数
  */
 @property(nonatomic,copy)NSString *stars;
-/**  
+/**
  *  transactions
  */
-@property(nonatomic,copy)NSString *transactions;
+@property(nonatomic,assign)CGFloat transactions;
 /**
  *  头像url
  */
@@ -142,11 +151,14 @@
 /**
  *  visits
  */
-@property(nonatomic,copy)NSString *visits;
+@property(nonatomic,assign)CGFloat visits;
 
 //+ (instancetype)setWithAgentInfoController:(EHAgentInfoController *)AgentInfoController;
 
 //把 _id转化为 idStr
 - (void)getIdStringFromDictionary;
 
+- (NSArray *)percentageWithMaxValue:(EHAverageInfo *)averageInfo;
+
+//- (void)setWithSkimedAgentInfo:(EHSkimedAgentInfo *)skimedAgentInfo;
 @end

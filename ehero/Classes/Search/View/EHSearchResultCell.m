@@ -97,7 +97,7 @@
         self.position.text = agentInfo.position;
     }
     
-    if (agentInfo.rates.length < 1) {
+    if (agentInfo.percentile.length < 1) {
         self.rates.text = @"";
     }else{
         self.rates.text = [NSString stringWithFormat:@"%@％",agentInfo.percentile];
