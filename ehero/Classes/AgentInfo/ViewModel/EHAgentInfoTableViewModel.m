@@ -101,21 +101,27 @@
     if (section == 0 ){
         NSArray *percentArray = [self.agentInfo percentageWithMaxValue:self.averageInfo];
         NSNumber *percentage = percentArray[row];
-        return 5 * [percentage floatValue];
+        CGFloat Floatpercentage = [percentage floatValue];
+        return 5 * Floatpercentage;
+
     } else {
         if ([self.agentInfo.company isEqualToString:@"链家"]) {
             NSArray *percentArray = [self.averageInfo percentOfLianjia];
             NSNumber *percentage = percentArray[row];
-            return 5 * [percentage floatValue];
+            CGFloat Floatpercentage = [percentage floatValue];
+            return 5 * Floatpercentage;
         }else if([self.agentInfo.company isEqualToString:@"我爱我家"]){
             NSArray *percentArray = [self.averageInfo percentOfWawj];
             NSNumber *percentage = percentArray[row];
-            return 5 * [percentage floatValue];
+            CGFloat Floatpercentage = [percentage floatValue];
+            return 5 * Floatpercentage;
         }else{
             NSArray *percentArray = [self.averageInfo percentOfMaitian];
             NSNumber *percentage = percentArray[row];
-            return 5 * [percentage floatValue];
+            CGFloat Floatpercentage = [percentage floatValue];
+            return 5 * Floatpercentage * 2;  //麦田的百分比较小，乘以2
         }
+
     }
 }
 

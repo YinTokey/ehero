@@ -40,12 +40,12 @@
                            rates_percentage,
                            clicks_percentage];
         return array;
-    }else{
-        NSNumber *sales_percentage = [NSNumber numberWithFloat:(_sales /averageInfo.maitian_sales_max)];
-        NSNumber *rents_percentage = [NSNumber numberWithFloat:(_rents /averageInfo.maitian_rents_max)];
-        NSNumber *followers_percentage = [NSNumber numberWithFloat:(_followers /averageInfo.maitian_followers_max)];
-        NSNumber *customers_percentage = [NSNumber numberWithFloat:(_customers /averageInfo.maitian_customers_max)];
-        NSNumber *commissions_percentage = [NSNumber numberWithFloat:(_commissions /averageInfo.maitian_commissions_max)];
+    }else{  //麦田比例比较小，乘以2
+        NSNumber *sales_percentage = [NSNumber numberWithFloat:(_sales /averageInfo.maitian_sales_max)*2];
+        NSNumber *rents_percentage = [NSNumber numberWithFloat:(_rents /averageInfo.maitian_rents_max)*2];
+        NSNumber *followers_percentage = [NSNumber numberWithFloat:(_followers /averageInfo.maitian_followers_max)*2];
+        NSNumber *customers_percentage = [NSNumber numberWithFloat:(_customers /averageInfo.maitian_customers_max)*2];
+        NSNumber *commissions_percentage = [NSNumber numberWithFloat:(_commissions /averageInfo.maitian_commissions_max)*2];
         NSArray *array = @[sales_percentage,
                            rents_percentage,
                            followers_percentage,
@@ -55,7 +55,5 @@
     }
     
 }
-
-
 
 @end

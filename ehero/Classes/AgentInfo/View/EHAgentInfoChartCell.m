@@ -34,7 +34,7 @@
     EHAgentInfoChartCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHAgentInfoChartCell" owner:nil options:nil] lastObject];
-        cell.backgroundColor = RGB(235, 247, 255);
+        cell.backgroundColor = RGB(238, 245, 250);
         cell.userInteractionEnabled = NO;
         cell.chart = [[LQRadarChart alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth)];
         [cell.chart setCenter:CGPointMake(ScreenWidth/2, cell.frame.origin.y + ScreenWidth/3 +15)];

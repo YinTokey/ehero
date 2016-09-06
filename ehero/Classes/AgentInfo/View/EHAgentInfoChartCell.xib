@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -20,6 +21,7 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="47" id="DXt-wC-0Eo"/>
                             <constraint firstAttribute="height" constant="17" id="eoP-EH-A5M"/>
+                            <constraint firstAttribute="width" secondItem="OVJ-jb-F1W" secondAttribute="height" multiplier="47:17" id="sG1-15-EeD"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="average" translatesAutoresizingMaskIntoConstraints="NO" id="QYu-A0-1gc">
@@ -27,11 +29,13 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="47" id="Db1-vl-YWT"/>
                             <constraint firstAttribute="height" constant="17" id="ll7-OU-7Qs"/>
+                            <constraint firstAttribute="width" secondItem="QYu-A0-1gc" secondAttribute="height" multiplier="47:17" id="zFI-9c-JQZ"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="史大伟能力值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqJ-S0-AiO">
                         <rect key="frame" x="216" y="12" width="84" height="21"/>
                         <constraints>
+                            <constraint firstAttribute="width" secondItem="KqJ-S0-AiO" secondAttribute="height" multiplier="4:1" id="3mj-Uc-eoD"/>
                             <constraint firstAttribute="height" constant="21" id="K0U-Vw-jEG"/>
                             <constraint firstAttribute="width" constant="84" id="q1l-Xt-VnB"/>
                         </constraints>
@@ -42,6 +46,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我爱我家平均值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNh-NA-zRf">
                         <rect key="frame" x="70" y="12" width="91" height="21"/>
                         <constraints>
+                            <constraint firstAttribute="width" secondItem="YNh-NA-zRf" secondAttribute="height" multiplier="13:3" id="Yt9-3Y-oU6"/>
                             <constraint firstAttribute="height" constant="21" id="bAW-Nw-dJS"/>
                             <constraint firstAttribute="width" constant="91" id="feK-mO-BpD"/>
                         </constraints>
