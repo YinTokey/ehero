@@ -75,6 +75,7 @@
 		049ADF181D64796100C54F4D /* EHDistricts.m in Sources */ = {isa = PBXBuildFile; fileRef = 049ADF171D64796100C54F4D /* EHDistricts.m */; };
 		04A991F01D682C8C00053E29 /* EHHouseSourcesMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A991EF1D682C8C00053E29 /* EHHouseSourcesMessage.m */; };
 		04AB9FA71D7E6D6D00610F63 /* EHAverageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AB9FA61D7E6D6D00610F63 /* EHAverageInfo.m */; };
+		04AB9FAA1D7EB6E900610F63 /* UILabel+GetWidth.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AB9FA91D7EB6E900610F63 /* UILabel+GetWidth.m */; };
 		04B0EFDB1D499DD600BE301B /* EHHouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFDA1D499DD600BE301B /* EHHouseDetailViewController.m */; };
 		04B0EFDF1D49A18100BE301B /* EHHouseDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFDD1D49A18100BE301B /* EHHouseDetailCell.m */; };
 		04B0EFE01D49A18100BE301B /* EHHouseDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B0EFDE1D49A18100BE301B /* EHHouseDetailCell.xib */; };
@@ -296,6 +297,8 @@
 		04A991EF1D682C8C00053E29 /* EHHouseSourcesMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHHouseSourcesMessage.m; path = ehero/Classes/Lib/ACEExpandableTextCell/EHHouseSourcesMessage.m; sourceTree = SOURCE_ROOT; };
 		04AB9FA51D7E6D6D00610F63 /* EHAverageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAverageInfo.h; sourceTree = "<group>"; };
 		04AB9FA61D7E6D6D00610F63 /* EHAverageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAverageInfo.m; sourceTree = "<group>"; };
+		04AB9FA81D7EB6E900610F63 /* UILabel+GetWidth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+GetWidth.h"; sourceTree = "<group>"; };
+		04AB9FA91D7EB6E900610F63 /* UILabel+GetWidth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+GetWidth.m"; sourceTree = "<group>"; };
 		04B0EFD91D499DD600BE301B /* EHHouseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHouseDetailViewController.h; sourceTree = "<group>"; };
 		04B0EFDA1D499DD600BE301B /* EHHouseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHouseDetailViewController.m; sourceTree = "<group>"; };
 		04B0EFDC1D49A18100BE301B /* EHHouseDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHouseDetailCell.h; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailCell.h; sourceTree = SOURCE_ROOT; };
@@ -1561,6 +1564,8 @@
 				04C8FDE21D5484010081CE73 /* EHVerifyView.xib */,
 				04946B501D58307100B2C034 /* EHSendCodeButton.h */,
 				04946B511D58307100B2C034 /* EHSendCodeButton.m */,
+				04AB9FA81D7EB6E900610F63 /* UILabel+GetWidth.h */,
+				04AB9FA91D7EB6E900610F63 /* UILabel+GetWidth.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2044,6 +2049,7 @@
 				04C605561D63148C00039217 /* SkyAssociationMenuView.m in Sources */,
 				04A991F01D682C8C00053E29 /* EHHouseSourcesMessage.m in Sources */,
 				04B857211D57280300BEA6CB /* EHSkimedAgentInfo.m in Sources */,
+				04AB9FAA1D7EB6E900610F63 /* UILabel+GetWidth.m in Sources */,
 				04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */,
 				04657FD21D32473200914495 /* EHEverydayHouseViewController.m in Sources */,
 				04F06CCA1D2DFE920081A34D /* main.m in Sources */,

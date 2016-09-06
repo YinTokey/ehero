@@ -7,7 +7,7 @@
 //
 
 #import "EHAgentInfoChartCell.h"
-
+#import "UILabel+GetWidth.h"
 
 
 @implementation EHAgentInfoChartCell
