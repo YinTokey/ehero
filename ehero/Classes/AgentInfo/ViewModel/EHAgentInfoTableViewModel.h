@@ -10,10 +10,14 @@
 #import <UIKit/UIKit.h>
 #import "EHSearchResultCell.h"
 #import "LQRadarChart.h"
+#import "EHAverageInfo.h"
+
 @class EHAgentInfo;
 @interface EHAgentInfoTableViewModel : NSObject<EHSearchResultCellDelegate,UITableViewDataSource,UITableViewDelegate,LQRadarChartDataSource,LQRadarChartDelegate>
 
 @property (nonatomic,strong) EHAgentInfo *agentInfo;
+@property (nonatomic,strong) EHAverageInfo *averageInfo;
+
 @property (nonatomic,strong) id superVC;
 
 @end

@@ -66,7 +66,13 @@
     [self callCallBack];
     [self initViewModels];
     
-    [_agentInfoNetViewModel getAverageInfo];
+    //数据传递
+    [_agentInfoNetViewModel getAverageInfo:^(EHAverageInfo *averageInfo){
+        _agentInfoTableViewModel.averageInfo = averageInfo;
+//      NSArray *arr =  [_agentInfoTableViewModel.averageInfo percentOfLianjia];
+//        NSLog(@"arr class %@",[arr[1] class]);
+      //  NSLog(@"info AVG %f",_agentInfoTableViewModel.averageInfo.lianjia_rates_avg);
+    }];
 }
 
 
@@ -80,6 +86,8 @@
     self.tableView.delegate = _agentInfoTableViewModel;
     
     _agentInfoNetViewModel = [[EHAgentInfoNetViewModel alloc]init];
+    _agentInfoNetViewModel.superVC = self;
+    
     
     _skimedAgentViewModel = [[EHSkimedAgentViewModel alloc]init];
     [_skimedAgentViewModel skimedAndSaveWithAgentInfo:self.agentInfo];

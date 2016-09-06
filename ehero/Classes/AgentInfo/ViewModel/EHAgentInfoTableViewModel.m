@@ -55,6 +55,10 @@
         cell.average.text = averageStr;
         NSString *personStr = [NSString stringWithFormat:@"%@能力值",self.agentInfo.name];
         cell.person.text = personStr;
+        [RACObserve(self, averageInfo)subscribeNext:^(id x) {
+            [cell.chart reloadData];
+        }];
+        
         return cell;
     }else{
         EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
@@ -79,15 +83,41 @@
 }
 - (NSString *)titleOfRowForRadarChart:(LQRadarChart *)radarChart row:(NSInteger)row
 {
-    NSArray * title = @[@"销售",@"出租",@"关注量",@"好评率",@"浏览量"];
-    return title[row];
+    if ([self.agentInfo.company isEqualToString:@"链家"]) {
+        NSArray * title = @[@"成交量",@"委托量",@"带看量",@"好评率",@"评论数量"];
+        return title[row];
+    }else if ([self.agentInfo.company isEqualToString:@"我爱我家"]) {
+        NSArray * title = @[@"售",@"租",@"关注量",@"好评率",@"浏览量"];
+        return title[row];
+    }else{
+        NSArray * title = @[@"在售",@"在租",@"粉丝数量",@"服务客户数",@"近期成交量"];
+        return title[row];
+    }
+    
 }
+#pragma mark - section 0 是蓝色， section 1是紫色。 峰值是5, 计算时 5 *（算出的百分比）
 - (CGFloat)valueOfSectionForRadarChart:(LQRadarChart *)radarChart row:(NSInteger)row section:(NSInteger)section
 {
     if (section == 0 ){
-        return (CGFloat)(MAX(MIN(row + 1, 4), 3));
+        if (row == 0) {
+            return 5;
+        }else{
+            return 0.8;
+        }
     } else {
-        return (CGFloat)(MAX(MIN(row + 2, 5), 1));
+        if ([self.agentInfo.company isEqualToString:@"链家"]) {
+            NSArray *percentArray = [self.averageInfo percentOfLianjia];
+            NSNumber *percentage = percentArray[row];
+            return 5 * [percentage floatValue];
+        }else if([self.agentInfo.company isEqualToString:@"我爱我家"]){
+            NSArray *percentArray = [self.averageInfo percentOfWawj];
+            NSNumber *percentage = percentArray[row];
+            return 5 * [percentage floatValue];
+        }else{
+            NSArray *percentArray = [self.averageInfo percentOfMaitian];
+            NSNumber *percentage = percentArray[row];
+            return 5 * [percentage floatValue];
+        }
     }
 }
 

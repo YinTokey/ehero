@@ -11,8 +11,10 @@
 
 @interface EHAgentInfoNetViewModel : NSObject
 
+@property (nonatomic,strong) UIViewController *superVC;
+
 - (void)callAgentWithIdStr:(NSString *)idStr code:(NSString *)code failure:(void (^)())failure;
 
-- (void)getAverageInfo;
+- (void)getAverageInfo:(void(^)(EHAverageInfo *averageInfo))success;
 
 @end
