@@ -75,6 +75,7 @@
 		049AA0811D50350F00761E3F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 049AA0801D50350F00761E3F /* libsqlite3.0.tbd */; };
 		049ADF181D64796100C54F4D /* EHDistricts.m in Sources */ = {isa = PBXBuildFile; fileRef = 049ADF171D64796100C54F4D /* EHDistricts.m */; };
 		04A991F01D682C8C00053E29 /* EHHouseSourcesMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A991EF1D682C8C00053E29 /* EHHouseSourcesMessage.m */; };
+		04AB9FA71D7E6D6D00610F63 /* EHAverageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AB9FA61D7E6D6D00610F63 /* EHAverageInfo.m */; };
 		04B0EFDB1D499DD600BE301B /* EHHouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFDA1D499DD600BE301B /* EHHouseDetailViewController.m */; };
 		04B0EFDF1D49A18100BE301B /* EHHouseDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFDD1D49A18100BE301B /* EHHouseDetailCell.m */; };
 		04B0EFE01D49A18100BE301B /* EHHouseDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B0EFDE1D49A18100BE301B /* EHHouseDetailCell.xib */; };
@@ -296,6 +297,8 @@
 		049ADF171D64796100C54F4D /* EHDistricts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHDistricts.m; path = ehero/Classes/Home/View/EHDistricts.m; sourceTree = SOURCE_ROOT; };
 		04A991EE1D682C8C00053E29 /* EHHouseSourcesMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHouseSourcesMessage.h; path = ehero/Classes/Lib/ACEExpandableTextCell/EHHouseSourcesMessage.h; sourceTree = SOURCE_ROOT; };
 		04A991EF1D682C8C00053E29 /* EHHouseSourcesMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHHouseSourcesMessage.m; path = ehero/Classes/Lib/ACEExpandableTextCell/EHHouseSourcesMessage.m; sourceTree = SOURCE_ROOT; };
+		04AB9FA51D7E6D6D00610F63 /* EHAverageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAverageInfo.h; sourceTree = "<group>"; };
+		04AB9FA61D7E6D6D00610F63 /* EHAverageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAverageInfo.m; sourceTree = "<group>"; };
 		04B0EFD91D499DD600BE301B /* EHHouseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHouseDetailViewController.h; sourceTree = "<group>"; };
 		04B0EFDA1D499DD600BE301B /* EHHouseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHouseDetailViewController.m; sourceTree = "<group>"; };
 		04B0EFDC1D49A18100BE301B /* EHHouseDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHouseDetailCell.h; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailCell.h; sourceTree = SOURCE_ROOT; };
@@ -1538,6 +1541,8 @@
 		04E9CFF01D4608110087BD70 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04AB9FA51D7E6D6D00610F63 /* EHAverageInfo.h */,
+				04AB9FA61D7E6D6D00610F63 /* EHAverageInfo.m */,
 				04B8571F1D57280300BEA6CB /* EHSkimedAgentInfo.h */,
 				04B857201D57280300BEA6CB /* EHSkimedAgentInfo.m */,
 			);
@@ -2092,6 +2097,7 @@
 				046A7C5E1D503E9600652296 /* JKDBHelper.m in Sources */,
 				0478B6431D798B5C00C25183 /* EHTipsReaderViewController.m in Sources */,
 				04C157661D6E9E850036E5A1 /* EHSkimedAgentViewModel.m in Sources */,
+				04AB9FA71D7E6D6D00610F63 /* EHAverageInfo.m in Sources */,
 				049AA07E1D5034D600761E3F /* FMResultSet.m in Sources */,
 				04E0DEC21D7405320003ED4A /* EHCommentAgentNetViewModel.m in Sources */,
 				0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */,

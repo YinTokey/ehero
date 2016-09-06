@@ -7,7 +7,7 @@
 //
 
 #import "EHAgentInfoNetViewModel.h"
-
+#import <MJExtension.h>
 @implementation EHAgentInfoNetViewModel
 
 - (void)callAgentWithIdStr:(NSString *)idStr code:(NSString *)code failure:(void (^)())failure{
@@ -27,6 +27,19 @@
         NSLog(@"failed %@",error);
     }];
     
+}
+
+- (void)getAverageInfo{
+    [YTHttpTool get:averageUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
+
+        NSDictionary *dicObj  = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:nil] ;
+        EHAverageInfo *averageInfo = [EHAverageInfo mj_objectWithKeyValues:dicObj];
+  
+        NSLog(@"lianjia %f",averageInfo.lianjia_rates_avg );
+   
+    } failure:^(NSError *error) {
+        NSLog(@"获取平均数值失败");
+    }];
 }
 
 @end

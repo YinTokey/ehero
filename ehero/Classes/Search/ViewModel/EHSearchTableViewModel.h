@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "EHAgentInfo.h"
+
 @interface EHSearchTableViewModel : NSObject<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong) NSMutableArray *searchResultArr;
@@ -21,6 +22,7 @@
 
 # pragma mark - 搜索方法
 - (void)searchWithURLString:(NSString *)urlString Param:(NSDictionary *)param;
+
 
 //-(void)agentInfoVCWithIndexPath:(NSIndexPath *)indexPath WithViewController:(UIViewController *)superController;
 

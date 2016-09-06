@@ -129,7 +129,7 @@
     NSDictionary *param =@{@"major":self.major,
                            @"arg":keyword};
     [self.tableViewModel searchWithURLString:searchAreaUrlStr Param:param];
-
+    
 }
 
 

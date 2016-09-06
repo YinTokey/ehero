@@ -33,6 +33,8 @@
 #define getRegionsInfoUrlStr @"http://ehero.cc/api/v1/tips/regions"
 #define slidesUrlStr @"http://ehero.cc/api/v1/users/slides"
 #define TipsRecommendUrlStr @"http://ehero.cc/api/v1/tips/recommend"
+#define averageUrlStr @"http://ehero.cc/api/v1/agents/average"
+
 
 #define QQAppId @"1105635926"
 #define WeiboAppKey @"2459331788"

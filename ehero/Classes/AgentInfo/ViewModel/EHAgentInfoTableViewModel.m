@@ -106,23 +106,6 @@
 - (UIColor *)colorOfFillStepForRadarChart:(LQRadarChart *)radarChart step:(NSInteger)step
 {
     UIColor * color = [UIColor clearColor];
-    //    switch (step) {
-    //        case 1:
-    //            color = [UIColor colorWithRed:0.545 green:0.906 blue:0.996 alpha:1];
-    //            break;
-    //        case 2:
-    //            color = [UIColor colorWithRed:0.706 green:0.929 blue:0.988 alpha:1];
-    //            break;
-    //        case 3:
-    //            color = [UIColor colorWithRed:0.831 green:0.949 blue:0.984 alpha:1];
-    //            break;
-    //        case 4:
-    //            color = [UIColor colorWithRed:0.922 green:0.976 blue:0.998 alpha:1];
-    //            break;
-    //
-    //        default:
-    //            break;
-    //    }
     return color;
 }
 - (UIColor *)colorOfSectionFillForRadarChart:(LQRadarChart *)radarChart section:(NSInteger)section

@@ -66,6 +66,7 @@
     [self callCallBack];
     [self initViewModels];
     
+    [_agentInfoNetViewModel getAverageInfo];
 }
 
 

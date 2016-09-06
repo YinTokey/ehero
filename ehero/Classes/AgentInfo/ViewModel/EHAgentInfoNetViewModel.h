@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EHAverageInfo.h"
 
 @interface EHAgentInfoNetViewModel : NSObject
 
 - (void)callAgentWithIdStr:(NSString *)idStr code:(NSString *)code failure:(void (^)())failure;
+
+- (void)getAverageInfo;
 
 @end

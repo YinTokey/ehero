@@ -42,8 +42,8 @@
         cell.chart.radius = ScreenWidth / 3.0;
         cell.chartView.backgroundColor = [UIColor clearColor];
         [cell.chartView addSubview:cell.chart];
-        NSLog(@"cell w = %f",cell.bounds.size.width);
-        NSLog(@"screen w = %f",ScreenWidth);
+//        NSLog(@"cell w = %f",cell.bounds.size.width);
+//        NSLog(@"screen w = %f",ScreenWidth);
     }
     
     return cell;
