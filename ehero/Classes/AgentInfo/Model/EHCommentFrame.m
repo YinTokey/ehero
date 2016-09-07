@@ -27,9 +27,9 @@
     //内容
     CGSize textSize =  [commentInfo.text sizeWithMaxSize:CGSizeMake(200, MAXFLOAT) fontSize:13];
 
-    CGSize buttonSize = CGSizeMake(textSize.width + 20 * 2, textSize.height + 20 * 2);
+    CGSize buttonSize = CGSizeMake(ScreenWidth - 20, textSize.height + 20 * 2);
     CGFloat textY = CGRectGetMaxY(_authorFrame) - 30;
-    CGFloat textX = CGRectGetMaxX(_authorFrame)  - 30;
+    CGFloat textX = CGRectGetMaxX(_authorFrame)  - 50;
     _textFrame = (CGRect){{textX,textY},buttonSize};
     
     //_communityFrame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
@@ -41,7 +41,7 @@
     CGFloat mobileMaxY = CGRectGetMaxY(_authorFrame);
     CGFloat textMaxY = CGRectGetMaxY(_textFrame);
     
-    _rowHeight = mobileMaxY + textMaxY + margin;
+    _rowHeight =  textMaxY + margin;
     
 }
 

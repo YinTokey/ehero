@@ -18,7 +18,7 @@
 @property (nonatomic, weak) UIButton *textView;
 @property (nonatomic, weak) EHCommunityButton *communityBtn;
 @property (nonatomic, weak) UILabel *timeLabel;
-
+@property (nonatomic, weak) UIButton *backgroundBtn;
 
 @end
 
@@ -38,14 +38,13 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.backgroundColor = [UIColor clearColor];
-        // 电话
-        UILabel *mobile = [[UILabel alloc]init];
-        [self.contentView addSubview:mobile];
-        mobile.textAlignment = NSTextAlignmentCenter;
-        // 点赞按钮
-        UIButton *starBtn = [[UIButton alloc]init];
-        [self.contentView addSubview:starBtn];
-        self.starBtn = starBtn;
+        //背景按钮
+//        UIButton *backgroundBtn = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, self.bounds.size.width - 10, self.bounds.size.height)];
+//        [backgroundBtn setBackgroundImage:[UIImage resizeImage:@"comment_background"] forState:UIControlStateNormal];
+//        [self.contentView addSubview:backgroundBtn];
+//        self.backgroundBtn = backgroundBtn;
+        
+
         // 评论内容
         UIButton *textView = [[UIButton alloc] init];
         [self.contentView addSubview:textView];
@@ -58,13 +57,23 @@
         [textView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         //设置按钮中内容的边距
         textView.contentEdgeInsets = UIEdgeInsetsMake(20, 20, 20, 20);
+        
+        // 电话
+        UILabel *mobile = [[UILabel alloc]init];
+        [self.textView addSubview:mobile];
+        mobile.textAlignment = NSTextAlignmentCenter;
+        // 点赞按钮
+        UIButton *starBtn = [[UIButton alloc]init];
+        [self.textView addSubview:starBtn];
+        self.starBtn = starBtn;
+        
         // 小区
         EHCommunityButton *communityBtn = [[EHCommunityButton alloc]init];
-        [self.contentView addSubview:communityBtn];
+        [self.textView addSubview:communityBtn];
         self.communityBtn = communityBtn;
         // 提交评论时间
         UILabel *timeLabel = [[UILabel alloc] init];
-        [self.contentView addSubview:timeLabel];
+        [self.textView addSubview:timeLabel];
         self.timeLabel = timeLabel;
         
     }
@@ -72,6 +81,7 @@
 }
 
 - (void)setCommentFrame:(EHCommentFrame *)commentFrame{
+    
     _commentFrame = commentFrame;
     EHCommentInfo *commentInfo = commentFrame.commentInfo;
     //评论作者名字 就是电话
@@ -85,9 +95,7 @@
     
     self.author.frame = commentFrame.authorFrame;
     self.textView.frame = commentFrame.textFrame;
-    
-    
-    
+
 }
 
 @end
