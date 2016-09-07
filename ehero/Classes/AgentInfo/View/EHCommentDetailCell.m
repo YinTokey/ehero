@@ -13,7 +13,7 @@
 #import "EHCommunityButton.h"
 @interface EHCommentDetailCell ()
 
-@property (nonatomic, weak) UILabel *mobile;
+@property (nonatomic, weak) UILabel *author;
 @property (nonatomic, weak) UIButton *starBtn;
 @property (nonatomic, weak) UIButton *textView;
 @property (nonatomic, weak) EHCommunityButton *communityBtn;
@@ -75,7 +75,7 @@
     _commentFrame = commentFrame;
     EHCommentInfo *commentInfo = commentFrame.commentInfo;
     //评论作者名字 就是电话
-    self.mobile.text = commentInfo.author;
+    self.author.text = commentInfo.author;
 
     //内容
     [self.textView setTitle:commentInfo.text forState:UIControlStateNormal];
@@ -83,7 +83,7 @@
     //设置消息背景图片
     [self.textView setBackgroundImage:[UIImage resizeImage:@"comment_background"] forState:UIControlStateNormal];
     
-    self.mobile.frame = commentFrame.mobileFrame;
+    self.author.frame = commentFrame.authorFrame;
     self.textView.frame = commentFrame.textFrame;
     
     

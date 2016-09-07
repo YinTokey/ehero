@@ -16,20 +16,20 @@
     _commentInfo = commentInfo;
     CGFloat margin = 10;
     
-    CGFloat mobileW = 90;
-    CGFloat mobileH = 20;
-    CGFloat mobileX = 50;
-    CGFloat mobileY = 25;
-    _mobileFrame = CGRectMake(mobileX, mobileY, mobileW, mobileH);
+    CGFloat authorX = 10;
+    CGFloat authorY = 10;
+    CGFloat authorW = 50;
+    CGFloat authorH = 25;
+    _authorFrame = CGRectMake(authorX, authorY, authorW, authorH);
     
-    _starFrame = CGRectMake(mobileX + mobileW + 10, mobileY, 25, 25);
+    _starFrame = CGRectMake(authorX + authorW + 10, authorY, 25, 25);
     
     //内容
     CGSize textSize =  [commentInfo.text sizeWithMaxSize:CGSizeMake(200, MAXFLOAT) fontSize:13];
 
     CGSize buttonSize = CGSizeMake(textSize.width + 20 * 2, textSize.height + 20 * 2);
-    CGFloat textY = CGRectGetMaxY(_mobileFrame);
-    CGFloat textX = CGRectGetMaxX(_mobileFrame) + margin;
+    CGFloat textY = CGRectGetMaxY(_authorFrame) - 30;
+    CGFloat textX = CGRectGetMaxX(_authorFrame)  - 30;
     _textFrame = (CGRect){{textX,textY},buttonSize};
     
     //_communityFrame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
@@ -38,7 +38,7 @@
     // 时间
     
     //计算行高
-    CGFloat mobileMaxY = CGRectGetMaxY(_mobileFrame);
+    CGFloat mobileMaxY = CGRectGetMaxY(_authorFrame);
     CGFloat textMaxY = CGRectGetMaxY(_textFrame);
     
     _rowHeight = mobileMaxY + textMaxY + margin;

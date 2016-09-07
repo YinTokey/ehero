@@ -11,7 +11,7 @@
 
 @interface EHCommentFrame : NSObject
 
-@property (nonatomic, assign, readonly) CGRect mobileFrame;
+@property (nonatomic, assign, readonly) CGRect authorFrame;
 @property (nonatomic, assign, readonly) CGRect starFrame;
 @property (nonatomic, assign, readonly) CGRect textFrame;
 @property (nonatomic, assign, readonly) CGRect communityFrame;
