@@ -9,12 +9,30 @@
 #import "EHAgentInfoTableViewModel.h"
 #import "EHAgentInfoChartCell.h"
 #import "EHAgentInfoCommentCell.h"
-#import "EHCommentFrame.h"
-#import "EHCommentInfo.h"
-#import "EHCommentDetailCell.h"
 
 
 @implementation EHAgentInfoTableViewModel
+
+//1 懒加载
+- (NSMutableArray *)commentFrames
+{
+    if (_commentFrames == nil) {
+        //1.1 加载模型数据
+        EHCommentInfo *commentInfo = [[EHCommentInfo alloc]init];
+        commentInfo.text = @"ksjdfkjslkajfksjfj;alkjfk;ldsja;jdlkfjsldjfksdjf;sk;fsjf;sjieg";
+        NSArray *comments = @[commentInfo];
+        NSMutableArray *tmpArray = [NSMutableArray array];
+        //1.2 创建frame模型
+        for (EHCommentInfo *comment in comments) {
+            EHCommentFrame *commentFrame = [[EHCommentFrame alloc] init];
+            commentFrame.commentInfo = comment;
+            
+            [tmpArray addObject:commentFrame];
+        }
+        _commentFrames = tmpArray;
+    }
+    return _commentFrames;
+}
 
 #pragma mark - Table view data source
 
@@ -24,13 +42,15 @@
         return 125;
     }else if (indexPath.section == 1){
         return ScreenHeight * 0.42 + 30;
-    }else {
+    }else if (indexPath.section == 2){
         return 30;
+    }else{
+        return [self.commentFrames[indexPath.row] rowHeight];
     }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -38,7 +58,7 @@
     if (section == 0 || section == 1 || section == 2) {
         return 1;
     }else
-        return 2;
+        return self.commentFrames.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -67,8 +87,12 @@
         }];
         
         return cell;
-    }else{
+    }else if (indexPath.section == 2){
         EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
+        return cell;
+    }else{
+        EHCommentDetailCell *cell = [EHCommentDetailCell commentDetailCellCellWithTableView:tableView];
+        cell.commentFrame = self.commentFrames[indexPath.row];
         return cell;
     }
 }

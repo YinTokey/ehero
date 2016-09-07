@@ -11,13 +11,16 @@
 #import "EHSearchResultCell.h"
 #import "LQRadarChart.h"
 #import "EHAverageInfo.h"
+#import "EHCommentFrame.h"
+#import "EHCommentInfo.h"
+#import "EHCommentDetailCell.h"
 
 @class EHAgentInfo;
 @interface EHAgentInfoTableViewModel : NSObject<EHSearchResultCellDelegate,UITableViewDataSource,UITableViewDelegate,LQRadarChartDataSource,LQRadarChartDelegate>
 
 @property (nonatomic,strong) EHAgentInfo *agentInfo;
 @property (nonatomic,strong) EHAverageInfo *averageInfo;
-
 @property (nonatomic,strong) id superVC;
+@property (nonatomic, strong) NSMutableArray *commentFrames;
 
 @end
