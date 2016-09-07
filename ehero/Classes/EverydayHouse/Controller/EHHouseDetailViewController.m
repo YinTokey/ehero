@@ -10,7 +10,7 @@
 #import "EHHouseDetailCell.h"
 #import "EHHouseDetailAgentCell.h"
 #import "EHHouseDetailCallCell.h"
-#import "SDAutoLayout.h"
+
 @interface EHHouseDetailViewController ()
 
 @end

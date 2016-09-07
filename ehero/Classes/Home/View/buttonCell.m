@@ -7,7 +7,6 @@
 //
 
 #import "buttonCell.h"
-#import "SDAutoLayout.h"
 @interface buttonCell()
 @property (weak, nonatomic) IBOutlet UIButton *tips;
 @property (weak, nonatomic) IBOutlet UIButton *phoneCall;

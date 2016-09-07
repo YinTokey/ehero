@@ -15,7 +15,6 @@
 #import "EHDistricts.h"
 #import "WSDropMenuView.h"
 #import "EHHouseSourcesCell.h"
-#import "SDAutoLayout.h"
 #import "EHHouseSourcesMessage.h"
 
 @interface EHEverydayHouseViewController ()<UITextFieldDelegate,UIGestureRecognizerDelegate,UITextViewDelegate, WSDropMenuViewDataSource,WSDropMenuViewDelegate,houseSourcesDelegate>

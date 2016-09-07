@@ -9,7 +9,6 @@
 #import "EHProfileViewController.h"
 #import "AppDelegate.h"
 #import "MBProgressHUD+YT.h"
-#import "SDAutoLayout.h"
 #import "EHCollectedAgentsViewController.h"
 #import "EHSkimedAgentsViewController.h"
 #import <MBProgressHUD.h>

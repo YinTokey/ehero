@@ -10,7 +10,6 @@
 #import <SDCycleScrollView.h>
 
 #import "AppDelegate.h"
-#import "SDAutoLayout.h"
 #import "EHHomeSearchBar.h"
 #import "EHSearchViewController.h"
 #import "EHHomeAgentCell.h"

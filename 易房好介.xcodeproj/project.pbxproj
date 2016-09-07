@@ -22,6 +22,7 @@
 		0455CB281D48B90E00160C83 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C3A8D01D31E518003203C0 /* WebKit.framework */; };
 		0456A9E01D49E5390065DC5B /* EHCallAgentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */; };
 		0456A9E21D49E5640065DC5B /* EHCallAgentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */; };
+		0456DBBE1D7FE3AB001363AA /* EHCommentDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456DBBD1D7FE3AB001363AA /* EHCommentDetailCell.m */; };
 		04634AC11D753100003C0CFF /* EHCommentAgentDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04634AC01D753100003C0CFF /* EHCommentAgentDelegate.m */; };
 		04634AC71D753810003C0CFF /* EHStorageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04634AC61D753810003C0CFF /* EHStorageViewModel.m */; };
 		0463EB0B1D5705B100C75B36 /* EHRegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463EB0A1D5705B100C75B36 /* EHRegularExpression.m */; };
@@ -194,6 +195,8 @@
 		0456A9DE1D49E5390065DC5B /* EHCallAgentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCallAgentView.h; sourceTree = "<group>"; };
 		0456A9DF1D49E5390065DC5B /* EHCallAgentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCallAgentView.m; sourceTree = "<group>"; };
 		0456A9E11D49E5640065DC5B /* EHCallAgentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCallAgentView.xib; sourceTree = "<group>"; };
+		0456DBBC1D7FE3AB001363AA /* EHCommentDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCommentDetailCell.h; sourceTree = "<group>"; };
+		0456DBBD1D7FE3AB001363AA /* EHCommentDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCommentDetailCell.m; sourceTree = "<group>"; };
 		04634ABF1D753100003C0CFF /* EHCommentAgentDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCommentAgentDelegate.h; sourceTree = "<group>"; };
 		04634AC01D753100003C0CFF /* EHCommentAgentDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCommentAgentDelegate.m; sourceTree = "<group>"; };
 		04634AC51D753810003C0CFF /* EHStorageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHStorageViewModel.h; sourceTree = "<group>"; };
@@ -1593,6 +1596,8 @@
 				04946B511D58307100B2C034 /* EHSendCodeButton.m */,
 				04AB9FA81D7EB6E900610F63 /* UILabel+GetWidth.h */,
 				04AB9FA91D7EB6E900610F63 /* UILabel+GetWidth.m */,
+				0456DBBC1D7FE3AB001363AA /* EHCommentDetailCell.h */,
+				0456DBBD1D7FE3AB001363AA /* EHCommentDetailCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2033,6 +2038,7 @@
 				04200C371D2F7A7A005DC042 /* XTPopView.m in Sources */,
 				0472DA571D37BA5400CDE148 /* YTHttpTool.m in Sources */,
 				04C8FDE71D54A1080081CE73 /* MZTimerLabel.m in Sources */,
+				0456DBBE1D7FE3AB001363AA /* EHCommentDetailCell.m in Sources */,
 				046EBD791D66F98E00CD6346 /* WJTextView.m in Sources */,
 				046EF2A41D44DB1D005198E6 /* EHAgentInfoController.m in Sources */,
 				04716C0A1D35060B00E512EE /* AFURLResponseSerialization.m in Sources */,

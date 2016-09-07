@@ -19,8 +19,8 @@
         return 125;
     }else if (indexPath.section == 1){
         return ScreenHeight * 0.42 + 30;
-    }else{
-        return 125;
+    }else {
+        return 30;
     }
 }
 
@@ -30,7 +30,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    if (section == 0 || section == 1) {
+    if (section == 0 || section == 1 || section == 2) {
         return 1;
     }else
         return 2;
@@ -64,9 +64,7 @@
         return cell;
     }else{
         EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
-        
         return cell;
-        
     }
 }
 

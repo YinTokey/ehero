@@ -7,7 +7,6 @@
 //
 
 #import "EHTipViewCell.h"
-#import "SDAutoLayout.h"
 #import "YTNetCommand.h"
 @interface EHTipViewCell()
 - (IBAction)moreBtnClick:(id)sender;
