@@ -8,6 +8,7 @@
 
 #import "EHCommentDetailCell.h"
 #import "EHCommentInfo.h"
+#import "EHCommentFrame.h"
 #import "UIImage+Extensiton.h"
 #import "EHCommunityButton.h"
 @interface EHCommentDetailCell ()
@@ -70,6 +71,23 @@
     return self;
 }
 
-//- (void)
+- (void)setCommentFrame:(EHCommentFrame *)commentFrame{
+    _commentFrame = commentFrame;
+    EHCommentInfo *commentInfo = commentFrame.commentInfo;
+    //评论作者名字 就是电话
+    self.mobile.text = commentInfo.author;
+
+    //内容
+    [self.textView setTitle:commentInfo.text forState:UIControlStateNormal];
+    
+    //设置消息背景图片
+    [self.textView setBackgroundImage:[UIImage resizeImage:@"comment_background"] forState:UIControlStateNormal];
+    
+    self.mobile.frame = commentFrame.mobileFrame;
+    self.textView.frame = commentFrame.textFrame;
+    
+    
+    
+}
 
 @end

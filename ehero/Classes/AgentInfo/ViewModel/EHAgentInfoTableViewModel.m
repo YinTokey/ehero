@@ -9,6 +9,11 @@
 #import "EHAgentInfoTableViewModel.h"
 #import "EHAgentInfoChartCell.h"
 #import "EHAgentInfoCommentCell.h"
+#import "EHCommentFrame.h"
+#import "EHCommentInfo.h"
+#import "EHCommentDetailCell.h"
+
+
 @implementation EHAgentInfoTableViewModel
 
 #pragma mark - Table view data source
