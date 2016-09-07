@@ -27,6 +27,7 @@
                            visits_percentage,
                            rates_percentage,
                            reviews_percentage];
+        
         return array;
     }else if([self.company isEqualToString:@"我爱我家"]){
         NSNumber *sales_percentage = [NSNumber numberWithFloat:(_sales /averageInfo.wawj_sales_max)];

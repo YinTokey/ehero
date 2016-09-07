@@ -56,6 +56,10 @@
 		0472DA571D37BA5400CDE148 /* YTHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0472DA561D37BA5400CDE148 /* YTHttpTool.m */; };
 		0478B6431D798B5C00C25183 /* EHTipsReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B6421D798B5B00C25183 /* EHTipsReaderViewController.m */; };
 		0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B86C1D3631A500C2D788 /* EHAgentInfo.m */; };
+		047E47841D7FB8C600B017EC /* EHCommentFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 047E47831D7FB8C600B017EC /* EHCommentFrame.m */; };
+		047E47871D7FB91D00B017EC /* EHCommentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 047E47861D7FB91D00B017EC /* EHCommentInfo.m */; };
+		047E478D1D7FBB2800B017EC /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 047E478A1D7FBB2800B017EC /* NSString+Extension.m */; };
+		047E478E1D7FBB2800B017EC /* UIImage+Extensiton.m in Sources */ = {isa = PBXBuildFile; fileRef = 047E478C1D7FBB2800B017EC /* UIImage+Extensiton.m */; };
 		047EB7011D44894700D2F277 /* EHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EB7001D44894700D2F277 /* EHSearchViewController.m */; };
 		047ED1801D6D3DF6008EC261 /* EHSearchTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ED17F1D6D3DF6008EC261 /* EHSearchTableViewModel.m */; };
 		047ED1901D6DACE2008EC261 /* EHSocialShareViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ED18F1D6DACE2008EC261 /* EHSocialShareViewModel.m */; };
@@ -260,6 +264,14 @@
 		0478B6421D798B5B00C25183 /* EHTipsReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTipsReaderViewController.m; sourceTree = "<group>"; };
 		0478B86B1D3631A500C2D788 /* EHAgentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfo.h; sourceTree = "<group>"; };
 		0478B86C1D3631A500C2D788 /* EHAgentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfo.m; sourceTree = "<group>"; };
+		047E47821D7FB8C600B017EC /* EHCommentFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCommentFrame.h; sourceTree = "<group>"; };
+		047E47831D7FB8C600B017EC /* EHCommentFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCommentFrame.m; sourceTree = "<group>"; };
+		047E47851D7FB91D00B017EC /* EHCommentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCommentInfo.h; sourceTree = "<group>"; };
+		047E47861D7FB91D00B017EC /* EHCommentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCommentInfo.m; sourceTree = "<group>"; };
+		047E47891D7FBB2800B017EC /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		047E478A1D7FBB2800B017EC /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		047E478B1D7FBB2800B017EC /* UIImage+Extensiton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensiton.h"; sourceTree = "<group>"; };
+		047E478C1D7FBB2800B017EC /* UIImage+Extensiton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensiton.m"; sourceTree = "<group>"; };
 		047EB6FF1D44894700D2F277 /* EHSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSearchViewController.h; sourceTree = "<group>"; };
 		047EB7001D44894700D2F277 /* EHSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSearchViewController.m; sourceTree = "<group>"; };
 		047ED17E1D6D3DF6008EC261 /* EHSearchTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSearchTableViewModel.h; sourceTree = "<group>"; };
@@ -952,6 +964,17 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		047E47881D7FBB0100B017EC /* category */ = {
+			isa = PBXGroup;
+			children = (
+				047E47891D7FBB2800B017EC /* NSString+Extension.h */,
+				047E478A1D7FBB2800B017EC /* NSString+Extension.m */,
+				047E478B1D7FBB2800B017EC /* UIImage+Extensiton.h */,
+				047E478C1D7FBB2800B017EC /* UIImage+Extensiton.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 		047EB6FE1D44894700D2F277 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -1543,6 +1566,10 @@
 				04AB9FA61D7E6D6D00610F63 /* EHAverageInfo.m */,
 				04B8571F1D57280300BEA6CB /* EHSkimedAgentInfo.h */,
 				04B857201D57280300BEA6CB /* EHSkimedAgentInfo.m */,
+				047E47821D7FB8C600B017EC /* EHCommentFrame.h */,
+				047E47831D7FB8C600B017EC /* EHCommentFrame.m */,
+				047E47851D7FB91D00B017EC /* EHCommentInfo.h */,
+				047E47861D7FB91D00B017EC /* EHCommentInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1659,6 +1686,7 @@
 		04F06D2D1D2E0E040081A34D /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				047E47881D7FBB0100B017EC /* category */,
 				04F06D2E1D2E0E040081A34D /* AppDelegate.h */,
 				04F06D2F1D2E0E040081A34D /* AppDelegate.m */,
 				04C5FFDE1D333292009146E5 /* PrefixHeader.pch */,
@@ -2027,6 +2055,7 @@
 				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
 				048E90761D476B46005B19BD /* EHWechatGroupDetailViewController.m in Sources */,
 				04C1576C1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m in Sources */,
+				047E478D1D7FBB2800B017EC /* NSString+Extension.m in Sources */,
 				04B87B611D5D8FA700D0C3A6 /* EHCookieOperation.m in Sources */,
 				04E9CFFA1D46082B0087BD70 /* EHAgentInfoCommentCell.m in Sources */,
 				04B4F43C1D5AF1E100C6D4F3 /* UIButton+GetWidth.m in Sources */,
@@ -2067,10 +2096,12 @@
 				0465688A1D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				047EF38D1D3A0EAA00E587BA /* EHAsiaViewCell.m in Sources */,
 				04716C071D35060B00E512EE /* AFNetworkReachabilityManager.m in Sources */,
+				047E47871D7FB91D00B017EC /* EHCommentInfo.m in Sources */,
 				04667FAA1D49FE990051C446 /* STActionSheet.m in Sources */,
 				04C157601D6E8D8E0036E5A1 /* EHAgentInfoTableViewModel.m in Sources */,
 				04C5004F1D336313009146E5 /* EHNewsViewController.m in Sources */,
 				04C5006E1D336FC0009146E5 /* EHWechatGroupViewController.m in Sources */,
+				047E47841D7FB8C600B017EC /* EHCommentFrame.m in Sources */,
 				046A7C6A1D50659B00652296 /* EHCollectedAgentsViewController.m in Sources */,
 				04716BEB1D34A4E200E512EE /* DCNavTabBarController.m in Sources */,
 				048632081D3E238B00800B26 /* EHNetBusinessManager.m in Sources */,
@@ -2088,6 +2119,7 @@
 				042B43DC1D5322EE005FCFB0 /* EHHomeSearchBar.m in Sources */,
 				04C1576F1D6EB31A0036E5A1 /* EHHomeTableViewModel.m in Sources */,
 				04716BEE1D34A8E000E512EE /* EHTwoViewController.m in Sources */,
+				047E478E1D7FBB2800B017EC /* UIImage+Extensiton.m in Sources */,
 				04C6054E1D62D35C00039217 /* EHHomePopView.m in Sources */,
 				046885191D77F85D00B6EAC4 /* NewPagedFlowView.m in Sources */,
 				04C157801D6ED5810036E5A1 /* EHOfficialAccountController.m in Sources */,

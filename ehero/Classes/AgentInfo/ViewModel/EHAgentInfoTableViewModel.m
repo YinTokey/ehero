@@ -55,8 +55,10 @@
         cell.average.text = averageStr;
         NSString *personStr = [NSString stringWithFormat:@"%@能力值",self.agentInfo.name];
         cell.person.text = personStr;
+
         [RACObserve(self, averageInfo)subscribeNext:^(id x) {
             [cell.chart reloadData];
+            cell.chartView.hidden = NO;
         }];
         
         return cell;
@@ -102,6 +104,9 @@
         NSArray *percentArray = [self.agentInfo percentageWithMaxValue:self.averageInfo];
         NSNumber *percentage = percentArray[row];
         CGFloat Floatpercentage = [percentage floatValue];
+        if (Floatpercentage > 1.0) {
+            Floatpercentage = 1;
+        }
         return 5 * Floatpercentage;
 
     } else {
