@@ -56,12 +56,13 @@
         //设置字体的颜色
         [textView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         //设置按钮中内容的边距
-        textView.contentEdgeInsets = UIEdgeInsetsMake(20, 20, 20, 20);
+        textView.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        textView.titleEdgeInsets = UIEdgeInsetsMake(15, 20, 10, 10);
         
         // 电话
-        UILabel *mobile = [[UILabel alloc]init];
+        UILabel *mobile = [[UILabel alloc]initWithFrame:CGRectMake(15, 5, 40, 20)];
         [self.textView addSubview:mobile];
-        mobile.textAlignment = NSTextAlignmentCenter;
+        mobile.textAlignment = NSTextAlignmentLeft;
         // 点赞按钮
         UIButton *starBtn = [[UIButton alloc]init];
         [self.textView addSubview:starBtn];
