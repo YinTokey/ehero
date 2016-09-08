@@ -73,7 +73,7 @@
     }else{
         EHCommentDetailCell *cell = [EHCommentDetailCell commentDetailCellCellWithTableView:tableView];
         cell.commentInfo = self.commentsArray[indexPath.row];
-        [cell.textView sizeToFit];
+
         return cell;
     }
 }
