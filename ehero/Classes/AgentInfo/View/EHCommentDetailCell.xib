@@ -48,6 +48,15 @@
                         <constraint firstAttribute="width" constant="20" id="fNk-jM-azx"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m71-n4-qnJ">
+                    <rect key="frame" x="133" y="68" width="74" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="IrA-3K-taR"/>
+                        <constraint firstAttribute="width" constant="74" id="fL1-56-cVu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <state key="normal" title="幸福一村西里" backgroundImage="community_background"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.95664948729999999" green="0.95664948729999999" blue="0.95664948729999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -59,6 +68,8 @@
                 <constraint firstItem="9Jb-5k-Gaj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="Ter-tQ-D9s"/>
                 <constraint firstAttribute="bottom" secondItem="xk7-z9-qll" secondAttribute="bottom" constant="7" id="ZlH-kI-rpT"/>
                 <constraint firstItem="POQ-Mw-EKF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="bgQ-Ah-WqL"/>
+                <constraint firstAttribute="bottom" secondItem="m71-n4-qnJ" secondAttribute="bottom" constant="8" id="dvR-8m-3Sn"/>
+                <constraint firstItem="ZUN-9x-mbi" firstAttribute="leading" secondItem="m71-n4-qnJ" secondAttribute="trailing" id="epo-c0-M6x"/>
                 <constraint firstAttribute="bottom" secondItem="ZUN-9x-mbi" secondAttribute="bottom" constant="8" id="jdU-R9-C91"/>
                 <constraint firstItem="POQ-Mw-EKF" firstAttribute="top" secondItem="9Jb-5k-Gaj" secondAttribute="bottom" id="jpG-23-TFD"/>
                 <constraint firstItem="9Jb-5k-Gaj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="qqj-a9-Unu"/>
@@ -79,6 +90,7 @@
     </objects>
     <resources>
         <image name="comment_background" width="411" height="68"/>
+        <image name="community_background" width="160" height="26"/>
         <image name="starIcon" width="26" height="24"/>
     </resources>
 </document>

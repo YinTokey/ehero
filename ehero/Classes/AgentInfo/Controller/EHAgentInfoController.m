@@ -219,11 +219,11 @@
     //1.1 加载模型数据
     EHCommentInfo *commentInfo = [[EHCommentInfo alloc]init];
     commentInfo.author = @"15695951989";
-    commentInfo.text = @"这是第一条";
+    commentInfo.text = @"这是第一条评论";
     
     EHCommentInfo *commentInfo1 = [[EHCommentInfo alloc]init];
-    commentInfo1.text = @"这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条";
-    commentInfo1.author = @"15695951989";
+    commentInfo1.text = @"这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论";
+    commentInfo1.author = @"15695951988";
     
     EHCommentInfo *commentInfo2 = [[EHCommentInfo alloc]init];
     commentInfo2.text = @"这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条";
