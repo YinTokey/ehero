@@ -134,7 +134,7 @@
                     cell.coverView.alpha = 0;
                     CGFloat inset = _pageSize.width * (1 - _minimumPageScale) / 2.0 ;
                     cell.frame = UIEdgeInsetsInsetRect(originCellFrame, UIEdgeInsetsMake(inset, inset, inset, inset));
-                    cell.mainImageView.frame = cell.bounds;
+                    //cell.mainImageView.frame = cell.bounds;
                 }
 
             }

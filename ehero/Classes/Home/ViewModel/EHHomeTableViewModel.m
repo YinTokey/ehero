@@ -111,8 +111,8 @@
 }
 
 - (void)moreClick:(UITableViewCell *)cell{
-    NSLog(@"more");
-    [MBProgressHUD showNormalMessage:@"敬请期待" toView:_superVC.view];
+    EHTipsViewController  *tipsViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"TipsViewController"];
+    [self.superVC.navigationController pushViewController:tipsViewController animated:YES];
 }
 
 - (void)guessClick:(UITableViewCell *)cell{

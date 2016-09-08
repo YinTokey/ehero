@@ -17,17 +17,6 @@
 @end
 
 @implementation EHTipViewCell
-//- (IBAction)moreBtnClick:(id)sender {
-//    if ([self.delegate respondsToSelector:@selector(moreClick:)]) {
-//        [self.delegate moreClick:self];
-//    }
-//}
-//- (IBAction)guessBtnClick:(id)sender {
-//    if ([self.delegate respondsToSelector:@selector(guessClick:)]) {
-//        [self.delegate guessClick:self];
-//    }
-//
-//}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -52,7 +41,7 @@
         cell.pageFlowView.minimumPageAlpha = 0.1;
         cell.pageFlowView.minimumPageScale = 0.6;
         //提前告诉有多少页
-        cell.pageFlowView.orginPageCount = 3;
+        cell.pageFlowView.orginPageCount = 1;
     
         cell.pageFlowView.isOpenAutoScroll = YES;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;

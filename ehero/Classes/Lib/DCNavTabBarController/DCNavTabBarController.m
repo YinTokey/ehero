@@ -109,7 +109,7 @@
     {
         UIViewController *vc = self.VCArr[i];
         
-        UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(i*self.btnW, -64, self.btnW, 44)];
+        UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(i*self.btnW, -58, self.btnW, 44)];
         btn.tag = 10000+i;
         [btn setTitleColor:self.btnTextNomalColor forState:UIControlStateNormal];
         [btn setTitleColor:self.btnTextSeletedColor forState:UIControlStateSelected];
