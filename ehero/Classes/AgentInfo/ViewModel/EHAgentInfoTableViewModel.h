@@ -21,6 +21,6 @@
 @property (nonatomic,strong) EHAgentInfo *agentInfo;
 @property (nonatomic,strong) EHAverageInfo *averageInfo;
 @property (nonatomic,strong) id superVC;
-@property (nonatomic, strong) NSMutableArray *commentFrames;
+@property (nonatomic, strong) NSMutableArray *commentsArray;
 
 @end

@@ -66,6 +66,8 @@
     [self callCallBack];
     [self initViewModels];
     
+    [self transData];
+    
     //数据传递
     [_agentInfoNetViewModel getAverageInfo:^(EHAverageInfo *averageInfo){
         _agentInfoTableViewModel.averageInfo = averageInfo;
@@ -81,6 +83,7 @@
     _agentInfoTableViewModel = [[EHAgentInfoTableViewModel alloc]init];
     _agentInfoTableViewModel.agentInfo = self.agentInfo;
     _agentInfoTableViewModel.superVC = self;
+    _agentInfoTableViewModel.commentsArray = [NSMutableArray array];
     
     self.tableView.dataSource = _agentInfoTableViewModel;
     self.tableView.delegate = _agentInfoTableViewModel;
@@ -210,6 +213,31 @@
             [weakmodal hide:YES];
         }
     };
+}
+#pragma mark - 传递假数据
+- (void)transData{
+    //1.1 加载模型数据
+    EHCommentInfo *commentInfo = [[EHCommentInfo alloc]init];
+    commentInfo.author = @"15695951989";
+    commentInfo.text = @"这是第一条";
+    
+    EHCommentInfo *commentInfo1 = [[EHCommentInfo alloc]init];
+    commentInfo1.text = @"这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条这是第二条";
+    commentInfo1.author = @"15695951989";
+    
+    EHCommentInfo *commentInfo2 = [[EHCommentInfo alloc]init];
+    commentInfo2.text = @"这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条";
+    commentInfo2.author = @"15695951989";
+    
+    EHCommentInfo *commentInfo3 = [[EHCommentInfo alloc]init];
+    commentInfo3.text = @"这是第四条这";
+    commentInfo3.author = @"15695951989";
+
+    [_agentInfoTableViewModel.commentsArray addObject:commentInfo];
+    [_agentInfoTableViewModel.commentsArray addObject:commentInfo1];
+    [_agentInfoTableViewModel.commentsArray addObject:commentInfo2];
+    [_agentInfoTableViewModel.commentsArray addObject:commentInfo3];
+
 }
 
 @end

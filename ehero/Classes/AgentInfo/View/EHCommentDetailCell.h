@@ -8,18 +8,25 @@
 
 #import <UIKit/UIKit.h>
 #import "EHCommunityButton.h"
-@class EHCommentFrame;
+#import "EHCommentInfo.h"
+
 
 @interface EHCommentDetailCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *background;
+@property (weak, nonatomic) IBOutlet UILabel *authoer;
+@property (weak, nonatomic) IBOutlet UILabel *textView;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
-@property (nonatomic,strong) EHCommentFrame *commentFrame;
+@property (nonatomic,strong) EHCommentInfo *commentInfo;
 
-@property (nonatomic, weak) UILabel *author;
-@property (nonatomic, weak) UIButton *starBtn;
-@property (nonatomic, weak) UITextView *textView;
-@property (nonatomic, weak) EHCommunityButton *communityBtn;
-@property (nonatomic, weak) UILabel *timeLabel;
-@property (nonatomic, weak) UIImageView *background;
+//@property (nonatomic,strong) EHCommentFrame *commentFrame;
+//
+//@property (nonatomic, weak) UILabel *author;
+//@property (nonatomic, weak) UIButton *starBtn;
+//@property (nonatomic, weak) UITextView *textView;
+//@property (nonatomic, weak) EHCommunityButton *communityBtn;
+//@property (nonatomic, weak) UILabel *timeLabel;
+//@property (nonatomic, weak) UIImageView *background;
 
 + (instancetype)commentDetailCellCellWithTableView:(UITableView *)tableView;
 

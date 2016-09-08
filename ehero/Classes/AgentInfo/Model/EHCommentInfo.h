@@ -30,4 +30,6 @@
 
 @property(nonatomic,copy)NSString *text;
 
+@property(nonatomic,assign)CGFloat cellHeight;
+
 @end

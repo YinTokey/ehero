@@ -7,7 +7,6 @@
 //
 
 #import "EHCommentDetailCell.h"
-#import "EHCommentInfo.h"
 #import "EHCommentFrame.h"
 #import "UIImage+Extensiton.h"
 @interface EHCommentDetailCell ()
@@ -21,11 +20,16 @@
     static NSString *reuseId = @"commentDetailCell";
     EHCommentDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
-        cell = [[EHCommentDetailCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"EHCommentDetailCell" owner:nil options:nil] lastObject];
+        cell.textView.backgroundColor = [UIColor blueColor];
+        [cell.textView textRectForBounds:cell.textView.frame limitedToNumberOfLines:0];
+        
     }
     return cell;
 }
 
+
+/*
 //2 创建子控件
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -81,7 +85,8 @@
     }
     return self;
 }
-
+*/
+/*
 - (void)setCommentFrame:(EHCommentFrame *)commentFrame{
     commentFrame.superCell = self;
     _commentFrame = commentFrame;
@@ -101,6 +106,16 @@
     self.textView.frame = commentFrame.textFrame;
     self.background.frame = commentFrame.backgroundFrame;
     
+}
+*/
+
+- (void)setCommentInfo:(EHCommentInfo *)commentInfo{
+    _commentInfo = commentInfo;
+    self.textView.text = commentInfo.text;
+    self.authoer.text = commentInfo.author;
+    CGFloat commentH = [self.textView.text boundingRectWithSize:CGSizeMake(204, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+    
+    commentInfo.cellHeight = commentH + 60;
 }
 
 @end
