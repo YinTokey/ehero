@@ -10,15 +10,7 @@
 #import "EHCommentInfo.h"
 #import "EHCommentFrame.h"
 #import "UIImage+Extensiton.h"
-#import "EHCommunityButton.h"
 @interface EHCommentDetailCell ()
-
-@property (nonatomic, weak) UILabel *author;
-@property (nonatomic, weak) UIButton *starBtn;
-@property (nonatomic, weak) UIButton *textView;
-@property (nonatomic, weak) EHCommunityButton *communityBtn;
-@property (nonatomic, weak) UILabel *timeLabel;
-@property (nonatomic, weak) UIButton *backgroundBtn;
 
 @end
 
@@ -38,43 +30,52 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.backgroundColor = [UIColor clearColor];
-        //背景按钮
-//        UIButton *backgroundBtn = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, self.bounds.size.width - 10, self.bounds.size.height)];
-//        [backgroundBtn setBackgroundImage:[UIImage resizeImage:@"comment_background"] forState:UIControlStateNormal];
-//        [self.contentView addSubview:backgroundBtn];
-//        self.backgroundBtn = backgroundBtn;
+        //背景图
+        UIImageView *background = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, self.bounds.size.width - 10, self.bounds.size.height)];
+        [background setImage:[UIImage resizeImage:@"comment_background"]] ;
+       // [UIImageView :[UIImage resizeImage:@"comment_background"] forState:UIControlStateNormal];
+        [self.contentView addSubview:background];
+        self.background = background;
         
 
         // 评论内容
-        UIButton *textView = [[UIButton alloc] init];
-        [self.contentView addSubview:textView];
-        self.textView = textView;
+        UITextView *textView = [[UITextView alloc] init];
+        [self.background addSubview:textView];
         //设置字体大小
-        textView.titleLabel.font = [UIFont systemFontOfSize:13];
+        textView.font = [UIFont systemFontOfSize:13];
         //设置换行
-        textView.titleLabel.numberOfLines = 0;
+      //  textView.numberOfLines = 0;
         //设置字体的颜色
-        [textView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+       // [textView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         //设置按钮中内容的边距
-        textView.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        textView.titleEdgeInsets = UIEdgeInsetsMake(15, 20, 10, 10);
+     //   textView.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+       // CGFloat offsetTop = textView.bounds.origin.y + 2;
+       //CGFloat offsetTop = textView.frame.origin.y - textView.titleLabel.frame.origin.y ;
+      //  textView.contentEdgeInsets = UIEdgeInsetsMake( 0, 0, 0, 15);
+       // textView.backgroundColor = [UIColor redColor];
+        textView.backgroundColor = [UIColor clearColor];
+        self.textView = textView;
         
         // 电话
-        UILabel *mobile = [[UILabel alloc]initWithFrame:CGRectMake(15, 5, 40, 20)];
-        [self.textView addSubview:mobile];
-        mobile.textAlignment = NSTextAlignmentLeft;
+        UILabel *author = [[UILabel alloc]initWithFrame:CGRectMake(15, 5, 40, 20)];
+        [self.background addSubview:author];
+        author.textAlignment = NSTextAlignmentLeft;
+        author.font = [UIFont systemFontOfSize:13];
+        self.author = author;
+        
         // 点赞按钮
         UIButton *starBtn = [[UIButton alloc]init];
-        [self.textView addSubview:starBtn];
+        [starBtn setImage:[UIImage imageNamed:@"starIcon"] forState:UIControlStateNormal];
+        [self.background addSubview:starBtn];
         self.starBtn = starBtn;
         
         // 小区
         EHCommunityButton *communityBtn = [[EHCommunityButton alloc]init];
-        [self.textView addSubview:communityBtn];
+        [self.background addSubview:communityBtn];
         self.communityBtn = communityBtn;
         // 提交评论时间
         UILabel *timeLabel = [[UILabel alloc] init];
-        [self.textView addSubview:timeLabel];
+        [self.background addSubview:timeLabel];
         self.timeLabel = timeLabel;
         
     }
@@ -82,21 +83,24 @@
 }
 
 - (void)setCommentFrame:(EHCommentFrame *)commentFrame{
-    
+    commentFrame.superCell = self;
     _commentFrame = commentFrame;
+    
     EHCommentInfo *commentInfo = commentFrame.commentInfo;
     //评论作者名字 就是电话
     self.author.text = commentInfo.author;
 
     //内容
-    [self.textView setTitle:commentInfo.text forState:UIControlStateNormal];
-    
+  //  [self.textView setTitle:commentInfo.text forState:UIControlStateNormal];
+    self.textView.text = commentInfo.text;
     //设置消息背景图片
-    [self.textView setBackgroundImage:[UIImage resizeImage:@"comment_background"] forState:UIControlStateNormal];
+  //  [self.textView setBackgroundImage:[UIImage resizeImage:@"comment_background"] forState:UIControlStateNormal];
     
     self.author.frame = commentFrame.authorFrame;
+    self.starBtn.frame = commentFrame.starFrame;
     self.textView.frame = commentFrame.textFrame;
-
+    self.background.frame = commentFrame.backgroundFrame;
+    
 }
 
 @end

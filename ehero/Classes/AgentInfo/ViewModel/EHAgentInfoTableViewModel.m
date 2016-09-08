@@ -19,15 +19,24 @@
     if (_commentFrames == nil) {
         //1.1 加载模型数据
         EHCommentInfo *commentInfo = [[EHCommentInfo alloc]init];
-        commentInfo.author = @"183999999";
+        commentInfo.author = @"15895809238";
         commentInfo.text = @"ksjdfkjslkajfksjfj;alkjfk;ldsja;jdlkfjsldjfksdjf;sk;fsjf;sjieg\
         skajfklajslfkjaksjdflkjsklfjklsajdlfkja;ljdflsjflksjdklfjsldjflsdghisgoisjf";
         
         EHCommentInfo *commentInfo1 = [[EHCommentInfo alloc]init];
-        commentInfo1.text = @"jkljsdjfkjadlsfooowieopfa";
+        commentInfo1.text = @"jkljsdjfkjadlsfooosskajfklajslfkjskajfklajslfkjaksjdflkjsklfjklsajdskajfklajslfkjaksjdflkjsklfjklsajdskajfklajslfkjaksjdflkjsklfjklsajdaskajfklajslfkjaksjdflkjsklfjklsajdksjdflkjsklfjklsajdkajfklajslfkjaksjdflkjsklfjklsajdwieopfaooofefwfwefwef";
+        commentInfo1.author = @"15895809238";
+        
+        EHCommentInfo *commentInfo2 = [[EHCommentInfo alloc]init];
+        commentInfo1.text = @"jksgfgdgrrgf";
+        commentInfo1.author = @"15895809238";
+        
+        EHCommentInfo *commentInfo3 = [[EHCommentInfo alloc]init];
+        commentInfo1.text = @"jksadfsafsfsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsfsfsdfsgfgdgrrgf";
+        commentInfo1.author = @"15895809238";
         
         // 真实情况，这个数组存所有评论对象
-        NSArray *comments = @[commentInfo,commentInfo1];
+        NSArray *comments = @[commentInfo,commentInfo1,commentInfo2,commentInfo3];
         NSMutableArray *tmpArray = [NSMutableArray array];
         //1.2 创建frame模型
         for (EHCommentInfo *comment in comments) {

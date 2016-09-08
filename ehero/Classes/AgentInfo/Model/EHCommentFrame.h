@@ -16,6 +16,7 @@
 @property (nonatomic, assign, readonly) CGRect textFrame;
 @property (nonatomic, assign, readonly) CGRect communityFrame;
 @property (nonatomic, assign, readonly) CGRect timeFrame;
+@property (nonatomic, assign, readonly) CGRect backgroundFrame;
 
 /**
  *  行高
@@ -25,5 +26,8 @@
  *  模型对象
  */
 @property (nonatomic, strong) EHCommentInfo *commentInfo;
-
+/**
+ *  superCell 参照对象
+ */
+@property (nonatomic, strong) UITableViewCell *superCell;
 @end

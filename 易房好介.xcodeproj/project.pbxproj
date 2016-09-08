@@ -138,6 +138,7 @@
 		04E9CFF61D4608110087BD70 /* EHAgentInfoChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E9CFF41D4608110087BD70 /* EHAgentInfoChartCell.xib */; };
 		04E9CFFA1D46082B0087BD70 /* EHAgentInfoCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9CFF81D46082B0087BD70 /* EHAgentInfoCommentCell.m */; };
 		04E9CFFB1D46082B0087BD70 /* EHAgentInfoCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E9CFF91D46082B0087BD70 /* EHAgentInfoCommentCell.xib */; };
+		04EA09921D814292006F37B5 /* EHCommentDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EA09911D814292006F37B5 /* EHCommentDetailCell.xib */; };
 		04F06CCA1D2DFE920081A34D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06CC91D2DFE920081A34D /* main.m */; };
 		04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD11D2DFE920081A34D /* Main.storyboard */; };
 		04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F06CD41D2DFE920081A34D /* Assets.xcassets */; };
@@ -417,6 +418,7 @@
 		04E9CFF71D46082B0087BD70 /* EHAgentInfoCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfoCommentCell.h; sourceTree = "<group>"; };
 		04E9CFF81D46082B0087BD70 /* EHAgentInfoCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfoCommentCell.m; sourceTree = "<group>"; };
 		04E9CFF91D46082B0087BD70 /* EHAgentInfoCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHAgentInfoCommentCell.xib; sourceTree = "<group>"; };
+		04EA09911D814292006F37B5 /* EHCommentDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCommentDetailCell.xib; sourceTree = "<group>"; };
 		04F06CC51D2DFE920081A34D /* 易房好介.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "易房好介.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06CC91D2DFE920081A34D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F06CD21D2DFE920081A34D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -1598,6 +1600,7 @@
 				04AB9FA91D7EB6E900610F63 /* UILabel+GetWidth.m */,
 				0456DBBC1D7FE3AB001363AA /* EHCommentDetailCell.h */,
 				0456DBBD1D7FE3AB001363AA /* EHCommentDetailCell.m */,
+				04EA09911D814292006F37B5 /* EHCommentDetailCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1942,6 +1945,7 @@
 				04B4F4391D5ACE6100C6D4F3 /* EHHouseSourcesCell.xib in Resources */,
 				04E9CFFB1D46082B0087BD70 /* EHAgentInfoCommentCell.xib in Resources */,
 				04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */,
+				04EA09921D814292006F37B5 /* EHCommentDetailCell.xib in Resources */,
 				04B0EFE51D49AD1A00BE301B /* EHHouseDetailAgentCell.xib in Resources */,
 				04F06CD81D2DFE920081A34D /* LaunchScreen.storyboard in Resources */,
 				04C2FFCF1D7ABC39000CA92D /* EHTipViewCell.xib in Resources */,
