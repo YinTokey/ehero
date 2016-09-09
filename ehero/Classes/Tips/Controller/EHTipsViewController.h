@@ -10,6 +10,6 @@
 
 @interface EHTipsViewController : UIViewController
 
-
+@property (nonatomic,strong) NSMutableArray *tipsRecommendArray;
 
 @end

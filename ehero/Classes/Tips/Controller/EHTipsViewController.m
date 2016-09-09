@@ -56,7 +56,6 @@
     EHHaidianViewController *eleven = [sb instantiateViewControllerWithIdentifier:@"HaidianViewController"];
     eleven.title = @"房山";
     
-    
     NSArray *subViewControllers = @[one,two,three,four,five,six,seven,eight,night,ten,eleven];
     DCNavTabBarController *tabBarVC = [[DCNavTabBarController alloc]initWithSubViewControllers:subViewControllers];
     tabBarVC.view.frame = CGRectMake(0, 55, self.view.frame.size.width, self.view.frame.size.height - 75);
