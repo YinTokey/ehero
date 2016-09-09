@@ -25,7 +25,7 @@
 
 @property (nonatomic,strong) EHAntiDisturbNetViewModel *antiDisturbNetViewModel;
 
-@property (weak, nonatomic) IBOutlet UIView *verifiedView;
+
 @property (weak, nonatomic) IBOutlet UITextField *verifiedOtherPhone;
 @property (nonatomic,copy) NSString *code;
 - (IBAction)verifiedCallClick:(id)sender;
