@@ -117,7 +117,7 @@
 
 - (void)guessClick:(UITableViewCell *)cell{
     NSLog(@"guess");
-    [MBProgressHUD showNormalMessage:@"敬请期待" toView:_superVC.view];
+   [MBProgressHUD showNormalMessage:@"敬请期待" toView:_superVC.view];
 }
 
 

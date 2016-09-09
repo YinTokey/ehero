@@ -46,7 +46,6 @@
                     </state>
                     <connections>
                         <action selector="guessBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="XUG-M2-4aX"/>
-                        <action selector="moreBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="M5Z-zK-mVJ"/>
                     </connections>
                 </button>
             </subviews>
