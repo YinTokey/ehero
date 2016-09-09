@@ -257,7 +257,7 @@
             </objects>
             <point key="canvasLocation" x="-2598" y="1440"/>
         </scene>
-        <!--生活锦囊-->
+        <!--易房锦囊-->
         <scene sceneID="G2E-rd-uA4">
             <objects>
                 <viewController storyboardIdentifier="TipsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cNL-25-E4Y" customClass="EHTipsViewController" sceneMemberID="viewController">
@@ -270,12 +270,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="生活锦囊" id="a3b-OC-jGA"/>
+                    <navigationItem key="navigationItem" title="易房锦囊" id="a3b-OC-jGA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vao-1I-Eva" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1284" y="961.5"/>
+            <point key="canvasLocation" x="-1256" y="965"/>
         </scene>
         <!--Collected Tips Controller-->
         <scene sceneID="D9N-EB-qfy">

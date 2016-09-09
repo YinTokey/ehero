@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0YU-MT-HIm">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ecq-t8-6ZU">
+            <objects>
+                <navigationController id="0YU-MT-HIm" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cug-aC-nrS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4FV-CF-aR7" kind="relationship" relationship="rootViewController" id="MfL-SK-PWA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pm4-fY-kk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426" y="-141"/>
+        </scene>
+        <!--Haidian View Controller-->
+        <scene sceneID="HvB-xY-yK7">
+            <objects>
+                <collectionViewController storyboardIdentifier="HaidianViewController" id="4FV-CF-aR7" customClass="EHHaidianViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3GC-KN-0iA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cbl-ID-7ev">
+                            <size key="itemSize" width="103" height="169"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="5bO-pb-57o" customClass="EHTipsCell">
+                                <rect key="frame" x="0.0" y="64" width="103" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="103" height="169"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house1" translatesAutoresizingMaskIntoConstraints="NO" id="Nhb-ni-FOz">
+                                            <rect key="frame" x="0.0" y="32" width="103" height="137"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPn-tc-8aW">
+                                            <rect key="frame" x="0.0" y="8" width="103" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="aMl-7d-BGF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Nhb-ni-FOz" firstAttribute="leading" secondItem="5bO-pb-57o" secondAttribute="leading" id="11P-9Y-Lvs"/>
+                                    <constraint firstItem="Nhb-ni-FOz" firstAttribute="top" secondItem="MPn-tc-8aW" secondAttribute="bottom" constant="3" id="1Mc-6n-wXW"/>
+                                    <constraint firstAttribute="trailing" secondItem="MPn-tc-8aW" secondAttribute="trailing" id="4to-zM-7Ai"/>
+                                    <constraint firstItem="MPn-tc-8aW" firstAttribute="leading" secondItem="5bO-pb-57o" secondAttribute="leading" id="NS8-7f-t32"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nhb-ni-FOz" secondAttribute="trailing" id="irY-FT-hrX"/>
+                                    <constraint firstItem="MPn-tc-8aW" firstAttribute="top" secondItem="5bO-pb-57o" secondAttribute="top" constant="8" id="kP3-rM-xni"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nhb-ni-FOz" secondAttribute="bottom" id="rDA-nD-bFa"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="thumb" destination="Nhb-ni-FOz" id="boN-1s-edt"/>
+                                    <outlet property="title" destination="MPn-tc-8aW" id="hGQ-z8-ndi"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="4FV-CF-aR7" id="EKt-sd-n7G"/>
+                            <outlet property="delegate" destination="4FV-CF-aR7" id="Gn1-Mf-Wcc"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="hCC-L8-01O"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pIg-ro-Ji5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3" y="-146"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house1" width="600" height="450"/>
+    </resources>
+</document>

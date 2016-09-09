@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface EHNewsViewController : UIViewController
+@interface EHChangpingViewController : UIViewController
 
 @end

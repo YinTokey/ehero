@@ -7,11 +7,13 @@
 //
 
 #import "EHTipsViewController.h"
-#import "EHNewsViewController.h"
 #import "DCNavTabBarController.h"
 
-#import "EHTwoViewController.h"
-#import "EHAsiaViewController.h"
+#import "EHHaidianViewController.h"
+#import "EHChangpingViewController.h"
+#import "EHChaoyangViewController.h"
+#import "EHDongchengViewController.h"
+
 
 @interface EHTipsViewController ()
 
@@ -29,30 +31,29 @@
 }
 
 - (void)setupChildController{
-    EHTwoViewController *one = [[EHTwoViewController alloc]init];
-    one.title = @"海淀";
-
+    
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Tips" bundle:[NSBundle mainBundle]];
     
-    EHAsiaViewController *two = [sb instantiateViewControllerWithIdentifier:@"AsiaViewController"];
+    EHHaidianViewController *one = [sb instantiateViewControllerWithIdentifier:@"HaidianViewController"];
+    one.title = @"海淀";
+    EHHaidianViewController *two = [sb instantiateViewControllerWithIdentifier:@"HaidianViewController"];
     two.title = @"朝阳";
-    EHTwoViewController *three = [[EHTwoViewController alloc]init];
+    EHHaidianViewController *three = [sb instantiateViewControllerWithIdentifier:@"HaidianViewController"];
     three.title = @"东城";
-    EHTwoViewController *four = [[EHTwoViewController alloc]init];
-    four.title = @"西城";
-    EHTwoViewController *five = [[EHTwoViewController alloc]init];
+    EHHaidianViewController *four = [sb instantiateViewControllerWithIdentifier:@"HaidianViewController"];
+    four.title = @"昌平";
+    EHHaidianViewController *five = [sb instantiateViewControllerWithIdentifier:@"HaidianViewController"];
     five.title = @"顺义";
-    EHNewsViewController *six = [[EHNewsViewController alloc]init];
+    EHHaidianViewController *six = [sb instantiateViewControllerWithIdentifier:@"HaidianViewController"];
     six.title = @"大兴";
-    EHNewsViewController *seven = [[EHNewsViewController alloc]init];
-    seven.title = @"昌平";
-    EHNewsViewController *eight = [[EHNewsViewController alloc]init];
-    eight.title = @"通州";
-    EHNewsViewController *night = [[EHNewsViewController alloc]init];
+    EHHaidianViewController *seven = [sb instantiateViewControllerWithIdentifier:@"HaidianViewController"];
+    seven.title = @"西城";
+    EHHaidianViewController *eight = [sb instantiateViewControllerWithIdentifier:@"HaidianViewController"];    eight.title = @"通州";
+    EHHaidianViewController *night = [sb instantiateViewControllerWithIdentifier:@"HaidianViewController"];
     night.title = @"丰台";
-    EHNewsViewController *ten = [[EHNewsViewController alloc]init];
+    EHHaidianViewController *ten = [sb instantiateViewControllerWithIdentifier:@"HaidianViewController"];
     ten.title = @"石景山";
-    EHNewsViewController *eleven = [[EHNewsViewController alloc]init];
+    EHHaidianViewController *eleven = [sb instantiateViewControllerWithIdentifier:@"HaidianViewController"];
     eleven.title = @"房山";
     
     

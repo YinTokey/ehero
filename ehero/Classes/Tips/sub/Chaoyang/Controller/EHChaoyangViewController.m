@@ -1,40 +1,30 @@
 //
-//  EHAsiaViewController.m
+//  EHTwoViewController.m
 //  ehero
 //
-//  Created by Mac on 16/7/16.
+//  Created by Mac on 16/7/12.
 //  Copyright © 2016年 ehero. All rights reserved.
 //
 
-#import "EHAsiaViewController.h"
-#import "EHAsiaViewCell.h"
-@interface EHAsiaViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+#import "EHChaoyangViewController.h"
+#import "EHTipsCell.h"
+@interface EHChaoyangViewController ()
 
 @end
 
-@implementation EHAsiaViewController
+@implementation EHChaoyangViewController
 
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"i am asia ");
-    self.view.backgroundColor = [UIColor greenColor];
     
-    [self setupCollectionView];
+    self.view.backgroundColor = [UIColor yellowColor];
+    NSLog(@"oneVC");
+
     
-    
+    // Do any additional setup after loading the view.
 }
-
-- (void)setupCollectionView{
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    self.collectionView.dataSource = self;
-    self.collectionView.delegate = self;
-
-}
-
-
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -58,10 +48,10 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-
     
-    EHAsiaViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-   // cell.imgView.image = [UIImage imageNamed:@"tipsExample"];
+    
+    EHTipsCell  *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    // cell.imgView.image = [UIImage imageNamed:@"tipsExample"];
     
     return cell;
 }

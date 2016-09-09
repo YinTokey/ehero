@@ -6,19 +6,19 @@
 //  Copyright © 2016年 ehero. All rights reserved.
 //
 
-#import "EHNewsViewController.h"
+#import "EHChangpingViewController.h"
 #import "EHNewsViewCell.h"
 
 #define CELL_WIDTH01 (SCREEN_WIDTH - 80) / 3
 #define CELL_WIDTH02 70
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
-@interface EHNewsViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface EHChangpingViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic,strong) UICollectionView *collectionView;
 
 @end
 
-@implementation EHNewsViewController
+@implementation EHChangpingViewController
 
 
 

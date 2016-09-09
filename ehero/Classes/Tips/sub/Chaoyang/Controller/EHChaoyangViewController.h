@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EHTwoViewController : UIViewController
+@interface EHChaoyangViewController : UICollectionViewController
 
 @end

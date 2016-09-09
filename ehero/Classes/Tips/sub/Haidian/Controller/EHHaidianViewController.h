@@ -1,5 +1,5 @@
 //
-//  EHAsiaViewCell.h
+//  EHAsiaViewController.h
 //  ehero
 //
 //  Created by Mac on 16/7/16.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EHAsiaViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@interface EHHaidianViewController : UICollectionViewController
 
 @end
