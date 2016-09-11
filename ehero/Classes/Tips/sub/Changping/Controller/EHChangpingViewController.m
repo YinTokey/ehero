@@ -7,7 +7,8 @@
 //
 
 #import "EHChangpingViewController.h"
-#import "EHTipsCell.h"
+#import "EHChangpingTipCell.h"
+#import "EHTipsRecommend.h"
 
 @interface EHChangpingViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
@@ -55,7 +56,12 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    EHTipsCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    EHTipsRecommend *tip = _tipsRecommendArray[indexPath.row];
+    
+    EHChangpingTipCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.nameLabel.text = tip.name;
+    NSString *realUrlStr = [tip.thumb stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+    cell.thumbView.image = [YTNetCommand downloadImageWithImgStr:realUrlStr placeholderImageStr:@"home_placeholder"  imageView:cell.thumbView];
     
     return cell;
 }

@@ -7,7 +7,7 @@
 //
 
 #import "EHXichengViewController.h"
-#import "EHTipsCell.h"
+#import "EHXichengTipCell.h"
 
 @interface EHXichengViewController ()
 
@@ -51,7 +51,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    EHTipsCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    EHXichengTipCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
 
     return cell;
 }

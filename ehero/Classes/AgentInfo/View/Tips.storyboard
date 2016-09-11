@@ -36,7 +36,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="5bO-pb-57o" customClass="EHTipsCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="5bO-pb-57o" customClass="EHDongchengTipCell">
                                 <rect key="frame" x="0.0" y="64" width="103" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -69,8 +69,8 @@
                                     <constraint firstAttribute="bottom" secondItem="Nhb-ni-FOz" secondAttribute="bottom" id="rDA-nD-bFa"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="thumb" destination="Nhb-ni-FOz" id="boN-1s-edt"/>
-                                    <outlet property="title" destination="MPn-tc-8aW" id="hGQ-z8-ndi"/>
+                                    <outlet property="nameLabel" destination="MPn-tc-8aW" id="EBy-3q-LsL"/>
+                                    <outlet property="thumbView" destination="Nhb-ni-FOz" id="Uy7-lU-pKf"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -116,7 +116,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="UXn-SJ-P6T" customClass="EHTipsCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="UXn-SJ-P6T" customClass="EHChaoyangTipCell">
                                 <rect key="frame" x="0.0" y="64" width="103" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -149,8 +149,8 @@
                                     <constraint firstItem="ZzV-Ig-WeD" firstAttribute="top" secondItem="ucQ-IX-8r7" secondAttribute="bottom" constant="3" id="nBH-yk-Z6h"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="thumb" destination="ZzV-Ig-WeD" id="ZT0-7d-IlL"/>
-                                    <outlet property="title" destination="ucQ-IX-8r7" id="O2k-c7-zD8"/>
+                                    <outlet property="nameLabel" destination="ucQ-IX-8r7" id="6fh-ZO-N8b"/>
+                                    <outlet property="thumbView" destination="ZzV-Ig-WeD" id="8lJ-go-Fq1"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -196,7 +196,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="Gp9-rp-Izg" customClass="EHTipsCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="Gp9-rp-Izg" customClass="EHDongchengTipCell">
                                 <rect key="frame" x="0.0" y="64" width="103" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -229,8 +229,8 @@
                                     <constraint firstAttribute="bottom" secondItem="xwc-Ek-b4m" secondAttribute="bottom" id="vzn-qo-9Ze"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="thumb" destination="xwc-Ek-b4m" id="TjB-fr-ar7"/>
-                                    <outlet property="title" destination="3AX-IV-ixs" id="L7j-Wz-dac"/>
+                                    <outlet property="nameLabel" destination="3AX-IV-ixs" id="mTk-Uy-PpW"/>
+                                    <outlet property="thumbView" destination="xwc-Ek-b4m" id="JHf-gf-kQS"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -276,7 +276,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="7aE-sX-p3G" customClass="EHTipsCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="7aE-sX-p3G" customClass="EHXichengTipCell">
                                 <rect key="frame" x="0.0" y="64" width="103" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -308,10 +308,6 @@
                                     <constraint firstAttribute="bottom" secondItem="pOg-WJ-oz7" secondAttribute="bottom" id="bm3-d3-W9u"/>
                                     <constraint firstAttribute="trailing" secondItem="pOg-WJ-oz7" secondAttribute="trailing" id="qHj-yE-LZz"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="thumb" destination="pOg-WJ-oz7" id="fVd-Nl-yGA"/>
-                                    <outlet property="title" destination="R79-XN-bhh" id="B6p-PB-egY"/>
-                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -356,7 +352,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="eDX-rQ-sE6" customClass="EHTipsCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="eDX-rQ-sE6" customClass="EHChangpingTipCell">
                                 <rect key="frame" x="0.0" y="64" width="103" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -389,8 +385,8 @@
                                     <constraint firstAttribute="trailing" secondItem="jJy-Mc-PJ2" secondAttribute="trailing" id="kjc-EV-I0e"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="thumb" destination="zxw-TA-ddZ" id="gdC-D7-Ui3"/>
-                                    <outlet property="title" destination="jJy-Mc-PJ2" id="tjE-ng-lTk"/>
+                                    <outlet property="nameLabel" destination="jJy-Mc-PJ2" id="8zz-AI-eMq"/>
+                                    <outlet property="thumbView" destination="zxw-TA-ddZ" id="k43-Hk-1Kb"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -436,7 +432,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="naM-0O-GUY" customClass="EHTipsCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="naM-0O-GUY" customClass="EHFengtaiCell">
                                 <rect key="frame" x="0.0" y="64" width="103" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -468,10 +464,6 @@
                                     <constraint firstItem="nBn-Ga-uGF" firstAttribute="leading" secondItem="naM-0O-GUY" secondAttribute="leading" id="myH-Wf-Sk1"/>
                                     <constraint firstItem="nBn-Ga-uGF" firstAttribute="top" secondItem="dys-Du-PVD" secondAttribute="bottom" constant="3" id="ola-PO-QBg"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="thumb" destination="nBn-Ga-uGF" id="aeP-G6-RFN"/>
-                                    <outlet property="title" destination="dys-Du-PVD" id="KtV-IE-yuS"/>
-                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

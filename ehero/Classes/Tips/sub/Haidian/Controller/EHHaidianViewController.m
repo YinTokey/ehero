@@ -7,8 +7,9 @@
 //
 
 #import "EHHaidianViewController.h"
-#import "EHTipsCell.h"
 #import "EHTipsRecommend.h"
+#import "EHHaidianTipCell.h"
+
 
 @interface EHHaidianViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
@@ -64,13 +65,14 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    EHTipsCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
     EHTipsRecommend *tip = _tipsRecommendArray[indexPath.row];
-    cell.title.text = tip.name;
-    cell.thumb.image = [YTNetCommand downloadImageWithImgStr:tip.thumb placeholderImageStr:@"home_placeholder"  imageView:cell.thumb];
+  
+    EHHaidianTipCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.nameLabel.text = tip.name;
+   NSString *realUrlStr = [tip.thumb stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+    cell.thumbView.image = [YTNetCommand downloadImageWithImgStr:realUrlStr placeholderImageStr:@"home_placeholder"  imageView:cell.thumbView];
 
-    return cell;
+       return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{

@@ -7,7 +7,9 @@
 //
 
 #import "EHDongchengViewController.h"
-#import "EHTipsCell.h"
+#import "EHDongchengTipCell.h"
+#import "EHTipsRecommend.h"
+
 
 @interface EHDongchengViewController ()
 
@@ -52,7 +54,12 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    EHTipsCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    EHTipsRecommend *tip = _tipsRecommendArray[indexPath.row];
+    
+    EHDongchengTipCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.nameLabel.text = tip.name;
+    NSString *realUrlStr = [tip.thumb stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+    cell.thumbView.image = [YTNetCommand downloadImageWithImgStr:realUrlStr placeholderImageStr:@"home_placeholder"  imageView:cell.thumbView];
     
     return cell;
 }

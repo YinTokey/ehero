@@ -7,7 +7,7 @@
 //
 
 #import "EHFengtaiViewController.h"
-#import "EHTipsCell.h"
+#import "EHFengtaiCell.h"
 
 @interface EHFengtaiViewController ()
 
@@ -51,7 +51,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    EHTipsCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    EHFengtaiCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     return cell;
 }
