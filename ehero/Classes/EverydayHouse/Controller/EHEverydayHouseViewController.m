@@ -50,7 +50,7 @@
     [self.navigationController.navigationBar addSubview:lineView];
     
     [self addGesture];
-    self.tableView.bounces = NO;
+
     
     [YTHttpTool netCheck];
     
