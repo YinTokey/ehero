@@ -9,7 +9,7 @@
 #import "EHAgentInfoTableViewModel.h"
 #import "EHAgentInfoChartCell.h"
 #import "EHAgentInfoCommentCell.h"
-
+#import "EHNoCommentCell.h"
 
 @implementation EHAgentInfoTableViewModel
 
@@ -24,8 +24,13 @@
     }else if (indexPath.section == 2){
         return 30;
     }else{
-        EHCommentInfo *comment = self.commentsArray[indexPath.row];
-        return comment.cellHeight;
+        if (self.commentsArray != nil) {
+            EHCommentInfo *comment = self.commentsArray[indexPath.row];
+            return comment.cellHeight;
+        }else{
+            return 102;
+        }
+        
     }
 }
 
@@ -71,9 +76,14 @@
         EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
         return cell;
     }else{
-        EHCommentDetailCell *cell = [EHCommentDetailCell commentDetailCellCellWithTableView:tableView];
-        cell.commentInfo = self.commentsArray[indexPath.row];
-        return cell;
+        if (self.commentsArray != nil) {
+            EHCommentDetailCell *cell = [EHCommentDetailCell commentDetailCellCellWithTableView:tableView];
+            cell.commentInfo = self.commentsArray[indexPath.row];
+            return cell;
+        }else{
+            EHNoCommentCell *cell = [EHNoCommentCell noCommentCellCellWithTableView:tableView];
+            return cell;
+        }
     }
 }
 
