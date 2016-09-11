@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface EHDongchengViewController : UICollectionViewController
-
+@property (nonatomic,strong) NSMutableArray *tipsRecommendArray;
 @end

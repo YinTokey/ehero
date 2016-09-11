@@ -92,6 +92,7 @@
 		04B0EFEA1D49B79700BE301B /* EHHouseDetailCallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B0EFE81D49B79700BE301B /* EHHouseDetailCallCell.xib */; };
 		04B15C641D85006A0018CB03 /* EHXichengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B15C631D85006A0018CB03 /* EHXichengViewController.m */; };
 		04B15C671D85007F0018CB03 /* EHFengtaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B15C661D85007F0018CB03 /* EHFengtaiViewController.m */; };
+		04B15C6A1D8538150018CB03 /* EHHousesInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B15C691D8538150018CB03 /* EHHousesInfo.m */; };
 		04B4F4371D5ACE4100C6D4F3 /* EHHouseSourcesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4F4361D5ACE4100C6D4F3 /* EHHouseSourcesCell.m */; };
 		04B4F4391D5ACE6100C6D4F3 /* EHHouseSourcesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B4F4381D5ACE6100C6D4F3 /* EHHouseSourcesCell.xib */; };
 		04B4F43C1D5AF1E100C6D4F3 /* UIButton+GetWidth.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4F43B1D5AF1E100C6D4F3 /* UIButton+GetWidth.m */; };
@@ -337,6 +338,8 @@
 		04B15C631D85006A0018CB03 /* EHXichengViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHXichengViewController.m; sourceTree = "<group>"; };
 		04B15C651D85007F0018CB03 /* EHFengtaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFengtaiViewController.h; sourceTree = "<group>"; };
 		04B15C661D85007F0018CB03 /* EHFengtaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFengtaiViewController.m; sourceTree = "<group>"; };
+		04B15C681D8538150018CB03 /* EHHousesInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHousesInfo.h; path = ehero/Classes/Tips/sub/Fengtai/Controller/EHHousesInfo.h; sourceTree = SOURCE_ROOT; };
+		04B15C691D8538150018CB03 /* EHHousesInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHHousesInfo.m; path = ehero/Classes/Tips/sub/Fengtai/Controller/EHHousesInfo.m; sourceTree = SOURCE_ROOT; };
 		04B4F4351D5ACE4100C6D4F3 /* EHHouseSourcesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHouseSourcesCell.h; path = ehero/Classes/Search/View/EHHouseSourcesCell.h; sourceTree = SOURCE_ROOT; };
 		04B4F4361D5ACE4100C6D4F3 /* EHHouseSourcesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHHouseSourcesCell.m; path = ehero/Classes/Search/View/EHHouseSourcesCell.m; sourceTree = SOURCE_ROOT; };
 		04B4F4381D5ACE6100C6D4F3 /* EHHouseSourcesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHHouseSourcesCell.xib; path = ehero/Classes/Search/View/EHHouseSourcesCell.xib; sourceTree = SOURCE_ROOT; };
@@ -783,6 +786,8 @@
 				049ADF171D64796100C54F4D /* EHDistricts.m */,
 				04A991EE1D682C8C00053E29 /* EHHouseSourcesMessage.h */,
 				04A991EF1D682C8C00053E29 /* EHHouseSourcesMessage.m */,
+				04B15C681D8538150018CB03 /* EHHousesInfo.h */,
+				04B15C691D8538150018CB03 /* EHHousesInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2046,6 +2051,7 @@
 				04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */,
 				046738A01D72D80600DDE9BD /* EHCollectedArticleViewController.m in Sources */,
 				042558FE1D8260FE009BED24 /* EHNewsViewCell.m in Sources */,
+				04B15C6A1D8538150018CB03 /* EHHousesInfo.m in Sources */,
 				042559011D8260FE009BED24 /* EHHaidianViewController.m in Sources */,
 				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
 				048E90761D476B46005B19BD /* EHWechatGroupDetailViewController.m in Sources */,

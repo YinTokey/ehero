@@ -16,7 +16,8 @@
 #import "YTHttpTool.h"
 #import "SDAutoLayout.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-
+#import "YTNetCommand.h"
+#import "UIImageView+WebCache.h"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
@@ -35,6 +36,8 @@
 #define slidesUrlStr @"http://ehero.cc/api/v1/users/slides"
 #define TipsRecommendUrlStr @"http://ehero.cc/api/v1/tips/recommend"
 #define averageUrlStr @"http://ehero.cc/api/v1/agents/average"
+#define houseSourcesUrlStr @"http://ehero.cc/api/v1/houses/recommend"
+
 
 
 #define QQAppId @"1105635926"

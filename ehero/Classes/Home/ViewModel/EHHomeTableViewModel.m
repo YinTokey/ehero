@@ -161,6 +161,7 @@
     //标题
     EHTipsRecommend *tip = self.tipsRecommendArray[index];
     bannerView.titleLabel.text = tip.name;
+    
     return bannerView;
 }
 

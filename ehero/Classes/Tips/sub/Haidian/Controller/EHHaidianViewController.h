@@ -10,4 +10,8 @@
 
 @interface EHHaidianViewController : UICollectionViewController
 
+@property (nonatomic,strong) NSMutableArray *tipsRecommendArray;
+
+@property (nonatomic,strong) NSMutableArray *imageArray;
+
 @end

@@ -10,5 +10,5 @@
 
 
 @interface EHChangpingViewController : UICollectionViewController
-
+@property (nonatomic,strong) NSMutableArray *tipsRecommendArray;
 @end

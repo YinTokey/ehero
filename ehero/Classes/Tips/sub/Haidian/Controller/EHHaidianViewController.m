@@ -7,7 +7,9 @@
 //
 
 #import "EHHaidianViewController.h"
-#import "EHTipViewCell.h"
+#import "EHTipsCell.h"
+#import "EHTipsRecommend.h"
+
 @interface EHHaidianViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic,strong) NSMutableArray *tipsArray;
@@ -23,8 +25,14 @@ static NSString * const reuseIdentifier = @"Cell";
 
     self.collectionView.backgroundColor = RGB(238, 245, 250);
     self.collectionView.alwaysBounceVertical = YES ;
+    
+
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [self.collectionView reloadData];
+
+}
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -44,27 +52,31 @@ static NSString * const reuseIdentifier = @"Cell";
     return UIEdgeInsetsMake(10, (ScreenWidth - 2 * cellWidth)/3, 15, (ScreenWidth - 2 * cellWidth)/3);
 }
 
-//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
-//    
-//    
-//}
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 5;
-}
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of items
-    return 2;
+    
+    
+    return _tipsRecommendArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    EHTipViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    EHTipsCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
+    EHTipsRecommend *tip = _tipsRecommendArray[indexPath.row];
+    cell.title.text = tip.name;
+    cell.thumb.image = [YTNetCommand downloadImageWithImgStr:tip.thumb placeholderImageStr:@"home_placeholder"  imageView:cell.thumb];
+
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+
+    [self.collectionView reloadData];
+    NSLog(@"gsa");
 }
 
 

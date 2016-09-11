@@ -46,19 +46,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         EHHouseDetailCell *cell = [EHHouseDetailCell houseDetailCellWithTableView:tableView];
-//        cell.blueView1.sd_layout
-//        .widthRatioToView (self.view,0.28125)
-//        .heightRatioToView (self.view,0.1056)
-//        .topSpaceToView (cell.grayView,5)
-//        .leftSpaceToView (cell.grayView,8);
-//        
-//        cell.blueView2.sd_layout
-//        .widthRatioToView (self.view,0.28125)
-//        .heightRatioToView (self.view,0.1056);
-//        
-//        cell.blueView3.sd_layout
-//        .widthRatioToView (self.view,0.28125)
-//        .heightRatioToView (self.view,0.1056);
         
         
         return cell;

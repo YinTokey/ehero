@@ -54,7 +54,7 @@
     
     [self getRegionInfo];
     
-    
+    [self getHouseResources];
     
 }
 
@@ -130,6 +130,21 @@
         canClickRegionBtn = YES;
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
+    }];
+
+}
+
+#pragma mark - get house resources
+- (void)getHouseResources{
+    [YTHttpTool get:houseSourcesUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
+        NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:nil] ;
+        NSDictionary *dic = [responseArray firstObject];
+        NSArray *HousesArray = [dic objectForKey:@"houses"];
+        NSDictionary *Housedic  = [HousesArray firstObject];
+        // NSLog(@"%@", [a class]);
+
+    } failure:^(NSError *error) {
+        NSLog(@"failed");
     }];
 
 }

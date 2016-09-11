@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface EHFengtaiViewController : UICollectionViewController
-
+@property (nonatomic,strong) NSMutableArray *tipsRecommendArray;
 @end

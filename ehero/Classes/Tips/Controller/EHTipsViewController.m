@@ -15,6 +15,8 @@
 #import "EHDongchengViewController.h"
 #import "EHXichengViewController.h"
 #import "EHFengtaiViewController.h"
+#import "EHTipsRecommend.h"
+
 
 @interface EHTipsViewController ()
 
@@ -29,8 +31,14 @@
     [self setupChildController];
     [self setNavBottomLine];
     
-    NSLog(@"%d",self.tipsRecommendArray.count);
+    
 }
+
+- (void)assignTips{
+    
+
+}
+
 
 - (void)setupChildController{
     
@@ -48,15 +56,47 @@
     five.title = @"昌平";
     EHFengtaiViewController *six = [sb instantiateViewControllerWithIdentifier:@"FengtaiViewController"];
     six.title = @"丰台";
+  
+    
+    //初始化数组
+    one.tipsRecommendArray = [NSMutableArray array];
+    two.tipsRecommendArray = [NSMutableArray array];
+    three.tipsRecommendArray = [NSMutableArray array];
+    four.tipsRecommendArray = [NSMutableArray array];
+    five.tipsRecommendArray = [NSMutableArray array];
+    six.tipsRecommendArray = [NSMutableArray array];
+    //分配锦囊
+    for (EHTipsRecommend *tip in self.tipsRecommendArray) {
+        if ([tip.district isEqualToString:one.title]) {
+            [one.tipsRecommendArray addObject:tip];
+        }
+        if ([tip.district isEqualToString:two.title]) {
+            [two.tipsRecommendArray addObject:tip];
+        }
+        if ([tip.district isEqualToString:three.title]) {
+            [three.tipsRecommendArray addObject:tip];
+        }
+        if ([tip.district isEqualToString:four.title]) {
+            [four.tipsRecommendArray addObject:tip];
+        }
+        if ([tip.district isEqualToString:five.title]) {
+            [five.tipsRecommendArray addObject:tip];
+        }
+        if ([tip.district isEqualToString:six.title]) {
+            [six.tipsRecommendArray addObject:tip];
+        }
+        
+    }
     
     NSArray *subViewControllers = @[one,two,three,four,five,six];
     DCNavTabBarController *tabBarVC = [[DCNavTabBarController alloc]initWithSubViewControllers:subViewControllers];
     tabBarVC.view.frame = CGRectMake(0, 55, self.view.frame.size.width, self.view.frame.size.height - 75);
     self.view.frame = CGRectMake(0, 55, self.view.frame.size.width, self.view.frame.size.height);
     
-    
     [self.view addSubview:tabBarVC.view];
     [self addChildViewController:tabBarVC];
+
+
 }
 
 - (void)setNavBottomLine{

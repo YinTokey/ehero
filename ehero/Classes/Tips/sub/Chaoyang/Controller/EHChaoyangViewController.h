@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface EHChaoyangViewController : UICollectionViewController
-
+@property (nonatomic,strong) NSMutableArray *tipsRecommendArray;
 @end
