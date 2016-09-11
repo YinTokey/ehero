@@ -9,7 +9,7 @@
 #import "EHDongchengViewController.h"
 #import "EHDongchengTipCell.h"
 #import "EHTipsRecommend.h"
-
+#import "EHTipsReaderViewController.h"
 
 @interface EHDongchengViewController ()
 
@@ -62,6 +62,15 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.thumbView.image = [YTNetCommand downloadImageWithImgStr:realUrlStr placeholderImageStr:@"home_placeholder"  imageView:cell.thumbView];
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    EHTipsRecommend *tip = _tipsRecommendArray[indexPath.row];
+    EHTipsReaderViewController *tipsReaderVC = [sb instantiateViewControllerWithIdentifier:@"TipsReaderViewController"];
+    tipsReaderVC.tipsRecomnend = tip;
+    [self.navigationController pushViewController:tipsReaderVC animated:YES];
+
 }
 
 @end

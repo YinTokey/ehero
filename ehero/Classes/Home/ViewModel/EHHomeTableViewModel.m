@@ -116,6 +116,10 @@
 
 - (void)moreClick:(UITableViewCell *)cell{
     EHTipsViewController  *tipsViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"TipsViewController"];
+    
+    tipsViewController.tipsRecommendArray = [NSMutableArray array];
+    tipsViewController.tipsRecommendArray = _tipsRecommendArray;
+    
     [self.superVC.navigationController pushViewController:tipsViewController animated:YES];
 }
 

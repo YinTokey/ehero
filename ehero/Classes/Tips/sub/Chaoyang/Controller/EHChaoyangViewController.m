@@ -9,6 +9,7 @@
 #import "EHChaoyangViewController.h"
 #import "EHChaoyangTipCell.h"
 #import "EHTipsRecommend.h"
+#import "EHTipsReaderViewController.h"
 @interface EHChaoyangViewController ()
 
 @end
@@ -60,5 +61,13 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    EHTipsRecommend *tip = _tipsRecommendArray[indexPath.row];
+    EHTipsReaderViewController *tipsReaderVC = [sb instantiateViewControllerWithIdentifier:@"TipsReaderViewController"];
+    tipsReaderVC.tipsRecomnend = tip;
+    [self.navigationController pushViewController:tipsReaderVC animated:YES];
+    
+}
 
 @end

@@ -63,7 +63,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     major = @"sale";
-//    _homeTableViewModel = [[EHHomeTableViewModel alloc]init];
   
     [self initViewModels];
     [self getSlides];
@@ -87,18 +86,11 @@
     _homeTableViewModel.super = self;
     _homeTableViewModel.superVC = self;
     _homeTableViewModel.tipsRecommendArray = [NSMutableArray array];
-//    _homeTableViewModel.imageUrlStrArray = [NSMutableArray array];
-    
-    
-    //[_homeTableViewModel getTipsInfo];
-//    UIImage *image0 = [UIImage imageNamed:@"community1"];
-//    [_homeTableViewModel.imageArray  addObject:image0];
-  //  [_homeTableViewModel getTipsInfo];
+
     
     _homeNetViewModel = [[EHHomeNetViewModel alloc]init];
 
-//    self.tableView.dataSource = _homeTableViewModel;
-//    self.tableView.delegate = _homeTableViewModel;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{

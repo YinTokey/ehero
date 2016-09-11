@@ -8,7 +8,7 @@
 
 #import "EHXichengViewController.h"
 #import "EHXichengTipCell.h"
-
+#import "EHTipsReaderViewController.h"
 @interface EHXichengViewController ()
 
 @end
@@ -54,6 +54,15 @@ static NSString * const reuseIdentifier = @"Cell";
     EHXichengTipCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
 
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    EHTipsRecommend *tip = _tipsRecommendArray[indexPath.row];
+    EHTipsReaderViewController *tipsReaderVC = [sb instantiateViewControllerWithIdentifier:@"TipsReaderViewController"];
+    tipsReaderVC.tipsRecomnend = tip;
+    [self.navigationController pushViewController:tipsReaderVC animated:YES];
+
 }
 
 @end

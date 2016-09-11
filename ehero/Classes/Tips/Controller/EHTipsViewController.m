@@ -30,7 +30,8 @@
 
     [self setupChildController];
     [self setNavBottomLine];
-    
+    //跳转到下一界面的返回按钮样式
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
     
 }
 

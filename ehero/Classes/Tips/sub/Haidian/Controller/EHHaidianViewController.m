@@ -9,7 +9,7 @@
 #import "EHHaidianViewController.h"
 #import "EHTipsRecommend.h"
 #import "EHHaidianTipCell.h"
-
+#import "EHTipsReaderViewController.h"
 
 @interface EHHaidianViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
@@ -76,9 +76,11 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-
-    [self.collectionView reloadData];
-    NSLog(@"gsa");
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    EHTipsRecommend *tip = _tipsRecommendArray[indexPath.row];
+    EHTipsReaderViewController *tipsReaderVC = [sb instantiateViewControllerWithIdentifier:@"TipsReaderViewController"];
+    tipsReaderVC.tipsRecomnend = tip;
+    [self.navigationController pushViewController:tipsReaderVC animated:YES];
 }
 
 
