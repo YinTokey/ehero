@@ -1,18 +1,19 @@
 //
-//  EHTwoViewController.m
-//  ehero
+//  EHFengtaiViewController.m
+//  易房好介
 //
-//  Created by Mac on 16/7/12.
+//  Created by Mac on 16/9/11.
 //  Copyright © 2016年 ehero. All rights reserved.
 //
 
-#import "EHChaoyangViewController.h"
+#import "EHFengtaiViewController.h"
 #import "EHTipsCell.h"
-@interface EHChaoyangViewController ()
+
+@interface EHFengtaiViewController ()
 
 @end
 
-@implementation EHChaoyangViewController
+@implementation EHFengtaiViewController
 
 static NSString * const reuseIdentifier = @"Cell";
 
@@ -21,10 +22,10 @@ static NSString * const reuseIdentifier = @"Cell";
     
     self.collectionView.backgroundColor = RGB(238, 245, 250);
     self.collectionView.alwaysBounceVertical = YES ;
-
-    
-    // Do any additional setup after loading the view.
 }
+
+
+#pragma mark <UICollectionViewDataSource>
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;{
     
@@ -64,6 +65,5 @@ static NSString * const reuseIdentifier = @"Cell";
     
     return cell;
 }
-
 
 @end

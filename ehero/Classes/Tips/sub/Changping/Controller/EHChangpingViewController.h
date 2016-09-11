@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface EHChangpingViewController : UIViewController
+@interface EHChangpingViewController : UICollectionViewController
 
 @end
