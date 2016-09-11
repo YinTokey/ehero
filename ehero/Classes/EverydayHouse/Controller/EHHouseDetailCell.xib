@@ -313,6 +313,6 @@
     <resources>
         <image name="Line1" width="713" height="1"/>
         <image name="houseDetail_btn" width="220" height="151"/>
-        <image name="house_detail_example" width="2250" height="1200"/>
+        <image name="house_detail_example" width="29" height="16"/>
     </resources>
 </document>

@@ -16,13 +16,15 @@
 #import "WSDropMenuView.h"
 #import "EHHouseSourcesCell.h"
 #import "EHHouseSourcesMessage.h"
+#import "EHHousesInfo.h"
 
-@interface EHEverydayHouseViewController ()<UITextFieldDelegate,UIGestureRecognizerDelegate,UITextViewDelegate, WSDropMenuViewDataSource,WSDropMenuViewDelegate,houseSourcesDelegate>
+
+@interface EHEverydayHouseViewController ()<UITextFieldDelegate,UIGestureRecognizerDelegate, WSDropMenuViewDataSource,WSDropMenuViewDelegate,houseSourcesDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *regionBtn;
 - (IBAction)regionClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *regionBarButtom;
 @property (nonatomic,strong) NSArray *districtsObjArray;
-
+@property (nonatomic,strong) EHHousesInfo *houseInfo;
 
 @end
 
@@ -137,12 +139,17 @@
 #pragma mark - get house resources
 - (void)getHouseResources{
     [YTHttpTool get:houseSourcesUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
+        //数据处理
         NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:nil] ;
         NSDictionary *dic = [responseArray firstObject];
         NSArray *HousesArray = [dic objectForKey:@"houses"];
         NSDictionary *Housedic  = [HousesArray firstObject];
-        // NSLog(@"%@", [a class]);
-
+        EHHousesInfo *houseInfo = [EHHousesInfo mj_objectWithKeyValues:Housedic];
+        houseInfo.descriptions = [Housedic objectForKey:@"description"];
+        houseInfo.name = [dic objectForKey:@"name"];
+        _houseInfo = houseInfo;
+       // NSLog(@"house %@",_houseInfo.title);
+        [self.tableView reloadData];
     } failure:^(NSError *error) {
         NSLog(@"failed");
     }];
@@ -155,14 +162,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
 
-    return 3;
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (extendCellFlag ) {
-      return 360;
-    }
-    return 300;
+    return _houseInfo.cellHeight;
   
 }
 
@@ -170,16 +174,9 @@
 
     EHHouseSourcesCell *cell = [EHHouseSourcesCell houseSourcesCellWithTableView:tableView];
     
-    cell.textView.delegate = self;
     cell.delegate = self;
     [cell setClickEvent];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    if (extendCellFlag) {
-       [cell.extendBtn setBackgroundImage:[UIImage imageNamed:@"houseDetail_less"] forState:UIControlStateNormal];
-    }else{
-       [cell.extendBtn setBackgroundImage:[UIImage imageNamed:@"houseDetail_more"] forState:UIControlStateNormal];
-    }
-
+    cell.houseInfo = _houseInfo;
     return cell;
 }
 

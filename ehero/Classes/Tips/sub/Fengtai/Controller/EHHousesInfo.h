@@ -24,7 +24,7 @@
 
 @property(nonatomic,copy)NSString *created_at;
 
-@property(nonatomic,copy)NSString *description;
+@property(nonatomic,copy)NSString *descriptions;
 
 @property(nonatomic,copy)NSString *floor;
 
@@ -47,5 +47,9 @@
 @property(nonatomic,copy)NSString *unit_price;
 
 @property(nonatomic,copy)NSString *updated_at;
+
+@property(nonatomic,copy)NSString *name;
+
+@property(nonatomic,assign)CGFloat cellHeight;
 
 @end

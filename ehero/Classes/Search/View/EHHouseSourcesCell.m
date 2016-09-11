@@ -18,52 +18,6 @@
 
 @implementation EHHouseSourcesCell
 
-+ (CGFloat)cellDefaultHeight:(EHHouseSourcesMessage *)message
-{
-    //默认cell高度
-    return 300.0;
-}
-
-+ (CGFloat)cellMoreHeight:(EHHouseSourcesMessage *)message
-{
-    //展开后得高度(计算出文本内容的高度+固定控件的高度)
-    NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:16]};
-    NSStringDrawingOptions option = (NSStringDrawingOptions)(NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading);
-    CGSize size = [message.textContent boundingRectWithSize:CGSizeMake(ScreenWidth - 30, 100000) options:option attributes:attribute context:nil].size;;
-    return size.height + 50;
-}
-
-//- (void)layoutSubviews
-//{
-//    [super layoutSubviews];
-//    
-//    _textView.text = self.message.textContent;
-//    if (self.message.isShowMoreText)
-//    {
-//        ///计算文本高度
-//        NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:16]};
-//        NSStringDrawingOptions option = (NSStringDrawingOptions)(NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading);
-//        CGSize size = [self.message.textContent boundingRectWithSize:CGSizeMake(ScreenWidth - 30, 100000) options:option attributes:attribute context:nil].size;
-//        [self.textView setFrame:CGRectMake(15, 30, ScreenWidth - 30, size.height)];
-//    }
-//    else
-//    {
-//        [self.textView setFrame:CGRectMake(15, 30, ScreenWidth - 30, 35)];
-//    }
-//    
-//}
-
-- (IBAction)extendBtnClick:(id)sender {
-    if ([self.delegate respondsToSelector:@selector(extendBtnClick:)]) {
-//        self.message.isShowMoreText =  !self.message.isShowMoreText;
-//        if (self.showMoreTextBlock)
-//        {
-//            self.showMoreTextBlock(self);
-//        }
-        [self.delegate extendBtnClick:self];
-    }
-}
-
 
 
 
@@ -90,4 +44,22 @@
     
 }
 
+- (void)setHouseInfo:(EHHousesInfo *)houseInfo{
+    
+    _houseInfo = houseInfo;
+    
+    NSString *name = [NSString stringWithFormat:@"经纪人 %@",_houseInfo.name];
+    self.name.text = name;
+    NSString *updated_at = [_houseInfo.updated_at substringWithRange:NSMakeRange(0, 10)];
+    self.updated_at.text = updated_at;
+    self.price.text = _houseInfo.price;
+    self.titleLabel.text =  _houseInfo.title;
+    self.desciptionLabel.text = _houseInfo.descriptions;
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+
+    //文字高度计算
+    CGRect rect = [self.desciptionLabel.text boundingRectWithSize:CGSizeMake(300,9999) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil];
+
+    houseInfo.cellHeight = rect.size.height + 210;
+}
 @end
