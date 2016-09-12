@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EHFengtaiCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *thumbView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end

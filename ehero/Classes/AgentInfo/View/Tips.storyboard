@@ -308,6 +308,10 @@
                                     <constraint firstAttribute="bottom" secondItem="pOg-WJ-oz7" secondAttribute="bottom" id="bm3-d3-W9u"/>
                                     <constraint firstAttribute="trailing" secondItem="pOg-WJ-oz7" secondAttribute="trailing" id="qHj-yE-LZz"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="nameLabel" destination="R79-XN-bhh" id="Cma-0q-B7o"/>
+                                    <outlet property="thumbView" destination="pOg-WJ-oz7" id="tJz-Qz-5yn"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -464,6 +468,10 @@
                                     <constraint firstItem="nBn-Ga-uGF" firstAttribute="leading" secondItem="naM-0O-GUY" secondAttribute="leading" id="myH-Wf-Sk1"/>
                                     <constraint firstItem="nBn-Ga-uGF" firstAttribute="top" secondItem="dys-Du-PVD" secondAttribute="bottom" constant="3" id="ola-PO-QBg"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="nameLabel" destination="dys-Du-PVD" id="lnP-rL-hST"/>
+                                    <outlet property="thumbView" destination="nBn-Ga-uGF" id="PHy-JG-vUc"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

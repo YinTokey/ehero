@@ -27,16 +27,14 @@ static NSString * const reuseIdentifier = @"Cell";
     self.collectionView.backgroundColor = RGB(238, 245, 250);
     self.collectionView.alwaysBounceVertical = YES ;
     
-    [RACObserve(self,tipsRecommendArray )subscribeNext:^(id x) {
-        [self.collectionView reloadData];
-    }];
+    self.collectionView.frame =  CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 55);
 
 }
-
-- (void)viewWillAppear:(BOOL)animated{
-    [self.collectionView reloadData];
-
-}
+//
+//- (void)viewWillAppear:(BOOL)animated{
+//    [self.collectionView reloadData];
+//
+//}
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -56,13 +54,8 @@ static NSString * const reuseIdentifier = @"Cell";
     return UIEdgeInsetsMake(10, (ScreenWidth - 2 * cellWidth)/3, 15, (ScreenWidth - 2 * cellWidth)/3);
 }
 
-
-
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of items
-    
-    
     return _tipsRecommendArray.count;
 }
 

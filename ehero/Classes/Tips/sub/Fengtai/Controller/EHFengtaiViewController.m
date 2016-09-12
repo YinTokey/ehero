@@ -8,6 +8,8 @@
 
 #import "EHFengtaiViewController.h"
 #import "EHFengtaiCell.h"
+#import "EHTipsRecommend.h"
+
 
 @interface EHFengtaiViewController ()
 
@@ -52,7 +54,11 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     EHFengtaiCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
+    EHTipsRecommend *tip = _tipsRecommendArray[indexPath.row];
+
+    cell.nameLabel.text = tip.name;
+    NSString *realUrlStr = [tip.thumb stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+    cell.thumbView.image = [YTNetCommand downloadImageWithImgStr:realUrlStr placeholderImageStr:@"home_placeholder"  imageView:cell.thumbView];
     return cell;
 }
 

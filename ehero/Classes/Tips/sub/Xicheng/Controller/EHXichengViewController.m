@@ -53,6 +53,13 @@ static NSString * const reuseIdentifier = @"Cell";
     
     EHXichengTipCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
 
+    EHTipsRecommend *tip = _tipsRecommendArray[indexPath.row];
+
+    cell.nameLabel.text = tip.name;
+    NSString *realUrlStr = [tip.thumb stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+    cell.thumbView.image = [YTNetCommand downloadImageWithImgStr:realUrlStr placeholderImageStr:@"home_placeholder"  imageView:cell.thumbView];
+    
+    
     return cell;
 }
 

@@ -49,7 +49,7 @@
     [self setNavBottomLine];
     //跳转到下一界面的返回按钮样式
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
-  //  [self setupChildController];
+    [self setupChildController];
     [self getAllTips];
     
 }
@@ -58,8 +58,8 @@
     [LBProgressHUD showHUDto:self.view animated:NO];
     [YTHttpTool get:allTipsUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
         self.allTipsArray = [EHTipsRecommend mj_objectArrayWithKeyValuesArray:responseObj];
-      //  [self assignTips];
-        [self setupChildController];
+        [self assignTips];
+      //  [self setupChildController];
         [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
     } failure:^(NSError *error) {
         NSLog(@"fail");
@@ -72,27 +72,30 @@
     for (EHTipsRecommend *tip in self.allTipsArray) {
         if ([tip.district isEqualToString:_HaidianVC.title]) {
             [self.HaidianVC.tipsRecommendArray addObject:tip];
+            [self.HaidianVC.collectionView reloadData];
         }
         if ([tip.district isEqualToString:_ChaoyangVC.title]) {
             [self.ChaoyangVC.tipsRecommendArray addObject:tip];
+            [self.ChaoyangVC.collectionView reloadData];
         }
         if ([tip.district isEqualToString:_DongchengVC.title]) {
             [self.DongchengVC.tipsRecommendArray addObject:tip];
+            [self.DongchengVC.collectionView reloadData];
         }
         if ([tip.district isEqualToString:_XichengVC.title]) {
             [self.XichengVC.tipsRecommendArray addObject:tip];
+            [self.XichengVC.collectionView reloadData];
         }
         if ([tip.district isEqualToString:_ChangpingVC.title]) {
             [self.ChangpingVC.tipsRecommendArray addObject:tip];
+            [self.ChangpingVC.collectionView reloadData];
         }
         if ([tip.district isEqualToString:_FengtaiVC.title]) {
             [self.FengtaiVC.tipsRecommendArray addObject:tip];
+            [self.FengtaiVC.collectionView reloadData];
         }
         
     }
-
-
-
 
 }
 
@@ -123,36 +126,35 @@
     _ChaoyangVC.tipsRecommendArray = [NSMutableArray array];
     _ChangpingVC.tipsRecommendArray = [NSMutableArray array];
     _FengtaiVC.tipsRecommendArray = [NSMutableArray array];
-    
-    //分配锦囊
-    for (EHTipsRecommend *tip in self.allTipsArray) {
-        if ([tip.district isEqualToString:_HaidianVC.title]) {
-            [self.HaidianVC.tipsRecommendArray addObject:tip];
-        }
-        if ([tip.district isEqualToString:_ChaoyangVC.title]) {
-            [self.ChaoyangVC.tipsRecommendArray addObject:tip];
-        }
-        if ([tip.district isEqualToString:_DongchengVC.title]) {
-            [self.DongchengVC.tipsRecommendArray addObject:tip];
-        }
-        if ([tip.district isEqualToString:_XichengVC.title]) {
-            [self.XichengVC.tipsRecommendArray addObject:tip];
-        }
-        if ([tip.district isEqualToString:_ChangpingVC.title]) {
-            [self.ChangpingVC.tipsRecommendArray addObject:tip];
-        }
-        if ([tip.district isEqualToString:_FengtaiVC.title]) {
-            [self.FengtaiVC.tipsRecommendArray addObject:tip];
-        }
-        
-    }
+//    
+//    //分配锦囊
+//    for (EHTipsRecommend *tip in self.allTipsArray) {
+//        if ([tip.district isEqualToString:_HaidianVC.title]) {
+//            [self.HaidianVC.tipsRecommendArray addObject:tip];
+//        }
+//        if ([tip.district isEqualToString:_ChaoyangVC.title]) {
+//            [self.ChaoyangVC.tipsRecommendArray addObject:tip];
+//        }
+//        if ([tip.district isEqualToString:_DongchengVC.title]) {
+//            [self.DongchengVC.tipsRecommendArray addObject:tip];
+//        }
+//        if ([tip.district isEqualToString:_XichengVC.title]) {
+//            [self.XichengVC.tipsRecommendArray addObject:tip];
+//        }
+//        if ([tip.district isEqualToString:_ChangpingVC.title]) {
+//            [self.ChangpingVC.tipsRecommendArray addObject:tip];
+//        }
+//        if ([tip.district isEqualToString:_FengtaiVC.title]) {
+//            [self.FengtaiVC.tipsRecommendArray addObject:tip];
+//        }
+//        
+//    }
 
     
     
     NSArray *subViewControllers = @[_HaidianVC,_ChaoyangVC,_DongchengVC,_XichengVC,_ChangpingVC,_FengtaiVC];
     DCNavTabBarController *tabBarVC = [[DCNavTabBarController alloc]initWithSubViewControllers:subViewControllers];
-    tabBarVC.view.frame = CGRectMake(0, 55, self.view.frame.size.width, self.view.frame.size.height - 75);
-  // self.view.frame = CGRectMake(0, 55, self.view.frame.size.width, self.view.frame.size.height);
+    tabBarVC.view.frame = CGRectMake(0, 55, self.view.frame.size.width, self.view.frame.size.height );
     
     [self.view addSubview:tabBarVC.view];
     [self addChildViewController:tabBarVC];
