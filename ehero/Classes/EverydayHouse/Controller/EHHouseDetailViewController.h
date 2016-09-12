@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EHHousesInfo.h"
+
 
 @interface EHHouseDetailViewController : UITableViewController
+
+@property (nonatomic,strong) EHHousesInfo *houseInfo;
 
 @end

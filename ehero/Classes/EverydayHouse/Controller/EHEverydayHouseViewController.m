@@ -17,7 +17,7 @@
 #import "EHHouseSourcesCell.h"
 #import "EHHouseSourcesMessage.h"
 #import "EHHousesInfo.h"
-
+#import "EHHouseSummaryCell.h"
 
 @interface EHEverydayHouseViewController ()<UITextFieldDelegate,UIGestureRecognizerDelegate, WSDropMenuViewDataSource,WSDropMenuViewDelegate,houseSourcesDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *regionBtn;
@@ -25,6 +25,9 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *regionBarButtom;
 @property (nonatomic,strong) NSArray *districtsObjArray;
 @property (nonatomic,strong) EHHousesInfo *houseInfo;
+
+@property (nonatomic,strong) NSMutableArray *houseInfoArray;
+
 
 @end
 
@@ -38,6 +41,15 @@
     BOOL extendCellFlag;
     NSIndexPath *selIndexPath;
 }
+
+- (NSMutableArray *)houseInfoArray{
+    if (_houseInfoArray == nil) {
+        _houseInfoArray = [NSMutableArray array];
+    }
+    return  _houseInfoArray;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -57,6 +69,10 @@
     [self getRegionInfo];
     
     [self getHouseResources];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //跳转到下一界面的返回按钮样式
+    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
+
     
 }
 
@@ -110,7 +126,6 @@
     dropMenu.dataSource = self;
     dropMenu.delegate = self;
     [self.view addSubview:dropMenu];
-   // UIBarButtonItem *menuBarBtn = [[UIBarButtonItem alloc] initWithCustomView:dropMenu];
     self.navigationItem.leftBarButtonItems = @[negativeSpacer1,backItem,_regionBarButtom];
     
 }
@@ -142,13 +157,15 @@
         //数据处理
         NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:nil] ;
         NSDictionary *dic = [responseArray firstObject];
-        NSArray *HousesArray = [dic objectForKey:@"houses"];
-        NSDictionary *Housedic  = [HousesArray firstObject];
-        EHHousesInfo *houseInfo = [EHHousesInfo mj_objectWithKeyValues:Housedic];
-        houseInfo.descriptions = [Housedic objectForKey:@"description"];
-        houseInfo.name = [dic objectForKey:@"name"];
-        _houseInfo = houseInfo;
-       // NSLog(@"house %@",_houseInfo.title);
+        NSArray *houseArr = [dic objectForKey:@"houses"];//里面存字典，不是对象
+        //后面是对于一些细节的处理
+        for (NSDictionary *houseDic in houseArr){
+            EHHousesInfo *houseInfo = [EHHousesInfo mj_objectWithKeyValues:houseDic];
+            houseInfo.name = [dic objectForKey:@"name"];
+            houseInfo.descriptions = [houseDic objectForKey:@"description"];
+            [self.houseInfoArray addObject:houseInfo];
+        }
+
         [self.tableView reloadData];
     } failure:^(NSError *error) {
         NSLog(@"failed");
@@ -162,29 +179,32 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
 
-    return 1;
+    return _houseInfoArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return _houseInfo.cellHeight;
-  
+
+    return 73;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    EHHouseSourcesCell *cell = [EHHouseSourcesCell houseSourcesCellWithTableView:tableView];
+    EHHouseSummaryCell *cell = [EHHouseSummaryCell houseSummaryCellWithTableView:tableView];
+    cell.houseInfo = _houseInfoArray[indexPath.row];
     
-    cell.delegate = self;
-    [cell setClickEvent];
-    cell.houseInfo = _houseInfo;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    EHHouseDetailViewController *VC = [[self storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
+    VC.houseInfo = _houseInfoArray[indexPath.row];
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 
 - (IBAction)regionClick:(id)sender {
     if (canClickRegionBtn == YES) {
         [dropMenu clickAction];
-        
     }
 }
 

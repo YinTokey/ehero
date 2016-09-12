@@ -150,7 +150,7 @@
     </objects>
     <resources>
         <image name="Line1" width="713" height="1"/>
-        <image name="agent" width="150" height="200"/>
+        <image name="agent" width="29" height="16"/>
         <image name="houseDetail_more" width="29" height="16"/>
     </resources>
 </document>

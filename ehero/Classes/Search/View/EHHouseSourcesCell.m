@@ -18,7 +18,18 @@
 
 @implementation EHHouseSourcesCell
 
+- (void)drawRect:(CGRect)rect
+{
 
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        //上分割线，
+        CGContextSetStrokeColorWithColor(context,RGB(241, 243, 245).CGColor);
+        CGRect topRect = CGRectMake(0, 0, rect.size.width , 2);
+        CGContextStrokeRect(context,topRect);
+        CGContextSetFillColorWithColor(context, RGB(241, 243, 245).CGColor);
+        CGContextFillRect(context,topRect);
+ 
+}
 
 
 + (instancetype)houseSourcesCellWithTableView:(UITableView *)tableView{
@@ -28,7 +39,7 @@
     EHHouseSourcesCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHHouseSourcesCell" owner:nil options:nil] lastObject];
-
+        
 
     }
     
