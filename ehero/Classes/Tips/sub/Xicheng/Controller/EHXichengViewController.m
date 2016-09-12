@@ -22,6 +22,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     self.collectionView.backgroundColor = RGB(238, 245, 250);
     self.collectionView.alwaysBounceVertical = YES ;
+    self.collectionView.frame =  CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 55);
 }
 
 

@@ -9,7 +9,7 @@
 #import "EHFengtaiViewController.h"
 #import "EHFengtaiCell.h"
 #import "EHTipsRecommend.h"
-
+#import "EHTipsReaderViewController.h"
 
 @interface EHFengtaiViewController ()
 
@@ -24,6 +24,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     self.collectionView.backgroundColor = RGB(238, 245, 250);
     self.collectionView.alwaysBounceVertical = YES ;
+    self.collectionView.frame =  CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 55);
 }
 
 
@@ -60,6 +61,15 @@ static NSString * const reuseIdentifier = @"Cell";
     NSString *realUrlStr = [tip.thumb stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
     cell.thumbView.image = [YTNetCommand downloadImageWithImgStr:realUrlStr placeholderImageStr:@"home_placeholder"  imageView:cell.thumbView];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    EHTipsRecommend *tip = _tipsRecommendArray[indexPath.row];
+    EHTipsReaderViewController *tipsReaderVC = [sb instantiateViewControllerWithIdentifier:@"TipsReaderViewController"];
+    tipsReaderVC.tipsRecomnend = tip;
+    [self.navigationController pushViewController:tipsReaderVC animated:YES];
+
 }
 
 @end

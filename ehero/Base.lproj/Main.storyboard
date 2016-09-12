@@ -504,31 +504,7 @@
                             <outlet property="delegate" destination="M8N-z6-2aa" id="uSP-OI-lFG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="详情" id="3in-PL-R7J">
-                        <rightBarButtonItems>
-                            <barButtonItem style="plain" id="QXL-rA-B6W">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="m9k-45-l7w">
-                                    <rect key="frame" x="284" y="7" width="20" height="29"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="Group"/>
-                                </button>
-                            </barButtonItem>
-                            <barButtonItem style="plain" id="j9e-VX-qaC">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Gx-Dq-gL6">
-                                    <rect key="frame" x="261" y="7" width="15" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="near_share_line"/>
-                                </button>
-                            </barButtonItem>
-                            <barButtonItem style="plain" id="6Sr-dr-8LI">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iRa-gD-jvu">
-                                    <rect key="frame" x="231" y="11" width="22" height="22"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="Star 1"/>
-                                </button>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="详情" id="3in-PL-R7J"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Du0-5r-NIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
