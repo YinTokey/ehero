@@ -27,6 +27,9 @@ static NSString * const reuseIdentifier = @"Cell";
     self.collectionView.backgroundColor = RGB(238, 245, 250);
     self.collectionView.alwaysBounceVertical = YES ;
     
+    [RACObserve(self,tipsRecommendArray )subscribeNext:^(id x) {
+        [self.collectionView reloadData];
+    }];
 
 }
 

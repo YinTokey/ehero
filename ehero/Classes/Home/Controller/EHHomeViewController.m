@@ -69,7 +69,7 @@
     [YTHttpTool netCheck];
     [self setNavBar];
     
-    [self getTipsInfo];
+    [self getRecommentTipsInfo];
     
 }
 
@@ -182,19 +182,19 @@
     [homePopView popView];
 }
 
-- (void)getTipsInfo{
+- (void)getRecommentTipsInfo{
     _homeTableViewModel.imageUrlStrArray = [NSMutableArray array];
     [YTHttpTool get:TipsRecommendUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
         _homeTableViewModel.tipsRecommendArray = [EHTipsRecommend mj_objectArrayWithKeyValuesArray:responseObj];
         for (EHTipsRecommend *tip in _homeTableViewModel.tipsRecommendArray) {
             NSString *realUrlStr = [tip.thumb stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
             [_homeTableViewModel.imageUrlStrArray addObject:realUrlStr];
-         //   NSLog(@"%@",tip.thumb);
-           // NSLog(@"%@",realUrlStr);
         }
         //请求成功后，再设置数据源
         self.tableView.dataSource = _homeTableViewModel;
         self.tableView.delegate = _homeTableViewModel;
+        [MBProgressHUD hideHUDForView:self.view];
+        
     } failure:^(NSError *error) {
         NSLog(@"failure");
     }];

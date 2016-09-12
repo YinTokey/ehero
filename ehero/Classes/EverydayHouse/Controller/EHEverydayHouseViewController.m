@@ -15,7 +15,6 @@
 #import "EHDistricts.h"
 #import "WSDropMenuView.h"
 #import "EHHouseSourcesCell.h"
-#import "EHHouseSourcesMessage.h"
 #import "EHHousesInfo.h"
 #import "EHHouseSummaryCell.h"
 

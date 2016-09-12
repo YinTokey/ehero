@@ -21,7 +21,7 @@
 {
     [MBProgressHUD showMessage:@"正在加载图片" toView:superView];
     [YTHttpTool get:slidesUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
-        [MBProgressHUD hideHUDForView:superView];
+       // [MBProgressHUD hideHUDForView:superView];
         //数据处理
         NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:nil] ;
         _slidesArray = [EHSlides mj_objectArrayWithKeyValuesArray:responseArray];

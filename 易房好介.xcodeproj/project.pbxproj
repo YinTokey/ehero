@@ -76,20 +76,11 @@
 		049AA07E1D5034D600761E3F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AA0781D5034D600761E3F /* FMResultSet.m */; };
 		049AA07F1D5034D600761E3F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049AA0791D5034D600761E3F /* Info.plist */; };
 		049AA0811D50350F00761E3F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 049AA0801D50350F00761E3F /* libsqlite3.0.tbd */; };
-		049ADF181D64796100C54F4D /* EHDistricts.m in Sources */ = {isa = PBXBuildFile; fileRef = 049ADF171D64796100C54F4D /* EHDistricts.m */; };
-		04A991F01D682C8C00053E29 /* EHHouseSourcesMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A991EF1D682C8C00053E29 /* EHHouseSourcesMessage.m */; };
 		04AB9FA71D7E6D6D00610F63 /* EHAverageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AB9FA61D7E6D6D00610F63 /* EHAverageInfo.m */; };
 		04AB9FAA1D7EB6E900610F63 /* UILabel+GetWidth.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AB9FA91D7EB6E900610F63 /* UILabel+GetWidth.m */; };
 		04B0EFDB1D499DD600BE301B /* EHHouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFDA1D499DD600BE301B /* EHHouseDetailViewController.m */; };
-		04B0EFDF1D49A18100BE301B /* EHHouseDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFDD1D49A18100BE301B /* EHHouseDetailCell.m */; };
-		04B0EFE01D49A18100BE301B /* EHHouseDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B0EFDE1D49A18100BE301B /* EHHouseDetailCell.xib */; };
-		04B0EFE41D49AD1A00BE301B /* EHHouseDetailAgentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFE21D49AD1A00BE301B /* EHHouseDetailAgentCell.m */; };
-		04B0EFE51D49AD1A00BE301B /* EHHouseDetailAgentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B0EFE31D49AD1A00BE301B /* EHHouseDetailAgentCell.xib */; };
-		04B0EFE91D49B79700BE301B /* EHHouseDetailCallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0EFE71D49B79700BE301B /* EHHouseDetailCallCell.m */; };
-		04B0EFEA1D49B79700BE301B /* EHHouseDetailCallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B0EFE81D49B79700BE301B /* EHHouseDetailCallCell.xib */; };
 		04B15C641D85006A0018CB03 /* EHXichengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B15C631D85006A0018CB03 /* EHXichengViewController.m */; };
 		04B15C671D85007F0018CB03 /* EHFengtaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B15C661D85007F0018CB03 /* EHFengtaiViewController.m */; };
-		04B15C6A1D8538150018CB03 /* EHHousesInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B15C691D8538150018CB03 /* EHHousesInfo.m */; };
 		04B15C741D856E8D0018CB03 /* EHHaidianTipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B15C731D856E8D0018CB03 /* EHHaidianTipCell.m */; };
 		04B15C771D8573520018CB03 /* EHDongchengTipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B15C761D8573520018CB03 /* EHDongchengTipCell.m */; };
 		04B15C7A1D85754F0018CB03 /* EHChaoyangTipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B15C791D85754F0018CB03 /* EHChaoyangTipCell.m */; };
@@ -158,6 +149,8 @@
 		04F06D4C1D2E4DD50081A34D /* EHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F06D4B1D2E4DD50081A34D /* EHHomeViewController.m */; };
 		04FC8E681D867FB400C58140 /* EHHouseSummaryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC8E661D867FB400C58140 /* EHHouseSummaryCell.m */; };
 		04FC8E691D867FB400C58140 /* EHHouseSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FC8E671D867FB400C58140 /* EHHouseSummaryCell.xib */; };
+		04FC8E6F1D8695C800C58140 /* EHDistricts.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC8E6C1D8695C800C58140 /* EHDistricts.m */; };
+		04FC8E701D8695C800C58140 /* EHHousesInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC8E6E1D8695C800C58140 /* EHHousesInfo.m */; };
 		04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD3ACE1D3DD942005B13B4 /* YTNetCommand.m */; };
 		04FD3AD31D3DDA23005B13B4 /* MBProgressHUD+YT.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD3AD21D3DDA23005B13B4 /* MBProgressHUD+YT.m */; };
 		F965115CC91166FFEBBF445F /* libPods-易房好介.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F1925BB3F0B5A1801B0AF6 /* libPods-易房好介.a */; };
@@ -316,31 +309,16 @@
 		049AA0781D5034D600761E3F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		049AA0791D5034D600761E3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049AA0801D50350F00761E3F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		049ADF161D64796100C54F4D /* EHDistricts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHDistricts.h; path = ehero/Classes/Home/View/EHDistricts.h; sourceTree = SOURCE_ROOT; };
-		049ADF171D64796100C54F4D /* EHDistricts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHDistricts.m; path = ehero/Classes/Home/View/EHDistricts.m; sourceTree = SOURCE_ROOT; };
-		04A991EE1D682C8C00053E29 /* EHHouseSourcesMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHouseSourcesMessage.h; path = ehero/Classes/Lib/ACEExpandableTextCell/EHHouseSourcesMessage.h; sourceTree = SOURCE_ROOT; };
-		04A991EF1D682C8C00053E29 /* EHHouseSourcesMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHHouseSourcesMessage.m; path = ehero/Classes/Lib/ACEExpandableTextCell/EHHouseSourcesMessage.m; sourceTree = SOURCE_ROOT; };
 		04AB9FA51D7E6D6D00610F63 /* EHAverageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAverageInfo.h; sourceTree = "<group>"; };
 		04AB9FA61D7E6D6D00610F63 /* EHAverageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAverageInfo.m; sourceTree = "<group>"; };
 		04AB9FA81D7EB6E900610F63 /* UILabel+GetWidth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+GetWidth.h"; sourceTree = "<group>"; };
 		04AB9FA91D7EB6E900610F63 /* UILabel+GetWidth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+GetWidth.m"; sourceTree = "<group>"; };
 		04B0EFD91D499DD600BE301B /* EHHouseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHouseDetailViewController.h; sourceTree = "<group>"; };
 		04B0EFDA1D499DD600BE301B /* EHHouseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHouseDetailViewController.m; sourceTree = "<group>"; };
-		04B0EFDC1D49A18100BE301B /* EHHouseDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHouseDetailCell.h; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailCell.h; sourceTree = SOURCE_ROOT; };
-		04B0EFDD1D49A18100BE301B /* EHHouseDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHHouseDetailCell.m; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailCell.m; sourceTree = SOURCE_ROOT; };
-		04B0EFDE1D49A18100BE301B /* EHHouseDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHHouseDetailCell.xib; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailCell.xib; sourceTree = SOURCE_ROOT; };
-		04B0EFE11D49AD1A00BE301B /* EHHouseDetailAgentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHouseDetailAgentCell.h; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailAgentCell.h; sourceTree = SOURCE_ROOT; };
-		04B0EFE21D49AD1A00BE301B /* EHHouseDetailAgentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHHouseDetailAgentCell.m; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailAgentCell.m; sourceTree = SOURCE_ROOT; };
-		04B0EFE31D49AD1A00BE301B /* EHHouseDetailAgentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHHouseDetailAgentCell.xib; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailAgentCell.xib; sourceTree = SOURCE_ROOT; };
-		04B0EFE61D49B79700BE301B /* EHHouseDetailCallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHouseDetailCallCell.h; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailCallCell.h; sourceTree = SOURCE_ROOT; };
-		04B0EFE71D49B79700BE301B /* EHHouseDetailCallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHHouseDetailCallCell.m; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailCallCell.m; sourceTree = SOURCE_ROOT; };
-		04B0EFE81D49B79700BE301B /* EHHouseDetailCallCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHHouseDetailCallCell.xib; path = ehero/Classes/EverydayHouse/Controller/EHHouseDetailCallCell.xib; sourceTree = SOURCE_ROOT; };
 		04B15C621D85006A0018CB03 /* EHXichengViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHXichengViewController.h; sourceTree = "<group>"; };
 		04B15C631D85006A0018CB03 /* EHXichengViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHXichengViewController.m; sourceTree = "<group>"; };
 		04B15C651D85007F0018CB03 /* EHFengtaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFengtaiViewController.h; sourceTree = "<group>"; };
 		04B15C661D85007F0018CB03 /* EHFengtaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFengtaiViewController.m; sourceTree = "<group>"; };
-		04B15C681D8538150018CB03 /* EHHousesInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHousesInfo.h; path = ehero/Classes/Tips/sub/Fengtai/Controller/EHHousesInfo.h; sourceTree = SOURCE_ROOT; };
-		04B15C691D8538150018CB03 /* EHHousesInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHHousesInfo.m; path = ehero/Classes/Tips/sub/Fengtai/Controller/EHHousesInfo.m; sourceTree = SOURCE_ROOT; };
 		04B15C721D856E8D0018CB03 /* EHHaidianTipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHaidianTipCell.h; sourceTree = "<group>"; };
 		04B15C731D856E8D0018CB03 /* EHHaidianTipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHaidianTipCell.m; sourceTree = "<group>"; };
 		04B15C751D8573520018CB03 /* EHDongchengTipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHDongchengTipCell.h; sourceTree = "<group>"; };
@@ -466,6 +444,10 @@
 		04FC8E651D867FB400C58140 /* EHHouseSummaryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHHouseSummaryCell.h; path = ehero/Classes/AgentInfo/View/EHHouseSummaryCell.h; sourceTree = SOURCE_ROOT; };
 		04FC8E661D867FB400C58140 /* EHHouseSummaryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHHouseSummaryCell.m; path = ehero/Classes/AgentInfo/View/EHHouseSummaryCell.m; sourceTree = SOURCE_ROOT; };
 		04FC8E671D867FB400C58140 /* EHHouseSummaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHHouseSummaryCell.xib; path = ehero/Classes/AgentInfo/View/EHHouseSummaryCell.xib; sourceTree = SOURCE_ROOT; };
+		04FC8E6B1D8695C800C58140 /* EHDistricts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHDistricts.h; sourceTree = "<group>"; };
+		04FC8E6C1D8695C800C58140 /* EHDistricts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHDistricts.m; sourceTree = "<group>"; };
+		04FC8E6D1D8695C800C58140 /* EHHousesInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHousesInfo.h; sourceTree = "<group>"; };
+		04FC8E6E1D8695C800C58140 /* EHHousesInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHousesInfo.m; sourceTree = "<group>"; };
 		04FD3ACD1D3DD942005B13B4 /* YTNetCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTNetCommand.h; sourceTree = "<group>"; };
 		04FD3ACE1D3DD942005B13B4 /* YTNetCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTNetCommand.m; sourceTree = "<group>"; };
 		04FD3AD11D3DDA23005B13B4 /* MBProgressHUD+YT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+YT.h"; sourceTree = "<group>"; };
@@ -782,8 +764,9 @@
 		04657FC41D32466500914495 /* EverydayHouse */ = {
 			isa = PBXGroup;
 			children = (
+				04FC8E711D8695D000C58140 /* ViewModel */,
+				04FC8E6A1D8695C800C58140 /* Model */,
 				04657FC51D32466500914495 /* Controller */,
-				04657FC61D32466500914495 /* Model */,
 				04657FC71D32466500914495 /* View */,
 			);
 			path = EverydayHouse;
@@ -800,31 +783,9 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		04657FC61D32466500914495 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				049ADF161D64796100C54F4D /* EHDistricts.h */,
-				049ADF171D64796100C54F4D /* EHDistricts.m */,
-				04A991EE1D682C8C00053E29 /* EHHouseSourcesMessage.h */,
-				04A991EF1D682C8C00053E29 /* EHHouseSourcesMessage.m */,
-				04B15C681D8538150018CB03 /* EHHousesInfo.h */,
-				04B15C691D8538150018CB03 /* EHHousesInfo.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		04657FC71D32466500914495 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04B0EFDC1D49A18100BE301B /* EHHouseDetailCell.h */,
-				04B0EFDD1D49A18100BE301B /* EHHouseDetailCell.m */,
-				04B0EFDE1D49A18100BE301B /* EHHouseDetailCell.xib */,
-				04B0EFE11D49AD1A00BE301B /* EHHouseDetailAgentCell.h */,
-				04B0EFE21D49AD1A00BE301B /* EHHouseDetailAgentCell.m */,
-				04B0EFE31D49AD1A00BE301B /* EHHouseDetailAgentCell.xib */,
-				04B0EFE61D49B79700BE301B /* EHHouseDetailCallCell.h */,
-				04B0EFE71D49B79700BE301B /* EHHouseDetailCallCell.m */,
-				04B0EFE81D49B79700BE301B /* EHHouseDetailCallCell.xib */,
 				04B4F4351D5ACE4100C6D4F3 /* EHHouseSourcesCell.h */,
 				04B4F4361D5ACE4100C6D4F3 /* EHHouseSourcesCell.m */,
 				04B4F4381D5ACE6100C6D4F3 /* EHHouseSourcesCell.xib */,
@@ -1806,6 +1767,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		04FC8E6A1D8695C800C58140 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04FC8E6B1D8695C800C58140 /* EHDistricts.h */,
+				04FC8E6C1D8695C800C58140 /* EHDistricts.m */,
+				04FC8E6D1D8695C800C58140 /* EHHousesInfo.h */,
+				04FC8E6E1D8695C800C58140 /* EHHousesInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04FC8E711D8695D000C58140 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		04FD3ACC1D3DD942005B13B4 /* YTNewCommand */ = {
 			isa = PBXGroup;
 			children = (
@@ -1965,18 +1944,15 @@
 				04E9CFFB1D46082B0087BD70 /* EHAgentInfoCommentCell.xib in Resources */,
 				04C3A8DF1D321596003203C0 /* EHEverydayhouseCell.xib in Resources */,
 				04EA09921D814292006F37B5 /* EHCommentDetailCell.xib in Resources */,
-				04B0EFE51D49AD1A00BE301B /* EHHouseDetailAgentCell.xib in Resources */,
 				04F06CD81D2DFE920081A34D /* LaunchScreen.storyboard in Resources */,
 				04C2FFCF1D7ABC39000CA92D /* EHTipViewCell.xib in Resources */,
 				04E9CFF61D4608110087BD70 /* EHAgentInfoChartCell.xib in Resources */,
 				0456A9E21D49E5640065DC5B /* EHCallAgentView.xib in Resources */,
 				04F06CD51D2DFE920081A34D /* Assets.xcassets in Resources */,
 				04C8FDE31D5484010081CE73 /* EHVerifyView.xib in Resources */,
-				04B0EFE01D49A18100BE301B /* EHHouseDetailCell.xib in Resources */,
 				04B15C8E1D8588D80018CB03 /* EHNoCommentCell.xib in Resources */,
 				04C5006B1D336D8B009146E5 /* EHWechatGroupCell.xib in Resources */,
 				04F06CD31D2DFE920081A34D /* Main.storyboard in Resources */,
-				04B0EFEA1D49B79700BE301B /* EHHouseDetailCallCell.xib in Resources */,
 				042559051D826A6A009BED24 /* Tips.storyboard in Resources */,
 				04C8FDDE1D5426310081CE73 /* EHHomeAgentCell.xib in Resources */,
 				04B87B5E1D5D72F000D0C3A6 /* MBProgressHUD.bundle in Resources */,
@@ -2056,6 +2032,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FC8E6F1D8695C800C58140 /* EHDistricts.m in Sources */,
 				04B4F4371D5ACE4100C6D4F3 /* EHHouseSourcesCell.m in Sources */,
 				04716C081D35060B00E512EE /* AFSecurityPolicy.m in Sources */,
 				04C3A8DE1D321596003203C0 /* EHEverydayhouseCell.m in Sources */,
@@ -2069,7 +2046,6 @@
 				04667FAC1D49FE990051C446 /* STModal.m in Sources */,
 				04C3A8E31D321FE2003203C0 /* EHSearchResultCell.m in Sources */,
 				04F06D301D2E0E040081A34D /* AppDelegate.m in Sources */,
-				04B0EFE91D49B79700BE301B /* EHHouseDetailCallCell.m in Sources */,
 				04B15C771D8573520018CB03 /* EHDongchengTipCell.m in Sources */,
 				04BBBDAC1D65937600577DAB /* WSDropMenuView.m in Sources */,
 				04B857281D5731D100BEA6CB /* EHSkimedAgentsViewController.m in Sources */,
@@ -2083,13 +2059,13 @@
 				04C157781D6EC6D70036E5A1 /* EHHomeNetViewModel.m in Sources */,
 				04360C8A1D3CDC2A007C8C17 /* YTHTTPSessionManager.m in Sources */,
 				046738A01D72D80600DDE9BD /* EHCollectedArticleViewController.m in Sources */,
-				04B15C6A1D8538150018CB03 /* EHHousesInfo.m in Sources */,
 				042559011D8260FE009BED24 /* EHHaidianViewController.m in Sources */,
 				04C5007A1D3386E5009146E5 /* EHCommentAgentViewController.m in Sources */,
 				048E90761D476B46005B19BD /* EHWechatGroupDetailViewController.m in Sources */,
 				04B15C671D85007F0018CB03 /* EHFengtaiViewController.m in Sources */,
 				04C1576C1D6EACFD0036E5A1 /* EHSiteSelectDelegate.m in Sources */,
 				047E478D1D7FBB2800B017EC /* NSString+Extension.m in Sources */,
+				04FC8E701D8695C800C58140 /* EHHousesInfo.m in Sources */,
 				04B87B611D5D8FA700D0C3A6 /* EHCookieOperation.m in Sources */,
 				0425590B1D826F02009BED24 /* EHDongchengViewController.m in Sources */,
 				04E9CFFA1D46082B0087BD70 /* EHAgentInfoCommentCell.m in Sources */,
@@ -2101,10 +2077,8 @@
 				04FC8E681D867FB400C58140 /* EHHouseSummaryCell.m in Sources */,
 				042559001D8260FE009BED24 /* EHChaoyangViewController.m in Sources */,
 				04716C0B1D35060B00E512EE /* AFURLSessionManager.m in Sources */,
-				04B0EFDF1D49A18100BE301B /* EHHouseDetailCell.m in Sources */,
 				04E7AF9E1D38EC860049E668 /* InnerView.m in Sources */,
 				04946B521D58307100B2C034 /* EHSendCodeButton.m in Sources */,
-				049ADF181D64796100C54F4D /* EHDistricts.m in Sources */,
 				04C157831D6EE40F0036E5A1 /* EHSlides.m in Sources */,
 				0471D9DA1D2FBBF300BCC2EE /* UIBarButtonItem+Extension.m in Sources */,
 				0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */,
@@ -2114,7 +2088,6 @@
 				04B4F43F1D5AFCB900C6D4F3 /* EHCommunityButton.m in Sources */,
 				04C605561D63148C00039217 /* SkyAssociationMenuView.m in Sources */,
 				04B15C7A1D85754F0018CB03 /* EHChaoyangTipCell.m in Sources */,
-				04A991F01D682C8C00053E29 /* EHHouseSourcesMessage.m in Sources */,
 				04B857211D57280300BEA6CB /* EHSkimedAgentInfo.m in Sources */,
 				04AB9FAA1D7EB6E900610F63 /* UILabel+GetWidth.m in Sources */,
 				04657FD51D324B4800914495 /* EHAntidisturbViewController.m in Sources */,
@@ -2176,7 +2149,6 @@
 				04E9CFA81D45CDF70087BD70 /* EHNavBackItem.m in Sources */,
 				04634AC11D753100003C0CFF /* EHCommentAgentDelegate.m in Sources */,
 				04716C061D35060B00E512EE /* AFHTTPSessionManager.m in Sources */,
-				04B0EFE41D49AD1A00BE301B /* EHHouseDetailAgentCell.m in Sources */,
 				04634AC71D753810003C0CFF /* EHStorageViewModel.m in Sources */,
 				04B15C8D1D8588D80018CB03 /* EHNoCommentCell.m in Sources */,
 			);

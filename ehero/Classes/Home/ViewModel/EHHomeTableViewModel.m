@@ -77,20 +77,13 @@
     }
 }
 #pragma mark -tableviewDelegate
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    if (indexPath.section == 1) {
-//        EHCommentAgentViewController *commentAgentViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"CommentAgentViewController"];
-//        [self.superVC.navigationController pushViewController:commentAgentViewController animated:YES];
-//    }
-//}
-
 
 - (void)firstBtnClick:(UITableViewCell *)cell{
 
     EHTipsViewController  *tipsViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"TipsViewController"];
     
-    tipsViewController.tipsRecommendArray = [NSMutableArray array];
-    tipsViewController.tipsRecommendArray = _tipsRecommendArray;
+//    tipsViewController.tipsRecommendArray = [NSMutableArray array];
+//    tipsViewController.tipsRecommendArray = _tipsRecommendArray;
     
     [self.superVC.navigationController pushViewController:tipsViewController animated:YES];
     
@@ -117,8 +110,8 @@
 - (void)moreClick:(UITableViewCell *)cell{
     EHTipsViewController  *tipsViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"TipsViewController"];
     
-    tipsViewController.tipsRecommendArray = [NSMutableArray array];
-    tipsViewController.tipsRecommendArray = _tipsRecommendArray;
+//    tipsViewController.tipsRecommendArray = [NSMutableArray array];
+//    tipsViewController.tipsRecommendArray = _tipsRecommendArray;
     
     [self.superVC.navigationController pushViewController:tipsViewController animated:YES];
 }
