@@ -11,7 +11,6 @@
 #import "EHSearchResultCell.h"
 #import "LQRadarChart.h"
 #import "EHAverageInfo.h"
-#import "EHCommentFrame.h"
 #import "EHCommentInfo.h"
 #import "EHCommentDetailCell.h"
 

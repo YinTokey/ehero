@@ -12,7 +12,7 @@
 
 @property(nonatomic,strong)id _id;
 /**
- *  处理后的字符串形式的id
+ *  处理后的字符串形式的id   
  */
 @property(nonatomic,copy)NSString *idStr;
 

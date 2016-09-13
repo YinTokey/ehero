@@ -73,6 +73,10 @@
         _agentInfoTableViewModel.averageInfo = averageInfo;
         
     }];
+    
+   // NSLog(@"class %@",[self.agentInfo.comments ]);
+    
+    
 }
 
 
@@ -214,18 +218,18 @@
 }
 #pragma mark - 传递假数据
 - (void)transData{
-    /*
+
     //1.1 加载模型数据
     EHCommentInfo *commentInfo = [[EHCommentInfo alloc]init];
     commentInfo.author = @"15695951989";
     commentInfo.text = @"这是第一条评论";
     
     EHCommentInfo *commentInfo1 = [[EHCommentInfo alloc]init];
-    commentInfo1.text = @"这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论";
+    commentInfo1.text = @"这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论三.1.类型的提升(比如char类型会自动提升到int,像这两个函数void test(int i)和void test(short s),如果你传入参数char c,那么编译器会自动调用void test(int i),因为char型别会被自动提升";
     commentInfo1.author = @"15695951988";
     
     EHCommentInfo *commentInfo2 = [[EHCommentInfo alloc]init];
-    commentInfo2.text = @"这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条这是第三条";
+    commentInfo2.text = @"三.1.类型的提升(比如char类型会自动提升到int,像这两个函数void test(int i)和void test(short s),如果你传入参数char c,那么编译器会自动调用void test(int i),因为char型别会被自动提升.";
     commentInfo2.author = @"15695951989";
     
     EHCommentInfo *commentInfo3 = [[EHCommentInfo alloc]init];
@@ -236,7 +240,7 @@
     [_agentInfoTableViewModel.commentsArray addObject:commentInfo1];
     [_agentInfoTableViewModel.commentsArray addObject:commentInfo2];
     [_agentInfoTableViewModel.commentsArray addObject:commentInfo3];
-     */
+ 
     
     
     

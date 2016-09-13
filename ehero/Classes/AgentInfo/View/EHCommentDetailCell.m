@@ -7,7 +7,6 @@
 //
 
 #import "EHCommentDetailCell.h"
-#import "EHCommentFrame.h"
 #import "UIImage+Extensiton.h"
 @interface EHCommentDetailCell ()
 
@@ -35,7 +34,7 @@
     //文字高度计算
     CGRect rect = [self.textView.text boundingRectWithSize:CGSizeMake(300,9999) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil];
 
-    commentInfo.cellHeight = rect.size.height + 60;
+    commentInfo.cellHeight = rect.size.height + 80;
 }
 
 @end

@@ -38,7 +38,7 @@
         [LBProgressHUD hideAllHUDsForView:_superVC.view animated:NO];
         if(success){
         success(averageInfo);
-        NSLog(@"lianjia %f",averageInfo.lianjia_rates_avg );
+     //   NSLog(@"lianjia %f",averageInfo.lianjia_rates_avg );
         }
     } failure:^(NSError *error) {
         NSLog(@"获取平均数值失败");

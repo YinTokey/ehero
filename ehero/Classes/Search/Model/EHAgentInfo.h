@@ -43,7 +43,7 @@
 /**
  *  评论
  */
-@property(nonatomic,copy)NSString *comments;
+@property(nonatomic,strong)id comments;
 /**
  *  成交
  */
