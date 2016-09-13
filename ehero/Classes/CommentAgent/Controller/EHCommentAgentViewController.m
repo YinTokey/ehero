@@ -11,7 +11,7 @@
 #import "STModal.h"
 #import "EHVerifyView.h"
 #import "EHCookieOperation.h"
-
+#import "SWTextView.h"
 #import "EHCommentAgentNetViewModel.h"
 #import "EHCommentAgentDelegate.h"
 #import "EHStorageViewModel.h"
@@ -26,11 +26,10 @@
 @property (nonatomic,strong) EHCommentAgentNetViewModel *commentAgentNetViewModel;
 @property (nonatomic,strong) EHStorageViewModel *storeViewModel;
 
-
-@property (weak, nonatomic) IBOutlet UIView *mask;
+@property (weak, nonatomic) IBOutlet UITextField *communityTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *line1;
 @property (weak, nonatomic) IBOutlet UIImageView *line2;
-@property (weak, nonatomic) IBOutlet UITextView *commentView;
+@property (weak, nonatomic) IBOutlet SWTextView *commentView;
 @property (weak, nonatomic) IBOutlet UIImageView *txImageView;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *position;
@@ -39,7 +38,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *moderateComment;
 @property (weak, nonatomic) IBOutlet UIButton *highPraise;
 @property (weak, nonatomic) IBOutlet UIButton *commitBtn;
-@property (weak, nonatomic) IBOutlet UITextField *searchBar;
+
 
 - (IBAction)highPriseClick:(id)sender;
 - (IBAction)moderateClick:(id)sender;
@@ -54,9 +53,6 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.searchBar.hidden = YES;
-    self.mask.hidden = YES;
     
     [self setupCommentViewFrame];
     [self addGesture];
@@ -68,7 +64,7 @@
     //textview从顶开始显示
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.searchBar.delegate = self;
+    self.communityTextField.delegate = self;
     //联网状态监测
     [YTHttpTool netCheck];
 
@@ -78,6 +74,8 @@
     
     [self setupNavBar];
     [self loadResultWithAgentInfo:self.agentInfo];
+    
+    self.commentView.autoAdjustLayoutView = self.view;
 }
 
 - (void)initViewModels{
@@ -161,38 +159,38 @@
 #pragma mark  -- UITapGestureRecognizer
 -(void)viewTapped:(UITapGestureRecognizer*)tapGr
 {
-    [self.searchBar resignFirstResponder];
+    [self.communityTextField resignFirstResponder];
     [self.commentView resignFirstResponder];
 }
 
 
 #pragma mark  -- uiTextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [self.searchBar resignFirstResponder];
-    [self searchClick];
+    [self.communityTextField resignFirstResponder];
+  //  [self searchClick];
     
     return YES;
 }
 
 # pragma mark － 搜索点击
-- (void)searchClick{
-    [LBProgressHUD showHUDto:self.view animated:NO];
-    NSString *keyword = self.searchBar.text;
-    //搜索经纪人
-    NSDictionary *param =@{@"major":@"agents",
-                           @"arg":keyword};
-    [_commentAgentNetViewModel
-     searchWithURLString:searchAreaUrlStr
-                   Param:param superView:self.view
-                 success:^{
-                       EHAgentInfo *agentInfo = [_commentAgentNetViewModel.searchResultArr firstObject];
-                       [self loadResultWithAgentInfo:agentInfo];
-                       self.mask.hidden = YES;
-                          }
-                 failure:^{
-                       self.mask.hidden = NO;
-                }];
-}
+//- (void)searchClick{
+//    [LBProgressHUD showHUDto:self.view animated:NO];
+//    NSString *keyword = self.searchBar.text;
+//    //搜索经纪人
+//    NSDictionary *param =@{@"major":@"agents",
+//                           @"arg":keyword};
+//    [_commentAgentNetViewModel
+//     searchWithURLString:searchAreaUrlStr
+//                   Param:param superView:self.view
+//                 success:^{
+//                       EHAgentInfo *agentInfo = [_commentAgentNetViewModel.searchResultArr firstObject];
+//                       [self loadResultWithAgentInfo:agentInfo];
+//                       self.mask.hidden = YES;
+//                          }
+//                 failure:^{
+//                       self.mask.hidden = NO;
+//                }];
+//}
 
 
 - (void)loadResultWithAgentInfo:(EHAgentInfo *)agentInfo{
@@ -212,9 +210,7 @@
     self.rates.text = ratesStr;
 }
 #pragma mark - 取消控件的隐藏
-- (void)cancelHidden{
-    self.mask.hidden = YES;
-}
+
 
 - (IBAction)highPriseClick:(id)sender {
 

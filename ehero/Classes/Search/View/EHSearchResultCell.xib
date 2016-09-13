@@ -177,7 +177,7 @@
     </objects>
     <resources>
         <image name="Line1" width="713" height="1"/>
-        <image name="agent" width="150" height="200"/>
+        <image name="agent" width="750" height="260"/>
         <image name="search_call" width="60" height="60"/>
     </resources>
 </document>

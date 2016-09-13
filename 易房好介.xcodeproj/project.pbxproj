@@ -92,6 +92,9 @@
 		04B4F4391D5ACE6100C6D4F3 /* EHHouseSourcesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B4F4381D5ACE6100C6D4F3 /* EHHouseSourcesCell.xib */; };
 		04B4F43C1D5AF1E100C6D4F3 /* UIButton+GetWidth.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4F43B1D5AF1E100C6D4F3 /* UIButton+GetWidth.m */; };
 		04B4F43F1D5AFCB900C6D4F3 /* EHCommunityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4F43E1D5AFCB900C6D4F3 /* EHCommunityButton.m */; };
+		04B6C3691D8824AB001F3D0C /* SWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B6C3641D8824AB001F3D0C /* SWTextField.m */; };
+		04B6C36A1D8824AB001F3D0C /* SWTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B6C3661D8824AB001F3D0C /* SWTextView.m */; };
+		04B6C36B1D8824AB001F3D0C /* UIView+AdjustLayoutWithKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B6C3681D8824AB001F3D0C /* UIView+AdjustLayoutWithKeyboard.m */; };
 		04B857211D57280300BEA6CB /* EHSkimedAgentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B857201D57280300BEA6CB /* EHSkimedAgentInfo.m */; };
 		04B857281D5731D100BEA6CB /* EHSkimedAgentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B857271D5731D100BEA6CB /* EHSkimedAgentsViewController.m */; };
 		04B87B5E1D5D72F000D0C3A6 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04B87B5D1D5D72F000D0C3A6 /* MBProgressHUD.bundle */; };
@@ -338,6 +341,12 @@
 		04B4F43B1D5AF1E100C6D4F3 /* UIButton+GetWidth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GetWidth.m"; sourceTree = "<group>"; };
 		04B4F43D1D5AFCB900C6D4F3 /* EHCommunityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCommunityButton.h; sourceTree = "<group>"; };
 		04B4F43E1D5AFCB900C6D4F3 /* EHCommunityButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCommunityButton.m; sourceTree = "<group>"; };
+		04B6C3631D8824AB001F3D0C /* SWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTextField.h; sourceTree = "<group>"; };
+		04B6C3641D8824AB001F3D0C /* SWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTextField.m; sourceTree = "<group>"; };
+		04B6C3651D8824AB001F3D0C /* SWTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTextView.h; sourceTree = "<group>"; };
+		04B6C3661D8824AB001F3D0C /* SWTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTextView.m; sourceTree = "<group>"; };
+		04B6C3671D8824AB001F3D0C /* UIView+AdjustLayoutWithKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AdjustLayoutWithKeyboard.h"; sourceTree = "<group>"; };
+		04B6C3681D8824AB001F3D0C /* UIView+AdjustLayoutWithKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AdjustLayoutWithKeyboard.m"; sourceTree = "<group>"; };
 		04B8571F1D57280300BEA6CB /* EHSkimedAgentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSkimedAgentInfo.h; sourceTree = "<group>"; };
 		04B857201D57280300BEA6CB /* EHSkimedAgentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSkimedAgentInfo.m; sourceTree = "<group>"; };
 		04B857261D5731D100BEA6CB /* EHSkimedAgentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSkimedAgentsViewController.h; sourceTree = "<group>"; };
@@ -490,6 +499,7 @@
 		04200C331D2F7A6A005DC042 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				04B6C3621D8824AB001F3D0C /* SWTextField_TextView */,
 				042EFF641D7D6FAF008AD130 /* LQRadarChart */,
 				046885111D77F85D00B6EAC4 /* CardSwitcher */,
 				046EBD761D66F98E00CD6346 /* WJTextView */,
@@ -1258,6 +1268,19 @@
 				04B15C851D8577110018CB03 /* EHXichengTipCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04B6C3621D8824AB001F3D0C /* SWTextField_TextView */ = {
+			isa = PBXGroup;
+			children = (
+				04B6C3631D8824AB001F3D0C /* SWTextField.h */,
+				04B6C3641D8824AB001F3D0C /* SWTextField.m */,
+				04B6C3651D8824AB001F3D0C /* SWTextView.h */,
+				04B6C3661D8824AB001F3D0C /* SWTextView.m */,
+				04B6C3671D8824AB001F3D0C /* UIView+AdjustLayoutWithKeyboard.h */,
+				04B6C3681D8824AB001F3D0C /* UIView+AdjustLayoutWithKeyboard.m */,
+			);
+			path = SWTextField_TextView;
 			sourceTree = "<group>";
 		};
 		04B857221D57319300BEA6CB /* SkimedAgents */ = {
@@ -2064,6 +2087,7 @@
 				04B87B611D5D8FA700D0C3A6 /* EHCookieOperation.m in Sources */,
 				0425590B1D826F02009BED24 /* EHDongchengViewController.m in Sources */,
 				04E9CFFA1D46082B0087BD70 /* EHAgentInfoCommentCell.m in Sources */,
+				04B6C3691D8824AB001F3D0C /* SWTextField.m in Sources */,
 				04B4F43C1D5AF1E100C6D4F3 /* UIButton+GetWidth.m in Sources */,
 				04B15C641D85006A0018CB03 /* EHXichengViewController.m in Sources */,
 				047ED1801D6D3DF6008EC261 /* EHSearchTableViewModel.m in Sources */,
@@ -2123,9 +2147,11 @@
 				04DA25E31D41E33000235C51 /* EHProfileViewController.m in Sources */,
 				04E0DEBF1D74028A0003ED4A /* EHChangeOffsetViewModel.m in Sources */,
 				0472DA531D37B48900CDE148 /* LBProgressHUD.m in Sources */,
+				04B6C36A1D8824AB001F3D0C /* SWTextView.m in Sources */,
 				042B43DC1D5322EE005FCFB0 /* EHHomeSearchBar.m in Sources */,
 				04C1576F1D6EB31A0036E5A1 /* EHHomeTableViewModel.m in Sources */,
 				047E478E1D7FBB2800B017EC /* UIImage+Extensiton.m in Sources */,
+				04B6C36B1D8824AB001F3D0C /* UIView+AdjustLayoutWithKeyboard.m in Sources */,
 				04C6054E1D62D35C00039217 /* EHHomePopView.m in Sources */,
 				046885191D77F85D00B6EAC4 /* NewPagedFlowView.m in Sources */,
 				04C157801D6ED5810036E5A1 /* EHOfficialAccountController.m in Sources */,
