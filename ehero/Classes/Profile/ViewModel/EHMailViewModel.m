@@ -21,7 +21,7 @@
     // 设置邮件主题
     [mailCompose setSubject:@"易房好介反馈"];
     // 设置收件人
-    [mailCompose setToRecipients:@[@"401258036@qq.com"]];
+    [mailCompose setToRecipients:@[@"ehero.cc@qq.com"]];
     // 设置抄送人
     //  [mailCompose setCcRecipients:@[@"YinjChen@163.com"]];
     // 设置密抄送

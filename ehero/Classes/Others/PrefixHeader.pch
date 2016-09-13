@@ -28,7 +28,7 @@
 #define searchAreaUrlStr @"http://ehero.cc/api/v1/agents/search.json"
 //#define searchAgentUrlStr @"http://ehero.cc/agents/asearch.json"
 #define sendCodeUrlStr @"http://ehero.cc/users/sms.json"
-#define codeCheckUrlStr @"http://ehero.cc/api/v1/users/check_code.json"
+#define codeCheckUrlStr @"http://ehero.cc/api/v1/users/check_code"
 #define callAgentUrlStr @"http://ehero.cc/agents/call.json"
 #define commentAgentUrlStr @"http://ehero.cc/api/v1/comments.json"
 #define anti_disturbCallUrlStr @"http://ehero.cc/api/v1/customers/call.json"

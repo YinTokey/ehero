@@ -31,6 +31,14 @@
     _commentInfo = commentInfo;
     self.textView.text = commentInfo.text;
     self.authoer.text = commentInfo.author;
+    NSString *created_at = [commentInfo.created_at substringWithRange:NSMakeRange(0, 10)];
+    self.timeLabel.text = created_at;
+
+    EHCommunityButton *comBtn = [EHCommunityButton communityButton:commentInfo.community];
+    comBtn.frame = CGRectMake( self.timeLabel.frame.origin.x - comBtn.realWidth  , self.timeLabel.frame.origin.y, comBtn.realWidth, 16);
+    [self addSubview:comBtn];
+    
+    
     //文字高度计算
     CGRect rect = [self.textView.text boundingRectWithSize:CGSizeMake(300,9999) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil];
 

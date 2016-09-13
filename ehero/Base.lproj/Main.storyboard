@@ -277,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="-1256" y="965"/>
         </scene>
-        <!--Collected Tips Controller-->
+        <!--收藏的锦囊-->
         <scene sceneID="D9N-EB-qfy">
             <objects>
                 <tableViewController storyboardIdentifier="CollectedTipsController" id="2AB-KN-L8q" customClass="EHCollectedTipsController" sceneMemberID="viewController">
@@ -300,7 +300,7 @@
                             <outlet property="delegate" destination="2AB-KN-L8q" id="ZwO-Wv-3eL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dq5-rC-Ygf"/>
+                    <navigationItem key="navigationItem" title="收藏的锦囊" id="dq5-rC-Ygf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Xm-uR-xG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -340,10 +340,10 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame1" translatesAutoresizingMaskIntoConstraints="NO" id="9OI-cK-Gw6">
-                                <rect key="frame" x="13" y="196" width="294" height="177"/>
+                                <rect key="frame" x="13" y="191" width="294" height="187"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="对方号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJA-rp-lmQ">
-                                <rect key="frame" x="29" y="267" width="261" height="30"/>
+                                <rect key="frame" x="29" y="264" width="261" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NnF-tt-gCk"/>
                                 </constraints>
@@ -351,14 +351,14 @@
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon2" translatesAutoresizingMaskIntoConstraints="NO" id="Xb3-Om-Mma">
-                                <rect key="frame" x="115" y="211" width="89" height="48"/>
+                                <rect key="frame" x="112" y="206" width="95" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="VLv-JQ-dme"/>
-                                    <constraint firstAttribute="width" constant="89" id="taV-IT-d58"/>
+                                    <constraint firstAttribute="height" constant="50" id="VLv-JQ-dme"/>
+                                    <constraint firstAttribute="width" constant="95" id="taV-IT-d58"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ck-py-yPR">
-                                <rect key="frame" x="29" y="305" width="261" height="30"/>
+                                <rect key="frame" x="29" y="302" width="261" height="30"/>
                                 <color key="backgroundColor" red="0.24313725490196078" green="0.65098039215686276" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XjQ-h3-1CT"/>
@@ -381,7 +381,7 @@
                             <constraint firstItem="9OI-cK-Gw6" firstAttribute="width" secondItem="WB0-g5-8pz" secondAttribute="width" multiplier="0.91875" id="J5o-4L-PpL"/>
                             <constraint firstAttribute="trailing" secondItem="WB0-g5-8pz" secondAttribute="trailing" id="KHR-IA-TqM"/>
                             <constraint firstItem="tJA-rp-lmQ" firstAttribute="leading" secondItem="JRQ-hz-BkA" secondAttribute="leading" constant="29" id="LLf-4Z-0zd"/>
-                            <constraint firstItem="9OI-cK-Gw6" firstAttribute="height" secondItem="WB0-g5-8pz" secondAttribute="height" multiplier="0.3503" id="Lt6-fB-gCD"/>
+                            <constraint firstItem="9OI-cK-Gw6" firstAttribute="height" secondItem="WB0-g5-8pz" secondAttribute="height" multiplier="0.37" id="Lt6-fB-gCD"/>
                             <constraint firstItem="Dzy-ex-FMg" firstAttribute="top" secondItem="WB0-g5-8pz" secondAttribute="bottom" id="Lvv-8Y-xrf"/>
                             <constraint firstItem="WB0-g5-8pz" firstAttribute="top" secondItem="1eD-ok-zBs" secondAttribute="bottom" id="PzZ-bN-Ohb"/>
                             <constraint firstItem="2ck-py-yPR" firstAttribute="top" secondItem="tJA-rp-lmQ" secondAttribute="bottom" constant="8" id="Qeq-4n-BYY"/>
@@ -637,7 +637,7 @@
             </objects>
             <point key="canvasLocation" x="-187.5" y="1572.75"/>
         </scene>
-        <!--Root View Controller-->
+        <!--浏览过的经纪人-->
         <scene sceneID="gjz-m0-FOw">
             <objects>
                 <tableViewController storyboardIdentifier="SkimedAgentsViewController" id="Vpv-L3-4zC" customClass="EHSkimedAgentsViewController" sceneMemberID="viewController">
@@ -660,7 +660,7 @@
                             <outlet property="delegate" destination="Vpv-L3-4zC" id="bJc-jo-JTc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="F03-X5-I1f"/>
+                    <navigationItem key="navigationItem" title="浏览过的经纪人" id="F03-X5-I1f"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HwP-Uc-Szv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1231,7 +1231,7 @@
             </objects>
             <point key="canvasLocation" x="-3366" y="738"/>
         </scene>
-        <!--Collected Article View Controller-->
+        <!--收藏的文章-->
         <scene sceneID="w5Y-u8-IR6">
             <objects>
                 <tableViewController storyboardIdentifier="CollectedArticleViewController" id="5aJ-XF-xVB" customClass="EHCollectedArticleViewController" sceneMemberID="viewController">
@@ -1254,7 +1254,7 @@
                             <outlet property="delegate" destination="5aJ-XF-xVB" id="3Pq-2x-kCt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="b03-Lt-y1r"/>
+                    <navigationItem key="navigationItem" title="收藏的文章" id="b03-Lt-y1r"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="doQ-li-oUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1291,7 +1291,7 @@
             </objects>
             <point key="canvasLocation" x="-2122" y="-478"/>
         </scene>
-        <!--Collected Agents View Controller-->
+        <!--收藏的经纪人-->
         <scene sceneID="nWB-GW-dBc">
             <objects>
                 <tableViewController storyboardIdentifier="CollectedAgentsViewController" id="Ma0-MN-KbO" customClass="EHCollectedAgentsViewController" sceneMemberID="viewController">
@@ -1314,7 +1314,7 @@
                             <outlet property="delegate" destination="Ma0-MN-KbO" id="wCt-ud-TwE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xzI-Ql-m8t"/>
+                    <navigationItem key="navigationItem" title="收藏的经纪人" id="xzI-Ql-m8t"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYT-3L-hVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1429,7 +1429,7 @@
         <image name="Star 1" width="38" height="36"/>
         <image name="Star 2" width="38" height="36"/>
         <image name="about_us" width="750" height="1334"/>
-        <image name="agent" width="150" height="200"/>
+        <image name="agent" width="750" height="260"/>
         <image name="anti_disturb_bk" width="750" height="1201"/>
         <image name="area_background" width="100" height="26"/>
         <image name="commentBackground" width="160" height="48"/>

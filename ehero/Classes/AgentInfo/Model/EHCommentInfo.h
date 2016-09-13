@@ -20,6 +20,10 @@
 
 @property(nonatomic,copy)NSString *code;
 
+@property(nonatomic,copy)NSString *community;
+
+@property(nonatomic,copy)NSString *created_at;
+
 @property(nonatomic,copy)NSString *deleted_at;
 
 @property(nonatomic,copy)NSString *kind;

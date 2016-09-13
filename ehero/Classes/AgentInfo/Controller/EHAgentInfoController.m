@@ -203,7 +203,7 @@
 - (void)callCallBack
 {
     callCenter = [[CTCallCenter alloc] init];
-    __weak STModal *weakmodal = _modal;
+    __weak STModal *weakmodal = self.modal;
     callCenter.callEventHandler = ^(CTCall* call) {
         if([call.callState isEqualToString:CTCallStateIncoming])
         {

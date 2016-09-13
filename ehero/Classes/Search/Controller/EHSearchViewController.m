@@ -30,7 +30,6 @@
 
 @implementation EHSearchViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -111,7 +110,6 @@
     [self.mysearchBar becomeFirstResponder];
 }
 
-
 - (void)addGesture{
     //添加手势相应，输textfield时，点击其他区域，键盘消失
     UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
@@ -126,8 +124,10 @@
     
     NSString *keyword = self.mysearchBar.text;
     //搜索地区
-    NSDictionary *param =@{@"major":self.major,
-                           @"arg":keyword};
+//    NSDictionary *param =@{@"major":self.major,
+//                           @"arg":keyword};
+    NSDictionary *param =@{@"major":@"agents",
+                           @"arg":@"庞存辉"};
     [self.tableViewModel searchWithURLString:searchAreaUrlStr Param:param];
     
 }
