@@ -7,7 +7,6 @@
 //
 
 #import "EHCommentAgentViewController.h"
-#import "EHAgentInfo.h"
 #import "YTNetCommand.h"
 #import "STModal.h"
 #import "EHVerifyView.h"
@@ -56,6 +55,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.searchBar.hidden = YES;
+    self.mask.hidden = YES;
+    
     [self setupCommentViewFrame];
     [self addGesture];
     [self setCornerRadius];
@@ -75,7 +77,7 @@
     modal.hideWhenTouchOutside = YES;
     
     [self setupNavBar];
-
+    [self loadResultWithAgentInfo:self.agentInfo];
 }
 
 - (void)initViewModels{
@@ -194,6 +196,7 @@
 
 
 - (void)loadResultWithAgentInfo:(EHAgentInfo *)agentInfo{
+
     self.txImageView.image = [YTNetCommand downloadImageWithImgStr:agentInfo.tx
                                                placeholderImageStr:@"Profile"
                                                          imageView:self.txImageView];
@@ -204,7 +207,8 @@
     }else{
         self.position.text = agentInfo.position;
     }
-    NSString *ratesStr = [NSString stringWithFormat:@"好评率:%@％",agentInfo.rates];
+    NSString *ratesStr = [NSString stringWithFormat:@"好评率:%.0f％",agentInfo.rates];
+
     self.rates.text = ratesStr;
 }
 #pragma mark - 取消控件的隐藏

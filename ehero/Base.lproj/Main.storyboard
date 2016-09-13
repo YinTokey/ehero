@@ -928,7 +928,7 @@
             </objects>
             <point key="canvasLocation" x="546" y="289"/>
         </scene>
-        <!--Comment Agent View Controller-->
+        <!--评价经纪人-->
         <scene sceneID="LB2-0W-wsM">
             <objects>
                 <viewController storyboardIdentifier="CommentAgentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rlP-ow-We4" customClass="EHCommentAgentViewController" sceneMemberID="viewController">
@@ -941,16 +941,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xq5-Dh-TFr">
-                                <rect key="frame" x="16" y="194" width="289" height="240"/>
+                                <rect key="frame" x="16" y="194" width="289" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="Dsd-2Y-3Dk"/>
+                                    <constraint firstAttribute="height" constant="300" id="Dsd-2Y-3Dk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rf-me-Mke">
-                                <rect key="frame" x="107" y="452" width="106" height="26"/>
+                                <rect key="frame" x="107" y="512" width="106" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="106" id="7em-vA-92d"/>
                                     <constraint firstAttribute="height" constant="26" id="XhT-lj-sis"/>
@@ -1094,10 +1094,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3SA-62-kRY">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1106,9 +1102,7 @@
                             <constraint firstItem="Epd-dM-BF9" firstAttribute="top" secondItem="1JA-n0-VEE" secondAttribute="bottom" constant="8" id="6eV-qs-HA8"/>
                             <constraint firstItem="Epd-dM-BF9" firstAttribute="leading" secondItem="aLF-pd-HrY" secondAttribute="leading" constant="13" id="8JU-G7-RXf"/>
                             <constraint firstItem="S5A-3E-SAg" firstAttribute="top" secondItem="8b2-kM-tCk" secondAttribute="bottom" constant="12" id="8sD-8h-rNX"/>
-                            <constraint firstItem="3SA-62-kRY" firstAttribute="top" secondItem="aLF-pd-HrY" secondAttribute="top" id="ACN-RE-cC0"/>
                             <constraint firstItem="xq5-Dh-TFr" firstAttribute="leading" secondItem="aLF-pd-HrY" secondAttribute="leading" constant="16" id="Dh4-UD-e3z"/>
-                            <constraint firstAttribute="trailing" secondItem="3SA-62-kRY" secondAttribute="trailing" id="DhM-4k-2ai"/>
                             <constraint firstItem="I2g-DU-1EW" firstAttribute="leading" secondItem="Epd-dM-BF9" secondAttribute="trailing" constant="13" id="F5g-Bl-hgv"/>
                             <constraint firstItem="XJJ-f2-WCY" firstAttribute="top" secondItem="1JA-n0-VEE" secondAttribute="bottom" constant="17" id="KJl-BD-qLN"/>
                             <constraint firstAttribute="trailing" secondItem="xq5-Dh-TFr" secondAttribute="trailing" constant="15" id="Oaf-nb-3Kc"/>
@@ -1121,24 +1115,14 @@
                             <constraint firstAttribute="trailing" secondItem="8b2-kM-tCk" secondAttribute="trailing" constant="13" id="bFT-Lh-YbU"/>
                             <constraint firstItem="oG4-yd-QD2" firstAttribute="leading" secondItem="XJJ-f2-WCY" secondAttribute="trailing" constant="6" id="e5b-2O-KJw"/>
                             <constraint firstItem="xq5-Dh-TFr" firstAttribute="top" secondItem="S5A-3E-SAg" secondAttribute="bottom" constant="18" id="hRv-ci-5PU"/>
-                            <constraint firstItem="3SA-62-kRY" firstAttribute="leading" secondItem="aLF-pd-HrY" secondAttribute="leading" id="iVi-dV-bmE"/>
                             <constraint firstItem="I2g-DU-1EW" firstAttribute="top" secondItem="XJJ-f2-WCY" secondAttribute="bottom" constant="6" id="p7I-HW-4e7"/>
-                            <constraint firstItem="Oro-t4-3df" firstAttribute="top" secondItem="3SA-62-kRY" secondAttribute="bottom" id="qw7-iD-ZTu"/>
                             <constraint firstAttribute="trailing" secondItem="S5A-3E-SAg" secondAttribute="trailing" constant="13" id="rag-XV-p59"/>
                             <constraint firstItem="XJJ-f2-WCY" firstAttribute="leading" secondItem="Epd-dM-BF9" secondAttribute="trailing" constant="13" id="s33-VK-qSe"/>
                             <constraint firstItem="7rf-me-Mke" firstAttribute="top" secondItem="xq5-Dh-TFr" secondAttribute="bottom" constant="18" id="uHP-Cy-22v"/>
                             <constraint firstItem="8b2-kM-tCk" firstAttribute="leading" secondItem="Epd-dM-BF9" secondAttribute="trailing" constant="13" id="wD8-NH-ntC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FRq-ze-U3N">
-                        <nil key="title"/>
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入经纪人名字或电话" textAlignment="natural" minimumFontSize="17" background="home_searchbar" id="671-bn-jb8">
-                            <rect key="frame" x="11" y="7" width="298" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="评价经纪人" id="FRq-ze-U3N"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="commentView" destination="xq5-Dh-TFr" id="kLp-av-XXS"/>
@@ -1146,13 +1130,11 @@
                         <outlet property="highPraise" destination="6EW-6a-Fp4" id="2Yk-73-AIz"/>
                         <outlet property="line1" destination="I2g-DU-1EW" id="83E-4M-zhI"/>
                         <outlet property="line2" destination="S5A-3E-SAg" id="u54-xh-aiL"/>
-                        <outlet property="mask" destination="3SA-62-kRY" id="oG5-6C-FVb"/>
                         <outlet property="moderateComment" destination="uvn-nz-Khz" id="zBo-Us-qrG"/>
                         <outlet property="name" destination="XJJ-f2-WCY" id="sRq-ZL-SYK"/>
                         <outlet property="negativeComment" destination="ekR-WM-unE" id="WUV-Ok-5mb"/>
                         <outlet property="position" destination="oG4-yd-QD2" id="YBV-hP-HwQ"/>
                         <outlet property="rates" destination="ZR1-o3-CKg" id="769-xU-bSj"/>
-                        <outlet property="searchBar" destination="671-bn-jb8" id="vrD-mC-aNM"/>
                         <outlet property="txImageView" destination="Epd-dM-BF9" id="23f-yC-A36"/>
                     </connections>
                 </viewController>
@@ -1355,16 +1337,9 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
-                            <barButtonItem style="plain" id="6R6-2y-PUR">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d1e-F2-SsP">
-                                    <rect key="frame" x="261" y="7" width="15" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="near_share_line"/>
-                                </button>
-                            </barButtonItem>
                             <barButtonItem style="plain" id="R3A-U9-Xdh">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="itZ-ef-dB0">
-                                    <rect key="frame" x="231" y="11" width="22" height="22"/>
+                                    <rect key="frame" x="254" y="11" width="22" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Star 1"/>
                                     <state key="selected" image="Star 2"/>
@@ -1372,6 +1347,16 @@
                                     <state key="focused" image="Star 2"/>
                                     <connections>
                                         <action selector="collectBtnClick:" destination="C27-c6-2Ge" eventType="touchUpInside" id="3Wy-Tt-fV0"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="AC5-kK-AYd">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yqL-zq-kAv">
+                                    <rect key="frame" x="220" y="11" width="26" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="comment_btn"/>
+                                    <connections>
+                                        <action selector="commentBtnClick:" destination="C27-c6-2Ge" eventType="touchUpInside" id="wcb-ci-r9W"/>
                                     </connections>
                                 </button>
                             </barButtonItem>
@@ -1434,9 +1419,9 @@
         <image name="area_background" width="100" height="26"/>
         <image name="commentBackground" width="160" height="48"/>
         <image name="commentBtn2" width="160" height="48"/>
+        <image name="comment_btn" width="48" height="37"/>
         <image name="frame1" width="698" height="529"/>
         <image name="home_bar_frame" width="462" height="51"/>
-        <image name="home_searchbar" width="462" height="51"/>
         <image name="home_two" width="10" height="5"/>
         <image name="icon2" width="320" height="168"/>
         <image name="near_share_line" width="2" height="12"/>

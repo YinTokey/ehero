@@ -152,8 +152,8 @@
 }
 
 - (IBAction)siteBtnClick:(UIButton *)btn {
-    
-    [self setupPopView];
+   //暂时禁止弹窗
+  //  [self setupPopView];
 }
 
 - (IBAction)majorBtnClick:(id)sender {

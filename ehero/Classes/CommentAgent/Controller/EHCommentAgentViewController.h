@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "EHAgentInfo.h"
 @interface EHCommentAgentViewController : UIViewController
 
+@property (nonatomic,strong)EHAgentInfo *agentInfo;
+
 - (void)storeCode:(NSString *)code;
+
+
 
 @end
 

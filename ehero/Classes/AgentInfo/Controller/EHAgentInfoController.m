@@ -21,6 +21,9 @@
 #import "EHCommentInfo.h"
 #import <CoreTelephony/CTCall.h>
 #import <CoreTelephony/CTCallCenter.h>
+#import "EHCommentAgentViewController.h"
+
+
 @interface EHAgentInfoController ()<EHVerifyViewDelegate>
 {
     EHCallAgentView *callAgentView;
@@ -30,6 +33,7 @@
 - (IBAction)shareBtnClick:(id)sender;
 - (IBAction)collectBtnClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *collectBtn;
+- (IBAction)commentBtnClick:(id)sender;
 
 @property (nonatomic,strong) STModal *modal;
 @property (nonatomic,strong) EHSocialShareViewModel *socialViewModel;
@@ -221,4 +225,11 @@
     
 }
 
+- (IBAction)commentBtnClick:(id)sender {
+    EHCommentAgentViewController *commentAgentVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"CommentAgentViewController"];
+    commentAgentVC.agentInfo = self.agentInfo;
+    [self.navigationController pushViewController:commentAgentVC animated:YES];
+    
+    
+}
 @end

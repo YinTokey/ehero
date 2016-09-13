@@ -37,10 +37,12 @@
     comBtn.frame = CGRectMake( self.timeLabel.frame.origin.x - comBtn.realWidth  , self.timeLabel.frame.origin.y, comBtn.realWidth, 16);
     [self addSubview:comBtn];
     
-    if ([commentInfo.kind isEqualToString:@"中评"]) {
+    if ([commentInfo.kind isEqualToString:@"差评"]) {
         [self.starView setImage:[UIImage imageNamed:@"starIcon2"]];
     }
-    
+    if ([commentInfo.kind isEqualToString:@"中评"]) {
+        self.starView.hidden = YES;
+    }
     
     //文字高度计算
     CGRect rect = [self.textView.text boundingRectWithSize:CGSizeMake(300,9999) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil];
