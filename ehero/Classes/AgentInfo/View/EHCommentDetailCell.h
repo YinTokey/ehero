@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *textView;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *starView;
 @property (nonatomic,strong) EHCommentInfo *commentInfo;
 
 //@property (nonatomic,strong) EHCommentFrame *commentFrame;

@@ -72,8 +72,9 @@
         cell.person.text = personStr;
 
         [RACObserve(self, averageInfo)subscribeNext:^(id x) {
-            [cell.chart reloadData];
             cell.chartView.hidden = NO;
+            [cell.chart reloadData];
+            
         }];
         
         return cell;

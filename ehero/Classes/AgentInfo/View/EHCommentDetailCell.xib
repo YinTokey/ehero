@@ -71,6 +71,7 @@
             <connections>
                 <outlet property="authoer" destination="9Jb-5k-Gaj" id="SKY-kZ-wir"/>
                 <outlet property="background" destination="xk7-z9-qll" id="7C9-m3-n2x"/>
+                <outlet property="starView" destination="tDl-AL-q0D" id="pcQ-fV-l9a"/>
                 <outlet property="textView" destination="POQ-Mw-EKF" id="mYN-oq-4K0"/>
                 <outlet property="timeLabel" destination="ZUN-9x-mbi" id="CgQ-6S-DJs"/>
             </connections>
