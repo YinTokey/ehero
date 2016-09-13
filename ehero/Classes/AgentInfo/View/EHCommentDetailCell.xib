@@ -12,9 +12,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment_background" translatesAutoresizingMaskIntoConstraints="NO" id="xk7-z9-qll">
-                    <rect key="frame" x="8" y="8" width="292" height="80"/>
+                    <rect key="frame" x="18" y="8" width="282" height="80"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3333333333" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jb-5k-Gaj">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3333333333" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jb-5k-Gaj">
                     <rect key="frame" x="30" y="15" width="90" height="15"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="JfO-aY-f3n"/>
@@ -34,37 +34,46 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelasdfsdfsdfdsfsdfsdfsdfsddsfsfsdfsdfsSFDFSDFSDFSD" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POQ-Mw-EKF">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="LabelasdfsdfsdfdsfsdfsdfsdfsddsfsfsdfsdfsSFDFSDFSDFSD" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POQ-Mw-EKF">
                     <rect key="frame" x="30" y="32" width="260" height="31"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tDl-AL-q0D">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="starIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tDl-AL-q0D">
                     <rect key="frame" x="128" y="13" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="8m4-DL-Ans"/>
                         <constraint firstAttribute="width" constant="20" id="fNk-jM-azx"/>
                     </constraints>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Triangle" translatesAutoresizingMaskIntoConstraints="NO" id="Ajs-mo-410">
+                    <rect key="frame" x="0.0" y="8" width="22" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="1kF-Yh-wxB"/>
+                        <constraint firstAttribute="height" constant="12" id="mk7-ho-hyW"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.95664948729999999" green="0.95664948729999999" blue="0.95664948729999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="tDl-AL-q0D" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="3KE-rN-hnx"/>
                 <constraint firstAttribute="trailing" secondItem="xk7-z9-qll" secondAttribute="trailing" constant="8" id="AOW-GW-RCf"/>
+                <constraint firstItem="Ajs-mo-410" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="AXZ-cr-1dE"/>
                 <constraint firstItem="tDl-AL-q0D" firstAttribute="leading" secondItem="9Jb-5k-Gaj" secondAttribute="trailing" constant="8" id="Afm-tJ-yVn"/>
                 <constraint firstItem="ZUN-9x-mbi" firstAttribute="top" secondItem="POQ-Mw-EKF" secondAttribute="bottom" constant="3" id="BHf-ck-sbG"/>
                 <constraint firstAttribute="trailing" secondItem="POQ-Mw-EKF" secondAttribute="trailing" constant="18" id="Fzd-bk-Zri"/>
+                <constraint firstItem="tDl-AL-q0D" firstAttribute="top" secondItem="xk7-z9-qll" secondAttribute="top" constant="8" id="RWg-hV-GnI"/>
                 <constraint firstItem="9Jb-5k-Gaj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="Ter-tQ-D9s"/>
+                <constraint firstItem="9Jb-5k-Gaj" firstAttribute="top" secondItem="xk7-z9-qll" secondAttribute="top" constant="8" id="Ybz-c3-N3O"/>
                 <constraint firstAttribute="bottom" secondItem="xk7-z9-qll" secondAttribute="bottom" constant="7" id="ZlH-kI-rpT"/>
+                <constraint firstItem="9Jb-5k-Gaj" firstAttribute="leading" secondItem="Ajs-mo-410" secondAttribute="trailing" constant="8" id="Znt-qG-bhk"/>
                 <constraint firstItem="POQ-Mw-EKF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="bgQ-Ah-WqL"/>
                 <constraint firstAttribute="bottom" secondItem="ZUN-9x-mbi" secondAttribute="bottom" constant="12" id="jdU-R9-C91"/>
                 <constraint firstItem="POQ-Mw-EKF" firstAttribute="top" secondItem="9Jb-5k-Gaj" secondAttribute="bottom" constant="2" id="jpG-23-TFD"/>
-                <constraint firstItem="9Jb-5k-Gaj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="qqj-a9-Unu"/>
                 <constraint firstAttribute="trailing" secondItem="ZUN-9x-mbi" secondAttribute="trailing" constant="18" id="sGJ-Pb-ASq"/>
                 <constraint firstItem="xk7-z9-qll" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="xZp-D9-bVM"/>
-                <constraint firstItem="xk7-z9-qll" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="z5G-J6-z45"/>
+                <constraint firstItem="xk7-z9-qll" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="z5G-J6-z45"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -79,7 +88,8 @@
         </view>
     </objects>
     <resources>
-        <image name="comment_background" width="750" height="147"/>
+        <image name="Triangle" width="96" height="42"/>
+        <image name="comment_background" width="1185" height="204"/>
         <image name="starIcon" width="26" height="24"/>
     </resources>
 </document>

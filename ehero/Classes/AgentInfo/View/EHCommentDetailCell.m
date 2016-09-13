@@ -52,7 +52,7 @@
     //文字高度计算
     CGRect rect = [self.textView.text boundingRectWithSize:CGSizeMake(300,9999) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil];
 
-    commentInfo.cellHeight = rect.size.height + 80;
+    commentInfo.cellHeight = rect.size.height + 90;
 }
 
 @end

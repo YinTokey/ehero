@@ -32,7 +32,10 @@
         NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
         NSLog(@"responString %@",responStr);
         [MBProgressHUD showSuccess:@"评论成功" toView:superVC.view];
-        [superVC.navigationController popViewControllerAnimated:YES];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [superVC.navigationController popViewControllerAnimated:YES];
+        });
+        
     } failure:^(NSError *error) {
         [MBProgressHUD showSuccess:@"评论失败" toView:superVC.view];
         NSLog(@"failed %@",error);
