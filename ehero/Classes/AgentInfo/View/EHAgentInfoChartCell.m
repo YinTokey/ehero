@@ -42,8 +42,10 @@
         cell.chart.radius = ScreenWidth / 3.0;
         cell.chartView.backgroundColor = [UIColor clearColor];
         [cell.chartView addSubview:cell.chart];
-//        NSLog(@"cell w = %f",cell.bounds.size.width);
-//        NSLog(@"screen w = %f",ScreenWidth);
+        
+        CGRect rect = [cell.average.text boundingRectWithSize:CGSizeMake(300,9999) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil];
+        
+        cell.average.frame = CGRectMake(ScreenWidth/2 - rect.size.width, cell.person.frame.origin.y, rect.size.width, 21);
     }
     
     return cell;

@@ -24,12 +24,11 @@
                             <constraint firstAttribute="width" secondItem="OVJ-jb-F1W" secondAttribute="height" multiplier="47:17" id="sG1-15-EeD"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="average" translatesAutoresizingMaskIntoConstraints="NO" id="QYu-A0-1gc">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="average" translatesAutoresizingMaskIntoConstraints="NO" id="QYu-A0-1gc">
                         <rect key="frame" x="13" y="14" width="47" height="17"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="47" id="Db1-vl-YWT"/>
-                            <constraint firstAttribute="height" constant="17" id="ll7-OU-7Qs"/>
-                            <constraint firstAttribute="width" secondItem="QYu-A0-1gc" secondAttribute="height" multiplier="47:17" id="zFI-9c-JQZ"/>
+                            <constraint firstAttribute="width" constant="47" id="T46-fy-1u7"/>
+                            <constraint firstAttribute="height" constant="17" id="ssA-De-5jD"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="史大伟能力值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqJ-S0-AiO">
@@ -43,12 +42,10 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我爱我家平均值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNh-NA-zRf">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="我爱我家平均值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNh-NA-zRf">
                         <rect key="frame" x="70" y="12" width="91" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="YNh-NA-zRf" secondAttribute="height" multiplier="13:3" id="Yt9-3Y-oU6"/>
-                            <constraint firstAttribute="height" constant="21" id="bAW-Nw-dJS"/>
-                            <constraint firstAttribute="width" constant="91" id="feK-mO-BpD"/>
+                            <constraint firstAttribute="height" constant="21" id="ljY-wo-plu"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,18 +57,18 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="YNh-NA-zRf" firstAttribute="leading" secondItem="QYu-A0-1gc" secondAttribute="trailing" constant="10" id="4KV-O7-UgO"/>
                     <constraint firstItem="OVJ-jb-F1W" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="25" id="4RN-bS-NC0"/>
-                    <constraint firstItem="YNh-NA-zRf" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-45" id="598-Xw-JhC"/>
-                    <constraint firstItem="QYu-A0-1gc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="Md5-k6-497"/>
+                    <constraint firstItem="OVJ-jb-F1W" firstAttribute="leading" secondItem="YNh-NA-zRf" secondAttribute="trailing" constant="7" id="DjL-cD-r8f"/>
                     <constraint firstItem="KqJ-S0-AiO" firstAttribute="leading" secondItem="OVJ-jb-F1W" secondAttribute="trailing" constant="7" id="O8c-Zb-Fhm"/>
+                    <constraint firstItem="bzH-JH-9fw" firstAttribute="top" secondItem="QYu-A0-1gc" secondAttribute="bottom" constant="8" symbolic="YES" id="Oc4-LZ-lqE"/>
+                    <constraint firstItem="QYu-A0-1gc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="RUa-UM-xtr"/>
                     <constraint firstItem="bzH-JH-9fw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TuS-Vj-29r"/>
                     <constraint firstItem="OVJ-jb-F1W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="WSh-Vn-d2Q"/>
                     <constraint firstItem="KqJ-S0-AiO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="X7F-Xx-6GP"/>
                     <constraint firstAttribute="trailing" secondItem="bzH-JH-9fw" secondAttribute="trailing" id="XFN-z4-w1Z"/>
-                    <constraint firstItem="bzH-JH-9fw" firstAttribute="top" secondItem="YNh-NA-zRf" secondAttribute="bottom" constant="6" id="eAF-pi-9CV"/>
                     <constraint firstAttribute="bottom" secondItem="bzH-JH-9fw" secondAttribute="bottom" id="ffN-R1-RVe"/>
-                    <constraint firstItem="YNh-NA-zRf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="yPK-ii-zt2"/>
+                    <constraint firstItem="YNh-NA-zRf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="rsN-sp-4Sw"/>
+                    <constraint firstItem="YNh-NA-zRf" firstAttribute="leading" secondItem="QYu-A0-1gc" secondAttribute="trailing" constant="7" id="z9S-9F-5nU"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
