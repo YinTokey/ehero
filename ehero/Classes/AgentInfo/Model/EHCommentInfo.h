@@ -32,4 +32,6 @@
 
 @property(nonatomic,assign)CGFloat cellHeight;
 
+- (void)getIdStringFromDictionary;
+
 @end

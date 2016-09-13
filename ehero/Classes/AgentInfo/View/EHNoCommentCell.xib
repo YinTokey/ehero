@@ -28,7 +28,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon5" translatesAutoresizingMaskIntoConstraints="NO" id="V7S-7h-cEx">
-                        <rect key="frame" x="147" y="56" width="27" height="30"/>
+                        <rect key="frame" x="147" y="53" width="27" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="27" id="V94-Rv-FSz"/>
                             <constraint firstAttribute="height" constant="30" id="kXp-Jv-hJK"/>
@@ -37,7 +37,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="V7S-7h-cEx" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="07W-TG-uD5"/>
-                    <constraint firstAttribute="bottom" secondItem="V7S-7h-cEx" secondAttribute="bottom" constant="15" id="CZc-qV-SBQ"/>
+                    <constraint firstAttribute="bottom" secondItem="V7S-7h-cEx" secondAttribute="bottom" constant="18" id="CZc-qV-SBQ"/>
                     <constraint firstItem="Hbv-J3-P4j" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="FQ9-fa-t2w"/>
                     <constraint firstItem="FTL-KW-ad5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="btC-rS-9f2"/>
                     <constraint firstAttribute="trailing" secondItem="FTL-KW-ad5" secondAttribute="trailing" constant="8" id="eih-SF-tbu"/>
@@ -51,7 +51,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="comment_background" width="411" height="68"/>
+        <image name="comment_background" width="750" height="147"/>
         <image name="icon5" width="87" height="99"/>
     </resources>
 </document>

@@ -10,7 +10,10 @@
 
 @implementation EHCommentInfo
 
-
+- (void)getIdStringFromDictionary{
+    NSDictionary *idDic = self._id;
+    self.idStr = [idDic objectForKey:@"$oid"];
+}
 
 
 @end

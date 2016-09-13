@@ -17,8 +17,8 @@
 #import "EHAgentInfoTableViewModel.h"
 #import "EHAgentInfoNetViewModel.h"
 #import "EHSkimedAgentViewModel.h"
-
-
+#import "MJExtension.h"
+#import "EHCommentInfo.h"
 #import <CoreTelephony/CTCall.h>
 #import <CoreTelephony/CTCallCenter.h>
 @interface EHAgentInfoController ()<EHVerifyViewDelegate>
@@ -73,10 +73,7 @@
         _agentInfoTableViewModel.averageInfo = averageInfo;
         
     }];
-    
-   // NSLog(@"class %@",[self.agentInfo.comments ]);
-    
-    
+
 }
 
 
@@ -219,31 +216,8 @@
 #pragma mark - 传递假数据
 - (void)transData{
 
-    //1.1 加载模型数据
-    EHCommentInfo *commentInfo = [[EHCommentInfo alloc]init];
-    commentInfo.author = @"15695951989";
-    commentInfo.text = @"这是第一条评论";
     
-    EHCommentInfo *commentInfo1 = [[EHCommentInfo alloc]init];
-    commentInfo1.text = @"这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论这是第二条评论三.1.类型的提升(比如char类型会自动提升到int,像这两个函数void test(int i)和void test(short s),如果你传入参数char c,那么编译器会自动调用void test(int i),因为char型别会被自动提升";
-    commentInfo1.author = @"15695951988";
-    
-    EHCommentInfo *commentInfo2 = [[EHCommentInfo alloc]init];
-    commentInfo2.text = @"三.1.类型的提升(比如char类型会自动提升到int,像这两个函数void test(int i)和void test(short s),如果你传入参数char c,那么编译器会自动调用void test(int i),因为char型别会被自动提升.";
-    commentInfo2.author = @"15695951989";
-    
-    EHCommentInfo *commentInfo3 = [[EHCommentInfo alloc]init];
-    commentInfo3.text = @"这是第四条这";
-    commentInfo3.author = @"15695951989";
-
-    [_agentInfoTableViewModel.commentsArray addObject:commentInfo];
-    [_agentInfoTableViewModel.commentsArray addObject:commentInfo1];
-    [_agentInfoTableViewModel.commentsArray addObject:commentInfo2];
-    [_agentInfoTableViewModel.commentsArray addObject:commentInfo3];
- 
-    
-    
-    
+    _agentInfoTableViewModel.commentsArray = [EHCommentInfo mj_objectArrayWithKeyValuesArray:_agentInfo.comments];
     
 }
 
