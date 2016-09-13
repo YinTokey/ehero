@@ -214,6 +214,7 @@
 }
 #pragma mark - 传递假数据
 - (void)transData{
+    /*
     //1.1 加载模型数据
     EHCommentInfo *commentInfo = [[EHCommentInfo alloc]init];
     commentInfo.author = @"15695951989";
@@ -235,7 +236,11 @@
     [_agentInfoTableViewModel.commentsArray addObject:commentInfo1];
     [_agentInfoTableViewModel.commentsArray addObject:commentInfo2];
     [_agentInfoTableViewModel.commentsArray addObject:commentInfo3];
-
+     */
+    
+    
+    
+    
 }
 
 @end

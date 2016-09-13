@@ -24,7 +24,7 @@
     }else if (indexPath.section == 2){
         return 30;
     }else{
-        if (self.commentsArray != nil) {
+        if ([self.commentsArray isKindOfClass:[NSArray class]] && self.commentsArray.count > 0) {
             EHCommentInfo *comment = self.commentsArray[indexPath.row];
             return comment.cellHeight;
         }else{
@@ -42,8 +42,13 @@
 #warning Incomplete implementation, return the number of rows
     if (section == 0 || section == 1 || section == 2) {
         return 1;
-    }else
-        return self.commentsArray.count;
+    }else{
+        if ([self.commentsArray isKindOfClass:[NSArray class]] && self.commentsArray.count > 0)  {
+            return self.commentsArray.count;
+        }else{
+            return 1;
+        }
+    }        
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -76,7 +81,7 @@
         EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
         return cell;
     }else{
-        if (self.commentsArray != nil) {
+        if ([self.commentsArray isKindOfClass:[NSArray class]] && self.commentsArray.count > 0)  {
             EHCommentDetailCell *cell = [EHCommentDetailCell commentDetailCellCellWithTableView:tableView];
             cell.commentInfo = self.commentsArray[indexPath.row];
             return cell;
