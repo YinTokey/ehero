@@ -79,6 +79,8 @@
         return cell;
     }else if (indexPath.section == 2){
         EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
+        cell.commentsArray = self.commentsArray;
+        [cell setCommentCounts];
         return cell;
     }else{
         if ([self.commentsArray isKindOfClass:[NSArray class]] && self.commentsArray.count > 0)  {

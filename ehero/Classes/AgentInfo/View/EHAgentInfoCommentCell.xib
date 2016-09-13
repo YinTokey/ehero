@@ -67,6 +67,11 @@
                     <constraint firstItem="Z5n-zP-RGe" firstAttribute="width" secondItem="hou-5N-x3Q" secondAttribute="width" id="zTg-Nt-tdN"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="highComment" destination="hou-5N-x3Q" id="N2d-ou-L5E"/>
+                <outlet property="lowComment" destination="Z5n-zP-RGe" id="yUk-7Z-W5E"/>
+                <outlet property="midComment" destination="WFB-hD-ql9" id="Jsa-5l-jau"/>
+            </connections>
             <point key="canvasLocation" x="222" y="100.5"/>
         </tableViewCell>
     </objects>

@@ -8,6 +8,8 @@
 
 #import "EHAgentInfoCommentCell.h"
 
+
+
 @implementation EHAgentInfoCommentCell
 
 - (void)awakeFromNib {
@@ -33,7 +35,7 @@
         cell.layer.masksToBounds = YES;
         cell.backgroundColor = RGB(241, 243, 245);
         cell.userInteractionEnabled = NO;
-        //cell.commentView.con
+        cell.commentsArray = [NSMutableArray array];
         
     }
     
@@ -41,7 +43,30 @@
     
 }
 
-
+- (void)setCommentCounts{
+    
+    NSInteger high = 0;
+    NSInteger mid = 0;
+    NSInteger low = 0;
+    
+    for (EHCommentInfo *commentInfo in self.commentsArray) {
+        if ([commentInfo.kind isEqualToString:@"好评"]) {
+            high++;
+        }
+        if ([commentInfo.kind isEqualToString:@"中评"]) {
+            mid++;
+        }
+        if ([commentInfo.kind isEqualToString:@"差评"]) {
+            low++;
+        }
+    }
+    NSString *highStr = [NSString stringWithFormat:@"好评（%ld）",high];
+    NSString *midStr = [NSString stringWithFormat:@"中评（%ld）",mid];
+    NSString *lowStr = [NSString stringWithFormat:@"差评（%ld）",low];
+    [self.highComment setTitle:highStr forState:UIControlStateNormal];
+    [self.midComment setTitle:midStr forState:UIControlStateNormal];
+    [self.lowComment setTitle:lowStr forState:UIControlStateNormal];
+}
 
 
 @end
