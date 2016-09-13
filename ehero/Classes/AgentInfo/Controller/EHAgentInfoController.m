@@ -217,7 +217,7 @@
         }
     };
 }
-#pragma mark - 传递假数据
+#pragma mark - 传递数据
 - (void)transData{
 
     

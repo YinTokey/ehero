@@ -16,14 +16,14 @@
 - (void)submitWithText:(NSString *)text
                   Kind:(NSString *)commentKind
                  idStr:(NSString *)idStr
-             superView:(UIView *)superView
+             community:(NSString *)community
+             superVC:(UIViewController *)superVC
 {
     NSDictionary *comment = @{@"author":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
+                              @"community":community,
                               @"kind":commentKind,
                               @"text":text};
-    
-//    EHAgentInfo *agentInfo = [self.searchResultArr firstObject];
-//    [agentInfo getIdStringFromDictionary];
+
     NSDictionary *param = @{@"agent_id":idStr,
                             @"comment":comment};
     
@@ -31,9 +31,10 @@
         NSLog(@"success %@",responseObj);
         NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
         NSLog(@"responString %@",responStr);
-        [MBProgressHUD showSuccess:@"评论成功" toView:superView];
+        [MBProgressHUD showSuccess:@"评论成功" toView:superVC.view];
+        [superVC.navigationController popViewControllerAnimated:YES];
     } failure:^(NSError *error) {
-        [MBProgressHUD showSuccess:@"评论失败" toView:superView];
+        [MBProgressHUD showSuccess:@"评论失败" toView:superVC.view];
         NSLog(@"failed %@",error);
     }];
 

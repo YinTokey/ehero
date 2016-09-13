@@ -127,13 +127,18 @@
     if ([EHCookieOperation setCookie]) {
         if (commentKind.length < 2) {
             [MBProgressHUD showNormalMessage:@"请选择评价级别" toView:self.view];
+        }else if(_communityTextField.text.length < 1){
+            [MBProgressHUD showNormalMessage:@"请选择带看小区" toView:self.view];
         }else{
-            EHAgentInfo *agentInfo = [_commentAgentNetViewModel.searchResultArr firstObject];
-            [agentInfo getIdStringFromDictionary];
+        //    EHAgentInfo *agentInfo = [_commentAgentNetViewModel.searchResultArr firstObject];
+            
+            [self.agentInfo getIdStringFromDictionary];
+
             [_commentAgentNetViewModel submitWithText:self.commentView.text
                                                  Kind:commentKind
-                                                idStr:agentInfo.idStr
-                                            superView:self.view];
+                                                idStr:self.agentInfo.idStr
+                                            community:self.communityTextField.text
+                                              superVC:self];
         }
         
     }else{

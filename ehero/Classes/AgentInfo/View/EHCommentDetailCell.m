@@ -34,9 +34,14 @@
     self.timeLabel.text = created_at;
 
     EHCommunityButton *comBtn = [EHCommunityButton communityButton:commentInfo.community];
-    comBtn.frame = CGRectMake( self.timeLabel.frame.origin.x - comBtn.realWidth  , self.timeLabel.frame.origin.y, comBtn.realWidth, 16);
+
     [self addSubview:comBtn];
-    
+    comBtn.sd_layout
+    .rightSpaceToView(self.timeLabel,2)
+    .widthIs(comBtn.realWidth)
+    .heightIs(16)
+    .bottomSpaceToView(self,12);
+  
     if ([commentInfo.kind isEqualToString:@"差评"]) {
         [self.starView setImage:[UIImage imageNamed:@"starIcon2"]];
     }

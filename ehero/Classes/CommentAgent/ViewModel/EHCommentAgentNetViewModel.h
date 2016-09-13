@@ -15,7 +15,8 @@
 - (void)submitWithText:(NSString *)text
                   Kind:(NSString *)commentKind
                  idStr:(NSString *)idStr
-             superView:(UIView *)superView;
+             community:(NSString *)community
+               superVC:(UIViewController *)superVC;
 
 - (void)searchWithURLString:(NSString *)urlString
                       Param:(NSDictionary *)param
