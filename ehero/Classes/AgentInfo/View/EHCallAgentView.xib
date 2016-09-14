@@ -88,7 +88,7 @@
     </objects>
     <resources>
         <image name="Phone" width="49" height="50"/>
-        <image name="agent" width="150" height="200"/>
+        <image name="agent" width="750" height="260"/>
         <image name="phone_left" width="113" height="19"/>
         <image name="phone_right" width="113" height="19"/>
     </resources>

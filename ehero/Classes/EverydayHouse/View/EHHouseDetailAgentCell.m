@@ -39,4 +39,31 @@
     
 }
 
+- (void)setHouseInfo:(EHHousesInfo *)houseInfo{
+    _houseInfo = houseInfo;
+    self.descriptions.text = _houseInfo.descriptions;
+    CGSize textSize = self.descriptions.contentSize;
+    houseInfo.cellHeight = textSize.height + 90;
+}
+
+- (void)setAgetnInfo:(EHAgentInfo *)agetnInfo{
+    _agetnInfo = agetnInfo;
+    self.name.text = _agetnInfo.name;
+    self.company.text = _agetnInfo.company;
+    self.district.text = _agetnInfo.district;
+    if (_agetnInfo.percentile) {
+        NSString *percentileStr = [NSString stringWithFormat:@"公司内排名 %@％",_agetnInfo.percentile];
+        self.percentile.text = percentileStr;
+    }else{
+      self.percentile.text = @"";
+    }
+    self.txView.image = [YTNetCommand downloadImageWithImgStr:_agetnInfo.tx
+                                          placeholderImageStr:@"Profile"
+                                                    imageView:_txView];
+
+    
+    
+}
+
+
 @end

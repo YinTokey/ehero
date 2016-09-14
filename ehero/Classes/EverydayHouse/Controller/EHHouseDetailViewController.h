@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "EHHousesInfo.h"
-
+#import "EHAgentInfo.h"
 
 @interface EHHouseDetailViewController : UITableViewController
 
 @property (nonatomic,strong) EHHousesInfo *houseInfo;
+@property (nonatomic,strong) EHAgentInfo *agentInfo;
 
 @end

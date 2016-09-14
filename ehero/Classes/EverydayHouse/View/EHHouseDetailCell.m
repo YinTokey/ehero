@@ -26,9 +26,7 @@
     EHHouseDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHHouseDetailCell" owner:nil options:nil] lastObject];
-        CGRect rect = [cell.floor.text boundingRectWithSize:CGSizeMake(300,9999) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil];
-        cell.floor.sd_layout
-        .widthIs(rect.size.width);
+
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     

@@ -22,29 +22,36 @@
     [super viewDidLoad];
     self.view.backgroundColor = RGB(241, 243, 245);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    NSLog(@"%@",_houseInfo.thumbs);
+    NSLog(@"%@",_agentInfo.company);
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 1;
+    return 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return ScreenHeight * 0.7958;
-   // return _houseInfo.cellHeight;
-  
+    if (indexPath.row == 0) {
+        return ScreenHeight * 0.7958;
+    }else{
+        EHHousesInfo *houseInfo = _houseInfo;
+        return houseInfo.cellHeight;
+    }
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//        EHHouseSourcesCell *cell = [EHHouseSourcesCell houseSourcesCellWithTableView:tableView];
-//        [cell setClickEvent];
-//        cell.houseInfo = _houseInfo;
-    EHHouseDetailCell *cell = [EHHouseDetailCell houseDetailCellWithTableView:tableView];
-    cell.houseInfo = _houseInfo;
-
-    return cell;
+    if (indexPath.row ==  0) {
+        EHHouseDetailCell *cell = [EHHouseDetailCell houseDetailCellWithTableView:tableView];
+        cell.houseInfo = _houseInfo;
+        return cell;
+    }else{
+        EHHouseDetailAgentCell *cell = [EHHouseDetailAgentCell houseDetailAgentCellWithTableView:tableView];
+        cell.houseInfo = _houseInfo;
+        cell.agetnInfo = _agentInfo;
+        return cell;
+    }
 }
 
 

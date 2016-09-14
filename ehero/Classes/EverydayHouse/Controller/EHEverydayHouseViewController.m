@@ -17,6 +17,8 @@
 #import "EHHouseSourcesCell.h"
 #import "EHHousesInfo.h"
 #import "EHHouseSummaryCell.h"
+#import "EHAgentInfo.h"
+
 
 @interface EHEverydayHouseViewController ()<UITextFieldDelegate,UIGestureRecognizerDelegate, WSDropMenuViewDataSource,WSDropMenuViewDelegate,houseSourcesDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *regionBtn;
@@ -26,7 +28,7 @@
 @property (nonatomic,strong) EHHousesInfo *houseInfo;
 
 @property (nonatomic,strong) NSMutableArray *houseInfoArray;
-
+@property (nonatomic,strong) NSMutableArray *agentInfoArray;
 
 @end
 
@@ -48,6 +50,13 @@
     return  _houseInfoArray;
 }
 
+- (NSMutableArray *)agentInfoArray{
+    if (_agentInfoArray == nil) {
+        _agentInfoArray = [NSMutableArray array];
+    }
+    return _agentInfoArray;
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -154,6 +163,7 @@
     [YTHttpTool get:houseSourcesUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
         //数据处理
         NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:nil] ;
+        self.agentInfoArray = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseArray];
         NSDictionary *dic = [responseArray firstObject];
         NSArray *houseArr = [dic objectForKey:@"houses"];//里面存字典，不是对象
         //后面是对于一些细节的处理
@@ -196,6 +206,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     EHHouseDetailViewController *VC = [[self storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
     VC.houseInfo = _houseInfoArray[indexPath.row];
+    VC.agentInfo = _agentInfoArray[indexPath.row];
     [self.navigationController pushViewController:VC animated:YES];
 }
 
