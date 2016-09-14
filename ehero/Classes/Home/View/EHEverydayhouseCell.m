@@ -61,8 +61,19 @@
 }
 
 - (void)setHouseInfo:(EHHousesInfo *)houseInfo{
-
-
+    _houseInfo = houseInfo;
+    self.titleLabel.text = _houseInfo.title;
+    self.price.text = _houseInfo.price;
+    NSString *modelText = [NSString stringWithFormat:@"%@  %@",_houseInfo.model,_houseInfo.toward];
+    self.model.text = modelText;
+    //处理图片下载
+    NSArray *imgUrlStrArray = [houseInfo.thumbs componentsSeparatedByString:@" "];
+    NSString *firstImgStr = [imgUrlStrArray firstObject];
+    self.imgView.image = [YTNetCommand downloadImageWithImgStr:firstImgStr placeholderImageStr:@"home_placeholder" imageView:self.imgView];
+    self.name.text = houseInfo.name;
+    NSString *updated_at = [_houseInfo.updated_at substringWithRange:NSMakeRange(0, 10)];
+    self.updated_at.text = updated_at;
+    
 }
 
 @end

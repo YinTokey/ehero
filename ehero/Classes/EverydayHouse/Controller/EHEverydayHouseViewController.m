@@ -177,7 +177,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
 
-    return _houseInfoArray.count+2;
+    return _houseInfoArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -188,7 +188,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     EHEverydayhouseCell *cell = [EHEverydayhouseCell everydayhouseCellWithTableView:tableView];
-   // cell.houseInfo = _houseInfoArray[indexPath.row];
+    cell.houseInfo = _houseInfoArray[indexPath.row];
     
     return cell;
 }
