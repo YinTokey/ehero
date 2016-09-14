@@ -60,8 +60,6 @@
     self.txView.image = [YTNetCommand downloadImageWithImgStr:_agetnInfo.tx
                                           placeholderImageStr:@"Profile"
                                                     imageView:_txView];
-
-    
     
 }
 

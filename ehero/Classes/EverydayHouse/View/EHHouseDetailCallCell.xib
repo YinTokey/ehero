@@ -26,6 +26,7 @@
                     <constraint firstItem="86i-BN-N5H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="quM-Jd-vPa"/>
                 </constraints>
             </tableViewCellContentView>
+            <point key="canvasLocation" x="139" y="216"/>
         </tableViewCell>
     </objects>
     <resources>

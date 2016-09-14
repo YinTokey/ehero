@@ -64,7 +64,7 @@
     _houseInfo = houseInfo;
     self.titleLabel.text = _houseInfo.title;
     self.price.text = _houseInfo.price;
-    NSString *modelText = [NSString stringWithFormat:@"%@  %@",_houseInfo.model,_houseInfo.toward];
+    NSString *modelText = [NSString stringWithFormat:@"%@  %@  %@",_houseInfo.model,_houseInfo.area,_houseInfo.toward];
     self.model.text = modelText;
     //处理图片下载
     NSArray *imgUrlStrArray = [houseInfo.thumbs componentsSeparatedByString:@" "];

@@ -10,7 +10,7 @@
 #import "EHHouseSourcesCell.h"
 #import "EHHouseDetailCell.h"
 #import "EHHouseDetailAgentCell.h"
-
+#import "EHHouseDetailCallCell.h"
 
 @interface EHHouseDetailViewController ()
 
@@ -28,15 +28,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 2;
+    return 3;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         return ScreenHeight * 0.7958;
-    }else{
+    }else if(indexPath.row == 1){
         EHHousesInfo *houseInfo = _houseInfo;
         return houseInfo.cellHeight;
+    }else{
+        return 36;
     }
     
 }
@@ -46,10 +48,13 @@
         EHHouseDetailCell *cell = [EHHouseDetailCell houseDetailCellWithTableView:tableView];
         cell.houseInfo = _houseInfo;
         return cell;
-    }else{
+    }else if (indexPath.row == 1){
         EHHouseDetailAgentCell *cell = [EHHouseDetailAgentCell houseDetailAgentCellWithTableView:tableView];
         cell.houseInfo = _houseInfo;
         cell.agetnInfo = _agentInfo;
+        return cell;
+    }else{
+        EHHouseDetailCallCell *cell = [EHHouseDetailCallCell houseDetailCallCellWithTableView:tableView];
         return cell;
     }
 }
