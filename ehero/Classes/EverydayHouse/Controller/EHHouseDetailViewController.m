@@ -8,6 +8,10 @@
 
 #import "EHHouseDetailViewController.h"
 #import "EHHouseSourcesCell.h"
+#import "EHHouseDetailCell.h"
+#import "EHHouseDetailAgentCell.h"
+
+
 @interface EHHouseDetailViewController ()
 
 @end
@@ -18,6 +22,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = RGB(241, 243, 245);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    NSLog(@"%@",_houseInfo.thumbs);
 }
 
 
@@ -27,15 +32,18 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return _houseInfo.cellHeight;
+    return ScreenHeight * 0.7958;
+   // return _houseInfo.cellHeight;
   
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-        EHHouseSourcesCell *cell = [EHHouseSourcesCell houseSourcesCellWithTableView:tableView];
+//        EHHouseSourcesCell *cell = [EHHouseSourcesCell houseSourcesCellWithTableView:tableView];
+//        [cell setClickEvent];
+//        cell.houseInfo = _houseInfo;
+    EHHouseDetailCell *cell = [EHHouseDetailCell houseDetailCellWithTableView:tableView];
+    cell.houseInfo = _houseInfo;
 
-        [cell setClickEvent];
-        cell.houseInfo = _houseInfo;
     return cell;
 }
 

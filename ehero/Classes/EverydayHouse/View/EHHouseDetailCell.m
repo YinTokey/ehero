@@ -26,13 +26,34 @@
     EHHouseDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHHouseDetailCell" owner:nil options:nil] lastObject];
-        cell.userInteractionEnabled = NO;
+        CGRect rect = [cell.floor.text boundingRectWithSize:CGSizeMake(300,9999) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil];
+        cell.floor.sd_layout
+        .widthIs(rect.size.width);
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     return cell;
     
 }
 
+- (void)setHouseInfo:(EHHousesInfo *)houseInfo{
+    _houseInfo = houseInfo;
+    self.titleLabel.text = _houseInfo.title;
+    self.price.text = _houseInfo.price;
+    NSString *updated_at = [_houseInfo.updated_at substringWithRange:NSMakeRange(0, 10)];
+    self.updated_at.text = updated_at;
+    self.model.text = _houseInfo.model;
+    self.area.text = _houseInfo.area;
+    self.toward.text = _houseInfo.toward;
+    self.floor.text = _houseInfo.floor;
+    self.location.text = _houseInfo.location;
+    //处理图片下载
+    NSArray *imgUrlStrArray = [_houseInfo.thumbs componentsSeparatedByString:@" "];
+    //设置轮播图片
+    self.cycleView.imageURLStringsGroup = imgUrlStrArray;
+    self.cycleView.autoScrollTimeInterval = 300;
+
+}
 
 
 @end
