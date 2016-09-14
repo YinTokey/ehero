@@ -69,8 +69,7 @@
     
     [self getHouseResources];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    //跳转到下一界面的返回按钮样式
-    self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
+    
 
     
 }
@@ -183,13 +182,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    return 73;
+    return 94;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    EHHouseSummaryCell *cell = [EHHouseSummaryCell houseSummaryCellWithTableView:tableView];
-    cell.houseInfo = _houseInfoArray[indexPath.row];
+    EHEverydayhouseCell *cell = [EHEverydayhouseCell everydayhouseCellWithTableView:tableView];
+   // cell.houseInfo = _houseInfoArray[indexPath.row];
     
     return cell;
 }

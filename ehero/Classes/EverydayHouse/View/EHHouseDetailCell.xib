@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house_detail_example" translatesAutoresizingMaskIntoConstraints="NO" id="l37-wd-tiv">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l37-wd-tiv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="l37-wd-tiv" secondAttribute="height" multiplier="320:141" id="P2s-CF-DTg"/>
@@ -313,6 +313,5 @@
     <resources>
         <image name="Line1" width="713" height="1"/>
         <image name="houseDetail_btn" width="220" height="151"/>
-        <image name="house_detail_example" width="29" height="16"/>
     </resources>
 </document>

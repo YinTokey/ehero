@@ -222,7 +222,7 @@
     self.moderateComment.selected = NO;
     self.negativeComment.selected = NO;
     self.highPraise.selected = YES;
-    commentKind = @"好评";
+    commentKind = @"nice";
 }
 
 - (IBAction)moderateClick:(id)sender {
@@ -230,7 +230,7 @@
     self.highPraise.selected = NO;
     self.negativeComment.selected = NO;
     self.moderateComment.selected = YES;
-    commentKind = @"中评";
+    commentKind = @"common";
 }
 
 - (IBAction)negativeClick:(id)sender {
@@ -238,6 +238,6 @@
     self.moderateComment.selected = NO;
     self.highPraise.selected = NO;
     self.negativeComment.selected = YES;
-    commentKind = @"差评";
+    commentKind = @"bad";
 }
 @end

@@ -7,9 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EHHousesInfo.h"
+
 
 @interface EHEverydayhouseCell : UITableViewCell
 
 + (instancetype)everydayhouseCellWithTableView:(UITableView *)tableView;
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *model;
+
+
+
+@property (nonatomic,strong) EHHousesInfo *houseInfo;
+
+
 
 @end
