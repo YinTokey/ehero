@@ -69,7 +69,7 @@
     
     [self getHouseResources];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+    self.view.backgroundColor = RGB(241, 243, 245);
 
     
 }
@@ -177,12 +177,12 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
 
-    return _houseInfoArray.count;
+    return _houseInfoArray.count+2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    return 94;
+    return 97;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

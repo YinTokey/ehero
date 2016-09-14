@@ -50,13 +50,13 @@
     NSInteger low = 0;
     
     for (EHCommentInfo *commentInfo in self.commentsArray) {
-        if ([commentInfo.kind isEqualToString:@"好评"]) {
+        if ([commentInfo.kind isEqualToString:@"nice"]) {
             high++;
         }
-        if ([commentInfo.kind isEqualToString:@"中评"]) {
+        if ([commentInfo.kind isEqualToString:@"common"]) {
             mid++;
         }
-        if ([commentInfo.kind isEqualToString:@"差评"]) {
+        if ([commentInfo.kind isEqualToString:@"bad"]) {
             low++;
         }
     }

@@ -53,10 +53,10 @@
     .heightIs(16)
     .bottomSpaceToView(self,12);
   
-    if ([commentInfo.kind isEqualToString:@"差评"]) {
+    if ([commentInfo.kind isEqualToString:@"bad"]) {
         [self.starView setImage:[UIImage imageNamed:@"starIcon2"]];
     }
-    if ([commentInfo.kind isEqualToString:@"中评"]) {
+    if ([commentInfo.kind isEqualToString:@"common"]) {
         self.starView.hidden = YES;
     }
     
