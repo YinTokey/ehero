@@ -13,7 +13,10 @@
 
 @property (nonatomic,strong) UIViewController *superVC;
 
-- (void)callAgentWithIdStr:(NSString *)idStr code:(NSString *)code failure:(void (^)())failure;
+- (void)callAgentWithIdStr:(NSString *)idStr
+                      code:(NSString *)code
+                   success:(void(^)())success
+                   failure:(void (^)())failure;
 
 - (void)getAverageInfo:(void(^)(EHAverageInfo *averageInfo))success;
 

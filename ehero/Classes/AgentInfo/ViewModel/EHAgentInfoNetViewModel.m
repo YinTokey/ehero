@@ -10,7 +10,10 @@
 #import <MJExtension.h>
 @implementation EHAgentInfoNetViewModel
 
-- (void)callAgentWithIdStr:(NSString *)idStr code:(NSString *)code failure:(void (^)())failure{
+- (void)callAgentWithIdStr:(NSString *)idStr
+                      code:(NSString *)code
+                   success:(void(^)())success
+                   failure:(void (^)())failure{
     NSDictionary *param = @{@"from":[[NSUserDefaults standardUserDefaults]objectForKey:@"userPhoneNumber"],
                             @"id":idStr,
                             @"code":code
@@ -18,12 +21,12 @@
     [MBProgressHUD showMessage:@"正在接通电话中..."];
     [YTHttpTool post:callAgentUrlStr params:param success:^(NSURLSessionDataTask *task, id responseObj) {
         NSLog(@"接通成功  %@",responseObj);
-        
+        success();
     } failure:^(NSError *error) {
         failure();
        // [modal hide:YES];
-        [MBProgressHUD hideHUD];
-        [MBProgressHUD showError:@"拨打失败"];
+        [MBProgressHUD hideHUDForView:_superVC.view];
+        [MBProgressHUD showError:@"拨打失败" toView:_superVC.view];
         NSLog(@"failed %@",error);
     }];
     

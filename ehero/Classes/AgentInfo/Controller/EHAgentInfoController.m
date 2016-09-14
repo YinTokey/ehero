@@ -108,10 +108,18 @@
     //如果有cookie
     if ([EHCookieOperation setCookie]) {
         NSLog(@"有cookie,设置成功，不用再验证");
+    
         [self showCallAgentView];
-        [_agentInfoNetViewModel callAgentWithIdStr:self.agentInfo.idStr code:@"" failure:^{
+      //  [MBProgressHUD showMessage:@"正在接通电话中..." toView:self.view];
+        [_agentInfoNetViewModel callAgentWithIdStr:self.agentInfo.idStr code:@"" success:^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUD];
+                [_modal hide:YES];
+            });
+        } failure:^{
             [_modal hide:YES];
-         }];
+        }];
+
     }else{
         //验证界面
         verifyView = [EHVerifyView initVerifyView];
@@ -125,13 +133,17 @@
 # pragma mark - EHVerifyViewDelegate
 - (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code{
     [_modal hide:YES];
-    
-    [self showCallAgentView];
-    
+
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_modal showContentView:callAgentView animated:YES];
+   
+           [self showCallAgentView];
         
-        [_agentInfoNetViewModel callAgentWithIdStr:self.agentInfo.idStr code:code failure:^{
+        [_agentInfoNetViewModel callAgentWithIdStr:self.agentInfo.idStr code:code success:^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUD];
+                [_modal hide:YES];
+            });
+        } failure:^{
             [_modal hide:YES];
         }];
     });
@@ -208,6 +220,7 @@
 {
     callCenter = [[CTCallCenter alloc] init];
     __weak STModal *weakmodal = self.modal;
+
     callCenter.callEventHandler = ^(CTCall* call) {
         if([call.callState isEqualToString:CTCallStateIncoming])
         {

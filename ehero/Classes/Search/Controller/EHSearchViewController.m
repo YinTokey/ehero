@@ -124,10 +124,10 @@
     
     NSString *keyword = self.mysearchBar.text;
     //搜索地区
-//    NSDictionary *param =@{@"major":self.major,
-//                           @"arg":keyword};
-    NSDictionary *param =@{@"major":@"agents",
-                           @"arg":@"庞存辉"};
+    NSDictionary *param =@{@"major":self.major,
+                           @"arg":keyword};
+//    NSDictionary *param =@{@"major":@"agents",
+//                           @"arg":@"庞存辉"};
     [self.tableViewModel searchWithURLString:searchAreaUrlStr Param:param];
     
 }
