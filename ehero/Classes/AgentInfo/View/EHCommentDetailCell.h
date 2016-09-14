@@ -14,7 +14,8 @@
 @interface EHCommentDetailCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *background;
 @property (weak, nonatomic) IBOutlet UILabel *authoer;
-@property (weak, nonatomic) IBOutlet UILabel *textView;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *starView;
@@ -31,6 +32,6 @@
 
 + (instancetype)commentDetailCellCellWithTableView:(UITableView *)tableView;
 
-
+@property (nonatomic,assign) CGRect rect;
 
 @end

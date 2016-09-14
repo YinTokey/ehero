@@ -26,9 +26,20 @@
     return cell;
 }
 
+//使cell一定成为第一响应者
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+//支持的方法
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+    return NO;
+}
+
 - (void)setCommentInfo:(EHCommentInfo *)commentInfo{
     _commentInfo = commentInfo;
     self.textView.text = commentInfo.text;
+
     self.authoer.text = commentInfo.author;
     NSString *created_at = [commentInfo.created_at substringWithRange:NSMakeRange(0, 10)];
     self.timeLabel.text = created_at;
@@ -49,10 +60,17 @@
         self.starView.hidden = YES;
     }
     
+    UIView *bottomView = self.textView;
+    [self setupAutoHeightWithBottomView:bottomView bottomMargin:10];
     //文字高度计算
-    CGRect rect = [self.textView.text boundingRectWithSize:CGSizeMake(300,9999) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil];
 
-    commentInfo.cellHeight = rect.size.height + 90;
+    CGSize textSize = self.textView.contentSize;
+
+    commentInfo.cellHeight = textSize.height + 60;
+    
+    self.textView.sd_layout
+    .heightIs(textSize.height );
+
 }
 
 @end

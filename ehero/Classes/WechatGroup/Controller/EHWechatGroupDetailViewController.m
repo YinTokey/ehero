@@ -87,7 +87,7 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
             if (error) {
                 [MBProgressHUD showError:@"保存失败" toView:self.view];
             } else {
-                [MBProgressHUD showError:@"保存成功" toView:self.view];
+                [MBProgressHUD showSuccess:@"保存成功" toView:self.view];
             }
         });
     }];

@@ -51,7 +51,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="comment_background" width="750" height="147"/>
+        <image name="comment_background" width="1185" height="204"/>
         <image name="icon5" width="87" height="99"/>
     </resources>
 </document>

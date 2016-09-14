@@ -27,12 +27,16 @@
         if ([self.commentsArray isKindOfClass:[NSArray class]] && self.commentsArray.count > 0) {
             EHCommentInfo *comment = self.commentsArray[indexPath.row];
             return comment.cellHeight;
+            
         }else{
             return 102;
         }
         
     }
 }
+
+
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 4;
@@ -87,6 +91,7 @@
         if ([self.commentsArray isKindOfClass:[NSArray class]] && self.commentsArray.count > 0)  {
             EHCommentDetailCell *cell = [EHCommentDetailCell commentDetailCellCellWithTableView:tableView];
             cell.commentInfo = self.commentsArray[indexPath.row];
+            
             return cell;
         }else{
             EHNoCommentCell *cell = [EHNoCommentCell noCommentCellCellWithTableView:tableView];
@@ -94,6 +99,16 @@
         }
     }
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 3) {
+        EHCommentDetailCell *cell = [EHCommentDetailCell commentDetailCellCellWithTableView:tableView];
+        cell.commentInfo = self.commentsArray[indexPath.row];
+        NSLog(@"label height %f",cell.rect.size.height);
+        NSLog(@"cell height %f",cell.frame.size.height);
+    }
+}
+
 
 #pragma mark - 雷达图代理
 - (NSInteger)numberOfStepForRadarChart:(LQRadarChart *)radarChart

@@ -22,4 +22,6 @@
 @property (nonatomic,strong) id superVC;
 @property (nonatomic, strong) NSMutableArray *commentsArray;
 
+@property (nonatomic, strong) UITableViewCell *prototypeCell;
+
 @end
