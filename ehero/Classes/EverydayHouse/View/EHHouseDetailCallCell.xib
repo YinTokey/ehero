@@ -17,6 +17,9 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86i-BN-N5H">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
                         <state key="normal" backgroundImage="houseDetail_call"/>
+                        <connections>
+                            <action selector="callClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EoA-x9-bDe"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

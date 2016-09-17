@@ -207,6 +207,8 @@
     EHHouseDetailViewController *VC = [[self storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
     VC.houseInfo = _houseInfoArray[indexPath.row];
     VC.agentInfo = _agentInfoArray[indexPath.row];
+    [VC.agentInfo getIdStringFromDictionary];
+
     [self.navigationController pushViewController:VC animated:YES];
 }
 

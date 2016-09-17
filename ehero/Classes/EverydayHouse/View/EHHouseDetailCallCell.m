@@ -21,6 +21,13 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)callClick:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(callClick:)]) {
+        [self.delegate callClick:self];
+    }
+
+}
+
 + (instancetype)houseDetailCallCellWithTableView:(UITableView *)tableView{
     static NSString *reuseId = @"reuseHouseDetailCallCell";
     EHHouseDetailCallCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
