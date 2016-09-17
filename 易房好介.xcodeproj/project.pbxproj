@@ -31,6 +31,7 @@
 		04634AC11D753100003C0CFF /* EHCommentAgentDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04634AC01D753100003C0CFF /* EHCommentAgentDelegate.m */; };
 		04634AC71D753810003C0CFF /* EHStorageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04634AC61D753810003C0CFF /* EHStorageViewModel.m */; };
 		0463EB0B1D5705B100C75B36 /* EHRegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463EB0A1D5705B100C75B36 /* EHRegularExpression.m */; };
+		046448D61D8DC975006AE903 /* UIImage+Cut.m in Sources */ = {isa = PBXBuildFile; fileRef = 046448D51D8DC975006AE903 /* UIImage+Cut.m */; };
 		0465688A1D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 046568871D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		0465688B1D4B39DE001C9851 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 046568891D4B39DE001C9851 /* UIView+SDAutoLayout.m */; };
 		04657FD21D32473200914495 /* EHEverydayHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04657FD11D32473200914495 /* EHEverydayHouseViewController.m */; };
@@ -224,6 +225,8 @@
 		04634AC61D753810003C0CFF /* EHStorageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHStorageViewModel.m; sourceTree = "<group>"; };
 		0463EB091D5705B100C75B36 /* EHRegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHRegularExpression.h; sourceTree = "<group>"; };
 		0463EB0A1D5705B100C75B36 /* EHRegularExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRegularExpression.m; sourceTree = "<group>"; };
+		046448D41D8DC975006AE903 /* UIImage+Cut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Cut.h"; sourceTree = "<group>"; };
+		046448D51D8DC975006AE903 /* UIImage+Cut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Cut.m"; sourceTree = "<group>"; };
 		046568851D4B39DE001C9851 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
 		046568861D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
 		046568871D4B39DE001C9851 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
@@ -1147,6 +1150,8 @@
 				047E478A1D7FBB2800B017EC /* NSString+Extension.m */,
 				047E478B1D7FBB2800B017EC /* UIImage+Extensiton.h */,
 				047E478C1D7FBB2800B017EC /* UIImage+Extensiton.m */,
+				046448D41D8DC975006AE903 /* UIImage+Cut.h */,
+				046448D51D8DC975006AE903 /* UIImage+Cut.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -2096,6 +2101,7 @@
 				04B857281D5731D100BEA6CB /* EHSkimedAgentsViewController.m in Sources */,
 				0443081F1D756C3100166036 /* EHMailViewModel.m in Sources */,
 				04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */,
+				046448D61D8DC975006AE903 /* UIImage+Cut.m in Sources */,
 				042558FD1D8260FE009BED24 /* EHChangpingViewController.m in Sources */,
 				04C217B01D7A6FEE00908935 /* EHCollectedTipsController.m in Sources */,
 				044308191D75651700166036 /* EHOfficialViewModel.m in Sources */,
