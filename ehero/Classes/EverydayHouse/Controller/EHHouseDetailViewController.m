@@ -59,7 +59,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
-        return ScreenHeight * 0.7958;
+        return ScreenHeight * 0.7940;
     }else if(indexPath.row == 1){
         EHHousesInfo *houseInfo = _houseInfo;
         return houseInfo.cellHeight;
