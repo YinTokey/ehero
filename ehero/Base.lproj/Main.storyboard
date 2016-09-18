@@ -427,24 +427,42 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="ago-fS-Pz1">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="aFf-G7-PGK">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gKY-ud-Gul">
-                                <rect key="frame" x="266" y="11" width="38" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="商圈" image="home_two">
-                                    <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="regionClick:" destination="kZa-Qi-3aT" eventType="touchUpInside" id="p8d-1p-vmj"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="aFf-G7-PGK">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gKY-ud-Gul" customClass="EHSiteButton">
+                                    <rect key="frame" x="266" y="11" width="38" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="商圈" image="home_two">
+                                        <color key="titleColor" red="0.24313725489999999" green="0.65098039220000004" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="regionClick:" destination="kZa-Qi-3aT" eventType="touchUpInside" id="p8d-1p-vmj"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="RWx-iD-g6H">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bRr-at-PcA">
+                                    <rect key="frame" x="220" y="11" width="38" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="买卖" image="home_two">
+                                        <color key="titleColor" red="0.24313725489999999" green="0.65098039220000004" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="selected" title="租赁" image="home_two"/>
+                                    <connections>
+                                        <action selector="typeBtnClick:" destination="kZa-Qi-3aT" eventType="touchUpInside" id="ByU-WY-mjd"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="regionBarButtom" destination="aFf-G7-PGK" id="aVd-Ii-YiC"/>
                         <outlet property="regionBtn" destination="gKY-ud-Gul" id="v0I-ES-YOp"/>
+                        <outlet property="typeBarButton" destination="RWx-iD-g6H" id="iSg-4R-QGA"/>
+                        <outlet property="typeButton" destination="bRr-at-PcA" id="KHU-uO-hMN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CF7-oY-VFC" userLabel="First Responder" sceneMemberID="firstResponder"/>

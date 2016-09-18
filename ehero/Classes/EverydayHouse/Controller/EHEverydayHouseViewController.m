@@ -24,6 +24,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *regionBtn;
 - (IBAction)regionClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *regionBarButtom;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *typeBarButton;
+@property (weak, nonatomic) IBOutlet UIButton *typeButton;
+- (IBAction)typeBtnClick:(id)sender;
+
+
 @property (nonatomic,strong) NSArray *districtsObjArray;
 @property (nonatomic,strong) EHHousesInfo *houseInfo;
 
@@ -41,6 +46,12 @@
     NSInteger hideCellsFlag;
     BOOL extendCellFlag;
     NSIndexPath *selIndexPath;
+
+    BOOL selectedFlag;
+    NSString *type;
+
+    
+    
 }
 
 - (NSMutableArray *)houseInfoArray{
@@ -110,7 +121,7 @@
 
 - (void)setupNavBar{
     searchbar = [[EHHomeSearchBar alloc]initWithFrame:CGRectMake(20, 20, ScreenWidth, 30)];
-    searchbar.placeholder = @"搜索地区或商圈房源";
+    searchbar.placeholder = @"  搜索地区或商圈房源";
     searchbar.clipsToBounds = YES;
     searchbar.delegate = self;
     self.navigationItem.titleView = searchbar;
@@ -134,7 +145,7 @@
     dropMenu.delegate = self;
     [self.view addSubview:dropMenu];
     self.navigationItem.leftBarButtonItems = @[negativeSpacer1,backItem,_regionBarButtom];
-    
+    self.navigationItem.rightBarButtonItems = @[negativeSpacer1,_typeBarButton];
 }
 
 - (void)NavPop{
@@ -270,4 +281,16 @@
     [self.tableView reloadData];
 }
 
+- (IBAction)typeBtnClick:(id)sender {
+    selectedFlag =! selectedFlag;
+    self.typeButton.selected = YES;
+    if (selectedFlag) {
+        self.typeButton.selected = YES;
+        type = @"rent";
+    }else{
+        self.typeButton.selected = NO;
+        type = @"sale";
+    }
+    
+}
 @end
