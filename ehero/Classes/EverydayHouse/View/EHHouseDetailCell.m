@@ -49,7 +49,7 @@
     NSArray *imgUrlStrArray = [_houseInfo.thumbs componentsSeparatedByString:@" "];
     //设置轮播图片
     self.cycleView.imageURLStringsGroup = imgUrlStrArray;
-    self.cycleView.autoScrollTimeInterval = 300;
+    self.cycleView.autoScrollTimeInterval = 4;
 
 }
 
