@@ -10,6 +10,8 @@
 		023B8C388E74C4FC1DB3EC5E1773C4DF /* ImageError@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3A10E5D1C369DB406D5F80525B9C46 /* ImageError@3x.png */; };
 		026CCF569A2125FCB0EE8F152731259E /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B61D17BDB19E8F84BA71F8E5618D0F /* NSObject+MJClass.m */; };
 		029BB11811FE566FBAA0E05DADD096C2 /* RACSubscriber+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EDC0348246D7CBF46A1701575FCDF4B /* RACSubscriber+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		043F7AC51D8E8EB3001DDE48 /* UIImage+Cut.h in Headers */ = {isa = PBXBuildFile; fileRef = 043F7AC31D8E8EB3001DDE48 /* UIImage+Cut.h */; };
+		043F7AC61D8E8EB3001DDE48 /* UIImage+Cut.m in Sources */ = {isa = PBXBuildFile; fileRef = 043F7AC41D8E8EB3001DDE48 /* UIImage+Cut.m */; };
 		0497DC7A6B311342BEDCF75A8BF5706E /* OpenShare+QQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 990A8CC7968E5EECE26ACAB8BF3BCD64 /* OpenShare+QQ.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		0498B98EB393D71314953683060EFD58 /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = C1376759E7C8F3F326728A4E201D7A4E /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05901DE355E91F2F5E6E0140215E6B93 /* RACScheduler+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = B8619A3428401DEB67223B1FB8F8FE86 /* RACScheduler+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -472,6 +474,8 @@
 		0214817BE55F64EBCF9812129F59A630 /* MWGridViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWGridViewController.m; path = Pod/Classes/MWGridViewController.m; sourceTree = "<group>"; };
 		023E6F8F701C580FCD70A20811569EBB /* RACDisposable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACDisposable.h; path = ReactiveCocoa/RACDisposable.h; sourceTree = "<group>"; };
 		033C60981D014CBD83060FBD3884E672 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		043F7AC31D8E8EB3001DDE48 /* UIImage+Cut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Cut.h"; sourceTree = "<group>"; };
+		043F7AC41D8E8EB3001DDE48 /* UIImage+Cut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Cut.m"; sourceTree = "<group>"; };
 		044674DE96D75C8E8156155D37032C95 /* UIButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "SDWebImage/UIButton+WebCache.m"; sourceTree = "<group>"; };
 		046AE3248C72F8EFF3B404E9DDB9E8B5 /* NSObject+RACDeallocating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+RACDeallocating.h"; path = "ReactiveCocoa/NSObject+RACDeallocating.h"; sourceTree = "<group>"; };
 		04FF54C470344A9F6BFD4B1FA8F28A3A /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
@@ -1571,6 +1575,8 @@
 				E3D7A8B0BDFFF94E366A6E52BF27C53F /* UIView+SDExtension.h */,
 				2D122638A5114B9A3D61E35C7326AC7F /* UIView+SDExtension.m */,
 				428EF020995DCC418BCAB62635E2AA55 /* Support Files */,
+				043F7AC31D8E8EB3001DDE48 /* UIImage+Cut.h */,
+				043F7AC41D8E8EB3001DDE48 /* UIImage+Cut.m */,
 			);
 			path = SDCycleScrollView;
 			sourceTree = "<group>";
@@ -1590,6 +1596,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043F7AC51D8E8EB3001DDE48 /* UIImage+Cut.h in Headers */,
 				0C1A29BFF65C6F2801B1BE0058718A19 /* DACircularProgressView.h in Headers */,
 				0F43FEACB0C18DD4C724B1655AF47728 /* DALabeledCircularProgressView.h in Headers */,
 			);
@@ -2188,6 +2195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043F7AC61D8E8EB3001DDE48 /* UIImage+Cut.m in Sources */,
 				5F4AECEF356E35995112F9167B219AD6 /* DACircularProgress-dummy.m in Sources */,
 				82AC9861A9FE0BEFEC04D31C3B05ABB2 /* DACircularProgressView.m in Sources */,
 				EF9006327AFFDBED3FD589DA04E2D36A /* DALabeledCircularProgressView.m in Sources */,

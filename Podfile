@@ -3,7 +3,7 @@ target "易房好介" do
 pod 'MJExtension'
 pod 'SDWebImage','~>3.8'
 #pod 'MJRefresh'
-pod 'SDCycleScrollView'
+pod 'SDCycleScrollView','~>1.65'
 pod 'OpenShare'
 #pod 'SVProgressHUD'
 pod 'MBProgressHUD','~>0.9.2' 

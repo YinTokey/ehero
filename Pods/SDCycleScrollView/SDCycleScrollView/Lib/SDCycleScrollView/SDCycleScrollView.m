@@ -35,7 +35,9 @@
 #import "TAPageControl.h"
 #import "UIImageView+WebCache.h"
 #import "SDImageCache.h"
+#import "UIImage+Cut.h"
 
+#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
 #define kCycleScrollViewInitialPageControlDotSize CGSizeMake(10, 10)
 
 NSString * const ID = @"cycleCell";
@@ -544,7 +546,38 @@ NSString * const ID = @"cycleCell";
     
     if (!self.onlyDisplayText && [imagePath isKindOfClass:[NSString class]]) {
         if ([imagePath hasPrefix:@"http"]) {
-            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
+            //[cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
+            //获取原图
+            UIImageView *imgV = [[UIImageView alloc]init];
+            [imgV sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
+            CGFloat originImgH = imgV.image.size.height;
+            CGFloat originImgW = imgV.image.size.width;
+            CGFloat a = ScreenWidth / originImgW;
+            CGFloat newImgW = originImgW * a;
+            CGFloat newImgH = originImgH * a;
+            NSLog(@"newImgH %f",newImgH);
+            UIImage *newImg = [[UIImage alloc]init];
+            if (newImgH > cell.imageView.bounds.size.height) {
+                CGFloat offset = newImgH - cell.imageView.bounds.size.height;
+                NSLog(@"offset %f",offset);
+               // newImg = [UIImage rectImageWithImage:imgV.image clipRect:CGRectMake(0, 0, cell.imageView.frame.size.width*2 , cell.imageView.bounds.size.height*2)];
+                newImg = [UIImage croppIngimageByImageName:imgV.image toRect:CGRectMake(0, offset/2, cell.imageView.frame.size.width*2 , cell.imageView.bounds.size.height *2)];
+                cell.imageView.image = newImg;
+                cell.imageView.backgroundColor = [UIColor redColor];
+                NSLog(@"newImg w=%f h=%f",newImg.size.width,newImg.size.height);
+            }else{
+                cell.imageView.image = imgV.image;
+            }
+            
+          //  cell.imageView.backgroundColor = [UIColor redColor];
+            NSLog(@"a=%f",a);
+            NSLog(@"imgVh %f ,imgVw %f",originImgH,originImgW);
+            NSLog(@"originH %f, originW %f",imgV.image.size.height,imgV.image.size.width);
+            NSLog(@"cell imageView w = %f,cell imageView h = %f",cell.imageView.bounds.size.width,cell.imageView.bounds.size.height);
+            
+            
+            
+            
         } else {
             UIImage *image = [UIImage imageNamed:imagePath];
             if (!image) {

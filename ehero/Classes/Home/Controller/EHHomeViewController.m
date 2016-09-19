@@ -196,6 +196,10 @@
         [MBProgressHUD hideHUDForView:self.view];
         
     } failure:^(NSError *error) {
+        self.tableView.dataSource = _homeTableViewModel;
+        self.tableView.delegate = _homeTableViewModel;
+        [MBProgressHUD hideHUDForView:self.view];
+        [MBProgressHUD showError:@"数据请求失败"];
         NSLog(@"failure");
     }];
 }
