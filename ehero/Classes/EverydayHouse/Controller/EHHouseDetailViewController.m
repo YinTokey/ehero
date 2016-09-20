@@ -22,6 +22,8 @@
 
 @property (nonatomic,strong) EHAgentInfoNetViewModel *agentInfoNetViewModel;
 
+@property (nonatomic,strong) NSTimer *timer;
+
 @end
 
 @implementation EHHouseDetailViewController
@@ -49,8 +51,9 @@
     
     NSLog(@"%@",_agentInfo.company);
 
-    
+   // self.timer = [NSTimer scheduledTimerWithTimeInterval:2 invocation:@selector(reloadTable) repeats:NO];
 }
+
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

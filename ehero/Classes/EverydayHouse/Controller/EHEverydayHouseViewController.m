@@ -92,6 +92,7 @@
     self.view.backgroundColor = RGB(241, 243, 245);
 
     
+    
 }
 
 - (void)addGesture{

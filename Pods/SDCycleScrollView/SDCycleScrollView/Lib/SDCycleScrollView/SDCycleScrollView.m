@@ -386,7 +386,7 @@ NSString * const ID = @"cycleCell";
 }
 
 - (void)reloadcollectionview{
-   // [self.mainView reloadData];
+    [self.mainView reloadData];
 }
 
 - (void)setupPageControl
@@ -624,6 +624,7 @@ NSString * const ID = @"cycleCell";
     if (self.clickItemOperationBlock) {
         self.clickItemOperationBlock(indexPath.item % self.imagePathsGroup.count);
     }
+  
    
 }
 
@@ -650,6 +651,7 @@ NSString * const ID = @"cycleCell";
     if (self.autoScroll) {
         [self invalidateTimer];
     }
+   
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
