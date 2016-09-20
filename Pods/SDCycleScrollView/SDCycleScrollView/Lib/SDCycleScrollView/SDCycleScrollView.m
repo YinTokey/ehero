@@ -36,6 +36,7 @@
 #import "UIImageView+WebCache.h"
 #import "SDImageCache.h"
 #import "UIImage+Cut.h"
+#import <ReactiveCocoa.h>
 
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width
 #define kCycleScrollViewInitialPageControlDotSize CGSizeMake(10, 10)
@@ -56,6 +57,10 @@ NSString * const ID = @"cycleCell";
 
 @property (nonatomic, assign) NSInteger networkFailedRetryCount;
 
+@property (nonatomic,assign) CGFloat imgHflag;
+
+@property (nonatomic, weak) NSTimer *timer2;
+
 @end
 
 @implementation SDCycleScrollView
@@ -73,6 +78,9 @@ NSString * const ID = @"cycleCell";
 {
     [self initialization];
     [self setupMainView];
+    [RACObserve(self, imgHflag)subscribeNext:^(id x) {
+        [_mainView reloadData];
+    }];
 }
 
 - (void)initialization
@@ -94,6 +102,7 @@ NSString * const ID = @"cycleCell";
     _bannerImageViewContentMode = UIViewContentModeScaleToFill;
     
     self.backgroundColor = [UIColor lightGrayColor];
+
     
 }
 
@@ -147,6 +156,8 @@ NSString * const ID = @"cycleCell";
     mainView.scrollsToTop = NO;
     [self addSubview:mainView];
     _mainView = mainView;
+    
+    
 }
 
 
@@ -358,12 +369,24 @@ NSString * const ID = @"cycleCell";
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.autoScrollTimeInterval target:self selector:@selector(automaticScroll) userInfo:nil repeats:YES];
     _timer = timer;
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    
+    self.timer2 = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(reloadcollectionview) userInfo:nil repeats:YES];
+//    _timer2 = timer2;
+  
+    [[NSRunLoop mainRunLoop] addTimer:self.timer2 forMode:NSRunLoopCommonModes];
+    
+    
 }
 
 - (void)invalidateTimer
 {
     [_timer invalidate];
     _timer = nil;
+    
+}
+
+- (void)reloadcollectionview{
+   // [self.mainView reloadData];
 }
 
 - (void)setupPageControl
@@ -430,6 +453,8 @@ NSString * const ID = @"cycleCell";
     }
     [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
 }
+
+
 
 - (int)currentIndex
 {
@@ -543,28 +568,25 @@ NSString * const ID = @"cycleCell";
     long itemIndex = indexPath.item % self.imagePathsGroup.count;
     
     NSString *imagePath = self.imagePathsGroup[itemIndex];
-    
+
     if (!self.onlyDisplayText && [imagePath isKindOfClass:[NSString class]]) {
         if ([imagePath hasPrefix:@"http"]) {
-            //[cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
-            //获取原图
-            UIImageView *imgV = [[UIImageView alloc]init];
-            [imgV sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
-            CGFloat originImgH = imgV.image.size.height;
-            CGFloat originImgW = imgV.image.size.width;
-            CGFloat a = ScreenWidth / originImgW;
-            CGFloat newImgW = originImgW * a;
-            CGFloat newImgH = originImgH * a;
-            UIImage *newImg = [[UIImage alloc]init];
-            cell.imageView.backgroundColor = [UIColor whiteColor];
-            if (newImgH > cell.imageView.bounds.size.height) {
-                CGFloat offset = newImgH - cell.imageView.bounds.size.height;
-                newImg = [UIImage croppIngimageByImageName:imgV.image toRect:CGRectMake(0, offset/2, cell.imageView.frame.size.width*2 , cell.imageView.bounds.size.height *2)];
-                cell.imageView.image = newImg;
-            }else{
-                [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
-            }
-            
+
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                
+            } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                CGFloat a = ScreenWidth / cell.imageView.image.size.width;
+                CGFloat newImgW = cell.imageView.image.size.width * a;
+                CGFloat newImgH = cell.imageView.image.size.height * a;
+                UIImage *newImg = [[UIImage alloc]init];
+    
+                if (newImgH > cell.imageView.bounds.size.height) {
+                    CGFloat offset = newImgH - cell.imageView.bounds.size.height;
+                    [cell.imageView setImage:[UIImage croppIngimageByImageName:cell.imageView.image toRect:CGRectMake(0, offset/2, cell.imageView.frame.size.width*2 , cell.imageView.bounds.size.height *2 - offset/2)]];
+                    _imgHflag = 5;
+                   // [_mainView reloadData];
+                }
+            }];
         } else {
             UIImage *image = [UIImage imageNamed:imagePath];
             if (!image) {
@@ -602,6 +624,7 @@ NSString * const ID = @"cycleCell";
     if (self.clickItemOperationBlock) {
         self.clickItemOperationBlock(indexPath.item % self.imagePathsGroup.count);
     }
+   
 }
 
 
