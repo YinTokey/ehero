@@ -51,6 +51,7 @@
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
     [self setupChildController];
     [self getAllTips];
+
     
 }
 
@@ -62,7 +63,8 @@
       //  [self setupChildController];
         [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
     } failure:^(NSError *error) {
-        NSLog(@"fail");
+        [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+        [MBProgressHUD showError:@"请求失败"];
     }];
 
 }
@@ -126,29 +128,6 @@
     _ChaoyangVC.tipsRecommendArray = [NSMutableArray array];
     _ChangpingVC.tipsRecommendArray = [NSMutableArray array];
     _FengtaiVC.tipsRecommendArray = [NSMutableArray array];
-//    
-//    //分配锦囊
-//    for (EHTipsRecommend *tip in self.allTipsArray) {
-//        if ([tip.district isEqualToString:_HaidianVC.title]) {
-//            [self.HaidianVC.tipsRecommendArray addObject:tip];
-//        }
-//        if ([tip.district isEqualToString:_ChaoyangVC.title]) {
-//            [self.ChaoyangVC.tipsRecommendArray addObject:tip];
-//        }
-//        if ([tip.district isEqualToString:_DongchengVC.title]) {
-//            [self.DongchengVC.tipsRecommendArray addObject:tip];
-//        }
-//        if ([tip.district isEqualToString:_XichengVC.title]) {
-//            [self.XichengVC.tipsRecommendArray addObject:tip];
-//        }
-//        if ([tip.district isEqualToString:_ChangpingVC.title]) {
-//            [self.ChangpingVC.tipsRecommendArray addObject:tip];
-//        }
-//        if ([tip.district isEqualToString:_FengtaiVC.title]) {
-//            [self.FengtaiVC.tipsRecommendArray addObject:tip];
-//        }
-//        
-//    }
 
     
     

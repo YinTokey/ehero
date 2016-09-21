@@ -54,7 +54,10 @@
         //json转模型
         self.searchResultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
         [self searchStatusTest];
+        [LBProgressHUD hideAllHUDsForView:_superVC.view animated:NO];
     } failure:^(NSError *error) {
+       [LBProgressHUD hideAllHUDsForView:_superVC.view animated:NO];
+        [MBProgressHUD showError:@"请求数据失败"];
         NSLog(@"失败");
     }];
     

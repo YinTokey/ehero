@@ -44,6 +44,7 @@
      //   NSLog(@"lianjia %f",averageInfo.lianjia_rates_avg );
         }
     } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"获取数据失败" toView:_superVC.view];
         NSLog(@"获取平均数值失败");
     }];
 }

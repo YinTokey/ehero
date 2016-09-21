@@ -66,7 +66,7 @@
   
     [self initViewModels];
     [self getSlides];
-    [YTHttpTool netCheck];
+
     [self setNavBar];
     
     [self getRecommentTipsInfo];
@@ -196,8 +196,16 @@
         [MBProgressHUD hideHUDForView:self.view];
         
     } failure:^(NSError *error) {
-//        self.tableView.dataSource = _homeTableViewModel;
-//        self.tableView.delegate = _homeTableViewModel;
+        //网络请求失败，空数据
+        EHTipsRecommend *tip = [[EHTipsRecommend alloc]init];
+        tip.name = @"";
+        for (NSInteger i = 0; i < 5; i ++) {
+            [_homeTableViewModel.tipsRecommendArray addObject:tip];
+            [_homeTableViewModel.imageUrlStrArray addObject:@"about:cehome"];
+        }
+        //请求成功后，再设置数据源
+        self.tableView.dataSource = _homeTableViewModel;
+        self.tableView.delegate = _homeTableViewModel;
         [MBProgressHUD hideHUDForView:self.view];
         [MBProgressHUD showError:@"请求失败,请重启应用"];
         NSLog(@"failure");

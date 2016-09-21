@@ -82,17 +82,14 @@
     
     [self addGesture];
 
-    
-    [YTHttpTool netCheck];
+  //  [YTHttpTool netCheck];
     
     [self getRegionInfo];
     
     [self getHouseResources];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.view.backgroundColor = RGB(241, 243, 245);
-
-    
-    
+ 
 }
 
 - (void)addGesture{
@@ -165,6 +162,8 @@
         [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
         canClickRegionBtn = YES;
     } failure:^(NSError *error) {
+        [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+        [MBProgressHUD showError:@"请求数据失败" toView:self.view];
         NSLog(@"%@",error);
     }];
 

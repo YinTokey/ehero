@@ -52,7 +52,6 @@
         EHTipViewCell *cell = [EHTipViewCell tipViewCellWithTableView:tableView];
         cell.pageFlowView.delegate = self;
         cell.pageFlowView.dataSource = self;
-   //     [cell setClickEvent];
         cell.delegate = self;
         [cell setClickEvent];
         [RACObserve(self, netImageFlag)subscribeNext:^(id x) {
@@ -64,8 +63,6 @@
     }
     
 }
-
-
 
 
 #pragma mark - cell高度
@@ -81,9 +78,6 @@
 - (void)firstBtnClick:(UITableViewCell *)cell{
 
     EHTipsViewController  *tipsViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"TipsViewController"];
-    
-//    tipsViewController.tipsRecommendArray = [NSMutableArray array];
-//    tipsViewController.tipsRecommendArray = _tipsRecommendArray;
     
     [self.superVC.navigationController pushViewController:tipsViewController animated:YES];
     
@@ -109,9 +103,6 @@
 
 - (void)moreClick:(UITableViewCell *)cell{
     EHTipsViewController  *tipsViewController = [[self.superVC storyboard]instantiateViewControllerWithIdentifier:@"TipsViewController"];
-    
-//    tipsViewController.tipsRecommendArray = [NSMutableArray array];
-//    tipsViewController.tipsRecommendArray = _tipsRecommendArray;
     
     [self.superVC.navigationController pushViewController:tipsViewController animated:YES];
 }

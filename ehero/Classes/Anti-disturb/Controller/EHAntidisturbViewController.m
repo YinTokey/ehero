@@ -36,6 +36,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [YTHttpTool netCheck];
     //初始化弹窗配置
     modal = [STModal modal];
     modal.hideWhenTouchOutside = YES;
@@ -44,9 +46,6 @@
     self.verifiedOtherPhone.delegate = self;
  
     [self callCallBack];
-    
-    [YTHttpTool netCheck];
-    
     _antiDisturbNetViewModel = [[EHAntiDisturbNetViewModel alloc]init];
 }
 
@@ -78,6 +77,7 @@
 
 
 - (void)cookieCheck{
+    [YTHttpTool netCheck];
     //如果有cookie，读取cookie
     if ([EHCookieOperation setCookie]) {
         //打电话，本页完成验证

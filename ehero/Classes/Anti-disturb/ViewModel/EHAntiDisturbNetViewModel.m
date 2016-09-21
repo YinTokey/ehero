@@ -23,7 +23,7 @@
         NSLog(@"呼叫成功 %@",responseObj);
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUDForView:superVC.view];
-        [MBProgressHUD showError:@"拨打失败"];
+        [MBProgressHUD showError:@"呼叫失败"];
         NSLog(@"呼叫失败 %@",error);
     }];
 

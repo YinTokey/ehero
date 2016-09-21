@@ -118,6 +118,7 @@
             NSLog(@"请求成功，查看手机验证码 %@",responseObj);
             
         } failure:^(NSError *error) {
+            [MBProgressHUD showError:@"请求验证码失败"];
             NSLog(@"faild,%@",error);
         }];
     
@@ -126,7 +127,7 @@
 - (IBAction)confirmBtnClick:(id)sender {
     NSString *code = self.code.text;
     NSDictionary *param = @{@"code":code};
-    [MBProgressHUD showMessage:@"正在验证"];
+ //   [MBProgressHUD showMessage:@"正在验证"];
   
     [YTHttpTool get:codeCheckUrlStr params:param success:^(NSURLSessionDataTask *task, id responseObj) {
 
@@ -149,7 +150,7 @@
             }
         
         }else{
-            [MBProgressHUD hideHUD];
+            [MBProgressHUD hideHUDForView:self];
             [MBProgressHUD showError:@"验证失败"];
         }
         
