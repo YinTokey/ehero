@@ -579,13 +579,16 @@ NSString * const ID = @"cycleCell";
                 CGFloat newImgW = cell.imageView.image.size.width * a;
                 CGFloat newImgH = cell.imageView.image.size.height * a;
                 UIImage *newImg = [[UIImage alloc]init];
-    
                 if (newImgH > cell.imageView.bounds.size.height) {
                     CGFloat offset = newImgH - cell.imageView.bounds.size.height;
                     [cell.imageView setImage:[UIImage croppIngimageByImageName:cell.imageView.image toRect:CGRectMake(0, offset/2, cell.imageView.frame.size.width*2 , cell.imageView.bounds.size.height *2 - offset/2)]];
-                    _imgHflag = 5;
-                   // [_mainView reloadData];
                 }
+//                if (newImgH < cell.imageView.bounds.size.height) {
+//                    CGFloat offset = cell.imageView.bounds.size.height - newImgH;
+//                    [cell.imageView setImage:[UIImage croppIngimageByImageName:cell.imageView.image toRect:CGRectMake(0, offset/2, cell.imageView.frame.size.width*2 , cell.imageView.bounds.size.height *2 - offset/2)]];
+//                }
+                
+                
             }];
         } else {
             UIImage *image = [UIImage imageNamed:imagePath];
