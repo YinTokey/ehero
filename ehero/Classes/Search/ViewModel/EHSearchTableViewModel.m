@@ -25,6 +25,7 @@
     EHAgentInfo *agentInfo = self.searchResultArr[indexPath.row];
     cell.isdrawRect = YES;
     [cell setResultCell:agentInfo];
+    cell.callButton.hidden = YES;
     return cell;
 }
 

@@ -19,6 +19,7 @@
 
 @interface EHSearchResultCell : UITableViewCell
 + (instancetype)searchResultCellWithTableView:(UITableView *)tableView;
+@property (weak, nonatomic) IBOutlet UIButton *callButton;
 
 - (void)setResultCell:(EHAgentInfo *)agentInfo;
 

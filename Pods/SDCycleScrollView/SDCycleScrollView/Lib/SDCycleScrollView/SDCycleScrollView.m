@@ -575,7 +575,8 @@ NSString * const ID = @"cycleCell";
             [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
                 
             } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                CGFloat a = ScreenWidth / cell.imageView.image.size.width;
+             //   NSLog(@"imgW= %f ,imgH = %f",cell.imageView.image.size.width,cell.imageView.image.size.height);
+                CGFloat a = cell.imageView.bounds.size.width / cell.imageView.image.size.width;
                 CGFloat newImgW = cell.imageView.image.size.width * a;
                 CGFloat newImgH = cell.imageView.image.size.height * a;
                 if (newImgH > cell.imageView.bounds.size.height) {

@@ -20,7 +20,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *company;
 
-@property (weak, nonatomic) IBOutlet UILabel *district;
+@property (weak, nonatomic) IBOutlet UILabel *region;
+
 
 @property (weak, nonatomic) IBOutlet UITextView *descriptions;
 

@@ -50,7 +50,14 @@
     _agetnInfo = agetnInfo;
     self.name.text = _agetnInfo.name;
     self.company.text = _agetnInfo.company;
-    self.district.text = _agetnInfo.district;
+//    NSString *regionStr = [NSString stringWithFormat:@"  %@   ",_agetnInfo.region];
+//    self.region.text = regionStr;
+    self.region.text = _agetnInfo.region;
+    if (_agetnInfo.region.length > 1) {
+        NSString *regionStr = [NSString stringWithFormat:@"%@    ",_agetnInfo.region];
+        self.region.text = regionStr;
+    }
+ //   self.region.adjustsFontSizeToFitWidth = YES;
     if (_agetnInfo.percentile) {
         NSString *percentileStr = [NSString stringWithFormat:@"公司内排名 %@％",_agetnInfo.percentile];
         self.percentile.text = percentileStr;

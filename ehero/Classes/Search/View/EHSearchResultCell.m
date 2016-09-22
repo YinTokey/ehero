@@ -103,7 +103,12 @@
         self.rates.text = [NSString stringWithFormat:@"%@％",agentInfo.percentile];
     }
     self.company.text = agentInfo.company;
+    
     self.region.text = agentInfo.region;
+    if (agentInfo.region.length > 1) {
+        NSString *regionStr = [NSString stringWithFormat:@"%@    ",agentInfo.region];
+        self.region.text = regionStr;
+    }
     self.region.adjustsFontSizeToFitWidth = YES;
     
     //将小区分割成3个 存数组里

@@ -45,6 +45,14 @@
     self.toward.text = _houseInfo.toward;
     self.floor.text = _houseInfo.floor;
     self.location.text = _houseInfo.location;
+    if (_houseInfo.clicks == nil) {
+        NSString *clickStr = [NSString stringWithFormat:@"点击量：0"];
+        self.click.text = clickStr;
+    }else{
+        NSString *clickStr = [NSString stringWithFormat:@"点击量：%@",_houseInfo.clicks];
+        self.click.text = clickStr;
+    }
+    
     //处理图片下载
     NSArray *imgUrlStrArray = [_houseInfo.thumbs componentsSeparatedByString:@" "];
     //设置轮播图片

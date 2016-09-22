@@ -41,13 +41,13 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ws-0u-WzL">
                     <rect key="frame" x="8" y="142" width="260" height="30"/>
-                    <color key="backgroundColor" red="0.39215686274509803" green="0.61176470588235299" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.23921568627450981" green="0.63921568627450975" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="DIH-VE-BS3"/>
                         <constraint firstAttribute="width" constant="260" id="UwS-N1-sXO"/>
                     </constraints>
                     <state key="normal" title="确认">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="confirmBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="cSg-3b-9SW"/>

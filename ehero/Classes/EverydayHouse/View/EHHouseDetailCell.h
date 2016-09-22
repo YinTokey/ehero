@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *toward;
 @property (weak, nonatomic) IBOutlet UILabel *floor;
 @property (weak, nonatomic) IBOutlet UILabel *location;
+@property (weak, nonatomic) IBOutlet UILabel *click;
 
 @property (nonatomic,strong)EHHousesInfo *houseInfo;
 

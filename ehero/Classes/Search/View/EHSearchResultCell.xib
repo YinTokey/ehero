@@ -65,8 +65,8 @@
                         <color key="textColor" red="0.36862745099999999" green="0.70980392160000005" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="三里屯" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIK-Ia-w7Z">
-                        <rect key="frame" x="147" y="69" width="44" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="三里屯" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIK-Ia-w7Z">
+                        <rect key="frame" x="142" y="69" width="33" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="17" id="QEq-qE-kwe"/>
                         </constraints>
@@ -165,6 +165,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="callButton" destination="Jyw-2q-ujV" id="hlI-ye-Uxy"/>
                 <outlet property="company" destination="PQv-mP-aMR" id="lkD-fV-Myo"/>
                 <outlet property="name" destination="FWg-gq-wKJ" id="dj2-GW-sHA"/>
                 <outlet property="position" destination="lvd-BR-siG" id="V4r-Xx-ilB"/>
