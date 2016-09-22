@@ -217,8 +217,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     EHHouseDetailViewController *VC = [[self storyboard]instantiateViewControllerWithIdentifier:@"HouseDetailViewController"];
     VC.houseInfo = _houseInfoArray[indexPath.row];
-    VC.agentInfo = _agentInfoArray[0];
-    //VC.agentInfo = _agentInfoArray[indexPath.row];
+  //  VC.agentInfo = _agentInfoArray[0];
+     VC.agentInfo = _agentInfoArray[indexPath.row];
     [VC.agentInfo getIdStringFromDictionary];
 
     [self.navigationController pushViewController:VC animated:YES];

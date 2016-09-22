@@ -25,7 +25,6 @@
 #import "EHHomeNetViewModel.h"
 
 #import <MJExtension.h>
-
 #import "UIImageView+WebCache.h"
 
 @interface EHHomeViewController ()<UITextFieldDelegate,SDCycleScrollViewDelegate>
@@ -87,9 +86,7 @@
     _homeTableViewModel.superVC = self;
     _homeTableViewModel.tipsRecommendArray = [NSMutableArray array];
 
-    
     _homeNetViewModel = [[EHHomeNetViewModel alloc]init];
-
 
 }
 
@@ -177,9 +174,11 @@
 
 #pragma mark - 设置左上角地点弹窗
 - (void)setupPopView{
+    
     EHHomePopView *homePopView = [EHHomePopView initPopView:_siteBtn SuperView:self.view];
     homePopView.delegate = _siteSelectDelegate;
     [homePopView popView];
+    
 }
 
 - (void)getRecommentTipsInfo{

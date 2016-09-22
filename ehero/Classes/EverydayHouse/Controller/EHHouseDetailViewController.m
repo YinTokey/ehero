@@ -109,6 +109,7 @@
             [self popVerifyView];
         }
     }else{
+       // NSLog(@"%@",self.agentInfo.idStr);
         [MBProgressHUD showError:@"没有该经纪人电话" toView:self.view];
     }
 }

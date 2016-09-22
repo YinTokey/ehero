@@ -578,17 +578,20 @@ NSString * const ID = @"cycleCell";
                 CGFloat a = ScreenWidth / cell.imageView.image.size.width;
                 CGFloat newImgW = cell.imageView.image.size.width * a;
                 CGFloat newImgH = cell.imageView.image.size.height * a;
-                UIImage *newImg = [[UIImage alloc]init];
                 if (newImgH > cell.imageView.bounds.size.height) {
-                    CGFloat offset = newImgH - cell.imageView.bounds.size.height;
-                    [cell.imageView setImage:[UIImage croppIngimageByImageName:cell.imageView.image toRect:CGRectMake(0, offset/2, cell.imageView.frame.size.width*2 , cell.imageView.bounds.size.height *2 - offset/2)]];
+                    cell.imageView.image = [UIImage reSizeImage:cell.imageView.image toSize:CGSizeMake(newImgW, newImgH)];
+                    CGFloat offsetH = newImgH - cell.imageView.bounds.size.height;
+                    [cell.imageView setImage:[UIImage croppIngimageByImageName:cell.imageView.image toRect:CGRectMake(0, offsetH/2, cell.imageView.bounds.size.width , cell.imageView.bounds.size.height )]];
                 }
-//                if (newImgH < cell.imageView.bounds.size.height) {
-//                    CGFloat offset = cell.imageView.bounds.size.height - newImgH;
-//                    [cell.imageView setImage:[UIImage croppIngimageByImageName:cell.imageView.image toRect:CGRectMake(0, offset/2, cell.imageView.frame.size.width*2 , cell.imageView.bounds.size.height *2 - offset/2)]];
-//                }
-                
-                
+                if ((newImgH < cell.imageView.bounds.size.height)&&(newImgW == ScreenWidth)) {
+                    //在原来的基础上，以高为标准继续放大
+                    CGFloat b = cell.imageView.bounds.size.height / newImgH;
+                    CGFloat newImgHH = newImgH * b;
+                    CGFloat newImgWW = newImgW * b;
+                    cell.imageView.image = [UIImage reSizeImage:cell.imageView.image toSize:CGSizeMake(newImgWW, newImgHH)];
+                    CGFloat offsetW = newImgWW - cell.imageView.bounds.size.width;
+                    [cell.imageView setImage:[UIImage croppIngimageByImageName:cell.imageView.image toRect:CGRectMake(offsetW/2, 0, cell.imageView.bounds.size.width , cell.imageView.bounds.size.height )]];
+                }
             }];
         } else {
             UIImage *image = [UIImage imageNamed:imagePath];
