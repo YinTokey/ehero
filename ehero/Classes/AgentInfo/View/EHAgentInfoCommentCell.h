@@ -8,20 +8,28 @@
 
 #import <UIKit/UIKit.h>
 #import "EHCommentInfo.h"
+@protocol agentInfoCommentCellDelegate<NSObject>
+@optional
+- (void)niceClick:(UITableViewCell *)cell;
+- (void)commonClick:(UITableViewCell *)cell;
+- (void)badClick:(UITableViewCell *)cell;
+
+@end
 
 
 @interface EHAgentInfoCommentCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UITextView *commentView;
 
 + (instancetype)AgentInfoCommentCellWithTableView:(UITableView *)tableView;
 
 @property (weak, nonatomic) IBOutlet UIButton *highComment;
-
 @property (weak, nonatomic) IBOutlet UIButton *midComment;
 @property (weak, nonatomic) IBOutlet UIButton *lowComment;
 
 @property (nonatomic,strong)NSMutableArray *commentsArray;
 
-
 - (void)setCommentCounts;
+- (void)setClickEvent;
+@property (nonatomic,weak)id<agentInfoCommentCellDelegate>delegate;
+
+
 @end

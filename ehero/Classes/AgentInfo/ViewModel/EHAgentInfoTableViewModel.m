@@ -8,7 +8,6 @@
 
 #import "EHAgentInfoTableViewModel.h"
 #import "EHAgentInfoChartCell.h"
-#import "EHAgentInfoCommentCell.h"
 #import "EHNoCommentCell.h"
 
 @implementation EHAgentInfoTableViewModel
@@ -47,11 +46,26 @@
     if (section == 0 || section == 1 || section == 2) {
         return 1;
     }else{
-        if ([self.commentsArray isKindOfClass:[NSArray class]] && self.commentsArray.count > 0)  {
-            return self.commentsArray.count;
-        }else{
-            return 1;
-        }
+         if (self.commentKind == 0) {
+                if ([self.niceCommentsArray isKindOfClass:[NSArray class]] && self.niceCommentsArray.count == 0) {
+                    return 1;
+                }else{
+                    return self.niceCommentsArray.count;
+                }
+            }
+            else if (self.commentKind == 1) {
+                if ([self.commonCommentsArray isKindOfClass:[NSArray class]] && self.commonCommentsArray.count <1) {
+                    return  1;
+                }else{
+                    return self.commonCommentsArray.count;
+                }
+            }else{
+                if ( [self.badCommentsArray isKindOfClass:[NSArray class]] && self.badCommentsArray.count <1) {
+                    return 1;
+                }else{
+                    return self.badCommentsArray.count;
+                }
+            }
     }        
 }
 
@@ -62,7 +76,6 @@
         cell.isdrawRect = NO;
         cell.delegate = self.superVC;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
         return cell;
     }else if(indexPath.section == 1){
         EHAgentInfoChartCell *cell = [EHAgentInfoChartCell AgentInfoChartCellWithTableView:tableView];
@@ -86,17 +99,37 @@
         EHAgentInfoCommentCell *cell = [EHAgentInfoCommentCell AgentInfoCommentCellWithTableView:tableView];
         cell.commentsArray = self.commentsArray;
         [cell setCommentCounts];
+        cell.delegate = self;
         return cell;
     }else{
-        if ([self.commentsArray isKindOfClass:[NSArray class]] && self.commentsArray.count > 0)  {
-            EHCommentDetailCell *cell = [EHCommentDetailCell commentDetailCellCellWithTableView:tableView];
-            cell.commentInfo = self.commentsArray[indexPath.row];
-            
-            return cell;
+        EHCommentDetailCell *commentCell = [EHCommentDetailCell commentDetailCellCellWithTableView:tableView];
+        EHNoCommentCell *noCommentCell = [EHNoCommentCell noCommentCellCellWithTableView:tableView];
+        if (self.commentKind == 0) {
+            if ( [self.niceCommentsArray isKindOfClass:[NSArray class]] && self.niceCommentsArray.count <1){
+                return noCommentCell;
+            }else{
+               commentCell.commentInfo = self.niceCommentsArray[indexPath.row];
+                return commentCell;
+            }
+        }else if(self.commentKind == 1){
+            if ( [self.commonCommentsArray isKindOfClass:[NSArray class]] && self.commonCommentsArray.count <1){
+                return noCommentCell;
+            }else{
+                commentCell.commentInfo = self.commonCommentsArray[indexPath.row];
+                return commentCell;
+            }
+
         }else{
-            EHNoCommentCell *cell = [EHNoCommentCell noCommentCellCellWithTableView:tableView];
-            return cell;
+            if ( [self.badCommentsArray isKindOfClass:[NSArray class]] && self.badCommentsArray.count <1){
+                return noCommentCell;
+            }else{
+                commentCell.commentInfo = self.niceCommentsArray[indexPath.row];
+                return commentCell;
+            }
+
         }
+       // return cell;
+        
     }
 }
 
@@ -108,7 +141,21 @@
         NSLog(@"cell height %f",cell.frame.size.height);
     }
 }
+#pragma mark - 评价筛选按钮
+- (void)niceClick:(UITableViewCell *)cell{
+    self.commentKind = 0;
+   
+}
 
+- (void)commonClick:(UITableViewCell *)cell{
+    self.commentKind = 1;
+  
+}
+
+- (void)badClick:(UITableViewCell *)cell{
+    self.commentKind = 2;
+
+}
 
 #pragma mark - 雷达图代理
 - (NSInteger)numberOfStepForRadarChart:(LQRadarChart *)radarChart

@@ -72,6 +72,10 @@
     
     [self transData];
     
+    [RACObserve(self.agentInfoTableViewModel, commentKind)subscribeNext:^(id x) {
+        [self.tableView reloadData];
+    }];
+    
     //数据传递
     [_agentInfoNetViewModel getAverageInfo:^(EHAverageInfo *averageInfo){
         _agentInfoTableViewModel.averageInfo = averageInfo;
@@ -87,6 +91,9 @@
     _agentInfoTableViewModel.agentInfo = self.agentInfo;
     _agentInfoTableViewModel.superVC = self;
     _agentInfoTableViewModel.commentsArray = [NSMutableArray array];
+    _agentInfoTableViewModel.niceCommentsArray = [NSMutableArray array];
+    _agentInfoTableViewModel.commonCommentsArray = [NSMutableArray array];
+    _agentInfoTableViewModel.badCommentsArray = [NSMutableArray array];
     
     self.tableView.dataSource = _agentInfoTableViewModel;
     self.tableView.delegate = _agentInfoTableViewModel;
@@ -233,9 +240,17 @@
 #pragma mark - 传递数据
 - (void)transData{
 
-    
     _agentInfoTableViewModel.commentsArray = [EHCommentInfo mj_objectArrayWithKeyValuesArray:_agentInfo.comments];
-    
+    for (EHCommentInfo *comment in _agentInfoTableViewModel.commentsArray) {
+        if ([comment.kind isEqualToString:@"nice"]) {
+            [_agentInfoTableViewModel.niceCommentsArray addObject:comment];
+        }else if([comment.kind isEqualToString:@"bad"]){
+            [_agentInfoTableViewModel.badCommentsArray addObject:comment];
+        }else{
+            [_agentInfoTableViewModel.commonCommentsArray addObject:comment];
+        }
+    }
+    _agentInfoTableViewModel.commentKind = 0;// 默认显示好评
 }
 
 - (IBAction)commentBtnClick:(id)sender {

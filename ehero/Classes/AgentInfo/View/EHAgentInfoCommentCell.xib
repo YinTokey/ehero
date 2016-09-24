@@ -17,12 +17,10 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agent_info_comment_bar" translatesAutoresizingMaskIntoConstraints="NO" id="VmC-nG-EwI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="26"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="26" id="z6z-W2-HBM"/>
-                        </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hou-5N-x3Q">
                         <rect key="frame" x="12" y="4" width="91" height="18"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="cZb-E8-1OT"/>
                         </constraints>
@@ -30,6 +28,9 @@
                         <state key="normal" title="好评(0)">
                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="niceBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="x8b-6z-3YQ"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFB-hD-ql9">
                         <rect key="frame" x="115" y="4" width="91" height="18"/>
@@ -40,6 +41,9 @@
                         <state key="normal" title="中评(0)">
                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="commonBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WPa-NW-mfB"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5n-zP-RGe">
                         <rect key="frame" x="216" y="4" width="91" height="18"/>
@@ -50,20 +54,24 @@
                         <state key="normal" title="差评(0)">
                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="badBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MDI-xI-pbI"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Z5n-zP-RGe" firstAttribute="leading" secondItem="WFB-hD-ql9" secondAttribute="trailing" constant="10" id="CH0-jK-UEZ"/>
                     <constraint firstItem="Z5n-zP-RGe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="HxZ-Wl-eQY"/>
                     <constraint firstItem="hou-5N-x3Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="N0E-UO-hZ6"/>
-                    <constraint firstItem="VmC-nG-EwI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QB2-zM-0J6"/>
                     <constraint firstItem="WFB-hD-ql9" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.284" id="R1L-n3-9dm"/>
                     <constraint firstItem="WFB-hD-ql9" firstAttribute="width" secondItem="hou-5N-x3Q" secondAttribute="width" id="WXS-H3-uzy"/>
+                    <constraint firstAttribute="bottom" secondItem="VmC-nG-EwI" secondAttribute="bottom" constant="4" id="Wqs-G9-oHI"/>
                     <constraint firstItem="WFB-hD-ql9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="Y4t-NL-lc5"/>
-                    <constraint firstItem="VmC-nG-EwI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="djt-Ie-xW6"/>
                     <constraint firstItem="WFB-hD-ql9" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="gmU-vN-0LT"/>
+                    <constraint firstItem="VmC-nG-EwI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lQg-Hf-H5b"/>
+                    <constraint firstItem="VmC-nG-EwI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pDw-4q-B5k"/>
+                    <constraint firstAttribute="trailing" secondItem="VmC-nG-EwI" secondAttribute="trailing" id="vdG-lJ-VR6"/>
                     <constraint firstItem="WFB-hD-ql9" firstAttribute="leading" secondItem="hou-5N-x3Q" secondAttribute="trailing" constant="12" id="vqY-K4-dcu"/>
-                    <constraint firstAttribute="trailing" secondItem="VmC-nG-EwI" secondAttribute="trailing" id="yeX-P5-pGu"/>
                     <constraint firstItem="Z5n-zP-RGe" firstAttribute="width" secondItem="hou-5N-x3Q" secondAttribute="width" id="zTg-Nt-tdN"/>
                 </constraints>
             </tableViewCellContentView>

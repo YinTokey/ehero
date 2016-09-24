@@ -19,6 +19,22 @@
     
     
 }
+- (IBAction)niceBtnClick:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(niceClick:)]) {
+        [self.delegate niceClick:self];
+       
+    }
+}
+- (IBAction)commonBtnClick:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(commonClick:)]) {
+        [self.delegate commonClick:self];
+    }
+}
+- (IBAction)badBtnClick:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(badClick:)]) {
+        [self.delegate badClick:self];
+    }
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
@@ -31,10 +47,8 @@
     EHAgentInfoCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHAgentInfoCommentCell" owner:nil options:nil] lastObject];
-        cell.commentView.layer.cornerRadius = 5;
-        cell.layer.masksToBounds = YES;
         cell.backgroundColor = RGB(241, 243, 245);
-        cell.userInteractionEnabled = NO;
+
         cell.commentsArray = [NSMutableArray array];
         
     }
@@ -68,5 +82,9 @@
     [self.lowComment setTitle:lowStr forState:UIControlStateNormal];
 }
 
-
+- (void)setClickEvent{
+    //xcode7 自定义xib中要相应按钮事件，必须将cell加到contentView上，或者直接移除掉contentView
+    [self.contentView removeFromSuperview];
+    
+}
 @end
