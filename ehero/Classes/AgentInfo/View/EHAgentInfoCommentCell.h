@@ -20,6 +20,9 @@
 @interface EHAgentInfoCommentCell : UITableViewCell
 
 + (instancetype)AgentInfoCommentCellWithTableView:(UITableView *)tableView;
+@property (weak, nonatomic) IBOutlet UIImageView *niceTriangle;
+@property (weak, nonatomic) IBOutlet UIImageView *commonTriagle;
+@property (weak, nonatomic) IBOutlet UIImageView *badTriangle;
 
 @property (weak, nonatomic) IBOutlet UIButton *highComment;
 @property (weak, nonatomic) IBOutlet UIButton *midComment;

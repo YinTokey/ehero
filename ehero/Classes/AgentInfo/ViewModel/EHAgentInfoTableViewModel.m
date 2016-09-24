@@ -100,11 +100,25 @@
         cell.commentsArray = self.commentsArray;
         [cell setCommentCounts];
         cell.delegate = self;
+        if (self.commentKind == 0) {
+            cell.commonTriagle.hidden = YES;
+            cell.badTriangle.hidden = YES;
+            cell.niceTriangle.hidden = NO;
+        }else if(self.commentKind == 1){
+            cell.niceTriangle.hidden = YES;
+            cell.badTriangle.hidden = YES;
+            cell.commonTriagle.hidden = NO;
+        }else{
+            cell.commonTriagle.hidden = YES;
+            cell.niceTriangle.hidden = YES;
+            cell.badTriangle.hidden = NO;
+        }
         return cell;
     }else{
         EHCommentDetailCell *commentCell = [EHCommentDetailCell commentDetailCellCellWithTableView:tableView];
         EHNoCommentCell *noCommentCell = [EHNoCommentCell noCommentCellCellWithTableView:tableView];
         if (self.commentKind == 0) {
+            
             if ( [self.niceCommentsArray isKindOfClass:[NSArray class]] && self.niceCommentsArray.count <1){
                 return noCommentCell;
             }else{

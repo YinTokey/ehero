@@ -8,11 +8,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="AgentInfoCommentCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AgentInfoCommentCell" rowHeight="30" id="KGk-i7-Jjw" customClass="EHAgentInfoCommentCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="31"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="AgentInfoCommentCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AgentInfoCommentCell" rowHeight="37" id="KGk-i7-Jjw" customClass="EHAgentInfoCommentCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agent_info_comment_bar" translatesAutoresizingMaskIntoConstraints="NO" id="VmC-nG-EwI">
@@ -58,32 +58,64 @@
                             <action selector="badBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MDI-xI-pbI"/>
                         </connections>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Triangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="QET-bJ-AaF">
+                        <rect key="frame" x="53" y="26" width="9" height="11"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="11" id="4kO-ur-HI5"/>
+                            <constraint firstAttribute="width" constant="9" id="r5M-qz-WCr"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Triangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="yOw-Z2-6Gp">
+                        <rect key="frame" x="156" y="26" width="9" height="11"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="11" id="3Nj-Zg-270"/>
+                            <constraint firstAttribute="width" constant="9" id="tVK-Mq-htR"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Triangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="AHz-iY-ebE">
+                        <rect key="frame" x="257" y="26" width="9" height="11"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="11" id="dRa-6z-Dmk"/>
+                            <constraint firstAttribute="width" constant="9" id="j9I-50-JMO"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="11" id="vje-N3-Lo8"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="QET-bJ-AaF" firstAttribute="centerX" secondItem="hou-5N-x3Q" secondAttribute="centerX" id="3nN-Gh-Q0P"/>
+                    <constraint firstItem="QET-bJ-AaF" firstAttribute="top" secondItem="VmC-nG-EwI" secondAttribute="bottom" id="A44-dk-ox3"/>
                     <constraint firstItem="Z5n-zP-RGe" firstAttribute="leading" secondItem="WFB-hD-ql9" secondAttribute="trailing" constant="10" id="CH0-jK-UEZ"/>
+                    <constraint firstAttribute="trailing" secondItem="VmC-nG-EwI" secondAttribute="trailing" id="Cbu-2y-7BK"/>
                     <constraint firstItem="Z5n-zP-RGe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="HxZ-Wl-eQY"/>
+                    <constraint firstItem="VmC-nG-EwI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IAe-Kt-p6n"/>
+                    <constraint firstItem="AHz-iY-ebE" firstAttribute="centerX" secondItem="Z5n-zP-RGe" secondAttribute="centerX" id="LNj-bN-zTu"/>
                     <constraint firstItem="hou-5N-x3Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="N0E-UO-hZ6"/>
                     <constraint firstItem="WFB-hD-ql9" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.284" id="R1L-n3-9dm"/>
+                    <constraint firstItem="VmC-nG-EwI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Uun-NU-rcK"/>
                     <constraint firstItem="WFB-hD-ql9" firstAttribute="width" secondItem="hou-5N-x3Q" secondAttribute="width" id="WXS-H3-uzy"/>
-                    <constraint firstAttribute="bottom" secondItem="VmC-nG-EwI" secondAttribute="bottom" constant="4" id="Wqs-G9-oHI"/>
                     <constraint firstItem="WFB-hD-ql9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="Y4t-NL-lc5"/>
+                    <constraint firstAttribute="bottom" secondItem="VmC-nG-EwI" secondAttribute="bottom" constant="11" id="ZoW-JG-qgB"/>
+                    <constraint firstItem="yOw-Z2-6Gp" firstAttribute="top" secondItem="VmC-nG-EwI" secondAttribute="bottom" id="bIF-7I-a4b"/>
+                    <constraint firstItem="yOw-Z2-6Gp" firstAttribute="centerX" secondItem="WFB-hD-ql9" secondAttribute="centerX" id="g5w-Km-MTw"/>
                     <constraint firstItem="WFB-hD-ql9" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="gmU-vN-0LT"/>
-                    <constraint firstItem="VmC-nG-EwI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lQg-Hf-H5b"/>
-                    <constraint firstItem="VmC-nG-EwI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pDw-4q-B5k"/>
-                    <constraint firstAttribute="trailing" secondItem="VmC-nG-EwI" secondAttribute="trailing" id="vdG-lJ-VR6"/>
                     <constraint firstItem="WFB-hD-ql9" firstAttribute="leading" secondItem="hou-5N-x3Q" secondAttribute="trailing" constant="12" id="vqY-K4-dcu"/>
+                    <constraint firstItem="AHz-iY-ebE" firstAttribute="top" secondItem="VmC-nG-EwI" secondAttribute="bottom" id="x9B-3f-aPK"/>
                     <constraint firstItem="Z5n-zP-RGe" firstAttribute="width" secondItem="hou-5N-x3Q" secondAttribute="width" id="zTg-Nt-tdN"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="badTriangle" destination="AHz-iY-ebE" id="faY-Pw-jf7"/>
+                <outlet property="commonTriagle" destination="yOw-Z2-6Gp" id="ZT8-B7-y5i"/>
                 <outlet property="highComment" destination="hou-5N-x3Q" id="N2d-ou-L5E"/>
                 <outlet property="lowComment" destination="Z5n-zP-RGe" id="yUk-7Z-W5E"/>
                 <outlet property="midComment" destination="WFB-hD-ql9" id="Jsa-5l-jau"/>
+                <outlet property="niceTriangle" destination="QET-bJ-AaF" id="dYR-Zl-rVP"/>
             </connections>
-            <point key="canvasLocation" x="222" y="100.5"/>
+            <point key="canvasLocation" x="222" y="104"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="agent_info_comment_bar" width="750" height="57"/>
+        <image name="Triangle 1" width="22" height="15"/>
+        <image name="agent_info_comment_bar" width="750" height="48"/>
     </resources>
 </document>

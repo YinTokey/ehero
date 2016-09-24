@@ -250,7 +250,7 @@
             [_agentInfoTableViewModel.commonCommentsArray addObject:comment];
         }
     }
-    _agentInfoTableViewModel.commentKind = 0;// 默认显示好评
+    _agentInfoTableViewModel.commentKind = 1;// 默认显示中评
 }
 
 - (IBAction)commentBtnClick:(id)sender {
