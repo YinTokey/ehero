@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 itcast. All rights reserved.
 //
 
-#import "UIImage+Extensiton.h"
+#import "UIImage+Extension.h"
 
-@implementation UIImage (Extensiton)
+@implementation UIImage (Extension)
 + (instancetype)resizeImage:(NSString *)imgName
 {
     UIImage *bgImage =  [UIImage imageNamed:imgName];

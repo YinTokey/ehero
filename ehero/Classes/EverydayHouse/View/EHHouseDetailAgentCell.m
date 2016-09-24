@@ -7,6 +7,7 @@
 //
 
 #import "EHHouseDetailAgentCell.h"
+#import "UILabel+GetWidth.h"
 @interface EHHouseDetailAgentCell()
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 
@@ -54,10 +55,15 @@
 //    self.region.text = regionStr;
     self.region.text = _agetnInfo.region;
     if (_agetnInfo.region.length > 1) {
-        NSString *regionStr = [NSString stringWithFormat:@"%@    ",_agetnInfo.region];
+        NSString *regionStr = [NSString stringWithFormat:@"%@",_agetnInfo.region];
         self.region.text = regionStr;
+      //  [self.region setAdjustsFontSizeToFitWidth:YES];
+       CGFloat textWidth = [UILabel getWidthWithTitle:self.region.text font:[UIFont systemFontOfSize:12.0]];
+        self.region.sd_layout.
+        widthIs(textWidth + 20);
+        
     }
- //   self.region.adjustsFontSizeToFitWidth = YES;
+
     if (_agetnInfo.percentile) {
         NSString *percentileStr = [NSString stringWithFormat:@"公司内排名 %@％",_agetnInfo.percentile];
         self.percentile.text = percentileStr;

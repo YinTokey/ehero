@@ -7,7 +7,7 @@
 //
 
 #import "EHCommentDetailCell.h"
-#import "UIImage+Extensiton.h"
+#import "UIImage+Extension.h"
 @interface EHCommentDetailCell ()
 
 @end

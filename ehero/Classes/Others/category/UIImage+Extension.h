@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (Extensiton)
+@interface UIImage (Extension)
 + (instancetype)resizeImage:(NSString *)imgName;
 @end

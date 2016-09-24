@@ -10,7 +10,7 @@
 #import "YTNetCommand.h"
 #import "UIButton+GetWidth.h"
 #import "EHCommunityButton.h"
-
+#import "UILabel+GetWidth.h"
 
 @interface EHSearchResultCell()
 {
@@ -106,10 +106,15 @@
     
     self.region.text = agentInfo.region;
     if (agentInfo.region.length > 1) {
-        NSString *regionStr = [NSString stringWithFormat:@"%@    ",agentInfo.region];
+        NSString *regionStr = [NSString stringWithFormat:@"%@",agentInfo.region];
         self.region.text = regionStr;
+        CGFloat textWidth = [UILabel getWidthWithTitle:self.region.text font:[UIFont systemFontOfSize:12.0]];
+        self.region.sd_layout.
+        widthIs(textWidth + 20);
+        
+
     }
-    self.region.adjustsFontSizeToFitWidth = YES;
+   
     
     //将小区分割成3个 存数组里
     NSArray *array = [agentInfo.community componentsSeparatedByString:@" "];
