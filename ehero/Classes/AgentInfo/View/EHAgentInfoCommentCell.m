@@ -48,7 +48,7 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHAgentInfoCommentCell" owner:nil options:nil] lastObject];
         cell.backgroundColor = RGB(241, 243, 245);
-
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.commentsArray = [NSMutableArray array];
         
     }

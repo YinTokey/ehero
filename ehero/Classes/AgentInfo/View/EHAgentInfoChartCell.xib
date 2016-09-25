@@ -24,8 +24,8 @@
                             <constraint firstAttribute="width" secondItem="OVJ-jb-F1W" secondAttribute="height" multiplier="47:17" id="sG1-15-EeD"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="average" translatesAutoresizingMaskIntoConstraints="NO" id="QYu-A0-1gc">
-                        <rect key="frame" x="13" y="14" width="47" height="17"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="average" translatesAutoresizingMaskIntoConstraints="NO" id="QYu-A0-1gc">
+                        <rect key="frame" x="17" y="14" width="47" height="17"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="47" id="T46-fy-1u7"/>
                             <constraint firstAttribute="height" constant="17" id="ssA-De-5jD"/>
@@ -42,8 +42,8 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="我爱我家平均值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNh-NA-zRf">
-                        <rect key="frame" x="70" y="12" width="91" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我爱我家平均值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNh-NA-zRf">
+                        <rect key="frame" x="71" y="12" width="84" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="ljY-wo-plu"/>
                         </constraints>
