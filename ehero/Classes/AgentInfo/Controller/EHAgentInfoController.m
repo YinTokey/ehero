@@ -84,6 +84,9 @@
 
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [self.tableView reloadData];
+}
 
 - (void)initViewModels{
     _socialViewModel = [[EHSocialShareViewModel alloc]init];
@@ -104,10 +107,6 @@
     
     _skimedAgentViewModel = [[EHSkimedAgentViewModel alloc]init];
     [_skimedAgentViewModel skimedAndSaveWithAgentInfo:self.agentInfo];
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [self.tableView reloadData];
 }
 
 # pragma mark - searchResultCellDelegate
@@ -185,6 +184,9 @@
 # pragma mark - 收藏点击
 - (IBAction)collectBtnClick:(id)sender {
     selectedFlag = !selectedFlag;
+     _agentInfoTableViewModel.commentKind =1;
+    [self.tableView reloadData];
+   
     if (selectedFlag) {
         self.collectBtn.selected = YES;
         [MBProgressHUD showSuccess:@"收藏成功" toView:self.view];
@@ -195,7 +197,6 @@
         [self.agentInfo deleteObject];
         [MBProgressHUD showSuccess:@"取消收藏" toView:self.view];
     }
-
 }
 
 - (void)collect{
@@ -250,7 +251,8 @@
             [_agentInfoTableViewModel.commonCommentsArray addObject:comment];
         }
     }
-    _agentInfoTableViewModel.commentKind = 1;// 默认显示中评
+    _agentInfoTableViewModel.commentKind = 9;// 默认显示好评
+
 }
 
 - (IBAction)commentBtnClick:(id)sender {
@@ -258,6 +260,8 @@
     commentAgentVC.agentInfo = self.agentInfo;
     [self.navigationController pushViewController:commentAgentVC animated:YES];
     
-    
 }
+
+
+
 @end

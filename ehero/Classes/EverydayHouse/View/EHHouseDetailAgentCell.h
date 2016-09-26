@@ -20,9 +20,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *company;
 
-@property (weak, nonatomic) IBOutlet UILabel *region;
-
-
 @property (weak, nonatomic) IBOutlet UITextView *descriptions;
 
 @property (nonatomic,strong) EHHousesInfo *houseInfo;

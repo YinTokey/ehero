@@ -21,7 +21,7 @@
     }else if (indexPath.section == 1){
         return ScreenHeight * 0.42 + 30;
     }else if (indexPath.section == 2){
-        return 30;
+        return 36;
     }else{
         if ([self.commentsArray isKindOfClass:[NSArray class]] && self.commentsArray.count > 0) {
             EHCommentInfo *comment = self.commentsArray[indexPath.row];
@@ -46,14 +46,14 @@
     if (section == 0 || section == 1 || section == 2) {
         return 1;
     }else{
-         if (self.commentKind == 0) {
+         if (self.commentKind == 1) {
                 if ([self.niceCommentsArray isKindOfClass:[NSArray class]] && self.niceCommentsArray.count == 0) {
                     return 1;
                 }else{
                     return self.niceCommentsArray.count;
                 }
             }
-            else if (self.commentKind == 1) {
+            else if (self.commentKind == 2) {
                 if ([self.commonCommentsArray isKindOfClass:[NSArray class]] && self.commonCommentsArray.count <1) {
                     return  1;
                 }else{
@@ -100,11 +100,11 @@
         cell.commentsArray = self.commentsArray;
         [cell setCommentCounts];
         cell.delegate = self;
-        if (self.commentKind == 0) {
+        if (self.commentKind == 1) {
             cell.commonTriagle.hidden = YES;
             cell.badTriangle.hidden = YES;
             cell.niceTriangle.hidden = NO;
-        }else if(self.commentKind == 1){
+        }else if(self.commentKind == 2){
             cell.niceTriangle.hidden = YES;
             cell.badTriangle.hidden = YES;
             cell.commonTriagle.hidden = NO;
@@ -117,7 +117,7 @@
     }else{
         EHCommentDetailCell *commentCell = [EHCommentDetailCell commentDetailCellCellWithTableView:tableView];
         EHNoCommentCell *noCommentCell = [EHNoCommentCell noCommentCellCellWithTableView:tableView];
-        if (self.commentKind == 0) {
+        if (self.commentKind == 1) {
             
             if ( [self.niceCommentsArray isKindOfClass:[NSArray class]] && self.niceCommentsArray.count <1){
                 return noCommentCell;
@@ -125,7 +125,7 @@
                commentCell.commentInfo = self.niceCommentsArray[indexPath.row];
                 return commentCell;
             }
-        }else if(self.commentKind == 1){
+        }else if(self.commentKind == 2){
             if ( [self.commonCommentsArray isKindOfClass:[NSArray class]] && self.commonCommentsArray.count <1){
                 return noCommentCell;
             }else{
@@ -157,17 +157,17 @@
 }
 #pragma mark - 评价筛选按钮
 - (void)niceClick:(UITableViewCell *)cell{
-    self.commentKind = 0;
+    self.commentKind = 1;
    
 }
 
 - (void)commonClick:(UITableViewCell *)cell{
-    self.commentKind = 1;
+    self.commentKind = 2;
   
 }
 
 - (void)badClick:(UITableViewCell *)cell{
-    self.commentKind = 2;
+    self.commentKind = 3;
 
 }
 

@@ -61,7 +61,6 @@
     self.myPhoneNumber.delegate =  self;
     self.code.delegate = self;
     
-    
 }
 
 - (void)setTimer{

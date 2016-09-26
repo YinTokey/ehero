@@ -139,7 +139,7 @@
         label1.frame = CGRectMake(label0.frame.origin.x + label0.frame.size.width + 5 ,69, label1.textWidth+10, 17);
         [self addSubview:label1];
         EHLabel *label2 = [EHLabel LabelWithText:regionStr2];
-        label1.frame = CGRectMake(label1.frame.origin.x + label1.frame.size.width + 5 ,69, label2.textWidth+10, 17);
+        label2.frame = CGRectMake(label1.frame.origin.x + label1.frame.size.width + 5 ,69, label2.textWidth+10, 17);
         [self addSubview:label2];
     }
     
@@ -172,7 +172,7 @@
         comBtn1.frame = CGRectMake(x1, y, comBtn1.realWidth+12, 20);
         [self addSubview:comBtn0];
         [self addSubview:comBtn1];
-    } 
+    }
     if(communitiesArr.count == 3)
     {
         NSString *comStr0 = [communitiesArr objectAtIndex:0];

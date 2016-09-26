@@ -8,15 +8,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="AgentInfoCommentCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AgentInfoCommentCell" rowHeight="37" id="KGk-i7-Jjw" customClass="EHAgentInfoCommentCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="AgentInfoCommentCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AgentInfoCommentCell" rowHeight="35" id="KGk-i7-Jjw" customClass="EHAgentInfoCommentCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agent_info_comment_bar" translatesAutoresizingMaskIntoConstraints="NO" id="VmC-nG-EwI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="26"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="24"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hou-5N-x3Q">
                         <rect key="frame" x="12" y="4" width="91" height="18"/>
@@ -59,21 +59,21 @@
                         </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Triangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="QET-bJ-AaF">
-                        <rect key="frame" x="53" y="26" width="9" height="11"/>
+                        <rect key="frame" x="53" y="24" width="9" height="11"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="11" id="4kO-ur-HI5"/>
                             <constraint firstAttribute="width" constant="9" id="r5M-qz-WCr"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Triangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="yOw-Z2-6Gp">
-                        <rect key="frame" x="156" y="26" width="9" height="11"/>
+                        <rect key="frame" x="156" y="24" width="9" height="11"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="11" id="3Nj-Zg-270"/>
                             <constraint firstAttribute="width" constant="9" id="tVK-Mq-htR"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Triangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="AHz-iY-ebE">
-                        <rect key="frame" x="257" y="26" width="9" height="11"/>
+                        <rect key="frame" x="257" y="24" width="9" height="11"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="11" id="dRa-6z-Dmk"/>
                             <constraint firstAttribute="width" constant="9" id="j9I-50-JMO"/>
@@ -111,7 +111,7 @@
                 <outlet property="midComment" destination="WFB-hD-ql9" id="Jsa-5l-jau"/>
                 <outlet property="niceTriangle" destination="QET-bJ-AaF" id="dYR-Zl-rVP"/>
             </connections>
-            <point key="canvasLocation" x="222" y="104"/>
+            <point key="canvasLocation" x="222" y="103"/>
         </tableViewCell>
     </objects>
     <resources>

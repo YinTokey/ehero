@@ -82,16 +82,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="三里屯" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdA-pH-Pbm">
-                                <rect key="frame" x="140" y="56" width="50" height="17"/>
-                                <color key="backgroundColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="Fpn-Q5-jRH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -108,8 +98,6 @@
                             <constraint firstItem="MON-MU-fEA" firstAttribute="leading" secondItem="x87-XB-o3V" secondAttribute="leading" constant="8" id="XuI-BW-OfD"/>
                             <constraint firstItem="rgC-8u-Vb8" firstAttribute="top" secondItem="x87-XB-o3V" secondAttribute="top" constant="9" id="dqo-pA-BYa"/>
                             <constraint firstItem="66C-Z6-b74" firstAttribute="top" secondItem="x87-XB-o3V" secondAttribute="top" constant="12" id="eN4-0a-M8h"/>
-                            <constraint firstItem="VdA-pH-Pbm" firstAttribute="top" secondItem="XFq-uF-ncE" secondAttribute="bottom" constant="4" id="iTR-ux-K3M"/>
-                            <constraint firstItem="VdA-pH-Pbm" firstAttribute="leading" secondItem="Y9X-ZO-ZSf" secondAttribute="trailing" constant="8" id="kZh-sc-RTH"/>
                             <constraint firstItem="MON-MU-fEA" firstAttribute="top" secondItem="qR6-UP-Dbu" secondAttribute="bottom" constant="4" id="lVq-Rr-GmJ"/>
                             <constraint firstItem="qR6-UP-Dbu" firstAttribute="leading" secondItem="x87-XB-o3V" secondAttribute="leading" constant="4" id="ph8-Vu-9Ad"/>
                             <constraint firstItem="66C-Z6-b74" firstAttribute="leading" secondItem="qR6-UP-Dbu" secondAttribute="trailing" constant="8" id="vfX-7n-UOE"/>
@@ -127,9 +115,9 @@
             <connections>
                 <outlet property="company" destination="XFq-uF-ncE" id="bfI-H7-mym"/>
                 <outlet property="descriptions" destination="MON-MU-fEA" id="Ykn-9N-r49"/>
+                <outlet property="mainRegion" destination="Y9X-ZO-ZSf" id="wQj-xW-RGJ"/>
                 <outlet property="name" destination="66C-Z6-b74" id="GTs-2m-qS1"/>
                 <outlet property="percentile" destination="rgC-8u-Vb8" id="rfl-9x-TPr"/>
-                <outlet property="region" destination="VdA-pH-Pbm" id="5iJ-mh-6fn"/>
                 <outlet property="txView" destination="qR6-UP-Dbu" id="KRf-6p-uAB"/>
             </connections>
             <point key="canvasLocation" x="349" y="198"/>

@@ -23,7 +23,7 @@
 
 
 - (void)searchbar{
-    self.placeholder = @"输入小区或商圈名称";
+    self.placeholder = @"  输入小区或商圈名称";
     //设置textField的样式
     self.borderStyle = UITextBorderStyleNone;
     
