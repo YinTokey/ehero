@@ -7,6 +7,7 @@
 //
 
 #import "EHEverydayhouseCell.h"
+#import "EHCommunityButton.h"
 
 @implementation EHEverydayhouseCell
 
@@ -66,6 +67,15 @@
     self.price.text = _houseInfo.price;
     NSString *modelText = [NSString stringWithFormat:@"%@  %@  %@",_houseInfo.model,_houseInfo.area,_houseInfo.toward];
     self.model.text = modelText;
+    NSString *clickStr ;
+    if (_houseInfo.clicks == nil) {
+       clickStr = [NSString stringWithFormat:@"点击量：0"];
+    }else{
+       clickStr = [NSString stringWithFormat:@"点击量：%@",_houseInfo.clicks];
+    }
+    EHCommunityButton *comBtn = [EHCommunityButton communityButton:clickStr];
+    comBtn.frame = CGRectMake( 8 ,77,comBtn.realWidth, 13);
+    [self addSubview:comBtn];
     //处理图片下载
     NSArray *imgUrlStrArray = [houseInfo.thumbs componentsSeparatedByString:@" "];
     NSString *firstImgStr = [imgUrlStrArray firstObject];
