@@ -39,8 +39,9 @@
 - (void)setCommentInfo:(EHCommentInfo *)commentInfo{
     _commentInfo = commentInfo;
     self.textView.text = commentInfo.text;
-
-    self.authoer.text = commentInfo.author;
+    NSString *authorStr = [commentInfo.author stringByReplacingCharactersInRange:NSMakeRange(3, 4) withString:@"****"];
+    self.author.text = authorStr;
+    
     NSString *created_at = [commentInfo.created_at substringWithRange:NSMakeRange(0, 10)];
     self.timeLabel.text = created_at;
 

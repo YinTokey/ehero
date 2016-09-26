@@ -13,7 +13,7 @@
 
 @interface EHCommentDetailCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *background;
-@property (weak, nonatomic) IBOutlet UILabel *authoer;
+@property (weak, nonatomic) IBOutlet UILabel *author;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
