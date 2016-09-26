@@ -74,9 +74,9 @@
             low++;
         }
     }
-    NSString *highStr = [NSString stringWithFormat:@"好评（%ld）",high];
-    NSString *midStr = [NSString stringWithFormat:@"中评（%ld）",mid];
-    NSString *lowStr = [NSString stringWithFormat:@"差评（%ld）",low];
+    NSString *highStr = [NSString stringWithFormat:@"好评（%d）",high];
+    NSString *midStr = [NSString stringWithFormat:@"中评（%d）",mid];
+    NSString *lowStr = [NSString stringWithFormat:@"差评（%d）",low];
     [self.highComment setTitle:highStr forState:UIControlStateNormal];
     [self.midComment setTitle:midStr forState:UIControlStateNormal];
     [self.lowComment setTitle:lowStr forState:UIControlStateNormal];

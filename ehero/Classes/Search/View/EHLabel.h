@@ -10,4 +10,6 @@
 
 @interface EHLabel : UILabel
 
+@property (nonatomic,assign)CGFloat textWidth;
++ (instancetype)LabelWithText:(NSString *)text;
 @end

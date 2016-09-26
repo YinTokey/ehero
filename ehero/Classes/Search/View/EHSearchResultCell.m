@@ -11,7 +11,7 @@
 #import "UIButton+GetWidth.h"
 #import "EHCommunityButton.h"
 #import "UILabel+GetWidth.h"
-
+#import "EHLabel.h"
 @interface EHSearchResultCell()
 {
    CGFloat x;
@@ -21,7 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *position;
 @property (weak, nonatomic) IBOutlet UILabel *rates;
 @property (weak, nonatomic) IBOutlet UILabel *company;
-@property (weak, nonatomic) IBOutlet UILabel *region;
+@property (weak, nonatomic) IBOutlet UILabel *mainRegion;
+
 
 
 - (IBAction)callClick:(id)sender;
@@ -74,7 +75,7 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHSearchResultCell" owner:nil options:nil] lastObject];
         cell.position.backgroundColor = RGB(234, 243, 248);
-        cell.region.backgroundColor = RGB(68, 180, 244);
+     //   cell.region.backgroundColor = RGB(68, 180, 244);
         
 //        UIColor *colorImg = [UIColor colorWithPatternImage:[UIImage imageNamed:@"comment_btn_background"]];
 //        [cell.community1 setBackgroundColor:colorImg];
@@ -103,18 +104,44 @@
         self.rates.text = [NSString stringWithFormat:@"%@％",agentInfo.percentile];
     }
     self.company.text = agentInfo.company;
-    
-    self.region.text = agentInfo.region;
-    if (agentInfo.region.length > 1) {
-        NSString *regionStr = [NSString stringWithFormat:@"%@",agentInfo.region];
-        self.region.text = regionStr;
-        CGFloat textWidth = [UILabel getWidthWithTitle:self.region.text font:[UIFont systemFontOfSize:12.0]];
-        self.region.sd_layout.
-        widthIs(textWidth + 20);
-        
-
+    NSArray *rArray = [agentInfo.region componentsSeparatedByString:@" "];
+    NSMutableArray *regionsArray = [NSMutableArray array];
+    for (NSString *str in rArray) {
+        if (str.length > 1) {
+            [regionsArray addObject:str];
+        }
     }
-   
+    if (regionsArray.count == 1) {
+        NSString *regionStr = regionsArray[0];
+        EHLabel *label = [EHLabel LabelWithText:regionStr];
+        label.frame = CGRectMake(self.mainRegion.frame.origin.x + 66,69, label.textWidth+10, 17);
+        [self addSubview:label];
+    }
+ 
+    if (regionsArray.count == 2) {
+        NSString *regionStr0 = regionsArray[0];
+        NSString *regionStr1 = regionsArray[1];
+        EHLabel *label0 = [EHLabel LabelWithText:regionStr0];
+        label0.frame = CGRectMake(self.mainRegion.frame.origin.x + 66,69, label0.textWidth+10, 17);
+        [self addSubview:label0];
+        EHLabel *label1 = [EHLabel LabelWithText:regionStr1];
+        label1.frame = CGRectMake(label0.frame.origin.x + label0.frame.size.width + 5 ,69, label1.textWidth+10, 17);
+        [self addSubview:label1];
+    }
+    if (regionsArray.count >=3) {
+        NSString *regionStr0 = regionsArray[0];
+        NSString *regionStr1 = regionsArray[1];
+        NSString *regionStr2 = regionsArray[2];
+        EHLabel *label0 = [EHLabel LabelWithText:regionStr0];
+        label0.frame = CGRectMake(self.mainRegion.frame.origin.x + 66,69, label0.textWidth+10, 17);
+        [self addSubview:label0];
+        EHLabel *label1 = [EHLabel LabelWithText:regionStr1];
+        label1.frame = CGRectMake(label0.frame.origin.x + label0.frame.size.width + 5 ,69, label1.textWidth+10, 17);
+        [self addSubview:label1];
+        EHLabel *label2 = [EHLabel LabelWithText:regionStr2];
+        label1.frame = CGRectMake(label1.frame.origin.x + label1.frame.size.width + 5 ,69, label2.textWidth+10, 17);
+        [self addSubview:label2];
+    }
     
     //将小区分割成3个 存数组里
     NSArray *array = [agentInfo.community componentsSeparatedByString:@" "];
@@ -124,13 +151,13 @@
             [communitiesArr addObject:comStr];
         }
     }
-    CGFloat y = 103;
+    CGFloat y = 101;
     //用动态创建，这样自适应才有效
     if (communitiesArr.count == 1)
     {
         NSString *comStr = [communitiesArr objectAtIndex:0];
         EHCommunityButton *comBtn = [EHCommunityButton communityButton:comStr];
-        comBtn.frame = CGRectMake( 70 , y, comBtn.realWidth, 16);
+        comBtn.frame = CGRectMake( 70 , y, comBtn.realWidth+10, 20);
         [self addSubview:comBtn];
     }
     if(communitiesArr.count == 2)
@@ -140,12 +167,12 @@
         NSString *comStr1 = [communitiesArr objectAtIndex:1];
         EHCommunityButton *comBtn1 = [EHCommunityButton communityButton:comStr1];
         CGFloat x0 = 70;
-        CGFloat x1 = x0 + comBtn0.realWidth + 8;
-        comBtn0.frame = CGRectMake(x0, y, comBtn0.realWidth, 16);
-        comBtn1.frame = CGRectMake(x1, y, comBtn1.realWidth, 16);
+        CGFloat x1 = x0 + comBtn0.realWidth+10 + 4;
+        comBtn0.frame = CGRectMake(x0, y, comBtn0.realWidth+12, 20);
+        comBtn1.frame = CGRectMake(x1, y, comBtn1.realWidth+12, 20);
         [self addSubview:comBtn0];
         [self addSubview:comBtn1];
-    }
+    } 
     if(communitiesArr.count == 3)
     {
         NSString *comStr0 = [communitiesArr objectAtIndex:0];
@@ -155,11 +182,11 @@
         NSString *comStr2 = [communitiesArr objectAtIndex:2];
         EHCommunityButton *comBtn2 = [EHCommunityButton communityButton:comStr2];
         CGFloat x0 = 70;
-        CGFloat x1 = x0 + comBtn0.realWidth + 8;
-        CGFloat x2 = x1 + comBtn1.realWidth + 8;
-        comBtn0.frame = CGRectMake(x0 , y, comBtn0.realWidth, 16);
-        comBtn1.frame = CGRectMake(x1 , y, comBtn1.realWidth, 16);
-        comBtn2.frame = CGRectMake(x2 , y, comBtn2.realWidth, 16);
+        CGFloat x1 = x0 + comBtn0.realWidth+10 + 4;
+        CGFloat x2 = x1 + comBtn1.realWidth+10 + 4;
+        comBtn0.frame = CGRectMake(x0 , y, comBtn0.realWidth+10, 20);
+        comBtn1.frame = CGRectMake(x1 , y, comBtn1.realWidth+10, 20);
+        comBtn2.frame = CGRectMake(x2 , y, comBtn2.realWidth+10, 20);
         [self addSubview:comBtn0];
         [self addSubview:comBtn1];
         [self addSubview:comBtn2];

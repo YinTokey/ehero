@@ -50,8 +50,8 @@
     [self addSubview:comBtn];
     comBtn.sd_layout
     .rightSpaceToView(self.timeLabel,2)
-    .widthIs(comBtn.realWidth)
-    .heightIs(16)
+    .widthIs(comBtn.realWidth+16)
+    .heightIs(20)
     .bottomSpaceToView(self,12);
   
     if ([commentInfo.kind isEqualToString:@"bad"]) {
