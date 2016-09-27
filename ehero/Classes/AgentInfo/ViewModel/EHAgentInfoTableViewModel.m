@@ -23,12 +23,29 @@
     }else if (indexPath.section == 2){
         return 36;
     }else{
-        if ([self.commentsArray isKindOfClass:[NSArray class]] && self.commentsArray.count > 0) {
-            EHCommentInfo *comment = self.commentsArray[indexPath.row];
-            return comment.cellHeight;
-            
+
+        if (self.commentKind == 1) {
+            if ([self.niceCommentsArray isKindOfClass:[NSArray class]] && self.niceCommentsArray.count <1) {
+                return 102;
+            }else{
+                EHCommentInfo *comment = self.niceCommentsArray[indexPath.row];
+                return comment.cellHeight;
+            }
+        }
+        else if (self.commentKind == 2) {
+            if ([self.commonCommentsArray isKindOfClass:[NSArray class]] && self.commonCommentsArray.count <1) {
+                return  102;
+            }else{
+                EHCommentInfo *comment = self.commonCommentsArray[indexPath.row];
+                return comment.cellHeight;
+            }
         }else{
-            return 102;
+            if ( [self.badCommentsArray isKindOfClass:[NSArray class]] && self.badCommentsArray.count <1) {
+                return 102;
+            }else{
+                EHCommentInfo *comment = self.badCommentsArray[indexPath.row];
+                return comment.cellHeight;
+            }
         }
         
     }
