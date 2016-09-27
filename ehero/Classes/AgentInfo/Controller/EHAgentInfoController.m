@@ -34,6 +34,7 @@
 - (IBAction)collectBtnClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *collectBtn;
 - (IBAction)commentBtnClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *shareBtn;
 
 @property (nonatomic,strong) STModal *modal;
 @property (nonatomic,strong) EHSocialShareViewModel *socialViewModel;
@@ -54,7 +55,7 @@
     
     self.title = self.agentInfo.name;
     self.view.backgroundColor = RGB(241, 243, 245);
-    
+
     titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"微博",@"QQ好友", nil];
     picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_weibo",@"share_qq",nil];
     

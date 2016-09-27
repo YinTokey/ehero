@@ -16,16 +16,24 @@
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86i-BN-N5H">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
-                        <state key="normal" backgroundImage="houseDetail_call"/>
                         <connections>
                             <action selector="callClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EoA-x9-bDe"/>
                         </connections>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b_phone" translatesAutoresizingMaskIntoConstraints="NO" id="OZs-Yh-lN1">
+                        <rect key="frame" x="93" y="8" width="135" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="hjI-DH-gJn"/>
+                            <constraint firstAttribute="width" constant="135" id="ywG-CC-4MP"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="86i-BN-N5H" secondAttribute="bottom" id="9q6-eV-9ND"/>
                     <constraint firstAttribute="trailing" secondItem="86i-BN-N5H" secondAttribute="trailing" id="Pa5-Dt-I9B"/>
                     <constraint firstItem="86i-BN-N5H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="RYQ-sn-64K"/>
+                    <constraint firstItem="OZs-Yh-lN1" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ekn-Q3-R2N"/>
+                    <constraint firstItem="OZs-Yh-lN1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eqG-fw-4LJ"/>
                     <constraint firstItem="86i-BN-N5H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="quM-Jd-vPa"/>
                 </constraints>
             </tableViewCellContentView>
@@ -33,6 +41,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="houseDetail_call" width="750" height="98"/>
+        <image name="b_phone" width="269" height="39"/>
     </resources>
 </document>

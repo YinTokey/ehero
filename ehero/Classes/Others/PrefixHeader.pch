@@ -39,6 +39,7 @@
 #define houseSourcesUrlStr @"http://ehero.cc/api/v1/houses/recommend"
 #define allTipsUrlStr @"http://ehero.cc/api/v1/tips"
 #define houseSearchUrlStr @"http://ehero.cc/api/v1/houses/search"
+#define wechatGroupUrlStr @"http://ehero.cc/api/v1/customers/groups"
 
 #define QQAppId @"1105635926"
 #define WeiboAppKey @"2459331788"

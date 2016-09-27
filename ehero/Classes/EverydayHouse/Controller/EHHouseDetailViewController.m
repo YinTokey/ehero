@@ -50,8 +50,7 @@
     _agentInfoNetViewModel.superVC = self;
     
     NSLog(@"%@",_agentInfo.company);
-
-   // self.timer = [NSTimer scheduledTimerWithTimeInterval:2 invocation:@selector(reloadTable) repeats:NO];
+    
 }
 
 
@@ -121,9 +120,7 @@
         [MBProgressHUD showError:@"没有该经纪人电话" toView:self.view];
     }
 }
-- (void)callBtnClick:(UITableViewCell *)cell{
 
-}
 
 - (void)callActionWithCode:(NSString *)code{
 

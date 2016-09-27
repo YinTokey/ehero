@@ -120,7 +120,7 @@
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Y9z-Uv-fXY" customClass="EHSiteButton">
                                     <rect key="frame" x="51" y="11" width="38" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <state key="normal" title="北京" image="home_two">
                                         <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
@@ -134,11 +134,10 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lhh-UY-FAQ">
                                 <rect key="frame" x="266" y="12" width="38" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="买卖" image="home_two">
                                     <color key="titleColor" red="0.2666666667" green="0.70588235290000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <state key="selected" title="租赁"/>
                                 <connections>
                                     <action selector="majorBtnClick:" destination="iSZ-bj-OnQ" eventType="touchUpInside" id="rTR-jU-Mb3"/>
                                 </connections>
@@ -237,7 +236,7 @@
                             </barButtonItem>
                             <barButtonItem style="plain" id="vkL-8E-qfL">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g58-y1-wWV">
-                                    <rect key="frame" x="231" y="11" width="22" height="22"/>
+                                    <rect key="frame" x="226" y="8" width="27" height="27"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Star 1"/>
                                     <state key="selected" image="Star 2"/>
@@ -432,7 +431,7 @@
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gKY-ud-Gul" customClass="EHSiteButton">
                                     <rect key="frame" x="266" y="11" width="38" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <state key="normal" title="商圈" image="home_two">
                                         <color key="titleColor" red="0.24313725489999999" green="0.65098039220000004" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
@@ -445,7 +444,7 @@
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bRr-at-PcA">
                                     <rect key="frame" x="220" y="11" width="38" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <state key="normal" title="买卖" image="home_two">
                                         <color key="titleColor" red="0.24313725489999999" green="0.65098039220000004" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
@@ -544,7 +543,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wechatGroupCard" translatesAutoresizingMaskIntoConstraints="NO" id="jCX-Yz-GId">
                                 <rect key="frame" x="20" y="42" width="280" height="436"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="iga-iM-TP3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iga-iM-TP3">
                                 <rect key="frame" x="45" y="90" width="230" height="230"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="69" y="104" width="182" height="183"/>
@@ -1218,7 +1217,7 @@
                             </barButtonItem>
                             <barButtonItem style="plain" id="OAz-b9-Tht">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7gK-Uz-8Gn">
-                                    <rect key="frame" x="231" y="11" width="22" height="22"/>
+                                    <rect key="frame" x="226" y="8" width="27" height="27"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Star 1"/>
                                     <state key="selected" image="Star 2"/>
@@ -1381,7 +1380,7 @@
                             </barButtonItem>
                             <barButtonItem style="plain" id="R3A-U9-Xdh">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="itZ-ef-dB0">
-                                    <rect key="frame" x="254" y="11" width="22" height="22"/>
+                                    <rect key="frame" x="249" y="8" width="27" height="27"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="Star 1"/>
                                     <state key="selected" image="Star 2"/>
@@ -1394,7 +1393,7 @@
                             </barButtonItem>
                             <barButtonItem style="plain" id="AC5-kK-AYd">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yqL-zq-kAv">
-                                    <rect key="frame" x="220" y="11" width="26" height="22"/>
+                                    <rect key="frame" x="214" y="9" width="27" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="comment_btn"/>
                                     <connections>
@@ -1407,6 +1406,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="collectBtn" destination="itZ-ef-dB0" id="ls9-JT-gcG"/>
+                        <outlet property="shareBtn" destination="Sek-11-bgQ" id="dzY-if-Yw6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TU6-Vb-gZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1452,7 +1452,6 @@
         <image name="Group" width="37" height="52"/>
         <image name="Line1" width="713" height="1"/>
         <image name="Phone_icon2" width="23" height="23"/>
-        <image name="QRCode" width="294" height="291"/>
         <image name="Star 1" width="38" height="36"/>
         <image name="Star 2" width="38" height="36"/>
         <image name="about_us" width="750" height="1334"/>

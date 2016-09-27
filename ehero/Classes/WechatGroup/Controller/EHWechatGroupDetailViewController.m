@@ -29,7 +29,7 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
     [super viewDidLoad];
     
     self.view.backgroundColor = RGB(234, 243, 248);
-
+    [self loadQRImage];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -122,5 +122,18 @@ static NSString * const XMGCollectionName = @"易房好介-Photos";
     return [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:@[collectionId] options:nil].lastObject;
 }
 
+- (void)loadQRImage{
+    [LBProgressHUD showHUDto:self.view animated:NO];
+    [YTHttpTool get:wechatGroupUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
+        NSArray *arr  = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:nil] ;
+        NSDictionary *dic  = [arr firstObject];
+        NSString *qrcode = [dic objectForKey:@"qrcode"];
+        self.QRCodeImgView.image = [YTNetCommand downloadImageWithImgStr:qrcode placeholderImageStr:nil imageView:self.QRCodeImgView];
+        [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+    } failure:^(NSError *error) {
+        [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+        [MBProgressHUD showError:@"请求数据失败" toView:self.view];
+    }];
 
+}
 @end
