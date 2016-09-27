@@ -91,26 +91,55 @@
 }
 
 - (void)callClick:(UITableViewCell *)cell{
-    if (self.agentInfo.mobile.length > 5) {  //电话号码不为空
+    self.agentInfo.mobile = @"1234567";
+    if (self.agentInfo.mobile.length > 5) {
         //如果有cookie
         if ([EHCookieOperation setCookie]) {
             NSLog(@"有cookie,设置成功，不用再验证");
-            [_agentInfoNetViewModel callAgentWithIdStr:self.agentInfo.idStr code:@"" success:^{
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [MBProgressHUD hideHUD];
-                    [modal hide:YES];
-                 });
-           } failure:^{
-                [modal hide:YES];
-           }];
+            NSUserDefaults *defualts = [NSUserDefaults standardUserDefaults];
+            NSDictionary *codeDic = [defualts objectForKey:@"codeDic"];
+            //在评论界面完成验证
+            if (codeDic) {
+                NSDate *dateNow = [NSDate date];
+                NSDate *codeDate = [codeDic objectForKey:@"date"];
+                NSTimeInterval interval = [dateNow timeIntervalSinceDate:codeDate];
+                NSInteger resultInterval = ((NSInteger)interval);
+                if(resultInterval <= 24*3600 ){  //24小时内，直接用
+                    [self callActionWithCode:[codeDic objectForKey:@"code"]];
+                }else{
+                    //验证界面
+                    [self popVerifyView];
+                }
+            }else{
+                [self callActionWithCode:@" "];
+            }
         }else{
+            //验证界面
             [self popVerifyView];
         }
     }else{
-       // NSLog(@"%@",self.agentInfo.idStr);
         [MBProgressHUD showError:@"没有该经纪人电话" toView:self.view];
     }
 }
+- (void)callBtnClick:(UITableViewCell *)cell{
+
+}
+
+- (void)callActionWithCode:(NSString *)code{
+
+    [MBProgressHUD showMessage:@"正在接通电话中..." toView:self.view];
+    [_agentInfoNetViewModel callAgentWithIdStr:self.agentInfo.idStr code:code success:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideAllHUDsForView:self.view animated:NO];
+            
+        });
+    } failure:^{
+        [MBProgressHUD hideAllHUDsForView:self.view animated:NO];
+        [MBProgressHUD showError:@"呼叫失败" toView:self.view];
+        
+    }];
+}
+
 
 - (void)callCallBack
 {

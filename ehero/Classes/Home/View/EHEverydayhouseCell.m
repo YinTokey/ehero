@@ -74,7 +74,9 @@
        clickStr = [NSString stringWithFormat:@"点击量：%@",_houseInfo.clicks];
     }
     EHCommunityButton *comBtn = [EHCommunityButton communityButton:clickStr];
+    comBtn.titleLabel.font = [UIFont systemFontOfSize:10.0];
     comBtn.frame = CGRectMake( 8 ,77,comBtn.realWidth, 13);
+    
     [self addSubview:comBtn];
     //处理图片下载
     NSArray *imgUrlStrArray = [houseInfo.thumbs componentsSeparatedByString:@" "];

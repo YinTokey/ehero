@@ -193,15 +193,14 @@
         [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
         [MBProgressHUD showError:@"数据请求失败" toView:self.view];
     }];
-
 }
 
 - (void)searchStatusTest{
     
     if (self.houseInfoArray.count == 0) {
-        [MBProgressHUD showError:@"没有找到房源"];
+        [MBProgressHUD showError:@"没有找到房源" toView:self.view];
     }else{
-        [MBProgressHUD showSuccess:@"为您找到房源"];
+        [MBProgressHUD showSuccess:@"为您找到房源" toView:self.view];
     }
     
 }
@@ -310,10 +309,9 @@
 
     EHDistricts *district = self.districtsObjArray[indexPath.row];
     NSString *regionStr = district.regions[indexPath.item];
-    
     searchbar.text = regionStr;
-    
-    NSLog(@"sel %@",regionStr);
+    [self searchHouses];
+   // NSLog(@"sel %@",regionStr);
 }
 
 - (void)extendBtnClick:(EHHouseSourcesCell *)cell{

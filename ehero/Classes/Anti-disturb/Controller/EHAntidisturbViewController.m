@@ -14,7 +14,7 @@
 #import "EHAntiDisturbNetViewModel.h"
 #import <CoreTelephony/CTCall.h>
 #import <CoreTelephony/CTCallCenter.h>
-
+#import "EHStorageViewModel.h"
 #import "AppDelegate.h"
 @interface EHAntidisturbViewController ()<UITextFieldDelegate,EHVerifyViewDelegate>
 {
@@ -24,7 +24,7 @@
 }
 
 @property (nonatomic,strong) EHAntiDisturbNetViewModel *antiDisturbNetViewModel;
-
+@property (nonatomic,strong) EHStorageViewModel *storeViewModel;
 
 @property (weak, nonatomic) IBOutlet UITextField *verifiedOtherPhone;
 @property (nonatomic,copy) NSString *code;
@@ -47,11 +47,13 @@
  
     [self callCallBack];
     _antiDisturbNetViewModel = [[EHAntiDisturbNetViewModel alloc]init];
+    _storeViewModel = [[EHStorageViewModel alloc]init];
 }
 
 - (void)closeVerifyView:(EHVerifyView *)verifyView code:(NSString *)code{
     [modal hide:YES];
     self.code = code;
+    [_storeViewModel storeCode:code];
     
 }
 
@@ -97,15 +99,11 @@
                 }else{
                     [self popVerifyView];
                 }
-                
-               
             }else{
             //在经纪人详情页完成验证
                 [ _antiDisturbNetViewModel callAgentWithPhoneText:self.verifiedOtherPhone.text super:self code:@" "];
             }
-          
         }
-        
     }else{
         [self popVerifyView];
     }

@@ -115,26 +115,47 @@
     //如果有cookie
     if ([EHCookieOperation setCookie]) {
         NSLog(@"有cookie,设置成功，不用再验证");
-    
-        [self showCallAgentView];
-      //  [MBProgressHUD showMessage:@"正在接通电话中..." toView:self.view];
-        [_agentInfoNetViewModel callAgentWithIdStr:self.agentInfo.idStr code:@"" success:^{
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [MBProgressHUD hideHUD];
-                [_modal hide:YES];
-            });
-        } failure:^{
-            [_modal hide:YES];
-        }];
-
+        NSUserDefaults *defualts = [NSUserDefaults standardUserDefaults];
+        NSDictionary *codeDic = [defualts objectForKey:@"codeDic"];
+        //在评论界面完成验证
+        if (codeDic) {
+            NSDate *dateNow = [NSDate date];
+            NSDate *codeDate = [codeDic objectForKey:@"date"];
+            NSTimeInterval interval = [dateNow timeIntervalSinceDate:codeDate];
+            NSInteger resultInterval = ((NSInteger)interval);
+            if(resultInterval <= 24*3600 ){  //24小时内，直接用
+                [self callActionWithCode:[codeDic objectForKey:@"code"]];
+            }else{
+                //验证界面
+                [self popVerifyView];
+            }
+        }else{
+            [self callActionWithCode:@" "];
+        }
     }else{
         //验证界面
-        verifyView = [EHVerifyView initVerifyView];
-        verifyView.delegate = self;
-        [verifyView setupCountdownBtn];
-        [_modal showContentView:verifyView animated:YES];
-
+        [self popVerifyView];
     }
+}
+
+- (void)callActionWithCode:(NSString *)code{
+    [self showCallAgentView];
+    
+    [_agentInfoNetViewModel callAgentWithIdStr:self.agentInfo.idStr code:code success:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUD];
+            [_modal hide:YES];
+        });
+    } failure:^{
+        [_modal hide:YES];
+    }];
+}
+
+- (void)popVerifyView{
+    verifyView = [EHVerifyView initVerifyView];
+    verifyView.delegate = self;
+    [verifyView setupCountdownBtn];
+    [_modal showContentView:verifyView animated:YES];
 }
 
 # pragma mark - EHVerifyViewDelegate
@@ -154,6 +175,7 @@
             [_modal hide:YES];
         }];
     });
+    
     
 }
 

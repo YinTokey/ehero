@@ -131,7 +131,6 @@
             [MBProgressHUD showNormalMessage:@"请选择带看小区" toView:self.view];
         }else{
         //    EHAgentInfo *agentInfo = [_commentAgentNetViewModel.searchResultArr firstObject];
-            
             [self.agentInfo getIdStringFromDictionary];
 
             [_commentAgentNetViewModel submitWithText:self.commentView.text
