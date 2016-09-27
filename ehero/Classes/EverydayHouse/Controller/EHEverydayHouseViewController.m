@@ -103,7 +103,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     
     [searchbar resignFirstResponder];
-    
+    [self searchHouses];
     return YES;
 }
 
@@ -168,10 +168,52 @@
 
 }
 
+- (void)searchHouses{
+    NSDictionary *param = @{@"arg":searchbar.text};
+    [LBProgressHUD showHUDto:self.view animated:NO];
+    [self.houseInfoArray removeAllObjects];
+    [self.agentInfoArray removeAllObjects];
+    [YTHttpTool get:houseSearchUrlStr params:param success:^(NSURLSessionDataTask *task, id responseObj) {
+        //数据处理
+        NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:nil] ;
+        self.agentInfoArray = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseArray];
+        NSDictionary *dic = [responseArray firstObject];
+        NSArray *houseArr = [dic objectForKey:@"houses"];//里面存字典，不是对象
+        //后面是对于一些细节的处理
+        for (NSDictionary *houseDic in houseArr){
+            EHHousesInfo *houseInfo = [EHHousesInfo mj_objectWithKeyValues:houseDic];
+            houseInfo.name = [dic objectForKey:@"name"];
+            houseInfo.descriptions = [houseDic objectForKey:@"description"];
+            [self.houseInfoArray addObject:houseInfo];
+        }
+        [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+        [self.tableView reloadData];
+        [self searchStatusTest];
+    } failure:^(NSError *error) {
+        [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+        [MBProgressHUD showError:@"数据请求失败" toView:self.view];
+    }];
+
+}
+
+- (void)searchStatusTest{
+    
+    if (self.houseInfoArray.count == 0) {
+        [MBProgressHUD showError:@"没有找到房源"];
+    }else{
+        [MBProgressHUD showSuccess:@"为您找到房源"];
+    }
+    
+}
+
+
 #pragma mark - get house resources
 - (void)getHouseResources{
+    [self.agentInfoArray removeAllObjects];
+    [self.houseInfoArray removeAllObjects];
     [YTHttpTool get:houseSourcesUrlStr params:nil success:^(NSURLSessionDataTask *task, id responseObj) {
         //数据处理
+        
         NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:nil] ;
         self.agentInfoArray = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseArray];
         NSDictionary *dic = [responseArray firstObject];
@@ -186,7 +228,7 @@
 
         [self.tableView reloadData];
     } failure:^(NSError *error) {
-        NSLog(@"failed");
+        [MBProgressHUD showError:@"没有找到房源" toView:self.view];
     }];
 
 }

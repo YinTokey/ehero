@@ -77,8 +77,6 @@
     if (indexPath.row ==  0) {
         EHHouseDetailCell *cell = [EHHouseDetailCell houseDetailCellWithTableView:tableView];
         cell.houseInfo = _houseInfo;
-    
-        
         return cell;
     }else if (indexPath.row == 1){
         EHHouseDetailAgentCell *cell = [EHHouseDetailAgentCell houseDetailAgentCellWithTableView:tableView];

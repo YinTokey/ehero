@@ -60,6 +60,7 @@
 		0472DA571D37BA5400CDE148 /* YTHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0472DA561D37BA5400CDE148 /* YTHttpTool.m */; };
 		0478B6431D798B5C00C25183 /* EHTipsReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B6421D798B5B00C25183 /* EHTipsReaderViewController.m */; };
 		0478B86D1D3631A500C2D788 /* EHAgentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478B86C1D3631A500C2D788 /* EHAgentInfo.m */; };
+		047D31A41D9A29F000160D4C /* EHHouseNetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D31A31D9A29F000160D4C /* EHHouseNetViewModel.m */; };
 		047E47871D7FB91D00B017EC /* EHCommentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 047E47861D7FB91D00B017EC /* EHCommentInfo.m */; };
 		047E478D1D7FBB2800B017EC /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 047E478A1D7FBB2800B017EC /* NSString+Extension.m */; };
 		047EB7011D44894700D2F277 /* EHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047EB7001D44894700D2F277 /* EHSearchViewController.m */; };
@@ -287,6 +288,8 @@
 		0478B6421D798B5B00C25183 /* EHTipsReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTipsReaderViewController.m; sourceTree = "<group>"; };
 		0478B86B1D3631A500C2D788 /* EHAgentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAgentInfo.h; sourceTree = "<group>"; };
 		0478B86C1D3631A500C2D788 /* EHAgentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAgentInfo.m; sourceTree = "<group>"; };
+		047D31A21D9A29F000160D4C /* EHHouseNetViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHouseNetViewModel.h; sourceTree = "<group>"; };
+		047D31A31D9A29F000160D4C /* EHHouseNetViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHouseNetViewModel.m; sourceTree = "<group>"; };
 		047E47851D7FB91D00B017EC /* EHCommentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCommentInfo.h; sourceTree = "<group>"; };
 		047E47861D7FB91D00B017EC /* EHCommentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCommentInfo.m; sourceTree = "<group>"; };
 		047E47891D7FBB2800B017EC /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
@@ -1833,6 +1836,8 @@
 		04FC8E711D8695D000C58140 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				047D31A21D9A29F000160D4C /* EHHouseNetViewModel.h */,
+				047D31A31D9A29F000160D4C /* EHHouseNetViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -2106,6 +2111,7 @@
 				04BBBDAC1D65937600577DAB /* WSDropMenuView.m in Sources */,
 				04B857281D5731D100BEA6CB /* EHSkimedAgentsViewController.m in Sources */,
 				0443081F1D756C3100166036 /* EHMailViewModel.m in Sources */,
+				047D31A41D9A29F000160D4C /* EHHouseNetViewModel.m in Sources */,
 				04FD3ACF1D3DD942005B13B4 /* YTNetCommand.m in Sources */,
 				046448D61D8DC975006AE903 /* UIImage+Cut.m in Sources */,
 				042558FD1D8260FE009BED24 /* EHChangpingViewController.m in Sources */,

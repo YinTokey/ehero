@@ -141,6 +141,10 @@
         EHLabel *label2 = [EHLabel LabelWithText:regionStr2];
         label2.frame = CGRectMake(label1.frame.origin.x + label1.frame.size.width + 5 ,69, label2.textWidth+10, 17);
         [self addSubview:label2];
+        if ((label2.frame.origin.x + label2.frame.size.width + 5) > self.callButton.frame.origin.x) {
+            label2.hidden = YES;
+        }
+        
     }
     
     //将小区分割成3个 存数组里
@@ -190,6 +194,9 @@
         [self addSubview:comBtn0];
         [self addSubview:comBtn1];
         [self addSubview:comBtn2];
+        if ((comBtn2.frame.origin.x + comBtn2.frame.size.width) > ScreenWidth) {
+            comBtn2.hidden = YES;
+        }
     }
     
     /*
