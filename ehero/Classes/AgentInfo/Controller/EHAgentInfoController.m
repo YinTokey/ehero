@@ -72,14 +72,14 @@
     
     [self transData];
     
-    [RACObserve(self.agentInfoTableViewModel, commentKind)subscribeNext:^(id x) {
-        [self.tableView reloadData];
-    }];
-    
     //数据传递
     [_agentInfoNetViewModel getAverageInfo:^(EHAverageInfo *averageInfo){
         _agentInfoTableViewModel.averageInfo = averageInfo;
         
+    }];
+    
+    [RACObserve(self.agentInfoTableViewModel, commentKind)subscribeNext:^(id x) {
+        [self.tableView reloadData];
     }];
 
 }
@@ -97,6 +97,7 @@
     _agentInfoTableViewModel.niceCommentsArray = [NSMutableArray array];
     _agentInfoTableViewModel.commonCommentsArray = [NSMutableArray array];
     _agentInfoTableViewModel.badCommentsArray = [NSMutableArray array];
+    _agentInfoTableViewModel.commentKind = 2;
     
     self.tableView.dataSource = _agentInfoTableViewModel;
     self.tableView.delegate = _agentInfoTableViewModel;
@@ -251,7 +252,7 @@
             [_agentInfoTableViewModel.commonCommentsArray addObject:comment];
         }
     }
-    _agentInfoTableViewModel.commentKind = 9;// 默认显示好评
+    //_agentInfoTableViewModel.commentKind = 2;// 默认显示好评
 
 }
 
