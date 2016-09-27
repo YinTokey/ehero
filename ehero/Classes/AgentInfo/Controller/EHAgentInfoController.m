@@ -97,7 +97,7 @@
     _agentInfoTableViewModel.niceCommentsArray = [NSMutableArray array];
     _agentInfoTableViewModel.commonCommentsArray = [NSMutableArray array];
     _agentInfoTableViewModel.badCommentsArray = [NSMutableArray array];
-    _agentInfoTableViewModel.commentKind = 2;
+    _agentInfoTableViewModel.commentKind = 1;
     
     self.tableView.dataSource = _agentInfoTableViewModel;
     self.tableView.delegate = _agentInfoTableViewModel;
@@ -252,7 +252,7 @@
             [_agentInfoTableViewModel.commonCommentsArray addObject:comment];
         }
     }
-    //_agentInfoTableViewModel.commentKind = 2;// 默认显示好评
+
 
 }
 
