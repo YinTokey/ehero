@@ -10,7 +10,6 @@
 #import "EHAgentInfo.h"
 #import <MJExtension.h>
 
-
 @implementation EHCommentAgentNetViewModel
 
 - (void)submitWithText:(NSString *)text
@@ -26,17 +25,19 @@
 
     NSDictionary *param = @{@"agent_id":idStr,
                             @"comment":comment};
-    
+    [LBProgressHUD showHUDto:superVC.view animated:NO];
     [YTHttpTool post:commentAgentUrlStr params:param  success:^(NSURLSessionDataTask *task,id responseObj) {
         NSLog(@"success %@",responseObj);
         NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
         NSLog(@"responString %@",responStr);
+        [LBProgressHUD hideAllHUDsForView:superVC.view animated:YES];
         [MBProgressHUD showSuccess:@"评论成功" toView:superVC.view];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [superVC.navigationController popViewControllerAnimated:YES];
         });
         
     } failure:^(NSError *error) {
+        [LBProgressHUD hideAllHUDsForView:superVC.view animated:YES];
         [MBProgressHUD showSuccess:@"评论失败" toView:superVC.view];
         NSLog(@"failed %@",error);
     }];
