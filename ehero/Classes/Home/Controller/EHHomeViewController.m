@@ -27,7 +27,7 @@
 #import <MJExtension.h>
 #import "UIImageView+WebCache.h"
 
-@interface EHHomeViewController ()<UITextFieldDelegate,SDCycleScrollViewDelegate>
+@interface EHHomeViewController ()<UITextFieldDelegate,SDCycleScrollViewDelegate,EHHomeSearchBarDelegate>
 {
     /** 图片数组*/
     NSMutableArray *sourceArr;
@@ -103,6 +103,7 @@
     EHHomeSearchBar *searchbar = [[EHHomeSearchBar alloc]initWithFrame:CGRectMake(20, 20, ScreenWidth, 30)];
     searchbar.clipsToBounds = YES;
     searchbar.delegate = self;
+    searchbar.EHSearchBtndelegate = self;
     self.navigationItem.titleView = searchbar;
     
     UIBarButtonItem *negativeSpacer = [[ UIBarButtonItem alloc ] initWithBarButtonSystemItem : UIBarButtonSystemItemFixedSpace target : nil action : nil ];
@@ -211,6 +212,11 @@
     }];
 }
 
-
+#pragma mark - 搜索栏代理
+- (void)searchBtnClick{
+    EHSearchViewController *searchVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"SearchViewController"];
+    searchVC.major = major;
+    [self.navigationController pushViewController:searchVC animated:YES];
+}
 
 @end

@@ -21,9 +21,9 @@
 #define searchbar_width _mysearchBar.frame.size.width
 #define searchbar_height _mysearchBar.frame.size.height
 
-@interface EHSearchViewController ()<UITextFieldDelegate,EHNetBusinessManagerDelegate,EHSearchResultCellDelegate,UITableViewDelegate>
+@interface EHSearchViewController ()<UITextFieldDelegate,EHNetBusinessManagerDelegate,EHSearchResultCellDelegate,UITableViewDelegate,EHSearchBarDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *mysearchBar;
+@property (weak, nonatomic) IBOutlet EHSearchBar *mysearchBar;
 @property (nonatomic,strong) EHSearchTableViewModel *tableViewModel;
 
 @end
@@ -107,7 +107,13 @@
     self.mysearchBar = search;
     self.navigationItem.titleView = _mysearchBar;
     self.mysearchBar.delegate = self;
+    self.mysearchBar.EHSearchBtndelegate = self;
     [self.mysearchBar becomeFirstResponder];
+}
+
+#pragma mark - 搜索栏右边按钮的代理
+- (void)searchBtnClick{
+    [self searchClick];
 }
 
 - (void)addGesture{

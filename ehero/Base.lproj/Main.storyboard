@@ -528,7 +528,7 @@
             </objects>
             <point key="canvasLocation" x="-188" y="2216"/>
         </scene>
-        <!--Wechat Group Detail View Controller-->
+        <!--微信群组-->
         <scene sceneID="76b-6y-Xio">
             <objects>
                 <viewController storyboardIdentifier="WechatGroupDetailViewController" id="uAd-9A-BUA" customClass="EHWechatGroupDetailViewController" sceneMemberID="viewController">
@@ -626,7 +626,7 @@
                             <constraint firstItem="iga-iM-TP3" firstAttribute="width" secondItem="nO4-3d-1Ml" secondAttribute="width" multiplier="0.71875" id="wFd-qP-Q6t"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lO9-yS-eQS"/>
+                    <navigationItem key="navigationItem" title="微信群组" id="lO9-yS-eQS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="QRCodeImgView" destination="iga-iM-TP3" id="SUb-MJ-nyh"/>

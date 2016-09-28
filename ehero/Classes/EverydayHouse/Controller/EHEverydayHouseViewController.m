@@ -20,7 +20,7 @@
 #import "EHAgentInfo.h"
 
 
-@interface EHEverydayHouseViewController ()<UITextFieldDelegate,UIGestureRecognizerDelegate, WSDropMenuViewDataSource,WSDropMenuViewDelegate,houseSourcesDelegate>
+@interface EHEverydayHouseViewController ()<UITextFieldDelegate,UIGestureRecognizerDelegate, WSDropMenuViewDataSource,WSDropMenuViewDelegate,houseSourcesDelegate,EHHomeSearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *regionBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *regionBarButtom;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *typeBarButton;
@@ -48,8 +48,6 @@
 
     BOOL selectedFlag;
     NSString *type;
-
-    
     
 }
 
@@ -121,6 +119,7 @@
     searchbar.placeholder = @"搜索地区或商圈房源";
     searchbar.clipsToBounds = YES;
     searchbar.delegate = self;
+    searchbar.EHSearchBtndelegate = self;
     self.navigationItem.titleView = searchbar;
     
     //自定义返回按钮
@@ -143,6 +142,11 @@
     [self.view addSubview:dropMenu];
     self.navigationItem.leftBarButtonItems = @[negativeSpacer1,backItem,_regionBarButtom];
     self.navigationItem.rightBarButtonItems = @[negativeSpacer1,_typeBarButton];
+}
+
+#pragma mark - 搜索栏右边按钮代理
+- (void)searchBtnClick{
+    [self searchHouses];
 }
 
 - (void)NavPop{

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol EHHomeSearchBarDelegate <NSObject>
+
+- (void)searchBtnClick;
+
+@end
+
 @interface EHHomeSearchBar : UITextField
+
+@property (nonatomic,weak)id<EHHomeSearchBarDelegate> EHSearchBtndelegate;
 
 @end
