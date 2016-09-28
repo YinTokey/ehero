@@ -18,7 +18,8 @@
 }
 @property (weak, nonatomic) IBOutlet UIImageView *txView;
 @property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UILabel *position;
+//@property (weak, nonatomic) IBOutlet EHLabel *position;
+
 @property (weak, nonatomic) IBOutlet UILabel *rates;
 @property (weak, nonatomic) IBOutlet UILabel *company;
 @property (weak, nonatomic) IBOutlet UILabel *mainRegion;
@@ -74,7 +75,7 @@
     EHSearchResultCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"EHSearchResultCell" owner:nil options:nil] lastObject];
-        cell.position.backgroundColor = RGB(234, 243, 248);
+     //   cell.position.backgroundColor = RGB(234, 243, 248);
      //   cell.region.backgroundColor = RGB(68, 180, 244);
         
 //        UIColor *colorImg = [UIColor colorWithPatternImage:[UIImage imageNamed:@"comment_btn_background"]];
@@ -92,10 +93,13 @@
                                           placeholderImageStr:@"Profile"
                                                     imageView:_txView];
     self.name.text = agentInfo.name;
-    if (agentInfo.position.length < 1) {
-        self.position.hidden = YES;
-    }else{
-        self.position.text = agentInfo.position;
+    if (agentInfo.position.length > 1) {
+        EHLabel *position = [EHLabel LabelWithText:agentInfo.position];
+        position.backgroundColor = RGB(234, 243, 248);
+        position.frame = CGRectMake(137, 13, position.textWidth + 10, 17);
+        position.textColor = RGB(68, 180, 244);
+        [self addSubview:position];
+        position.sd_layout.leftSpaceToView(self.name,5);
     }
     
     if (agentInfo.percentile.length < 1) {
@@ -127,6 +131,9 @@
         EHLabel *label1 = [EHLabel LabelWithText:regionStr1];
         label1.frame = CGRectMake(label0.frame.origin.x + label0.frame.size.width + 5 ,69, label1.textWidth+10, 17);
         [self addSubview:label1];
+        if ((label1.frame.origin.x + label1.frame.size.width + 5) > self.callButton.frame.origin.x) {
+            label1.hidden = YES;
+        }
     }
     if (regionsArray.count >=3) {
         NSString *regionStr0 = regionsArray[0];

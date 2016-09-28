@@ -55,16 +55,6 @@
                         <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店经理" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvd-BR-siG">
-                        <rect key="frame" x="137" y="13" width="44" height="17"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="44" id="00W-n9-aep"/>
-                            <constraint firstAttribute="height" constant="17" id="F98-g7-udq"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" red="0.36862745099999999" green="0.70980392160000005" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyw-2q-ujV">
                         <rect key="frame" x="278" y="49" width="34" height="34"/>
                         <constraints>
@@ -144,10 +134,8 @@
                     <constraint firstAttribute="bottom" secondItem="qjC-ND-XmC" secondAttribute="bottom" constant="3" id="gSd-rd-i1H"/>
                     <constraint firstAttribute="trailing" secondItem="RWU-wF-ayq" secondAttribute="trailing" constant="37" id="hbs-DF-cXv"/>
                     <constraint firstItem="EOz-GR-gf8" firstAttribute="top" secondItem="BXw-Ft-NPN" secondAttribute="bottom" id="iAw-6Q-SsK"/>
-                    <constraint firstItem="lvd-BR-siG" firstAttribute="leading" secondItem="FWg-gq-wKJ" secondAttribute="trailing" constant="8" id="j8f-xP-4qb"/>
                     <constraint firstItem="qjC-ND-XmC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="jMe-VM-waX"/>
                     <constraint firstItem="PQv-mP-aMR" firstAttribute="top" secondItem="Jyw-2q-ujV" secondAttribute="top" id="p6n-Wm-PW2"/>
-                    <constraint firstItem="cEV-nh-cb1" firstAttribute="top" secondItem="lvd-BR-siG" secondAttribute="bottom" constant="7" id="rwM-Tl-El1"/>
                     <constraint firstItem="cwL-hk-R4h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="tQf-1b-a0X"/>
                 </constraints>
             </tableViewCellContentView>
@@ -156,7 +144,6 @@
                 <outlet property="company" destination="PQv-mP-aMR" id="lkD-fV-Myo"/>
                 <outlet property="mainRegion" destination="EOz-GR-gf8" id="Bpq-tY-Le1"/>
                 <outlet property="name" destination="FWg-gq-wKJ" id="dj2-GW-sHA"/>
-                <outlet property="position" destination="lvd-BR-siG" id="V4r-Xx-ilB"/>
                 <outlet property="rates" destination="vCP-0q-yyd" id="H7o-Ei-JiK"/>
                 <outlet property="txView" destination="cwL-hk-R4h" id="GGY-3b-DPE"/>
             </connections>
