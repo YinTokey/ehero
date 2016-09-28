@@ -82,11 +82,12 @@
     [RACObserve(self.agentInfoTableViewModel, commentKind)subscribeNext:^(id x) {
         [self.tableView reloadData];
     }];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [self.tableView reloadData];
+    [self reloadAgentInfo];
+ 
 }
 
 - (void)initViewModels{
@@ -286,6 +287,13 @@
     
 }
 
-
+- (void)reloadAgentInfo{
+    [_agentInfoNetViewModel getAgentInfo:self.agentInfo.name success:^(EHAgentInfo *agentInfo) {
+        _agentInfoTableViewModel.agentInfo = agentInfo;
+        [self.tableView reloadData];
+    } failure:^{
+        
+    }];
+}
 
 @end

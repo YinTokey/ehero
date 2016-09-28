@@ -61,7 +61,6 @@
         [MBProgressHUD showError:@"请求数据失败"];
         NSLog(@"失败");
     }];
-    
 }
 #pragma mark - 搜索结果检测
 - (void)searchStatusTest{

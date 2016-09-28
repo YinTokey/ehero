@@ -42,14 +42,7 @@
     self.returnKeyType = UIReturnKeySearch;
     //背景图
     self.background = [UIImage imageNamed:@"home_bar_frame"];
-   //创建imageView对象
-//    UIImageView * imgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.height, self.frame.size.height)];
-//    //设置 imgVIew的用户可交互性
-//    imgView.userInteractionEnabled = YES;
-//    //给 imgView赋值  tabbar_discover是一个放大镜图片
-//    imgView.image = [UIImage imageNamed:@"search_icon"];
-//    //设置self (textField)的 rightView属性和 rightViewMode的属性
-//    self.rightView = imgView;
+
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.height, self.frame.size.height)];
     [button setImage:[UIImage imageNamed:@"search_icon"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(searchClick) forControlEvents:UIControlEventTouchUpInside];

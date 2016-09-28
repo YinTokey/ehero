@@ -49,4 +49,27 @@
     }];
 }
 
+- (void)getAgentInfo:(NSString *)name
+             success:(void(^)(EHAgentInfo * agentInfo))success
+             failure:(void(^)())failure{
+  //  [LBProgressHUD showHUDto:_superVC.view animated:NO];
+    NSDictionary *param = @{@"major":@"agents",
+                            @"arg":name};
+    [YTHttpTool post:searchAreaUrlStr
+              params:param
+             success:^(NSURLSessionDataTask *task, id responseObj) {
+                 NSArray *resultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
+                 EHAgentInfo *info = [resultArr firstObject];
+                 if (success) {
+                     success(info);
+                 }
+               //  [LBProgressHUD hideAllHUDsForView:_superVC.view animated:NO];
+                // [MBProgressHUD showSuccess:@"" toView:_superVC.view];
+              } failure:^(NSError *error) {
+                //  [LBProgressHUD hideAllHUDsForView:_superVC.view animated:NO];
+                  [MBProgressHUD showError:@"获取新数据失败" toView:_superVC.view];
+              }];
+
+}
+
 @end

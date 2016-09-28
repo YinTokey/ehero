@@ -48,9 +48,9 @@
                         <constraint firstAttribute="width" constant="20" id="rwK-Ob-kA0"/>
                     </constraints>
                 </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ooc-vq-7fn">
-                    <rect key="frame" x="26" y="28" width="265" height="38"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooc-vq-7fn">
+                    <rect key="frame" x="26" y="29" width="266" height="36"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.天通苑</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -59,6 +59,7 @@
             <color key="backgroundColor" red="0.95664948729999999" green="0.95664948729999999" blue="0.95664948729999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="xk7-z9-qll" secondAttribute="trailing" constant="8" id="2Uh-jr-mxH"/>
+                <constraint firstItem="ooc-vq-7fn" firstAttribute="leading" secondItem="xk7-z9-qll" secondAttribute="leading" constant="8" id="6al-7K-718"/>
                 <constraint firstItem="xk7-z9-qll" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="6wk-Zq-2H9"/>
                 <constraint firstItem="tDl-AL-q0D" firstAttribute="leading" secondItem="9Jb-5k-Gaj" secondAttribute="trailing" id="9Ri-iP-OJD"/>
                 <constraint firstItem="9Jb-5k-Gaj" firstAttribute="leading" secondItem="xk7-z9-qll" secondAttribute="leading" constant="12" id="Bag-6Z-WPL"/>
@@ -66,10 +67,14 @@
                 <constraint firstItem="xk7-z9-qll" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="M6M-mM-jbN"/>
                 <constraint firstItem="Ajs-mo-410" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="MOb-b0-HXM"/>
                 <constraint firstItem="9Jb-5k-Gaj" firstAttribute="top" secondItem="xk7-z9-qll" secondAttribute="top" constant="5" id="Mf9-HL-Kbz"/>
+                <constraint firstItem="ooc-vq-7fn" firstAttribute="top" secondItem="9Jb-5k-Gaj" secondAttribute="bottom" constant="1" id="NNT-Um-YxI"/>
+                <constraint firstItem="ooc-vq-7fn" firstAttribute="trailing" secondItem="xk7-z9-qll" secondAttribute="trailing" constant="-8" id="PVk-3d-o3L"/>
                 <constraint firstItem="Ajs-mo-410" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dKS-wi-3PT"/>
                 <constraint firstAttribute="bottom" secondItem="xk7-z9-qll" secondAttribute="bottom" constant="7" id="gCm-Ke-nne"/>
                 <constraint firstItem="tDl-AL-q0D" firstAttribute="top" secondItem="xk7-z9-qll" secondAttribute="top" constant="2" id="ivM-qg-xt7"/>
                 <constraint firstItem="ZUN-9x-mbi" firstAttribute="bottom" secondItem="xk7-z9-qll" secondAttribute="bottom" constant="-6" id="jNc-Iq-h25"/>
+                <constraint firstItem="ooc-vq-7fn" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="sAL-Xh-Paq"/>
+                <constraint firstItem="ZUN-9x-mbi" firstAttribute="top" secondItem="ooc-vq-7fn" secondAttribute="bottom" id="svB-iD-hDG"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

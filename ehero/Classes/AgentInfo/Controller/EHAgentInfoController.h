@@ -10,9 +10,7 @@
 @class EHAgentInfo;
 @interface EHAgentInfoController : UITableViewController
 
-@property(nonatomic,strong)EHAgentInfo *agentInfo;
-
-
-
+@property(nonatomic,strong) EHAgentInfo *agentInfo;
+@property (nonatomic,assign) BOOL reloadFlag;
 
 @end
