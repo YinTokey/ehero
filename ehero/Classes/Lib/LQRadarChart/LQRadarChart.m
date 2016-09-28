@@ -194,7 +194,6 @@
             [path fill];
             [path stroke];
             
-            
             if (self.showPoint) {
                 UIColor *borderColor = [_delegate colorOfSectionBorderForRadarChart:self section:section];
                 for (NSInteger i = 0; i < numOfRow; i ++) {

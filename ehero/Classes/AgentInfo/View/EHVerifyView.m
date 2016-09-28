@@ -115,7 +115,7 @@
         NSDictionary *params = @{@"mobile":self.myPhoneNumber.text};
         [YTHttpTool post:sendCodeUrlStr params:params success:^(NSURLSessionDataTask *task,id responseObj) {
             NSLog(@"请求成功，查看手机验证码 %@",responseObj);
-            
+            [MBProgressHUD showSuccess:@"请查看手机短信" toView:self];
         } failure:^(NSError *error) {
             [MBProgressHUD showError:@"请求验证码失败"];
             NSLog(@"faild,%@",error);
@@ -133,8 +133,8 @@
         NSString *responStr = [[NSString alloc]initWithData:responseObj encoding:NSUTF8StringEncoding];
         NSLog(@"success responString call %@",responStr);
         if ([responStr isEqualToString:@"true"]) {
-            [MBProgressHUD hideHUD];
-            [MBProgressHUD showSuccess:@"验证成功"];
+           // [MBProgressHUD hideHUD];
+            [MBProgressHUD showSuccess:@"验证成功" toView:self];
             
             //取得验证吗时，就把用户电话存起来
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -149,15 +149,15 @@
             }
         
         }else{
-            [MBProgressHUD hideHUDForView:self];
-            [MBProgressHUD showError:@"验证失败"];
+            //[MBProgressHUD hideHUDForView:self];
+            [MBProgressHUD showError:@"验证失败" toView:self];
         }
         
     } failure:^(NSError *error) {
         NSLog(@"failed %@",error);
         
      //   [MBProgressHUD hideHUD];
-        [MBProgressHUD showError:@"验证失败"];
+        [MBProgressHUD showError:@"验证失败" toView:self];
     }];
  
 }

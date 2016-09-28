@@ -81,31 +81,35 @@
 - (void)cookieCheck{
     [YTHttpTool netCheck];
     //如果有cookie，读取cookie
-    if ([EHCookieOperation setCookie]) {
-        //打电话，本页完成验证
-        if (_code.length > 2) {
-            [ _antiDisturbNetViewModel callAgentWithPhoneText:self.verifiedOtherPhone.text super:self code:self.code];
-        }else{
-            NSUserDefaults *defualts = [NSUserDefaults standardUserDefaults];
-            NSDictionary *codeDic = [defualts objectForKey:@"codeDic"];
-            //在评论界面完成验证
-            if (codeDic) {
-                NSDate *dateNow = [NSDate date];
-                NSDate *codeDate = [codeDic objectForKey:@"date"];
-                NSTimeInterval interval = [dateNow timeIntervalSinceDate:codeDate];
-                NSInteger resultInterval = ((NSInteger)interval);
-                if(resultInterval <= 24*3600 ){  //24小时内，直接用
-                     [ _antiDisturbNetViewModel callAgentWithPhoneText:self.verifiedOtherPhone.text super:self code:[codeDic objectForKey:@"code"]];
-                }else{
-                    [self popVerifyView];
-                }
+    if ([EHRegularExpression validateMobile:self.verifiedOtherPhone.text ]){
+        if ([EHCookieOperation setCookie]) {
+            //打电话，本页完成验证
+            if (_code.length > 2) {
+                [ _antiDisturbNetViewModel callAgentWithPhoneText:self.verifiedOtherPhone.text super:self code:self.code];
             }else{
-            //在经纪人详情页完成验证
-                [ _antiDisturbNetViewModel callAgentWithPhoneText:self.verifiedOtherPhone.text super:self code:@" "];
+                NSUserDefaults *defualts = [NSUserDefaults standardUserDefaults];
+                NSDictionary *codeDic = [defualts objectForKey:@"codeDic"];
+                //在评论界面完成验证
+                if (codeDic) {
+                    NSDate *dateNow = [NSDate date];
+                    NSDate *codeDate = [codeDic objectForKey:@"date"];
+                    NSTimeInterval interval = [dateNow timeIntervalSinceDate:codeDate];
+                    NSInteger resultInterval = ((NSInteger)interval);
+                    if(resultInterval <= 24*3600 ){  //24小时内，直接用
+                         [ _antiDisturbNetViewModel callAgentWithPhoneText:self.verifiedOtherPhone.text super:self code:[codeDic objectForKey:@"code"]];
+                    }else{
+                        [self popVerifyView];
+                    }
+                }else{
+                //在经纪人详情页完成验证
+                    [ _antiDisturbNetViewModel callAgentWithPhoneText:self.verifiedOtherPhone.text super:self code:@" "];
+                }
             }
+        }else{
+            [self popVerifyView];
         }
     }else{
-        [self popVerifyView];
+        [MBProgressHUD showError:@"电话号码格式错误" toView:self.view];
     }
 }
 
