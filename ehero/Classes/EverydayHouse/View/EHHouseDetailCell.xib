@@ -67,10 +67,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="朝向：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5h3-YC-mHc">
-                        <rect key="frame" x="107" y="310" width="36" height="21"/>
+                        <rect key="frame" x="105" y="310" width="40" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="nUj-Zt-ZzW"/>
-                            <constraint firstAttribute="width" constant="36" id="xmh-0i-jiu"/>
+                            <constraint firstAttribute="width" constant="40" id="xmh-0i-jiu"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -97,7 +97,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="东" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVY-qk-2OV">
-                        <rect key="frame" x="144" y="309" width="34" height="21"/>
+                        <rect key="frame" x="146" y="309" width="34" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="i5S-Yr-CkZ"/>
                             <constraint firstAttribute="width" constant="34" id="yfh-pn-H5w"/>
