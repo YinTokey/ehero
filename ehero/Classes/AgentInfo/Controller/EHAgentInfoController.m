@@ -263,7 +263,7 @@
         }
     };
 }
-#pragma mark - 传递数据
+#pragma mark - 传递数据(评论)
 - (void)transData{
 
     _agentInfoTableViewModel.commentsArray = [EHCommentInfo mj_objectArrayWithKeyValuesArray:_agentInfo.comments];
@@ -277,7 +277,6 @@
         }
     }
 
-
 }
 
 - (IBAction)commentBtnClick:(id)sender {
@@ -288,8 +287,15 @@
 }
 
 - (void)reloadAgentInfo{
-    [_agentInfoNetViewModel getAgentInfo:self.agentInfo.name success:^(EHAgentInfo *agentInfo) {
-        _agentInfoTableViewModel.agentInfo = agentInfo;
+    [_agentInfoNetViewModel getAgentInfo:self.agentInfo.name success:^(NSArray *resultArray) {
+        for(EHAgentInfo *info in resultArray){
+            [info getIdStringFromDictionary];
+            if([info.idStr isEqualToString:_agentInfo.idStr]){
+                self.agentInfo = info;
+                break;
+            }
+        }
+        [self transData];
         [self.tableView reloadData];
     } failure:^{
         

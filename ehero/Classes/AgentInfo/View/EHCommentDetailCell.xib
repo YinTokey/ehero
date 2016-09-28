@@ -73,7 +73,6 @@
                 <constraint firstAttribute="bottom" secondItem="xk7-z9-qll" secondAttribute="bottom" constant="7" id="gCm-Ke-nne"/>
                 <constraint firstItem="tDl-AL-q0D" firstAttribute="top" secondItem="xk7-z9-qll" secondAttribute="top" constant="2" id="ivM-qg-xt7"/>
                 <constraint firstItem="ZUN-9x-mbi" firstAttribute="bottom" secondItem="xk7-z9-qll" secondAttribute="bottom" constant="-6" id="jNc-Iq-h25"/>
-                <constraint firstItem="ooc-vq-7fn" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="sAL-Xh-Paq"/>
                 <constraint firstItem="ZUN-9x-mbi" firstAttribute="top" secondItem="ooc-vq-7fn" secondAttribute="bottom" id="svB-iD-hDG"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

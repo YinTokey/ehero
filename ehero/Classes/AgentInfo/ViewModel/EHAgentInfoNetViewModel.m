@@ -50,7 +50,7 @@
 }
 
 - (void)getAgentInfo:(NSString *)name
-             success:(void(^)(EHAgentInfo * agentInfo))success
+             success:(void(^)(NSArray *resultArray))success
              failure:(void(^)())failure{
   //  [LBProgressHUD showHUDto:_superVC.view animated:NO];
     NSDictionary *param = @{@"major":@"agents",
@@ -59,9 +59,9 @@
               params:param
              success:^(NSURLSessionDataTask *task, id responseObj) {
                  NSArray *resultArr = [EHAgentInfo mj_objectArrayWithKeyValuesArray:responseObj];
-                 EHAgentInfo *info = [resultArr firstObject];
+                // EHAgentInfo *info = [resultArr firstObject];
                  if (success) {
-                     success(info);
+                     success(resultArr);
                  }
                //  [LBProgressHUD hideAllHUDsForView:_superVC.view animated:NO];
                 // [MBProgressHUD showSuccess:@"" toView:_superVC.view];

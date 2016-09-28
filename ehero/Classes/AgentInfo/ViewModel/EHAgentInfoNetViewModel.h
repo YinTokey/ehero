@@ -22,7 +22,7 @@
 - (void)getAverageInfo:(void(^)(EHAverageInfo *averageInfo))success;
 
 - (void)getAgentInfo:(NSString *)name
-             success:(void(^)(EHAgentInfo * agentInfo))success
+             success:(void(^)(NSArray *resultArray))success
              failure:(void(^)())failure;
 
 @end
