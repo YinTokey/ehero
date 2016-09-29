@@ -85,7 +85,9 @@
         
         self.collectBtn.selected = NO;
         [MBProgressHUD showSuccess:@"取消收藏" toView:self.view];
-        [self.tipsRecomnend deleteObject];
+        NSString *sqlForName = [NSString stringWithFormat:@" WHERE name = '%@' ",self.tipsRecomnend.name];
+        EHTipsRecommend *tip = [EHTipsRecommend findFirstByCriteria:sqlForName];
+        [tip deleteObject];
     }
 }
 

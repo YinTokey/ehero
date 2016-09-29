@@ -67,11 +67,11 @@
     [self.navigationController.navigationBar
      addSubview:[EHTipsNavBottomLine initNavBottomLineWithController:self]];
 
-    [self isCollected];
+   
     [self callCallBack];
     [self initViewModels];
     
-  //  [self transData];
+    [self transData];
     
     //数据传递
     [_agentInfoNetViewModel getAverageInfo:^(EHAverageInfo *averageInfo){
@@ -85,9 +85,10 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    [self.tableView reloadData];
+    
     [self reloadAgentInfo];
- 
+    [self isCollected];
+    [self.tableView reloadData];
 }
 
 - (void)initViewModels{
@@ -215,10 +216,12 @@
         self.collectBtn.selected = YES;
         [MBProgressHUD showSuccess:@"收藏成功" toView:self.view];
         [self collect];
-        
+
     }else{
         self.collectBtn.selected = NO;
-        [self.agentInfo deleteObject];
+        NSString *sqlForName = [NSString stringWithFormat:@" WHERE name = '%@' ",self.agentInfo.name];
+        EHAgentInfo *agentInfo = [EHAgentInfo findFirstByCriteria:sqlForName];
+        [agentInfo deleteObject];
         [MBProgressHUD showSuccess:@"取消收藏" toView:self.view];
     }
 }
@@ -290,6 +293,7 @@
 }
 
 - (void)reloadAgentInfo{
+    
     [_agentInfoNetViewModel getAgentInfo:self.agentInfo.name success:^(NSArray *resultArray) {
         for(EHAgentInfo *info in resultArray){
             [info getIdStringFromDictionary];
