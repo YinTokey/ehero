@@ -160,10 +160,13 @@
     if (selectedFlag) {
         self.majorBtn.selected = YES;
         major = @"rent";
+      
     }else{
         self.majorBtn.selected = NO;
         major = @"sale";
+ 
     }
+  
 }
 
 #pragma mark - textfield delegate

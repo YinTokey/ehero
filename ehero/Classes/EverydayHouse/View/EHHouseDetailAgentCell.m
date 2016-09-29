@@ -75,7 +75,7 @@
     if (regionsArray.count == 1) {
         NSString *regionStr = regionsArray[0];
         EHLabel *label = [EHLabel LabelWithText:regionStr];
-        label.frame = CGRectMake(self.mainRegion.frame.origin.x + 70,y, label.textWidth+10, 17);
+        label.frame = CGRectMake(self.mainRegion.frame.origin.x + 73,y, label.textWidth+10, 17);
         [self addSubview:label];
     }
     
@@ -83,7 +83,7 @@
         NSString *regionStr0 = regionsArray[0];
         NSString *regionStr1 = regionsArray[1];
         EHLabel *label0 = [EHLabel LabelWithText:regionStr0];
-        label0.frame = CGRectMake(self.mainRegion.frame.origin.x + 70,y, label0.textWidth+10, 17);
+        label0.frame = CGRectMake(self.mainRegion.frame.origin.x + 73,y, label0.textWidth+10, 17);
         [self addSubview:label0];
         EHLabel *label1 = [EHLabel LabelWithText:regionStr1];
         label1.frame = CGRectMake(label0.frame.origin.x + label0.frame.size.width + 5 ,y, label1.textWidth+10, 17);
@@ -94,7 +94,7 @@
         NSString *regionStr1 = regionsArray[1];
         NSString *regionStr2 = regionsArray[2];
         EHLabel *label0 = [EHLabel LabelWithText:regionStr0];
-        label0.frame = CGRectMake(self.mainRegion.frame.origin.x + 70,y, label0.textWidth+10, 17);
+        label0.frame = CGRectMake(self.mainRegion.frame.origin.x + 73,y, label0.textWidth+10, 17);
         [self addSubview:label0];
         EHLabel *label1 = [EHLabel LabelWithText:regionStr1];
         label1.frame = CGRectMake(label0.frame.origin.x + label0.frame.size.width + 5 ,y, label1.textWidth+10, 17);

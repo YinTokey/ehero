@@ -105,10 +105,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主营小区：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjC-ND-XmC">
-                        <rect key="frame" x="8" y="101" width="65" height="20"/>
+                        <rect key="frame" x="8" y="101" width="70" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="B39-sG-dli"/>
-                            <constraint firstAttribute="width" constant="65" id="DTO-FA-B40"/>
+                            <constraint firstAttribute="width" constant="70" id="DTO-FA-B40"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.46313404650000001" green="0.80704137760000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>

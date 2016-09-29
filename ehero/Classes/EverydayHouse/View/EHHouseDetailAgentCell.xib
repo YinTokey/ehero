@@ -45,9 +45,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主营板块：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9X-ZO-ZSf">
-                                <rect key="frame" x="72" y="54" width="60" height="21"/>
+                                <rect key="frame" x="72" y="54" width="70" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="2Mw-eu-HFK"/>
+                                    <constraint firstAttribute="width" constant="70" id="2Mw-eu-HFK"/>
                                     <constraint firstAttribute="height" constant="21" id="e4f-SZ-Y0k"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>

@@ -178,7 +178,6 @@
         }];
     });
     
-    
 }
 
 - (void)showCallAgentView{
@@ -190,7 +189,7 @@
     [callAgentView setCallAgentViewWithName:self.agentInfo.name
                                      mobile:mobileString
                                       txUrl:self.agentInfo.tx];
-     [_modal showContentView:callAgentView animated:YES];
+    [_modal showContentView:callAgentView animated:YES];
 }
 
 # pragma mark - 分享点击
@@ -265,8 +264,12 @@
 }
 #pragma mark - 传递数据(评论)
 - (void)transData{
-
+    [_agentInfoTableViewModel.commentsArray removeAllObjects];
+    [_agentInfoTableViewModel.niceCommentsArray removeAllObjects];
+    [_agentInfoTableViewModel.commonCommentsArray removeAllObjects];
+    [_agentInfoTableViewModel.badCommentsArray removeAllObjects];
     _agentInfoTableViewModel.commentsArray = [EHCommentInfo mj_objectArrayWithKeyValuesArray:_agentInfo.comments];
+    
     for (EHCommentInfo *comment in _agentInfoTableViewModel.commentsArray) {
         if ([comment.kind isEqualToString:@"nice"]) {
             [_agentInfoTableViewModel.niceCommentsArray addObject:comment];
