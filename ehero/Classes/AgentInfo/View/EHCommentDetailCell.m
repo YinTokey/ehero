@@ -56,6 +56,7 @@
   
     if ([commentInfo.kind isEqualToString:@"bad"]) {
         [self.starView setImage:[UIImage imageNamed:@"starIcon2"]];
+       // NSLog(@"in cell bad");
     }
     if ([commentInfo.kind isEqualToString:@"common"]) {
         self.starView.hidden = YES;

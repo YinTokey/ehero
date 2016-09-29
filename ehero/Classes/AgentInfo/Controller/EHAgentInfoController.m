@@ -71,7 +71,7 @@
     [self callCallBack];
     [self initViewModels];
     
-    [self transData];
+  //  [self transData];
     
     //数据传递
     [_agentInfoNetViewModel getAverageInfo:^(EHAverageInfo *averageInfo){
@@ -275,11 +275,11 @@
             [_agentInfoTableViewModel.niceCommentsArray addObject:comment];
         }else if([comment.kind isEqualToString:@"bad"]){
             [_agentInfoTableViewModel.badCommentsArray addObject:comment];
+  
         }else{
             [_agentInfoTableViewModel.commonCommentsArray addObject:comment];
         }
     }
-
 }
 
 - (IBAction)commentBtnClick:(id)sender {

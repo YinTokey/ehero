@@ -32,14 +32,16 @@
                 return comment.cellHeight;
             }
         }
-        else if (self.commentKind == 2) {
+        if (self.commentKind == 2) {
             if ([self.commonCommentsArray isKindOfClass:[NSArray class]] && self.commonCommentsArray.count <1) {
                 return  102;
             }else{
                 EHCommentInfo *comment = self.commonCommentsArray[indexPath.row];
                 return comment.cellHeight;
             }
-        }else{
+        }
+        if (self.commentKind == 3)
+        {
             if ( [self.badCommentsArray isKindOfClass:[NSArray class]] && self.badCommentsArray.count <1) {
                 return 102;
             }else{
@@ -47,7 +49,7 @@
                 return comment.cellHeight;
             }
         }
-        
+        return 0;
     }
 }
 
@@ -70,19 +72,22 @@
                     return self.niceCommentsArray.count;
                 }
             }
-            else if (self.commentKind == 2) {
+         if (self.commentKind == 2) {
                 if ([self.commonCommentsArray isKindOfClass:[NSArray class]] && self.commonCommentsArray.count <1) {
                     return  1;
                 }else{
                     return self.commonCommentsArray.count;
                 }
-            }else{
+            }
+        if (self.commentKind == 3)
+        {
                 if ( [self.badCommentsArray isKindOfClass:[NSArray class]] && self.badCommentsArray.count <1) {
                     return 1;
                 }else{
                     return self.badCommentsArray.count;
                 }
-            }
+        }
+        return 0;
     }        
 }
 
@@ -142,7 +147,8 @@
                commentCell.commentInfo = self.niceCommentsArray[indexPath.row];
                 return commentCell;
             }
-        }else if(self.commentKind == 2){
+        }
+        if(self.commentKind == 2){
             if ( [self.commonCommentsArray isKindOfClass:[NSArray class]] && self.commonCommentsArray.count <1){
                 return noCommentCell;
             }else{
@@ -150,16 +156,18 @@
                 return commentCell;
             }
 
-        }else{
+        }
+        if(self.commentKind == 3)
+        {
             if ( [self.badCommentsArray isKindOfClass:[NSArray class]] && self.badCommentsArray.count <1){
                 return noCommentCell;
             }else{
-                commentCell.commentInfo = self.niceCommentsArray[indexPath.row];
+                commentCell.commentInfo = self.badCommentsArray[indexPath.row];
                 return commentCell;
             }
 
         }
-       // return cell;
+        return noCommentCell;
         
     }
 }
@@ -168,8 +176,8 @@
     if (indexPath.section == 3) {
         EHCommentDetailCell *cell = [EHCommentDetailCell commentDetailCellCellWithTableView:tableView];
         cell.commentInfo = self.commentsArray[indexPath.row];
-        NSLog(@"label height %f",cell.rect.size.height);
-        NSLog(@"cell height %f",cell.frame.size.height);
+//        NSLog(@"label height %f",cell.rect.size.height);
+//        NSLog(@"cell height %f",cell.frame.size.height);
     }
 }
 #pragma mark - 评价筛选按钮
