@@ -41,7 +41,13 @@
     
     _webView = [[WKWebView alloc]initWithFrame:self.view.frame];
     //中文url 要转义
-    self.tipsRecomnend.route = [self.tipsRecomnend.route stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+    for(int i=0; i< [self.tipsRecomnend.route length];i++){
+        int a = [self.tipsRecomnend.route characterAtIndex:i];
+        if( a > 0x4e00 && a < 0x9fff){
+            self.tipsRecomnend.route = [self.tipsRecomnend.route stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+        }
+            
+    }
     
     NSURL  *url = [NSURL URLWithString:self.tipsRecomnend.route];
     
@@ -53,6 +59,12 @@
     
     titleArray = [NSMutableArray arrayWithObjects:@"微信好友",@"朋友圈",@"微博",@"QQ好友", nil];
     picArray = [NSMutableArray arrayWithObjects:@"share_wechat",@"share_timeline",@"share_weibo",@"share_qq",nil];
+
+}
+
+
+- (void)viewWillAppear:(BOOL)animated{
+    [self isCollected];
 }
 
 - (void)initViewModels{
@@ -92,4 +104,18 @@
     }];
     
 }
+
+- (void)isCollected{
+    NSString *sqlForName = [NSString stringWithFormat:@" WHERE name = '%@' ",self.tipsRecomnend.name];
+    EHTipsRecommend *tip = [EHTipsRecommend findFirstByCriteria:sqlForName];
+    if (tip == nil) {
+        selectedFlag = NO;
+        self.collectBtn.selected = NO;
+    }else{
+        selectedFlag = YES;
+        self.collectBtn.selected = YES;
+    }
+
+}
+
 @end

@@ -70,6 +70,8 @@ static NSString * const reuseIdentifier = @"Cell";
     EHTipsRecommend *tip = _tipsRecommendArray[indexPath.row];
     EHTipsReaderViewController *tipsReaderVC = [sb instantiateViewControllerWithIdentifier:@"TipsReaderViewController"];
     tipsReaderVC.tipsRecomnend = tip;
+    //中文url 转义
+    tipsReaderVC.tipsRecomnend.route = [tipsReaderVC.tipsRecomnend.route stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
     [self.navigationController pushViewController:tipsReaderVC animated:YES];
 
 }

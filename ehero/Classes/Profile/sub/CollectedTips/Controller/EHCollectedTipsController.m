@@ -22,7 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.backBarButtonItem = [EHNavBackItem setBackTitle:@""];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -78,7 +77,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     EHTipsReaderViewController *tipsReaderVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"TipsReaderViewController"];
     EHTipsRecommend *tip = self.collectedTipsArray[indexPath.row];
-    
     tipsReaderVC.tipsRecomnend = tip;
     [self.navigationController pushViewController:tipsReaderVC animated:YES];
 }
