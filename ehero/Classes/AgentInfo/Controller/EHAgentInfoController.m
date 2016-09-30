@@ -143,14 +143,18 @@
 
 - (void)callActionWithCode:(NSString *)code{
     [self showCallAgentView];
-    
+    [MBProgressHUD showMessage:@"正在接通电话中..."];
     [_agentInfoNetViewModel callAgentWithIdStr:self.agentInfo.idStr code:code success:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUD];
+            [MBProgressHUD hideHUDForView:self.view];
             [_modal hide:YES];
         });
     } failure:^{
         [_modal hide:YES];
+        [MBProgressHUD hideHUDForView:self.view];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MBProgressHUD showError:@"拨打失败"];
+        });
     }];
 }
 
@@ -168,14 +172,18 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
    
            [self showCallAgentView];
-        
+        [MBProgressHUD showMessage:@"正在接通电话中..."];
         [_agentInfoNetViewModel callAgentWithIdStr:self.agentInfo.idStr code:code success:^{
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [MBProgressHUD hideHUD];
+                [MBProgressHUD hideHUDForView:self.view];
                 [_modal hide:YES];
             });
         } failure:^{
             [_modal hide:YES];
+            [MBProgressHUD hideHUDForView:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [MBProgressHUD showError:@"拨打失败"];
+            });
         }];
     });
     
@@ -255,12 +263,12 @@
 {
     callCenter = [[CTCallCenter alloc] init];
     __weak STModal *weakmodal = self.modal;
-
+    __weak EHAgentInfoController *weakself = self;
     callCenter.callEventHandler = ^(CTCall* call) {
         if([call.callState isEqualToString:CTCallStateIncoming])
         {
             NSLog(@"Call is incoming");
-            [MBProgressHUD hideHUD];
+            [MBProgressHUD hideHUDForView:weakself.view];
             [weakmodal hide:YES];
         }
     };

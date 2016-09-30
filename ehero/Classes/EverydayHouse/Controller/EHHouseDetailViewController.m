@@ -131,8 +131,10 @@
             
         });
     } failure:^{
-        [MBProgressHUD hideAllHUDsForView:self.view animated:NO];
-        [MBProgressHUD showError:@"呼叫失败" toView:self.view];
+        [MBProgressHUD hideHUDForView:self.view];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MBProgressHUD showError:@"拨打失败"];
+        });
         
     }];
 }
@@ -155,7 +157,7 @@
     [modal hide:YES];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
+        [MBProgressHUD showMessage:@"正在接通电话中..."];
         [_agentInfoNetViewModel callAgentWithIdStr:self.agentInfo.idStr code:code success:^{
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [MBProgressHUD hideHUD];
@@ -163,6 +165,10 @@
             });
         } failure:^{
             [modal hide:YES];
+            [MBProgressHUD hideHUDForView:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [MBProgressHUD showError:@"拨打失败"];
+            });
         }];
     });
 

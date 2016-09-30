@@ -18,7 +18,7 @@
                             @"id":idStr,
                             @"code":code
                             };
-    [MBProgressHUD showMessage:@"正在接通电话中..."];
+    //[MBProgressHUD showMessage:@"正在接通电话中..."];
     [YTHttpTool post:callAgentUrlStr params:param success:^(NSURLSessionDataTask *task, id responseObj) {
         NSLog(@"接通成功  %@",responseObj);
         success();
