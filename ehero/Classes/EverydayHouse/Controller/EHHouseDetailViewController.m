@@ -90,7 +90,7 @@
 }
 
 - (void)callClick:(UITableViewCell *)cell{
-    self.agentInfo.mobile = @"1234567";
+
     if (self.agentInfo.mobile.length > 5) {
         //如果有cookie
         if ([EHCookieOperation setCookie]) {
