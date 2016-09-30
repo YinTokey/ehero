@@ -66,17 +66,13 @@
     [self setupAutoHeightWithBottomView:bottomView bottomMargin:10];
     //文字高度计算
 
-   // CGSize textSize = self.textView.contentSize;
-//    CGSize textViewSize = [self.myTextView sizeThatFits:CGSizeMake(self.myTextView.frame.size.width, FLT_MAX)];
-//    self.myTextView.height = textViewSize.height;
+    self.textView.sd_layout.widthIs(ScreenWidth -33);
     CGSize textSize = [self.textView sizeThatFits:CGSizeMake(self.textView.frame.size.width, FLT_MAX)];
 
-//    self.textView.sd_layout
-//    .heightIs(textSize.height);
-//    self.textView.bounds.size.height = textSize.height;
-    
-    commentInfo.cellHeight = textSize.height + 60;
+    self.textView.sd_layout
+    .heightIs(textSize.height);
 
+    commentInfo.cellHeight = self.textView.bounds.size.height + 60;
 
 }
 
