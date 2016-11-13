@@ -842,6 +842,7 @@
 		04657FC81D32467000914495 /* Anti-disturb */ = {
 			isa = PBXGroup;
 			children = (
+				04C157791D6ED5320036E5A1 /* OfficialAccount */,
 				04C157701D6EC29E0036E5A1 /* Model */,
 				04C157711D6EC29E0036E5A1 /* View */,
 				04C157721D6EC29E0036E5A1 /* ViewModel */,
@@ -1394,7 +1395,8 @@
 				04C1577C1D6ED5320036E5A1 /* View */,
 				04C1577D1D6ED5320036E5A1 /* ViewModel */,
 			);
-			path = OfficialAccount;
+			name = OfficialAccount;
+			path = ../OfficialAccount;
 			sourceTree = "<group>";
 		};
 		04C1577A1D6ED5320036E5A1 /* Controller */ = {
@@ -1711,7 +1713,6 @@
 			children = (
 				04200C331D2F7A6A005DC042 /* Lib */,
 				0478B63C1D798A4E00C25183 /* TipsReader */,
-				04C157791D6ED5320036E5A1 /* OfficialAccount */,
 				04DA25DD1D41E2F200235C51 /* Profile */,
 				04360C871D3CDAEF007C8C17 /* Tools */,
 				04C500741D3386A7009146E5 /* CommentAgent */,
